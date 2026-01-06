@@ -23,6 +23,7 @@ with open("the-verdict.txt", "r", encoding="utf-8") as f:
 
 result = re.split(r'([,.:;?_!"()\']|--|\s)', raw_text)
 # strip whitespace from each item and then filter out any empty strings
-result = [item.strip() for item in result if item.strip()]
-print(result)
-print(len(result))
+tokenised = [item.strip() for item in result if item.strip()]
+
+all_words = sorted(set(tokenised)) # sorted unique alphabetic order
+vocabulary_size = len(all_words)
