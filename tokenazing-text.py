@@ -1,5 +1,4 @@
 import os
-import urllib.request
 import requests
 import re
 
@@ -27,3 +26,11 @@ tokenised = [item.strip() for item in result if item.strip()]
 
 all_words = sorted(set(tokenised)) # sorted unique alphabetic order
 vocabulary_size = len(all_words)
+
+vocab = {token:integer for integer,token in enumerate(all_words)}
+
+#show all entries
+for i, item in enumerate(vocab.items()):
+    print(item)
+    if i >= 50:
+        break
