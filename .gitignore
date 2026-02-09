@@ -86,3 +86,9 @@ http-client.private.env.json
 .idea/**/copilot.data.migration.*.xml
 
 poetry.lock
+
+# vulnerable information
+.env
+.env.example
+.env.local
+.env.staging
