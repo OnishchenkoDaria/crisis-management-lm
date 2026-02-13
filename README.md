@@ -5,3 +5,8 @@ https://github.com/rasbt/LLMs-from-scratch/blob/main/ch02/01_main-chapter-code/c
 ### Docker engine
 * Start : `docker-compose up -d`
 * Stop : `docker-compose dowm`
+
+### Migration scripts
+1. `cd app`
+2. `alembic init -t async migration`
+3. `alembic revision --autogenerate -m "Migration message"`
