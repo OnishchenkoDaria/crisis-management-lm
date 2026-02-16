@@ -6,7 +6,7 @@ class User(Base):
     id: Mapped[int_pk]
     name: Mapped[str_not_null]
     email: Mapped[str_uniq]
-    password: Mapped[str] = mapped_column(Text, nullable=False)
+    hashed_password: Mapped[str] = mapped_column(Text, nullable=False)
 
     # present objects as string data
     def __str__(self):
