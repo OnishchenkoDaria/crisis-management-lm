@@ -11,3 +11,7 @@ https://github.com/rasbt/LLMs-from-scratch/blob/main/ch02/01_main-chapter-code/c
 2. `alembic init -t async migration`
 3. `alembic revision --autogenerate -m "Migration message"`
 4. `alembic upgrade head`
+
+### FastAPI server
+* `uvicorn app.main:app --reload`
+* `/docs` - Swagger documentation
