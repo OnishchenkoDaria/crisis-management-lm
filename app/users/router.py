@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 from app.users.dao import UserDAO
 from app.users.rb import RBUser
-from app.users.schemas import SchemaUser
+from app.users.schemas import SchemaUser, SchemaUSerAdd
 
 router = APIRouter(
     prefix="/users",
@@ -19,3 +19,11 @@ async def get_user_by_id(user_id: int) -> SchemaUser | dict:
     if result is None:
         return {'message': f'No user with id = {user_id} is found'}
     return result
+
+@router.post("/add/")
+async def register_user(data: SchemaUSerAdd) -> dict:
+    check = await UserDAO.add(**data.dict())
+    if check:
+        return {"message": "User added", "login data": data}
+    else:
+        return {"message": "Error creating user", "login data": data}
