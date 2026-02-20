@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 from app.users.dao import UserDAO
 from app.users.rb import RBUser
-from app.users.schemas import SchemaUser, SchemaUSerAdd
+from app.users.schemas import SchemaUser, SchemaUserAdd, SchemaUserNameUpd, SchemaUserPasswordUpd
 
 router = APIRouter(
     prefix="/users",
@@ -21,9 +21,37 @@ async def get_user_by_id(user_id: int) -> SchemaUser | dict:
     return result
 
 @router.post("/add/")
-async def register_user(data: SchemaUSerAdd) -> dict:
+async def register_user(data: SchemaUserAdd) -> dict:
     check = await UserDAO.add(**data.dict())
     if check:
         return {"message": "User added", "login data": data}
     else:
         return {"message": "Error creating user", "login data": data}
+
+@router.put("/update_description/")
+async def update_major_description(major: SMajorsUpdDesc) -> dict:
+    check = await MajorsDAO.update(filter_by={'major_name': major.major_name},
+                                   major_description=major.major_description)
+    if check:
+        return {"message": "Описание факультета успешно обновлено!", "major": major}
+    else:
+        return {"message": "Ошибка при обновлении описания факультета!"}
+
+
+@router.put("/update_name/")
+async def update_major_description(data: SchemaUserNameUpd) -> dict:
+    check = await UserDAO.update(filter_by={'email': data.email},
+                                   username=data.name)
+    if check:
+        return {"message": "Username updated!", "name": data.name}
+    else:
+        return {"message": "Error updating user's name"}
+
+@router.put("/update_password/")
+async def update_major_description(data: SchemaUserPasswordUpd) -> dict:
+    check = await UserDAO.update(filter_by={'email': data.email},
+                                   password=data.password)
+    if check:
+        return {"message": "User's password updated!", "password": data.password}
+    else:
+        return {"message": "Error updating user's password"}
