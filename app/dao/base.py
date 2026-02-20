@@ -1,5 +1,6 @@
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.future import select
+from sqlalchemy import update as sqlalchemy_update, delete as sqlalchemy_delete
 from app.database import async_session_maker
 
 
@@ -39,3 +40,21 @@ class BaseDAO:
                     await session.rollback()
                     raise e
                 return new_instance
+
+    @classmethod
+    async def update(cls, filter_by, **values):
+        async with async_session_maker() as session:
+            async with session.begin():
+                query = (
+                    sqlalchemy_update(cls.model)
+                    .where(*[getattr(cls.model, k) == v for k, v in filter_by.items()])
+                    .values(**values)
+                    .execution_options(synchronize_session="fetch")
+                )
+                result = await session.execute(query)
+                try:
+                    await session.commit()
+                except SQLAlchemyError as e:
+                    await session.rollback()
+                    raise e
+                return result.rowcount
