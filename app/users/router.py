@@ -55,3 +55,11 @@ async def update_major_description(data: SchemaUserPasswordUpd) -> dict:
         return {"message": "User's password updated!", "password": data.password}
     else:
         return {"message": "Error updating user's password"}
+
+@router.delete("/delete/{major_id}")
+async def delete_major(user_id: int) -> dict:
+    check = await UserDAO.delete(id=user_id)
+    if check:
+        return {"message": f"User with ID {user_id} deleted!"}
+    else:
+        return {"message": f"Error deleting usr with ID={user_id}"}
