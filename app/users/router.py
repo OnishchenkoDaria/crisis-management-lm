@@ -28,15 +28,6 @@ async def register_user(data: SchemaUserAdd) -> dict:
     else:
         return {"message": "Error creating user", "login data": data}
 
-@router.put("/update_description/")
-async def update_major_description(major: SMajorsUpdDesc) -> dict:
-    check = await MajorsDAO.update(filter_by={'major_name': major.major_name},
-                                   major_description=major.major_description)
-    if check:
-        return {"message": "Описание факультета успешно обновлено!", "major": major}
-    else:
-        return {"message": "Ошибка при обновлении описания факультета!"}
-
 
 @router.put("/update_name/")
 async def update_major_description(data: SchemaUserNameUpd) -> dict:
