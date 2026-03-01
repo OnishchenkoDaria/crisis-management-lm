@@ -27,7 +27,7 @@ class CaseAnalysis(Base):
             'values_ethics_crisis',
             'leadership_personal_crisis',
             'physical_or_cyber_security_crisis',
-            name='crisis_type_enum',
+            name='communications_crisis_type_enum',
             create_type=False
         ), nullable=False
     )
@@ -39,7 +39,7 @@ class CaseAnalysis(Base):
             'stabilization',
             'recovery',
             'post_crisis_learning',
-            name='crisis_stage_enum',
+            name='communications_crisis_stage_enum',
             create_type=False
         )
     )
@@ -53,7 +53,7 @@ class CaseAnalysis(Base):
             'systemic_failure',
             'mixed_attribution',
             'unknown',
-            name='crisis_attribution_enum',
+            name='communications_crisis_attribution_enum',
             create_type=False
         )
     )
@@ -65,7 +65,7 @@ class CaseAnalysis(Base):
             'high',
             'very_high',
             'confirmed',
-            name='crisis_evidence_confidence_enum',
+            name='communications_crisis_evidence_confidence_enum',
             create_type=False
         )
     )
