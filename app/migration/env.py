@@ -18,6 +18,7 @@ from app.database import DATABASE_URL, Base
 from app.users.models import User
 from app.workspaces.models import Workspace
 from app.cases.models import Case
+from app.analysis.models import CaseAnalysis
 # -----
 
 # this is the Alembic Config object, which provides

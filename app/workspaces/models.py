@@ -24,3 +24,10 @@ class Workspace(Base):
     channels: Mapped[Dict[str, Any]] = mapped_column(
         JSONB, nullable=False, default=dict, server_default="{}"
     )
+
+    def __str__(self):
+        return (f"{self.__class__.__name__}(id={self.id}, "
+                f"voice_profile={self.voice_profile!r},")
+
+    def __repr__(self):
+        return str(self)
