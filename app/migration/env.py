@@ -1,7 +1,7 @@
 import asyncio
 from logging.config import fileConfig
 
-from sqlalchemy import pool
+from sqlalchemy import pool, Enum
 from sqlalchemy.engine import Connection
 from sqlalchemy.ext.asyncio import async_engine_from_config
 
@@ -19,6 +19,7 @@ from app.users.models import User
 from app.workspaces.models import Workspace
 from app.cases.models import Case
 from app.analysis.models import CaseAnalysis
+from app.roadmaps.models import Roadmap
 # -----
 
 # this is the Alembic Config object, which provides
@@ -30,6 +31,25 @@ if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
 target_metadata = Base.metadata
+
+IGNORED_ENUMS = {
+    "communications_crisis_attribution_enum",
+    "communications_crisis_evidence_confidence_enum",
+    "communications_crisis_stage_enum",
+    "communications_crisis_type_enum",
+    "status_enum"
+}
+
+def ignore_enums(context, inspected_column, metadata_column, inspected_type, metadata_type):
+    """Prevent Alembic from detecting diffs for selected enums."""
+    if (
+        isinstance(inspected_type, Enum)
+        and isinstance(metadata_type, Enum)
+        and metadata_type.name in IGNORED_ENUMS
+    ):
+        return False  # skip diff
+    return None  # default
+
 # -----
 
 # Interpret the config file for Python logging.
