@@ -1,9 +1,14 @@
+import asyncio
+import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException, UploadFile, BackgroundTasks
 import logging
 from concurrent.futures import ThreadPoolExecutor
+
+from fastapi.params import File
+from app.ingest.schemas import JobStatus,
 
 log = logging.getLogger(__name__)
 
@@ -79,3 +84,45 @@ def _run_pipeline(job_id: str, pdf_path: Path) -> None:
             "progress": "Failed",
             "updated_at": datetime.now(timezone.utc).isoformat(),
         })
+
+
+@router.post("/upload", response_model=JobStatus, status_code=202)
+async def upload_pdf(
+        background_tasks: BackgroundTasks,
+        file: UploadFile = File(...),
+):
+    """Upload a PDF book and queue it for AI extraction."""
+    if not file.filename.endswith(".pdf"):
+        raise HTTPException(400, "Only PDF files are accepted.")
+
+    from pipeline.storage import DATA_DIR
+    raw_dir = DATA_DIR / "raw"
+    raw_dir.mkdir(parents=True, exist_ok=True)
+
+    # Save uploaded file
+    pdf_path = raw_dir / file.filename
+    content = await file.read()
+    pdf_path.write_bytes(content)
+
+    job_id = str(uuid.uuid4())[:8]
+    now = datetime.now(timezone.utc).isoformat()
+
+    _jobs[job_id] = {
+        "job_id": job_id,
+        "file_name": file.filename,
+        "source_slug": None,
+        "status": "queued",
+        "progress": "Queued",
+        "total_chunks": 0,
+        "done_chunks": 0,
+        "error": None,
+        "created_at": now,
+        "updated_at": now,
+        "counts": None,
+    }
+
+    # Run pipeline in thread pool so it doesn't block FastAPI event loop
+    loop = asyncio.get_event_loop()
+    loop.run_in_executor(_executor, _run_pipeline, job_id, pdf_path)
+
+    return JobStatus(**_jobs[job_id])
