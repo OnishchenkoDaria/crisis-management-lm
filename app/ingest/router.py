@@ -8,7 +8,7 @@ import logging
 from concurrent.futures import ThreadPoolExecutor
 
 from fastapi.params import File
-from app.ingest.schemas import JobStatus,
+from app.ingest.schemas import JobStatus
 
 log = logging.getLogger(__name__)
 
@@ -126,3 +126,55 @@ async def upload_pdf(
     loop.run_in_executor(_executor, _run_pipeline, job_id, pdf_path)
 
     return JobStatus(**_jobs[job_id])
+
+
+@router.get("/jobs", response_model=list[JobStatus])
+async def list_jobs():
+    """List all ingestion jobs, newest first."""
+    return [
+        JobStatus(**j)
+        for j in sorted(_jobs.values(), key=lambda x: x["created_at"], reverse=True)
+    ]
+
+
+@router.get("/jobs/{job_id}", response_model=JobStatus)
+async def get_job(job_id: str):
+    if job_id not in _jobs:
+        raise HTTPException(404, f"Job {job_id} not found.")
+    return JobStatus(**_jobs[job_id])
+
+
+@router.post("/jobs/{job_id}/retry", response_model=JobStatus)
+async def retry_job(job_id: str):
+    """Retry a failed job. Skips already-processed chunks."""
+    if job_id not in _jobs:
+        raise HTTPException(404, f"Job {job_id} not found.")
+    job = _jobs[job_id]
+    if job["status"] not in ("error", "done"):
+        raise HTTPException(400, "Can only retry failed or completed jobs.")
+
+    from pipeline.storage import DATA_DIR
+    pdf_path = DATA_DIR / "raw" / job["file_name"]
+    if not pdf_path.exists():
+        raise HTTPException(404, f"Original PDF not found: {job['file_name']}")
+
+    now = datetime.now(timezone.utc).isoformat()
+    _jobs[job_id].update({
+        "status": "queued",
+        "progress": "Retrying …",
+        "error": None,
+        "updated_at": now,
+    })
+
+    loop = asyncio.get_event_loop()
+    loop.run_in_executor(_executor, _run_pipeline, job_id, pdf_path)
+    return JobStatus(**_jobs[job_id])
+
+
+@router.delete("/jobs/{job_id}")
+async def delete_job(job_id: str):
+    """Remove job record (extracted data is kept on disk)."""
+    if job_id not in _jobs:
+        raise HTTPException(404, f"Job {job_id} not found.")
+    del _jobs[job_id]
+    return {"deleted": job_id}
