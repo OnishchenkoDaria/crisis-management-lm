@@ -8,7 +8,9 @@ import logging
 from concurrent.futures import ThreadPoolExecutor
 
 from fastapi.params import File
-from app.ingest.schemas import JobStatus
+from starlette.responses import FileResponse
+
+from app.ingest.schemas import JobStatus, StatsResponse
 
 log = logging.getLogger(__name__)
 
@@ -178,3 +180,31 @@ async def delete_job(job_id: str):
         raise HTTPException(404, f"Job {job_id} not found.")
     del _jobs[job_id]
     return {"deleted": job_id}
+
+
+@router.get("/stats", response_model=StatsResponse)
+async def dataset_stats():
+    """Return current record counts across all processed files."""
+    from pipeline.storage import get_stats
+    return StatsResponse(**get_stats())
+
+
+@router.post("/build-training")
+async def build_training(background_tasks: BackgroundTasks):
+    """Rebuild the fine-tuning JSONL from all processed qa_pairs."""
+    from pipeline.storage import build_training_jsonl, DATA_DIR
+    try:
+        path = build_training_jsonl()
+        return {"status": "ok", "path": str(path)}
+    except FileNotFoundError as e:
+        raise HTTPException(400, str(e))
+
+
+@router.get("/download/training-jsonl")
+async def download_training_jsonl():
+    """Download the fine-tuning ready JSONL file."""
+    from pipeline.storage import DATA_DIR
+    path = DATA_DIR / "processed" / "training_samples.jsonl"
+    if not path.exists():
+        raise HTTPException(404, "training_samples.jsonl not found. Run /build-training first.")
+    return FileResponse(path, media_type="application/jsonlines", filename="training_samples.jsonl")
