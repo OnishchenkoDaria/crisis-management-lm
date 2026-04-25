@@ -79,3 +79,94 @@ def _split_into_token_chunks(
         chunks.append(" ".join(current))
 
     return chunks
+
+
+def extract_chunks(pdf_path: str | Path) -> list[TextChunk]:
+    """
+    Main entry point.
+    Returns a flat list of TextChunk objects ordered by chapter → chunk.
+    """
+    pdf_path = Path(pdf_path)
+    source_slug = slugify(pdf_path.stem)
+
+    # Extract raw text page-by-page
+    pages: list[tuple[int, str]] = []  # (page_number, text)
+    with pdfplumber.open(pdf_path) as pdf:
+        for i, page in enumerate(pdf.pages, start=1):
+            raw = page.extract_text() or ""
+            if raw.strip():
+                pages.append((i, raw))
+
+    if not pages:
+        raise ValueError(f"No extractable text found in {pdf_path.name}. "
+                         "The PDF may be scanned — run OCR first.")
+
+    #Detect chapter boundaries
+    # Each chapter = {"title": str, "page_start": int, "lines": [str]}
+    chapters: list[dict] = []
+    current: dict | None = None
+
+    for page_num, page_text in pages:
+        for line in page_text.splitlines():
+            if _is_chapter_heading(line):
+                if current:
+                    current["page_end"] = page_num
+                    chapters.append(current)
+                current = {
+                    "title": line.strip(),
+                    "page_start": page_num,
+                    "page_end": page_num,
+                    "lines": [],
+                }
+            if current:
+                current["lines"].append(line)
+
+    # flush last chapter
+    if current:
+        current["page_end"] = pages[-1][0]
+        chapters.append(current)
+
+    # Fallback: if no chapter headings detected, treat whole book as one section
+    if not chapters:
+        all_text = "\n".join(t for _, t in pages)
+        chapters = [{
+            "title": pdf_path.stem,
+            "page_start": pages[0][0],
+            "page_end": pages[-1][0],
+            "lines": all_text.splitlines(),
+        }]
+
+    #Split chapters into token-safe chunks
+    all_chunks: list[TextChunk] = []
+
+    for ch_idx, chapter in enumerate(chapters):
+        body = "\n".join(chapter["lines"]).strip()
+        if _count_tokens(body) <= MAX_CHUNK_TOKENS:
+            sub_texts = [body]
+        else:
+            sub_texts = _split_into_token_chunks(body)
+
+        for ck_idx, sub_text in enumerate(sub_texts):
+            chunk_id = f"{source_slug}__ch{ch_idx:03d}__ck{ck_idx:03d}"
+            all_chunks.append(TextChunk(
+                chunk_id=chunk_id,
+                source_slug=source_slug,
+                chapter_title=chapter["title"],
+                chapter_index=ch_idx,
+                chunk_index=ck_idx,
+                text=sub_text,
+                token_count=_count_tokens(sub_text),
+                page_start=chapter["page_start"],
+                page_end=chapter["page_end"],
+            ))
+
+    return all_chunks
+
+
+def save_chunk_manifest(chunks: list[TextChunk], out_dir: Path) -> None:
+    out_dir.mkdir(parents=True, exist_ok=True)
+    manifest = [asdict(c) for c in chunks]
+    (out_dir / "chunk_manifest.json").write_text(
+        json.dumps(manifest, indent=2, ensure_ascii=False)
+    )
+    print(f"  ✓ Saved manifest: {len(chunks)} chunks → {out_dir}/chunk_manifest.json")
