@@ -10,7 +10,7 @@ from concurrent.futures import ThreadPoolExecutor
 from fastapi.params import File
 from starlette.responses import FileResponse
 
-from app.ingest.schemas import JobStatus, StatsResponse
+from app.ingest.ingest_router_schemas import JobStatus, StatsResponse
 
 log = logging.getLogger(__name__)
 
