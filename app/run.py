@@ -10,8 +10,18 @@ from app.ingest.pipeline.storage import (
 )
 from app.ingest.pipeline.storage import get_book_dir
 from pathlib import Path
+import argparse
 
-# CLI entry point — processes all PDFs in data/raw/ through the full pipeline.
+'''
+CLI entry point — processes all PDFs in data/raw/ through the full pipeline.
+
+Usage:
+  python run.py                         # process all new PDFs
+  python run.py --pdf data/raw/book.pdf # process one specific PDF
+  python run.py --merge-only            # just re-merge already-extracted books
+  python run.py --build-training        # build fine-tuning JSONL from qa_pairs
+  python run.py --stats                 # print current dataset stats
+'''
 
 logging.basicConfig(
     level=logging.INFO,
@@ -75,3 +85,67 @@ def process_pdf(pdf_path: Path) -> None:
     log.info("Step 4/4  Merging into processed/ …")
     counts = merge_book_to_processed(source_slug)
     log.info(f"  Done: {counts}")
+
+
+def main():
+    parser = argparse.ArgumentParser(description="DSS Dataset Pipeline")
+    parser.add_argument("--pdf", help="Path to a single PDF to process")
+    parser.add_argument("--merge-only", action="store_true",
+                        help="Re-merge already-extracted data (no AI calls)")
+    parser.add_argument("--build-training", action="store_true",
+                        help="Build fine-tuning JSONL from qa_pairs.jsonl")
+    parser.add_argument("--stats", action="store_true",
+                        help="Print current dataset statistics")
+    args = parser.parse_args()
+
+    if args.stats:
+        stats = get_stats()
+        print("\n── Dataset statistics ──────────────────")
+        for k, v in stats.items():
+            print(f"  {k:<20} {v:>6} records")
+        print()
+        return
+
+    if args.build_training:
+        path = build_training_jsonl()
+        print(f"\n✓ Training JSONL saved to: {path}")
+        return
+
+    if args.merge_only:
+        raw_dir = DATA_DIR / "extracted"
+        for book_dir in raw_dir.iterdir():
+            if book_dir.is_dir():
+                log.info(f"Merging: {book_dir.name}")
+                merge_book_to_processed(book_dir.name)
+        return
+
+    # Normal mode: process PDFs
+    if args.pdf:
+        pdfs = [Path(args.pdf)]
+    else:
+        pdfs = sorted((DATA_DIR / "raw").glob("*.pdf"))
+        if not pdfs:
+            print(f"\nNo PDFs found in {DATA_DIR / 'raw'}/")
+            print("Drop your PDF books there and re-run.\n")
+            return
+
+    print(f"\nFound {len(pdfs)} PDF(s) to process.\n")
+    for pdf in pdfs:
+        process_pdf(pdf)
+
+    # Build training JSONL automatically after all books processed
+    log.info("\nBuilding training_samples.jsonl …")
+    try:
+        build_training_jsonl()
+    except FileNotFoundError:
+        pass
+
+    print("\n── Final dataset statistics ──────────────")
+    stats = get_stats()
+    for k, v in stats.items():
+        print(f"  {k:<20} {v:>6} records")
+    print()
+
+
+if __name__ == "__main__":
+    main()
