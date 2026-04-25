@@ -20,6 +20,7 @@ from app.workspaces.models import Workspace
 from app.cases.models import Case
 from app.analysis.models import CaseAnalysis
 from app.roadmaps.models import Roadmap
+from app.refresh.models import RefreshSession
 # -----
 
 # this is the Alembic Config object, which provides
