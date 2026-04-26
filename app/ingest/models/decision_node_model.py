@@ -19,3 +19,20 @@ class DecisionNode(Base):
     source_slug: Mapped[str] = mapped_column(String(160), index=True, nullable=False)
     source_chunk_id: Mapped[str] = mapped_column(String(240), index=True, nullable=False)
     raw: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
+
+    # present objects as string data
+    def __str__(self):
+        return (f"{self.__class__.__name__}(id={self.id}, "
+                f"source_scenario_id={self.source_scenario_id!r},"
+                f"situation={self.situation!r})")
+
+    def __repr__(self):
+        return str(self)
+
+    # transform received data into dictionary
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "source_scenario_id": self.source_scenario_id,
+            "situation": self.situation,
+        }

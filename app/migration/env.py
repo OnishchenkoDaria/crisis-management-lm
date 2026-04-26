@@ -27,6 +27,7 @@ from app.ingest.models.rag_chunk_model import RagChunk
 from app.ingest.models.source_doc_model import SourceDocument
 from app.ingest.models.tactics import Tactic
 from app.ingest.models.decision_node_model import DecisionNode
+from app.ingest.models.training_sample_model import TrainingSample
 # -----
 
 # this is the Alembic Config object, which provides
