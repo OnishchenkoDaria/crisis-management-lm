@@ -25,3 +25,13 @@ class QAPairExtract(BaseModel):
     difficulty: str
     common_mistake: str
     source_scenario_id: str
+
+
+class RagChunkExtract(BaseModel):
+    chunk_id: str
+    text: str
+    source_title: str
+    source_chapter: str
+    topics: list[str]
+    scenario_relevance: list[str]
+    embedding: list[float] | None = None
