@@ -15,3 +15,13 @@ class ScenarioExtract(BaseModel):
     relevant_tactics: list[str]
     source: str
     difficulty_for_rookie: str
+
+
+class QAPairExtract(BaseModel):
+    id: str
+    question: str
+    answer: str
+    scenario_tags: list[str]
+    difficulty: str
+    common_mistake: str
+    source_scenario_id: str
