@@ -18,3 +18,22 @@ class RagChunk(Base):
     embedding: Mapped[list[float] | None] = mapped_column(
         JSON, nullable=True
     )
+
+    # present objects as string data
+    def __str__(self):
+        return (f"{self.__class__.__name__}(id={self.id}, "
+                f"chunk_id={self.chunk_id!r},"
+                f"source_title={self.source_title!r})"
+                f"source_chapter={self.source_chapter!r})")
+
+    def __repr__(self):
+        return str(self)
+
+    # transform received data into dictionary
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "chunk_id": self.chunk_id,
+            "source_title": self.source_title,
+            "source_chapter": self.source_chapter,
+        }
