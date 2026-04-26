@@ -1,28 +1,29 @@
-from typing import Dict, Any
-
 from sqlalchemy.orm import Mapped, mapped_column
-from sqlalchemy import Text, JSON
+from sqlalchemy import Text, JSON, Boolean
 from app.database import Base, str_uniq, int_pk, str_not_null
 
 
 class Scenario(Base):
-    id: Mapped[int_pk]
+    external_id: Mapped[str_uniq]  # "chemical-spill-media-panic-001"
+
     title: Mapped[str_not_null]
     crisis_type: Mapped[str_not_null]
     severity: Mapped[str_not_null]
     phase: Mapped[str_not_null]
     context: Mapped[str] = mapped_column(Text, nullable=False)
-    stakeholders: Mapped[Dict[str, Any]] = mapped_column(
-        JSON, nullable=False, default=list, server_default="{}"
+    stakeholders: Mapped[list[str]] = mapped_column(
+        JSON, nullable=False, default=list
     )
     time_pressure: Mapped[str_not_null]
-    initial_statement_required: mapped_column(bool)
-    decision_nodes: Mapped[Dict[str, Any]] = mapped_column(
-        JSON, nullable=False, default=list, server_default="{}"
+    initial_statement_required: Mapped[bool] = mapped_column(
+        Boolean, nullable=False, default=False
     )
-    relevant_tactics: Mapped[Dict[str, Any]] = mapped_column(
-        JSON, nullable=False, default=list, server_default="{}"
+    decision_nodes: Mapped[list[str]] = mapped_column(
+        JSON, nullable=False, default=list
     )
-    source: Mapped[str]
-    difficulty_for_rookie: Mapped[str]
+    relevant_tactics: Mapped[list[str]] = mapped_column(
+        JSON, nullable=False, default=list
+    )
+    source: Mapped[str_not_null]
+    difficulty_for_rookie: Mapped[str_not_null]
 
