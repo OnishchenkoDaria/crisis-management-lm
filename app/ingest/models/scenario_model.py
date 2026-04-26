@@ -1,5 +1,8 @@
+from typing import Any
+
+from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import Mapped, mapped_column
-from sqlalchemy import Text, JSON, Boolean, Integer
+from sqlalchemy import Text, JSON, Boolean, Integer, String
 from app.database import Base, str_uniq, int_pk, str_not_null
 
 
@@ -23,7 +26,10 @@ class Scenario(Base):
     relevant_tactics: Mapped[list[str]] = mapped_column(
         JSON, nullable=False, default=list
     )
-    source: Mapped[str_not_null]
+    source_slug: Mapped[str] = mapped_column(String(160), index=True, nullable=False)
+    source_chunk_id: Mapped[str] = mapped_column(String(240), index=True, nullable=False)
+    chapter_title: Mapped[str | None] = mapped_column(String(500))
+    raw: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, default=dict)
     difficulty_for_rookie: Mapped[str_not_null]
 
     # present objects as string data
