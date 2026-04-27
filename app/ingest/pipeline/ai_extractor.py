@@ -1,3 +1,21 @@
+"""
+ai_extractor.py
+Runs 4 extraction prompts per text chunk.
+
+Supported backends (set LLM_BACKEND in .env):
+  anthropic         – Anthropic Claude API  (default)
+  lmstudio          – LM Studio local server (http://localhost:1234/v1)
+  openai            – OpenAI API
+  openai_compatible – Any OpenAI-compatible endpoint (Ollama, vLLM, etc.)
+
+Environment variables:
+  LLM_BACKEND           = anthropic | lmstudio | openai | openai_compatible
+  ANTHROPIC_API_KEY     = sk-ant-...          (required for anthropic)
+  OPENAI_API_KEY        = sk-...              (required for openai; for lmstudio use any string)
+  OPENAI_BASE_URL       = http://localhost:1234/v1  (required for lmstudio / openai_compatible)
+  MODEL                 = model name (see defaults below per backend)
+  MAX_TOK               = 4096
+"""
 from __future__ import annotations
 
 import json
@@ -8,17 +26,72 @@ import time
 from dataclasses import dataclass
 from typing import Any
 
-import anthropic
+import anthropic as _antropic
 from dotenv import load_dotenv
 
 load_dotenv()
 
 log = logging.getLogger(__name__)
 
-MODEL = os.getenv("MODEL", "claude-3-5-sonnet-latest")
+BACKEND = os.getenv("LLM_BACKEND", "anthropic").lower().strip()
+
+_DEFAULT_MODELS = {
+    "anthropic":         "claude-3-5-sonnet-latest",
+    "openai":            "gpt-4o-mini",
+    "lmstudio":          "local-model",
+    "openai_compatible": "local-model",
+}
+
+MODEL   = os.getenv("MODEL", _DEFAULT_MODELS.get(BACKEND, "local-model"))
 MAX_TOK = int(os.getenv("MAX_TOK", "4096"))
 
-client = anthropic.Anthropic()  # reads ANTHROPIC_API_KEY from env
+def _build_client():
+    if BACKEND == "anthropic":
+        try:
+            import anthropic as _anthropic
+        except ImportError:
+            raise ImportError("pip install anthropic")
+        api_key = os.getenv("ANTHROPIC_API_KEY", "")
+        if not api_key:
+            raise EnvironmentError(
+                "ANTHROPIC_API_KEY is not set.\n"
+                "Either set it in your .env file, or switch to LM Studio:\n"
+                "  LLM_BACKEND=lmstudio\n"
+                "  MODEL=<model-name-loaded-in-lmstudio>\n"
+                "  OPENAI_BASE_URL=http://localhost:1234/v1\n"
+                "  OPENAI_API_KEY=lm-studio"
+            )
+        return _anthropic.Anthropic(api_key=api_key)
+
+    elif BACKEND in ("lmstudio", "openai", "openai_compatible"):
+        try:
+            from openai import OpenAI
+        except ImportError:
+            raise ImportError("pip install openai")
+
+        base_url = os.getenv("OPENAI_BASE_URL")
+        api_key  = os.getenv("OPENAI_API_KEY", "lm-studio")  # any string works for local
+
+        if BACKEND == "lmstudio" and not base_url:
+            base_url = "http://localhost:1234/v1"             # LM Studio default
+
+        if BACKEND in ("lmstudio", "openai_compatible") and not base_url:
+            raise EnvironmentError(
+                "OPENAI_BASE_URL must be set for lmstudio/openai_compatible backend.\n"
+                "Example: OPENAI_BASE_URL=http://localhost:1234/v1"
+            )
+
+        return OpenAI(base_url=base_url, api_key=api_key)
+    else:
+        raise ValueError(
+            f"Unknown LLM_BACKEND='{BACKEND}'. "
+            "Choose one of: anthropic, lmstudio, openai, openai_compatible"
+        )
+
+
+client = _build_client()
+
+log.info("LLM backend: %s | model: %s", BACKEND, MODEL)
 
 SYSTEM = (
     "You are a dataset builder for a Decision Support System (DSS) that helps "
@@ -62,7 +135,7 @@ def _prompt_decision_nodes(passage: str, scenario_ids: list[str], language: str 
         if scenario_ids else ""
     )
     return f"""From the passage below, extract all DECISION POINTS a Communications Specialist must navigate.
-    For each decision point output a JSON object:{ids_hint}
+    For each decision point output a JSON object:{ids_hint}{_lang_note(language)}
     - decision_id: short kebab-case slug
     - source_scenario_id: matching scenario_id from the passage (or null)
     - situation: what is happening RIGHT NOW at this decision point
@@ -101,8 +174,7 @@ def _prompt_qa_pairs(passage: str, scenario_ids: list[str], language: str | None
         if scenario_ids else ""
     )
     return f"""You are building training data for a DSS that guides rookie Communications Specialists.{_lang_note(language)}
-    From the passage below, generate 10-15 realistic Q&A pairs that a rookie specialist might ask
-    the system during a crisis.{ids_hint}
+    From the passage below, generate 10-15 realistic Q&A pairs that a rookie specialist might ask during a crisis.{ids_hint}
     Questions must be:
     - Urgent and specific, not academic
     - Phrased as a person under pressure would ask them
@@ -122,7 +194,7 @@ def _prompt_qa_pairs(passage: str, scenario_ids: list[str], language: str | None
     {passage}"""
 
 
-def _strip_json_fences(raw: str) -> str:
+def _strip_fences(raw: str) -> str:
     raw = raw.strip()
     if raw.startswith("```"):
         raw = re.sub(r"^```[a-zA-Z]*\n?", "", raw)
@@ -131,30 +203,66 @@ def _strip_json_fences(raw: str) -> str:
 
 
 def _call(user_prompt: str, retries: int = 3) -> list[Any] | dict[str, Any]:
+    # calls the configured LLM backend and returns parsed JSON.
+    # retries on rate-limit or JSON parse errors.
     for attempt in range(retries):
         try:
-            msg = client.messages.create(
-                model=MODEL,
-                max_tokens=MAX_TOK,
-                system=SYSTEM,
-                messages=[{"role": "user", "content": user_prompt}],
-            )
-            raw = _strip_json_fences(msg.content[0].text)
+            if BACKEND == "anthropic":
+                msg = client.messages.create(
+                    model=MODEL,
+                    max_tokens=MAX_TOK,
+                    system=SYSTEM,
+                    messages=[{"role": "user", "content": user_prompt}],
+                )
+                raw = _strip_fences(msg.content[0].text)
+
+            else:
+                # OpenAI-compatible (LM Studio, OpenAI API, Ollama, vLLM, etc.)
+                resp = client.chat.completions.create(
+                    model=MODEL,
+                    max_tokens=MAX_TOK,
+                    temperature=0.1,      # low temp → more deterministic JSON
+                    messages=[
+                        {"role": "system", "content": SYSTEM},
+                        {"role": "user",   "content": user_prompt},
+                    ],
+                )
+                raw = _strip_fences(resp.choices[0].message.content or "[]")
+
             return json.loads(raw)
+
         except json.JSONDecodeError as e:
             log.warning("JSON parse error (attempt %s/%s): %s", attempt + 1, retries, e)
+            log.debug("Raw response: %s", raw[:300] if 'raw' in dir() else "N/A")
             if attempt == retries - 1:
                 return []
             time.sleep(2)
-        except anthropic.RateLimitError:
-            wait = 20 * (attempt + 1)
-            log.warning("Rate limit hit — waiting %ss", wait)
-            time.sleep(wait)
-        except anthropic.APIError as e:
-            log.error("Anthropic API error: %s", e)
-            if attempt == retries - 1:
+
+        except Exception as e:
+            err = str(e)
+            # Rate limit
+            if "rate" in err.lower() or "429" in err:
+                wait = 20 * (attempt + 1)
+                log.warning("Rate limit — waiting %ss", wait)
+                time.sleep(wait)
+            # Auth error — surface immediately, don't retry silently
+            elif "auth" in err.lower() or "api_key" in err.lower() or "401" in err:
+                log.error(
+                    "Authentication failed for backend '%s'.\n"
+                    "  Check your .env file:\n"
+                    "    ANTHROPIC  → set ANTHROPIC_API_KEY\n"
+                    "    LM Studio  → set LLM_BACKEND=lmstudio, MODEL=<your-model>,\n"
+                    "                     OPENAI_BASE_URL=http://localhost:1234/v1,\n"
+                    "                     OPENAI_API_KEY=lm-studio\n"
+                    "  Original error: %s", BACKEND, e
+                )
                 return []
-            time.sleep(5)
+            else:
+                log.error("LLM API error (attempt %s/%s): %s", attempt + 1, retries, e)
+                if attempt == retries - 1:
+                    return []
+                time.sleep(5)
+
     return []
 
 
@@ -174,41 +282,45 @@ class ChunkExtractionResult:
     qa_pairs: list
 
 
+def _tag_records(records: list, chunk) -> list:
+    """Stamp provenance metadata on every extracted record."""
+    for rec in records:
+        if isinstance(rec, dict):
+            rec["_source_chunk_id"] = chunk.chunk_id
+            rec["_source_slug"]     = chunk.source_slug
+            rec["_chapter_title"]   = chunk.chapter_title
+            rec["_chapter_index"]   = chunk.chapter_index
+            rec["_chunk_index"]     = chunk.chunk_index
+            rec["_language"]        = getattr(chunk, "language", "mixed")
+            rec["_doc_type"]        = getattr(chunk, "doc_type", "manual")
+    return records
+
+
 def extract_from_chunk(chunk) -> ChunkExtractionResult:
-    passage = chunk.text
+    """Run all 4 prompts against one TextChunk, in dependency order."""
+    passage  = chunk.text
     language = getattr(chunk, "language", None)
 
-    log.info("  → Prompt 1 (scenarios)   [%s]", chunk.chunk_id)
+    log.info("  → Prompt 1 (scenarios)   [%s] lang=%s", chunk.chunk_id, language)
     scenarios = _call(_prompt_scenarios(passage, language))
-    scenarios = scenarios if isinstance(scenarios, list) else []
+    scenarios = _tag_records(scenarios if isinstance(scenarios, list) else [], chunk)
     scenario_ids = [s.get("scenario_id", "") for s in scenarios if isinstance(s, dict)]
     time.sleep(1)
 
     log.info("  → Prompt 3 (tactics)     [%s]", chunk.chunk_id)
     tactics = _call(_prompt_tactics(passage, language))
-    tactics = tactics if isinstance(tactics, list) else []
+    tactics = _tag_records(tactics if isinstance(tactics, list) else [], chunk)
     time.sleep(1)
 
     log.info("  → Prompt 2 (decisions)   [%s]", chunk.chunk_id)
     decision_nodes = _call(_prompt_decision_nodes(passage, scenario_ids, language))
-    decision_nodes = decision_nodes if isinstance(decision_nodes, list) else []
+    decision_nodes = _tag_records(decision_nodes if isinstance(decision_nodes, list) else [], chunk)
     time.sleep(1)
 
     log.info("  → Prompt 4 (qa_pairs)    [%s]", chunk.chunk_id)
     qa_pairs = _call(_prompt_qa_pairs(passage, scenario_ids, language))
-    qa_pairs = qa_pairs if isinstance(qa_pairs, list) else []
+    qa_pairs = _tag_records(qa_pairs if isinstance(qa_pairs, list) else [], chunk)
     time.sleep(1)
-
-    for record_list in (scenarios, decision_nodes, tactics, qa_pairs):
-        for rec in record_list:
-            if isinstance(rec, dict):
-                rec["_source_chunk_id"] = chunk.chunk_id
-                rec["_source_slug"] = chunk.source_slug
-                rec["_chapter_title"] = chunk.chapter_title
-                rec["_chapter_index"] = chunk.chapter_index
-                rec["_chunk_index"] = chunk.chunk_index
-                rec["_language"] = getattr(chunk, "language", "mixed")
-                rec["_doc_type"] = getattr(chunk, "doc_type", "manual")
 
     return ChunkExtractionResult(
         chunk_id=chunk.chunk_id,
