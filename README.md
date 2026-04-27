@@ -40,3 +40,21 @@ https://github.com/rasbt/LLMs-from-scratch/blob/main/ch02/01_main-chapter-code/c
         data/processed/qa_pairs.jsonl
         data/processed/rag_chunks.jsonl
         data/processed/training_samples.jsonl
+
+   2. Check _extraction_ manually
+
+       Open `qa_pairs.jsonl`, `scenarios.jsonl`, `decision_nodes.jsonl`.
+
+       Check the quality of jsonl to match criteria:
+
+       * are `scenarios` resolving crisis situations;
+       * do `decision nodes` have choice logic;
+       * `Q&A pairs` are not made-up;
+       * are `ua` materials transformed into `en` output;
+       * absence of the extra info like типу DOI, УДК, номерів сторінок;
+       * double columns PDF are not fused.
+
+       Example:
+        
+           з USAID manual система має витягти сценарії про кризу в громаді, ризик втрати довіри, потребу в негайній реакції, відмінність інциденту від кризи
+           з CERC manual — community stakeholders, advocates/ambivalents/adversaries, crisis coordination/collaboration, рівні engagement .
