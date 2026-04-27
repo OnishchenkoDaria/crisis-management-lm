@@ -190,16 +190,16 @@ def _split_into_token_chunks(
     words = text.split()
     chunks: list[str] = []
     current: list[str] = []
-    count = 0
+    count = 0.0  # float so TOKEN_RATIO accumulates correctly
 
     for word in words:
-        wt = _count_tokens(word)
+        wt = TOKEN_RATIO         # each word ≈ TOKEN_RATIO tokens (float accumulator)
         if count + wt > max_tokens and current:
             chunks.append(" ".join(current))
             carry: list[str] = []
-            carry_count = 0
+            carry_count = 0.0
             for w in reversed(current):
-                wc = _count_tokens(w)
+                wc = TOKEN_RATIO
                 if carry_count + wc > overlap:
                     break
                 carry.insert(0, w)
