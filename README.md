@@ -18,7 +18,7 @@ https://github.com/rasbt/LLMs-from-scratch/blob/main/ch02/01_main-chapter-code/c
 
 ### Enlarging dataset
 
-1. Start pipeline locally with single PDF
+1. #### Start pipeline locally with single PDF
 
     Put the PDF file into `app/ingestion/data/raw/`
     
@@ -41,20 +41,37 @@ https://github.com/rasbt/LLMs-from-scratch/blob/main/ch02/01_main-chapter-code/c
         data/processed/rag_chunks.jsonl
         data/processed/training_samples.jsonl
 
-   2. Check _extraction_ manually
+2. #### Check _extraction_ manually
 
-       Open `qa_pairs.jsonl`, `scenarios.jsonl`, `decision_nodes.jsonl`.
+    Open `qa_pairs.jsonl`, `scenarios.jsonl`, `decision_nodes.jsonl`.
 
-       Check the quality of jsonl to match criteria:
+    Check the quality of jsonl to match criteria:
 
-       * are `scenarios` resolving crisis situations;
-       * do `decision nodes` have choice logic;
-       * `Q&A pairs` are not made-up;
-       * are `ua` materials transformed into `en` output;
-       * absence of the extra info like типу DOI, УДК, номерів сторінок;
-       * double columns PDF are not fused.
+    * are `scenarios` resolving crisis situations;
+    * do `decision nodes` have choice logic;
+    * `Q&A pairs` are not made-up;
+    * are `ua` materials transformed into `en` output;
+    * absence of the extra info like типу DOI, УДК, номерів сторінок;
+    * double columns PDF are not fused.
 
-       Example:
+    Example:
         
-           з USAID manual система має витягти сценарії про кризу в громаді, ризик втрати довіри, потребу в негайній реакції, відмінність інциденту від кризи
-           з CERC manual — community stakeholders, advocates/ambivalents/adversaries, crisis coordination/collaboration, рівні engagement .
+        з USAID manual система має витягти сценарії про кризу в громаді, ризик втрати довіри, потребу в негайній реакції, відмінність інциденту від кризи
+        з CERC manual — community stakeholders, advocates/ambivalents/adversaries, crisis coordination/collaboration, рівні engagement .
+
+3. #### Test _FastAPI upload_
+
+    Start backend: `uvicorn app.main:app --reload`
+    
+    Open Swagger: http://localhost:8000/docs
+    
+    Check endpoints:
+    
+         POST /api/v1/ingest/upload
+         GET /api/v1/ingest/jobs/{job_id}
+         GET /api/v1/ingest/stats
+         POST /api/v1/ingest/build-training
+    
+    Logic behind: 
+          
+         користувач/admin завантажує PDF, backend запускає background job, а frontend пізніше просто опитує статус.
