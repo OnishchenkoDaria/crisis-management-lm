@@ -1,0 +1,51 @@
+02:18:49  INFO      
+============================================================
+02:18:49  INFO      Processing: Збірка_семінар_права-людини_2023.pdf
+02:18:49  INFO      ============================================================
+02:18:49  INFO      Step 1/4  Extracting text and splitting into chunks …
+02:19:19  INFO        Found 12 chunks across 2 chapters
+02:19:19  INFO      Step 2/4  Saving chunk manifest …
+02:19:19  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\zbirka-seminar-prava-liudyny-2023\metadata.json
+02:19:19  INFO      Step 3/4  Running AI extraction …
+02:19:19  INFO        0 chunks already done, 12 remaining
+02:19:19  INFO        [1/12] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck000 (7000 tokens, chapter: завдання.)
+02:19:19  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck000]
+02:19:20  ERROR       ERROR on zbirka-seminar-prava-liudyny-2023__ch000__ck000: "Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+02:19:20  INFO        [2/12] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck001 (7000 tokens, chapter: завдання.)
+02:19:20  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck001]
+02:19:20  ERROR       ERROR on zbirka-seminar-prava-liudyny-2023__ch000__ck001: "Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+02:19:20  INFO        [3/12] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck002 (7000 tokens, chapter: завдання.)
+02:19:20  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck002]
+02:19:20  ERROR       ERROR on zbirka-seminar-prava-liudyny-2023__ch000__ck002: "Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+02:19:20  INFO        [4/12] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck003 (7000 tokens, chapter: завдання.)
+02:19:20  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck003]
+02:19:20  ERROR       ERROR on zbirka-seminar-prava-liudyny-2023__ch000__ck003: "Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+02:19:20  INFO        [5/12] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck004 (7000 tokens, chapter: завдання.)
+02:19:20  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck004]
+02:19:20  ERROR       ERROR on zbirka-seminar-prava-liudyny-2023__ch000__ck004: "Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+02:19:20  INFO        [6/12] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck005 (7000 tokens, chapter: завдання.)
+02:19:20  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck005]
+02:19:20  ERROR       ERROR on zbirka-seminar-prava-liudyny-2023__ch000__ck005: "Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+02:19:20  INFO        [7/12] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck006 (7000 tokens, chapter: завдання.)
+02:19:20  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck006]
+02:19:20  ERROR       ERROR on zbirka-seminar-prava-liudyny-2023__ch000__ck006: "Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+02:19:20  INFO        [8/12] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck007 (7000 tokens, chapter: завдання.)
+02:19:20  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck007]
+02:19:20  ERROR       ERROR on zbirka-seminar-prava-liudyny-2023__ch000__ck007: "Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+02:19:20  INFO        [9/12] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck008 (7000 tokens, chapter: завдання.)
+02:19:20  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck008]
+02:19:20  ERROR       ERROR on zbirka-seminar-prava-liudyny-2023__ch000__ck008: "Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+02:19:20  INFO        [10/12] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck009 (7000 tokens, chapter: завдання.)
+02:19:20  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck009]
+02:19:20  ERROR       ERROR on zbirka-seminar-prava-liudyny-2023__ch000__ck009: "Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+02:19:20  INFO        [11/12] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck010 (1372 tokens, chapter: завдання.)
+02:19:20  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck010]
+02:19:20  ERROR       ERROR on zbirka-seminar-prava-liudyny-2023__ch000__ck010: "Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+02:19:20  INFO        [12/12] Processing  zbirka-seminar-prava-liudyny-2023__ch001__ck000 (6115 tokens, chapter: Висновки.)
+02:19:20  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch001__ck000]
+02:19:20  ERROR       ERROR on zbirka-seminar-prava-liudyny-2023__ch001__ck000: "Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+02:19:20  INFO      Step 4/4  Merging into processed/ …
+02:19:20  WARNING   No chunk dirs found for zbirka-seminar-prava-liudyny-2023
+02:19:20  INFO        Done: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 0, 'qa_pairs': 0, 'rag_chunks': 0}
+02:19:20  INFO      
+Building training_samples.jsonl …
