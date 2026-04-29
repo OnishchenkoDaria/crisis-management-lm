@@ -202,9 +202,11 @@ def _strip_fences(raw: str) -> str:
     return raw.strip()
 
 
-def _call(user_prompt: str, retries: int = 3) -> list[Any] | dict[str, Any]:
-    # calls the configured LLM backend and returns parsed JSON.
-    # retries on rate-limit or JSON parse errors.
+def _call(user_prompt: str, retries: int = 3) -> tuple[list | dict, bool]:
+    """
+    Calls the configured LLM backend and returns parsed JSON.
+    Retries on rate-limit or JSON parse errors.
+    """
     for attempt in range(retries):
         try:
             if BACKEND == "anthropic":
@@ -229,13 +231,13 @@ def _call(user_prompt: str, retries: int = 3) -> list[Any] | dict[str, Any]:
                 )
                 raw = _strip_fences(resp.choices[0].message.content or "[]")
 
-            return json.loads(raw)
+            return json.loads(raw), False
 
         except json.JSONDecodeError as e:
             log.warning("JSON parse error (attempt %s/%s): %s", attempt + 1, retries, e)
             log.debug("Raw response: %s", raw[:300] if 'raw' in dir() else "N/A")
             if attempt == retries - 1:
-                return []
+                return [], True
             time.sleep(2)
 
         except Exception as e:
@@ -256,14 +258,14 @@ def _call(user_prompt: str, retries: int = 3) -> list[Any] | dict[str, Any]:
                     "                     OPENAI_API_KEY=lm-studio\n"
                     "  Original error: %s", BACKEND, e
                 )
-                return []
+                return [], True
             else:
                 log.error("LLM API error (attempt %s/%s): %s", attempt + 1, retries, e)
                 if attempt == retries - 1:
-                    return []
+                    return [], True
                 time.sleep(5)
 
-    return []
+    return [], True
 
 
 # Main extraction function for one chunk
@@ -280,6 +282,7 @@ class ChunkExtractionResult:
     decision_nodes: list
     tactics: list
     qa_pairs: list
+    had_api_errors:  bool = False   # True if any prompt got 400/timeout — chunk will be retried
 
 
 def _tag_records(records: list, chunk) -> list:
@@ -301,26 +304,38 @@ def extract_from_chunk(chunk) -> ChunkExtractionResult:
     passage  = chunk.text
     language = getattr(chunk, "language", None)
 
+    any_error = False
+
     log.info("  → Prompt 1 (scenarios)   [%s] lang=%s", chunk.chunk_id, language)
-    scenarios = _call(_prompt_scenarios(passage, language))
-    scenarios = _tag_records(scenarios if isinstance(scenarios, list) else [], chunk)
+    scenarios_raw, err1 = _call(_prompt_scenarios(passage, language))
+    any_error = any_error or err1
+    scenarios = _tag_records(scenarios_raw if isinstance(scenarios_raw, list) else [], chunk)
     scenario_ids = [s.get("scenario_id", "") for s in scenarios if isinstance(s, dict)]
     time.sleep(1)
 
     log.info("  → Prompt 3 (tactics)     [%s]", chunk.chunk_id)
-    tactics = _call(_prompt_tactics(passage, language))
-    tactics = _tag_records(tactics if isinstance(tactics, list) else [], chunk)
+    tactics_raw, err3 = _call(_prompt_tactics(passage, language))
+    any_error = any_error or err3
+    tactics = _tag_records(tactics_raw if isinstance(tactics_raw, list) else [], chunk)
     time.sleep(1)
 
     log.info("  → Prompt 2 (decisions)   [%s]", chunk.chunk_id)
-    decision_nodes = _call(_prompt_decision_nodes(passage, scenario_ids, language))
-    decision_nodes = _tag_records(decision_nodes if isinstance(decision_nodes, list) else [], chunk)
+    decisions_raw, err2 = _call(_prompt_decision_nodes(passage, scenario_ids, language))
+    any_error = any_error or err2
+    decision_nodes = _tag_records(decisions_raw if isinstance(decisions_raw, list) else [], chunk)
     time.sleep(1)
 
     log.info("  → Prompt 4 (qa_pairs)    [%s]", chunk.chunk_id)
-    qa_pairs = _call(_prompt_qa_pairs(passage, scenario_ids, language))
-    qa_pairs = _tag_records(qa_pairs if isinstance(qa_pairs, list) else [], chunk)
+    qa_raw, err4 = _call(_prompt_qa_pairs(passage, scenario_ids, language))
+    any_error = any_error or err4
+    qa_pairs = _tag_records(qa_raw if isinstance(qa_raw, list) else [], chunk)
     time.sleep(1)
+
+    if any_error:
+        log.warning(
+            "  WARNING: chunk [%s] had API errors — will NOT be marked complete, will retry on next run",
+            chunk.chunk_id
+        )
 
     return ChunkExtractionResult(
         chunk_id=chunk.chunk_id,
@@ -334,4 +349,5 @@ def extract_from_chunk(chunk) -> ChunkExtractionResult:
         decision_nodes=decision_nodes,
         tactics=tactics,
         qa_pairs=qa_pairs,
+        had_api_errors = any_error,
     )

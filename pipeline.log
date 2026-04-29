@@ -49,3 +49,573 @@
 02:19:20  INFO        Done: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 0, 'qa_pairs': 0, 'rag_chunks': 0}
 02:19:20  INFO      
 Building training_samples.jsonl …
+23:53:30  INFO      
+============================================================
+23:53:30  INFO      Processing: Збірка_семінар_права-людини_2023.pdf
+23:53:30  INFO      ============================================================
+23:53:30  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:54:24  INFO        Found 19 chunks across 2 chapters
+23:54:24  INFO      Step 2/4  Saving chunk manifest …
+23:54:24  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\zbirka-seminar-prava-liudyny-2023\metadata.json
+23:54:24  INFO      Step 3/4  Running AI extraction …
+23:54:24  INFO        0 chunks already done, 19 remaining
+23:54:24  INFO        [1/19] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck000 (4499 tokens, chapter: завдання.)
+23:54:24  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck000] lang=uk
+23:54:29  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:54:29  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11313>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:54:37  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:54:37  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11313>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:54:42  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:54:42  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11313>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:54:43  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck000]
+23:54:44  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:54:44  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11319>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:54:49  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:54:49  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11319>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:54:55  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:54:55  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11319>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:54:56  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck000]
+23:54:56  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:54:57  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11312>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:55:04  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:55:04  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11312>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:55:11  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:55:11  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11312>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:55:12  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck000]
+23:55:13  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:55:13  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11340>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:55:18  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:55:18  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11340>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:55:26  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:55:26  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11340>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:55:27  INFO        ✓ chunk saved [zbirka-seminar-prava-liudyny-2023__ch000__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+23:55:27  INFO        [2/19] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck001 (4499 tokens, chapter: завдання.)
+23:55:27  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck001] lang=uk
+23:55:27  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:55:27  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11601>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:55:32  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:55:32  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11601>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:55:38  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:55:38  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11601>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:55:39  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck001]
+23:55:39  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:55:39  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11608>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:55:46  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:55:46  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11608>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:55:52  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:55:52  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11608>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:55:53  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck001]
+23:55:53  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:55:53  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11601>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:55:59  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:55:59  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11601>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:56:06  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:56:06  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11601>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:56:07  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck001]
+23:56:08  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:56:08  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11629>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:56:13  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:56:13  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11629>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:56:18  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:56:18  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11629>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:56:19  INFO        ✓ chunk saved [zbirka-seminar-prava-liudyny-2023__ch000__ck001]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+23:56:19  INFO        [3/19] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck002 (4499 tokens, chapter: завдання.)
+23:56:19  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck002] lang=uk
+23:56:20  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:56:20  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11310>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:56:25  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:56:25  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11310>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:56:33  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:56:33  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11310>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:56:34  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck002]
+23:56:34  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:56:34  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11316>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:56:40  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:56:40  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11316>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:56:47  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:56:47  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11316>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:56:48  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck002]
+23:56:49  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:56:49  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11309>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:56:56  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:56:56  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11309>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:57:04  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:57:04  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11309>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:57:05  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck002]
+23:57:05  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:57:05  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11337>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:57:11  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:57:11  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11337>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:57:18  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:57:18  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11337>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:57:19  INFO        ✓ chunk saved [zbirka-seminar-prava-liudyny-2023__ch000__ck002]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+23:57:19  INFO        [4/19] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck003 (4499 tokens, chapter: завдання.)
+23:57:19  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck003] lang=uk
+23:57:19  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:57:19  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10956>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:57:25  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:57:25  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10956>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:57:32  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:57:32  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10956>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:57:33  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck003]
+23:57:33  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:57:34  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10962>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:57:39  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:57:39  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10962>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:57:46  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:57:46  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10962>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:57:47  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck003]
+23:57:48  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:57:48  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10955>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:57:55  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:57:55  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10955>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:58:03  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:58:03  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10955>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:58:04  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck003]
+23:58:04  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:58:04  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10983>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:58:10  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:58:10  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10983>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:58:15  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:58:15  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10983>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:58:16  INFO        ✓ chunk saved [zbirka-seminar-prava-liudyny-2023__ch000__ck003]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+23:58:16  INFO        [5/19] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck004 (4499 tokens, chapter: завдання.)
+23:58:16  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck004] lang=uk
+23:58:17  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:58:17  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11210>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:58:24  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:58:24  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11210>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:58:32  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:58:32  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11210>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:58:33  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck004]
+23:58:33  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:58:33  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11216>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:58:39  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:58:39  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11216>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:58:46  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:58:46  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11216>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:58:47  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck004]
+23:58:48  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:58:48  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11209>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:58:55  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:58:55  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11209>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:59:03  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:59:03  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11209>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:59:04  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck004]
+23:59:04  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:59:04  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11237>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:59:10  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:59:10  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11237>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:59:17  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:59:17  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11237>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:59:18  INFO        ✓ chunk saved [zbirka-seminar-prava-liudyny-2023__ch000__ck004]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+23:59:18  INFO        [6/19] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck005 (4499 tokens, chapter: завдання.)
+23:59:18  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck005] lang=uk
+23:59:19  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:59:19  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11658>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:59:25  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:59:25  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11658>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:59:32  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:59:32  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11658>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:59:33  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck005]
+23:59:34  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:59:34  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11664>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:59:39  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:59:39  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11664>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:59:44  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:59:44  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11664>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:59:45  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck005]
+23:59:46  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:59:46  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11657>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+23:59:54  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+23:59:54  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11657>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:00:01  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:00:01  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11657>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:00:02  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck005]
+00:00:03  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:00:03  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11685>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:00:10  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:00:10  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11685>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:00:16  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:00:16  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11685>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:00:17  INFO        ✓ chunk saved [zbirka-seminar-prava-liudyny-2023__ch000__ck005]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+00:00:17  INFO        [7/19] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck006 (4499 tokens, chapter: завдання.)
+00:00:17  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck006] lang=uk
+00:00:17  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:00:17  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11710>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:00:25  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:00:25  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11710>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:00:32  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:00:32  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11710>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:00:33  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck006]
+00:00:34  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:00:34  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11716>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:00:41  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:00:41  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11716>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:00:49  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:00:49  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11716>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:00:50  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck006]
+00:00:50  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:00:50  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11709>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:00:58  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:00:58  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11709>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:01:05  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:01:05  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11709>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:01:06  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck006]
+00:01:07  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:01:07  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11737>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:01:14  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:01:14  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11737>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:01:22  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:01:22  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11737>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:01:23  INFO        ✓ chunk saved [zbirka-seminar-prava-liudyny-2023__ch000__ck006]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+00:01:23  INFO        [8/19] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck007 (4499 tokens, chapter: завдання.)
+00:01:23  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck007] lang=uk
+00:01:23  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:01:23  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11911>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:01:29  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:01:29  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11911>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:01:34  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:01:34  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11911>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:01:35  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck007]
+00:01:36  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:01:36  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11917>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:01:43  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:01:43  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11917>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:01:49  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:01:49  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11917>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:01:50  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck007]
+00:01:50  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:01:50  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11910>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:01:58  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:01:58  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11910>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:02:05  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:02:05  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11910>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:02:06  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck007]
+00:02:07  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:02:07  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11938>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:02:15  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:02:15  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11938>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:02:22  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:02:22  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11938>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:02:23  INFO        ✓ chunk saved [zbirka-seminar-prava-liudyny-2023__ch000__ck007]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+00:02:23  INFO        [9/19] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck008 (4499 tokens, chapter: завдання.)
+00:02:23  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck008] lang=uk
+00:02:24  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:02:24  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11167>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:02:31  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:02:31  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11167>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:02:37  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:02:37  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11167>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:02:38  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck008]
+00:02:38  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:02:38  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11173>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:02:44  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:02:44  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11173>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:02:49  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:02:49  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11173>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:02:50  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck008]
+00:02:51  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:02:51  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11166>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:02:56  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:02:56  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11166>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:03:04  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:03:04  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11166>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:03:05  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck008]
+00:03:05  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:03:05  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11194>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:03:13  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:03:13  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11194>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:03:18  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:03:18  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11194>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:03:19  INFO        ✓ chunk saved [zbirka-seminar-prava-liudyny-2023__ch000__ck008]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+00:03:19  INFO        [10/19] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck009 (4499 tokens, chapter: завдання.)
+00:03:19  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck009] lang=uk
+00:03:20  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:03:20  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11851>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:03:27  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:03:27  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11851>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:03:35  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:03:35  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11851>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:03:36  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck009]
+00:03:36  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:03:36  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11857>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:03:42  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:03:42  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11857>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:03:49  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:03:49  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11857>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:03:50  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck009]
+00:03:51  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:03:51  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11850>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:03:58  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:03:58  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11850>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:04:06  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:04:06  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11850>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:04:07  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck009]
+00:04:07  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:04:07  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11878>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:04:15  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:04:15  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11878>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:04:20  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:04:20  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11878>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:04:21  INFO        ✓ chunk saved [zbirka-seminar-prava-liudyny-2023__ch000__ck009]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+00:04:21  INFO        [11/19] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck010 (4499 tokens, chapter: завдання.)
+00:04:21  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck010] lang=uk
+00:04:22  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:04:22  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11451>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:04:30  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:04:30  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11451>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:04:35  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:04:35  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11451>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:04:36  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck010]
+00:04:36  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:04:36  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11457>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:04:44  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:04:44  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11457>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:04:52  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:04:52  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11457>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:04:53  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck010]
+00:04:53  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:04:53  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11450>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:04:59  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:04:59  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11450>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:05:04  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:05:04  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11450>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:05:05  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck010]
+00:05:06  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:05:06  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11478>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:05:13  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:05:13  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11478>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:05:21  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:05:21  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11478>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:05:22  INFO        ✓ chunk saved [zbirka-seminar-prava-liudyny-2023__ch000__ck010]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+00:05:22  INFO        [12/19] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck011 (4499 tokens, chapter: завдання.)
+00:05:22  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck011] lang=uk
+00:05:22  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:05:22  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11488>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:05:30  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:05:30  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11488>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:05:37  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:05:37  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11488>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:05:38  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck011]
+00:05:39  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:05:39  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11495>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:05:46  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:05:46  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11495>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:05:54  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:05:54  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11495>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:05:55  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck011]
+00:05:55  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:05:55  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11488>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:06:03  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:06:03  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11488>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:06:10  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:06:10  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11488>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:06:11  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck011]
+00:06:12  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:06:12  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11516>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:06:20  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:06:20  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11516>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:06:25  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:06:25  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11516>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:06:26  INFO        ✓ chunk saved [zbirka-seminar-prava-liudyny-2023__ch000__ck011]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+00:06:26  INFO        [13/19] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck012 (4499 tokens, chapter: завдання.)
+00:06:26  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck012] lang=uk
+00:06:27  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:06:27  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11758>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:06:34  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:06:34  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11758>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:06:40  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:06:40  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11758>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:06:41  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck012]
+00:06:41  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:06:41  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11764>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:06:49  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:06:49  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11764>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:06:54  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:06:54  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11764>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:06:55  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck012]
+00:06:56  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:06:56  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11757>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:07:03  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:07:03  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11757>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:07:09  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:07:09  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11757>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:07:10  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck012]
+00:07:10  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:07:10  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11785>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:07:18  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:07:18  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11785>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:07:23  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:07:23  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11785>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:07:24  INFO        ✓ chunk saved [zbirka-seminar-prava-liudyny-2023__ch000__ck012]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+00:07:24  INFO        [14/19] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck013 (4499 tokens, chapter: завдання.)
+00:07:24  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck013] lang=uk
+00:07:25  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:07:25  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11029>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:07:30  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:07:30  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11029>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:07:36  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:07:36  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11029>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:07:37  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck013]
+00:07:37  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:07:37  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11034>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:07:45  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:07:45  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11034>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:07:52  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:07:52  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11034>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:07:53  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck013]
+00:07:54  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:07:54  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11027>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:08:01  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:08:01  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11027>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:08:09  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:08:09  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11027>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:08:10  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck013]
+00:08:10  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:08:10  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11055>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:08:17  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:08:17  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11055>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:08:25  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:08:25  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11055>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:08:26  INFO        ✓ chunk saved [zbirka-seminar-prava-liudyny-2023__ch000__ck013]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+00:08:26  INFO        [15/19] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck014 (4499 tokens, chapter: завдання.)
+00:08:26  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck014] lang=uk
+00:08:26  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:08:26  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10777>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:08:32  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:08:32  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10777>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:08:39  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:08:39  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10777>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:08:40  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck014]
+00:08:41  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:08:41  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10782>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:08:48  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:08:48  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10782>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:08:56  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:08:56  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10782>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:08:57  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck014]
+00:08:57  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:08:57  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10775>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:09:03  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:09:03  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10775>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:09:08  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:09:08  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10775>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:09:09  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck014]
+00:09:10  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:09:10  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10803>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:09:15  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:09:15  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10803>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:09:20  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:09:20  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 10803>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:09:21  INFO        ✓ chunk saved [zbirka-seminar-prava-liudyny-2023__ch000__ck014]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+00:09:21  INFO        [16/19] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck015 (4499 tokens, chapter: завдання.)
+00:09:21  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck015] lang=uk
+00:09:22  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:09:22  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11335>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:09:29  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:09:29  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11335>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:09:37  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:09:37  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11335>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:09:38  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck015]
+00:09:38  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:09:38  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11341>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:09:46  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:09:46  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11341>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:09:51  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:09:51  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11341>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:09:52  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck015]
+00:09:53  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:09:53  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11334>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:10:00  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:10:00  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11334>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:10:06  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:10:06  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11334>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:10:07  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck015]
+00:10:07  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:10:07  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11362>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:10:15  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:10:15  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11362>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:10:20  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:10:20  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11362>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:10:21  INFO        ✓ chunk saved [zbirka-seminar-prava-liudyny-2023__ch000__ck015]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+00:10:21  INFO        [17/19] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck016 (1265 tokens, chapter: завдання.)
+00:10:21  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck016] lang=uk
+00:12:46  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+00:12:47  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck016]
+00:15:24  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+00:15:25  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck016]
+00:18:03  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+00:18:04  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck016]
+00:28:04  INFO      Retrying request to /chat/completions in 0.494766 seconds
+00:37:20  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+00:37:20  WARNING   JSON parse error (attempt 1/3): Expecting ',' delimiter: line 89 column 6 (char 5033)
+00:47:22  INFO      Retrying request to /chat/completions in 0.450594 seconds
+00:57:25  INFO      Retrying request to /chat/completions in 0.790704 seconds
+01:04:52  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+01:04:52  WARNING   JSON parse error (attempt 2/3): Expecting property name enclosed in double quotes: line 44 column 5 (char 2333)
+01:14:54  INFO      Retrying request to /chat/completions in 0.382669 seconds
+01:24:56  INFO      Retrying request to /chat/completions in 0.822261 seconds
+01:34:59  ERROR     LLM API error (attempt 3/3): Request timed out.
+01:35:00  INFO        ✓ chunk saved [zbirka-seminar-prava-liudyny-2023__ch000__ck016]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+01:35:00  INFO        [18/19] Processing  zbirka-seminar-prava-liudyny-2023__ch001__ck000 (4499 tokens, chapter: Висновки.)
+01:35:00  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch001__ck000] lang=uk
+01:35:03  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:35:03  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11331>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:35:10  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:35:10  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11331>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:35:15  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:35:15  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11331>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:35:16  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch001__ck000]
+01:35:16  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:35:16  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11337>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:35:23  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:35:23  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11337>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:35:28  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:35:28  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11337>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:35:29  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch001__ck000]
+01:35:30  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:35:30  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11330>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:35:37  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:35:37  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11330>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:35:42  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:35:42  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11330>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:35:43  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch001__ck000]
+01:35:43  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:35:43  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11358>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:35:48  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:35:48  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11358>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:35:53  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:35:53  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 11358>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:35:54  INFO        ✓ chunk saved [zbirka-seminar-prava-liudyny-2023__ch001__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+01:35:54  INFO        [19/19] Processing  zbirka-seminar-prava-liudyny-2023__ch001__ck001 (1864 tokens, chapter: Висновки.)
+01:35:54  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch001__ck001] lang=uk
+01:35:54  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:35:54  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 4968>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:36:02  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:36:02  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 4968>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:36:07  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:36:07  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 4968>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:36:08  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch001__ck001]
+01:36:08  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:36:08  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 4974>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:36:13  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:36:13  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 4974>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:36:20  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:36:20  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 4974>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:36:21  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch001__ck001]
+01:36:22  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:36:22  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 4967>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:36:29  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:36:29  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 4967>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:36:34  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:36:34  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 4967>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:36:35  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch001__ck001]
+01:36:35  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:36:35  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 4995>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:36:42  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:36:42  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 4995>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:36:47  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+01:36:47  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 4995>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+01:36:48  INFO        ✓ chunk saved [zbirka-seminar-prava-liudyny-2023__ch001__ck001]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+01:36:48  INFO      Step 4/4  Merging into processed/ …
