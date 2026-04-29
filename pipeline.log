@@ -976,3 +976,27 @@ Building training_samples.jsonl …
 21:05:49  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 7076>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
 21:05:54  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
 21:05:54  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 7076>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+21:10:37  INFO      
+============================================================
+21:10:37  INFO      Processing: Збірка_семінар_права-людини_2023.pdf
+21:10:37  INFO      ============================================================
+21:10:37  INFO      Step 1/4  Extracting text and splitting into chunks …
+21:11:13  INFO        Found 31 chunks across 2 chapters
+21:11:13  INFO      Step 2/4  Saving chunk manifest …
+21:11:13  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\zbirka-seminar-prava-liudyny-2023\metadata.json
+21:11:13  INFO      Step 3/4  Running AI extraction …
+21:11:13  INFO        0 chunks already done, 31 remaining
+21:11:13  INFO        [1/31] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck000 (6499 tokens, chapter: завдання.)
+21:11:13  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck000] lang=uk
+21:13:29  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+21:13:30  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck000]
+21:15:44  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+21:15:45  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck000]
+21:18:00  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+21:18:01  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck000]
+21:28:01  INFO      Retrying request to /chat/completions in 0.427694 seconds
+21:38:03  INFO      Retrying request to /chat/completions in 0.884388 seconds
+21:48:06  ERROR     LLM API error (attempt 1/3): Request timed out.
+21:58:13  INFO      Retrying request to /chat/completions in 0.390608 seconds
+22:08:16  INFO      Retrying request to /chat/completions in 0.791186 seconds
+22:18:18  ERROR     LLM API error (attempt 2/3): Request timed out.
