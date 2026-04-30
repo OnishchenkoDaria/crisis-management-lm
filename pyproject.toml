@@ -23,7 +23,8 @@ dependencies = [
     "slugify (>=0.0.1,<0.0.2)",
     "anthropic (>=0.97.0,<0.98.0)",
     "openai (>=2.32.0,<3.0.0)",
-    "pgvector (>=0.4.2,<0.5.0)"
+    "pgvector (>=0.4.2,<0.5.0)",
+    "google-genai (>=1.74.0,<2.0.0)"
 ]
 
 
