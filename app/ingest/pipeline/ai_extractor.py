@@ -288,6 +288,14 @@ def _call(user_prompt: str, retries: int = 3) -> tuple[list | dict, bool]:
         except Exception as e:
             err = str(e)
             # Rate limit (Gemini free tier: 15 reqs per minute)
+            if "404" in err:
+                log.error(
+                    "404 Not Found from Gemini. Check your MODEL name in .env.\n"
+                    "Current: MODEL=%s\n"
+                    "Fix: MODEL=gemini-2.0-flash", MODEL
+                )
+                return [], True
+            # Rate limit (Gemini free tier: 15 RPM — wait longer)
             if "rate" in err.lower() or "429" in err or "quota" in err.lower() or "resource_exhausted" in err.lower():
                 wait = 60 if BACKEND == "gemini" else 20 * (attempt + 1)
                 log.warning("Rate limit — waiting %ss (backend=%s)", wait, BACKEND)
