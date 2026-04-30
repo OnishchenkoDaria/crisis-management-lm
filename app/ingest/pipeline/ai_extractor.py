@@ -47,6 +47,11 @@ _DEFAULT_MODELS = {
 MODEL   = os.getenv("MODEL", _DEFAULT_MODELS.get(BACKEND, "local-model"))
 MAX_TOK = int(os.getenv("MAX_TOK", "4096"))
 
+_INTER_PROMPT_DELAY = {
+    "groq":   62,   # 6000 TPM limit — each 4500-token chunk needs ~62s cooldown
+    "gemini": 4,    # 15 RPM free tier — 4s is safe
+}.get(BACKEND, 1)   # all other backends: 1s
+
 def _build_client():
     if BACKEND == "anthropic":
         try:
@@ -364,25 +369,25 @@ def extract_from_chunk(chunk) -> ChunkExtractionResult:
     any_error = any_error or err1
     scenarios = _tag_records(scenarios_raw if isinstance(scenarios_raw, list) else [], chunk)
     scenario_ids = [s.get("scenario_id", "") for s in scenarios if isinstance(s, dict)]
-    time.sleep(1)
+    time.sleep(_INTER_PROMPT_DELAY)
 
     log.info("  → Prompt 3 (tactics)     [%s]", chunk.chunk_id)
     tactics_raw, err3 = _call(_prompt_tactics(passage, language))
     any_error = any_error or err3
     tactics = _tag_records(tactics_raw if isinstance(tactics_raw, list) else [], chunk)
-    time.sleep(1)
+    time.sleep(_INTER_PROMPT_DELAY)
 
     log.info("  → Prompt 2 (decisions)   [%s]", chunk.chunk_id)
     decisions_raw, err2 = _call(_prompt_decision_nodes(passage, scenario_ids, language))
     any_error = any_error or err2
     decision_nodes = _tag_records(decisions_raw if isinstance(decisions_raw, list) else [], chunk)
-    time.sleep(1)
+    time.sleep(_INTER_PROMPT_DELAY)
 
     log.info("  → Prompt 4 (qa_pairs)    [%s]", chunk.chunk_id)
     qa_raw, err4 = _call(_prompt_qa_pairs(passage, scenario_ids, language))
     any_error = any_error or err4
     qa_pairs = _tag_records(qa_raw if isinstance(qa_raw, list) else [], chunk)
-    time.sleep(1)
+    time.sleep(_INTER_PROMPT_DELAY)
 
     if any_error:
         log.warning(
