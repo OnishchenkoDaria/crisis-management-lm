@@ -38,6 +38,8 @@ BACKEND = os.getenv("LLM_BACKEND", "anthropic").lower().strip()
 _DEFAULT_MODELS = {
     "anthropic":         "claude-3-5-sonnet-latest",
     "openai":            "gpt-4o-mini",
+    "gemini":            "gemini-1.5-flash",   # 1500 req/day, 1M context
+    "groq":              "llama-3.3-70b-versatile",
     "lmstudio":          "local-model",
     "openai_compatible": "local-model",
 }
@@ -63,6 +65,33 @@ def _build_client():
             )
         return _anthropic.Anthropic(api_key=api_key)
 
+    elif BACKEND == "gemini":
+        api_key = os.getenv("GEMINI_API_KEY", "")
+        if not api_key:
+            raise EnvironmentError(
+                "GEMINI_API_KEY is not set.\n"
+                "Get a free key at https://aistudio.google.com/apikey\n"
+                "Then add to .env: GEMINI_API_KEY=AIza..."
+            )
+        # Return a simple namespace — actual client created per-call
+        class _GeminiPlaceholder:
+            key = api_key
+        return _GeminiPlaceholder()
+
+    elif BACKEND == "groq":
+        try:
+            from openai import OpenAI
+        except ImportError:
+            raise ImportError("pip install openai")
+        api_key = os.getenv("GROQ_API_KEY", "")
+        if not api_key:
+            raise EnvironmentError(
+                "GROQ_API_KEY is not set.\n"
+                "Get a free key at https://console.groq.com → API Keys\n"
+                "Then add to .env: GROQ_API_KEY=gsk_..."
+            )
+        return OpenAI(base_url="https://api.groq.com/openai/v1", api_key=api_key)
+
     elif BACKEND in ("lmstudio", "openai", "openai_compatible"):
         try:
             from openai import OpenAI
@@ -85,7 +114,7 @@ def _build_client():
     else:
         raise ValueError(
             f"Unknown LLM_BACKEND='{BACKEND}'. "
-            "Choose one of: anthropic, lmstudio, openai, openai_compatible"
+            "Choose one of: anthropic, gemini, groq, lmstudio, openai, openai_compatible"
         )
 
 
@@ -174,7 +203,7 @@ def _prompt_qa_pairs(passage: str, scenario_ids: list[str], language: str | None
         if scenario_ids else ""
     )
     return f"""You are building training data for a DSS that guides rookie Communications Specialists.{_lang_note(language)}
-    From the passage below, generate 5-7 realistic Q&A pairs that a rookie specialist might ask during a crisis.{ids_hint}
+    From the passage below, generate 10-15 realistic Q&A pairs that a rookie specialist might ask during a crisis.{ids_hint}
     Questions must be:
     - Urgent and specific, not academic
     - Phrased as a person under pressure would ask them
@@ -218,8 +247,24 @@ def _call(user_prompt: str, retries: int = 3) -> tuple[list | dict, bool]:
                 )
                 raw = _strip_fences(msg.content[0].text)
 
+            elif BACKEND == "gemini":
+                from google import genai as _genai
+                from google.genai import types as _gtypes
+                gc = _genai.Client(api_key=client.key)
+                resp = gc.models.generate_content(
+                    model=MODEL,
+                    contents=user_prompt,
+                    config=_gtypes.GenerateContentConfig(
+                        system_instruction=SYSTEM,
+                        temperature=0.1,
+                        max_output_tokens=MAX_TOK,
+                        response_mime_type="application/json",  # forces JSON output
+                    ),
+                )
+                raw = _strip_fences(resp.text or "[]")
+
             else:
-                # OpenAI-compatible (LM Studio, OpenAI API, Ollama, vLLM, etc.)
+                # OpenAI-compatible: LM Studio, Groq, OpenAI, Ollama, vLLM, etc.
                 resp = client.chat.completions.create(
                     model=MODEL,
                     max_tokens=MAX_TOK,
@@ -242,10 +287,10 @@ def _call(user_prompt: str, retries: int = 3) -> tuple[list | dict, bool]:
 
         except Exception as e:
             err = str(e)
-            # Rate limit
-            if "rate" in err.lower() or "429" in err:
-                wait = 20 * (attempt + 1)
-                log.warning("Rate limit — waiting %ss", wait)
+            # Rate limit (Gemini free tier: 15 reqs per minute)
+            if "rate" in err.lower() or "429" in err or "quota" in err.lower() or "resource_exhausted" in err.lower():
+                wait = 60 if BACKEND == "gemini" else 20 * (attempt + 1)
+                log.warning("Rate limit — waiting %ss (backend=%s)", wait, BACKEND)
                 time.sleep(wait)
             # Auth error — surface immediately, don't retry silently
             elif "auth" in err.lower() or "api_key" in err.lower() or "401" in err:
