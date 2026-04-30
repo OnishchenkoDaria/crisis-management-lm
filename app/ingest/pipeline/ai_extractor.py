@@ -174,7 +174,7 @@ def _prompt_qa_pairs(passage: str, scenario_ids: list[str], language: str | None
         if scenario_ids else ""
     )
     return f"""You are building training data for a DSS that guides rookie Communications Specialists.{_lang_note(language)}
-    From the passage below, generate 10-15 realistic Q&A pairs that a rookie specialist might ask during a crisis.{ids_hint}
+    From the passage below, generate 5-7 realistic Q&A pairs that a rookie specialist might ask during a crisis.{ids_hint}
     Questions must be:
     - Urgent and specific, not academic
     - Phrased as a person under pressure would ask them

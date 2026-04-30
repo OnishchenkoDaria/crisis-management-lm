@@ -1000,3 +1000,265 @@ Building training_samples.jsonl …
 21:58:13  INFO      Retrying request to /chat/completions in 0.390608 seconds
 22:08:16  INFO      Retrying request to /chat/completions in 0.791186 seconds
 22:18:18  ERROR     LLM API error (attempt 2/3): Request timed out.
+22:28:26  INFO      Retrying request to /chat/completions in 0.380348 seconds
+22:38:28  INFO      Retrying request to /chat/completions in 0.852525 seconds
+22:48:31  ERROR     LLM API error (attempt 3/3): Request timed out.
+22:48:32  WARNING     WARNING: chunk [zbirka-seminar-prava-liudyny-2023__ch000__ck000] had API errors — will NOT be marked complete, will retry on next run
+22:48:32  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch000__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+22:48:32  INFO        [2/31] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck001 (6499 tokens, chapter: завдання.)
+22:48:32  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck001] lang=uk
+22:50:44  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+22:50:45  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck001]
+22:52:56  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+22:52:57  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck001]
+22:55:08  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+22:55:09  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck001]
+23:05:09  INFO      Retrying request to /chat/completions in 0.486954 seconds
+23:15:12  INFO      Retrying request to /chat/completions in 0.809784 seconds
+23:25:15  ERROR     LLM API error (attempt 1/3): Request timed out.
+23:35:22  INFO      Retrying request to /chat/completions in 0.452560 seconds
+23:45:24  INFO      Retrying request to /chat/completions in 0.781305 seconds
+23:55:27  ERROR     LLM API error (attempt 2/3): Request timed out.
+00:17:17  INFO      
+============================================================
+00:17:17  INFO      Processing: Збірка_семінар_права-людини_2023.pdf
+00:17:17  INFO      ============================================================
+00:17:17  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:17:51  INFO        Found 31 chunks across 2 chapters
+00:17:51  INFO      Step 2/4  Saving chunk manifest …
+00:17:51  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\zbirka-seminar-prava-liudyny-2023\metadata.json
+00:17:51  INFO      Step 3/4  Running AI extraction …
+00:17:51  INFO        0 chunks already done, 31 remaining
+00:17:51  INFO        [1/31] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck000 (6499 tokens, chapter: завдання.)
+00:17:51  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck000] lang=uk
+00:17:54  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:17:54  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6567>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:17:59  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:17:59  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6567>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:18:04  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:18:04  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6567>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:18:05  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck000]
+00:18:05  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:18:05  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6573>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:18:12  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:18:12  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6573>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:18:18  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:18:18  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6573>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:18:19  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck000]
+00:18:19  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:18:19  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6566>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:18:24  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:18:24  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6566>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+00:19:07  INFO      
+============================================================
+00:19:07  INFO      Processing: Збірка_семінар_права-людини_2023.pdf
+00:19:07  INFO      ============================================================
+00:19:07  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:19:38  INFO        Found 31 chunks across 2 chapters
+00:19:38  INFO      Step 2/4  Saving chunk manifest …
+00:19:38  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\zbirka-seminar-prava-liudyny-2023\metadata.json
+00:19:38  INFO      Step 3/4  Running AI extraction …
+00:19:38  INFO        0 chunks already done, 31 remaining
+00:19:38  INFO        [1/31] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck000 (6499 tokens, chapter: завдання.)
+00:19:38  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck000] lang=uk
+00:21:47  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+00:21:48  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck000]
+00:23:53  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+00:23:54  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck000]
+00:25:58  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+00:25:59  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck000]
+00:35:59  INFO      Retrying request to /chat/completions in 0.467846 seconds
+00:46:02  INFO      Retrying request to /chat/completions in 0.914749 seconds
+12:58:35  INFO      
+============================================================
+12:58:35  INFO      Processing: Збірка_семінар_права-людини_2023.pdf
+12:58:35  INFO      ============================================================
+12:58:35  INFO      Step 1/4  Extracting text and splitting into chunks …
+12:59:06  INFO        Found 31 chunks across 2 chapters
+12:59:06  INFO      Step 2/4  Saving chunk manifest …
+12:59:06  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\zbirka-seminar-prava-liudyny-2023\metadata.json
+12:59:06  INFO      Step 3/4  Running AI extraction …
+12:59:06  INFO        0 chunks already done, 31 remaining
+12:59:06  INFO        [1/31] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck000 (6499 tokens, chapter: завдання.)
+12:59:06  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck000] lang=uk
+13:11:37  INFO      
+============================================================
+13:11:37  INFO      Processing: Збірка_семінар_права-людини_2023.pdf
+13:11:37  INFO      ============================================================
+13:11:37  INFO      Step 1/4  Extracting text and splitting into chunks …
+13:12:09  INFO        Found 31 chunks across 2 chapters
+13:12:09  INFO      Step 2/4  Saving chunk manifest …
+13:12:09  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\zbirka-seminar-prava-liudyny-2023\metadata.json
+13:12:09  INFO      Step 3/4  Running AI extraction …
+13:12:09  INFO        0 chunks already done, 31 remaining
+13:12:09  INFO        [1/31] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck000 (6499 tokens, chapter: завдання.)
+13:12:09  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck000] lang=uk
+13:12:53  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:12:53  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The model has crashed without additional information. (Exit code: 18446744072635812000)'}
+13:13:06  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:13:06  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6567>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:13:13  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:13:13  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6567>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:13:14  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck000]
+13:13:14  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:13:14  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6573>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:13:19  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:13:19  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6573>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:13:26  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:13:26  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6573>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:13:27  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck000]
+13:13:27  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:13:27  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6566>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:13:35  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:13:35  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6566>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:13:40  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:13:40  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6566>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:13:41  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck000]
+13:13:41  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:13:41  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6592>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:13:46  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:13:46  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6592>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:13:51  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:13:51  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6592>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:13:52  WARNING     WARNING: chunk [zbirka-seminar-prava-liudyny-2023__ch000__ck000] had API errors — will NOT be marked complete, will retry on next run
+13:13:52  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch000__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+13:13:52  INFO        [2/31] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck001 (6499 tokens, chapter: завдання.)
+13:13:52  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck001] lang=uk
+13:13:52  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:13:52  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6835>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:13:57  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:13:57  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6835>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:14:02  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:14:02  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6835>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:14:03  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck001]
+13:14:03  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:14:03  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6841>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:14:09  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:14:09  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6841>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:14:16  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:14:16  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6841>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:14:17  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck001]
+13:14:17  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:14:17  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6834>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:14:22  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:14:22  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6834>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:14:29  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:14:29  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6834>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:14:30  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck001]
+13:14:30  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:14:30  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6860>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:14:37  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:14:37  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6860>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:14:43  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:14:43  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6860>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:14:44  WARNING     WARNING: chunk [zbirka-seminar-prava-liudyny-2023__ch000__ck001] had API errors — will NOT be marked complete, will retry on next run
+13:14:44  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch000__ck001]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+13:14:44  INFO        [3/31] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck002 (6499 tokens, chapter: завдання.)
+13:14:44  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck002] lang=uk
+13:14:44  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:14:44  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6708>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:14:49  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:14:49  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6708>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:14:56  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:14:56  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6708>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:14:57  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck002]
+13:14:57  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:14:57  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6714>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:15:02  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:15:02  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6714>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:15:07  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:15:07  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6714>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:15:08  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck002]
+13:15:08  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:15:08  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6707>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:15:13  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:15:13  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6707>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:15:19  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:15:19  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6707>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:15:20  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck002]
+13:15:20  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:15:20  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6733>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:15:25  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:15:25  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6733>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:15:30  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:15:30  ERROR     LLM API error (attempt 3/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6733>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:15:31  WARNING     WARNING: chunk [zbirka-seminar-prava-liudyny-2023__ch000__ck002] had API errors — will NOT be marked complete, will retry on next run
+13:15:31  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch000__ck002]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+13:15:31  INFO        [4/31] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck003 (6499 tokens, chapter: завдання.)
+13:15:31  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck003] lang=uk
+13:15:31  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:15:31  ERROR     LLM API error (attempt 1/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6866>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:15:36  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+13:15:36  ERROR     LLM API error (attempt 2/3): Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 6866>= n_ctx: 4096). Try to load the model with a larger context length, or provide a shorter input.'}
+13:16:15  INFO      
+============================================================
+13:16:15  INFO      Processing: Збірка_семінар_права-людини_2023.pdf
+13:16:15  INFO      ============================================================
+13:16:15  INFO      Step 1/4  Extracting text and splitting into chunks …
+13:16:53  INFO        Found 31 chunks across 2 chapters
+13:16:53  INFO      Step 2/4  Saving chunk manifest …
+13:16:53  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\zbirka-seminar-prava-liudyny-2023\metadata.json
+13:16:53  INFO      Step 3/4  Running AI extraction …
+13:16:53  INFO        0 chunks already done, 31 remaining
+13:16:53  INFO        [1/31] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck000 (6499 tokens, chapter: завдання.)
+13:16:53  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck000] lang=uk
+13:47:30  INFO      
+============================================================
+13:47:30  INFO      Processing: Збірка_семінар_права-людини_2023.pdf
+13:47:30  INFO      ============================================================
+13:47:30  INFO      Step 1/4  Extracting text and splitting into chunks …
+13:48:36  INFO        Found 31 chunks across 2 chapters
+13:48:36  INFO      Step 2/4  Saving chunk manifest …
+13:48:36  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\zbirka-seminar-prava-liudyny-2023\metadata.json
+13:48:36  INFO      Step 3/4  Running AI extraction …
+13:48:36  INFO        0 chunks already done, 31 remaining
+13:48:36  INFO        [1/31] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck000 (6499 tokens, chapter: завдання.)
+13:48:36  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck000] lang=uk
+13:51:02  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+13:51:03  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck000]
+13:53:10  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+13:53:11  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck000]
+13:55:15  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+13:55:16  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck000]
+14:03:03  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+14:03:04  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch000__ck000]: 0 scenarios, 0 decisions, 0 tactics, 5 qa_pairs  [total=5]
+14:03:04  INFO        [2/31] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck001 (6499 tokens, chapter: завдання.)
+14:03:04  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck001] lang=uk
+14:05:14  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+14:05:15  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck001]
+14:07:26  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+14:07:27  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck001]
+14:09:38  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+14:09:39  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck001]
+14:19:39  INFO      Retrying request to /chat/completions in 0.494961 seconds
+14:28:30  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+14:28:31  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch000__ck001]: 0 scenarios, 0 decisions, 0 tactics, 5 qa_pairs  [total=5]
+14:28:31  INFO        [3/31] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck002 (6499 tokens, chapter: завдання.)
+14:28:31  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck002] lang=uk
+14:30:41  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+14:30:42  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck002]
+14:32:52  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+14:32:53  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck002]
+14:35:04  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+14:35:05  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck002]
+14:43:45  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+14:43:46  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch000__ck002]: 0 scenarios, 0 decisions, 0 tactics, 5 qa_pairs  [total=5]
+14:43:46  INFO        [4/31] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck003 (6499 tokens, chapter: завдання.)
+14:43:46  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck003] lang=uk
+14:47:36  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+14:47:37  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck003]
+14:49:50  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+14:49:51  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck003]
+14:52:05  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+14:52:06  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck003]
+15:01:19  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+15:01:20  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch000__ck003]: 1 scenarios, 0 decisions, 0 tactics, 5 qa_pairs  [total=6]
+15:01:20  INFO        [5/31] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck004 (6499 tokens, chapter: завдання.)
+15:01:20  INFO        → Prompt 1 (scenarios)   [zbirka-seminar-prava-liudyny-2023__ch000__ck004] lang=uk
+15:03:30  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+15:03:31  INFO        → Prompt 3 (tactics)     [zbirka-seminar-prava-liudyny-2023__ch000__ck004]
+15:05:41  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+15:05:42  INFO        → Prompt 2 (decisions)   [zbirka-seminar-prava-liudyny-2023__ch000__ck004]
+15:07:53  INFO      HTTP Request: POST http://localhost:1234/v1/chat/completions "HTTP/1.1 200 OK"
+15:07:54  INFO        → Prompt 4 (qa_pairs)    [zbirka-seminar-prava-liudyny-2023__ch000__ck004]
+15:17:54  INFO      Retrying request to /chat/completions in 0.493056 seconds
