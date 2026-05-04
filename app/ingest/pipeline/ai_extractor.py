@@ -318,7 +318,7 @@ def extract_from_chunk(chunk) -> ChunkExtractionResult:
     result, had_error = _call(_prompt_combined(chunk.text, language))
 
     if had_error or not result:
-        log.warning("  ⚠ [%s] API error — will retry on next run", chunk.chunk_id)
+        log.warning("  WARNING [%s] API error — will retry on next run", chunk.chunk_id)
         return ChunkExtractionResult(
             chunk_id=chunk.chunk_id, source_slug=chunk.source_slug,
             chapter_title=chunk.chapter_title, chapter_index=chunk.chapter_index,

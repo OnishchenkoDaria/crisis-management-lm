@@ -3,8 +3,10 @@ from __future__ import annotations
 import base64
 import hashlib
 import json
+import logging
 import os
 import re
+import unicodedata
 from dataclasses import asdict, dataclass
 from email.header import decode_header
 from pathlib import Path
@@ -12,10 +14,16 @@ from pathlib import Path
 import pdfplumber
 from dotenv import load_dotenv
 
+log = logging.getLogger(__name__)
+
 load_dotenv()
 
 TOKEN_RATIO = float(os.getenv("TOKEN_RATIO", "1.4"))
-MAX_CHUNK_TOKENS = int(os.getenv("MAX_CHUNK_TOKENS", "4500"))
+MAX_CHUNK_TOKENS  = int(os.getenv("MAX_CHUNK_TOKENS",  "4500"))
+# Sections smaller than this get merged into the previous one.
+# Prevents seminar proceedings (46 papers × reference list = 46 tiny chunks)
+# from creating hundreds of useless sub-300-token API calls.
+MIN_SECTION_TOKENS = int(os.getenv("MIN_SECTION_TOKENS", "300"))
 OVERLAP_TOKENS = int(os.getenv("OVERLAP_TOKENS", "250"))
 MAX_PAGES_FOR_COLUMN_DETECTION = int(os.getenv("MAX_PAGES_FOR_COLUMN_DETECTION", "300"))
 
@@ -267,8 +275,26 @@ def extract_chunks(pdf_path: str | Path) -> list[TextChunk]:
             "lines": all_text.splitlines(),
         }]
 
+    # Without this, a 46-paper seminar PDF produces 46 tiny "Список джерел"
+    # chunks (~100 tokens each) wasting API calls on reference lists.
+    merged_chapters: list[dict] = []
+    for ch in chapters:
+        body = "\n".join(ch["lines"]).strip()
+        tok  = _count_tokens(body)
+        if merged_chapters and tok < MIN_SECTION_TOKENS:
+            # Fold into previous section
+            prev = merged_chapters[-1]
+            prev["lines"].extend(ch["lines"])
+            prev["page_end"] = ch["page_end"]
+        else:
+            merged_chapters.append(ch)
+
+    if merged_chapters:
+        log.info("  Sections after merge: %d (was %d, merged %d tiny sections)",
+                 len(merged_chapters), len(chapters), len(chapters) - len(merged_chapters))
+
     all_chunks: list[TextChunk] = []
-    for ch_idx, chapter in enumerate(chapters):
+    for ch_idx, chapter in enumerate(merged_chapters):
         body = "\n".join(chapter["lines"]).strip()
         if not body:
             continue
