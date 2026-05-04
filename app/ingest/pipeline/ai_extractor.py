@@ -1,20 +1,17 @@
 """
 ai_extractor.py
-Runs 4 extraction prompts per text chunk.
+One API call per chunk — extracts all 4 data types simultaneously.
 
-Supported backends (set LLM_BACKEND in .env):
-  anthropic         – Anthropic Claude API  (default)
-  lmstudio          – LM Studio local server (http://localhost:1234/v1)
-  openai            – OpenAI API
-  openai_compatible – Any OpenAI-compatible endpoint (Ollama, vLLM, etc.)
+Before: 4 calls/chunk × 46 chunks = 184 API calls per book
+After:  1 call/chunk × 46 chunks =  46 API calls per book  (4× less quota)
 
-Environment variables:
-  LLM_BACKEND           = anthropic | lmstudio | openai | openai_compatible
-  ANTHROPIC_API_KEY     = sk-ant-...          (required for anthropic)
-  OPENAI_API_KEY        = sk-...              (required for openai; for lmstudio use any string)
-  OPENAI_BASE_URL       = http://localhost:1234/v1  (required for lmstudio / openai_compatible)
-  MODEL                 = model name (see defaults below per backend)
-  MAX_TOK               = 4096
+Supported backends (LLM_BACKEND in .env):
+  gemini            – Google Gemini (free, 1500 req/day)  ← recommended
+  groq              – Groq (free, 30 req/min)
+  anthropic         – Anthropic Claude (paid)
+  openai            – OpenAI (paid)
+  lmstudio          – LM Studio local
+  openai_compatible – Any OpenAI-compatible endpoint
 """
 from __future__ import annotations
 
@@ -23,7 +20,7 @@ import logging
 import os
 import re
 import time
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Any
 
 import anthropic as _antropic
@@ -33,99 +30,74 @@ load_dotenv()
 
 log = logging.getLogger(__name__)
 
-BACKEND = os.getenv("LLM_BACKEND", "anthropic").lower().strip()
-
-_DEFAULT_MODELS = {
+BACKEND = os.getenv("LLM_BACKEND", "gemini").lower().strip()
+MODEL   = os.getenv("MODEL", {
+    "gemini":            "gemini-2.0-flash",
+    "groq":              "llama-3.3-70b-versatile",
     "anthropic":         "claude-3-5-sonnet-latest",
     "openai":            "gpt-4o-mini",
-    "gemini":            "gemini-1.5-flash",   # 1500 req/day, 1M context
-    "groq":              "llama-3.3-70b-versatile",
     "lmstudio":          "local-model",
     "openai_compatible": "local-model",
-}
+}.get(BACKEND, "gemini-2.0-flash"))
 
-MODEL   = os.getenv("MODEL", _DEFAULT_MODELS.get(BACKEND, "local-model"))
-MAX_TOK = int(os.getenv("MAX_TOK", "4096"))
+MAX_TOK = int(os.getenv("MAX_TOK", "8192"))
 
-_INTER_PROMPT_DELAY = {
-    "groq":   62,   # 6000 TPM limit — each 4500-token chunk needs ~62s cooldown
-    "gemini": 4,    # 15 RPM free tier — 4s is safe
-}.get(BACKEND, 1)   # all other backends: 1s
+# Inter-call delay (only matters for rate-limited backends)
+# With 1 call/chunk these limits are rarely hit
+_DELAY = {
+    "gemini": 4,    # 15 RPM free → 4s safe
+    "groq":   10,   # 30 RPM free → 10s safe (vs 62s with 4 calls)
+}.get(BACKEND, 0)
 
 def _build_client():
+    if BACKEND == "gemini":
+        key = os.getenv("GEMINI_API_KEY", "")
+        if not key:
+            raise EnvironmentError(
+                "GEMINI_API_KEY not set.\n"
+                "Get free key: https://aistudio.google.com/apikey\n"
+                "Add to .env:  GEMINI_API_KEY=AIza..."
+            )
+        class _G:
+            api_key = key
+        return _G()
+
     if BACKEND == "anthropic":
         try:
-            import anthropic as _anthropic
+            import anthropic as _a
         except ImportError:
             raise ImportError("pip install anthropic")
-        api_key = os.getenv("ANTHROPIC_API_KEY", "")
-        if not api_key:
-            raise EnvironmentError(
-                "ANTHROPIC_API_KEY is not set.\n"
-                "Either set it in your .env file, or switch to LM Studio:\n"
-                "  LLM_BACKEND=lmstudio\n"
-                "  MODEL=<model-name-loaded-in-lmstudio>\n"
-                "  OPENAI_BASE_URL=http://localhost:1234/v1\n"
-                "  OPENAI_API_KEY=lm-studio"
-            )
-        return _anthropic.Anthropic(api_key=api_key)
+        key = os.getenv("ANTHROPIC_API_KEY", "")
+        if not key:
+            raise EnvironmentError("ANTHROPIC_API_KEY not set.")
+        return _a.Anthropic(api_key=key)
 
-    elif BACKEND == "gemini":
-        api_key = os.getenv("GEMINI_API_KEY", "")
-        if not api_key:
-            raise EnvironmentError(
-                "GEMINI_API_KEY is not set.\n"
-                "Get a free key at https://aistudio.google.com/apikey\n"
-                "Then add to .env: GEMINI_API_KEY=AIza..."
-            )
-        # Return a simple namespace — actual client created per-call
-        class _GeminiPlaceholder:
-            key = api_key
-        return _GeminiPlaceholder()
-
-    elif BACKEND == "groq":
-        try:
-            from openai import OpenAI
-        except ImportError:
-            raise ImportError("pip install openai")
-        api_key = os.getenv("GROQ_API_KEY", "")
-        if not api_key:
-            raise EnvironmentError(
-                "GROQ_API_KEY is not set.\n"
-                "Get a free key at https://console.groq.com → API Keys\n"
-                "Then add to .env: GROQ_API_KEY=gsk_..."
-            )
-        return OpenAI(base_url="https://api.groq.com/openai/v1", api_key=api_key)
-
-    elif BACKEND in ("lmstudio", "openai", "openai_compatible"):
+    if BACKEND in ("groq", "openai", "lmstudio", "openai_compatible"):
         try:
             from openai import OpenAI
         except ImportError:
             raise ImportError("pip install openai")
 
-        base_url = os.getenv("OPENAI_BASE_URL")
-        api_key  = os.getenv("OPENAI_API_KEY", "lm-studio")  # any string works for local
+        if BACKEND == "groq":
+            key = os.getenv("GROQ_API_KEY", "")
+            if not key:
+                raise EnvironmentError(
+                    "GROQ_API_KEY not set.\n"
+                    "Get free key: https://console.groq.com → API Keys\n"
+                    "Add to .env:  GROQ_API_KEY=gsk_..."
+                )
+            return OpenAI(base_url="https://api.groq.com/openai/v1", api_key=key)
 
-        if BACKEND == "lmstudio" and not base_url:
-            base_url = "http://localhost:1234/v1"             # LM Studio default
-
-        if BACKEND in ("lmstudio", "openai_compatible") and not base_url:
-            raise EnvironmentError(
-                "OPENAI_BASE_URL must be set for lmstudio/openai_compatible backend.\n"
-                "Example: OPENAI_BASE_URL=http://localhost:1234/v1"
-            )
-
+        base_url = os.getenv("OPENAI_BASE_URL", "http://localhost:1234/v1")
+        api_key  = os.getenv("OPENAI_API_KEY", "lm-studio")
         return OpenAI(base_url=base_url, api_key=api_key)
-    else:
-        raise ValueError(
-            f"Unknown LLM_BACKEND='{BACKEND}'. "
-            "Choose one of: anthropic, gemini, groq, lmstudio, openai, openai_compatible"
-        )
+
+    raise ValueError(f"Unknown LLM_BACKEND='{BACKEND}'. "
+                     "Choose: gemini, groq, anthropic, openai, lmstudio, openai_compatible")
 
 
 client = _build_client()
-
-log.info("LLM backend: %s | model: %s", BACKEND, MODEL)
+log.info("LLM backend: %s | model: %s | delay: %ss", BACKEND, MODEL, _DELAY)
 
 SYSTEM = (
     "You are a dataset builder for a Decision Support System (DSS) that helps "
@@ -138,91 +110,61 @@ SYSTEM = (
 def _lang_note(language: str | None) -> str:
     if language in {"uk", "mixed"}:
         return (
-            "\nLANGUAGE NOTE: The passage may be in Ukrainian or mixed Ukrainian/English. "
-            "Extract knowledge regardless of source language. "
+            "\nLANGUAGE NOTE: The passage is in Ukrainian or mixed Ukrainian/English. "
+            "Extract all knowledge regardless of source language. "
             "ALL output field values MUST be written in English.\n"
         )
     return ""
 
 
-def _prompt_scenarios(passage: str, language: str | None = None) -> str:
-    return f"""From the following passage, extract all CRISIS SCENARIOS described.{_lang_note(language)}
-    For each scenario output a JSON object with these fields:
-    - scenario_id: short kebab-case slug (e.g. "chemical-spill-public-panic")
-    - crisis_type: one of [reputational, safety, operational, political, media, natural_disaster, internal]
-    - severity: one of [low, medium, high, critical]
-    - context: 1-2 sentences describing the situation
-    - key_stakeholders: list of affected parties (e.g. ["media", "public", "CEO", "employees"])
-    - initial_trigger: what caused the crisis
-    - phase: one of [pre_crisis, acute, containment, recovery, post_crisis]
+def _prompt_combined(passage: str, language: str | None = None) -> str:
+        """
+        One prompt that extracts all 4 data types in a single API call.
+        Returns a JSON object with keys: scenarios, decision_nodes, tactics, qa_pairs.
+        """
+        return f"""You are building a crisis communications DSS dataset.
+    From the passage below, extract ALL of the following in ONE response.{_lang_note(language)}
     
-    Respond ONLY as a JSON array. If no scenarios are present, return [].
-
-PASSAGE:
-{passage}"""
-
-
-def _prompt_decision_nodes(passage: str, scenario_ids: list[str], language: str | None = None) -> str:
-    ids_hint = (
-        f"\nKnown scenario IDs from this chapter: {json.dumps(scenario_ids)}\n"
-        "Link each decision node to one of these IDs in the source_scenario_id field."
-        if scenario_ids else ""
-    )
-    return f"""From the passage below, extract all DECISION POINTS a Communications Specialist must navigate.
-    For each decision point output a JSON object:{ids_hint}{_lang_note(language)}
-    - decision_id: short kebab-case slug
-    - source_scenario_id: matching scenario_id from the passage (or null)
-    - situation: what is happening RIGHT NOW at this decision point
-    - options: array of objects with fields: id (opt-a/opt-b/...), action, consequence, is_recommended (bool)
-    - recommended_action_id: the id of the best option (e.g. "opt-a")
-    - common_rookie_mistake: describe the wrong choice rookies typically make
-    - consequence_if_wrong: what happens if the wrong choice is made
-    - rationale: why the recommended action is correct
+    Return a single JSON object with exactly these 4 keys:
     
-    Respond ONLY as a JSON array. If no decision points are found, return [].
-
-    PASSAGE:
-    {passage}"""
-
-
-def _prompt_tactics(passage: str, language: str | None = None) -> str:
-    return f"""From the following text, extract all named TACTICS, RULES, or PRINCIPLES for crisis communication.{_lang_note(language)}
-    For each one output a JSON object:
-    - name: the tactic or rule name (e.g. "Golden Hour Rule")
-    - slug: kebab-case version (e.g. "golden-hour-rule")
-    - description: what it means in plain terms (2-3 sentences)
-    - when_to_apply: the triggering condition (1-2 sentences)
-    - example: a concrete application example (from the text or synthesized if absent)
-    - anti_pattern: the wrong version of this tactic — what NOT to do
-    - crisis_types: list of crisis types this applies to, subset of [reputational, safety, operational, political, media, natural_disaster, internal]
+    "scenarios": array of objects, each with:
+      - scenario_id (kebab-case slug)
+      - crisis_type (one of: reputational, safety, operational, political, media, natural_disaster, internal)
+      - severity (one of: low, medium, high, critical)
+      - context (1-2 sentences)
+      - key_stakeholders (list of strings)
+      - initial_trigger (string)
+      - phase (one of: pre_crisis, acute, containment, recovery, post_crisis)
     
-    Respond ONLY as a JSON array. If no tactics are found, return [].
-
-    PASSAGE:
-    {passage}"""
-
-
-def _prompt_qa_pairs(passage: str, scenario_ids: list[str], language: str | None = None) -> str:
-    ids_hint = (
-        f"\nKnown scenario IDs from this chapter: {json.dumps(scenario_ids)}\n"
-        if scenario_ids else ""
-    )
-    return f"""You are building training data for a DSS that guides rookie Communications Specialists.{_lang_note(language)}
-    From the passage below, generate 10-15 realistic Q&A pairs that a rookie specialist might ask during a crisis.{ids_hint}
-    Questions must be:
-    - Urgent and specific, not academic
-    - Phrased as a person under pressure would ask them
-    - Varied: mix tactical (what do I do right now) and strategic (how should I frame this)
+    "decision_nodes": array of objects, each with:
+      - decision_id (kebab-case slug)
+      - source_scenario_id (matching scenario_id above, or null)
+      - situation (what is happening RIGHT NOW)
+      - options (array: id like "opt-a", action, consequence, is_recommended bool)
+      - recommended_action_id (e.g. "opt-a")
+      - common_rookie_mistake (string)
+      - consequence_if_wrong (string)
+      - rationale (why the recommended action is correct)
     
-    For each pair output a JSON object:
-    - question: the question as the specialist would ask it
-    - answer: expert-level answer grounded strictly in the passage
-    - difficulty: one of [basic, intermediate, expert]
-    - scenario_tags: list of relevant tags (crisis type, phase, stakeholder, etc.)
-    - source_scenario_id: matching scenario_id if applicable, else null
-    - common_mistake: what a rookie would incorrectly say or do instead
+    "tactics": array of objects, each with:
+      - name (e.g. "Golden Hour Rule")
+      - slug (kebab-case)
+      - description (2-3 sentences)
+      - when_to_apply (1-2 sentences)
+      - example (concrete application)
+      - anti_pattern (what NOT to do)
+      - crisis_types (subset of the 7 types above)
     
-    Respond ONLY as a JSON array.
+    "qa_pairs": array of 5-8 objects, each with:
+      - question (urgent, specific, as a specialist under pressure would ask)
+      - answer (expert-level, grounded in the passage)
+      - difficulty (one of: basic, intermediate, expert)
+      - scenario_tags (list of relevant tags)
+      - source_scenario_id (matching scenario_id, or null)
+      - common_mistake (what a rookie would say instead)
+    
+    If a section has no relevant content, return an empty array [] for that key.
+    Return ONLY the JSON object. No explanation, no markdown.
     
     PASSAGE:
     {passage}"""
@@ -230,100 +172,107 @@ def _prompt_qa_pairs(passage: str, scenario_ids: list[str], language: str | None
 
 def _strip_fences(raw: str) -> str:
     raw = raw.strip()
-    if raw.startswith("```"):
-        raw = re.sub(r"^```[a-zA-Z]*\n?", "", raw)
-        raw = re.sub(r"\n?```$", "", raw)
+    raw = re.sub(r"^```[a-zA-Z]*\n?", "", raw)
+    raw = re.sub(r"\n?```$",          "", raw)
     return raw.strip()
 
 
-def _call(user_prompt: str, retries: int = 3) -> tuple[list | dict, bool]:
-    """
-    Calls the configured LLM backend and returns parsed JSON.
-    Retries on rate-limit or JSON parse errors.
-    """
+def _call(prompt: str, retries: int = 3) -> tuple[dict, bool]:
+    """Returns (parsed_dict, had_error)."""
     for attempt in range(retries):
         try:
-            if BACKEND == "anthropic":
+            if BACKEND == "gemini":
+                from google import genai as _genai
+                from google.genai import types as _gt
+                gc = _genai.Client(api_key=client.api_key)
+                resp = gc.models.generate_content(
+                    model=MODEL,
+                    contents=prompt,
+                    config=_gt.GenerateContentConfig(
+                        system_instruction=SYSTEM,
+                        temperature=0.1,
+                        max_output_tokens=MAX_TOK,
+                        response_mime_type="application/json",
+                    ),
+                )
+                raw = _strip_fences(resp.text or "{}")
+
+            elif BACKEND == "anthropic":
                 msg = client.messages.create(
                     model=MODEL,
                     max_tokens=MAX_TOK,
                     system=SYSTEM,
-                    messages=[{"role": "user", "content": user_prompt}],
+                    messages=[{"role": "user", "content": prompt}],
                 )
                 raw = _strip_fences(msg.content[0].text)
 
-            elif BACKEND == "gemini":
-                from google import genai as _genai
-                from google.genai import types as _gtypes
-                gc = _genai.Client(api_key=client.key)
-                resp = gc.models.generate_content(
-                    model=MODEL,
-                    contents=user_prompt,
-                    config=_gtypes.GenerateContentConfig(
-                        system_instruction=SYSTEM,
-                        temperature=0.1,
-                        max_output_tokens=MAX_TOK,
-                        response_mime_type="application/json",  # forces JSON output
-                    ),
-                )
-                raw = _strip_fences(resp.text or "[]")
-
-            else:
-                # OpenAI-compatible: LM Studio, Groq, OpenAI, Ollama, vLLM, etc.
+            else:  # groq / openai / lmstudio / openai_compatible
                 resp = client.chat.completions.create(
                     model=MODEL,
                     max_tokens=MAX_TOK,
-                    temperature=0.1,      # low temp → more deterministic JSON
+                    temperature=0.1,
                     messages=[
                         {"role": "system", "content": SYSTEM},
-                        {"role": "user",   "content": user_prompt},
+                        {"role": "user",   "content": prompt},
                     ],
                 )
-                raw = _strip_fences(resp.choices[0].message.content or "[]")
+                raw = _strip_fences(resp.choices[0].message.content or "{}")
 
-            return json.loads(raw), False
+            result = json.loads(raw)
+            # Accept both object and bare array (guard against model wrapping in array)
+            if isinstance(result, list):
+                log.warning("Model returned a bare array — wrapping. Check prompt compliance.")
+                result = {"scenarios": result, "decision_nodes": [], "tactics": [], "qa_pairs": []}
+            return result, False
 
         except json.JSONDecodeError as e:
             log.warning("JSON parse error (attempt %s/%s): %s", attempt + 1, retries, e)
-            log.debug("Raw response: %s", raw[:300] if 'raw' in dir() else "N/A")
             if attempt == retries - 1:
-                return [], True
-            time.sleep(2)
+                return {}, True
+            time.sleep(3)
 
         except Exception as e:
             err = str(e)
-            # Rate limit (Gemini free tier: 15 reqs per minute)
+
             if "404" in err:
                 log.error(
-                    "404 Not Found from Gemini. Check your MODEL name in .env.\n"
-                    "Current: MODEL=%s\n"
-                    "Fix: MODEL=gemini-2.0-flash", MODEL
+                    "404 Not Found — wrong model name.\n"
+                    "  Current MODEL=%s\n"
+                    "  Try: MODEL=gemini-2.0-flash  or  MODEL=gemini-1.5-flash", MODEL
                 )
-                return [], True
-            # Rate limit (Gemini free tier: 15 RPM — wait longer)
-            if "rate" in err.lower() or "429" in err or "quota" in err.lower() or "resource_exhausted" in err.lower():
-                wait = 60 if BACKEND == "gemini" else 20 * (attempt + 1)
-                log.warning("Rate limit — waiting %ss (backend=%s)", wait, BACKEND)
-                time.sleep(wait)
-            # Auth error — surface immediately, don't retry silently
-            elif "auth" in err.lower() or "api_key" in err.lower() or "401" in err:
-                log.error(
-                    "Authentication failed for backend '%s'.\n"
-                    "  Check your .env file:\n"
-                    "    ANTHROPIC  → set ANTHROPIC_API_KEY\n"
-                    "    LM Studio  → set LLM_BACKEND=lmstudio, MODEL=<your-model>,\n"
-                    "                     OPENAI_BASE_URL=http://localhost:1234/v1,\n"
-                    "                     OPENAI_API_KEY=lm-studio\n"
-                    "  Original error: %s", BACKEND, e
-                )
-                return [], True
-            else:
-                log.error("LLM API error (attempt %s/%s): %s", attempt + 1, retries, e)
-                if attempt == retries - 1:
-                    return [], True
-                time.sleep(5)
+                return {}, True
 
-    return [], True
+            is_quota = any(x in err.lower() for x in
+                           ("resource_exhausted", "quota", "daily", "per_day"))
+            is_rate  = "429" in err or "rate" in err.lower()
+
+            if is_quota:
+                log.error(
+                    "DAILY QUOTA EXHAUSTED (%s).\n"
+                    "  Quota resets at midnight Pacific Time.\n"
+                    "  Options:\n"
+                    "    1. Wait until tomorrow — all completed chunks are cached\n"
+                    "    2. Try MODEL=gemini-1.5-flash (separate quota bucket)\n"
+                    "    3. Create a second Google account for a fresh key", BACKEND
+                )
+                return {}, True  # don't retry — quota won't recover in 60s
+
+            if is_rate:
+                wait = 60 if BACKEND == "gemini" else 20 * (attempt + 1)
+                log.warning("Rate limit — waiting %ss", wait)
+                time.sleep(wait)
+                continue
+
+            if any(x in err.lower() for x in ("auth", "api_key", "401")):
+                log.error("Auth failed for %s: %s", BACKEND, e)
+                return {}, True
+
+            log.error("API error (attempt %s/%s): %s", attempt + 1, retries, e)
+            if attempt == retries - 1:
+                return {}, True
+            time.sleep(5)
+
+    return {}, True
 
 
 # Main extraction function for one chunk
@@ -336,15 +285,14 @@ class ChunkExtractionResult:
     chunk_index: int
     language: str
     doc_type: str
-    scenarios: list
-    decision_nodes: list
-    tactics: list
-    qa_pairs: list
-    had_api_errors:  bool = False   # True if any prompt got 400/timeout — chunk will be retried
+    scenarios: list = field(default_factory=list)
+    decision_nodes: list = field(default_factory=list)
+    tactics: list = field(default_factory=list)
+    qa_pairs: list = field(default_factory=list)
+    had_api_errors: bool = False
 
 
-def _tag_records(records: list, chunk) -> list:
-    """Stamp provenance metadata on every extracted record."""
+def _tag(records: list, chunk) -> list:
     for rec in records:
         if isinstance(rec, dict):
             rec["_source_chunk_id"] = chunk.chunk_id
@@ -358,54 +306,46 @@ def _tag_records(records: list, chunk) -> list:
 
 
 def extract_from_chunk(chunk) -> ChunkExtractionResult:
-    """Run all 4 prompts against one TextChunk, in dependency order."""
-    passage  = chunk.text
+    """
+    Single API call per chunk - extracts scenarios, decision_nodes,
+    tactics and qa_pairs simultaneously.
+    """
     language = getattr(chunk, "language", None)
 
-    any_error = False
+    log.info("  → Combined extraction [%s] lang=%s (%s tokens)",
+             chunk.chunk_id, language, chunk.token_count)
 
-    log.info("  → Prompt 1 (scenarios)   [%s] lang=%s", chunk.chunk_id, language)
-    scenarios_raw, err1 = _call(_prompt_scenarios(passage, language))
-    any_error = any_error or err1
-    scenarios = _tag_records(scenarios_raw if isinstance(scenarios_raw, list) else [], chunk)
-    scenario_ids = [s.get("scenario_id", "") for s in scenarios if isinstance(s, dict)]
-    time.sleep(_INTER_PROMPT_DELAY)
+    result, had_error = _call(_prompt_combined(chunk.text, language))
 
-    log.info("  → Prompt 3 (tactics)     [%s]", chunk.chunk_id)
-    tactics_raw, err3 = _call(_prompt_tactics(passage, language))
-    any_error = any_error or err3
-    tactics = _tag_records(tactics_raw if isinstance(tactics_raw, list) else [], chunk)
-    time.sleep(_INTER_PROMPT_DELAY)
-
-    log.info("  → Prompt 2 (decisions)   [%s]", chunk.chunk_id)
-    decisions_raw, err2 = _call(_prompt_decision_nodes(passage, scenario_ids, language))
-    any_error = any_error or err2
-    decision_nodes = _tag_records(decisions_raw if isinstance(decisions_raw, list) else [], chunk)
-    time.sleep(_INTER_PROMPT_DELAY)
-
-    log.info("  → Prompt 4 (qa_pairs)    [%s]", chunk.chunk_id)
-    qa_raw, err4 = _call(_prompt_qa_pairs(passage, scenario_ids, language))
-    any_error = any_error or err4
-    qa_pairs = _tag_records(qa_raw if isinstance(qa_raw, list) else [], chunk)
-    time.sleep(_INTER_PROMPT_DELAY)
-
-    if any_error:
-        log.warning(
-            "  WARNING: chunk [%s] had API errors — will NOT be marked complete, will retry on next run",
-            chunk.chunk_id
+    if had_error or not result:
+        log.warning("  ⚠ [%s] API error — will retry on next run", chunk.chunk_id)
+        return ChunkExtractionResult(
+            chunk_id=chunk.chunk_id, source_slug=chunk.source_slug,
+            chapter_title=chunk.chapter_title, chapter_index=chunk.chapter_index,
+            chunk_index=chunk.chunk_index,
+            language=language or "mixed", doc_type=getattr(chunk, "doc_type", "manual"),
+            had_api_errors=True,
         )
 
+    scenarios      = _tag(result.get("scenarios",      []) or [], chunk)
+    decision_nodes = _tag(result.get("decision_nodes", []) or [], chunk)
+    tactics        = _tag(result.get("tactics",        []) or [], chunk)
+    qa_pairs       = _tag(result.get("qa_pairs",       []) or [], chunk)
+
+    total = len(scenarios) + len(decision_nodes) + len(tactics) + len(qa_pairs)
+    log.info("  ✓ [%s] %d scenarios, %d decisions, %d tactics, %d qa_pairs",
+             chunk.chunk_id, len(scenarios), len(decision_nodes),
+             len(tactics), len(qa_pairs))
+
+    if _DELAY:
+        time.sleep(_DELAY)
+
     return ChunkExtractionResult(
-        chunk_id=chunk.chunk_id,
-        source_slug=chunk.source_slug,
-        chapter_title=chunk.chapter_title,
-        chapter_index=chunk.chapter_index,
+        chunk_id=chunk.chunk_id, source_slug=chunk.source_slug,
+        chapter_title=chunk.chapter_title, chapter_index=chunk.chapter_index,
         chunk_index=chunk.chunk_index,
-        language=getattr(chunk, "language", "mixed"),
-        doc_type=getattr(chunk, "doc_type", "manual"),
-        scenarios=scenarios,
-        decision_nodes=decision_nodes,
-        tactics=tactics,
-        qa_pairs=qa_pairs,
-        had_api_errors = any_error,
+        language=language or "mixed", doc_type=getattr(chunk, "doc_type", "manual"),
+        scenarios=scenarios, decision_nodes=decision_nodes,
+        tactics=tactics, qa_pairs=qa_pairs,
+        had_api_errors=False,
     )
