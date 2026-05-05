@@ -23,7 +23,6 @@ import time
 from dataclasses import dataclass, field
 from typing import Any
 
-import anthropic as _antropic
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -118,56 +117,56 @@ def _lang_note(language: str | None) -> str:
 
 
 def _prompt_combined(passage: str, language: str | None = None) -> str:
-        """
-        One prompt that extracts all 4 data types in a single API call.
-        Returns a JSON object with keys: scenarios, decision_nodes, tactics, qa_pairs.
-        """
-        return f"""You are building a crisis communications DSS dataset.
-    From the passage below, extract ALL of the following in ONE response.{_lang_note(language)}
-    
-    Return a single JSON object with exactly these 4 keys:
-    
-    "scenarios": array of objects, each with:
-      - scenario_id (kebab-case slug)
-      - crisis_type (one of: reputational, safety, operational, political, media, natural_disaster, internal)
-      - severity (one of: low, medium, high, critical)
-      - context (1-2 sentences)
-      - key_stakeholders (list of strings)
-      - initial_trigger (string)
-      - phase (one of: pre_crisis, acute, containment, recovery, post_crisis)
-    
-    "decision_nodes": array of objects, each with:
-      - decision_id (kebab-case slug)
-      - source_scenario_id (matching scenario_id above, or null)
-      - situation (what is happening RIGHT NOW)
-      - options (array: id like "opt-a", action, consequence, is_recommended bool)
-      - recommended_action_id (e.g. "opt-a")
-      - common_rookie_mistake (string)
-      - consequence_if_wrong (string)
-      - rationale (why the recommended action is correct)
-    
-    "tactics": array of objects, each with:
-      - name (e.g. "Golden Hour Rule")
-      - slug (kebab-case)
-      - description (2-3 sentences)
-      - when_to_apply (1-2 sentences)
-      - example (concrete application)
-      - anti_pattern (what NOT to do)
-      - crisis_types (subset of the 7 types above)
-    
-    "qa_pairs": array of 5-8 objects, each with:
-      - question (urgent, specific, as a specialist under pressure would ask)
-      - answer (expert-level, grounded in the passage)
-      - difficulty (one of: basic, intermediate, expert)
-      - scenario_tags (list of relevant tags)
-      - source_scenario_id (matching scenario_id, or null)
-      - common_mistake (what a rookie would say instead)
-    
-    If a section has no relevant content, return an empty array [] for that key.
-    Return ONLY the JSON object. No explanation, no markdown.
-    
-    PASSAGE:
-    {passage}"""
+    """One prompt that extracts all 4 data types in a single API call."""
+    lang = _lang_note(language)
+    return (
+        f"You are building a crisis communications DSS dataset.\n"
+        f"From the passage below, extract ALL of the following in ONE response.{lang}\n"
+        f"\n"
+        f"Return a single JSON object with exactly these 4 keys:\n"
+        f"\n"
+        f'\"scenarios\": array of objects, each with:\n'
+        f"  - scenario_id (kebab-case slug)\n"
+        f"  - crisis_type (one of: reputational, safety, operational, political, media, natural_disaster, internal)\n"
+        f"  - severity (one of: low, medium, high, critical)\n"
+        f"  - context (1-2 sentences)\n"
+        f"  - key_stakeholders (list of strings)\n"
+        f"  - initial_trigger (string)\n"
+        f"  - phase (one of: pre_crisis, acute, containment, recovery, post_crisis)\n"
+        f"\n"
+        f'\"decision_nodes\": array of objects, each with:\n'
+        f"  - decision_id (kebab-case slug)\n"
+        f"  - source_scenario_id (matching scenario_id above, or null)\n"
+        f"  - situation (what is happening RIGHT NOW)\n"
+        f"  - options (array: id like opt-a, action, consequence, is_recommended bool)\n"
+        f"  - recommended_action_id (e.g. opt-a)\n"
+        f"  - common_rookie_mistake (string)\n"
+        f"  - consequence_if_wrong (string)\n"
+        f"  - rationale (why the recommended action is correct)\n"
+        f"\n"
+        f'\"tactics\": array of objects, each with:\n'
+        f"  - name (e.g. Golden Hour Rule)\n"
+        f"  - slug (kebab-case)\n"
+        f"  - description (2-3 sentences)\n"
+        f"  - when_to_apply (1-2 sentences)\n"
+        f"  - example (concrete application)\n"
+        f"  - anti_pattern (what NOT to do)\n"
+        f"  - crisis_types (subset of the 7 types above)\n"
+        f"\n"
+        f'\"qa_pairs\": array of 5-8 objects, each with:\n'
+        f"  - question (urgent, specific, as a specialist under pressure would ask)\n"
+        f"  - answer (expert-level, grounded in the passage)\n"
+        f"  - difficulty (one of: basic, intermediate, expert)\n"
+        f"  - scenario_tags (list of relevant tags)\n"
+        f"  - source_scenario_id (matching scenario_id, or null)\n"
+        f"  - common_mistake (what a rookie would say instead)\n"
+        f"\n"
+        f"If a section has no relevant content, return an empty array [] for that key.\n"
+        f"Return ONLY the JSON object. No explanation, no markdown.\n"
+        f"\n"
+        f"PASSAGE:\n"
+        f"{passage}"
+    )
 
 
 def _strip_fences(raw: str) -> str:
