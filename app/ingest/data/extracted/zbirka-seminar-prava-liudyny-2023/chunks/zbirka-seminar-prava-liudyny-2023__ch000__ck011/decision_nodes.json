@@ -1,0 +1,110 @@
+[
+  {
+    "decision_id": "crimean-journalist-safety-assessment",
+    "source_scenario_id": "crimean-solidarity-citizen-journalism-crisis",
+    "situation": "A Crimean Tatar journalist is documenting an illegal search by Russian forces and must decide whether to continue filming or prioritize their safety.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Continue filming and documenting the search to expose human rights violations, despite personal risk.",
+        "consequence": "Increased exposure of abuses but potential arrest, detention, or physical harm to the journalist.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Stop filming and prioritize immediate escape to avoid arrest or violence.",
+        "consequence": "Safety preserved but loss of critical evidence and reduced ability to hold authorities accountable.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Seek assistance from international observers or human rights organizations before continuing documentation.",
+        "consequence": "Added layer of protection but potential delay in capturing evidence and increased risk of exposure.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Prioritizing personal safety over documenting evidence, leading to a loss of critical documentation.",
+    "consequence_if_wrong": "Failure to capture evidence of human rights violations, weakening accountability efforts and public awareness.",
+    "rationale": "Continuing to document despite risks is essential for exposing abuses and ensuring accountability. The evidence can be used by international organizations and media to pressure authorities and support legal actions.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck011",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 11,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "media-prioritization-disabled-people",
+    "source_scenario_id": "media-coverage-of-disabled-people-during-war",
+    "situation": "A media editor must decide how to allocate coverage resources between general war updates and stories focused on people with disabilities during the conflict.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Allocate significant coverage to stories about people with disabilities, including their evacuation challenges, discrimination, and access to services.",
+        "consequence": "Increased public awareness and pressure on authorities to address gaps in support for people with disabilities.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Focus primarily on general war updates and only include brief mentions of people with disabilities when relevant.",
+        "consequence": "Public remains unaware of critical issues faced by people with disabilities, leading to inadequate policy responses.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Publish a single high-impact story about people with disabilities to symbolically address the issue without ongoing coverage.",
+        "consequence": "Temporary awareness but no sustained pressure or systemic change in addressing their needs.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Assuming that brief mentions of people with disabilities in general war coverage are sufficient, leading to underrepresentation of their specific challenges.",
+    "consequence_if_wrong": "Failure to highlight critical issues, resulting in continued neglect of people with disabilities in policy and humanitarian responses.",
+    "rationale": "People with disabilities face unique and urgent challenges during war. Dedicated coverage is necessary to drive systemic change and ensure their needs are met.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck011",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 11,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "idp-terminology-clarification",
+    "source_scenario_id": "internal-displacement-coverage-bias",
+    "situation": "A journalist is writing a story about internally displaced persons (IDPs) and must decide whether to use the term 'refugee' or 'IDP' to describe the population.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Use the term 'internally displaced persons (IDPs)' and clarify the distinction between IDPs and refugees in the article.",
+        "consequence": "Accurate representation of the population, avoiding legal and social confusion.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Use the term 'refugee' to describe IDPs for simplicity and broader public understanding.",
+        "consequence": "Misrepresentation of the population, leading to confusion about their legal status and rights.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Avoid using either term and describe the population as 'people forced to leave their homes' without further clarification.",
+        "consequence": "Lack of clarity about the population's legal status, hindering advocacy and support efforts.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Using the term 'refugee' interchangeably with 'IDP' to simplify the narrative, leading to legal and social confusion.",
+    "consequence_if_wrong": "Misrepresentation of IDPs' legal status, undermining their access to support and rights under international law.",
+    "rationale": "Accurate terminology is essential for ensuring IDPs receive appropriate legal protections and support. Clarifying the distinction helps avoid confusion and strengthens advocacy efforts.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck011",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 11,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

@@ -1,0 +1,154 @@
+[
+  {
+    "question": "What should I do if a Ukrainian media outlet publishes an article containing hate speech against Russians?",
+    "answer": "Issue an immediate public statement condemning the use of hate speech and reaffirming your commitment to balanced reporting. This demonstrates accountability and reassures stakeholders, which is critical in maintaining credibility during a crisis.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "media",
+      "hate speech",
+      "public statement"
+    ],
+    "source_scenario_id": "hate-speech-in-ukrainian-media-during-war",
+    "common_mistake": "Ignoring the issue or failing to respond publicly, assuming the controversy will fade on its own.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck010",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 10,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can I address disinformation in Ukrainian media without being seen as censoring free speech?",
+    "answer": "Issue a public statement clarifying the terminology used in the article and condemning manipulative language. This reinforces your commitment to truthful reporting while addressing the issue transparently. Avoid removing the article or issuing private warnings, as these may be perceived as censorship.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "media",
+      "disinformation",
+      "public statement"
+    ],
+    "source_scenario_id": "disinformation-and-manipulation-in-ukrainian-media",
+    "common_mistake": "Assuming the issue is minor and will not escalate, or failing to address it publicly due to fear of backlash.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck010",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 10,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "A viral video shows police officers using excessive force against a driver and his family. What’s the best way to respond?",
+    "answer": "Publicly condemn the incident, announce an independent investigation, and express support for the victims. This demonstrates your commitment to justice and reassures the public, which is critical to maintaining trust during a crisis.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "safety",
+      "police brutality",
+      "public accountability"
+    ],
+    "source_scenario_id": "police-brutality-and-media-coverage",
+    "common_mistake": "Delaying a response or issuing a vague statement to avoid controversy.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck010",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 10,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "Crimean Tatar journalists are facing systemic repression under Russian occupation. How should we support them?",
+    "answer": "Publicly condemn the repression, call for the release of detained journalists, and offer support to affected families. This demonstrates solidarity and reassures stakeholders, which is critical to protecting vulnerable groups during a crisis.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "reputational",
+      "human rights",
+      "public statement"
+    ],
+    "source_scenario_id": "civilian-journalism-in-occupied-crimea",
+    "common_mistake": "Failing to act promptly or issuing a private statement without public condemnation.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck010",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 10,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What’s the most common mistake rookie communicators make when addressing hate speech in media?",
+    "answer": "Ignoring the issue or failing to respond publicly, assuming the controversy will fade on its own. Silence or private actions may be perceived as insufficient or evasive, leading to loss of public trust and potential legal consequences.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "media",
+      "hate speech",
+      "public statement"
+    ],
+    "source_scenario_id": "hate-speech-in-ukrainian-media-during-war",
+    "common_mistake": "Assuming the issue is minor and will not escalate.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck010",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 10,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can we ensure our response to a crisis is timely and effective?",
+    "answer": "Follow the Golden Hour Rule: respond within the first hour of a crisis to prevent escalation and maintain control of the narrative. Delayed responses can lead to misinformation and loss of public trust.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "crisis communication",
+      "timeliness",
+      "public trust"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Waiting for more information or delaying a response to avoid controversy.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck010",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 10,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What’s the best way to balance transparency with accountability when addressing a crisis?",
+    "answer": "Issue a public accountability statement that acknowledges the crisis, takes responsibility, and outlines steps to address the issue. This demonstrates transparency and reassures stakeholders, which is critical to maintaining credibility during a crisis.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "crisis communication",
+      "transparency",
+      "accountability"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Issuing a vague or private statement without taking public responsibility.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck010",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 10,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can we engage stakeholders effectively during a crisis?",
+    "answer": "Follow the Stakeholder Engagement Protocol: engage with key stakeholders, including journalists, government regulators, and affected communities, through transparent and collaborative communication. This ensures that responses are coordinated and effective.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "stakeholder engagement",
+      "transparency",
+      "collaboration"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Failing to engage with stakeholders or issuing private statements without public action.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck010",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 10,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

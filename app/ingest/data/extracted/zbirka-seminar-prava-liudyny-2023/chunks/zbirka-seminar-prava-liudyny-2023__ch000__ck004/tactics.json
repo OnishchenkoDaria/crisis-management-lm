@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Golden Hour Rule",
+    "slug": "golden-hour-rule",
+    "description": "Act within the first hour of a crisis to control the narrative and prevent misinformation from spreading. This involves verifying facts, preparing a response, and communicating with stakeholders promptly.",
+    "when_to_apply": "Use this tactic during the acute phase of a crisis, particularly when unverified or harmful content is circulating. It is critical to act quickly to mitigate reputational damage.",
+    "example": "A media outlet discovers that user-generated content (e.g., a photo of a minor) has been published without consent. The crisis team verifies the content, obtains consent, and issues a public apology within the first hour to control the narrative.",
+    "anti_pattern": "Waiting for more information or delaying a response, allowing misinformation to spread and reputational damage to escalate.",
+    "crisis_types": [
+      "reputational",
+      "media"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck004",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 4,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Ethical Terminology Checklist",
+    "slug": "ethical-terminology-checklist",
+    "description": "Use a predefined checklist of neutral, respectful terms for sensitive topics (e.g., age, gender, ethnicity) to avoid discriminatory language. This ensures compliance with ethical standards and avoids backlash.",
+    "when_to_apply": "Apply this tactic when preparing content about vulnerable groups (e.g., elderly people, women, minorities) or when addressing sensitive topics like discrimination or hate speech.",
+    "example": "A journalist preparing a story about elderly people uses the checklist to ensure they use terms like 'people aged 60+' or 'seniors' instead of derogatory terms like 'old' or 'grandma.'",
+    "anti_pattern": "Using colloquial or derogatory terms without considering their impact on vulnerable groups.",
+    "crisis_types": [
+      "reputational",
+      "media"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck004",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 4,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Stakeholder Consent Protocol",
+    "slug": "stakeholder-consent-protocol",
+    "description": "Implement a protocol for obtaining explicit consent from stakeholders (e.g., sources, subjects, or their families) before publishing or broadcasting their content. This includes verifying the authenticity of user-generated content.",
+    "when_to_apply": "Use this tactic when dealing with user-generated content, sensitive personal stories, or content involving minors. It is essential to prevent legal and ethical violations.",
+    "example": "A journalist wants to publish a photo from a social media post. They contact the content creator, verify the photo's authenticity, and obtain written consent before publishing.",
+    "anti_pattern": "Assuming that user-generated content is safe to publish without verification or consent.",
+    "crisis_types": [
+      "reputational",
+      "media"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck004",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 4,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Hate Speech Screening Framework",
+    "slug": "hate-speech-screening-framework",
+    "description": "Use a structured framework to screen content for hate speech, discriminatory language, or stereotypes. This includes reviewing language, context, and potential impact on vulnerable groups.",
+    "when_to_apply": "Apply this framework when preparing or publishing content that may include controversial or sensitive topics, such as politics, ethnicity, or gender.",
+    "example": "A journalist preparing a story about a controversial topic uses the framework to review their draft for hate speech or discriminatory language before publication.",
+    "anti_pattern": "Publishing content without screening for hate speech or discriminatory language, risking legal consequences and reputational damage.",
+    "crisis_types": [
+      "reputational",
+      "media"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck004",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 4,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Gender-Neutral Assignment Policy",
+    "slug": "gender-neutral-assignment-policy",
+    "description": "Implement a policy that assigns journalists to topics based on expertise and interests, not gender. This promotes gender equality and avoids reinforcing stereotypes in media coverage.",
+    "when_to_apply": "Use this policy when assigning journalists to topics, particularly in areas where gender stereotypes are prevalent (e.g., politics, finance, lifestyle).",
+    "example": "A media outlet assigns a female journalist to cover a political event based on her expertise, not her gender, to avoid reinforcing the stereotype that women belong only in 'soft' topics.",
+    "anti_pattern": "Assigning journalists to topics based on gender rather than expertise or interest, reinforcing harmful stereotypes.",
+    "crisis_types": [
+      "reputational",
+      "media"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck004",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 4,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

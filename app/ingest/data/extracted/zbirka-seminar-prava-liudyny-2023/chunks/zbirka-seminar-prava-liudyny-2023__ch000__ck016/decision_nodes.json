@@ -1,0 +1,62 @@
+[
+  {
+    "decision_id": "respond-to-propaganda",
+    "source_scenario_id": "information-warfare",
+    "situation": "A false information campaign is spreading rapidly",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Counter with factual information",
+        "consequence": "Potential reduction in spread of false information",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Ignore the propaganda",
+        "consequence": "Potential increase in spread of false information",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Underestimating the impact of propaganda",
+    "consequence_if_wrong": "Increased spread of false information",
+    "rationale": "Countering with factual information can help reduce the spread of false information",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck016",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 16,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "address-hate-speech",
+    "source_scenario_id": "freedom-of-speech",
+    "situation": "Hate speech is being spread",
+    "options": [
+      {
+        "id": "opt-c",
+        "action": "Report the hate speech",
+        "consequence": "Potential removal of hate speech",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-d",
+        "action": "Engage with the hate speech",
+        "consequence": "Potential escalation of the situation",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-c",
+    "common_rookie_mistake": "Engaging with hate speech",
+    "consequence_if_wrong": "Escalation of the situation",
+    "rationale": "Reporting hate speech can help remove it and prevent further harm",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck016",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 16,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

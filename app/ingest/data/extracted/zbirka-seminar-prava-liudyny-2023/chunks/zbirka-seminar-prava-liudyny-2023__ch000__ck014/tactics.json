@@ -1,0 +1,99 @@
+[
+  {
+    "name": "Golden Hour Rule",
+    "slug": "golden-hour-rule",
+    "description": "Act within the first hour of a crisis to control the narrative and prevent misinformation from spreading. Delayed responses often lead to reputational damage and loss of stakeholder trust.",
+    "when_to_apply": "Use when facing immediate public scrutiny or allegations that could escalate if unaddressed. Applies to reputational and media crises.",
+    "example": "A female journalist is publicly criticized for her war reporting. The media outlet issues a statement within an hour, highlighting her experience and contributions, and commits to addressing gender bias in reporting.",
+    "anti_pattern": "Waiting for more information or internal consensus before responding, allowing the crisis to escalate.",
+    "crisis_types": [
+      "reputational",
+      "media"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck014",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 14,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Transparency First",
+    "slug": "transparency-first",
+    "description": "Prioritize open communication about data breaches, cyberattacks, or other operational failures. Stakeholders value honesty and accountability over attempts to cover up or downplay incidents.",
+    "when_to_apply": "Use when a digital or operational crisis involves sensitive data or privacy violations. Critical for maintaining trust in cybersecurity incidents.",
+    "example": "A media outlet experiences a cyberattack exposing journalists' personal data. The organization immediately notifies affected individuals, offers support, and cooperates with cybersecurity experts to investigate the breach.",
+    "anti_pattern": "Delaying public disclosure to avoid panic or reputational harm, which often exacerbates the crisis.",
+    "crisis_types": [
+      "operational",
+      "media"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck014",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 14,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Bias Audit",
+    "slug": "bias-audit",
+    "description": "Conduct a thorough review of content, hiring practices, or curriculum to identify and address systemic biases. This tactic is essential for reputational crises involving discrimination or stereotypes.",
+    "when_to_apply": "Use when allegations of bias or discrimination arise, or when internal data suggests systemic inequities. Applies to reputational, internal, and media crises.",
+    "example": "A media outlet is criticized for sexist advertising. The organization launches an audit of all advertisements, removes offensive content, and revises its content guidelines to prevent future bias.",
+    "anti_pattern": "Dismissing allegations as unfounded or relying solely on internal reviews without external input or public engagement.",
+    "crisis_types": [
+      "reputational",
+      "internal",
+      "media"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck014",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 14,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Stakeholder Engagement",
+    "slug": "stakeholder-engagement",
+    "description": "Proactively engage with key stakeholders, such as journalists, educators, or advocacy groups, to address concerns and co-create solutions. This tactic builds trust and demonstrates a commitment to inclusivity.",
+    "when_to_apply": "Use when facing criticism from marginalized groups or when systemic barriers are identified. Applies to reputational, internal, and media crises.",
+    "example": "A journalism school is criticized for gender bias in its curriculum. The school partners with female journalists and gender equality advocates to revise its standards and highlight successful female role models.",
+    "anti_pattern": "Assuming that internal solutions are sufficient without engaging with affected stakeholders or addressing their concerns publicly.",
+    "crisis_types": [
+      "reputational",
+      "internal",
+      "media"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck014",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 14,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Content Review Cycle",
+    "slug": "content-review-cycle",
+    "description": "Implement a regular review process for all content, including advertisements, news reports, and social media posts, to ensure it aligns with ethical and inclusive standards. This tactic prevents crises by proactively addressing potential biases.",
+    "when_to_apply": "Use as a preventive measure to avoid reputational crises involving discrimination or stereotypes. Applies to media and reputational crises.",
+    "example": "A media outlet establishes a monthly review of all advertisements to ensure they do not reinforce gender stereotypes. Offensive content is removed, and guidelines are updated to reflect inclusive standards.",
+    "anti_pattern": "Relying on ad-hoc reviews or assuming that past content is immune to bias without regular audits.",
+    "crisis_types": [
+      "reputational",
+      "media"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck014",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 14,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

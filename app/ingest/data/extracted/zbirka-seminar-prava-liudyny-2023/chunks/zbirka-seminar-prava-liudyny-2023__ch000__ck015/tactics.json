@@ -1,0 +1,123 @@
+[
+  {
+    "name": "Golden Hour Rule",
+    "slug": "golden-hour-rule",
+    "description": "The principle of responding to a crisis within the first hour to prevent misinformation from spreading and to demonstrate accountability. This involves assembling a crisis response team, drafting a holding statement, and preparing for rapid public communication.",
+    "when_to_apply": "During the acute phase of a crisis, particularly when reputational or safety risks are high and public scrutiny is intense.",
+    "example": "A data breach is discovered at 9 AM. By 10 AM, the crisis team releases a holding statement acknowledging the breach, outlines next steps, and commits to transparency. This prevents rumors and shows the organization is taking the issue seriously.",
+    "anti_pattern": "Waiting for a full investigation before responding, which allows misinformation to spread and erodes trust.",
+    "crisis_types": [
+      "reputational",
+      "safety",
+      "operational",
+      "political",
+      "media"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck015",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 15,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Stakeholder Mapping and Prioritization",
+    "slug": "stakeholder-mapping-prioritization",
+    "description": "A systematic approach to identifying and prioritizing key stakeholders based on their influence, interest, and potential impact on the crisis. This helps tailor communication strategies and allocate resources effectively.",
+    "when_to_apply": "During the pre-crisis or acute phase of a crisis, especially when the situation involves multiple stakeholders with varying levels of influence and interest.",
+    "example": "A media outlet facing gender bias accusations maps its stakeholders: advertisers (high influence, high interest), audience (high interest, low influence), and gender equality advocates (medium influence, high interest). It prioritizes communication with advertisers to mitigate financial risks while addressing audience concerns transparently.",
+    "anti_pattern": "Assuming all stakeholders have equal influence or interest, leading to misallocated resources and ineffective communication.",
+    "crisis_types": [
+      "reputational",
+      "media",
+      "political",
+      "internal"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck015",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 15,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Fact-Based Messaging Framework",
+    "slug": "fact-based-messaging-framework",
+    "description": "A communication strategy that prioritizes verified facts, transparency, and consistency to counter misinformation and build trust. This involves coordinating with experts, fact-checkers, and legal teams to ensure accuracy.",
+    "when_to_apply": "During the acute or containment phase of a crisis, particularly when misinformation or propaganda is spreading rapidly.",
+    "example": "During wartime, a government releases daily fact sheets debunking disinformation campaigns, citing verified sources and independent fact-checkers. This counters propaganda and maintains public trust.",
+    "anti_pattern": "Relying on assumptions or unverified claims in public statements, which can exacerbate the crisis.",
+    "crisis_types": [
+      "political",
+      "media",
+      "reputational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck015",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 15,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Rapid Response Protocol",
+    "slug": "rapid-response-protocol",
+    "description": "A predefined set of actions to be taken within the first 24 hours of a crisis, including assembling a response team, drafting key messages, and activating communication channels. This ensures a swift and coordinated response.",
+    "when_to_apply": "During the acute phase of a crisis, especially when time is of the essence and public scrutiny is high.",
+    "example": "A cyberattack occurs at 2 PM. By 3 PM, the IT security team activates the rapid response protocol, assembling a crisis team, drafting a holding statement, and preparing to notify affected users within 24 hours.",
+    "anti_pattern": "Ad-hoc crisis response without a predefined protocol, leading to delays, confusion, and inconsistent messaging.",
+    "crisis_types": [
+      "safety",
+      "operational",
+      "reputational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck015",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 15,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Digital Literacy Gap Analysis",
+    "slug": "digital-literacy-gap-analysis",
+    "description": "A structured assessment to identify specific digital literacy gaps within an organization or user base, tailored to roles, responsibilities, and risk levels. This informs targeted training and mitigation strategies.",
+    "when_to_apply": "During the pre-crisis or recovery phase of a crisis, particularly when digital illiteracy is a contributing factor.",
+    "example": "An organization conducts a digital literacy gap analysis and discovers that 60% of its workforce lacks basic cybersecurity awareness. It designs a training program focused on phishing, password security, and data protection tailored to different departments.",
+    "anti_pattern": "Assuming a one-size-fits-all approach to digital literacy training, which may fail to address critical gaps.",
+    "crisis_types": [
+      "operational",
+      "internal"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck015",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 15,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Ethical Media Representation Guidelines",
+    "slug": "ethical-media-representation-guidelines",
+    "description": "A set of principles and practices for media outlets to ensure balanced, fair, and inclusive representation of gender, race, and other social dimensions in their content. This includes diversifying sources, avoiding stereotypes, and providing context.",
+    "when_to_apply": "During the pre-crisis or recovery phase of a crisis, particularly when addressing issues like gender bias or discrimination.",
+    "example": "A media outlet adopts ethical media representation guidelines, requiring diverse sourcing, avoiding gender stereotypes in job advertisements, and providing training for editors on inclusive language.",
+    "anti_pattern": "Ignoring or dismissing criticism of biased content, leading to reputational harm and loss of audience trust.",
+    "crisis_types": [
+      "media",
+      "reputational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck015",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 15,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

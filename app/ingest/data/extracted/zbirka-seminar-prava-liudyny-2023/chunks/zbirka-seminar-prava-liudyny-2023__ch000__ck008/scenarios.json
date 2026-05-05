@@ -1,0 +1,46 @@
+[
+  {
+    "scenario_id": "soviet-militsiya-media-propaganda-era",
+    "crisis_type": "political",
+    "severity": "high",
+    "context": "During the Soviet era, state-controlled media propagated idealized images of law enforcement officers (militsiya) to shape public perception, often masking systemic issues and suppressing criticism. This created a crisis of trust when glasnost policies later exposed these distortions.",
+    "key_stakeholders": [
+      "Soviet government officials",
+      "Ministry of Internal Affairs (MVD) leadership",
+      "State media outlets",
+      "Soviet citizens",
+      "Criminal justice system personnel"
+    ],
+    "initial_trigger": "Exposure of systemic flaws in militsiya operations and propaganda through glasnost policies in the late 1980s",
+    "phase": "post_crisis",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck008",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 8,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "gender-stereotypes-in-media",
+    "crisis_type": "reputational",
+    "severity": "medium",
+    "context": "Modern media perpetuates rigid gender stereotypes about women, limiting their perceived roles to narrow archetypes (e.g., romantic heroine, career-driven 'sterlet', housewife) that undermine individual agency and societal progress.",
+    "key_stakeholders": [
+      "Media producers",
+      "Advertisers",
+      "Feminist organizations",
+      "General public",
+      "Women in professional fields"
+    ],
+    "initial_trigger": "Public backlash against sexist media portrayals and demands for more diverse representations",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck008",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 8,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

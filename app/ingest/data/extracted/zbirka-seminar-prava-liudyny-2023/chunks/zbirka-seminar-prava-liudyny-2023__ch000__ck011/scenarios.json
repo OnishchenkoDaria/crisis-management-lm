@@ -1,0 +1,70 @@
+[
+  {
+    "scenario_id": "crimean-solidarity-citizen-journalism-crisis",
+    "crisis_type": "reputational",
+    "severity": "high",
+    "context": "Crimean Tatar activists and journalists face systematic repression, illegal detentions, and forced displacement by Russian occupying forces after documenting human rights violations. Their work exposes abuses but also makes them targets.",
+    "key_stakeholders": [
+      "Crimean Tatar activists",
+      "Crimean Solidarity movement",
+      "Russian occupying authorities",
+      "International human rights organizations",
+      "Ukrainian government",
+      "Local and international media outlets"
+    ],
+    "initial_trigger": "Systematic repression of Crimean Tatar journalists and activists following their documentation of human rights violations using citizen journalism tools (mobile phones, social media).",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck011",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 11,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "media-coverage-of-disabled-people-during-war",
+    "crisis_type": "media",
+    "severity": "medium",
+    "context": "Ukrainian media disproportionately focuses on war-related topics while neglecting the specific needs and challenges faced by people with disabilities during the conflict. This leads to inadequate public awareness and policy responses.",
+    "key_stakeholders": [
+      "People with disabilities",
+      "Ukrainian media outlets",
+      "Human rights organizations",
+      "Volunteer groups",
+      "Government agencies",
+      "International disability rights advocates"
+    ],
+    "initial_trigger": "Disproportionate media coverage of war-related topics overshadowing the needs of people with disabilities during the Russian-Ukrainian war.",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck011",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 11,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "internal-displacement-coverage-bias",
+    "crisis_type": "media",
+    "severity": "medium",
+    "context": "Ukrainian media struggles to provide balanced and accurate coverage of internally displaced persons (IDPs), often conflating terms like 'refugee' and 'IDP' or failing to address their specific challenges.",
+    "key_stakeholders": [
+      "Internally displaced persons (IDPs)",
+      "Ukrainian media outlets",
+      "Government agencies",
+      "Volunteer organizations",
+      "International observers"
+    ],
+    "initial_trigger": "Media confusion and bias in terminology and coverage of IDPs, leading to misrepresentation and inadequate support for displaced populations.",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck011",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 11,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

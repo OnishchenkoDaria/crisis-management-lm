@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Golden Hour Rule",
+    "slug": "golden-hour-rule",
+    "description": "Prioritize immediate documentation and dissemination of evidence within the first hour of witnessing a human rights violation or crisis event. This maximizes the impact of the evidence and reduces the risk of suppression by authorities.",
+    "when_to_apply": "Use when documenting illegal searches, detentions, or other human rights abuses by occupying forces or authorities. Apply during the acute phase of a crisis.",
+    "example": "A Crimean Tatar activist films an illegal search by Russian forces and immediately uploads the footage to social media and shares it with international human rights organizations.",
+    "anti_pattern": "Delaying documentation to seek additional evidence or approval, resulting in lost opportunities to expose abuses in real time.",
+    "crisis_types": [
+      "reputational",
+      "media",
+      "internal"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck011",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 11,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Inclusive Media Coverage Framework",
+    "slug": "inclusive-media-coverage-framework",
+    "description": "Develop a structured approach to media coverage that ensures representation of marginalized groups, such as people with disabilities, in crisis reporting. This includes dedicated beats, expert sources, and targeted story angles.",
+    "when_to_apply": "Apply when covering crises that disproportionately affect vulnerable populations, such as wars, natural disasters, or political conflicts. Use during the acute and recovery phases.",
+    "example": "A media outlet assigns a reporter to cover the evacuation challenges faced by people with disabilities during the Russian-Ukrainian war, including interviews with affected individuals and experts.",
+    "anti_pattern": "Assuming that general crisis coverage adequately represents all groups, leading to underrepresentation of vulnerable populations.",
+    "crisis_types": [
+      "media",
+      "safety",
+      "natural_disaster"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck011",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 11,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Terminology Clarification Protocol",
+    "slug": "terminology-clarification-protocol",
+    "description": "Establish clear guidelines for the use of terms such as 'refugee,' 'IDP,' and 'migrant' to avoid legal and social confusion. Ensure journalists and communicators use accurate and contextually appropriate language.",
+    "when_to_apply": "Use when reporting on displacement crises, such as wars, conflicts, or natural disasters. Apply during the acute and recovery phases.",
+    "example": "A journalist writing about internally displaced persons (IDPs) clarifies the distinction between IDPs and refugees in the article and uses the correct terminology throughout.",
+    "anti_pattern": "Using interchangeable or inaccurate terms to simplify the narrative, leading to misrepresentation and confusion.",
+    "crisis_types": [
+      "media",
+      "political",
+      "natural_disaster"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck011",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 11,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Stakeholder Mapping for Crisis Response",
+    "slug": "stakeholder-mapping-crisis-response",
+    "description": "Identify and prioritize key stakeholders in a crisis, including affected communities, local authorities, international organizations, and media outlets. Develop tailored communication strategies for each group to ensure coordinated and effective responses.",
+    "when_to_apply": "Use during the pre-crisis, acute, and recovery phases of any crisis. Essential for crises involving systematic repression, displacement, or human rights violations.",
+    "example": "A communications specialist maps out the key stakeholders for the Crimean Solidarity movement, including Crimean Tatar activists, international human rights organizations, and Ukrainian government agencies, and develops tailored messaging for each group.",
+    "anti_pattern": "Focusing solely on one stakeholder group (e.g., media) while neglecting others, leading to fragmented or ineffective crisis responses.",
+    "crisis_types": [
+      "reputational",
+      "political",
+      "media",
+      "internal"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck011",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 11,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

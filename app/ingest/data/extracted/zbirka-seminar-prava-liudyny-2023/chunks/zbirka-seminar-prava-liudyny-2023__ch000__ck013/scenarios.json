@@ -1,0 +1,91 @@
+[
+  {
+    "scenario_id": "social-media-discrimination-allegation",
+    "crisis_type": "reputational",
+    "severity": "high",
+    "context": "A social media influencer or organization faces allegations of discriminatory practices in content moderation or user interactions, potentially violating human rights principles in digital spaces.",
+    "key_stakeholders": [
+      "social media influencer",
+      "platform moderators",
+      "user community",
+      "human rights organizations",
+      "legal team",
+      "public relations team"
+    ],
+    "initial_trigger": "Public accusation of discrimination in content moderation or user engagement policies on a social media platform.",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck013",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 13,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "blog-misinformation-crisis",
+    "crisis_type": "media",
+    "severity": "medium",
+    "context": "A popular blogger or influencer in the self-development niche publishes content that spreads misinformation or harmful advice, leading to public backlash and potential harm to followers.",
+    "key_stakeholders": [
+      "blogger/influencer",
+      "followers/audience",
+      "brand partners",
+      "mental health advocates",
+      "media regulators"
+    ],
+    "initial_trigger": "Publication of misleading or harmful self-development advice that gains viral traction.",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck013",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 13,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "podcast-ethical-controversy",
+    "crisis_type": "reputational",
+    "severity": "high",
+    "context": "A podcast featuring interviews with vulnerable groups (e.g., war refugees) is accused of exploiting personal stories for content without proper consent or ethical safeguards.",
+    "key_stakeholders": [
+      "podcast host",
+      "interviewees",
+      "human rights organizations",
+      "sponsors",
+      "listeners"
+    ],
+    "initial_trigger": "Public criticism of a podcast episode for insensitive handling of interviewees' stories or lack of ethical considerations.",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck013",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 13,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "gender-bias-in-war-reporting",
+    "crisis_type": "reputational",
+    "severity": "medium",
+    "context": "A female war correspondent faces gender-based criticism or skepticism about her credibility and professionalism in reporting from the front lines.",
+    "key_stakeholders": [
+      "female war correspondent",
+      "media outlets",
+      "military personnel",
+      "audience",
+      "gender equality advocates"
+    ],
+    "initial_trigger": "Public discourse questioning the professionalism or objectivity of a female journalist covering the war due to gender stereotypes.",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck013",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 13,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

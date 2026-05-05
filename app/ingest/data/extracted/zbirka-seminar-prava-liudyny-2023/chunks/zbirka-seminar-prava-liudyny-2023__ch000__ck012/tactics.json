@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Golden Hour Rule",
+    "slug": "golden-hour-rule",
+    "description": "Act immediately to correct misinformation within the first hour of its publication to prevent it from spreading and gaining traction. This involves monitoring media outlets in real-time and responding swiftly with accurate information.",
+    "when_to_apply": "When a stigmatizing or misleading article about IDPs or other vulnerable groups is published, particularly in online media.",
+    "example": "A media outlet publishes an article using the term 'refugee' to describe IDPs. The communications specialist issues a public statement within an hour, clarifying the correct terminology and context.",
+    "anti_pattern": "Waiting for the media outlet to self-correct or ignoring the issue until it gains widespread attention.",
+    "crisis_types": [
+      "media",
+      "reputational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck012",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 12,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Terminology Clarification",
+    "slug": "terminology-clarification",
+    "description": "Ensure that all communications use the correct terminology to describe IDPs, such as 'internally displaced persons' (IDPs) instead of 'refugees' or 'migrants.' This helps to avoid stigmatization and reinforces their legal status.",
+    "when_to_apply": "When media outlets or public figures use incorrect or stigmatizing terminology to describe IDPs or other vulnerable groups.",
+    "example": "A politician refers to IDPs as 'migrants' in a speech. The communications specialist issues a statement clarifying the correct terminology and its legal implications.",
+    "anti_pattern": "Using terms like 'refugee' or 'migrant' interchangeably with 'IDP,' which reinforces negative stereotypes.",
+    "crisis_types": [
+      "media",
+      "reputational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck012",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 12,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Balanced Reporting Guidelines",
+    "slug": "balanced-reporting-guidelines",
+    "description": "Encourage media outlets to follow balanced reporting guidelines when covering sensitive topics like IDPs. This includes avoiding sensationalist language, providing context, and including multiple perspectives.",
+    "when_to_apply": "When media outlets publish biased or sensationalist articles about IDPs or other vulnerable groups.",
+    "example": "A media outlet publishes a sensationalist article about IDPs. The communications specialist issues guidelines for balanced reporting and encourages the outlet to include human stories and expert commentary.",
+    "anti_pattern": "Allowing media outlets to publish biased or sensationalist content without intervention or correction.",
+    "crisis_types": [
+      "media",
+      "reputational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck012",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 12,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Legal Advocacy for Press Freedom",
+    "slug": "legal-advocacy-for-press-freedom",
+    "description": "Advocate for the protection of press freedom and challenge restrictions that limit journalists' ability to report accurately and critically during wartime. This includes working with legal experts and international bodies to hold authorities accountable.",
+    "when_to_apply": "When journalists face legal action or censorship for reporting on sensitive topics like military movements or government actions.",
+    "example": "A journalist is arrested for reporting on military movements. The communications specialist works with legal experts to challenge the arrest and advocate for the journalist's release.",
+    "anti_pattern": "Encouraging journalists to self-censor to avoid legal repercussions, which undermines press freedom.",
+    "crisis_types": [
+      "political",
+      "media"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck012",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 12,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Stakeholder Collaboration",
+    "slug": "stakeholder-collaboration",
+    "description": "Collaborate with human rights organizations, volunteers, and other stakeholders to address media bias and misinformation about IDPs. This amplifies the response and increases pressure on media outlets to correct their reporting.",
+    "when_to_apply": "When media outlets consistently publish biased or stigmatizing content about IDPs or other vulnerable groups.",
+    "example": "A media outlet publishes a stigmatizing article about Roma IDPs. The communications specialist collaborates with human rights organizations to issue a joint statement and demand a correction.",
+    "anti_pattern": "Working in isolation without engaging other stakeholders, which limits the impact of the response.",
+    "crisis_types": [
+      "media",
+      "reputational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck012",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 12,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

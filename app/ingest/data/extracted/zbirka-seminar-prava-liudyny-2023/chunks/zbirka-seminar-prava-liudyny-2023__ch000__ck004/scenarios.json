@@ -1,0 +1,94 @@
+[
+  {
+    "scenario_id": "user-generated-content-leak",
+    "crisis_type": "reputational",
+    "severity": "high",
+    "context": "A media outlet publishes user-generated content (e.g., personal photos/videos) without proper verification or consent, leading to a reputational crisis. This includes cases where journalists repost content from social media without verifying its authenticity or obtaining parental consent for images of minors.",
+    "key_stakeholders": [
+      "media outlet",
+      "journalists",
+      "affected individuals/families",
+      "social media users",
+      "public",
+      "regulatory bodies"
+    ],
+    "initial_trigger": "Publication of unverified or unauthorized user-generated content (e.g., personal photos/videos of victims or minors) by a media outlet",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck004",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 4,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "age-discrimination-in-media",
+    "crisis_type": "reputational",
+    "severity": "medium",
+    "context": "A media outlet or journalist uses discriminatory language or stereotypes when referring to elderly people, leading to backlash and accusations of ageism. This includes using terms like 'old,' 'grandma,' or 'grandpa' in a derogatory context or failing to use neutral, respectful terminology.",
+    "key_stakeholders": [
+      "media outlet",
+      "journalists",
+      "elderly individuals",
+      "advocacy groups",
+      "public",
+      "regulatory bodies"
+    ],
+    "initial_trigger": "Publication or broadcast of content that uses discriminatory or stereotypical language toward elderly people",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck004",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 4,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "gender-stereotyping-in-journalism",
+    "crisis_type": "reputational",
+    "severity": "medium",
+    "context": "A media outlet or journalist reinforces gender stereotypes in their reporting, such as assigning women to 'soft' topics (e.g., lifestyle, family) while excluding them from 'serious' topics (e.g., politics, finance). This can lead to accusations of sexism and reputational damage.",
+    "key_stakeholders": [
+      "media outlet",
+      "journalists",
+      "women in media",
+      "advocacy groups",
+      "public",
+      "regulatory bodies"
+    ],
+    "initial_trigger": "Publication or broadcast of content that reinforces gender stereotypes or excludes women from certain topics",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck004",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 4,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "hate-speech-in-media",
+    "crisis_type": "reputational",
+    "severity": "critical",
+    "context": "A media outlet or journalist publishes or broadcasts content that includes hate speech, discriminatory language, or stereotypes, leading to public outrage, legal consequences, and reputational damage. This includes 'passive' or 'hidden' hate speech that subtly reinforces prejudices.",
+    "key_stakeholders": [
+      "media outlet",
+      "journalists",
+      "affected groups",
+      "public",
+      "regulatory bodies",
+      "legal authorities"
+    ],
+    "initial_trigger": "Publication or broadcast of content containing hate speech, discriminatory language, or stereotypes",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck004",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 4,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

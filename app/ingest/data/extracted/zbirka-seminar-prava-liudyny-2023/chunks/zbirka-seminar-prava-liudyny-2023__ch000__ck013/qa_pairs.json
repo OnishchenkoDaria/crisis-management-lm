@@ -1,0 +1,141 @@
+[
+  {
+    "question": "What is the first step I should take if my organization is accused of discriminatory practices in content moderation?",
+    "answer": "Issue a public statement within the first hour acknowledging the allegations and committing to an independent audit of your moderation policies. This demonstrates transparency and aligns with human rights principles of non-discrimination.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "social-media-discrimination-allegation"
+    ],
+    "source_scenario_id": "social-media-discrimination-allegation",
+    "common_mistake": "Ignoring the allegations or responding defensively without acknowledging the concerns.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck013",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 13,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How should I handle a situation where a blogger under my organization publishes harmful self-development advice?",
+    "answer": "Publish a public correction and apology, removing or updating the misleading content with verified information. This restores trust with the audience and aligns with ethical journalism principles.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "blog-misinformation-crisis"
+    ],
+    "source_scenario_id": "blog-misinformation-crisis",
+    "common_mistake": "Deleting the post without explanation or failing to address the root cause of the misinformation.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck013",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 13,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What ethical safeguards should I implement before publishing a podcast episode featuring war refugees?",
+    "answer": "Ensure interviewees provide informed consent, understand how their stories will be used, and have the opportunity to review content before publication. This minimizes harm and aligns with ethical storytelling principles.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "podcast-ethical-controversy"
+    ],
+    "source_scenario_id": "podcast-ethical-controversy",
+    "common_mistake": "Prioritizing content engagement or sensationalism over ethical considerations and interviewee well-being.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck013",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 13,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can I counter gender-based criticism of a female war correspondent without appearing defensive?",
+    "answer": "Publish a statement highlighting the journalist's credentials, experience, and the importance of diverse perspectives in war reporting. This reinforces credibility and counters gender stereotypes.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "gender-bias-in-war-reporting"
+    ],
+    "source_scenario_id": "gender-bias-in-war-reporting",
+    "common_mistake": "Responding emotionally or defensively without reinforcing professional credentials.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck013",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 13,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What is the 'Golden Hour Rule' in crisis communications, and why is it important?",
+    "answer": "The Golden Hour Rule means acting within the first hour of a crisis to acknowledge the issue, express concern, and outline next steps. This demonstrates responsiveness and control over the narrative, which is critical in the acute phase of a crisis.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "social-media-discrimination-allegation",
+      "blog-misinformation-crisis"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Waiting for more information before responding, which can lead to accusations of indifference or avoidance.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck013",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 13,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can I ensure my organization's communications align with human rights principles during a crisis?",
+    "answer": "Adopt the 'Human Rights Alignment Check' tactic: review all communications and actions for alignment with principles such as non-discrimination, freedom of expression, and ethical storytelling. This guides decision-making and messaging throughout the crisis.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "social-media-discrimination-allegation",
+      "podcast-ethical-controversy"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Focusing solely on legal risks or audience engagement metrics without considering ethical implications.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck013",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 13,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What should I do if a stakeholder group accuses my organization of exploiting their stories for content?",
+    "answer": "Issue a public apology, remove the content in question, and conduct an internal review of ethical guidelines for future content. This shows accountability and commitment to ethical standards.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "podcast-ethical-controversy"
+    ],
+    "source_scenario_id": "podcast-ethical-controversy",
+    "common_mistake": "Dismissing the criticism as unfounded or focusing solely on legal risks without addressing ethical concerns.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck013",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 13,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can I tailor my response to address the emotional drivers behind stakeholder criticism?",
+    "answer": "Use 'Stakeholder Empathy Mapping' to identify the emotions, concerns, and perspectives of key stakeholders. Tailor your messaging to address these specific needs and build trust.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "social-media-discrimination-allegation",
+      "gender-bias-in-war-reporting"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Assuming stakeholder concerns without validating them through direct engagement or research.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck013",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 13,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

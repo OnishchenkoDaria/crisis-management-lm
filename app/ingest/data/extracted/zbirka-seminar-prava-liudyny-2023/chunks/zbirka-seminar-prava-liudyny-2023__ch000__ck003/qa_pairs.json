@@ -1,0 +1,156 @@
+[
+  {
+    "question": "What is the first step I should take when I detect a surge in fake news about a military defeat during wartime?",
+    "answer": "Issue an official statement within the first hour (Golden Hour Rule) to provide verified information and set the narrative. Delaying response allows misinformation to spread unchecked and erodes public trust.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "disinformation-campaign-during-war",
+      "media",
+      "acute"
+    ],
+    "source_scenario_id": "disinformation-campaign-during-war",
+    "common_mistake": "Waiting for more information or consensus before responding, which allows disinformation to gain traction.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck003",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 3,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can I effectively counter a fake news story alleging humanitarian abuses by Ukrainian forces?",
+    "answer": "Issue a detailed rebuttal from the Ukrainian government or humanitarian organizations, providing verified evidence and context. Share the rebuttal through multiple channels (e.g., social media, press releases, official websites) to ensure it reaches diverse audiences.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "fake-news-about-humanitarian-crisis",
+      "reputational",
+      "containment"
+    ],
+    "source_scenario_id": "fake-news-about-humanitarian-crisis",
+    "common_mistake": "Responding with vague or overly technical language, which may confuse the public rather than clarify the truth.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck003",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 3,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What should I do if social media platforms are flooded with inflammatory content designed to exploit ethnic tensions?",
+    "answer": "Engage with social media platforms to remove or flag the most inflammatory content and accounts. Issue a public statement condemning the manipulation and urging calm to help de-escalate tensions.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "manipulation-of-public-opinion-through-social-media",
+      "media",
+      "political",
+      "acute"
+    ],
+    "source_scenario_id": "manipulation-of-public-opinion-through-social-media",
+    "common_mistake": "Responding with overly aggressive or accusatory language, which can escalate tensions rather than de-escalate them.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck003",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 3,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "A competitor has copied my web design, including layout, graphics, and code. What is the best way to address this?",
+    "answer": "Issue a formal cease-and-desist letter to the competitor, demanding they stop using the copied design and remove it from the client's project. This provides clear documentation of the infringement and demands immediate action.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "copyright-infringement-on-web-design",
+      "operational",
+      "pre_crisis"
+    ],
+    "source_scenario_id": "copyright-infringement-on-web-design",
+    "common_mistake": "Ignoring the infringement or attempting to resolve it informally without documentation, which weakens your legal position.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck003",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 3,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "I published user-generated content without obtaining proper consent. What should I do now?",
+    "answer": "Issue a public apology and remove the content immediately. Clarify the ethical guidelines for using user-generated content in future publications to demonstrate accountability and commitment to ethical standards.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "user-generated-content-ethics-violation",
+      "media",
+      "reputational",
+      "containment"
+    ],
+    "source_scenario_id": "user-generated-content-ethics-violation",
+    "common_mistake": "Defending the publication by arguing that the content was already public or that consent is not necessary, which further erodes trust.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck003",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 3,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can I ensure that my media outlet adheres to ethical standards when using user-generated content?",
+    "answer": "Establish clear guidelines for using user-generated content, emphasizing the importance of consent, verification, and transparency. Train journalists on these guidelines and include clauses in contracts to clarify ownership and usage rights.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "user-generated-content-ethics-violation",
+      "media",
+      "pre_crisis"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Assuming that user-generated content is always public and does not require consent or verification, which can lead to ethical violations and reputational damage.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck003",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 3,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What are the key principles for protecting intellectual property in web design?",
+    "answer": "Register your designs with the appropriate authorities, use contracts to clarify ownership, and issue cease-and-desist letters for infringements. Proactively implementing these protocols reduces the likelihood of crises and protects your competitive advantage.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "copyright-infringement-on-web-design",
+      "operational",
+      "pre_crisis"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Assuming that informal agreements or lack of registration will protect intellectual property, which can lead to loss of rights and competitive advantage.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck003",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 3,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can I effectively counter a disinformation campaign targeting Ukrainian society during wartime?",
+    "answer": "Combine multiple tactics: issue an official statement within the first hour (Golden Hour Rule), engage with social media platforms to remove or flag disinformation, and launch a counter-messaging campaign using trusted voices to debunk false narratives.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "disinformation-campaign-during-war",
+      "media",
+      "acute"
+    ],
+    "source_scenario_id": "disinformation-campaign-during-war",
+    "common_mistake": "Relying on a single tactic (e.g., issuing a statement) without addressing the root cause of the disinformation (e.g., removing it from social media platforms).",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck003",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 3,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

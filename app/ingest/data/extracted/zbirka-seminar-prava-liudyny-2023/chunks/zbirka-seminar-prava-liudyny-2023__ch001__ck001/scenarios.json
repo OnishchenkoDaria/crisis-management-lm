@@ -1,0 +1,44 @@
+[
+  {
+    "scenario_id": "ukraine-russia-conflict",
+    "crisis_type": "political",
+    "severity": "high",
+    "context": "The conflict between Ukraine and Russia has led to a significant escalation of tensions, with both sides engaging in propaganda and disinformation campaigns. The situation is further complicated by the involvement of social media platforms, which can be used to spread false information and manipulate public opinion.",
+    "key_stakeholders": [
+      "Ukrainian government",
+      "Russian government",
+      "Social media platforms",
+      "International community"
+    ],
+    "initial_trigger": "Russian aggression against Ukraine",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch001__ck001",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Висновки.",
+    "_chapter_index": 1,
+    "_chunk_index": 1,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "social-media-censorship",
+    "crisis_type": "media",
+    "severity": "medium",
+    "context": "Social media platforms are facing increasing pressure to censor content related to the Ukraine-Russia conflict, with some platforms blocking or restricting access to certain types of content. This has raised concerns about the impact on freedom of speech and the ability of users to access accurate information.",
+    "key_stakeholders": [
+      "Social media platforms",
+      "Ukrainian government",
+      "Russian government",
+      "International community"
+    ],
+    "initial_trigger": "Increased pressure to censor content",
+    "phase": "containment",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch001__ck001",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Висновки.",
+    "_chapter_index": 1,
+    "_chunk_index": 1,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

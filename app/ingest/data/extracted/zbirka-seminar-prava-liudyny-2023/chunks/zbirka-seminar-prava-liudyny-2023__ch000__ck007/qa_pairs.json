@@ -1,0 +1,147 @@
+[
+  {
+    "question": "What is the first thing I should do if I obtain a video that might show a war crime?",
+    "answer": "Secure the footage immediately, note the time and location, and verify its authenticity with multiple independent sources (e.g., witnesses, satellite imagery) before publishing or sharing it.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "russian-war-crimes-documentation",
+      "media"
+    ],
+    "source_scenario_id": "russian-war-crimes-documentation",
+    "common_mistake": "Publishing the video immediately to be the first to report, without verifying its authenticity.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck007",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 7,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can I ensure my patriotic messaging doesn’t turn into propaganda or misinformation?",
+    "answer": "Use verified positive stories (e.g., rescues, humanitarian aid) and avoid exaggeration or false narratives. Consult with experts (e.g., psychologists, sociologists) to craft messaging that resonates emotionally without distorting reality.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "patriotic-messaging-in-conflict",
+      "reputational"
+    ],
+    "source_scenario_id": "patriotic-messaging-in-conflict",
+    "common_mistake": "Using overly emotional or exaggerated language to boost morale, without verifying facts.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck007",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 7,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What’s the best way to respond to a viral false claim about a military defeat during a war?",
+    "answer": "Issue a rapid, verified correction with clear evidence (e.g., official statements, fact-checks) and debunk the claim publicly. Engage directly with the public via live Q&A or social media to address concerns and provide context.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "misinformation-during-war",
+      "media"
+    ],
+    "source_scenario_id": "misinformation-during-war",
+    "common_mistake": "Ignoring the misinformation or assuming it will fade on its own.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck007",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 7,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What safety protocols should I follow when entering a high-risk conflict zone?",
+    "answer": "Coordinate with local military or humanitarian teams for safe passage and escort, carry protective gear (e.g., flak jacket, helmet), and use communication devices like satellite phones. Document risks and debrief thoroughly after the assignment.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "journalist-safety-in-warzone",
+      "safety"
+    ],
+    "source_scenario_id": "journalist-safety-in-warzone",
+    "common_mistake": "Proceeding independently without coordination, assuming the risk is manageable.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck007",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 7,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How do I ensure the evidence I collect for a war crimes trial is admissible in court?",
+    "answer": "Follow strict legal guidelines: document time, location, context, and chain of custody for all evidence. Consult with legal experts to ensure the evidence meets international standards before submission.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "legal-evidence-collection-for-war-crimes",
+      "operational"
+    ],
+    "source_scenario_id": "legal-evidence-collection-for-war-crimes",
+    "common_mistake": "Collecting evidence informally or without proper documentation, assuming it will be accepted.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck007",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 7,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What’s the most effective way to communicate the human impact of a crisis to the public?",
+    "answer": "Use powerful visuals (e.g., photos, videos, infographics) paired with concise, factual captions. Ensure the visuals are authentic and ethically sourced to avoid misleading the audience.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "visual-storytelling-for-emotional-impact",
+      "media",
+      "reputational"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Using staged or misleading visuals to evoke emotion, which risks damaging credibility.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck007",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 7,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can I balance the need for speed in reporting with the need for accuracy during a crisis?",
+    "answer": "Prioritize immediate verification of critical facts while publishing updates as they become available. Use a ‘living document’ approach, where stories are updated in real-time as new information is confirmed.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "golden-hour-rule",
+      "media"
+    ],
+    "source_scenario_id": "russian-war-crimes-documentation",
+    "common_mistake": "Sacrificing accuracy for speed, leading to the spread of unverified information.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck007",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 7,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What role do social media platforms play in spreading misinformation during a war, and how can I counter it?",
+    "answer": "Social media platforms can amplify false claims rapidly. Counter misinformation by issuing verified corrections, engaging directly with the public, and collaborating with fact-checkers to debunk false narratives.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "misinformation-during-war",
+      "media"
+    ],
+    "source_scenario_id": "misinformation-during-war",
+    "common_mistake": "Assuming social media platforms will automatically flag or remove misinformation without proactive intervention.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck007",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 7,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

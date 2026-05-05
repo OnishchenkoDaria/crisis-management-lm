@@ -1,0 +1,110 @@
+[
+  {
+    "decision_id": "address-media-bias-against-idps",
+    "source_scenario_id": "media-misrepresentation-of-idps",
+    "situation": "A media outlet publishes a stigmatizing article about IDPs, particularly Roma communities, using terms like 'refugee' or 'migrant' interchangeably with 'IDP.'",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Issue a public statement clarifying the correct terminology and context for IDPs, emphasizing their legal status and needs.",
+        "consequence": "Reduces misinformation and educates the public, but may not immediately stop the outlet from publishing similar content.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Contact the media outlet directly to request a correction or retraction of the article.",
+        "consequence": "May lead to a correction or retraction, but risks backlash or refusal from the outlet.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Engage with human rights organizations to jointly address the issue through advocacy or legal channels.",
+        "consequence": "Amplifies the response and increases pressure on the outlet, but may take longer to yield results.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Ignoring the issue or assuming the media outlet will self-correct without intervention.",
+    "consequence_if_wrong": "The misinformation continues to spread, reinforcing negative stereotypes and harming IDP communities.",
+    "rationale": "Public statements are a proactive way to correct misinformation and educate the public, which is critical in a crisis where perception shapes policy and support.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck012",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 12,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "balance-freedom-of-speech-and-security",
+    "source_scenario_id": "freedom-of-speech-restrictions-during-war",
+    "situation": "A journalist is arrested or faces legal action for reporting on military movements or criticizing authorities during wartime.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Advocate for the journalist's release and challenge the legality of the restrictions in court or through international bodies.",
+        "consequence": "May lead to the journalist's release and set a precedent for future cases, but risks escalating tensions with authorities.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Encourage the journalist to self-censor to avoid legal repercussions.",
+        "consequence": "Protects the journalist from immediate harm but undermines press freedom and public access to critical information.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Work with media outlets to publish the journalist's story anonymously or under a pseudonym.",
+        "consequence": "Protects the journalist while still disseminating the information, but may limit the impact of the story.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Assuming that self-censorship is the only way to protect journalists during wartime.",
+    "consequence_if_wrong": "Press freedom is further eroded, and the public loses access to critical information needed for accountability.",
+    "rationale": "Advocating for the journalist's release and challenging restrictions is essential to uphold press freedom and ensure the public remains informed.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck012",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 12,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "correct-negative-media-portrayal-of-idps",
+    "source_scenario_id": "negative-media-bias-against-idps",
+    "situation": "A media outlet publishes a sensationalist article about IDPs, portraying them negatively and reinforcing stereotypes.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Issue a public statement clarifying the correct terminology and context for IDPs, emphasizing their legal status and needs.",
+        "consequence": "Reduces misinformation and educates the public, but may not immediately stop the outlet from publishing similar content.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Contact the media outlet directly to request a correction or retraction of the article.",
+        "consequence": "May lead to a correction or retraction, but risks backlash or refusal from the outlet.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Engage with human rights organizations to jointly address the issue through advocacy or legal channels.",
+        "consequence": "Amplifies the response and increases pressure on the outlet, but may take longer to yield results.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Ignoring the issue or assuming the media outlet will self-correct without intervention.",
+    "consequence_if_wrong": "The misinformation continues to spread, reinforcing negative stereotypes and harming IDP communities.",
+    "rationale": "Public statements are a proactive way to correct misinformation and educate the public, which is critical in a crisis where perception shapes policy and support.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck012",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 12,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

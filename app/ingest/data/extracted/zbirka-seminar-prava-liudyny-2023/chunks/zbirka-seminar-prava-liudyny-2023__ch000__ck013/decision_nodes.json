@@ -1,0 +1,146 @@
+[
+  {
+    "decision_id": "discrimination-response-plan",
+    "source_scenario_id": "social-media-discrimination-allegation",
+    "situation": "Allegations of discriminatory practices in content moderation or user interactions on a social media platform have surfaced, with users and advocacy groups calling for accountability.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Issue a public statement acknowledging the allegations and committing to an independent audit of moderation policies and practices.",
+        "consequence": "Demonstrates transparency and commitment to addressing concerns, but may invite further scrutiny if the audit takes time.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Ignore the allegations and continue with standard moderation practices, citing platform policies.",
+        "consequence": "Risk of escalating backlash, loss of user trust, and potential legal or regulatory consequences.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Engage directly with accusers in private conversations to understand specific grievances before responding publicly.",
+        "consequence": "May de-escalate tensions if handled sensitively, but could be seen as avoiding accountability if perceived as insincere.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Responding defensively or dismissing allegations without acknowledging the concerns of stakeholders.",
+    "consequence_if_wrong": "Loss of credibility, reputational damage, and potential legal or regulatory penalties.",
+    "rationale": "Acknowledging the issue and committing to an independent review shows accountability and aligns with human rights principles of non-discrimination and transparency.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck013",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 13,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "blog-misinformation-correction",
+    "source_scenario_id": "blog-misinformation-crisis",
+    "situation": "A popular self-development blogger has published content containing harmful or misleading advice that is gaining traction among followers.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Publish a public correction and apology, removing or updating the misleading content with verified information.",
+        "consequence": "Restores trust with the audience but may temporarily reduce engagement or follower count.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Delete the post without explanation to avoid further backlash.",
+        "consequence": "May be seen as censorship or avoidance of responsibility, leading to accusations of cover-up.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Engage with followers in private to address concerns and provide clarifications without a public statement.",
+        "consequence": "Could prevent escalation but may not address the broader issue of misinformation spreading.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Ignoring the issue or deleting the content without addressing the root cause or providing context.",
+    "consequence_if_wrong": "Loss of audience trust, potential harm to followers, and reputational damage for the blogger or platform.",
+    "rationale": "Publicly correcting misinformation and apologizing demonstrates accountability and aligns with ethical journalism principles.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck013",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 13,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "podcast-ethical-review",
+    "source_scenario_id": "podcast-ethical-controversy",
+    "situation": "A podcast episode featuring interviews with war refugees is accused of exploiting personal stories without proper consent or ethical safeguards.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Issue a public apology, remove the episode from platforms, and conduct an internal review of ethical guidelines for future episodes.",
+        "consequence": "Shows accountability and commitment to ethical standards, but may temporarily reduce audience trust.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Defend the episode by emphasizing the importance of storytelling and dismissing the criticism as overreaction.",
+        "consequence": "Risk of further backlash, loss of credibility with advocacy groups, and potential legal consequences.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Engage with interviewees privately to seek their feedback and address their concerns before taking further action.",
+        "consequence": "May help rebuild trust with interviewees but could delay necessary corrective actions.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Dismissing the criticism as unfounded or focusing solely on legal risks without addressing ethical concerns.",
+    "consequence_if_wrong": "Loss of trust from interviewees, reputational damage, and potential legal or regulatory penalties.",
+    "rationale": "Publicly acknowledging the ethical lapse and taking corrective action aligns with principles of human rights and ethical journalism.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck013",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 13,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "gender-bias-response-in-war-reporting",
+    "source_scenario_id": "gender-bias-in-war-reporting",
+    "situation": "A female war correspondent is facing gender-based criticism questioning her professionalism and credibility in reporting from the front lines.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Publish a statement highlighting the journalist's credentials, experience, and the importance of diverse perspectives in war reporting.",
+        "consequence": "Reinforces the journalist's credibility but may invite further debate about gender roles in journalism.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Ignore the criticism and continue reporting without addressing the issue publicly.",
+        "consequence": "Risk of perpetuating gender stereotypes and losing audience trust in the journalist's objectivity.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Engage with critics privately to understand their concerns and address them individually.",
+        "consequence": "May de-escalate tensions but could be seen as avoiding accountability if not paired with a public response.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Responding emotionally or defensively to gender-based criticism without reinforcing professional credentials.",
+    "consequence_if_wrong": "Perpetuation of gender stereotypes, loss of audience trust, and reputational damage for the journalist and media outlet.",
+    "rationale": "Publicly affirming the journalist's professionalism and the importance of diverse perspectives helps counter gender bias and reinforces credibility.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck013",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 13,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

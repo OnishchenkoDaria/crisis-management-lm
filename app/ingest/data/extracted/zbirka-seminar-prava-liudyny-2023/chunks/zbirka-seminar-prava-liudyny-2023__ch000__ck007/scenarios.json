@@ -1,0 +1,114 @@
+[
+  {
+    "scenario_id": "russian-war-crimes-documentation",
+    "crisis_type": "media",
+    "severity": "critical",
+    "context": "A media organization is documenting Russian war crimes in Ukraine, requiring rapid verification and ethical handling of sensitive evidence to support legal proceedings and public awareness.",
+    "key_stakeholders": [
+      "Journalists",
+      "Human rights defenders",
+      "Legal teams",
+      "Victims and witnesses",
+      "International courts",
+      "Ukrainian government",
+      "Media organizations"
+    ],
+    "initial_trigger": "Discovery of potential war crime evidence (e.g., video, audio, or testimonies) during conflict coverage.",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck007",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 7,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "patriotic-messaging-in-conflict",
+    "crisis_type": "reputational",
+    "severity": "medium",
+    "context": "A media campaign is being designed to boost national morale and unity during wartime, requiring careful messaging to avoid misinformation or unintended negative reactions.",
+    "key_stakeholders": [
+      "Media outlets",
+      "Government officials",
+      "Public",
+      "Military personnel",
+      "Civil society organizations"
+    ],
+    "initial_trigger": "Need to create or disseminate patriotic content aligned with wartime narratives.",
+    "phase": "pre_crisis",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck007",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 7,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "misinformation-during-war",
+    "crisis_type": "media",
+    "severity": "high",
+    "context": "False or misleading information is spreading rapidly, potentially undermining public trust or inciting panic during a conflict.",
+    "key_stakeholders": [
+      "Media organizations",
+      "Social media platforms",
+      "Government agencies",
+      "Public",
+      "Fact-checkers"
+    ],
+    "initial_trigger": "Viral spread of unverified or fabricated war-related content.",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck007",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 7,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "journalist-safety-in-warzone",
+    "crisis_type": "safety",
+    "severity": "critical",
+    "context": "A journalist is operating in a high-risk conflict zone and must ensure their safety while documenting critical events.",
+    "key_stakeholders": [
+      "Journalist",
+      "Media organization",
+      "Military units",
+      "Local authorities",
+      "Humanitarian organizations"
+    ],
+    "initial_trigger": "Assignment to a dangerous or unstable area with active conflict.",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck007",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 7,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "legal-evidence-collection-for-war-crimes",
+    "crisis_type": "operational",
+    "severity": "high",
+    "context": "A team is collecting evidence for war crimes trials, requiring strict adherence to legal standards to ensure admissibility in court.",
+    "key_stakeholders": [
+      "Legal teams",
+      "Human rights organizations",
+      "Journalists",
+      "Witnesses",
+      "International courts"
+    ],
+    "initial_trigger": "Identification of a potential war crime case requiring formal documentation.",
+    "phase": "containment",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck007",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 7,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

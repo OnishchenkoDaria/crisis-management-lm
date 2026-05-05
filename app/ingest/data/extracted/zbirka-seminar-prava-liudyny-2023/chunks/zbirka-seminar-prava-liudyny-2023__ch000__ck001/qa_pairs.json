@@ -1,0 +1,146 @@
+[
+  {
+    "question": "What immediate steps should we take when military censors demand removal of specific content from our reporting about recent combat operations?",
+    "answer": "Document the interaction thoroughly, comply with the request while noting the specific content and time of request, then issue a public statement explaining the censorship while maintaining transparency about what was removed and why.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "russian-invasion-media-restrictions",
+      "military censorship"
+    ],
+    "source_scenario_id": "russian-invasion-media-restrictions",
+    "common_mistake": "Immediately publishing the censored content without understanding the legal implications or documenting the interaction.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck001",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 1,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How should we respond if our media outlet is accused of spreading hate speech in coverage of Russian aggression?",
+    "answer": "Issue an immediate public apology for any language that could be interpreted as hate speech, remove the problematic content, and consult with language experts to clarify intent. Follow up with a statement explaining the commitment to responsible journalism and avoiding discriminatory language.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "hate-speech-propagation-in-media",
+      "reputational crisis"
+    ],
+    "source_scenario_id": "hate-speech-propagation-in-media",
+    "common_mistake": "Dismissing the accusation as political pressure without reviewing the content or consulting experts.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck001",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 1,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What's the best approach when we want to use newly emerged Ukrainian neologisms in our crisis communications but they aren't in official dictionaries yet?",
+    "answer": "Use the neologisms with clear explanations of their meaning and context. Provide examples of how they're being used in current discourse to help audiences understand their significance. Create an internal style guide for consistent usage across all communications.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "neologism-usage-in-crisis-communication",
+      "media crisis"
+    ],
+    "source_scenario_id": "neologism-usage-in-crisis-communication",
+    "common_mistake": "Using the neologisms without explanation, assuming the audience already understands their meaning.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck001",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 1,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "Military authorities have denied our journalist access to a conflict zone where civilian casualties are reported. What should we do next?",
+    "answer": "File a formal complaint with the military press office while simultaneously seeking alternative verified sources. Document all interactions and maintain pressure for access while ensuring your team has credible information to report.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "journalist-access-restrictions",
+      "operational crisis"
+    ],
+    "source_scenario_id": "journalist-access-restrictions",
+    "common_mistake": "Sending journalists to restricted areas without proper authorization or attempting to bypass military restrictions independently.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck001",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 1,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "Russian disinformation claims Ukrainian forces committed war crimes in recently liberated territories. How quickly should we respond and what should our response include?",
+    "answer": "Respond within 30 minutes with a coordinated government-media response that includes verified evidence countering the claims. Be specific about the evidence and maintain transparency about sources while avoiding vague statements that could be seen as avoiding responsibility.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "information-warfare-response",
+      "political crisis"
+    ],
+    "source_scenario_id": "information-warfare-response",
+    "common_mistake": "Waiting for complete information before responding or issuing vague statements that don't directly address the specific claims.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck001",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 1,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What documentation should we maintain regarding interactions with military authorities during wartime reporting?",
+    "answer": "Keep records of all censorship requests including timestamps, specific content requested for removal, rationale for compliance or modification, and any follow-up communications. Maintain a log of all denied access requests and the alternative sources used for reporting.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "russian-invasion-media-restrictions",
+      "military censorship"
+    ],
+    "source_scenario_id": "russian-invasion-media-restrictions",
+    "common_mistake": "Destroying or failing to document interactions with authorities, leaving no record of editorial decisions or censorship requests.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck001",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 1,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can we maintain credibility when using civilian sources for information about conflict zones where military access is denied?",
+    "answer": "Verify information through multiple independent civilian sources, cross-reference with official statements and international observer reports, and clearly state the limitations of your reporting when military access is restricted. Maintain transparency about what you can and cannot verify.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "journalist-access-restrictions",
+      "source diversification"
+    ],
+    "source_scenario_id": "journalist-access-restrictions",
+    "common_mistake": "Presenting unverified civilian accounts as definitive facts without proper verification or transparency about source limitations.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck001",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 1,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What's the most effective way to counter Russian propaganda about Ukrainian military operations without violating military censorship rules?",
+    "answer": "Focus on reporting verified facts about Ukrainian military successes while maintaining strict adherence to military censorship directives. Use international observer reports and civilian eyewitness accounts to provide context while avoiding speculation about specific operations or capabilities.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "information-warfare-response",
+      "media crisis"
+    ],
+    "source_scenario_id": "information-warfare-response",
+    "common_mistake": "Attempting to counter propaganda by speculating about military operations or revealing sensitive information that hasn't been officially confirmed.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck001",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 1,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

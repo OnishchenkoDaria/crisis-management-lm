@@ -1,0 +1,154 @@
+[
+  {
+    "question": "What is the most critical step for a Crimean Tatar journalist documenting an illegal search by Russian forces to ensure their safety and the impact of their evidence?",
+    "answer": "Prioritize immediate documentation and dissemination of the evidence within the first hour (Golden Hour Rule). Upload the footage to social media and share it with international human rights organizations to maximize impact and reduce the risk of suppression.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "crimean-solidarity-citizen-journalism-crisis",
+      "acute-phase",
+      "safety"
+    ],
+    "source_scenario_id": "crimean-solidarity-citizen-journalism-crisis",
+    "common_mistake": "Delaying documentation to seek additional evidence or approval, resulting in lost opportunities to expose abuses in real time.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck011",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 11,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can Ukrainian media outlets better address the needs of people with disabilities during the war?",
+    "answer": "Allocate significant coverage to stories about people with disabilities, including their evacuation challenges, discrimination, and access to services. This includes dedicated beats, expert sources, and targeted story angles to ensure their specific needs are highlighted.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "media-coverage-of-disabled-people-during-war",
+      "acute-phase",
+      "media"
+    ],
+    "source_scenario_id": "media-coverage-of-disabled-people-during-war",
+    "common_mistake": "Assuming that brief mentions of people with disabilities in general war coverage are sufficient, leading to underrepresentation of their specific challenges.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck011",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 11,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "Why is it important to use the term 'internally displaced persons (IDPs)' instead of 'refugee' when reporting on displacement crises?",
+    "answer": "Using the term 'IDP' accurately reflects the legal status of people displaced within their own country, ensuring they receive appropriate protections and support under international law. Misusing 'refugee' can lead to confusion and undermine their rights.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "internal-displacement-coverage-bias",
+      "acute-phase",
+      "media"
+    ],
+    "source_scenario_id": "internal-displacement-coverage-bias",
+    "common_mistake": "Using the term 'refugee' interchangeably with 'IDP' to simplify the narrative, leading to legal and social confusion.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck011",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 11,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What are the key challenges faced by people with disabilities during the Russian-Ukrainian war, and how can media outlets highlight them?",
+    "answer": "People with disabilities face discrimination, lack of access to safe shelters, evacuation difficulties, and inadequate rehabilitation services. Media outlets can highlight these challenges by assigning dedicated reporters, interviewing affected individuals, and collaborating with disability rights organizations.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "media-coverage-of-disabled-people-during-war",
+      "acute-phase",
+      "safety"
+    ],
+    "source_scenario_id": "media-coverage-of-disabled-people-during-war",
+    "common_mistake": "Assuming that general crisis coverage adequately represents all groups, leading to underrepresentation of vulnerable populations.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck011",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 11,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can a communications specialist ensure that the Crimean Solidarity movement's messaging resonates with international stakeholders?",
+    "answer": "Develop tailored communication strategies for each stakeholder group, including Crimean Tatar activists, international human rights organizations, and Ukrainian government agencies. Use clear, accurate terminology and highlight the movement's goals and achievements in a way that aligns with each group's priorities.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "crimean-solidarity-citizen-journalism-crisis",
+      "acute-phase",
+      "political"
+    ],
+    "source_scenario_id": "crimean-solidarity-citizen-journalism-crisis",
+    "common_mistake": "Focusing solely on one stakeholder group (e.g., media) while neglecting others, leading to fragmented or ineffective crisis responses.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck011",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 11,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What role do international human rights organizations play in supporting Crimean Tatar journalists and activists?",
+    "answer": "International human rights organizations provide protection, advocacy, and platforms for amplifying the voices of Crimean Tatar journalists and activists. They can pressure authorities, document abuses, and support legal actions against perpetrators.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "crimean-solidarity-citizen-journalism-crisis",
+      "acute-phase",
+      "reputational"
+    ],
+    "source_scenario_id": "crimean-solidarity-citizen-journalism-crisis",
+    "common_mistake": "Assuming that local efforts alone are sufficient to hold authorities accountable, leading to inadequate international pressure.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck011",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 11,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can media outlets avoid bias when covering internally displaced persons (IDPs)?",
+    "answer": "Use accurate terminology, avoid conflating IDPs with refugees or migrants, and ensure representation of IDPs' specific challenges in coverage. Collaborate with experts and organizations working directly with IDPs to provide context and depth.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "internal-displacement-coverage-bias",
+      "acute-phase",
+      "media"
+    ],
+    "source_scenario_id": "internal-displacement-coverage-bias",
+    "common_mistake": "Using interchangeable or inaccurate terms to simplify the narrative, leading to misrepresentation and confusion.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck011",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 11,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What is the most effective way to advocate for the needs of people with disabilities during a crisis?",
+    "answer": "Combine media coverage with direct advocacy efforts, such as collaborating with disability rights organizations, lobbying policymakers, and organizing public campaigns. Ensure that the voices of people with disabilities are centered in all advocacy efforts.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "media-coverage-of-disabled-people-during-war",
+      "acute-phase",
+      "safety"
+    ],
+    "source_scenario_id": "media-coverage-of-disabled-people-during-war",
+    "common_mistake": "Assuming that media coverage alone is sufficient to drive systemic change, leading to inadequate advocacy efforts.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck011",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 11,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

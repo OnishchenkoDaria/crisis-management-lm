@@ -1,0 +1,182 @@
+[
+  {
+    "decision_id": "respond-to-russian-media-stereotypes",
+    "source_scenario_id": "russian-media-stereotyping-against-ukraine",
+    "situation": "Russian media outlets are spreading derogatory stereotypes about Ukrainians, such as 'lamas' or 'Banderites', to justify aggression and shape international perceptions.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Issue a formal statement condemning the stereotypes and providing historical context to counter misinformation.",
+        "consequence": "Increases international awareness of the issue but may provoke further propaganda from Russian outlets.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Launch a social media campaign featuring Ukrainian voices and cultural achievements to counteract stereotypes.",
+        "consequence": "Effectively shifts narratives but requires significant resources and coordination.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Ignore the stereotypes, focusing on other crisis priorities.",
+        "consequence": "Allows misinformation to spread unchecked, undermining Ukraine's reputation.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Responding with emotional language or counter-propaganda without providing factual context.",
+    "consequence_if_wrong": "Failure to effectively counter misinformation, leading to increased acceptance of derogatory narratives.",
+    "rationale": "A formal statement provides a structured, authoritative response that can be amplified by international media and partners, countering propaganda with facts and context.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck005",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 5,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "address-gender-stereotypes-in-media",
+    "source_scenario_id": "gender-stereotyping-in-media",
+    "situation": "Media and advertisers are reinforcing gender and age-based stereotypes, such as depicting women as incapable of leadership or older adults as frail.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Issue guidelines for media outlets and advertisers to avoid gender and age-based stereotypes in content.",
+        "consequence": "Promotes long-term change but may face resistance from traditional media and advertisers.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Launch a public awareness campaign highlighting successful women and older adults in various fields.",
+        "consequence": "Effectively shifts narratives but requires significant outreach and resources.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Do nothing, assuming the issue will resolve itself over time.",
+        "consequence": "Allows stereotypes to persist, undermining social progress and equality.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Focusing solely on public awareness campaigns without addressing systemic issues in media and advertising.",
+    "consequence_if_wrong": "Failure to address root causes of stereotypes, leading to continued bias in media representation.",
+    "rationale": "Guidelines provide a structured approach to systemic change, ensuring media and advertisers adhere to standards that promote equality and reduce bias.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck005",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 5,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "counter-hate-speech-with-discourse-analysis",
+    "source_scenario_id": "hate-speech-and-discourse-analysis",
+    "situation": "Hate speech and discriminatory discourse are being identified in media content, requiring urgent action to prevent escalation of social tensions.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Use the 'Nine Steps' discourse analysis tool to identify and counter hate speech in media content.",
+        "consequence": "Provides a structured method to address hate speech but requires training and resources.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Issue a general statement condemning hate speech without specific analysis or action.",
+        "consequence": "Lacks impact and fails to address the root causes of discriminatory discourse.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Remove or censor content without analysis or explanation, risking accusations of censorship.",
+        "consequence": "May escalate tensions and undermine trust in media institutions.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Censoring content without providing context or analysis, leading to accusations of bias or suppression.",
+    "consequence_if_wrong": "Failure to effectively counter hate speech, allowing discriminatory narratives to persist and escalate.",
+    "rationale": "The 'Nine Steps' tool provides a structured, evidence-based approach to identifying and countering hate speech, ensuring actions are grounded in analysis rather than arbitrary decisions.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck005",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 5,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "manage-tourism-crisis-during-war",
+    "source_scenario_id": "tourism-industry-crisis-during-war",
+    "situation": "Tourists are stranded abroad due to the war, and the tourism industry is facing severe disruptions, including logistical challenges and economic losses.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Coordinate with government agencies (e.g., DART) and international partners to evacuate stranded tourists and provide support.",
+        "consequence": "Effectively addresses immediate humanitarian needs but requires significant coordination and resources.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Focus media coverage on the challenges faced by the tourism industry without providing solutions or support.",
+        "consequence": "Creates panic and undermines industry resilience without addressing root causes.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Ignore the crisis, assuming it will resolve itself over time.",
+        "consequence": "Allows humanitarian needs to go unmet and industry disruptions to persist.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Focusing solely on media coverage without taking concrete action to address the crisis.",
+    "consequence_if_wrong": "Failure to provide timely support to stranded tourists, leading to increased suffering and reputational damage.",
+    "rationale": "Coordinating evacuation and support addresses immediate humanitarian needs while demonstrating proactive leadership in crisis management.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck005",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 5,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "document-and-publicize-war-crimes",
+    "source_scenario_id": "russian-military-atrocities-and-human-rights-violations",
+    "situation": "Reports of war crimes, including looting, sexual violence, and extrajudicial killings by Russian forces, require urgent documentation and public exposure to counter disinformation and support accountability.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Collaborate with human rights organizations and media outlets to document and publicize war crimes evidence.",
+        "consequence": "Provides irrefutable evidence of atrocities but may provoke further disinformation campaigns from Russian sources.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Issue a general statement condemning war crimes without providing specific evidence or documentation.",
+        "consequence": "Lacks impact and fails to counter disinformation effectively.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Avoid publicizing war crimes to prevent escalating tensions or provoking further aggression.",
+        "consequence": "Allows atrocities to go unaddressed, undermining accountability and international support.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Failing to document evidence before publicizing war crimes, leading to accusations of fabrication or lack of credibility.",
+    "consequence_if_wrong": "Failure to effectively counter disinformation, allowing Russian narratives to dominate and undermine accountability.",
+    "rationale": "Collaborating with human rights organizations and media outlets ensures evidence is documented and publicized in a credible, structured manner, countering disinformation and supporting accountability.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck005",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 5,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

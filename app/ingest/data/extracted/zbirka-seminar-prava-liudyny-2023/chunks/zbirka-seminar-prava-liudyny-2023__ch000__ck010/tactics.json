@@ -1,0 +1,104 @@
+[
+  {
+    "name": "Golden Hour Rule",
+    "slug": "golden-hour-rule",
+    "description": "The Golden Hour Rule emphasizes the importance of responding to a crisis within the first hour to prevent escalation and maintain control of the narrative. Delayed responses can lead to misinformation and loss of public trust.",
+    "when_to_apply": "Apply this tactic during the acute phase of a crisis, particularly when misinformation or hate speech is spreading rapidly. Immediate action is critical to prevent further damage.",
+    "example": "When a Ukrainian media outlet publishes an article containing hate speech, issue a public statement condemning the use of hate speech within the first hour of publication.",
+    "anti_pattern": "Waiting for more information or delaying a response to avoid controversy.",
+    "crisis_types": [
+      "media",
+      "reputational",
+      "internal"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck010",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 10,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Balanced Reporting Framework",
+    "slug": "balanced-reporting-framework",
+    "description": "This framework ensures that media outlets adhere to ethical standards by avoiding hate speech, stereotypes, and manipulative language. It emphasizes the importance of accurate terminology and balanced reporting.",
+    "when_to_apply": "Apply this tactic during the acute and recovery phases of a crisis, particularly when disinformation or hate speech is prevalent. It is critical to maintaining public trust and credibility.",
+    "example": "When a media outlet publishes an article using manipulative language, issue a public statement clarifying the terminology and condemning the use of biased language.",
+    "anti_pattern": "Publishing articles with biased or manipulative language without addressing the issue publicly.",
+    "crisis_types": [
+      "media",
+      "reputational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck010",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 10,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Public Accountability Statement",
+    "slug": "public-accountability-statement",
+    "description": "A public accountability statement is a formal declaration issued by an organization to acknowledge a crisis, take responsibility, and outline steps to address the issue. It is critical to maintaining transparency and public trust.",
+    "when_to_apply": "Apply this tactic during the acute and recovery phases of a crisis, particularly when public outrage or accusations of wrongdoing are prevalent. It is critical to demonstrating commitment to accountability.",
+    "example": "When a viral video shows police brutality, issue a public statement condemning the incident, announcing an independent investigation, and expressing support for the victims.",
+    "anti_pattern": "Issuing a vague or private statement without taking public responsibility.",
+    "crisis_types": [
+      "safety",
+      "reputational",
+      "media"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck010",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 10,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Stakeholder Engagement Protocol",
+    "slug": "stakeholder-engagement-protocol",
+    "description": "This protocol outlines the steps for engaging with key stakeholders during a crisis, including journalists, government regulators, and affected communities. It emphasizes the importance of transparency, accountability, and collaboration.",
+    "when_to_apply": "Apply this tactic during the acute, containment, and recovery phases of a crisis, particularly when stakeholder trust is critical to resolving the issue. It is essential for maintaining credibility and ensuring effective crisis management.",
+    "example": "When Crimean Tatar journalists face repression, publicly condemn the repression, call for the release of detained journalists, and offer support to affected families.",
+    "anti_pattern": "Failing to engage with stakeholders or issuing private statements without public action.",
+    "crisis_types": [
+      "reputational",
+      "media",
+      "internal"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck010",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 10,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Crisis Communication Timeline",
+    "slug": "crisis-communication-timeline",
+    "description": "A crisis communication timeline outlines the key milestones and actions required during each phase of a crisis, from the initial trigger to the post-crisis recovery. It ensures that responses are timely, coordinated, and effective.",
+    "when_to_apply": "Apply this tactic during the pre-crisis, acute, containment, recovery, and post-crisis phases of a crisis. It is critical to ensuring that all stakeholders are informed and that responses are coordinated.",
+    "example": "During the acute phase of a media crisis, issue a public statement within the first hour, followed by a follow-up statement after 24 hours to provide additional context or updates.",
+    "anti_pattern": "Failing to follow a structured timeline or delaying responses due to lack of coordination.",
+    "crisis_types": [
+      "media",
+      "reputational",
+      "safety",
+      "political",
+      "natural_disaster",
+      "internal"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck010",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 10,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

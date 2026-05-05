@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Counter-Narrative",
+    "slug": "counter-narrative",
+    "description": "A tactic used to counter false or misleading information by providing factual and accurate information to counter the narrative.",
+    "when_to_apply": "When false or misleading information is being spread",
+    "example": "Providing factual information to counter a false news story",
+    "anti_pattern": "Spreading more false information",
+    "crisis_types": [
+      "information-warfare",
+      "reputational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck016",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 16,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Media Literacy",
+    "slug": "media-literacy",
+    "description": "A tactic used to educate people on how to critically evaluate information and identify potential biases or misinformation.",
+    "when_to_apply": "In situations where misinformation is prevalent",
+    "example": "Teaching people how to fact-check information",
+    "anti_pattern": "Not verifying information before sharing",
+    "crisis_types": [
+      "information-warfare",
+      "reputational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck016",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 16,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

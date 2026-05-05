@@ -1,0 +1,146 @@
+[
+  {
+    "decision_id": "respond-to-hate-speech-in-media",
+    "source_scenario_id": "hate-speech-in-ukrainian-media-during-war",
+    "situation": "A Ukrainian media outlet publishes an article containing hate speech against Russians, sparking public outrage and accusations of promoting division.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Issue an immediate public statement condemning the use of hate speech and reaffirming commitment to balanced reporting.",
+        "consequence": "Demonstrates accountability and reassures stakeholders, but may draw criticism from hardline factions.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Remove the article and issue a private warning to the journalist responsible.",
+        "consequence": "Prevents immediate backlash but may be seen as censorship and fail to address systemic issues.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Publish a follow-up article explaining the context and condemning hate speech, without removing the original.",
+        "consequence": "Balances transparency with accountability but risks further controversy if not handled carefully.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Ignoring the issue or failing to respond publicly, assuming the controversy will fade on its own.",
+    "consequence_if_wrong": "Loss of public trust, accusations of complicity in promoting hate speech, and potential legal or regulatory consequences.",
+    "rationale": "A public condemnation demonstrates leadership and commitment to ethical standards, which is critical in maintaining credibility during a crisis. Silence or private actions may be perceived as insufficient or evasive.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck010",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 10,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "address-disinformation-in-media",
+    "source_scenario_id": "disinformation-and-manipulation-in-ukrainian-media",
+    "situation": "A Ukrainian media outlet publishes an article using manipulative language, such as 'special operation' instead of 'war,' to frame the conflict.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Issue a public statement clarifying the terminology and condemning manipulative language.",
+        "consequence": "Reinforces commitment to truthful reporting but may alienate audiences accustomed to biased narratives.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Remove the article and issue a private warning to the journalist responsible.",
+        "consequence": "Prevents immediate backlash but may be seen as censorship and fail to address systemic issues.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Publish a follow-up article explaining the importance of accurate terminology without removing the original.",
+        "consequence": "Balances transparency with accountability but risks further controversy if not handled carefully.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Assuming the issue is minor and will not escalate, or failing to address it publicly due to fear of backlash.",
+    "consequence_if_wrong": "Erosion of public trust, accusations of complicity in spreading disinformation, and potential legal or regulatory consequences.",
+    "rationale": "Publicly addressing disinformation is critical to maintaining credibility and ensuring accurate reporting. Silence or private actions may be perceived as insufficient or evasive.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck010",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 10,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "handle-police-brutality-incident",
+    "source_scenario_id": "police-brutality-and-media-coverage",
+    "situation": "A viral video shows police officers using excessive force against a driver and his family, sparking public outrage and calls for accountability.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Publicly condemn the incident, announce an independent investigation, and express support for the victims.",
+        "consequence": "Demonstrates commitment to justice and reassures the public, but may draw criticism from law enforcement agencies.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Issue a vague statement acknowledging the incident without committing to an investigation or consequences.",
+        "consequence": "Fails to address public outrage and may be seen as dismissive or evasive.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Wait for the results of the internal investigation before making any public statements.",
+        "consequence": "Delays accountability and may be perceived as prioritizing law enforcement over public trust.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Delaying a response or issuing a vague statement to avoid controversy.",
+    "consequence_if_wrong": "Loss of public trust, accusations of cover-up, and potential legal or regulatory consequences.",
+    "rationale": "A prompt and transparent response is critical to maintaining public trust and ensuring accountability. Silence or vague statements may be perceived as dismissive or evasive.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck010",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 10,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "support-crimean-tatar-journalists",
+    "source_scenario_id": "civilian-journalism-in-occupied-crimea",
+    "situation": "Crimean Tatar journalists and activists face systemic repression for documenting human rights abuses under Russian occupation.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Publicly condemn the repression, call for the release of detained journalists, and offer support to affected families.",
+        "consequence": "Demonstrates solidarity and reassures stakeholders, but may draw criticism from Russian authorities.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Issue a private statement expressing concern without taking public action.",
+        "consequence": "Fails to address the severity of the crisis and may be seen as insufficient or evasive.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Wait for international organizations to take the lead before making any public statements.",
+        "consequence": "Delays accountability and may be perceived as prioritizing diplomatic caution over urgent action.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Failing to act promptly or issuing a private statement without public condemnation.",
+    "consequence_if_wrong": "Loss of credibility, accusations of complicity in repression, and failure to protect vulnerable stakeholders.",
+    "rationale": "A prompt and public response is critical to demonstrating solidarity and protecting vulnerable stakeholders. Silence or private actions may be perceived as insufficient or evasive.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck010",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 10,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

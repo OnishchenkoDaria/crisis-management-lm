@@ -1,0 +1,182 @@
+[
+  {
+    "decision_id": "verify-evidence-before-publishing",
+    "source_scenario_id": "russian-war-crimes-documentation",
+    "situation": "A journalist has obtained a video clip allegedly showing a war crime but is unsure of its authenticity or context.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Verify the video with multiple independent sources (e.g., witnesses, satellite imagery, expert analysis) before publishing.",
+        "consequence": "Ensures accuracy and credibility but may delay publication.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Publish the video immediately to maximize public awareness, with a disclaimer that details are unverified.",
+        "consequence": "Risk of spreading misinformation and damaging credibility if the video is later debunked.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Consult with a human rights organization or legal team to assess the video’s potential as evidence.",
+        "consequence": "Provides legal and ethical guidance but may slow down the dissemination of critical information.",
+        "is_recommended": true
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Publishing unverified content to be the first to report, without checking for authenticity or context.",
+    "consequence_if_wrong": "Spreading false information that could harm victims, witnesses, or legal proceedings.",
+    "rationale": "Verification ensures the evidence is credible and legally admissible, which is critical for supporting war crimes investigations and maintaining public trust.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck007",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 7,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "balance-patriotic-messaging-with-accuracy",
+    "source_scenario_id": "patriotic-messaging-in-conflict",
+    "situation": "A media outlet is preparing a patriotic campaign but must ensure the messaging does not contradict verified facts or incite division.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Use verified positive stories (e.g., rescues, humanitarian aid) and avoid exaggeration or false narratives.",
+        "consequence": "Builds trust and morale but may lack emotional impact if not framed carefully.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Exaggerate or fabricate stories to boost morale, assuming the public will accept it during wartime.",
+        "consequence": "Risk of backlash if the truth is later revealed, damaging credibility and trust.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Consult with psychologists or sociologists to craft messaging that resonates emotionally without distorting reality.",
+        "consequence": "Ensures effective and ethical communication but requires additional resources.",
+        "is_recommended": true
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Using overly emotional or exaggerated language to boost morale, without verifying facts.",
+    "consequence_if_wrong": "Undermining public trust and credibility if the messaging is later proven false.",
+    "rationale": "Accurate and emotionally resonant messaging strengthens unity without compromising integrity.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck007",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 7,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "respond-to-misinformation-rapidly",
+    "source_scenario_id": "misinformation-during-war",
+    "situation": "A false claim about a military defeat or civilian massacre is spreading rapidly on social media, causing panic.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Issue a rapid, verified correction with clear evidence (e.g., official statements, fact-checks) and debunk the claim publicly.",
+        "consequence": "Stops the spread of misinformation but requires quick access to reliable sources.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Ignore the misinformation, assuming it will fade on its own.",
+        "consequence": "Risk of the false narrative gaining traction and causing long-term damage to public trust.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Engage with the public directly via live Q&A or social media to address concerns and provide context.",
+        "consequence": "Builds trust and transparency but requires significant time and resources.",
+        "is_recommended": true
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Ignoring misinformation or assuming it will not spread widely.",
+    "consequence_if_wrong": "Allowing false narratives to shape public perception and undermine trust in media.",
+    "rationale": "Rapid, verified corrections are essential to prevent misinformation from taking hold during a crisis.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck007",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 7,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "ensure-journalist-safety-in-high-risk-zone",
+    "source_scenario_id": "journalist-safety-in-warzone",
+    "situation": "A journalist is entering a conflict zone with active shelling and must decide on safety protocols.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Coordinate with local military or humanitarian teams for safe passage and escort, and carry protective gear.",
+        "consequence": "Ensures safety but may limit mobility or access to certain areas.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Proceed independently without coordination, prioritizing speed and access over safety.",
+        "consequence": "High risk of injury, kidnapping, or death, jeopardizing the mission and the journalist’s life.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Use drones or remote tools to document events without entering the high-risk area.",
+        "consequence": "Reduces personal risk but may limit the depth of coverage or emotional impact of the story.",
+        "is_recommended": true
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Prioritizing access or speed over safety, assuming the risk is manageable.",
+    "consequence_if_wrong": "Endangering the journalist’s life and potentially losing critical evidence or access.",
+    "rationale": "Safety protocols and coordination with trusted local partners are essential to mitigate risks in war zones.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck007",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 7,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "adhere-to-legal-standards-for-evidence",
+    "source_scenario_id": "legal-evidence-collection-for-war-crimes",
+    "situation": "A team is collecting evidence for a war crimes trial but is unsure about the legal requirements for admissibility.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Follow strict legal guidelines: document time, location, context, and chain of custody for all evidence.",
+        "consequence": "Ensures evidence is admissible in court but requires meticulous record-keeping.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Collect evidence informally (e.g., social media posts, unverified testimonies) without proper documentation.",
+        "consequence": "Risk of evidence being dismissed in court, undermining the case.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Consult with legal experts to ensure all evidence meets international standards before submission.",
+        "consequence": "Provides legal certainty but may delay the collection process.",
+        "is_recommended": true
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Collecting evidence informally or without proper documentation, assuming it will be accepted.",
+    "consequence_if_wrong": "Critical evidence being deemed inadmissible, weakening the legal case against war criminals.",
+    "rationale": "Strict adherence to legal standards ensures evidence is credible and usable in international courts.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck007",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 7,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

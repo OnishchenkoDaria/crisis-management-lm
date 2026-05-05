@@ -1,0 +1,42 @@
+[
+  {
+    "scenario_id": "information-warfare",
+    "crisis_type": "political",
+    "severity": "high",
+    "context": "A country is using information warfare to influence the population of another country, spreading false information and propaganda to achieve its goals.",
+    "key_stakeholders": [
+      "Government",
+      "Media",
+      "Population"
+    ],
+    "initial_trigger": "Spread of false information",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck016",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 16,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "freedom-of-speech",
+    "crisis_type": "reputational",
+    "severity": "medium",
+    "context": "A person or organization is using freedom of speech to spread hate speech or propaganda, potentially harming others or damaging the reputation of a group or organization.",
+    "key_stakeholders": [
+      "Individual",
+      "Organization",
+      "Community"
+    ],
+    "initial_trigger": "Hate speech or propaganda",
+    "phase": "pre_crisis",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck016",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 16,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

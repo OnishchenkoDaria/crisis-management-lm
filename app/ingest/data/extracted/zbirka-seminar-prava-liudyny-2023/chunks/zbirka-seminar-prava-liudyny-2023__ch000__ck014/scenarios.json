@@ -1,0 +1,90 @@
+[
+  {
+    "scenario_id": "gender-stereotypes-in-war-reporting",
+    "crisis_type": "reputational",
+    "severity": "medium",
+    "context": "Ukrainian media faces scrutiny over gender bias in war reporting, with female journalists reporting on the front lines facing skepticism and discrimination despite their professional contributions.",
+    "key_stakeholders": [
+      "female war correspondents",
+      "male war correspondents",
+      "Ukrainian media outlets",
+      "society at large",
+      "international observers",
+      "government officials"
+    ],
+    "initial_trigger": "Public skepticism about the credibility of female journalists covering war zones, fueled by entrenched gender stereotypes.",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck014",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 14,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "gender-discrimination-in-media-roles",
+    "crisis_type": "reputational",
+    "severity": "high",
+    "context": "Media organizations in Ukraine are criticized for perpetuating gender stereotypes, with female journalists often sidelined to 'softer' topics while men dominate war coverage and leadership roles.",
+    "key_stakeholders": [
+      "female journalists",
+      "media editors and managers",
+      "advertisers",
+      "audience",
+      "gender equality advocates"
+    ],
+    "initial_trigger": "Public backlash against sexist advertising and media content that reinforces traditional gender roles, such as women being portrayed as homemakers.",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck014",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 14,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "digital-rights-and-cybersecurity-threats",
+    "crisis_type": "operational",
+    "severity": "high",
+    "context": "Ukrainian digital infrastructure faces increasing cyber threats, including data breaches and disinformation campaigns, threatening both individual privacy and national security.",
+    "key_stakeholders": [
+      "government agencies",
+      "cybersecurity experts",
+      "media organizations",
+      "citizens",
+      "international partners"
+    ],
+    "initial_trigger": "A high-profile cyberattack or data breach exposing sensitive personal information of journalists or citizens.",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck014",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 14,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "gender-bias-in-journalism-education",
+    "crisis_type": "internal",
+    "severity": "medium",
+    "context": "Journalism schools in Ukraine are criticized for reinforcing gender stereotypes, with female students outnumbering males but facing barriers to career advancement in conflict reporting.",
+    "key_stakeholders": [
+      "journalism students",
+      "university faculty",
+      "media employers",
+      "gender equality organizations"
+    ],
+    "initial_trigger": "A study or report highlighting the gender imbalance in journalism schools and its impact on professional opportunities.",
+    "phase": "post_crisis",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck014",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 14,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

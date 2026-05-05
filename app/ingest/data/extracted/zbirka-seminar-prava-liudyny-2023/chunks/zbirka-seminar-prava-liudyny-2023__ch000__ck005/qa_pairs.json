@@ -1,0 +1,140 @@
+[
+  {
+    "question": "How can we quickly counter Russian media stereotypes about Ukrainians being 'Banderites' or 'little Russians'?",
+    "answer": "Issue a formal statement condemning the stereotypes and providing historical context to counter misinformation. Use the 'Golden Hour Rule' to respond within hours of the initial spread of stereotypes, ensuring rapid and authoritative communication.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "russian-media-stereotyping-against-ukraine"
+    ],
+    "source_scenario_id": "russian-media-stereotyping-against-ukraine",
+    "common_mistake": "Responding with emotional language or counter-propaganda without providing factual context.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck005",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 5,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What structured tool can we use to identify hate speech in media content?",
+    "answer": "Use the 'Nine Steps to Countering Hate Speech' tool developed by the Ukrainian Independent Center for Political Studies (UNCP). This tool evaluates the social status of the author, the resource's influence, and the presence of hate speech indicators to provide a structured analysis.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "hate-speech-and-discourse-analysis"
+    ],
+    "source_scenario_id": "hate-speech-and-discourse-analysis",
+    "common_mistake": "Censoring content without analysis or explanation, leading to accusations of bias or suppression.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck005",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 5,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How should we address gender stereotypes in media and advertising?",
+    "answer": "Issue guidelines for media outlets and advertisers to avoid gender and age-based stereotypes in content. Launch a public awareness campaign highlighting successful women and older adults in various fields to shift narratives and promote equality.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "gender-stereotyping-in-media"
+    ],
+    "source_scenario_id": "gender-stereotyping-in-media",
+    "common_mistake": "Focusing solely on public awareness campaigns without addressing systemic issues in media and advertising.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck005",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 5,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What immediate actions should we take to support tourists stranded abroad due to the war?",
+    "answer": "Coordinate with government agencies (e.g., DART) and international partners to evacuate stranded tourists and provide support. Focus media coverage on solutions and positive narratives to maintain public morale and industry resilience.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "tourism-industry-crisis-during-war"
+    ],
+    "source_scenario_id": "tourism-industry-crisis-during-war",
+    "common_mistake": "Focusing solely on media coverage without taking concrete action to address the crisis.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck005",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 5,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can we document and publicize war crimes evidence effectively?",
+    "answer": "Collaborate with human rights organizations and media outlets to gather irrefutable evidence and attribute responsibility. Use a structured approach, such as the 'Structured Response to War Crimes Documentation' tactic, to ensure credibility and counter disinformation.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "russian-military-atrocities-and-human-rights-violations"
+    ],
+    "source_scenario_id": "russian-military-atrocities-and-human-rights-violations",
+    "common_mistake": "Publicizing unverified or poorly documented claims, which can undermine credibility and allow disinformation to persist.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck005",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 5,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What is the 'Golden Hour Rule' in crisis communications, and when should we apply it?",
+    "answer": "The 'Golden Hour Rule' refers to the critical period immediately following a crisis event when rapid, accurate, and empathetic communication can significantly influence public perception and outcomes. Apply this tactic immediately after a crisis event is identified, particularly in acute phases where misinformation or public panic can escalate quickly.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "russian-media-stereotyping-against-ukraine",
+      "russian-military-atrocities-and-human-rights-violations"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Waiting for full information or consensus before responding, which allows misinformation to spread and public trust to erode.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck005",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 5,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can media outlets avoid reinforcing stereotypes in their content?",
+    "answer": "Media outlets should issue guidelines to avoid gender and age-based stereotypes and use tools like the 'Nine Steps to Countering Hate Speech' to analyze content for discriminatory discourse. Highlighting positive narratives and systemic biases can help shift public perception and promote equality.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "gender-stereotyping-in-media",
+      "hate-speech-and-discourse-analysis"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Ignoring systemic issues in media content, assuming that public awareness campaigns alone will address stereotypes.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck005",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 5,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What role does media play in documenting war crimes during a conflict?",
+    "answer": "Media plays a critical role in documenting and publicizing war crimes evidence in collaboration with human rights organizations. This involves gathering irrefutable evidence, attributing responsibility, and countering disinformation campaigns to support accountability and international support.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "russian-military-atrocities-and-human-rights-violations"
+    ],
+    "source_scenario_id": "russian-military-atrocities-and-human-rights-violations",
+    "common_mistake": "Failing to document evidence before publicizing war crimes, leading to accusations of fabrication or lack of credibility.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck005",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 5,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

@@ -1,0 +1,118 @@
+[
+  {
+    "name": "Golden Hour Rule",
+    "slug": "golden-hour-rule",
+    "description": "Act within the first hour of a crisis to provide accurate information and set the narrative. Delaying response allows misinformation to spread unchecked and erodes public trust.",
+    "when_to_apply": "During the acute phase of a crisis, particularly when disinformation or fake news is spreading rapidly. The first hour is critical for shaping public perception.",
+    "example": "Upon detecting a surge in fake news about a military defeat, issue an official statement within the hour, providing verified information and context to counter the narrative.",
+    "anti_pattern": "Waiting for more information or consensus before responding, which allows disinformation to gain traction and become harder to debunk.",
+    "crisis_types": [
+      "media",
+      "reputational",
+      "political"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck003",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 3,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Multi-Channel Clarification",
+    "slug": "multi-channel-clarification",
+    "description": "Disseminate verified information through multiple channels (e.g., social media, press releases, official websites) to ensure the message reaches diverse audiences and counters disinformation effectively.",
+    "when_to_apply": "During the acute or containment phase of a crisis, when disinformation or fake news is spreading rapidly. Ensures the truth reaches as many people as possible.",
+    "example": "After issuing an official statement refuting fake news about a humanitarian crisis, share the rebuttal on social media, official websites, and through press releases to maximize reach.",
+    "anti_pattern": "Relying on a single channel (e.g., a press release) to counter disinformation, which may not reach all audiences effectively.",
+    "crisis_types": [
+      "media",
+      "reputational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck003",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 3,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Platform Engagement",
+    "slug": "platform-engagement",
+    "description": "Engage directly with social media platforms to remove or flag disinformation, inflammatory content, or fake news accounts. This tactic leverages the platforms' policies and algorithms to reduce the spread of harmful content.",
+    "when_to_apply": "During the acute phase of a crisis, when disinformation or inflammatory content is spreading rapidly on social media platforms.",
+    "example": "Report a viral fake news post alleging a military defeat to the social media platform, requesting its removal or labeling as misinformation.",
+    "anti_pattern": "Assuming social media platforms will automatically flag or remove disinformation without proactive engagement, which is often not the case.",
+    "crisis_types": [
+      "media",
+      "political"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck003",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 3,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Counter-Messaging Campaign",
+    "slug": "counter-messaging-campaign",
+    "description": "Launch a campaign using trusted voices (e.g., government officials, civil society leaders, influencers) to debunk disinformation and promote accurate narratives. This tactic amplifies the truth and counters divisive or false narratives.",
+    "when_to_apply": "During the acute or containment phase of a crisis, when disinformation or manipulation is spreading rapidly. Requires coordination and resources.",
+    "example": "Partner with religious leaders and academics to issue statements promoting unity and debunking divisive narratives spread by foreign actors.",
+    "anti_pattern": "Using official government channels exclusively for counter-messaging, which may be seen as biased or untrustworthy by some audiences.",
+    "crisis_types": [
+      "media",
+      "political",
+      "reputational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck003",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 3,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Ethical Content Use Framework",
+    "slug": "ethical-content-use-framework",
+    "description": "Establish clear guidelines for using user-generated content in media, emphasizing the importance of consent, verification, and transparency. This tactic ensures ethical standards are upheld and prevents reputational damage.",
+    "when_to_apply": "Pre-crisis or during the containment phase, when ethical violations (e.g., unauthorized use of user-generated content) are a risk. Proactive implementation reduces the likelihood of crises.",
+    "example": "Train journalists on ethical guidelines for using user-generated content, including obtaining consent from content owners and verifying the authenticity of the content before publication.",
+    "anti_pattern": "Assuming that user-generated content is always public and does not require consent or verification, which can lead to ethical violations and reputational damage.",
+    "crisis_types": [
+      "media",
+      "reputational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck003",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 3,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Intellectual Property Protection Protocol",
+    "slug": "intellectual-property-protection-protocol",
+    "description": "Implement protocols for protecting intellectual property, including registering designs, using contracts to clarify ownership, and issuing cease-and-desist letters for infringements. This tactic safeguards creative work and competitive advantage.",
+    "when_to_apply": "Pre-crisis or during the containment phase, when intellectual property infringements (e.g., copied web designs) are a risk. Proactive implementation reduces the likelihood of crises.",
+    "example": "Register the unique design of a website with the appropriate authorities and include clauses in contracts to clarify ownership of the design. Issue a cease-and-desist letter if infringement is detected.",
+    "anti_pattern": "Assuming that informal agreements or lack of registration will protect intellectual property, which can lead to loss of rights and competitive advantage.",
+    "crisis_types": [
+      "operational",
+      "reputational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck003",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 0,
+    "_chunk_index": 3,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]
