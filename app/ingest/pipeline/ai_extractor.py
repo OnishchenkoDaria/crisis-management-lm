@@ -56,6 +56,17 @@ def _backends() -> list[dict]:
             "delay": 4,
         })
 
+    mistral_key = os.getenv("MISTRAL_API_KEY", "")
+    if mistral_key:
+        candidates.append({
+            "name":     "mistral",
+            "type":     "openai",
+            "key":      mistral_key,
+            "base_url": "https://api.mistral.ai/v1",
+            "model":    os.getenv("MISTRAL_MODEL", "mistral-small-latest"),
+            "delay":    2,
+        })
+
     groq_key = os.getenv("GROQ_API_KEY", "")
     if groq_key:
         candidates.append({
@@ -63,7 +74,8 @@ def _backends() -> list[dict]:
             "type":     "openai",
             "key":      groq_key,
             "base_url": "https://api.groq.com/openai/v1",
-            "model":    os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile"),
+            # Use smaller model for Groq — stays under 6000 TPM limit
+            "model":    os.getenv("GROQ_MODEL", "llama-3.1-8b-instant"),
             "delay":    10,
         })
 
@@ -75,22 +87,11 @@ def _backends() -> list[dict]:
             "key":      openrouter_key,
             "base_url": "https://openrouter.ai/api/v1",
             "model":    os.getenv("OPENROUTER_MODEL", "meta-llama/llama-3.3-70b-instruct:free"),
-            "delay":    2,
+            "delay":    5,
             "extra_headers": {
                 "HTTP-Referer": "https://github.com/dss-crisis",
                 "X-Title":      "DSS Crisis Dataset Builder",
             },
-        })
-
-    mistral_key = os.getenv("MISTRAL_API_KEY", "")
-    if mistral_key:
-        candidates.append({
-            "name":     "mistral",
-            "type":     "openai",
-            "key":      mistral_key,
-            "base_url": "https://api.mistral.ai/v1",
-            "model":    os.getenv("MISTRAL_MODEL", "mistral-small-latest"),
-            "delay":    2,
         })
 
     github_token = os.getenv("GITHUB_TOKEN", "")
@@ -138,8 +139,12 @@ def _openai_client(backend: dict):
     try:
         from openai import OpenAI
     except ImportError:
-        raise ImportError("poetry add openai")
-    kwargs: dict = {"base_url": backend["base_url"], "api_key": backend["key"]}
+        raise ImportError("pip install openai")
+    kwargs: dict = {
+        "base_url":   backend["base_url"],
+        "api_key":    backend["key"],
+        "max_retries": 0,   # disable internal retries — our fallback chain handles this
+    }
     if "extra_headers" in backend:
         kwargs["default_headers"] = backend["extra_headers"]
     return OpenAI(**kwargs)
@@ -161,7 +166,7 @@ def _call_backend(backend: dict, prompt: str) -> tuple[dict, str | None]:
         if backend["type"] == "gemini":
             from google import genai as _genai
             from google.genai import types as _gt
-            gc = _genai.Client(api_key=backend["key"])
+            gc   = _genai.Client(api_key=backend["key"])
             resp = gc.models.generate_content(
                 model=backend["model"],
                 contents=prompt,
@@ -209,6 +214,10 @@ def _call_backend(backend: dict, prompt: str) -> tuple[dict, str | None]:
         )):
             log.warning("[%s] Daily quota exhausted", name)
             return {}, "quota"
+
+        if "413" in err or "payload too large" in err.lower() or "request too large" in err.lower():
+            log.warning("[%s] 413 Payload Too Large — chunk too big, skipping backend", name)
+            return {}, "quota"   # permanent skip — chunk size won't change
 
         if "429" in err or "rate_limit" in err.lower() or "too many" in err.lower():
             return {}, "rate"

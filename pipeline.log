@@ -4624,3 +4624,40 @@ Building training_samples.jsonl …
 22:23:23  INFO      
 Building training_samples.jsonl …
 22:23:23  INFO        ✓ training_samples.jsonl: 222 samples → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\processed\training_samples.jsonl
+00:33:39  INFO      
+============================================================
+00:33:39  INFO      Processing: Збірка_семінар_права-людини_2023.pdf
+00:33:39  INFO      ============================================================
+00:33:39  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:34:18  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+00:34:18  INFO        Found 19 chunks across 2 chapters
+00:34:18  INFO      Step 2/4  Saving chunk manifest …
+00:34:18  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\zbirka-seminar-prava-liudyny-2023\metadata.json
+00:34:18  INFO      Step 3/4  Running AI extraction …
+00:34:18  INFO        19 chunks already done, 0 remaining
+00:34:18  INFO        [1/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck000
+00:34:18  INFO        [2/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck001
+00:34:18  INFO        [3/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck002
+00:34:18  INFO        [4/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck003
+00:34:18  INFO        [5/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck004
+00:34:18  INFO        [6/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck005
+00:34:18  INFO        [7/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck006
+00:34:18  INFO        [8/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck007
+00:34:18  INFO        [9/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck008
+00:34:18  INFO        [10/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck009
+00:34:18  INFO        [11/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck010
+00:34:18  INFO        [12/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck011
+00:34:18  INFO        [13/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck012
+00:34:18  INFO        [14/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck013
+00:34:18  INFO        [15/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck014
+00:34:18  INFO        [16/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck015
+00:34:18  INFO        [17/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck016
+00:34:18  INFO        [18/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch001__ck000
+00:34:18  INFO        [19/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch001__ck001
+00:34:18  INFO      Step 4/4  Merging into processed/ …
+00:34:18  INFO        WARNING: Skipped 25 incomplete chunks (will retry on next run)
+00:34:18  INFO        ✓ merged zbirka-seminar-prava-liudyny-2023 → processed/: {'scenarios': 102, 'decision_nodes': 101, 'tactics': 117, 'qa_pairs': 173, 'rag_chunks': 19}
+00:34:18  INFO        Done: {'scenarios': 102, 'decision_nodes': 101, 'tactics': 117, 'qa_pairs': 173, 'rag_chunks': 19}
+00:34:18  INFO      
+Building training_samples.jsonl …
+00:34:18  INFO        ✓ training_samples.jsonl: 395 samples → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\processed\training_samples.jsonl
