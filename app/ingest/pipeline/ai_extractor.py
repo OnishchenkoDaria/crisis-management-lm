@@ -1,17 +1,21 @@
 """
-ai_extractor.py
-One API call per chunk — extracts all 4 data types simultaneously.
+ai_extractor.py  —  Multi-backend fallback extraction
+======================================================
+Tries backends in priority order. When one hits its daily quota or rate limit
+it is marked exhausted and the next one is used automatically.
+Processing never stops — it falls through to LM Studio if everything else fails.
 
-Before: 4 calls/chunk × 46 chunks = 184 API calls per book
-After:  1 call/chunk × 46 chunks =  46 API calls per book  (4× less quota)
+Priority (configure in .env — set only the keys you have):
+  1. gemini       – Google Gemini Flash       (1 500 req/day, fast)
+  2. groq         – Groq Llama 70B            (14 400 req/day, very fast)
+  3. openrouter   – OpenRouter free models    (varies, fast)
+  4. mistral      – Mistral AI free tier      (varies, fast)
+  5. github       – GitHub Models             (free with GitHub account)
+  6. lmstudio     – LM Studio local           (unlimited, slow)
 
-Supported backends (LLM_BACKEND in .env):
-  gemini            – Google Gemini (free, 1500 req/day)  ← recommended
-  groq              – Groq (free, 30 req/min)
-  anthropic         – Anthropic Claude (paid)
-  openai            – OpenAI (paid)
-  lmstudio          – LM Studio local
-  openai_compatible – Any OpenAI-compatible endpoint
+.env keys (add only the ones you have — missing keys skip that backend):
+  GEMINI_API_KEY, GROQ_API_KEY, OPENROUTER_API_KEY, MISTRAL_API_KEY,
+  GITHUB_TOKEN (GitHub -> Settings -> Developer -> PAT), OPENAI_BASE_URL, LM_STUDIO_MODEL
 """
 from __future__ import annotations
 
@@ -21,7 +25,6 @@ import os
 import re
 import time
 from dataclasses import dataclass, field
-from typing import Any
 
 from dotenv import load_dotenv
 
@@ -29,74 +32,7 @@ load_dotenv()
 
 log = logging.getLogger(__name__)
 
-BACKEND = os.getenv("LLM_BACKEND", "gemini").lower().strip()
-MODEL   = os.getenv("MODEL", {
-    "gemini":            "gemini-2.0-flash",
-    "groq":              "llama-3.3-70b-versatile",
-    "anthropic":         "claude-3-5-sonnet-latest",
-    "openai":            "gpt-4o-mini",
-    "lmstudio":          "local-model",
-    "openai_compatible": "local-model",
-}.get(BACKEND, "gemini-2.0-flash"))
-
 MAX_TOK = int(os.getenv("MAX_TOK", "8192"))
-
-# Inter-call delay (only matters for rate-limited backends)
-# With 1 call/chunk these limits are rarely hit
-_DELAY = {
-    "gemini": 4,    # 15 RPM free → 4s safe
-    "groq":   10,   # 30 RPM free → 10s safe (vs 62s with 4 calls)
-}.get(BACKEND, 0)
-
-def _build_client():
-    if BACKEND == "gemini":
-        key = os.getenv("GEMINI_API_KEY", "")
-        if not key:
-            raise EnvironmentError(
-                "GEMINI_API_KEY not set.\n"
-                "Get free key: https://aistudio.google.com/apikey\n"
-                "Add to .env:  GEMINI_API_KEY=AIza..."
-            )
-        class _G:
-            api_key = key
-        return _G()
-
-    if BACKEND == "anthropic":
-        try:
-            import anthropic as _a
-        except ImportError:
-            raise ImportError("pip install anthropic")
-        key = os.getenv("ANTHROPIC_API_KEY", "")
-        if not key:
-            raise EnvironmentError("ANTHROPIC_API_KEY not set.")
-        return _a.Anthropic(api_key=key)
-
-    if BACKEND in ("groq", "openai", "lmstudio", "openai_compatible"):
-        try:
-            from openai import OpenAI
-        except ImportError:
-            raise ImportError("pip install openai")
-
-        if BACKEND == "groq":
-            key = os.getenv("GROQ_API_KEY", "")
-            if not key:
-                raise EnvironmentError(
-                    "GROQ_API_KEY not set.\n"
-                    "Get free key: https://console.groq.com → API Keys\n"
-                    "Add to .env:  GROQ_API_KEY=gsk_..."
-                )
-            return OpenAI(base_url="https://api.groq.com/openai/v1", api_key=key)
-
-        base_url = os.getenv("OPENAI_BASE_URL", "http://localhost:1234/v1")
-        api_key  = os.getenv("OPENAI_API_KEY", "lm-studio")
-        return OpenAI(base_url=base_url, api_key=api_key)
-
-    raise ValueError(f"Unknown LLM_BACKEND='{BACKEND}'. "
-                     "Choose: gemini, groq, anthropic, openai, lmstudio, openai_compatible")
-
-
-client = _build_client()
-log.info("LLM backend: %s | model: %s | delay: %ss", BACKEND, MODEL, _DELAY)
 
 SYSTEM = (
     "You are a dataset builder for a Decision Support System (DSS) that helps "
@@ -104,6 +40,236 @@ SYSTEM = (
     "You extract structured knowledge from source material. "
     "Respond ONLY in valid JSON — no markdown fences, no commentary, no preamble."
 )
+
+
+def _backends() -> list[dict]:
+    """Returns ordered list of configured backend configs."""
+    candidates = []
+
+    gemini_key = os.getenv("GEMINI_API_KEY", "")
+    if gemini_key:
+        candidates.append({
+            "name":  "gemini",
+            "type":  "gemini",
+            "key":   gemini_key,
+            "model": os.getenv("GEMINI_MODEL", "gemini-2.0-flash"),
+            "delay": 4,
+        })
+
+    groq_key = os.getenv("GROQ_API_KEY", "")
+    if groq_key:
+        candidates.append({
+            "name":     "groq",
+            "type":     "openai",
+            "key":      groq_key,
+            "base_url": "https://api.groq.com/openai/v1",
+            "model":    os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile"),
+            "delay":    10,
+        })
+
+    openrouter_key = os.getenv("OPENROUTER_API_KEY", "")
+    if openrouter_key:
+        candidates.append({
+            "name":     "openrouter",
+            "type":     "openai",
+            "key":      openrouter_key,
+            "base_url": "https://openrouter.ai/api/v1",
+            "model":    os.getenv("OPENROUTER_MODEL", "meta-llama/llama-3.3-70b-instruct:free"),
+            "delay":    2,
+            "extra_headers": {
+                "HTTP-Referer": "https://github.com/dss-crisis",
+                "X-Title":      "DSS Crisis Dataset Builder",
+            },
+        })
+
+    mistral_key = os.getenv("MISTRAL_API_KEY", "")
+    if mistral_key:
+        candidates.append({
+            "name":     "mistral",
+            "type":     "openai",
+            "key":      mistral_key,
+            "base_url": "https://api.mistral.ai/v1",
+            "model":    os.getenv("MISTRAL_MODEL", "mistral-small-latest"),
+            "delay":    2,
+        })
+
+    github_token = os.getenv("GITHUB_TOKEN", "")
+    if github_token:
+        candidates.append({
+            "name":     "github",
+            "type":     "openai",
+            "key":      github_token,
+            "base_url": "https://models.inference.ai.azure.com",
+            "model":    os.getenv("GITHUB_MODEL", "Meta-Llama-3.3-70B-Instruct"),
+            "delay":    2,
+        })
+
+    lms_url = os.getenv("OPENAI_BASE_URL", "")
+    if lms_url:
+        candidates.append({
+            "name":     "lmstudio",
+            "type":     "openai",
+            "key":      os.getenv("OPENAI_API_KEY", "lm-studio"),
+            "base_url": lms_url,
+            "model":    os.getenv("LM_STUDIO_MODEL", os.getenv("MODEL", "local-model")),
+            "delay":    0,
+        })
+
+    if not candidates:
+        raise EnvironmentError(
+            "No LLM backends configured.\n"
+            "Add at least one to your .env:\n"
+            "  GEMINI_API_KEY      = AIza...  (free, https://aistudio.google.com/apikey)\n"
+            "  GROQ_API_KEY        = gsk_...  (free, https://console.groq.com)\n"
+            "  OPENROUTER_API_KEY  = sk-or-.. (free, https://openrouter.ai)\n"
+            "  MISTRAL_API_KEY     = ...       (free, https://console.mistral.ai)\n"
+            "  GITHUB_TOKEN        = ghp_...   (free, github.com Settings -> PAT)\n"
+            "  OPENAI_BASE_URL     = http://localhost:1234/v1  (LM Studio)\n"
+        )
+    return candidates
+
+_EXHAUSTED: set[str] = set()   # backends exhausted this session
+_ALL_BACKENDS = _backends()
+
+log.info("Fallback chain: %s",
+         " -> ".join(b["name"] for b in _ALL_BACKENDS))
+
+def _openai_client(backend: dict):
+    try:
+        from openai import OpenAI
+    except ImportError:
+        raise ImportError("poetry add openai")
+    kwargs: dict = {"base_url": backend["base_url"], "api_key": backend["key"]}
+    if "extra_headers" in backend:
+        kwargs["default_headers"] = backend["extra_headers"]
+    return OpenAI(**kwargs)
+
+
+def _strip_fences(raw: str) -> str:
+    raw = raw.strip()
+    raw = re.sub(r"^```[a-zA-Z]*\n?", "", raw)
+    raw = re.sub(r"\n?```$", "", raw)
+    return raw.strip()
+
+
+def _call_backend(backend: dict, prompt: str) -> tuple[dict, str | None]:
+    """Returns (result, error_type). error_type: None=ok, quota, rate, error."""
+    name = backend["name"]
+    raw  = "{}"
+
+    try:
+        if backend["type"] == "gemini":
+            from google import genai as _genai
+            from google.genai import types as _gt
+            gc = _genai.Client(api_key=backend["key"])
+            resp = gc.models.generate_content(
+                model=backend["model"],
+                contents=prompt,
+                config=_gt.GenerateContentConfig(
+                    system_instruction=SYSTEM,
+                    temperature=0.1,
+                    max_output_tokens=MAX_TOK,
+                    response_mime_type="application/json",
+                ),
+            )
+            raw = _strip_fences(resp.text or "{}")
+        else:
+            client = _openai_client(backend)
+            resp   = client.chat.completions.create(
+                model=backend["model"],
+                max_tokens=MAX_TOK,
+                temperature=0.1,
+                messages=[
+                    {"role": "system", "content": SYSTEM},
+                    {"role": "user",   "content": prompt},
+                ],
+            )
+            raw = _strip_fences(resp.choices[0].message.content or "{}")
+
+        result = json.loads(raw)
+        if isinstance(result, list):
+            log.warning("[%s] returned bare array — wrapping", name)
+            result = {"scenarios": result, "decision_nodes": [], "tactics": [], "qa_pairs": []}
+        return result, None
+
+    except json.JSONDecodeError as e:
+        log.warning("[%s] JSON parse error: %s | raw: %.200s", name, e, raw)
+        return {}, "error"
+
+    except Exception as e:
+        err = str(e)
+
+        if "404" in err:
+            log.error("[%s] 404 — wrong model name '%s'", name, backend["model"])
+            return {}, "error"
+
+        if any(x in err.lower() for x in (
+            "resource_exhausted", "quota", "daily", "per_day",
+            "exceeded your", "insufficient_quota", "limit reached"
+        )):
+            log.warning("[%s] Daily quota exhausted", name)
+            return {}, "quota"
+
+        if "429" in err or "rate_limit" in err.lower() or "too many" in err.lower():
+            return {}, "rate"
+
+        if any(x in err.lower() for x in ("auth", "api_key", "401", "invalid_api_key")):
+            log.error("[%s] Auth failed — check key in .env", name)
+            return {}, "quota"   # treat as exhausted — wrong key won't fix itself
+
+        log.error("[%s] Error: %s", name, e)
+        return {}, "error"
+
+def _call(prompt: str) -> tuple[dict, bool]:
+    """
+    Tries each backend in order, skipping exhausted ones.
+    Returns (result_dict, had_error).
+    """
+    available = [b for b in _ALL_BACKENDS if b["name"] not in _EXHAUSTED]
+
+    if not available:
+        log.error(
+            "ALL backends exhausted: %s\n"
+            "  -> Add more API keys to .env, start LM Studio, or wait for quota reset.",
+            ", ".join(_EXHAUSTED)
+        )
+        return {}, True
+
+    for backend in available:
+        name = backend["name"]
+
+        for attempt in range(3):
+            result, err_type = _call_backend(backend, prompt)
+
+            if err_type is None:
+                if backend.get("delay"):
+                    time.sleep(backend["delay"])
+                return result, False
+
+            if err_type == "quota":
+                _EXHAUSTED.add(name)
+                remaining = [b["name"] for b in _ALL_BACKENDS if b["name"] not in _EXHAUSTED]
+                log.info("  Switching to next backend. Remaining: %s",
+                         " -> ".join(remaining) if remaining else "NONE")
+                break   # move to next backend
+
+            if err_type == "rate":
+                if attempt < 2:
+                    wait = 30 * (attempt + 1)
+                    log.warning("[%s] Rate limit — waiting %ss", name, wait)
+                    time.sleep(wait)
+                    continue
+                else:
+                    log.warning("[%s] Rate limit persists — skipping this backend for chunk", name)
+                    break
+
+            if err_type == "error":
+                if attempt < 2:
+                    time.sleep(5)
+                    continue
+                break
+
+    return {}, True
 
 
 def _lang_note(language: str | None) -> str:
@@ -117,7 +283,6 @@ def _lang_note(language: str | None) -> str:
 
 
 def _prompt_combined(passage: str, language: str | None = None) -> str:
-    """One prompt that extracts all 4 data types in a single API call."""
     lang = _lang_note(language)
     return (
         f"You are building a crisis communications DSS dataset.\n"
@@ -125,7 +290,7 @@ def _prompt_combined(passage: str, language: str | None = None) -> str:
         f"\n"
         f"Return a single JSON object with exactly these 4 keys:\n"
         f"\n"
-        f'\"scenarios\": array of objects, each with:\n'
+        f'"scenarios": array of objects, each with:\n'
         f"  - scenario_id (kebab-case slug)\n"
         f"  - crisis_type (one of: reputational, safety, operational, political, media, natural_disaster, internal)\n"
         f"  - severity (one of: low, medium, high, critical)\n"
@@ -134,7 +299,7 @@ def _prompt_combined(passage: str, language: str | None = None) -> str:
         f"  - initial_trigger (string)\n"
         f"  - phase (one of: pre_crisis, acute, containment, recovery, post_crisis)\n"
         f"\n"
-        f'\"decision_nodes\": array of objects, each with:\n'
+        f'"decision_nodes": array of objects, each with:\n'
         f"  - decision_id (kebab-case slug)\n"
         f"  - source_scenario_id (matching scenario_id above, or null)\n"
         f"  - situation (what is happening RIGHT NOW)\n"
@@ -144,7 +309,7 @@ def _prompt_combined(passage: str, language: str | None = None) -> str:
         f"  - consequence_if_wrong (string)\n"
         f"  - rationale (why the recommended action is correct)\n"
         f"\n"
-        f'\"tactics\": array of objects, each with:\n'
+        f'"tactics": array of objects, each with:\n'
         f"  - name (e.g. Golden Hour Rule)\n"
         f"  - slug (kebab-case)\n"
         f"  - description (2-3 sentences)\n"
@@ -153,7 +318,7 @@ def _prompt_combined(passage: str, language: str | None = None) -> str:
         f"  - anti_pattern (what NOT to do)\n"
         f"  - crisis_types (subset of the 7 types above)\n"
         f"\n"
-        f'\"qa_pairs\": array of 5-8 objects, each with:\n'
+        f'"qa_pairs": array of 5-8 objects, each with:\n'
         f"  - question (urgent, specific, as a specialist under pressure would ask)\n"
         f"  - answer (expert-level, grounded in the passage)\n"
         f"  - difficulty (one of: basic, intermediate, expert)\n"
@@ -169,112 +334,6 @@ def _prompt_combined(passage: str, language: str | None = None) -> str:
     )
 
 
-def _strip_fences(raw: str) -> str:
-    raw = raw.strip()
-    raw = re.sub(r"^```[a-zA-Z]*\n?", "", raw)
-    raw = re.sub(r"\n?```$",          "", raw)
-    return raw.strip()
-
-
-def _call(prompt: str, retries: int = 3) -> tuple[dict, bool]:
-    """Returns (parsed_dict, had_error)."""
-    for attempt in range(retries):
-        try:
-            if BACKEND == "gemini":
-                from google import genai as _genai
-                from google.genai import types as _gt
-                gc = _genai.Client(api_key=client.api_key)
-                resp = gc.models.generate_content(
-                    model=MODEL,
-                    contents=prompt,
-                    config=_gt.GenerateContentConfig(
-                        system_instruction=SYSTEM,
-                        temperature=0.1,
-                        max_output_tokens=MAX_TOK,
-                        response_mime_type="application/json",
-                    ),
-                )
-                raw = _strip_fences(resp.text or "{}")
-
-            elif BACKEND == "anthropic":
-                msg = client.messages.create(
-                    model=MODEL,
-                    max_tokens=MAX_TOK,
-                    system=SYSTEM,
-                    messages=[{"role": "user", "content": prompt}],
-                )
-                raw = _strip_fences(msg.content[0].text)
-
-            else:  # groq / openai / lmstudio / openai_compatible
-                resp = client.chat.completions.create(
-                    model=MODEL,
-                    max_tokens=MAX_TOK,
-                    temperature=0.1,
-                    messages=[
-                        {"role": "system", "content": SYSTEM},
-                        {"role": "user",   "content": prompt},
-                    ],
-                )
-                raw = _strip_fences(resp.choices[0].message.content or "{}")
-
-            result = json.loads(raw)
-            # Accept both object and bare array (guard against model wrapping in array)
-            if isinstance(result, list):
-                log.warning("Model returned a bare array — wrapping. Check prompt compliance.")
-                result = {"scenarios": result, "decision_nodes": [], "tactics": [], "qa_pairs": []}
-            return result, False
-
-        except json.JSONDecodeError as e:
-            log.warning("JSON parse error (attempt %s/%s): %s", attempt + 1, retries, e)
-            if attempt == retries - 1:
-                return {}, True
-            time.sleep(3)
-
-        except Exception as e:
-            err = str(e)
-
-            if "404" in err:
-                log.error(
-                    "404 Not Found — wrong model name.\n"
-                    "  Current MODEL=%s\n"
-                    "  Try: MODEL=gemini-2.0-flash  or  MODEL=gemini-1.5-flash", MODEL
-                )
-                return {}, True
-
-            is_quota = any(x in err.lower() for x in
-                           ("resource_exhausted", "quota", "daily", "per_day"))
-            is_rate  = "429" in err or "rate" in err.lower()
-
-            if is_quota:
-                log.error(
-                    "DAILY QUOTA EXHAUSTED (%s).\n"
-                    "  Quota resets at midnight Pacific Time.\n"
-                    "  Options:\n"
-                    "    1. Wait until tomorrow — all completed chunks are cached\n"
-                    "    2. Try MODEL=gemini-1.5-flash (separate quota bucket)\n"
-                    "    3. Create a second Google account for a fresh key", BACKEND
-                )
-                return {}, True  # don't retry — quota won't recover in 60s
-
-            if is_rate:
-                wait = 60 if BACKEND == "gemini" else 20 * (attempt + 1)
-                log.warning("Rate limit — waiting %ss", wait)
-                time.sleep(wait)
-                continue
-
-            if any(x in err.lower() for x in ("auth", "api_key", "401")):
-                log.error("Auth failed for %s: %s", BACKEND, e)
-                return {}, True
-
-            log.error("API error (attempt %s/%s): %s", attempt + 1, retries, e)
-            if attempt == retries - 1:
-                return {}, True
-            time.sleep(5)
-
-    return {}, True
-
-
-# Main extraction function for one chunk
 @dataclass
 class ChunkExtractionResult:
     chunk_id: str
@@ -305,19 +364,17 @@ def _tag(records: list, chunk) -> list:
 
 
 def extract_from_chunk(chunk) -> ChunkExtractionResult:
-    """
-    Single API call per chunk - extracts scenarios, decision_nodes,
-    tactics and qa_pairs simultaneously.
-    """
     language = getattr(chunk, "language", None)
+    active   = [b["name"] for b in _ALL_BACKENDS if b["name"] not in _EXHAUSTED]
 
-    log.info("  → Combined extraction [%s] lang=%s (%s tokens)",
-             chunk.chunk_id, language, chunk.token_count)
+    log.info("  -> [%s] lang=%s tokens=%s | active backends: %s",
+             chunk.chunk_id, language, chunk.token_count,
+             " -> ".join(active) if active else "NONE")
 
     result, had_error = _call(_prompt_combined(chunk.text, language))
 
     if had_error or not result:
-        log.warning("  WARNING [%s] API error — will retry on next run", chunk.chunk_id)
+        log.warning("  [%s] failed — will retry on next run", chunk.chunk_id)
         return ChunkExtractionResult(
             chunk_id=chunk.chunk_id, source_slug=chunk.source_slug,
             chapter_title=chunk.chapter_title, chapter_index=chunk.chapter_index,
@@ -331,13 +388,9 @@ def extract_from_chunk(chunk) -> ChunkExtractionResult:
     tactics        = _tag(result.get("tactics",        []) or [], chunk)
     qa_pairs       = _tag(result.get("qa_pairs",       []) or [], chunk)
 
-    total = len(scenarios) + len(decision_nodes) + len(tactics) + len(qa_pairs)
-    log.info("  ✓ [%s] %d scenarios, %d decisions, %d tactics, %d qa_pairs",
+    log.info("  [%s] %d scenarios, %d decisions, %d tactics, %d qa_pairs",
              chunk.chunk_id, len(scenarios), len(decision_nodes),
              len(tactics), len(qa_pairs))
-
-    if _DELAY:
-        time.sleep(_DELAY)
 
     return ChunkExtractionResult(
         chunk_id=chunk.chunk_id, source_slug=chunk.source_slug,
