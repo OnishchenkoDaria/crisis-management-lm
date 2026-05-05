@@ -3072,3 +3072,549 @@ Building training_samples.jsonl …
 22:45:10  INFO      
 Building training_samples.jsonl …
 22:45:10  INFO        ✓ training_samples.jsonl: 0 samples → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\processed\training_samples.jsonl
+15:04:54  INFO      
+============================================================
+15:04:54  INFO      Processing: Збірка_семінар_права-людини_2023.pdf
+15:04:54  INFO      ============================================================
+15:04:54  INFO      Step 1/4  Extracting text and splitting into chunks …
+15:05:20  INFO        Sections after merge: 44 (was 46, merged 2 tiny sections)
+15:05:20  INFO        Found 44 chunks across 44 chapters
+15:05:20  INFO      Step 2/4  Saving chunk manifest …
+15:05:20  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\zbirka-seminar-prava-liudyny-2023\metadata.json
+15:05:20  INFO      Step 3/4  Running AI extraction …
+15:05:20  INFO        0 chunks already done, 44 remaining
+15:05:20  INFO        [1/44] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck000 (1124 tokens, chapter: Список використаних джерел)
+15:05:20  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch000__ck000] lang=uk (1124 tokens)
+15:05:24  INFO      AFC is enabled with max remote calls: 10.
+15:05:25  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:25  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:25  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch000__ck000] API error — will retry on next run
+15:05:25  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch000__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:25  INFO        [2/44] Processing  zbirka-seminar-prava-liudyny-2023__ch001__ck000 (1852 tokens, chapter: Список використаних джерел)
+15:05:25  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch001__ck000] lang=uk (1852 tokens)
+15:05:25  INFO      AFC is enabled with max remote calls: 10.
+15:05:26  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:26  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:26  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch001__ck000] API error — will retry on next run
+15:05:26  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch001__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:26  INFO        [3/44] Processing  zbirka-seminar-prava-liudyny-2023__ch002__ck000 (2164 tokens, chapter: Список використаних джерел)
+15:05:26  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch002__ck000] lang=uk (2164 tokens)
+15:05:26  INFO      AFC is enabled with max remote calls: 10.
+15:05:29  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:29  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:29  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch002__ck000] API error — will retry on next run
+15:05:29  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch002__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:29  INFO        [4/44] Processing  zbirka-seminar-prava-liudyny-2023__ch003__ck000 (3248 tokens, chapter: Список використаних джерел)
+15:05:29  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch003__ck000] lang=uk (3248 tokens)
+15:05:29  INFO      AFC is enabled with max remote calls: 10.
+15:05:30  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:30  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:30  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch003__ck000] API error — will retry on next run
+15:05:30  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch003__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:30  INFO        [5/44] Processing  zbirka-seminar-prava-liudyny-2023__ch004__ck000 (1300 tokens, chapter: Список використаних джерел)
+15:05:30  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch004__ck000] lang=uk (1300 tokens)
+15:05:30  INFO      AFC is enabled with max remote calls: 10.
+15:05:31  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:31  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:31  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch004__ck000] API error — will retry on next run
+15:05:31  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch004__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:31  INFO        [6/44] Processing  zbirka-seminar-prava-liudyny-2023__ch005__ck000 (1031 tokens, chapter: завдання.)
+15:05:31  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch005__ck000] lang=uk (1031 tokens)
+15:05:31  INFO      AFC is enabled with max remote calls: 10.
+15:05:32  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:32  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:32  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch005__ck000] API error — will retry on next run
+15:05:32  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch005__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:32  INFO        [7/44] Processing  zbirka-seminar-prava-liudyny-2023__ch006__ck000 (1464 tokens, chapter: Список використаних джерел)
+15:05:32  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch006__ck000] lang=uk (1464 tokens)
+15:05:32  INFO      AFC is enabled with max remote calls: 10.
+15:05:33  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:33  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:33  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch006__ck000] API error — will retry on next run
+15:05:33  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch006__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:33  INFO        [8/44] Processing  zbirka-seminar-prava-liudyny-2023__ch007__ck000 (1128 tokens, chapter: Список використаних джерел)
+15:05:33  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch007__ck000] lang=uk (1128 tokens)
+15:05:33  INFO      AFC is enabled with max remote calls: 10.
+15:05:33  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:33  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:33  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch007__ck000] API error — will retry on next run
+15:05:33  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch007__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:33  INFO        [9/44] Processing  zbirka-seminar-prava-liudyny-2023__ch008__ck000 (951 tokens, chapter: Список використаних джерел)
+15:05:33  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch008__ck000] lang=uk (951 tokens)
+15:05:34  INFO      AFC is enabled with max remote calls: 10.
+15:05:34  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:34  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:34  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch008__ck000] API error — will retry on next run
+15:05:34  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch008__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:34  INFO        [10/44] Processing  zbirka-seminar-prava-liudyny-2023__ch009__ck000 (1517 tokens, chapter: Список використаних джерел)
+15:05:34  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch009__ck000] lang=uk (1517 tokens)
+15:05:35  INFO      AFC is enabled with max remote calls: 10.
+15:05:35  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:35  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:35  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch009__ck000] API error — will retry on next run
+15:05:35  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch009__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:35  INFO        [11/44] Processing  zbirka-seminar-prava-liudyny-2023__ch010__ck000 (2107 tokens, chapter: Список використаних джерел)
+15:05:35  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch010__ck000] lang=uk (2107 tokens)
+15:05:35  INFO      AFC is enabled with max remote calls: 10.
+15:05:36  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:36  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:36  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch010__ck000] API error — will retry on next run
+15:05:36  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch010__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:36  INFO        [12/44] Processing  zbirka-seminar-prava-liudyny-2023__ch011__ck000 (1533 tokens, chapter: Список використаних джерел)
+15:05:36  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch011__ck000] lang=uk (1533 tokens)
+15:05:36  INFO      AFC is enabled with max remote calls: 10.
+15:05:37  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:37  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:37  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch011__ck000] API error — will retry on next run
+15:05:37  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch011__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:37  INFO        [13/44] Processing  zbirka-seminar-prava-liudyny-2023__ch012__ck000 (1290 tokens, chapter: Список використаних джерел)
+15:05:37  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch012__ck000] lang=uk (1290 tokens)
+15:05:37  INFO      AFC is enabled with max remote calls: 10.
+15:05:37  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:37  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:37  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch012__ck000] API error — will retry on next run
+15:05:37  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch012__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:37  INFO        [14/44] Processing  zbirka-seminar-prava-liudyny-2023__ch013__ck000 (1745 tokens, chapter: Список використаних джерел)
+15:05:37  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch013__ck000] lang=uk (1745 tokens)
+15:05:38  INFO      AFC is enabled with max remote calls: 10.
+15:05:38  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:38  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:38  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch013__ck000] API error — will retry on next run
+15:05:38  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch013__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:38  INFO        [15/44] Processing  zbirka-seminar-prava-liudyny-2023__ch014__ck000 (1509 tokens, chapter: Список використаних джерел)
+15:05:38  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch014__ck000] lang=uk (1509 tokens)
+15:05:39  INFO      AFC is enabled with max remote calls: 10.
+15:05:39  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:39  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:39  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch014__ck000] API error — will retry on next run
+15:05:39  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch014__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:39  INFO        [16/44] Processing  zbirka-seminar-prava-liudyny-2023__ch015__ck000 (1352 tokens, chapter: Список використаних джерел)
+15:05:39  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch015__ck000] lang=uk (1352 tokens)
+15:05:40  INFO      AFC is enabled with max remote calls: 10.
+15:05:40  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:40  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:40  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch015__ck000] API error — will retry on next run
+15:05:40  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch015__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:40  INFO        [17/44] Processing  zbirka-seminar-prava-liudyny-2023__ch016__ck000 (1296 tokens, chapter: Список використаних джерел)
+15:05:40  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch016__ck000] lang=uk (1296 tokens)
+15:05:41  INFO      AFC is enabled with max remote calls: 10.
+15:05:41  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:41  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:41  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch016__ck000] API error — will retry on next run
+15:05:41  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch016__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:41  INFO        [18/44] Processing  zbirka-seminar-prava-liudyny-2023__ch017__ck000 (1155 tokens, chapter: Список використаних джерел)
+15:05:41  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch017__ck000] lang=uk (1155 tokens)
+15:05:41  INFO      AFC is enabled with max remote calls: 10.
+15:05:42  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:42  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:42  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch017__ck000] API error — will retry on next run
+15:05:42  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch017__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:42  INFO        [19/44] Processing  zbirka-seminar-prava-liudyny-2023__ch018__ck000 (2100 tokens, chapter: Список використаних джерел)
+15:05:42  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch018__ck000] lang=uk (2100 tokens)
+15:05:42  INFO      AFC is enabled with max remote calls: 10.
+15:05:42  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:42  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:42  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch018__ck000] API error — will retry on next run
+15:05:42  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch018__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:42  INFO        [20/44] Processing  zbirka-seminar-prava-liudyny-2023__ch019__ck000 (1730 tokens, chapter: Список використаних джерел)
+15:05:42  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch019__ck000] lang=uk (1730 tokens)
+15:05:43  INFO      AFC is enabled with max remote calls: 10.
+15:05:43  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:43  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:43  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch019__ck000] API error — will retry on next run
+15:05:43  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch019__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:43  INFO        [21/44] Processing  zbirka-seminar-prava-liudyny-2023__ch020__ck000 (2895 tokens, chapter: Список використаних джерел)
+15:05:43  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch020__ck000] lang=uk (2895 tokens)
+15:05:44  INFO      AFC is enabled with max remote calls: 10.
+15:05:44  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:44  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:44  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch020__ck000] API error — will retry on next run
+15:05:44  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch020__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:44  INFO        [22/44] Processing  zbirka-seminar-prava-liudyny-2023__ch021__ck000 (2664 tokens, chapter: Список використаних джерел)
+15:05:44  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch021__ck000] lang=uk (2664 tokens)
+15:05:45  INFO      AFC is enabled with max remote calls: 10.
+15:05:45  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:45  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:45  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch021__ck000] API error — will retry on next run
+15:05:45  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch021__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:45  INFO        [23/44] Processing  zbirka-seminar-prava-liudyny-2023__ch022__ck000 (2094 tokens, chapter: Список використаних джерел)
+15:05:45  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch022__ck000] lang=uk (2094 tokens)
+15:05:46  INFO      AFC is enabled with max remote calls: 10.
+15:05:46  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:46  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:46  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch022__ck000] API error — will retry on next run
+15:05:46  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch022__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:46  INFO        [24/44] Processing  zbirka-seminar-prava-liudyny-2023__ch023__ck000 (2541 tokens, chapter: Список використаних джерел)
+15:05:46  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch023__ck000] lang=uk (2541 tokens)
+15:05:47  INFO      AFC is enabled with max remote calls: 10.
+15:05:47  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:47  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:47  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch023__ck000] API error — will retry on next run
+15:05:47  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch023__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:47  INFO        [25/44] Processing  zbirka-seminar-prava-liudyny-2023__ch024__ck000 (3786 tokens, chapter: Список використаних джерел)
+15:05:47  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch024__ck000] lang=uk (3786 tokens)
+15:05:47  INFO      AFC is enabled with max remote calls: 10.
+15:05:48  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:48  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:48  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch024__ck000] API error — will retry on next run
+15:05:48  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch024__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:48  INFO        [26/44] Processing  zbirka-seminar-prava-liudyny-2023__ch025__ck000 (1311 tokens, chapter: Список використаних джерел)
+15:05:48  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch025__ck000] lang=uk (1311 tokens)
+15:05:48  INFO      AFC is enabled with max remote calls: 10.
+15:05:49  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:49  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:49  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch025__ck000] API error — will retry on next run
+15:05:49  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch025__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:49  INFO        [27/44] Processing  zbirka-seminar-prava-liudyny-2023__ch026__ck000 (1533 tokens, chapter: Список використаних джерел)
+15:05:49  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch026__ck000] lang=uk (1533 tokens)
+15:05:49  INFO      AFC is enabled with max remote calls: 10.
+15:05:50  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:50  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:50  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch026__ck000] API error — will retry on next run
+15:05:50  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch026__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:50  INFO        [28/44] Processing  zbirka-seminar-prava-liudyny-2023__ch027__ck000 (2325 tokens, chapter: Список використаних джерел)
+15:05:50  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch027__ck000] lang=uk (2325 tokens)
+15:05:50  INFO      AFC is enabled with max remote calls: 10.
+15:05:50  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:50  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:50  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch027__ck000] API error — will retry on next run
+15:05:50  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch027__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:50  INFO        [29/44] Processing  zbirka-seminar-prava-liudyny-2023__ch028__ck000 (977 tokens, chapter: Список використаних джерел)
+15:05:50  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch028__ck000] lang=uk (977 tokens)
+15:05:51  INFO      AFC is enabled with max remote calls: 10.
+15:05:52  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:52  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:52  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch028__ck000] API error — will retry on next run
+15:05:52  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch028__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:52  INFO        [30/44] Processing  zbirka-seminar-prava-liudyny-2023__ch029__ck000 (1604 tokens, chapter: Список використаних джерел)
+15:05:52  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch029__ck000] lang=uk (1604 tokens)
+15:05:52  INFO      AFC is enabled with max remote calls: 10.
+15:05:53  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:53  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:53  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch029__ck000] API error — will retry on next run
+15:05:53  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch029__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:53  INFO        [31/44] Processing  zbirka-seminar-prava-liudyny-2023__ch030__ck000 (2172 tokens, chapter: Список використаних джерел)
+15:05:53  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch030__ck000] lang=uk (2172 tokens)
+15:05:53  INFO      AFC is enabled with max remote calls: 10.
+15:05:55  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:55  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:55  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch030__ck000] API error — will retry on next run
+15:05:55  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch030__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:55  INFO        [32/44] Processing  zbirka-seminar-prava-liudyny-2023__ch031__ck000 (1257 tokens, chapter: Список використаних джерел)
+15:05:55  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch031__ck000] lang=uk (1257 tokens)
+15:05:55  INFO      AFC is enabled with max remote calls: 10.
+15:05:55  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:55  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:55  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch031__ck000] API error — will retry on next run
+15:05:55  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch031__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:55  INFO        [33/44] Processing  zbirka-seminar-prava-liudyny-2023__ch032__ck000 (2510 tokens, chapter: Список використаних джерел)
+15:05:55  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch032__ck000] lang=uk (2510 tokens)
+15:05:56  INFO      AFC is enabled with max remote calls: 10.
+15:05:56  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:56  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:56  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch032__ck000] API error — will retry on next run
+15:05:56  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch032__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:56  INFO        [34/44] Processing  zbirka-seminar-prava-liudyny-2023__ch033__ck000 (1437 tokens, chapter: Список використаних джерел)
+15:05:56  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch033__ck000] lang=uk (1437 tokens)
+15:05:57  INFO      AFC is enabled with max remote calls: 10.
+15:05:57  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:57  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:57  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch033__ck000] API error — will retry on next run
+15:05:57  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch033__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:57  INFO        [35/44] Processing  zbirka-seminar-prava-liudyny-2023__ch034__ck000 (1010 tokens, chapter: Список використаних джерел)
+15:05:57  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch034__ck000] lang=uk (1010 tokens)
+15:05:58  INFO      AFC is enabled with max remote calls: 10.
+15:05:58  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:58  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:58  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch034__ck000] API error — will retry on next run
+15:05:58  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch034__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:58  INFO        [36/44] Processing  zbirka-seminar-prava-liudyny-2023__ch035__ck000 (1505 tokens, chapter: Список використаних джерел)
+15:05:58  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch035__ck000] lang=uk (1505 tokens)
+15:05:58  INFO      AFC is enabled with max remote calls: 10.
+15:05:59  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:59  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:59  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch035__ck000] API error — will retry on next run
+15:05:59  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch035__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:59  INFO        [37/44] Processing  zbirka-seminar-prava-liudyny-2023__ch036__ck000 (1593 tokens, chapter: Список використаних джерел)
+15:05:59  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch036__ck000] lang=uk (1593 tokens)
+15:05:59  INFO      AFC is enabled with max remote calls: 10.
+15:05:59  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:05:59  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:05:59  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch036__ck000] API error — will retry on next run
+15:05:59  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch036__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:05:59  INFO        [38/44] Processing  zbirka-seminar-prava-liudyny-2023__ch037__ck000 (2032 tokens, chapter: Список використаних джерел)
+15:05:59  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch037__ck000] lang=uk (2032 tokens)
+15:06:00  INFO      AFC is enabled with max remote calls: 10.
+15:06:00  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:06:00  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:06:00  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch037__ck000] API error — will retry on next run
+15:06:00  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch037__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:06:00  INFO        [39/44] Processing  zbirka-seminar-prava-liudyny-2023__ch038__ck000 (2486 tokens, chapter: Список використаних джерел)
+15:06:00  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch038__ck000] lang=uk (2486 tokens)
+15:06:01  INFO      AFC is enabled with max remote calls: 10.
+15:06:01  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:06:01  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:06:01  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch038__ck000] API error — will retry on next run
+15:06:01  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch038__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:06:01  INFO        [40/44] Processing  zbirka-seminar-prava-liudyny-2023__ch039__ck000 (1383 tokens, chapter: Список використаних джерел)
+15:06:01  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch039__ck000] lang=uk (1383 tokens)
+15:06:01  INFO      AFC is enabled with max remote calls: 10.
+15:06:02  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:06:02  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:06:02  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch039__ck000] API error — will retry on next run
+15:06:02  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch039__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:06:02  INFO        [41/44] Processing  zbirka-seminar-prava-liudyny-2023__ch040__ck000 (2234 tokens, chapter: Список використаних джерел)
+15:06:02  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch040__ck000] lang=uk (2234 tokens)
+15:06:03  INFO      AFC is enabled with max remote calls: 10.
+15:06:03  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:06:03  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:06:03  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch040__ck000] API error — will retry on next run
+15:06:03  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch040__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:06:03  INFO        [42/44] Processing  zbirka-seminar-prava-liudyny-2023__ch041__ck000 (3081 tokens, chapter: Список використаних джерел)
+15:06:03  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch041__ck000] lang=uk (3081 tokens)
+15:06:03  INFO      AFC is enabled with max remote calls: 10.
+15:06:04  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:06:04  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:06:04  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch041__ck000] API error — will retry on next run
+15:06:04  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch041__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:06:04  INFO        [43/44] Processing  zbirka-seminar-prava-liudyny-2023__ch042__ck000 (870 tokens, chapter: Список використаних джерел)
+15:06:04  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch042__ck000] lang=uk (870 tokens)
+15:06:04  INFO      AFC is enabled with max remote calls: 10.
+15:06:05  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:06:05  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:06:05  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch042__ck000] API error — will retry on next run
+15:06:05  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch042__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:06:05  INFO        [44/44] Processing  zbirka-seminar-prava-liudyny-2023__ch043__ck000 (1344 tokens, chapter: Список використаних джерел)
+15:06:05  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch043__ck000] lang=uk (1344 tokens)
+15:06:05  INFO      AFC is enabled with max remote calls: 10.
+15:06:05  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+15:06:05  ERROR     DAILY QUOTA EXHAUSTED (gemini).
+  Quota resets at midnight Pacific Time.
+  Options:
+    1. Wait until tomorrow — all completed chunks are cached
+    2. Try MODEL=gemini-1.5-flash (separate quota bucket)
+    3. Create a second Google account for a fresh key
+15:06:05  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch043__ck000] API error — will retry on next run
+15:06:05  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch043__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:06:05  INFO      Step 4/4  Merging into processed/ …
+15:06:05  INFO        WARNING: Skipped 44 incomplete chunks (will retry on next run)
+15:06:05  INFO        ✓ merged zbirka-seminar-prava-liudyny-2023 → processed/: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 0, 'qa_pairs': 0, 'rag_chunks': 0}
+15:06:05  INFO        Done: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 0, 'qa_pairs': 0, 'rag_chunks': 0}
+15:06:05  INFO      
+Building training_samples.jsonl …
+15:06:05  INFO        ✓ training_samples.jsonl: 0 samples → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\processed\training_samples.jsonl
