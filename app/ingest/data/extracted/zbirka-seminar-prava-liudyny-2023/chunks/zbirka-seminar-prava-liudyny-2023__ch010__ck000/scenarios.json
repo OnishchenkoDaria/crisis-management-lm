@@ -1,0 +1,43 @@
+[
+  {
+    "scenario_id": "ukraine-russia-conflict",
+    "crisis_type": "political",
+    "severity": "high",
+    "context": "The conflict between Ukraine and Russia has led to a rise in hate speech and negative stereotypes in the Ukrainian media.",
+    "key_stakeholders": [
+      "Ukrainian government",
+      "Russian government",
+      "Ukrainian media",
+      "International community"
+    ],
+    "initial_trigger": "Russia's invasion of Ukraine",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch010__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 10,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "media-manipulation",
+    "crisis_type": "media",
+    "severity": "medium",
+    "context": "The Ukrainian media is being manipulated to spread hate speech and negative stereotypes against Russia.",
+    "key_stakeholders": [
+      "Ukrainian media",
+      "Russian government",
+      "Ukrainian government"
+    ],
+    "initial_trigger": "Spread of hate speech in Ukrainian media",
+    "phase": "containment",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch010__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 10,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

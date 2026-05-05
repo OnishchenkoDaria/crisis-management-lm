@@ -1,0 +1,42 @@
+[
+  {
+    "scenario_id": "elderly-discrimination-in-media",
+    "crisis_type": "reputational",
+    "severity": "medium",
+    "context": "The media's portrayal of elderly people can perpetuate discrimination and stereotypes, leading to a reputational crisis for the media organization.",
+    "key_stakeholders": [
+      "media organizations",
+      "elderly people",
+      "human rights groups"
+    ],
+    "initial_trigger": "A news article or broadcast perpetuates negative stereotypes about elderly people",
+    "phase": "pre_crisis",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch016__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 16,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "ageism-in-the-workplace",
+    "crisis_type": "operational",
+    "severity": "high",
+    "context": "Elderly people may face ageism in the workplace, leading to reduced opportunities and financial instability.",
+    "key_stakeholders": [
+      "employers",
+      "elderly employees",
+      "human resources departments"
+    ],
+    "initial_trigger": "An elderly employee is laid off or passed over for a promotion",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch016__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 16,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

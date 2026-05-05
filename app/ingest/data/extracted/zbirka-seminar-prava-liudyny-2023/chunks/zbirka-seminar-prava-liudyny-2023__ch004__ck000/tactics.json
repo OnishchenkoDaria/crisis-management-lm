@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Golden Hour Rule",
+    "slug": "golden-hour-rule",
+    "description": "The Golden Hour Rule refers to the first hour after a crisis breaks, during which the response to the crisis can have a significant impact on the outcome. It is essential to respond quickly and effectively during this time to minimize damage and protect the organization's reputation.",
+    "when_to_apply": "During the initial response to a crisis, within the first hour of the crisis breaking.",
+    "example": "A media outlet is accused of copyright infringement. The Golden Hour Rule would dictate that the outlet responds quickly and effectively within the first hour of the accusation, by investigating the allegations and taking corrective action.",
+    "anti_pattern": "Failing to respond quickly and effectively during the Golden Hour, allowing the crisis to escalate and damage the organization's reputation.",
+    "crisis_types": [
+      "reputational",
+      "media"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch004__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 4,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Official Work Concept",
+    "slug": "official-work-concept",
+    "description": "The Official Work Concept refers to the idea that a work created by an employee in the course of their employment is considered an 'official work' and is owned by the employer. This concept is essential in understanding authorship rights and protecting the interests of journalists and creators.",
+    "when_to_apply": "When determining authorship rights and ownership of creative works, particularly in the context of employment relationships.",
+    "example": "A journalist creates a work in the course of their employment. The Official Work Concept would dictate that the work is considered an 'official work' and is owned by the employer, unless there is a specific agreement to the contrary.",
+    "anti_pattern": "Failing to understand the Official Work Concept and its implications for authorship rights, leading to uncertainty and potential exploitation of the journalist's work.",
+    "crisis_types": [
+      "internal",
+      "reputational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch004__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 4,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

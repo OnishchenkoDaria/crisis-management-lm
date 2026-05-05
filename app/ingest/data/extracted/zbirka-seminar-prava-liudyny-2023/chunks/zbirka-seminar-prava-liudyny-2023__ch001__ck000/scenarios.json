@@ -1,0 +1,42 @@
+[
+  {
+    "scenario_id": "martial-law-restrictions",
+    "crisis_type": "political",
+    "severity": "high",
+    "context": "Ukraine is under martial law due to the full-scale invasion of the Russian Federation, and the government has introduced restrictions on freedom of speech.",
+    "key_stakeholders": [
+      "Government",
+      "Journalists",
+      "Media outlets"
+    ],
+    "initial_trigger": "Full-scale invasion of the Russian Federation",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch001__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "information-restriction",
+    "crisis_type": "operational",
+    "severity": "medium",
+    "context": "The government has restricted the dissemination of certain information, such as the movement of military equipment and the location of military units.",
+    "key_stakeholders": [
+      "Government",
+      "Military",
+      "Journalists"
+    ],
+    "initial_trigger": "Introduction of martial law",
+    "phase": "containment",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch001__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

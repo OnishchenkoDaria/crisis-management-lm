@@ -1,0 +1,42 @@
+[
+  {
+    "scenario_id": "intellectual-property-theft",
+    "crisis_type": "reputational",
+    "severity": "medium",
+    "context": "A web designer's unique content has been stolen and used by a competitor, potentially damaging the designer's reputation and causing financial losses.",
+    "key_stakeholders": [
+      "web designer",
+      "competitor",
+      "clients"
+    ],
+    "initial_trigger": "Discovery of stolen content on a competitor's website",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch014__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 14,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "copyright-infringement",
+    "crisis_type": "legal",
+    "severity": "high",
+    "context": "A web designer is sued for copyright infringement due to the use of unlicensed materials on a client's website.",
+    "key_stakeholders": [
+      "web designer",
+      "client",
+      "copyright holder"
+    ],
+    "initial_trigger": "Receipt of a lawsuit or cease and desist letter",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch014__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 14,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

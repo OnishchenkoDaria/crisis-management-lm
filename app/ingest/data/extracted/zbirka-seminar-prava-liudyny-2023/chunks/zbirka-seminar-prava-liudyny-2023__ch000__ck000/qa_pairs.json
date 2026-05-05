@@ -1,0 +1,56 @@
+[
+  {
+    "question": "What is the best way to respond to negative media coverage of IDPs?",
+    "answer": "The best way to respond to negative media coverage of IDPs is to issue a public statement condemning the article and promoting a positive narrative about IDPs, and to engage with media outlets to promote more nuanced and accurate coverage.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "internally-displaced-persons-coverage",
+      "hate-speech-in-media"
+    ],
+    "source_scenario_id": "internally-displaced-persons-coverage",
+    "common_mistake": "Failing to respond to negative media coverage, allowing the narrative to go unchallenged.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can I promote a positive narrative about IDPs?",
+    "answer": "You can promote a positive narrative about IDPs by challenging negative stereotypes and hate speech, and promoting a more nuanced and accurate understanding of the community through media outreach, public statements, and community engagement.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "internally-displaced-persons-coverage",
+      "promoting-a-positive-narrative"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Failing to challenge negative stereotypes and hate speech, and allowing the narrative to go unchallenged.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What is the importance of reporting hate speech?",
+    "answer": "Reporting hate speech is essential to holding media outlets accountable and promoting a culture of respect and inclusivity. It can help to prevent the spread of hate speech and promote a more nuanced and accurate understanding of the community.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "hate-speech-in-media",
+      "reporting-hate-speech"
+    ],
+    "source_scenario_id": "hate-speech-in-media",
+    "common_mistake": "Failing to report incidents of hate speech, and allowing the behavior to continue.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

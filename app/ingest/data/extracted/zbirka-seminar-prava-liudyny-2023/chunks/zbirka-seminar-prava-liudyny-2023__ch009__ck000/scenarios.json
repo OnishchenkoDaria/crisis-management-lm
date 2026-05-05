@@ -1,0 +1,42 @@
+[
+  {
+    "scenario_id": "ukraine-war-media-restrictions",
+    "crisis_type": "political",
+    "severity": "high",
+    "context": "During a full-scale war, the Ukrainian government has introduced restrictions on freedom of speech, and the media is facing challenges in reporting on the conflict.",
+    "key_stakeholders": [
+      "Ukrainian government",
+      "media outlets",
+      "journalists"
+    ],
+    "initial_trigger": "Introduction of martial law",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch009__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 9,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "russian-aggression-against-ukrainian-media",
+    "crisis_type": "safety",
+    "severity": "critical",
+    "context": "Russian forces are targeting Ukrainian media outlets and journalists, posing a significant threat to their safety and freedom of speech.",
+    "key_stakeholders": [
+      "Ukrainian media outlets",
+      "journalists",
+      "Russian forces"
+    ],
+    "initial_trigger": "Russian aggression against Ukrainian media",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch009__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 9,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

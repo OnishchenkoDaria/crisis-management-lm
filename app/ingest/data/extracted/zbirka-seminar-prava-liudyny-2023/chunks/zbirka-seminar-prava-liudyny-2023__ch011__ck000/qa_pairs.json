@@ -1,0 +1,56 @@
+[
+  {
+    "question": "What is the best way to respond to Russian aggression against Ukraine?",
+    "answer": "The best way to respond to Russian aggression against Ukraine is to use social media to raise awareness about the situation and build support for the Ukrainian people.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "Russian aggression",
+      "Ukraine"
+    ],
+    "source_scenario_id": "russian-aggression-against-ukraine",
+    "common_mistake": "Remaining silent and avoiding drawing attention to the situation",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch011__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 11,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can social media platforms be used to respond to a crisis?",
+    "answer": "Social media platforms can be used to respond to a crisis by sharing information, building support, and raising awareness about the issue.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "Social media",
+      "Crisis communications"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Not using social media to respond to a crisis",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch011__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 11,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What is the Golden Hour Rule in crisis communications?",
+    "answer": "The Golden Hour Rule is a tactic used in crisis communications to respond to a crisis within the first hour of it becoming public.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "Crisis communications",
+      "Golden Hour Rule"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Waiting too long to respond to a crisis",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch011__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 11,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

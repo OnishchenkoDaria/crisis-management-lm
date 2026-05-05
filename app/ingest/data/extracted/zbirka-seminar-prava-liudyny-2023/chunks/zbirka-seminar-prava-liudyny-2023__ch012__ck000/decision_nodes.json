@@ -1,0 +1,62 @@
+[
+  {
+    "decision_id": "respond-to-data-breach",
+    "source_scenario_id": "digital-human-rights-crisis",
+    "situation": "The company has just discovered a data breach, and must decide how to respond.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "notify affected customers immediately",
+        "consequence": "potential loss of customer trust, but also demonstrates transparency and accountability",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "delay notification to investigate further",
+        "consequence": "potential legal and regulatory issues, as well as further damage to customer trust",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "delaying notification to affected customers",
+    "consequence_if_wrong": "further damage to customer trust and potential legal and regulatory issues",
+    "rationale": "transparency and accountability are key in responding to a data breach, and notifying affected customers immediately demonstrates a commitment to these values",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch012__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 12,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "contain-cyber-attack",
+    "source_scenario_id": "cyber-attack",
+    "situation": "The company's systems have been compromised by a cyber attack, and must decide how to contain the damage.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "isolate affected systems and initiate incident response protocol",
+        "consequence": "potential disruption to services, but also minimizes further damage",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "try to remove malware and restore systems to normal operation",
+        "consequence": "potential for further damage and compromise of sensitive data",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "trying to remove malware and restore systems to normal operation without isolating affected systems",
+    "consequence_if_wrong": "further damage and compromise of sensitive data",
+    "rationale": "isolating affected systems and initiating incident response protocol is the most effective way to contain the damage and minimize further disruption",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch012__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 12,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

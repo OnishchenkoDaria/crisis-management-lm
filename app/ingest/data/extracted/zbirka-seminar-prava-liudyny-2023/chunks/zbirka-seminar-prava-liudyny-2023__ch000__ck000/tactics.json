@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Promoting a Positive Narrative",
+    "slug": "promoting-a-positive-narrative",
+    "description": "Promoting a positive narrative about IDPs involves challenging negative stereotypes and hate speech, and promoting a more nuanced and accurate understanding of the community. This can be achieved through media outreach, public statements, and community engagement.",
+    "when_to_apply": "This tactic can be applied in response to negative media coverage or incidents of hate speech, as well as proactively to promote a positive narrative about IDPs.",
+    "example": "Issuing a public statement condemning hate speech and promoting a positive narrative about IDPs, and engaging with media outlets to promote more nuanced and accurate coverage.",
+    "anti_pattern": "Failing to challenge negative stereotypes and hate speech, and allowing the narrative to go unchallenged.",
+    "crisis_types": [
+      "reputational",
+      "safety"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Reporting Hate Speech",
+    "slug": "reporting-hate-speech",
+    "description": "Reporting hate speech involves identifying and documenting incidents of hate speech, and reporting them to the relevant regulatory body. This can help to hold media outlets accountable and promote a culture of respect and inclusivity.",
+    "when_to_apply": "This tactic can be applied in response to incidents of hate speech, as well as proactively to monitor and report on hate speech.",
+    "example": "Reporting an incident of hate speech to the regulatory body, and demanding action to hold the media outlet accountable.",
+    "anti_pattern": "Failing to report incidents of hate speech, and allowing the behavior to continue.",
+    "crisis_types": [
+      "reputational",
+      "safety"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch000__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

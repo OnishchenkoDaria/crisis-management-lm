@@ -1,0 +1,56 @@
+[
+  {
+    "question": "What is the best way to respond to a data breach?",
+    "answer": "Notify affected customers immediately and provide regular updates on the situation, while also taking steps to contain and eradicate the breach.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "data breach",
+      "reputational crisis"
+    ],
+    "source_scenario_id": "digital-human-rights-crisis",
+    "common_mistake": "delaying notification to affected customers",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch012__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 12,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can we minimize damage and disruption in response to a cyber attack?",
+    "answer": "Isolate affected systems and initiate incident response protocol, while also taking steps to contain and eradicate the attack.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "cyber attack",
+      "operational crisis"
+    ],
+    "source_scenario_id": "cyber-attack",
+    "common_mistake": "trying to remove malware and restore systems to normal operation without isolating affected systems",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch012__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 12,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What is the importance of transparency and accountability in crisis communications?",
+    "answer": "Transparency and accountability are essential in building trust with stakeholders, particularly in times of crisis. Being open and honest in communications, and taking responsibility for actions and decisions, can help to minimize damage and disruption.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "crisis communications",
+      "reputational crisis"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "delaying notification or providing misleading information",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch012__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 12,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Understanding Intellectual Property Rights",
+    "slug": "understanding-intellectual-property-rights",
+    "description": "Understanding intellectual property rights is crucial for employees to maintain control over their work and ensure their rights are respected. This involves knowing the differences between personal non-property rights and property rights, as well as the implications of each.",
+    "when_to_apply": "When creating a service work as part of job duties, or when disputes arise regarding intellectual property rights",
+    "example": "An employee creates a service work and includes a statement claiming their personal non-property rights to the work",
+    "anti_pattern": "Failing to understand or claim personal non-property rights, leading to loss of control over one's work",
+    "crisis_types": [
+      "internal",
+      "reputational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch005__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 5,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

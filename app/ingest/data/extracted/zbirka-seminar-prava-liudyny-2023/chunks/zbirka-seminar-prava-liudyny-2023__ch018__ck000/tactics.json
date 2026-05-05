@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Diversity and Inclusion Training",
+    "slug": "diversity-and-inclusion-training",
+    "description": "Training programs that aim to promote diversity and inclusion in media and advertising, helping to reduce the spread of hate speech and stereotypes.",
+    "when_to_apply": "regularly, as part of ongoing professional development",
+    "example": "media outlets providing diversity and inclusion training for their journalists and staff",
+    "anti_pattern": "ignoring the need for diversity and inclusion training",
+    "crisis_types": [
+      "reputational",
+      "safety"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch018__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 18,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Regulatory Frameworks",
+    "slug": "regulatory-frameworks",
+    "description": "Establishing and enforcing regulatory frameworks that promote diversity and inclusion in media and advertising, helping to reduce the spread of hate speech and stereotypes.",
+    "when_to_apply": "in the development of media and advertising policies",
+    "example": "regulatory bodies establishing guidelines for diversity and inclusion in media and advertising",
+    "anti_pattern": "lacking regulatory frameworks",
+    "crisis_types": [
+      "reputational",
+      "safety"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch018__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 18,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

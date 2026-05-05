@@ -1,0 +1,22 @@
+[
+  {
+    "scenario_id": "intellectual-property-dispute",
+    "crisis_type": "internal",
+    "severity": "medium",
+    "context": "A dispute arises between an employee and their employer regarding intellectual property rights on a service work created by the employee.",
+    "key_stakeholders": [
+      "Employee",
+      "Employer",
+      "Legal Team"
+    ],
+    "initial_trigger": "Employee creates a service work as part of their job duties",
+    "phase": "pre_crisis",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch005__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "завдання.",
+    "_chapter_index": 5,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

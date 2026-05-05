@@ -1,0 +1,62 @@
+[
+  {
+    "decision_id": "respond-to-copyright-infringement",
+    "source_scenario_id": "copyright-infringement",
+    "situation": "A web designer receives a lawsuit or cease and desist letter for copyright infringement",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Remove the infringing material and settle the lawsuit",
+        "consequence": "Financial losses and potential damage to reputation",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Fight the lawsuit and claim fair use",
+        "consequence": "High legal costs and potential damage to reputation",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Ignoring the lawsuit or cease and desist letter",
+    "consequence_if_wrong": "Increased legal costs and potential damage to reputation",
+    "rationale": "Removing the infringing material and settling the lawsuit is often the most cost-effective and reputation-saving option",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch014__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 14,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "protect-intellectual-property",
+    "source_scenario_id": "intellectual-property-theft",
+    "situation": "A web designer's unique content has been stolen and used by a competitor",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Send a cease and desist letter to the competitor",
+        "consequence": "Potential resolution of the issue without legal action",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Sue the competitor for copyright infringement",
+        "consequence": "High legal costs and potential damage to reputation",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Not taking action to protect intellectual property",
+    "consequence_if_wrong": "Loss of unique content and potential damage to reputation",
+    "rationale": "Sending a cease and desist letter is often the most effective and cost-efficient way to resolve the issue",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch014__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 14,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

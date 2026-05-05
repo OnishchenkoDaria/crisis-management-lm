@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Inclusive Language",
+    "slug": "inclusive-language",
+    "description": "Using language that is respectful and inclusive of all individuals, regardless of age, gender, or other characteristics.",
+    "when_to_apply": "In all communications, including media reports and workplace interactions.",
+    "example": "Using terms such as 'older adults' or 'seniors' instead of 'elderly' or 'old people'.",
+    "anti_pattern": "Using language that is derogatory or perpetuates negative stereotypes.",
+    "crisis_types": [
+      "reputational",
+      "operational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch016__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 16,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Diversity Training",
+    "slug": "diversity-training",
+    "description": "Providing training and education on diversity and inclusion to employees and media professionals.",
+    "when_to_apply": "Regularly, to ensure that employees and media professionals are aware of and sensitive to the needs of diverse groups.",
+    "example": "Providing training on ageism and how to create an inclusive workplace culture.",
+    "anti_pattern": "Failing to provide diversity training or ignoring the needs of diverse groups.",
+    "crisis_types": [
+      "reputational",
+      "operational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch016__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 16,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

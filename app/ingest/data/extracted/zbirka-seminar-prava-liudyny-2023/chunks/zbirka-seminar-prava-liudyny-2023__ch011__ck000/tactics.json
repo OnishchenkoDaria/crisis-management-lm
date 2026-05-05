@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Golden Hour Rule",
+    "slug": "golden-hour-rule",
+    "description": "The Golden Hour Rule is a tactic used in crisis communications to respond to a crisis within the first hour of it becoming public. This can help to mitigate the damage and reduce the risk of the crisis escalating.",
+    "when_to_apply": "In the first hour of a crisis becoming public",
+    "example": "A company experiences a data breach and responds within the first hour by issuing a statement and apologizing for the incident.",
+    "anti_pattern": "Waiting too long to respond to a crisis",
+    "crisis_types": [
+      "reputational",
+      "operational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch011__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 11,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Social Media Campaign",
+    "slug": "social-media-campaign",
+    "description": "A social media campaign is a tactic used to raise awareness and build support for a cause or issue. This can be used in crisis communications to respond to a crisis and build support for the affected parties.",
+    "when_to_apply": "In response to a crisis or issue",
+    "example": "A social media campaign is launched to raise awareness about the situation in Ukraine and build support for the Ukrainian people.",
+    "anti_pattern": "Ignoring social media and not using it to respond to a crisis",
+    "crisis_types": [
+      "political",
+      "media"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch011__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 11,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

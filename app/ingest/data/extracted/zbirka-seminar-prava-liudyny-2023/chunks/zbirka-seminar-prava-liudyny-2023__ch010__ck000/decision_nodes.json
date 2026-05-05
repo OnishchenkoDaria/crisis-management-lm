@@ -1,0 +1,62 @@
+[
+  {
+    "decision_id": "respond-to-hate-speech",
+    "source_scenario_id": "ukraine-russia-conflict",
+    "situation": "Hate speech is being spread in the Ukrainian media",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Condemn hate speech publicly",
+        "consequence": "Reduced tension and improved international relations",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Ignore hate speech",
+        "consequence": "Increased tension and worsening international relations",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Ignoring hate speech and hoping it will go away",
+    "consequence_if_wrong": "Increased tension and worsening international relations",
+    "rationale": "Condemning hate speech publicly can help to reduce tension and improve international relations",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch010__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 10,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "manage-media-manipulation",
+    "source_scenario_id": "media-manipulation",
+    "situation": "The Ukrainian media is being manipulated to spread hate speech and negative stereotypes",
+    "options": [
+      {
+        "id": "opt-c",
+        "action": "Implement media literacy programs",
+        "consequence": "Improved critical thinking and reduced manipulation",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-d",
+        "action": "Censor the media",
+        "consequence": "Reduced freedom of speech and potential for further manipulation",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-c",
+    "common_rookie_mistake": "Censoring the media without addressing the root cause of manipulation",
+    "consequence_if_wrong": "Reduced freedom of speech and potential for further manipulation",
+    "rationale": "Implementing media literacy programs can help to improve critical thinking and reduce manipulation",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch010__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 10,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

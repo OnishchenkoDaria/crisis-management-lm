@@ -1,0 +1,38 @@
+[
+  {
+    "question": "What should I do if my unique content is stolen and used by a competitor?",
+    "answer": "Send a cease and desist letter to the competitor and consider registering your intellectual property to prevent future theft",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "intellectual property theft",
+      "copyright infringement"
+    ],
+    "source_scenario_id": "intellectual-property-theft",
+    "common_mistake": "Not taking action to protect intellectual property",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch014__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 14,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can I protect my website's design and content from being stolen?",
+    "answer": "Register your intellectual property, use copyright notices, and consider using contracts or agreements with clients and partners to protect your rights",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "intellectual property protection",
+      "copyright registration"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Not registering intellectual property or using copyright notices",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch014__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 14,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

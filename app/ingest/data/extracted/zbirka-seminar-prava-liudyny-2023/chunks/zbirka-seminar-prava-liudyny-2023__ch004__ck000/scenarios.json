@@ -1,0 +1,43 @@
+[
+  {
+    "scenario_id": "ukrainian-media-crisis",
+    "crisis_type": "reputational",
+    "severity": "medium",
+    "context": "A Ukrainian media outlet is facing a crisis due to allegations of copyright infringement. The outlet must navigate the complexities of Ukrainian copyright law to protect its reputation.",
+    "key_stakeholders": [
+      "Journalists",
+      "Editors",
+      "Lawyers",
+      "Government officials"
+    ],
+    "initial_trigger": "Allegations of copyright infringement",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch004__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 4,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "journalist-authorship",
+    "crisis_type": "internal",
+    "severity": "low",
+    "context": "A journalist is unsure about their rights as an author and creator of content. They must understand the concept of 'official work' and how it applies to their situation.",
+    "key_stakeholders": [
+      "Journalist",
+      "Editor",
+      "Lawyer"
+    ],
+    "initial_trigger": "Uncertainty about authorship rights",
+    "phase": "pre_crisis",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch004__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 4,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

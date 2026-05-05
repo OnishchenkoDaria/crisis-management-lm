@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Golden Hour Rule",
+    "slug": "golden-hour-rule",
+    "description": "The Golden Hour Rule is a tactic used in crisis communications to respond to a crisis within the first hour of its occurrence. This helps to mitigate the crisis and prevent it from escalating.",
+    "when_to_apply": "In the initial stages of a crisis, when the situation is still developing",
+    "example": "A company experiences a data breach and immediately issues a statement to the public, acknowledging the breach and outlining the steps being taken to address it",
+    "anti_pattern": "Waiting too long to respond to a crisis, allowing it to escalate and causing more damage",
+    "crisis_types": [
+      "reputational",
+      "operational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch015__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 15,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Fact-Checking",
+    "slug": "fact-checking",
+    "description": "Fact-checking is a tactic used to verify the accuracy of information. This helps to prevent the spread of false information and maintain credibility.",
+    "when_to_apply": "Before publishing any information, especially in situations where the information may be sensitive or controversial",
+    "example": "A journalist fact-checks a piece of information before publishing it, to ensure that it is accurate and reliable",
+    "anti_pattern": "Publishing information without verifying its accuracy, which can lead to the spread of false information",
+    "crisis_types": [
+      "media",
+      "reputational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch015__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 15,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

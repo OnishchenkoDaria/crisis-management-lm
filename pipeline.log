@@ -3618,3 +3618,169 @@ Building training_samples.jsonl …
 15:06:05  INFO      
 Building training_samples.jsonl …
 15:06:05  INFO        ✓ training_samples.jsonl: 0 samples → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\processed\training_samples.jsonl
+15:35:15  INFO      
+============================================================
+15:35:15  INFO      Processing: Збірка_семінар_права-людини_2023.pdf
+15:35:15  INFO      ============================================================
+15:35:15  INFO      Step 1/4  Extracting text and splitting into chunks …
+15:35:48  INFO        Sections after merge: 44 (was 46, merged 2 tiny sections)
+15:35:48  INFO        Found 44 chunks across 44 chapters
+15:35:48  INFO      Step 2/4  Saving chunk manifest …
+15:35:48  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\zbirka-seminar-prava-liudyny-2023\metadata.json
+15:35:48  INFO      Step 3/4  Running AI extraction …
+15:35:48  INFO        0 chunks already done, 44 remaining
+15:35:48  INFO        [1/44] Processing  zbirka-seminar-prava-liudyny-2023__ch000__ck000 (1124 tokens, chapter: Список використаних джерел)
+15:35:48  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch000__ck000] lang=uk (1124 tokens)
+15:35:53  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+15:35:53  INFO        ✓ [zbirka-seminar-prava-liudyny-2023__ch000__ck000] 2 scenarios, 2 decisions, 2 tactics, 3 qa_pairs
+15:36:03  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch000__ck000]: 2 scenarios, 2 decisions, 2 tactics, 3 qa_pairs  [total=9]
+15:36:03  INFO        [2/44] Processing  zbirka-seminar-prava-liudyny-2023__ch001__ck000 (1852 tokens, chapter: Список використаних джерел)
+15:36:03  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch001__ck000] lang=uk (1852 tokens)
+15:36:03  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:36:03  INFO      Retrying request to /chat/completions in 8.000000 seconds
+15:36:16  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+15:36:16  INFO        ✓ [zbirka-seminar-prava-liudyny-2023__ch001__ck000] 2 scenarios, 2 decisions, 2 tactics, 2 qa_pairs
+15:36:26  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch001__ck000]: 2 scenarios, 2 decisions, 2 tactics, 2 qa_pairs  [total=8]
+15:36:26  INFO        [3/44] Processing  zbirka-seminar-prava-liudyny-2023__ch002__ck000 (2164 tokens, chapter: Список використаних джерел)
+15:36:26  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch002__ck000] lang=uk (2164 tokens)
+15:36:26  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:36:26  INFO      Retrying request to /chat/completions in 14.000000 seconds
+15:36:44  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+15:36:44  INFO        ✓ [zbirka-seminar-prava-liudyny-2023__ch002__ck000] 2 scenarios, 2 decisions, 2 tactics, 3 qa_pairs
+15:36:54  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch002__ck000]: 2 scenarios, 2 decisions, 2 tactics, 3 qa_pairs  [total=9]
+15:36:54  INFO        [4/44] Processing  zbirka-seminar-prava-liudyny-2023__ch003__ck000 (3248 tokens, chapter: Список використаних джерел)
+15:36:54  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch003__ck000] lang=uk (3248 tokens)
+15:36:54  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:36:54  INFO      Retrying request to /chat/completions in 22.000000 seconds
+15:37:21  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+15:37:21  INFO        ✓ [zbirka-seminar-prava-liudyny-2023__ch003__ck000] 3 scenarios, 2 decisions, 2 tactics, 5 qa_pairs
+15:37:31  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch003__ck000]: 3 scenarios, 2 decisions, 2 tactics, 5 qa_pairs  [total=12]
+15:37:31  INFO        [5/44] Processing  zbirka-seminar-prava-liudyny-2023__ch004__ck000 (1300 tokens, chapter: Список використаних джерел)
+15:37:31  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch004__ck000] lang=uk (1300 tokens)
+15:37:31  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:37:31  INFO      Retrying request to /chat/completions in 14.000000 seconds
+15:37:50  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+15:37:50  INFO        ✓ [zbirka-seminar-prava-liudyny-2023__ch004__ck000] 2 scenarios, 2 decisions, 2 tactics, 5 qa_pairs
+15:38:00  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch004__ck000]: 2 scenarios, 2 decisions, 2 tactics, 5 qa_pairs  [total=11]
+15:38:00  INFO        [6/44] Processing  zbirka-seminar-prava-liudyny-2023__ch005__ck000 (1031 tokens, chapter: завдання.)
+15:38:01  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch005__ck000] lang=uk (1031 tokens)
+15:38:01  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:38:01  INFO      Retrying request to /chat/completions in 4.000000 seconds
+15:38:05  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:38:05  INFO      Retrying request to /chat/completions in 12.000000 seconds
+15:38:19  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+15:38:19  INFO        ✓ [zbirka-seminar-prava-liudyny-2023__ch005__ck000] 1 scenarios, 1 decisions, 1 tactics, 2 qa_pairs
+15:38:29  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch005__ck000]: 1 scenarios, 1 decisions, 1 tactics, 2 qa_pairs  [total=5]
+15:38:29  INFO        [7/44] Processing  zbirka-seminar-prava-liudyny-2023__ch006__ck000 (1464 tokens, chapter: Список використаних джерел)
+15:38:29  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch006__ck000] lang=uk (1464 tokens)
+15:38:33  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+15:38:33  INFO        ✓ [zbirka-seminar-prava-liudyny-2023__ch006__ck000] 2 scenarios, 2 decisions, 2 tactics, 3 qa_pairs
+15:38:43  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch006__ck000]: 2 scenarios, 2 decisions, 2 tactics, 3 qa_pairs  [total=9]
+15:38:43  INFO        [8/44] Processing  zbirka-seminar-prava-liudyny-2023__ch007__ck000 (1128 tokens, chapter: Список використаних джерел)
+15:38:43  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch007__ck000] lang=uk (1128 tokens)
+15:38:43  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:38:43  INFO      Retrying request to /chat/completions in 3.000000 seconds
+15:38:49  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+15:38:49  INFO        ✓ [zbirka-seminar-prava-liudyny-2023__ch007__ck000] 2 scenarios, 2 decisions, 2 tactics, 2 qa_pairs
+15:38:59  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch007__ck000]: 2 scenarios, 2 decisions, 2 tactics, 2 qa_pairs  [total=8]
+15:38:59  INFO        [9/44] Processing  zbirka-seminar-prava-liudyny-2023__ch008__ck000 (951 tokens, chapter: Список використаних джерел)
+15:38:59  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch008__ck000] lang=uk (951 tokens)
+15:38:59  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:38:59  INFO      Retrying request to /chat/completions in 4.000000 seconds
+15:39:03  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:39:03  INFO      Retrying request to /chat/completions in 13.000000 seconds
+15:39:18  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+15:39:18  INFO        ✓ [zbirka-seminar-prava-liudyny-2023__ch008__ck000] 1 scenarios, 1 decisions, 1 tactics, 2 qa_pairs
+15:39:28  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch008__ck000]: 1 scenarios, 1 decisions, 1 tactics, 2 qa_pairs  [total=5]
+15:39:28  INFO        [10/44] Processing  zbirka-seminar-prava-liudyny-2023__ch009__ck000 (1517 tokens, chapter: Список використаних джерел)
+15:39:28  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch009__ck000] lang=uk (1517 tokens)
+15:39:29  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:39:29  INFO      Retrying request to /chat/completions in 7.000000 seconds
+15:39:39  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+15:39:39  INFO        ✓ [zbirka-seminar-prava-liudyny-2023__ch009__ck000] 2 scenarios, 2 decisions, 2 tactics, 2 qa_pairs
+15:39:49  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch009__ck000]: 2 scenarios, 2 decisions, 2 tactics, 2 qa_pairs  [total=8]
+15:39:49  INFO        [11/44] Processing  zbirka-seminar-prava-liudyny-2023__ch010__ck000 (2107 tokens, chapter: Список використаних джерел)
+15:39:49  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch010__ck000] lang=uk (2107 tokens)
+15:39:49  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:39:49  INFO      Retrying request to /chat/completions in 3.000000 seconds
+15:39:56  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+15:39:56  INFO        ✓ [zbirka-seminar-prava-liudyny-2023__ch010__ck000] 2 scenarios, 2 decisions, 2 tactics, 2 qa_pairs
+15:40:06  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch010__ck000]: 2 scenarios, 2 decisions, 2 tactics, 2 qa_pairs  [total=8]
+15:40:06  INFO        [12/44] Processing  zbirka-seminar-prava-liudyny-2023__ch011__ck000 (1533 tokens, chapter: Список використаних джерел)
+15:40:06  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch011__ck000] lang=uk (1533 tokens)
+15:40:06  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:40:06  INFO      Retrying request to /chat/completions in 8.000000 seconds
+15:40:18  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+15:40:18  INFO        ✓ [zbirka-seminar-prava-liudyny-2023__ch011__ck000] 2 scenarios, 2 decisions, 2 tactics, 3 qa_pairs
+15:40:28  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch011__ck000]: 2 scenarios, 2 decisions, 2 tactics, 3 qa_pairs  [total=9]
+15:40:28  INFO        [13/44] Processing  zbirka-seminar-prava-liudyny-2023__ch012__ck000 (1290 tokens, chapter: Список використаних джерел)
+15:40:28  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch012__ck000] lang=uk (1290 tokens)
+15:40:28  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:40:28  INFO      Retrying request to /chat/completions in 7.000000 seconds
+15:40:38  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+15:40:38  INFO        ✓ [zbirka-seminar-prava-liudyny-2023__ch012__ck000] 2 scenarios, 2 decisions, 2 tactics, 3 qa_pairs
+15:40:48  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch012__ck000]: 2 scenarios, 2 decisions, 2 tactics, 3 qa_pairs  [total=9]
+15:40:48  INFO        [14/44] Processing  zbirka-seminar-prava-liudyny-2023__ch013__ck000 (1745 tokens, chapter: Список використаних джерел)
+15:40:48  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch013__ck000] lang=uk (1745 tokens)
+15:40:49  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:40:49  INFO      Retrying request to /chat/completions in 11.000000 seconds
+15:41:00  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:41:00  INFO      Retrying request to /chat/completions in 12.000000 seconds
+15:41:16  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+15:41:16  INFO        ✓ [zbirka-seminar-prava-liudyny-2023__ch013__ck000] 2 scenarios, 2 decisions, 2 tactics, 2 qa_pairs
+15:41:26  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch013__ck000]: 2 scenarios, 2 decisions, 2 tactics, 2 qa_pairs  [total=8]
+15:41:26  INFO        [15/44] Processing  zbirka-seminar-prava-liudyny-2023__ch014__ck000 (1509 tokens, chapter: Список використаних джерел)
+15:41:26  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch014__ck000] lang=uk (1509 tokens)
+15:41:26  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:41:26  INFO      Retrying request to /chat/completions in 14.000000 seconds
+15:41:45  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+15:41:45  INFO        ✓ [zbirka-seminar-prava-liudyny-2023__ch014__ck000] 2 scenarios, 2 decisions, 2 tactics, 2 qa_pairs
+15:41:55  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch014__ck000]: 2 scenarios, 2 decisions, 2 tactics, 2 qa_pairs  [total=8]
+15:41:55  INFO        [16/44] Processing  zbirka-seminar-prava-liudyny-2023__ch015__ck000 (1352 tokens, chapter: Список використаних джерел)
+15:41:55  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch015__ck000] lang=uk (1352 tokens)
+15:41:55  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:41:55  INFO      Retrying request to /chat/completions in 5.000000 seconds
+15:42:00  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:42:00  INFO      Retrying request to /chat/completions in 1.000000 seconds
+15:42:05  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+15:42:05  INFO        ✓ [zbirka-seminar-prava-liudyny-2023__ch015__ck000] 2 scenarios, 2 decisions, 2 tactics, 2 qa_pairs
+15:42:15  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch015__ck000]: 2 scenarios, 2 decisions, 2 tactics, 2 qa_pairs  [total=8]
+15:42:15  INFO        [17/44] Processing  zbirka-seminar-prava-liudyny-2023__ch016__ck000 (1296 tokens, chapter: Список використаних джерел)
+15:42:15  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch016__ck000] lang=uk (1296 tokens)
+15:42:15  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:42:15  INFO      Retrying request to /chat/completions in 6.000000 seconds
+15:42:24  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+15:42:24  INFO        ✓ [zbirka-seminar-prava-liudyny-2023__ch016__ck000] 2 scenarios, 2 decisions, 2 tactics, 2 qa_pairs
+15:42:34  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch016__ck000]: 2 scenarios, 2 decisions, 2 tactics, 2 qa_pairs  [total=8]
+15:42:34  INFO        [18/44] Processing  zbirka-seminar-prava-liudyny-2023__ch017__ck000 (1155 tokens, chapter: Список використаних джерел)
+15:42:34  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch017__ck000] lang=uk (1155 tokens)
+15:42:34  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:42:34  INFO      Retrying request to /chat/completions in 4.000000 seconds
+15:42:38  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:42:38  INFO      Retrying request to /chat/completions in 1.000000 seconds
+15:42:43  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+15:42:43  INFO        ✓ [zbirka-seminar-prava-liudyny-2023__ch017__ck000] 2 scenarios, 2 decisions, 2 tactics, 2 qa_pairs
+15:42:53  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch017__ck000]: 2 scenarios, 2 decisions, 2 tactics, 2 qa_pairs  [total=8]
+15:42:53  INFO        [19/44] Processing  zbirka-seminar-prava-liudyny-2023__ch018__ck000 (2100 tokens, chapter: Список використаних джерел)
+15:42:53  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch018__ck000] lang=uk (2100 tokens)
+15:42:53  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:42:53  INFO      Retrying request to /chat/completions in 15.000000 seconds
+15:43:12  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+15:43:12  INFO        ✓ [zbirka-seminar-prava-liudyny-2023__ch018__ck000] 2 scenarios, 2 decisions, 2 tactics, 2 qa_pairs
+15:43:22  INFO        ✓ completed [zbirka-seminar-prava-liudyny-2023__ch018__ck000]: 2 scenarios, 2 decisions, 2 tactics, 2 qa_pairs  [total=8]
+15:43:22  INFO        [20/44] Processing  zbirka-seminar-prava-liudyny-2023__ch019__ck000 (1730 tokens, chapter: Список використаних джерел)
+15:43:22  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch019__ck000] lang=uk (1730 tokens)
+15:43:22  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:43:22  WARNING   Rate limit — waiting 20s
+15:43:42  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:43:42  WARNING   Rate limit — waiting 40s
+15:44:22  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:44:22  WARNING   Rate limit — waiting 60s
+15:45:22  WARNING     WARNING [zbirka-seminar-prava-liudyny-2023__ch019__ck000] API error — will retry on next run
+15:45:22  INFO        WARNING: saved (API errors — will retry) [zbirka-seminar-prava-liudyny-2023__ch019__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+15:45:22  INFO        [21/44] Processing  zbirka-seminar-prava-liudyny-2023__ch020__ck000 (2895 tokens, chapter: Список використаних джерел)
+15:45:22  INFO        → Combined extraction [zbirka-seminar-prava-liudyny-2023__ch020__ck000] lang=uk (2895 tokens)
+15:45:22  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:45:22  WARNING   Rate limit — waiting 20s
+15:45:43  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+15:45:43  WARNING   Rate limit — waiting 40s

@@ -1,0 +1,42 @@
+[
+  {
+    "scenario_id": "gender-stereotypes-in-media",
+    "crisis_type": "reputational",
+    "severity": "medium",
+    "context": "The Ukrainian media continues to perpetuate gender stereotypes and sexism, despite efforts to promote gender equality.",
+    "key_stakeholders": [
+      "media organizations",
+      "journalists",
+      "women's rights groups"
+    ],
+    "initial_trigger": "Publication of sexist content in the media",
+    "phase": "pre_crisis",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch006__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 6,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "sexism-in-ukrainian-media",
+    "crisis_type": "reputational",
+    "severity": "high",
+    "context": "Research reveals that Ukrainian media outlets frequently publish sexist content, perpetuating negative stereotypes about women.",
+    "key_stakeholders": [
+      "media outlets",
+      "women's rights organizations",
+      "government agencies"
+    ],
+    "initial_trigger": "Release of research findings on sexism in Ukrainian media",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch006__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 6,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]
