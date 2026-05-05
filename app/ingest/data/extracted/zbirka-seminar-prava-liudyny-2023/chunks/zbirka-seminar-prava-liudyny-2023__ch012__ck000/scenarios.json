@@ -1,0 +1,42 @@
+[
+  {
+    "scenario_id": "digital-human-rights-crisis",
+    "crisis_type": "reputational",
+    "severity": "high",
+    "context": "A company's handling of personal data has led to a crisis, with many customers feeling their privacy has been violated. The company must navigate the complex landscape of digital human rights to resolve the issue.",
+    "key_stakeholders": [
+      "customers",
+      "regulators",
+      "investors"
+    ],
+    "initial_trigger": "data breach",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch012__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 12,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "scenario_id": "cyber-attack",
+    "crisis_type": "operational",
+    "severity": "critical",
+    "context": "A company's systems have been compromised by a cyber attack, leading to a loss of sensitive data and disruption of services. The company must act quickly to contain the damage and restore operations.",
+    "key_stakeholders": [
+      "customers",
+      "employees",
+      "regulators"
+    ],
+    "initial_trigger": "cyber attack",
+    "phase": "acute",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch012__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 12,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

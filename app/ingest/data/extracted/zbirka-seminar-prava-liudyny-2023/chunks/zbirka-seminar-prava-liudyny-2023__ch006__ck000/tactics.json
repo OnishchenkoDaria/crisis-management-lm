@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Golden Hour Rule",
+    "slug": "golden-hour-rule",
+    "description": "The Golden Hour Rule is a tactic used to address crisis situations by responding promptly and transparently within the first hour of a crisis.",
+    "when_to_apply": "In the immediate aftermath of a crisis, when public attention is high and the situation is still unfolding.",
+    "example": "A company experiences a data breach and immediately issues a public statement acknowledging the breach and outlining steps to mitigate its effects.",
+    "anti_pattern": "Failing to respond promptly and transparently, allowing the crisis to escalate and reputational damage to occur.",
+    "crisis_types": [
+      "reputational",
+      "operational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch006__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 6,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Diversity and Inclusion Training",
+    "slug": "diversity-and-inclusion-training",
+    "description": "Diversity and inclusion training is a tactic used to promote gender equality and address sexist stereotypes in the media.",
+    "when_to_apply": "As part of a media outlet's ongoing efforts to improve its coverage of gender issues and promote gender equality.",
+    "example": "A media outlet provides diversity and inclusion training for its journalists, resulting in improved coverage of gender issues and a more diverse range of sources and perspectives.",
+    "anti_pattern": "Failing to provide diversity and inclusion training, allowing sexist stereotypes and gender inequality to persist.",
+    "crisis_types": [
+      "reputational",
+      "media"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch006__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 6,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

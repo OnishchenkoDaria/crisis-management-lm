@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Golden Hour Rule",
+    "slug": "golden-hour-rule",
+    "description": "The Golden Hour Rule refers to the first hour after a crisis breaks, during which it is essential to respond quickly and effectively to minimize the impact of the crisis. In the context of the Ukrainian war, this means that media outlets and journalists must be prepared to respond rapidly to developments on the ground.",
+    "when_to_apply": "During the initial stages of a crisis",
+    "example": "A media outlet quickly responds to a breaking news story about a Russian attack on a Ukrainian city, providing timely and accurate information to the public.",
+    "anti_pattern": "Failing to respond quickly to a crisis",
+    "crisis_types": [
+      "safety",
+      "political"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch009__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 9,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Media Accreditation",
+    "slug": "media-accreditation",
+    "description": "Media accreditation refers to the process of verifying the credentials of journalists and media outlets to ensure that they are authorized to report on a particular event or conflict. In the context of the Ukrainian war, media accreditation is essential to ensure that only authorized journalists have access to sensitive information and areas.",
+    "when_to_apply": "During a conflict or crisis",
+    "example": "The Ukrainian government establishes a media accreditation process to ensure that only authorized journalists have access to the front lines and sensitive information.",
+    "anti_pattern": "Failing to establish a media accreditation process",
+    "crisis_types": [
+      "safety",
+      "political"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch009__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 9,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "decision_id": "respond-to-copyright-allegations",
+    "source_scenario_id": "ukrainian-media-crisis",
+    "situation": "The media outlet has been accused of copyright infringement and must respond to the allegations.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Deny the allegations and refuse to cooperate",
+        "consequence": "Escalation of the crisis and potential legal action",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-b",
+        "action": "Investigate the allegations and take corrective action",
+        "consequence": "Resolution of the crisis and protection of the outlet's reputation",
+        "is_recommended": true
+      }
+    ],
+    "recommended_action_id": "opt-b",
+    "common_rookie_mistake": "Failing to take the allegations seriously and not investigating the matter",
+    "consequence_if_wrong": "Escalation of the crisis and damage to the outlet's reputation",
+    "rationale": "Investigating the allegations and taking corrective action demonstrates a commitment to ethical journalism and helps to protect the outlet's reputation.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch004__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 4,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "understand-authorship-rights",
+    "source_scenario_id": "journalist-authorship",
+    "situation": "The journalist is unsure about their rights as an author and creator of content.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Research Ukrainian copyright law and understand the concept of 'official work'",
+        "consequence": "Clarity on authorship rights and protection of the journalist's interests",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Ignore the issue and hope it goes away",
+        "consequence": "Uncertainty and potential exploitation of the journalist's work",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Failing to understand the concept of 'official work' and its implications for authorship rights",
+    "consequence_if_wrong": "Uncertainty and potential exploitation of the journalist's work",
+    "rationale": "Understanding Ukrainian copyright law and the concept of 'official work' helps the journalist to protect their interests and ensure they are fairly compensated for their work.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch004__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 4,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

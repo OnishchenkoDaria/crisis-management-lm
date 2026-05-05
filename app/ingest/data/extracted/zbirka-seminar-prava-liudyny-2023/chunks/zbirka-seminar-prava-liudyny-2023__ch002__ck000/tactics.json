@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Incident Response Plan",
+    "slug": "incident-response-plan",
+    "description": "A plan that outlines the steps to be taken in response to a cybersecurity threat or data breach.",
+    "when_to_apply": "In the event of a cybersecurity threat or data breach",
+    "example": "Activating the incident response plan to mitigate the risk of a cybersecurity threat",
+    "anti_pattern": "Ignoring the threat or breach",
+    "crisis_types": [
+      "safety",
+      "reputational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch002__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 2,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Transparency and Communication",
+    "slug": "transparency-and-communication",
+    "description": "A tactic that involves being open and honest about the crisis and communicating effectively with stakeholders.",
+    "when_to_apply": "In the event of a crisis that affects stakeholders",
+    "example": "Notifying affected parties and regulatory bodies in the event of a data breach",
+    "anti_pattern": "Covering up the crisis",
+    "crisis_types": [
+      "reputational",
+      "safety"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch002__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 2,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

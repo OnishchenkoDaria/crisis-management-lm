@@ -1,0 +1,62 @@
+[
+  {
+    "decision_id": "respond-to-discrimination-claim",
+    "source_scenario_id": "elderly-discrimination-in-media",
+    "situation": "A media organization is accused of perpetuating discrimination against elderly people",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Issue a public apology and commit to diversity training",
+        "consequence": "Improved reputation and reduced backlash",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Deny the allegations and defend the organization's actions",
+        "consequence": "Escalated backlash and reputational damage",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Failing to acknowledge and apologize for the harm caused",
+    "consequence_if_wrong": "Further damage to the organization's reputation and relationships with stakeholders",
+    "rationale": "Acknowledging and apologizing for the harm caused shows a commitment to diversity and inclusion, and can help to mitigate the crisis",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch016__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 16,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "address-ageism-in-the-workplace",
+    "source_scenario_id": "ageism-in-the-workplace",
+    "situation": "An employer is faced with allegations of ageism in the workplace",
+    "options": [
+      {
+        "id": "opt-c",
+        "action": "Conduct an investigation and implement policies to prevent ageism",
+        "consequence": "Improved workplace culture and reduced risk of lawsuits",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-d",
+        "action": "Ignore the allegations and continue with business as usual",
+        "consequence": "Escalated tensions and potential lawsuits",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-c",
+    "common_rookie_mistake": "Failing to take allegations of ageism seriously",
+    "consequence_if_wrong": "Further damage to the organization's reputation and relationships with employees",
+    "rationale": "Addressing ageism in the workplace requires a proactive and inclusive approach, and can help to prevent lawsuits and improve workplace culture",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch016__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 16,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "question": "What is the most effective way to respond to fake news?",
+    "answer": "The most effective way to respond to fake news is to issue a statement denying the false information and providing accurate information to counter it.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "reputational",
+      "political"
+    ],
+    "source_scenario_id": "fake-news-manipulation",
+    "common_mistake": "Ignoring the fake news or responding too slowly",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch013__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 13,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can we prevent the spread of disinformation?",
+    "answer": "Preventing the spread of disinformation requires a combination of fact-checking, media literacy, and critical thinking, as well as promoting a culture of transparency and accountability.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "reputational",
+      "political"
+    ],
+    "source_scenario_id": "information-warfare",
+    "common_mistake": "Underestimating the potential impact of disinformation",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch013__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 13,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

@@ -4,7 +4,7 @@ from app.users.rb import RBUser
 from app.users.schemas import SchemaUser, SchemaUserAdd, SchemaUserNameUpd, SchemaUserPasswordUpd
 
 router = APIRouter(
-    prefix="/users",
+    prefix="/api/users",
     tags=["Processing users' data"],
 )
 

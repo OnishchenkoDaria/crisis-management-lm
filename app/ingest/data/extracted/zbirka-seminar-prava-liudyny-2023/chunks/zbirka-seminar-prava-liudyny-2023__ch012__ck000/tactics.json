@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Transparency and Accountability",
+    "slug": "transparency-and-accountability",
+    "description": "Being open and honest in communications, and taking responsibility for actions and decisions. This tactic is essential in building trust with stakeholders, particularly in times of crisis.",
+    "when_to_apply": "in response to a data breach or other crisis, to demonstrate a commitment to transparency and accountability",
+    "example": "notifying affected customers immediately and providing regular updates on the situation",
+    "anti_pattern": "delaying notification or providing misleading information",
+    "crisis_types": [
+      "reputational",
+      "operational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch012__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 12,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Incident Response Protocol",
+    "slug": "incident-response-protocol",
+    "description": "A planned and rehearsed response to a crisis, including procedures for containment, eradication, recovery, and post-incident activities. This tactic is essential in minimizing damage and disruption.",
+    "when_to_apply": "in response to a cyber attack or other crisis, to minimize damage and disruption",
+    "example": "isolating affected systems and initiating incident response protocol",
+    "anti_pattern": "trying to remove malware and restore systems to normal operation without isolating affected systems",
+    "crisis_types": [
+      "operational",
+      "safety"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch012__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 12,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

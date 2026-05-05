@@ -1,0 +1,62 @@
+[
+  {
+    "decision_id": "respond-to-russian-aggression",
+    "source_scenario_id": "russian-aggression-against-ukraine",
+    "situation": "Russian aggression against Ukraine is escalating, and Ukrainian media artists are using their work to document the atrocities.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Use social media to raise awareness about the situation",
+        "consequence": "Increased international attention and pressure on Russia",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Remain silent and avoid drawing attention to the situation",
+        "consequence": "Reduced international attention and pressure on Russia",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Remaining silent and avoiding drawing attention to the situation",
+    "consequence_if_wrong": "Reduced international attention and pressure on Russia",
+    "rationale": "Using social media to raise awareness about the situation can help to increase international attention and pressure on Russia, which can help to bring an end to the aggression.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch011__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 11,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "address-social-media-censorship",
+    "source_scenario_id": "social-media-censorship",
+    "situation": "Social media platforms are blocking posts about Ukrainian soldiers and accusing them of spreading hate speech.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Contact social media platforms to report the issue and request that they change their algorithms",
+        "consequence": "Social media platforms may change their algorithms to allow more posts about Ukrainian soldiers",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Use alternative social media platforms to share information",
+        "consequence": "Reduced reach and impact of messages",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Using alternative social media platforms to share information",
+    "consequence_if_wrong": "Reduced reach and impact of messages",
+    "rationale": "Contacting social media platforms to report the issue and request that they change their algorithms can help to resolve the issue and allow more posts about Ukrainian soldiers to be shared.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch011__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 11,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

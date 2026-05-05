@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Golden Hour Rule",
+    "slug": "golden-hour-rule",
+    "description": "The Golden Hour Rule is a tactic used in crisis management to respond to a crisis within the first hour of its occurrence. This tactic involves quickly assessing the situation, gathering information, and taking immediate action to mitigate the crisis.",
+    "when_to_apply": "In the initial stages of a crisis, when the situation is still developing",
+    "example": "In the event of a security breach, the Golden Hour Rule would involve quickly assessing the situation, gathering information about the breach, and taking immediate action to contain the breach and prevent further damage",
+    "anti_pattern": "Not responding quickly to a crisis, allowing the situation to escalate",
+    "crisis_types": [
+      "operational",
+      "reputational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch003__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 3,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Transparency Principle",
+    "slug": "transparency-principle",
+    "description": "The Transparency Principle is a tactic used in crisis management to provide clear and accurate information to stakeholders about the crisis. This tactic involves being open and honest about the situation, and providing regular updates and progress reports.",
+    "when_to_apply": "In all stages of a crisis, to maintain trust and credibility with stakeholders",
+    "example": "In the event of a crisis, the Transparency Principle would involve providing clear and accurate information to stakeholders about the situation, and providing regular updates and progress reports",
+    "anti_pattern": "Withholding information or being dishonest about the crisis",
+    "crisis_types": [
+      "reputational",
+      "political"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch003__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 3,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

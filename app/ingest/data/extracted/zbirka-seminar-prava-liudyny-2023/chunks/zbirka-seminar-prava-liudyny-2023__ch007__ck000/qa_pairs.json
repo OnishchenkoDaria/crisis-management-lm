@@ -1,0 +1,38 @@
+[
+  {
+    "question": "How should a company adjust its advertising strategy during a war?",
+    "answer": "The company should adjust its advertising strategy to be more sensitive and relevant to the current situation, taking into account the emotional vulnerability of the target audience.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "war",
+      "advertising strategy"
+    ],
+    "source_scenario_id": "war-time-communication",
+    "common_mistake": "failing to adjust advertising strategy to the current situation",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch007__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 7,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What is the most effective way to communicate with the target audience during a war?",
+    "answer": "The most effective way to communicate with the target audience during a war is to use empathy-based communication, understanding and sharing the feelings of the target audience, and being sensitive to the current situation.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "war",
+      "communication strategy"
+    ],
+    "source_scenario_id": "war-time-communication",
+    "common_mistake": "using insensitive or exploitative language during a war",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch007__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 7,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

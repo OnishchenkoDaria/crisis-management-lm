@@ -1,0 +1,38 @@
+[
+  {
+    "question": "What is the best way to respond to hate speech in the media?",
+    "answer": "The best way to respond to hate speech in the media is to condemn it publicly and promote media literacy programs to improve critical thinking and reduce manipulation",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "ukraine-russia-conflict",
+      "media-manipulation"
+    ],
+    "source_scenario_id": "ukraine-russia-conflict",
+    "common_mistake": "Ignoring hate speech and hoping it will go away",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch010__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 10,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can we prevent the spread of hate speech and negative stereotypes in the media?",
+    "answer": "We can prevent the spread of hate speech and negative stereotypes in the media by promoting media literacy programs, condemning hate speech publicly, and implementing policies to reduce manipulation",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "media-manipulation",
+      "ukraine-russia-conflict"
+    ],
+    "source_scenario_id": "media-manipulation",
+    "common_mistake": "Censoring the media without addressing the root cause of manipulation",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch010__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 10,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

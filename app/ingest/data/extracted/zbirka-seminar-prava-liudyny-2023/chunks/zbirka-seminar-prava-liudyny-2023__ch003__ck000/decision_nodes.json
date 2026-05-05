@@ -1,0 +1,62 @@
+[
+  {
+    "decision_id": "restrict-access-to-state-registers",
+    "source_scenario_id": "freedom-of-speech-crisis",
+    "situation": "Wartime conditions and the need to protect sensitive information",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Restrict access to state registers",
+        "consequence": "Protection of sensitive information",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Do not restrict access to state registers",
+        "consequence": "Risk of sensitive information being leaked",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Not considering the potential consequences of restricting access to state registers",
+    "consequence_if_wrong": "Sensitive information being leaked",
+    "rationale": "Restricting access to state registers is necessary to protect sensitive information in wartime conditions",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch003__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 3,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "provide-accessibility-services",
+    "source_scenario_id": "accessibility-crisis",
+    "situation": "Customers with disabilities are complaining about lack of accessibility services",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Provide accessibility services",
+        "consequence": "Improved customer satisfaction and reputation",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Do not provide accessibility services",
+        "consequence": "Negative impact on reputation and customer satisfaction",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Not considering the needs of customers with disabilities",
+    "consequence_if_wrong": "Negative impact on reputation and customer satisfaction",
+    "rationale": "Providing accessibility services is necessary to improve customer satisfaction and reputation",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch003__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 3,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

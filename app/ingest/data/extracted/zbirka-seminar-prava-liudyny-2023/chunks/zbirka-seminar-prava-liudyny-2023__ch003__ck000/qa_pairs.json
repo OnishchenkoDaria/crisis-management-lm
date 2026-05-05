@@ -1,0 +1,87 @@
+[
+  {
+    "question": "What are the key considerations when restricting access to state registers in wartime conditions?",
+    "answer": "The key considerations include protecting sensitive information, maintaining national security, and ensuring the safety of citizens",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "freedom-of-speech-crisis"
+    ],
+    "source_scenario_id": "freedom-of-speech-crisis",
+    "common_mistake": "Not considering the potential consequences of restricting access to state registers",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch003__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 3,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can organizations provide accessibility services to customers with disabilities?",
+    "answer": "Organizations can provide accessibility services by providing accommodations such as wheelchair ramps, braille signage, and audio descriptions",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "accessibility-crisis"
+    ],
+    "source_scenario_id": "accessibility-crisis",
+    "common_mistake": "Not considering the needs of customers with disabilities",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch003__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 3,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What are the benefits of using the Golden Hour Rule in crisis management?",
+    "answer": "The benefits of using the Golden Hour Rule include quickly responding to a crisis, mitigating the situation, and preventing further damage",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "operational-crisis"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Not responding quickly to a crisis",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch003__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 3,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can organizations maintain transparency during a crisis?",
+    "answer": "Organizations can maintain transparency by providing clear and accurate information to stakeholders, and providing regular updates and progress reports",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "reputational-crisis"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Withholding information or being dishonest about the crisis",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch003__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 3,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What are the key considerations when providing accessibility services to customers with disabilities?",
+    "answer": "The key considerations include providing accommodations, ensuring equal access to services, and maintaining a positive reputation",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "accessibility-crisis"
+    ],
+    "source_scenario_id": "accessibility-crisis",
+    "common_mistake": "Not considering the needs of customers with disabilities",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch003__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 3,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

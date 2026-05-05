@@ -1,0 +1,62 @@
+[
+  {
+    "decision_id": "request-permission",
+    "source_scenario_id": "digital-media-crisis",
+    "situation": "A journalist wants to use user-generated content in a story",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Request permission from the user",
+        "consequence": "The user may grant permission, and the journalist can use the content",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Use the content without permission",
+        "consequence": "The user may object, and the journalist may face legal action",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Using user-generated content without permission",
+    "consequence_if_wrong": "Legal action and damage to the journalist's reputation",
+    "rationale": "Requesting permission respects the user's rights and avoids potential legal issues",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch015__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 15,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "verify-information",
+    "source_scenario_id": "fake-news-crisis",
+    "situation": "A journalist is unsure about the accuracy of a piece of information",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Verify the information through fact-checking",
+        "consequence": "The journalist can ensure the accuracy of the information",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Publish the information without verification",
+        "consequence": "The journalist may spread false information and damage their reputation",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Publishing information without verification",
+    "consequence_if_wrong": "Spreading false information and damaging the journalist's reputation",
+    "rationale": "Verifying information ensures accuracy and maintains the journalist's credibility",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch015__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 15,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

@@ -2,6 +2,7 @@ from fastapi import FastAPI
 import os
 from typing import Optional
 from app.users.router import router as user_router
+from app.ingest.router import router as ingest_router
 
 app = FastAPI()
 
@@ -12,3 +13,4 @@ def check_connection():
     })
 
 app.include_router(user_router)
+app.include_router(ingest_router)

@@ -1,0 +1,88 @@
+[
+  {
+    "question": "What is the concept of 'official work' in Ukrainian copyright law?",
+    "answer": "The concept of 'official work' refers to a work created by an employee in the course of their employment, which is considered to be owned by the employer.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "journalist-authorship",
+      "ukrainian-media-crisis"
+    ],
+    "source_scenario_id": "journalist-authorship",
+    "common_mistake": "Failing to understand the concept of 'official work' and its implications for authorship rights",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch004__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 4,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How should a media outlet respond to allegations of copyright infringement?",
+    "answer": "The media outlet should investigate the allegations and take corrective action to resolve the crisis and protect its reputation.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "ukrainian-media-crisis"
+    ],
+    "source_scenario_id": "ukrainian-media-crisis",
+    "common_mistake": "Failing to take the allegations seriously and not investigating the matter",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch004__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 4,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What is the Golden Hour Rule in crisis management?",
+    "answer": "The Golden Hour Rule refers to the first hour after a crisis breaks, during which the response to the crisis can have a significant impact on the outcome.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "ukrainian-media-crisis"
+    ],
+    "source_scenario_id": "ukrainian-media-crisis",
+    "common_mistake": "Failing to respond quickly and effectively during the Golden Hour",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch004__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 4,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "Why is it essential for journalists to understand their authorship rights?",
+    "answer": "Understanding authorship rights is essential for journalists to protect their interests and ensure they are fairly compensated for their work.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "journalist-authorship"
+    ],
+    "source_scenario_id": "journalist-authorship",
+    "common_mistake": "Failing to understand the concept of 'official work' and its implications for authorship rights",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch004__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 4,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can a media outlet protect its reputation during a crisis?",
+    "answer": "A media outlet can protect its reputation during a crisis by responding quickly and effectively, investigating allegations, and taking corrective action.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "ukrainian-media-crisis"
+    ],
+    "source_scenario_id": "ukrainian-media-crisis",
+    "common_mistake": "Failing to take the crisis seriously and not responding quickly and effectively",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch004__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 4,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Diversity and Inclusion Training",
+    "slug": "diversity-and-inclusion-training",
+    "description": "Providing training for all staff on diversity and inclusion can help to address the lack of gender diversity in the newsroom and improve the media organization's reputation. This training can include topics such as unconscious bias, microaggressions, and cultural competence.",
+    "when_to_apply": "When a media organization is facing criticism for its lack of gender diversity in its newsroom, or as a proactive measure to promote diversity and inclusion.",
+    "example": "A media organization provides diversity and inclusion training for all staff, which includes a workshop on unconscious bias and a panel discussion on microaggressions.",
+    "anti_pattern": "Ignoring the criticism and not providing any training or support",
+    "crisis_types": [
+      "reputational"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch017__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 17,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Security and Support for Female Journalists",
+    "slug": "security-and-support-for-female-journalists",
+    "description": "Providing additional security and support for female journalists can help to ensure their safety and well-being while they work on sensitive stories. This can include measures such as providing a security escort, offering counseling services, and creating a safe and supportive work environment.",
+    "when_to_apply": "When a female journalist is being harassed or intimidated while covering a sensitive story, or as a proactive measure to promote the safety and well-being of female journalists.",
+    "example": "A media organization provides a security escort for a female journalist who is covering a sensitive story in a high-risk area.",
+    "anti_pattern": "Not taking the harassment seriously and not providing adequate support",
+    "crisis_types": [
+      "safety"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch017__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 17,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "decision_id": "adjust-advertising-strategy",
+    "source_scenario_id": "war-time-communication",
+    "situation": "The company's advertising campaign is not resonating with the target audience during a war.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "adjust advertising strategy to be more sensitive and relevant",
+        "consequence": "improved reputation and engagement with target audience",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "continue with existing advertising strategy",
+        "consequence": "reputational damage and loss of engagement with target audience",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "failing to adjust advertising strategy to the current situation",
+    "consequence_if_wrong": "reputational damage and loss of engagement with target audience",
+    "rationale": "adjusting the advertising strategy to be more sensitive and relevant to the current situation will help to improve reputation and engagement with the target audience",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch007__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 7,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "respond-to-backlash",
+    "source_scenario_id": "reputational-damage",
+    "situation": "The company's advertising campaign has caused a backlash from the target audience.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "apologize and adjust advertising strategy",
+        "consequence": "mitigation of reputational damage",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "defend advertising strategy",
+        "consequence": "exacerbation of reputational damage",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "defending the advertising strategy instead of apologizing and adjusting",
+    "consequence_if_wrong": "exacerbation of reputational damage",
+    "rationale": "apologizing and adjusting the advertising strategy will help to mitigate reputational damage and improve engagement with the target audience",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch007__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 7,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "decision_id": "respond-to-media-restrictions",
+    "source_scenario_id": "ukraine-war-media-restrictions",
+    "situation": "The government has introduced restrictions on freedom of speech, and the media is facing challenges in reporting on the conflict.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Comply with the restrictions",
+        "consequence": "Limited ability to report on the conflict",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-b",
+        "action": "Challenge the restrictions",
+        "consequence": "Potential conflict with the government",
+        "is_recommended": true
+      }
+    ],
+    "recommended_action_id": "opt-b",
+    "common_rookie_mistake": "Failing to challenge the restrictions",
+    "consequence_if_wrong": "Limited ability to report on the conflict",
+    "rationale": "Challenging the restrictions is necessary to ensure that the media can continue to report on the conflict and hold those in power accountable.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch009__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 9,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "protect-journalists-from-russian-aggression",
+    "source_scenario_id": "russian-aggression-against-ukrainian-media",
+    "situation": "Russian forces are targeting Ukrainian media outlets and journalists, posing a significant threat to their safety and freedom of speech.",
+    "options": [
+      {
+        "id": "opt-c",
+        "action": "Take measures to protect journalists",
+        "consequence": "Improved safety for journalists",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-d",
+        "action": "Do nothing",
+        "consequence": "Increased risk for journalists",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-c",
+    "common_rookie_mistake": "Failing to take measures to protect journalists",
+    "consequence_if_wrong": "Increased risk for journalists",
+    "rationale": "Taking measures to protect journalists is necessary to ensure their safety and ability to continue reporting on the conflict.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch009__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 9,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

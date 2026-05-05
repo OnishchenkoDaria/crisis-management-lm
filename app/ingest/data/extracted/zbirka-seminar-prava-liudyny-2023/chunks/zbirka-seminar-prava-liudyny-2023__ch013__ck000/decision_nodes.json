@@ -1,0 +1,62 @@
+[
+  {
+    "decision_id": "respond-to-fake-news",
+    "source_scenario_id": "fake-news-manipulation",
+    "situation": "A fake news article is spreading rapidly online, causing public concern and confusion.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Issue a statement denying the false information",
+        "consequence": "The public may be reassured, but the fake news may continue to spread.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Ignore the fake news and focus on other issues",
+        "consequence": "The fake news may continue to spread and cause harm, but resources may be conserved.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Underestimating the potential impact of fake news",
+    "consequence_if_wrong": "The fake news may cause significant harm to the organization or individual's reputation",
+    "rationale": "Responding quickly and effectively to fake news can help mitigate its impact and prevent further harm.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch013__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 13,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  },
+  {
+    "decision_id": "investigate-disinformation-campaign",
+    "source_scenario_id": "information-warfare",
+    "situation": "A coordinated disinformation campaign is discovered, targeting the country's national security and stability.",
+    "options": [
+      {
+        "id": "opt-c",
+        "action": "Launch a thorough investigation to identify the source and scope of the campaign",
+        "consequence": "The investigation may reveal valuable information, but it may also be time-consuming and resource-intensive.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-d",
+        "action": "Take immediate action to counter the disinformation campaign without investigating further",
+        "consequence": "The action may be effective in the short term, but it may not address the root cause of the problem.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-c",
+    "common_rookie_mistake": "Rushing into action without fully understanding the situation",
+    "consequence_if_wrong": "The disinformation campaign may continue to cause harm, and the response may be ineffective",
+    "rationale": "A thorough investigation is necessary to understand the scope and nature of the disinformation campaign and develop an effective response.",
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch013__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 13,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]

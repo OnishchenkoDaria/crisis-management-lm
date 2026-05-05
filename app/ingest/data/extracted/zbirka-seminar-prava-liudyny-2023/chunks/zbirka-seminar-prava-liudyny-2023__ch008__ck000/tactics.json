@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Neologism Analysis",
+    "slug": "neologism-analysis",
+    "description": "The process of analyzing and understanding new neologisms in Ukrainian media texts, reflecting the changing realities and societal-political processes.",
+    "when_to_apply": "During times of crisis or significant societal-political change",
+    "example": "Analyzing the neologism 'асвабадітєлі' to understand its meaning and context",
+    "anti_pattern": "Ignoring or dismissing neologisms as unimportant",
+    "crisis_types": [
+      "political",
+      "societal"
+    ],
+    "_source_chunk_id": "zbirka-seminar-prava-liudyny-2023__ch008__ck000",
+    "_source_slug": "zbirka-seminar-prava-liudyny-2023",
+    "_chapter_title": "Список використаних джерел",
+    "_chapter_index": 8,
+    "_chunk_index": 0,
+    "_language": "uk",
+    "_doc_type": "book"
+  }
+]
