@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Golden Hour Rule",
+    "slug": "golden-hour-rule",
+    "description": "The first hour after a crisis breaks is critical for media engagement. Responding quickly—even with preliminary information—helps set the tone for the narrative and prevents misinformation from taking hold. Delaying engagement risks losing control of the story.",
+    "when_to_apply": "Use during the acute phase of a crisis when media attention is high and public concern is rising. Applies to all crisis types where media plays a significant role in shaping perception.",
+    "example": "During a chemical spill, the communications team releases a preliminary statement within 30 minutes acknowledging the incident, expressing concern, and committing to hourly updates. This prevents speculation and keeps the organization as the primary source of information.",
+    "anti_pattern": "Waiting for all facts to be confirmed before engaging with media, which allows unofficial sources to dominate the narrative.",
+    "crisis_types": [
+      "media",
+      "natural_disaster",
+      "safety",
+      "operational",
+      "reputational"
+    ],
+    "_source_chunk_id": "cerc-working-with-the-media__ch000__ck000",
+    "_source_slug": "cerc-working-with-the-media",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "name": "Media Monitoring Loop",
+    "slug": "media-monitoring-loop",
+    "description": "Establish a continuous process to track media coverage, social media mentions, and public sentiment during a crisis. This allows the team to quickly identify misinformation, correct inaccuracies, and adjust messaging in real-time.",
+    "when_to_apply": "Apply during the acute and containment phases of a crisis, particularly when misinformation or conflicting narratives are spreading. Essential for crises with high media visibility.",
+    "example": "A public health agency sets up a 24/7 monitoring team during a disease outbreak. They track local news, national outlets, and social platforms, flagging false claims about transmission or treatment within minutes and issuing corrections via press releases and social media.",
+    "anti_pattern": "Relying solely on internal reports or anecdotal feedback to gauge public perception, which can lead to delayed or ineffective responses.",
+    "crisis_types": [
+      "media",
+      "natural_disaster",
+      "safety",
+      "political",
+      "reputational"
+    ],
+    "_source_chunk_id": "cerc-working-with-the-media__ch000__ck000",
+    "_source_slug": "cerc-working-with-the-media",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "name": "Proactive Media Engagement",
+    "slug": "proactive-media-engagement",
+    "description": "Anticipate media needs and reach out to journalists with verified information before they request it. This builds trust, reduces the likelihood of misinformation, and positions the organization as a reliable source.",
+    "when_to_apply": "Use during the pre-crisis or acute phase when a crisis is imminent or unfolding. Particularly effective for crises with high media interest, such as natural disasters or public health emergencies.",
+    "example": "A local government agency anticipates questions about an upcoming hurricane and proactively holds a press briefing with emergency preparedness tips, evacuation routes, and contact information for shelters. This reduces the need for reactive media engagement later.",
+    "anti_pattern": "Waiting for media to contact the organization before sharing information, which can lead to a defensive or reactive posture.",
+    "crisis_types": [
+      "media",
+      "natural_disaster",
+      "safety",
+      "political",
+      "reputational"
+    ],
+    "_source_chunk_id": "cerc-working-with-the-media__ch000__ck000",
+    "_source_slug": "cerc-working-with-the-media",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "decision_id": "nuclear-plant-containment-failure-initial-response",
+    "source_scenario_id": "nuclear-plant-containment-failure",
+    "situation": "A nuclear plant reports a containment failure with potential radiation leaks. Media and public are demanding immediate updates.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Issue a joint statement with plant operators and government agencies confirming the incident and outlining immediate safety measures.",
+        "consequence": "Establishes credibility and reduces panic by providing authoritative information.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Wait for further technical assessment before making any public statement.",
+        "consequence": "Risk of misinformation spreading and public distrust increasing.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Provide technical details of the containment failure to the media immediately.",
+        "consequence": "May cause unnecessary panic or confusion if details are unclear or incomplete.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Delaying communication until all facts are confirmed, leading to speculation and loss of trust.",
+    "consequence_if_wrong": "Public panic, misinformation, and loss of credibility for the organization.",
+    "rationale": "Immediate, transparent communication from credible sources is critical to manage public perception and ensure safety during a nuclear incident.",
+    "_source_chunk_id": "cerc-working-with-the-media__ch001__ck000",
+    "_source_slug": "cerc-working-with-the-media",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "decision_id": "pandemic-h1n1-vaccination-communication",
+    "source_scenario_id": "pandemic-h1n1-response",
+    "situation": "H1N1 cases are rising, and the public is confused about vaccination availability and safety. Media are reporting shortages and misinformation.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Launch a coordinated public health campaign with clear, consistent messaging about vaccination safety and availability.",
+        "consequence": "Increases public trust and uptake of vaccinations, reducing spread of the virus.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Wait for more data on vaccine efficacy before addressing public concerns.",
+        "consequence": "Allows misinformation to spread and reduces public confidence in health authorities.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Issue a statement blaming the public for vaccine hesitancy.",
+        "consequence": "Damages trust and increases resistance to vaccination efforts.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Assuming the public will understand the science without clear, simple messaging.",
+    "consequence_if_wrong": "Vaccine hesitancy, increased spread of the virus, and loss of public trust in health authorities.",
+    "rationale": "Clear, consistent, and empathetic communication is essential to address public concerns and encourage vaccination during a pandemic.",
+    "_source_chunk_id": "cerc-working-with-the-media__ch001__ck000",
+    "_source_slug": "cerc-working-with-the-media",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "decision_id": "hurricane-katrina-media-narrative-correction",
+    "source_scenario_id": "hurricane-katrina-media-coverage",
+    "situation": "Media coverage of Hurricane Katrina highlights failures in emergency response, leading to public outrage and distrust in government agencies.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Acknowledge failures, outline corrective actions, and provide a timeline for improvements in coordination and response.",
+        "consequence": "Rebuilds trust by demonstrating accountability and commitment to change.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Deflect blame by emphasizing external factors beyond control.",
+        "consequence": "Increases public anger and damages credibility further.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Ignore media criticism and focus on internal recovery efforts.",
+        "consequence": "Allows public perception of incompetence to persist, worsening the crisis.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Responding defensively to criticism instead of addressing the root issues.",
+    "consequence_if_wrong": "Prolonged public distrust and reputational damage for the organization.",
+    "rationale": "Acknowledging failures and outlining corrective actions is critical to rebuilding trust and demonstrating commitment to improvement.",
+    "_source_chunk_id": "cerc-working-with-the-media__ch001__ck000",
+    "_source_slug": "cerc-working-with-the-media",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "decision_id": "social-media-disaster-response-engagement",
+    "source_scenario_id": "social-media-disaster-response-failure",
+    "situation": "A disaster response organization is criticized for slow or inaccurate social media responses during a crisis, leading to public distrust.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Launch a rapid-response social media team to monitor, correct misinformation, and provide real-time updates.",
+        "consequence": "Restores public trust and ensures accurate information dissemination.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Wait for a formal review before addressing social media criticism.",
+        "consequence": "Allows misinformation to spread and public distrust to grow.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Issue a generic statement without addressing specific concerns raised on social media.",
+        "consequence": "Fails to address public concerns and may escalate criticism.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Underestimating the speed and importance of social media in crisis communication.",
+    "consequence_if_wrong": "Misinformation spreads, public trust erodes, and response efforts are undermined.",
+    "rationale": "Social media is a critical tool for real-time communication and misinformation correction during a crisis.",
+    "_source_chunk_id": "cerc-working-with-the-media__ch001__ck000",
+    "_source_slug": "cerc-working-with-the-media",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "decision_id": "radiation-emergency-misinformation-management",
+    "source_scenario_id": "radiation-emergency-misinformation",
+    "situation": "A radiation emergency triggers widespread public fear and misinformation, with media and social platforms amplifying concerns.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Provide clear, consistent updates from health and emergency agencies, including safety instructions and timelines.",
+        "consequence": "Reduces panic and ensures public compliance with safety measures.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Downplay the severity of the situation to avoid panic.",
+        "consequence": "Risk of public backlash if the situation worsens and information is later contradicted.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Release technical jargon without context, assuming the public will understand.",
+        "consequence": "Confuses the public and increases anxiety.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Using overly technical language or downplaying risks, which can increase public fear.",
+    "consequence_if_wrong": "Public panic, non-compliance with safety measures, and reputational damage for the organization.",
+    "rationale": "Clear, empathetic, and consistent communication is essential to manage public fear and ensure safety during a radiation emergency.",
+    "_source_chunk_id": "cerc-working-with-the-media__ch001__ck000",
+    "_source_slug": "cerc-working-with-the-media",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  }
+]

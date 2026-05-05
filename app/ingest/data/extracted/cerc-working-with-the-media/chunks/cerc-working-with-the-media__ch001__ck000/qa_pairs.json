@@ -1,0 +1,147 @@
+[
+  {
+    "question": "What is the first thing we should communicate during a nuclear plant containment failure?",
+    "answer": "Issue a joint statement with plant operators and government agencies confirming the incident and outlining immediate safety measures. This establishes credibility and reduces panic by providing authoritative information.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "safety",
+      "acute"
+    ],
+    "source_scenario_id": "nuclear-plant-containment-failure",
+    "common_mistake": "Waiting for further technical assessment before making any public statement.",
+    "_source_chunk_id": "cerc-working-with-the-media__ch001__ck000",
+    "_source_slug": "cerc-working-with-the-media",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "How should we address public concerns about H1N1 vaccination during a pandemic?",
+    "answer": "Launch a coordinated public health campaign with clear, consistent messaging about vaccination safety and availability. This increases public trust and uptake of vaccinations, reducing the spread of the virus.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "natural_disaster",
+      "containment"
+    ],
+    "source_scenario_id": "pandemic-h1n1-response",
+    "common_mistake": "Assuming the public will understand the science without clear, simple messaging.",
+    "_source_chunk_id": "cerc-working-with-the-media__ch001__ck000",
+    "_source_slug": "cerc-working-with-the-media",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "What is the best way to respond to media criticism after a disaster like Hurricane Katrina?",
+    "answer": "Acknowledge failures, outline corrective actions, and provide a timeline for improvements in coordination and response. This rebuilds trust by demonstrating accountability and commitment to change.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "media",
+      "recovery"
+    ],
+    "source_scenario_id": "hurricane-katrina-media-coverage",
+    "common_mistake": "Responding defensively to criticism instead of addressing the root issues.",
+    "_source_chunk_id": "cerc-working-with-the-media__ch001__ck000",
+    "_source_slug": "cerc-working-with-the-media",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "How can we correct misinformation on social media during a crisis?",
+    "answer": "Deploy a rapid-response social media team to monitor, correct misinformation, and provide real-time updates. This restores public trust and ensures accurate information dissemination.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "media",
+      "acute"
+    ],
+    "source_scenario_id": "social-media-disaster-response-failure",
+    "common_mistake": "Waiting for a formal review before addressing social media criticism.",
+    "_source_chunk_id": "cerc-working-with-the-media__ch001__ck000",
+    "_source_slug": "cerc-working-with-the-media",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "What language should we avoid when communicating about a radiation emergency?",
+    "answer": "Avoid technical jargon or ambiguous language that increases public confusion or fear. Instead, provide clear instructions on safety measures, evacuation routes, and timelines in language accessible to the general public.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "safety",
+      "acute"
+    ],
+    "source_scenario_id": "radiation-emergency-misinformation",
+    "common_mistake": "Using overly technical language or downplaying risks.",
+    "_source_chunk_id": "cerc-working-with-the-media__ch001__ck000",
+    "_source_slug": "cerc-working-with-the-media",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "Why is the first hour after a crisis critical for communication?",
+    "answer": "The first hour is critical because it sets the tone for public perception and prevents misinformation from spreading. Immediate, accurate, and transparent messaging from credible sources can mitigate panic and ensure public safety.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "media",
+      "acute"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Delaying communication until all facts are confirmed.",
+    "_source_chunk_id": "cerc-working-with-the-media__ch001__ck000",
+    "_source_slug": "cerc-working-with-the-media",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "What is the CERC model, and when should we use it?",
+    "answer": "The Crisis and Emergency Risk Communication (CERC) model emphasizes working with media to provide accurate, timely, and consistent information during a crisis. Use it during the acute and containment phases, particularly when media coverage is intense or public concern is high.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "media",
+      "safety",
+      "natural_disaster"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Providing conflicting or overly technical information that confuses the public or media.",
+    "_source_chunk_id": "cerc-working-with-the-media__ch001__ck000",
+    "_source_slug": "cerc-working-with-the-media",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "How can we rebuild public trust after a crisis response failure?",
+    "answer": "Publicly acknowledge failures or shortcomings, and outline specific steps being taken to address the issues. This demonstrates accountability and commitment to improvement, which is critical for rebuilding trust.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "reputational",
+      "recovery"
+    ],
+    "source_scenario_id": "hurricane-katrina-media-coverage",
+    "common_mistake": "Deflecting blame or ignoring criticism.",
+    "_source_chunk_id": "cerc-working-with-the-media__ch001__ck000",
+    "_source_slug": "cerc-working-with-the-media",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  }
+]

@@ -4661,3 +4661,67 @@ Building training_samples.jsonl …
 00:34:18  INFO      
 Building training_samples.jsonl …
 00:34:18  INFO        ✓ training_samples.jsonl: 395 samples → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\processed\training_samples.jsonl
+00:41:51  INFO      
+============================================================
+00:41:51  INFO      Processing: CERC_Working_with_the_Media.pdf
+00:41:51  INFO      ============================================================
+00:41:51  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:41:56  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+00:41:56  INFO        Found 2 chunks across 2 chapters
+00:41:56  INFO      Step 2/4  Saving chunk manifest …
+00:41:56  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-working-with-the-media\metadata.json
+00:41:56  INFO      Step 3/4  Running AI extraction …
+00:41:56  INFO        0 chunks already done, 2 remaining
+00:41:56  INFO        [1/2] Processing  cerc-working-with-the-media__ch000__ck000 (274 tokens, chapter: Conclusion)
+00:41:56  INFO        -> [cerc-working-with-the-media__ch000__ck000] lang=en tokens=274 | active backends: gemini -> mistral -> groq -> openrouter -> github -> lmstudio
+00:42:01  INFO      AFC is enabled with max remote calls: 10.
+00:42:01  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+00:42:01  WARNING   [gemini] Daily quota exhausted
+00:42:01  INFO        Switching to next backend. Remaining: mistral -> groq -> openrouter -> github -> lmstudio
+00:42:23  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+00:42:25  INFO        [cerc-working-with-the-media__ch000__ck000] 2 scenarios, 2 decisions, 3 tactics, 7 qa_pairs
+00:42:25  INFO        ✓ completed [cerc-working-with-the-media__ch000__ck000]: 2 scenarios, 2 decisions, 3 tactics, 7 qa_pairs  [total=14]
+00:42:25  INFO        [2/2] Processing  cerc-working-with-the-media__ch001__ck000 (805 tokens, chapter: References)
+00:42:25  INFO        -> [cerc-working-with-the-media__ch001__ck000] lang=en tokens=805 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+00:42:48  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+00:42:50  INFO        [cerc-working-with-the-media__ch001__ck000] 5 scenarios, 5 decisions, 5 tactics, 8 qa_pairs
+00:42:50  INFO        ✓ completed [cerc-working-with-the-media__ch001__ck000]: 5 scenarios, 5 decisions, 5 tactics, 8 qa_pairs  [total=23]
+00:42:50  INFO      Step 4/4  Merging into processed/ …
+00:42:50  INFO        ✓ merged cerc-working-with-the-media → processed/: {'scenarios': 7, 'decision_nodes': 7, 'tactics': 8, 'qa_pairs': 15, 'rag_chunks': 2}
+00:42:50  INFO        Done: {'scenarios': 7, 'decision_nodes': 7, 'tactics': 8, 'qa_pairs': 15, 'rag_chunks': 2}
+00:42:50  INFO      
+============================================================
+00:42:50  INFO      Processing: Збірка_семінар_права-людини_2023.pdf
+00:42:50  INFO      ============================================================
+00:42:50  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:43:34  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+00:43:34  INFO        Found 19 chunks across 2 chapters
+00:43:34  INFO      Step 2/4  Saving chunk manifest …
+00:43:34  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\zbirka-seminar-prava-liudyny-2023\metadata.json
+00:43:34  INFO      Step 3/4  Running AI extraction …
+00:43:34  INFO        19 chunks already done, 0 remaining
+00:43:34  INFO        [1/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck000
+00:43:34  INFO        [2/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck001
+00:43:34  INFO        [3/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck002
+00:43:34  INFO        [4/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck003
+00:43:34  INFO        [5/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck004
+00:43:34  INFO        [6/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck005
+00:43:34  INFO        [7/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck006
+00:43:34  INFO        [8/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck007
+00:43:34  INFO        [9/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck008
+00:43:34  INFO        [10/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck009
+00:43:34  INFO        [11/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck010
+00:43:34  INFO        [12/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck011
+00:43:34  INFO        [13/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck012
+00:43:34  INFO        [14/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck013
+00:43:34  INFO        [15/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck014
+00:43:34  INFO        [16/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck015
+00:43:34  INFO        [17/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck016
+00:43:34  INFO        [18/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch001__ck000
+00:43:34  INFO        [19/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch001__ck001
+00:43:34  INFO      Step 4/4  Merging into processed/ …
+00:43:34  INFO        ✓ merged zbirka-seminar-prava-liudyny-2023 → processed/: {'scenarios': 102, 'decision_nodes': 101, 'tactics': 117, 'qa_pairs': 173, 'rag_chunks': 19}
+00:43:34  INFO        Done: {'scenarios': 102, 'decision_nodes': 101, 'tactics': 117, 'qa_pairs': 173, 'rag_chunks': 19}
+00:43:34  INFO      
+Building training_samples.jsonl …
+00:43:34  INFO        ✓ training_samples.jsonl: 583 samples → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\processed\training_samples.jsonl

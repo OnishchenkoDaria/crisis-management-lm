@@ -1,0 +1,116 @@
+[
+  {
+    "scenario_id": "nuclear-plant-containment-failure",
+    "crisis_type": "safety",
+    "severity": "critical",
+    "context": "A nuclear power plant experiences a containment failure, leading to potential radiation leaks. Emergency response teams must coordinate with government agencies, media, and the public to manage the crisis and prevent panic.",
+    "key_stakeholders": [
+      "plant operators",
+      "local government",
+      "federal emergency agencies",
+      "media outlets",
+      "local residents",
+      "environmental groups",
+      "health organizations"
+    ],
+    "initial_trigger": "Detected radiation leak or containment breach at a nuclear power plant.",
+    "phase": "acute",
+    "_source_chunk_id": "cerc-working-with-the-media__ch001__ck000",
+    "_source_slug": "cerc-working-with-the-media",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "scenario_id": "pandemic-h1n1-response",
+    "crisis_type": "natural_disaster",
+    "severity": "high",
+    "context": "A global outbreak of H1N1 influenza requires coordinated public health responses, including vaccination campaigns, public communication, and resource allocation to mitigate spread and panic.",
+    "key_stakeholders": [
+      "World Health Organization",
+      "national health agencies",
+      "local health departments",
+      "media",
+      "general public",
+      "pharmaceutical companies",
+      "government officials"
+    ],
+    "initial_trigger": "WHO declares H1N1 pandemic or local outbreak reaches critical levels.",
+    "phase": "containment",
+    "_source_chunk_id": "cerc-working-with-the-media__ch001__ck000",
+    "_source_slug": "cerc-working-with-the-media",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "scenario_id": "hurricane-katrina-media-coverage",
+    "crisis_type": "media",
+    "severity": "high",
+    "context": "During Hurricane Katrina, media coverage amplified public panic and misinformation, requiring crisis communicators to correct narratives, provide accurate updates, and manage public perception.",
+    "key_stakeholders": [
+      "emergency responders",
+      "local and national media",
+      "government officials",
+      "affected communities",
+      "nonprofit organizations"
+    ],
+    "initial_trigger": "Media reports highlight failures in emergency response and public safety during the hurricane.",
+    "phase": "recovery",
+    "_source_chunk_id": "cerc-working-with-the-media__ch001__ck000",
+    "_source_slug": "cerc-working-with-the-media",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "scenario_id": "social-media-disaster-response-failure",
+    "crisis_type": "media",
+    "severity": "medium",
+    "context": "A disaster response organization fails to leverage social media effectively during a crisis, leading to misinformation spread and public distrust. Rapid correction and engagement are required.",
+    "key_stakeholders": [
+      "disaster response organizations",
+      "social media platforms",
+      "affected communities",
+      "media outlets",
+      "government agencies"
+    ],
+    "initial_trigger": "Public criticism of slow or inaccurate social media responses during a crisis.",
+    "phase": "acute",
+    "_source_chunk_id": "cerc-working-with-the-media__ch001__ck000",
+    "_source_slug": "cerc-working-with-the-media",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "scenario_id": "radiation-emergency-misinformation",
+    "crisis_type": "safety",
+    "severity": "high",
+    "context": "A radiation emergency triggers widespread public fear and misinformation, requiring crisis communicators to provide clear, accurate, and timely information to prevent panic and ensure public safety.",
+    "key_stakeholders": [
+      "emergency responders",
+      "health agencies",
+      "media",
+      "local residents",
+      "government officials"
+    ],
+    "initial_trigger": "Radiation leak or accident reported in a populated area.",
+    "phase": "acute",
+    "_source_chunk_id": "cerc-working-with-the-media__ch001__ck000",
+    "_source_slug": "cerc-working-with-the-media",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  }
+]
