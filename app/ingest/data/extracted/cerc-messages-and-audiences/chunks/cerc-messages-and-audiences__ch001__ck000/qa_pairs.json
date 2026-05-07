@@ -1,0 +1,148 @@
+[
+  {
+    "question": "Which audiences should receive safety messages first during a public health emergency?",
+    "answer": "First responders, survivors, and local public health and medical communities should receive safety and action messages first, as they are closest to the emergency and require immediate information to act.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "emergency-audience-segmentation",
+      "safety"
+    ],
+    "source_scenario_id": "emergency-audience-segmentation",
+    "common_mistake": "Sending generic messages to all audiences without prioritizing those closest to the emergency.",
+    "_source_chunk_id": "cerc-messages-and-audiences__ch001__ck000",
+    "_source_slug": "cerc-messages-and-audiences",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "Why is it important to segment audiences during a crisis?",
+    "answer": "Segmenting audiences ensures that each group receives information tailored to their needs and proximity to the event, reducing confusion and increasing the effectiveness of safety and response efforts.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "emergency-audience-segmentation",
+      "safety"
+    ],
+    "source_scenario_id": "emergency-audience-segmentation",
+    "common_mistake": "Assuming all audiences need the same information and sending a single, generic message.",
+    "_source_chunk_id": "cerc-messages-and-audiences__ch001__ck000",
+    "_source_slug": "cerc-messages-and-audiences",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "What are the key components of successful communication during a crisis?",
+    "answer": "Successful communication combines credibility (accuracy and speed of information) with trust (empathy and openness). Both elements must be present to rebuild or maintain public confidence.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "credibility-trust-communication",
+      "reputational"
+    ],
+    "source_scenario_id": "credibility-trust-communication",
+    "common_mistake": "Focusing only on speed or accuracy without demonstrating empathy or openness.",
+    "_source_chunk_id": "cerc-messages-and-audiences__ch001__ck000",
+    "_source_slug": "cerc-messages-and-audiences",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "How quickly should critical information be released during a crisis?",
+    "answer": "Critical information should be released within the first hour of a crisis to control the narrative and prevent misinformation. This is known as the Golden Hour Rule.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "golden-hour-rule",
+      "safety",
+      "reputational"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Delaying communication to gather all facts, which allows rumors to spread.",
+    "_source_chunk_id": "cerc-messages-and-audiences__ch001__ck000",
+    "_source_slug": "cerc-messages-and-audiences",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "What is the consequence of delaying communication during a crisis?",
+    "answer": "Delaying communication allows misinformation and rumors to spread, which can exacerbate the crisis, erode trust, and make recovery more difficult.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "golden-hour-rule",
+      "safety",
+      "reputational"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Believing that waiting for all facts ensures accuracy and avoids mistakes.",
+    "_source_chunk_id": "cerc-messages-and-audiences__ch001__ck000",
+    "_source_slug": "cerc-messages-and-audiences",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "How can empathy be incorporated into crisis communication?",
+    "answer": "Empathy can be demonstrated by acknowledging the concerns and emotions of affected stakeholders, using language that shows understanding and concern, and providing clear, compassionate updates on the situation and response efforts.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "credibility-trust-communication",
+      "reputational"
+    ],
+    "source_scenario_id": "credibility-trust-communication",
+    "common_mistake": "Using overly formal or detached language that fails to address the emotional impact of the crisis.",
+    "_source_chunk_id": "cerc-messages-and-audiences__ch001__ck000",
+    "_source_slug": "cerc-messages-and-audiences",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "What is the role of media in a public health emergency?",
+    "answer": "Media plays a critical role in disseminating information to the public, including families of survivors and responders, and international audiences. They require factual updates but do not need immediate action messages.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "emergency-audience-segmentation",
+      "media"
+    ],
+    "source_scenario_id": "emergency-audience-segmentation",
+    "common_mistake": "Ignoring media needs or failing to provide them with accurate, timely information.",
+    "_source_chunk_id": "cerc-messages-and-audiences__ch001__ck000",
+    "_source_slug": "cerc-messages-and-audiences",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "Why is it important to address stakeholder concerns directly during a crisis?",
+    "answer": "Addressing stakeholder concerns directly demonstrates transparency and empathy, which are essential for rebuilding trust and credibility after a crisis.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "credibility-trust-communication",
+      "reputational"
+    ],
+    "source_scenario_id": "credibility-trust-communication",
+    "common_mistake": "Dismissing or downplaying stakeholder concerns to focus on controlling the narrative.",
+    "_source_chunk_id": "cerc-messages-and-audiences__ch001__ck000",
+    "_source_slug": "cerc-messages-and-audiences",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  }
+]

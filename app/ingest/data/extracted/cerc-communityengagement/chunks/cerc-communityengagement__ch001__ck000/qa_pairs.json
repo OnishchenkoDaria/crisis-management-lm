@@ -1,0 +1,146 @@
+[
+  {
+    "question": "What is the first thing we should communicate during the initial phase of an anthrax scare, even if we don’t have all the facts?",
+    "answer": "Acknowledge the situation, express empathy for those affected, and provide basic safety instructions (e.g., avoiding contact with suspicious powders). Issue a joint statement with authoritative sources like the CDC or WHO to enhance credibility.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "anthrax-scares-in-public-health",
+      "safety"
+    ],
+    "source_scenario_id": "anthrax-scares-in-public-health",
+    "common_mistake": "Waiting for definitive lab results before communicating, which delays critical information and allows rumors to spread.",
+    "_source_chunk_id": "cerc-communityengagement__ch001__ck000",
+    "_source_slug": "cerc-communityengagement",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "How can we address rumors about a crisis when they start spreading on social media?",
+    "answer": "Issue a rapid-response fact sheet addressing the rumors with verified information from authoritative sources. Engage community leaders and influencers to help debunk false claims in their networks. Prioritize transparency and speed to counteract misinformation.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "rumor-control-during-crisis",
+      "media"
+    ],
+    "source_scenario_id": "rumor-control-during-crisis",
+    "common_mistake": "Dismissing rumors as insignificant without providing corrective information, which allows misinformation to dominate the narrative.",
+    "_source_chunk_id": "cerc-communityengagement__ch001__ck000",
+    "_source_slug": "cerc-communityengagement",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "What’s the most effective way to prepare a community for an impending natural disaster?",
+    "answer": "Launch a multi-channel communication campaign (social media, local news, flyers) with clear evacuation routes, safety tips, and practical workshops. Engage emergency services to host community drills and answer questions, ensuring no one is left unprepared.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "community-resilience-preparation",
+      "natural_disaster"
+    ],
+    "source_scenario_id": "community-resilience-preparation",
+    "common_mistake": "Assuming a single communication channel (e.g., emergency alerts) is sufficient for all audiences.",
+    "_source_chunk_id": "cerc-communityengagement__ch001__ck000",
+    "_source_slug": "cerc-communityengagement",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "Why is it important to involve postal workers in the communication process after an anthrax exposure incident?",
+    "answer": "Postal workers are directly affected and their anxiety can disrupt operations. Holding town hall meetings with public health officials to address their concerns and provide clear safety protocols builds trust, reduces absenteeism, and maintains morale.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "postal-workers-anthrax-reactions",
+      "internal"
+    ],
+    "source_scenario_id": "postal-workers-anthrax-reactions",
+    "common_mistake": "Sending generic emails without addressing emotional distress or providing direct engagement opportunities.",
+    "_source_chunk_id": "cerc-communityengagement__ch001__ck000",
+    "_source_slug": "cerc-communityengagement",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "What should we do after a crisis is resolved to improve future responses?",
+    "answer": "Conduct a debrief with all stakeholders to gather feedback and identify gaps in communication. Use these insights to update plans, and consider publishing a public report summarizing lessons learned and changes made. This ensures continuous improvement and builds long-term trust.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "lessons-learned-post-crisis",
+      "operational"
+    ],
+    "source_scenario_id": "lessons-learned-post-crisis",
+    "common_mistake": "Assuming internal review is sufficient without stakeholder input, leading to repeated mistakes in future crises.",
+    "_source_chunk_id": "cerc-communityengagement__ch001__ck000",
+    "_source_slug": "cerc-communityengagement",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "How can we ensure our crisis communication plan is effective for vulnerable populations?",
+    "answer": "Segment your audience and tailor messaging to address specific concerns (e.g., elderly, low-income, non-English speakers). Use multiple communication channels (e.g., social media, flyers, community workshops) to reach those who may not have access to emergency alerts.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "community-resilience-preparation",
+      "natural_disaster"
+    ],
+    "source_scenario_id": "community-resilience-preparation",
+    "common_mistake": "Assuming a one-size-fits-all approach to communication, which excludes vulnerable populations.",
+    "_source_chunk_id": "cerc-communityengagement__ch001__ck000",
+    "_source_slug": "cerc-communityengagement",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "What’s the biggest mistake to avoid during the maintenance phase of a crisis?",
+    "answer": "Failing to segment your audience and provide ongoing updates tailored to their specific needs. During this phase, the public has more time to process information but is also more susceptible to rumors, so clear, targeted communication is critical.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "anthrax-scares-in-public-health",
+      "safety"
+    ],
+    "source_scenario_id": "anthrax-scares-in-public-health",
+    "common_mistake": "Using generic messaging for all audiences, which fails to address evolving concerns and allows rumors to spread.",
+    "_source_chunk_id": "cerc-communityengagement__ch001__ck000",
+    "_source_slug": "cerc-communityengagement",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "How can we build trust with the public during a crisis when we don’t have all the answers?",
+    "answer": "Be transparent about what you know and what you’re still investigating. Express empathy for those affected and outline the steps being taken to gather more information. Partner with authoritative sources (e.g., CDC) to enhance credibility.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "anthrax-scares-in-public-health",
+      "safety"
+    ],
+    "source_scenario_id": "anthrax-scares-in-public-health",
+    "common_mistake": "Overpromising certainty before facts are confirmed, which can erode trust if later contradicted.",
+    "_source_chunk_id": "cerc-communityengagement__ch001__ck000",
+    "_source_slug": "cerc-communityengagement",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  }
+]

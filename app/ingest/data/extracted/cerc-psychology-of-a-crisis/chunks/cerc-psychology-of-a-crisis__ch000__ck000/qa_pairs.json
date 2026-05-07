@@ -1,0 +1,152 @@
+[
+  {
+    "question": "What is the first thing we should communicate during the initial phase of a bioterrorism event?",
+    "answer": "Express empathy for those affected, explain the risks clearly, promote immediate protective actions (e.g., shelter-in-place, hygiene measures), and describe ongoing response efforts. This aligns with the CERC principle of addressing both hazard and outrage.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "bioterrorism-pathogen-release-urban-setting",
+      "acute-phase"
+    ],
+    "source_scenario_id": "bioterrorism-pathogen-release-urban-setting",
+    "common_mistake": "Waiting for all facts to be confirmed before issuing any public statements.",
+    "_source_chunk_id": "cerc-psychology-of-a-crisis__ch000__ck000",
+    "_source_slug": "cerc-psychology-of-a-crisis",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "How should we address public panic after a terrorist attack?",
+    "answer": "Coordinate with law enforcement and emergency responders to issue a joint statement confirming the situation, expressing empathy, and providing clear instructions (e.g., evacuation routes, shelter locations). Avoid downplaying risks or providing vague information, as this can exacerbate fear.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "public-panic-after-terrorist-attack",
+      "acute-phase"
+    ],
+    "source_scenario_id": "public-panic-after-terrorist-attack",
+    "common_mistake": "Withholding information to avoid causing panic, which often leads to greater distrust and chaotic behavior.",
+    "_source_chunk_id": "cerc-psychology-of-a-crisis__ch000__ck000",
+    "_source_slug": "cerc-psychology-of-a-crisis",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "What is the Golden Hour Rule, and when should it be applied?",
+    "answer": "The Golden Hour Rule emphasizes rapid, initial communication within the first hour of a crisis to prevent misinformation and manage public panic. It should be applied during the initial phase of any crisis where public panic or misinformation is a risk, such as terrorist attacks or bioterrorism events.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "cerc-rhythm",
+      "golden-hour-rule",
+      "acute-phase"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Waiting for all facts to be confirmed before issuing any public statements.",
+    "_source_chunk_id": "cerc-psychology-of-a-crisis__ch000__ck000",
+    "_source_slug": "cerc-psychology-of-a-crisis",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "How can we balance communicating risks (hazard) with addressing public emotions (outrage) during a radiation leak?",
+    "answer": "Use the Hazard + Outrage Framework: acknowledge public fear while providing clear, actionable steps to reduce anxiety and ensure compliance with safety measures. For example, explain the health risks and protective actions (e.g., evacuation zones, iodine distribution) in a transparent, empathetic manner.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "radiation-risk-communication-emergency",
+      "hazard-outrage-framework"
+    ],
+    "source_scenario_id": "radiation-risk-communication-emergency",
+    "common_mistake": "Focusing solely on technical details without addressing public emotions, leading to distrust and non-compliance.",
+    "_source_chunk_id": "cerc-psychology-of-a-crisis__ch000__ck000",
+    "_source_slug": "cerc-psychology-of-a-crisis",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "What is Message Mapping, and why is it important for crisis communicators?",
+    "answer": "Message Mapping involves pre-developing key messages for anticipated crisis scenarios, ensuring rapid, accurate, and consistent communication during a crisis. It reduces the risk of misinformation and improves public trust by providing communicators with ready-to-use templates for high-pressure situations.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "message-mapping",
+      "preparation-phase"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Developing messages ad-hoc during a crisis, which can lead to inconsistencies and errors.",
+    "_source_chunk_id": "cerc-psychology-of-a-crisis__ch000__ck000",
+    "_source_slug": "cerc-psychology-of-a-crisis",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "How should we handle rumors during a West Nile virus outbreak?",
+    "answer": "Monitor social media and other channels for misinformation, quickly identify false claims, and issue corrections or clarifications to prevent their spread. For example, debunk myths about transmission methods (e.g., 'mosquitoes can spread the virus through swimming pools') with a joint statement from the CDC and local health departments.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "west-nile-virus-epidemic",
+      "rumor-debunking-protocol",
+      "maintenance-phase"
+    ],
+    "source_scenario_id": "west-nile-virus-epidemic",
+    "common_mistake": "Ignoring rumors, assuming they will dissipate on their own without intervention.",
+    "_source_chunk_id": "cerc-psychology-of-a-crisis__ch000__ck000",
+    "_source_slug": "cerc-psychology-of-a-crisis",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "What are the four phases of the CERC Rhythm, and how do they guide communication efforts?",
+    "answer": "The four phases are preparation, initial, maintenance, and resolution. During preparation, communicators draft messages and develop plans. In the initial phase, they express empathy, explain risks, and promote action. During maintenance, they address ongoing risks and debunk rumors. In the resolution phase, they motivate the public to stay vigilant and discuss lessons learned.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "cerc-rhythm",
+      "preparation-phase",
+      "initial-phase",
+      "maintenance-phase",
+      "resolution-phase"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Applying a one-size-fits-all communication strategy without adapting to the evolving phases of the crisis.",
+    "_source_chunk_id": "cerc-psychology-of-a-crisis__ch000__ck000",
+    "_source_slug": "cerc-psychology-of-a-crisis",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "Why is community engagement important during the maintenance phase of a crisis?",
+    "answer": "Community engagement empowers affected communities to make informed decisions, take protective actions, and share accurate information with their networks. This builds trust, improves compliance with safety measures, and reduces the spread of misinformation. For example, host town hall meetings during a West Nile virus outbreak to address concerns and provide prevention tips.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "west-nile-virus-epidemic",
+      "community-engagement",
+      "maintenance-phase"
+    ],
+    "source_scenario_id": "west-nile-virus-epidemic",
+    "common_mistake": "Treating the public as passive recipients of information rather than active participants in crisis response.",
+    "_source_chunk_id": "cerc-psychology-of-a-crisis__ch000__ck000",
+    "_source_slug": "cerc-psychology-of-a-crisis",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  }
+]

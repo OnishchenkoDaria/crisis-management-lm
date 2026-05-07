@@ -1,0 +1,111 @@
+[
+  {
+    "name": "Golden Hour Rule",
+    "slug": "golden-hour-rule",
+    "description": "The first 48 hours of a crisis are critical for shaping public perception and response. Prioritize rapid, accurate, and coordinated communication during this window to prevent misinformation and build trust.",
+    "when_to_apply": "Apply during the acute phase of a crisis, particularly in the first 48 hours, to ensure timely and effective communication.",
+    "example": "Within 2 hours of verifying a public health emergency, notify leadership, activate the crisis plan’s notification list, and issue a preliminary statement to the media acknowledging the situation and outlining next steps.",
+    "anti_pattern": "Delaying communication until all facts are confirmed, even if it means waiting hours or days. This allows misinformation to spread and erodes public trust.",
+    "crisis_types": [
+      "media",
+      "safety",
+      "operational",
+      "natural_disaster",
+      "internal"
+    ],
+    "_source_chunk_id": "cerc-crisis-communication-plans__ch000__ck000",
+    "_source_slug": "cerc-crisis-communication-plans",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Be First, Be Right, Be Credible",
+    "slug": "be-first-be-right-be-credible",
+    "description": "A core principle of crisis communication is to provide timely, accurate, and credible information to the public and media. This principle helps control the narrative and build trust during a crisis.",
+    "when_to_apply": "Apply whenever engaging with the media or public during a crisis, especially in the acute or containment phases.",
+    "example": "Issue a statement to the media within the first hour of a crisis, acknowledging the situation, expressing empathy, and committing to providing updates as more information becomes available.",
+    "anti_pattern": "Waiting for all facts to be confirmed before issuing any statements, which allows misinformation to spread and undermines credibility.",
+    "crisis_types": [
+      "media",
+      "safety",
+      "operational",
+      "reputational",
+      "natural_disaster"
+    ],
+    "_source_chunk_id": "cerc-crisis-communication-plans__ch000__ck000",
+    "_source_slug": "cerc-crisis-communication-plans",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Pre-Cleared Facts and Empathy",
+    "slug": "pre-cleared-facts-and-empathy",
+    "description": "During a crisis, provide pre-cleared facts to the media and public while acknowledging the uncertainty and expressing empathy for those affected. This balances transparency with accuracy.",
+    "when_to_apply": "Apply when issuing statements or responding to media inquiries during the acute or containment phases of a crisis.",
+    "example": "In a public health emergency, state: 'We are aware of the situation and are working to gather more information. We understand the concern and will provide updates as soon as possible.'",
+    "anti_pattern": "Speculating about the cause or extent of the crisis, which can lead to misinformation and loss of credibility.",
+    "crisis_types": [
+      "media",
+      "safety",
+      "operational",
+      "reputational",
+      "natural_disaster"
+    ],
+    "_source_chunk_id": "cerc-crisis-communication-plans__ch000__ck000",
+    "_source_slug": "cerc-crisis-communication-plans",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Joint Information Center (JIC) Coordination",
+    "slug": "jic-coordination",
+    "description": "Establish a Joint Information Center (JIC) to coordinate communication efforts among multiple agencies and stakeholders. This ensures consistent messaging and resource sharing during a crisis.",
+    "when_to_apply": "Apply during the acute or containment phases of a crisis, particularly when multiple agencies are involved in the response.",
+    "example": "Activate the JIC within the first 24 hours of a crisis, bringing together representatives from local, state, and federal agencies to coordinate messaging and media responses.",
+    "anti_pattern": "Allowing each agency to communicate independently without coordination, leading to inconsistent messaging and public confusion.",
+    "crisis_types": [
+      "media",
+      "safety",
+      "operational",
+      "political",
+      "natural_disaster"
+    ],
+    "_source_chunk_id": "cerc-crisis-communication-plans__ch000__ck000",
+    "_source_slug": "cerc-crisis-communication-plans",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Media Call Triage",
+    "slug": "media-call-triage",
+    "description": "Prioritize media inquiries based on urgency and relevance to ensure timely and accurate responses. Use a triage system to categorize calls and allocate resources effectively.",
+    "when_to_apply": "Apply whenever media inquiries are received during a crisis, particularly in the acute or containment phases.",
+    "example": "Use a triage sheet to categorize media calls as 'critical' (respond immediately), 'urgent' (respond within 24 hours), or 'routine' (respond as time allows), ensuring high-priority inquiries are addressed first.",
+    "anti_pattern": "Treating all media inquiries equally without prioritization, leading to delayed responses to critical inquiries and public frustration.",
+    "crisis_types": [
+      "media",
+      "safety",
+      "operational",
+      "reputational"
+    ],
+    "_source_chunk_id": "cerc-crisis-communication-plans__ch000__ck000",
+    "_source_slug": "cerc-crisis-communication-plans",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "book"
+  }
+]

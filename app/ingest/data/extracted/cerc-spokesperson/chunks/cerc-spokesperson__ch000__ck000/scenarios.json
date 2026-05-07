@@ -1,0 +1,24 @@
+[
+  {
+    "scenario_id": "spokesperson-role-in-crisis",
+    "crisis_type": "media",
+    "severity": "high",
+    "context": "A spokesperson must represent an organization during a crisis, balancing transparency, empathy, and credibility while managing media and public expectations. The role is high-pressure and requires clear, consistent messaging.",
+    "key_stakeholders": [
+      "media",
+      "public",
+      "organization leadership",
+      "affected communities",
+      "communication team"
+    ],
+    "initial_trigger": "A crisis event occurs, requiring official communication to the public and media.",
+    "phase": "acute",
+    "_source_chunk_id": "cerc-spokesperson__ch000__ck000",
+    "_source_slug": "cerc-spokesperson",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  }
+]

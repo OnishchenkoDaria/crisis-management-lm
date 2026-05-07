@@ -1,0 +1,182 @@
+[
+  {
+    "decision_id": "bioterrorism-initial-response",
+    "source_scenario_id": "bioterrorism-pathogen-release-urban-setting",
+    "situation": "Initial reports confirm a pathogen release in a major city. Public panic is rising, and misinformation is spreading rapidly.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Issue a joint statement with health officials expressing empathy, explaining risks, and outlining immediate protective actions (e.g., shelter-in-place, hygiene measures).",
+        "consequence": "Reduces panic by providing clear, authoritative guidance and builds trust with the public.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Wait for more definitive data before issuing any public statements to avoid causing unnecessary alarm.",
+        "consequence": "Delays critical information, allowing misinformation to spread and increasing public anxiety.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Focus solely on technical details of the pathogen without addressing public emotions or providing actionable steps.",
+        "consequence": "Fails to address public fear, leading to distrust and potential non-compliance with safety measures.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Delaying communication until all facts are confirmed, which allows rumors and panic to escalate.",
+    "consequence_if_wrong": "Public distrust, non-compliance with safety measures, and potential loss of life due to delayed action.",
+    "rationale": "Expressing empathy and providing clear, actionable steps during the initial phase of a crisis helps manage public emotions and ensures compliance with safety protocols. This aligns with the CERC principle of addressing both hazard and outrage.",
+    "_source_chunk_id": "cerc-psychology-of-a-crisis__ch000__ck000",
+    "_source_slug": "cerc-psychology-of-a-crisis",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "decision_id": "west-nile-virus-communication-strategy",
+    "source_scenario_id": "west-nile-virus-epidemic",
+    "situation": "West Nile virus cases are surging, and media reports are causing public concern. Rumors about transmission methods are spreading.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Launch a multi-channel campaign with CDC and local health departments to provide clear, consistent messaging about prevention (e.g., mosquito control, protective clothing) and debunk myths.",
+        "consequence": "Reduces misinformation, empowers the public to take protective actions, and builds trust in health authorities.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Issue a single press release with technical details about the virus without addressing public concerns or providing prevention tips.",
+        "consequence": "Fails to address public anxiety or provide actionable steps, leading to continued spread of misinformation.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Ignore social media and focus only on traditional media outlets for communication.",
+        "consequence": "Misses opportunities to reach younger audiences and address rumors in real-time, allowing misinformation to persist.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Assuming that a single press release or technical briefing is sufficient to address public concerns during an outbreak.",
+    "consequence_if_wrong": "Continued spread of misinformation, public non-compliance with prevention measures, and increased cases of West Nile virus.",
+    "rationale": "A multi-channel, proactive communication strategy that addresses public concerns and provides clear prevention steps is critical during the containment phase of an epidemic. This aligns with the CERC principle of segmenting audiences and addressing rumors.",
+    "_source_chunk_id": "cerc-psychology-of-a-crisis__ch000__ck000",
+    "_source_slug": "cerc-psychology-of-a-crisis",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "decision_id": "terrorist-attack-public-communication",
+    "source_scenario_id": "public-panic-after-terrorist-attack",
+    "situation": "A terrorist attack has occurred, and the public is in a state of shock and fear. Media outlets are speculating about additional threats, and social media is amplifying panic.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Coordinate with law enforcement and emergency responders to issue a joint statement confirming the situation, expressing empathy, and providing clear instructions (e.g., evacuation routes, shelter locations, and where to seek help).",
+        "consequence": "Calms public fear, provides actionable guidance, and prevents further harm by reducing chaotic behavior.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Avoid making any public statements until all details are confirmed to prevent spreading misinformation.",
+        "consequence": "Leaves the public without guidance, leading to panic-driven behavior and potential secondary incidents.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Focus communication solely on the technical aspects of the investigation without addressing public emotions or providing safety instructions.",
+        "consequence": "Fails to address public fear, leading to distrust and potential non-compliance with safety measures.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Withholding information to avoid causing panic, which often exacerbates fear and leads to uncoordinated public responses.",
+    "consequence_if_wrong": "Public panic, chaotic behavior, and potential loss of life due to lack of clear guidance.",
+    "rationale": "During the acute phase of a terrorist attack, communicators must balance transparency with empathy, providing clear instructions to prevent further harm. This aligns with the CERC principle of addressing both hazard and outrage.",
+    "_source_chunk_id": "cerc-psychology-of-a-crisis__ch000__ck000",
+    "_source_slug": "cerc-psychology-of-a-crisis",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "decision_id": "radiation-leak-public-information",
+    "source_scenario_id": "radiation-risk-communication-emergency",
+    "situation": "A radiation leak has been detected, and the public is demanding information. Misinformation about the severity and health risks is spreading rapidly.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Issue a joint statement with health physicists and local officials explaining the situation, the health risks, and the protective actions being taken (e.g., evacuation zones, iodine distribution).",
+        "consequence": "Provides transparency, reduces panic, and ensures public compliance with safety measures.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Downplay the risks to avoid causing panic, providing vague or overly technical information.",
+        "consequence": "Erodes public trust, leading to non-compliance with safety measures and potential exposure to radiation.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Focus communication solely on the technical details of the radiation leak without addressing public concerns or providing actionable steps.",
+        "consequence": "Fails to address public fear, leading to distrust and potential non-compliance with safety measures.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Downplaying risks to avoid panic, which often leads to greater distrust and non-compliance with safety measures.",
+    "consequence_if_wrong": "Public distrust, non-compliance with evacuation or protective measures, and potential exposure to radiation.",
+    "rationale": "During a radiation emergency, communicators must provide transparent, actionable information to ensure public safety and maintain trust. This aligns with the CERC principle of balancing hazard and outrage.",
+    "_source_chunk_id": "cerc-psychology-of-a-crisis__ch000__ck000",
+    "_source_slug": "cerc-psychology-of-a-crisis",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "decision_id": "mass-violence-incident-media-coordination",
+    "source_scenario_id": "mass-violence-incident-response",
+    "situation": "A mass violence incident has occurred, and media outlets are reporting conflicting information. The public is confused and fearful.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Coordinate with law enforcement and emergency responders to issue a joint statement providing clear, consistent information about the situation, ongoing response efforts, and where to seek help or information.",
+        "consequence": "Reduces confusion, provides clarity, and prevents further harm by guiding public behavior.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Allow media outlets to report independently without providing official guidance or corrections.",
+        "consequence": "Leads to conflicting information, public confusion, and potential unsafe behavior.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Focus communication solely on the emotional impact of the incident without providing actionable information or updates on the response.",
+        "consequence": "Fails to address public need for clear guidance, leading to distrust and potential unsafe behavior.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Allowing media outlets to operate independently without providing official guidance or corrections, leading to conflicting information.",
+    "consequence_if_wrong": "Public confusion, distrust in authorities, and potential unsafe behavior during a critical incident.",
+    "rationale": "During a mass violence incident, coordinated, clear communication is essential to guide public behavior, reduce confusion, and maintain trust. This aligns with the CERC principle of providing consistent, actionable information.",
+    "_source_chunk_id": "cerc-psychology-of-a-crisis__ch000__ck000",
+    "_source_slug": "cerc-psychology-of-a-crisis",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  }
+]

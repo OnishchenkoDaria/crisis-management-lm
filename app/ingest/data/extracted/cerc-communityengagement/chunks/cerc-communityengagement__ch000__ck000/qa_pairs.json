@@ -1,0 +1,134 @@
+[
+  {
+    "question": "What is the first step I should take when a safety incident triggers public outrage?",
+    "answer": "Initiate two-way dialogue with community leaders and members to listen to their concerns and provide transparent updates. This builds trust and reduces anger, which is critical during the acute phase of a crisis.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "safety",
+      "community engagement",
+      "acute phase"
+    ],
+    "source_scenario_id": "community-outrage-during-emergency",
+    "common_mistake": "Issuing a generic statement without engaging directly with the community.",
+    "_source_chunk_id": "cerc-communityengagement__ch000__ck000",
+    "_source_slug": "cerc-communityengagement",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "Why is it important to address emotional concerns during a safety crisis, even if the technical details are not yet confirmed?",
+    "answer": "Addressing emotional concerns demonstrates empathy and commitment to the community, which helps prevent the escalation of outrage. Technical details alone will not satisfy stakeholders who are upset or fearful.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "safety",
+      "community engagement",
+      "acute phase"
+    ],
+    "source_scenario_id": "community-outrage-during-emergency",
+    "common_mistake": "Waiting for all facts to be confirmed before communicating, which can be perceived as secrecy.",
+    "_source_chunk_id": "cerc-communityengagement__ch000__ck000",
+    "_source_slug": "cerc-communityengagement",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "How can I ensure my communications are effective during a crisis when the community is angry?",
+    "answer": "Use a Community Engagement Framework to establish ongoing, two-way interaction. This involves listening to concerns, providing transparent updates, and collaborating on solutions to build long-term trust.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "safety",
+      "community engagement",
+      "acute phase"
+    ],
+    "source_scenario_id": "community-outrage-during-emergency",
+    "common_mistake": "Relying solely on one-way communication, such as press releases, without engaging in dialogue.",
+    "_source_chunk_id": "cerc-communityengagement__ch000__ck000",
+    "_source_slug": "cerc-communityengagement",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "What is the Golden Hour Rule, and when should I apply it?",
+    "answer": "The Golden Hour Rule states that the first hour after a crisis is critical for initiating communications. Immediate engagement with stakeholders, even if information is incomplete, demonstrates transparency and commitment to addressing concerns. Apply it during the acute phase of a safety, reputational, or operational crisis.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "crisis management",
+      "acute phase",
+      "communication"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Waiting for all facts to be confirmed before communicating, which can be perceived as secrecy or indifference.",
+    "_source_chunk_id": "cerc-communityengagement__ch000__ck000",
+    "_source_slug": "cerc-communityengagement",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "How do I prioritize which stakeholders to engage with during a crisis?",
+    "answer": "Use Stakeholder Mapping to identify and prioritize stakeholders based on their influence, interest, and potential impact on the crisis. This ensures resources are directed toward those who can most affect outcomes.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "stakeholder management",
+      "crisis management"
+    ],
+    "source_scenario_id": null,
+    "common_mistake": "Treating all stakeholders equally without considering their influence or potential impact on the crisis.",
+    "_source_chunk_id": "cerc-communityengagement__ch000__ck000",
+    "_source_slug": "cerc-communityengagement",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "What are the risks of delaying communications until all facts are confirmed?",
+    "answer": "Delaying communications can be perceived as secrecy or indifference, which fuels speculation and mistrust among stakeholders. It may also escalate the crisis by allowing misinformation to spread unchecked.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "crisis management",
+      "communication",
+      "acute phase"
+    ],
+    "source_scenario_id": "community-outrage-during-emergency",
+    "common_mistake": "Assuming that waiting for all facts will prevent mistakes, without considering the perception of secrecy.",
+    "_source_chunk_id": "cerc-communityengagement__ch000__ck000",
+    "_source_slug": "cerc-communityengagement",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "question": "How can I build long-term trust with the community after a crisis?",
+    "answer": "Use a Community Engagement Framework to maintain ongoing, two-way interaction even after the acute phase. This involves listening to concerns, providing transparent updates, and collaborating on solutions to demonstrate commitment to the community's well-being.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "community engagement",
+      "recovery phase",
+      "trust building"
+    ],
+    "source_scenario_id": "community-outrage-during-emergency",
+    "common_mistake": "Discontinuing communications once the immediate crisis is resolved, which can leave lingering mistrust.",
+    "_source_chunk_id": "cerc-communityengagement__ch000__ck000",
+    "_source_slug": "cerc-communityengagement",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  }
+]

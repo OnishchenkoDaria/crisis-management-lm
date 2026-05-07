@@ -4725,3 +4725,221 @@ Building training_samples.jsonl …
 00:43:34  INFO      
 Building training_samples.jsonl …
 00:43:34  INFO        ✓ training_samples.jsonl: 583 samples → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\processed\training_samples.jsonl
+18:33:31  INFO      
+============================================================
+18:33:31  INFO      Processing: CERC_CommunityEngagement.pdf
+18:33:31  INFO      ============================================================
+18:33:31  INFO      Step 1/4  Extracting text and splitting into chunks …
+18:33:33  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+18:33:33  INFO        Found 2 chunks across 2 chapters
+18:33:33  INFO      Step 2/4  Saving chunk manifest …
+18:33:33  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-communityengagement\metadata.json
+18:33:33  INFO      Step 3/4  Running AI extraction …
+18:33:33  INFO        0 chunks already done, 2 remaining
+18:33:33  INFO        [1/2] Processing  cerc-communityengagement__ch000__ck000 (112 tokens, chapter: Conclusion)
+18:33:33  INFO        -> [cerc-communityengagement__ch000__ck000] lang=en tokens=112 | active backends: gemini -> mistral -> groq -> openrouter -> github -> lmstudio
+18:33:36  INFO      AFC is enabled with max remote calls: 10.
+18:33:36  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+18:33:36  WARNING   [gemini] Daily quota exhausted
+18:33:36  INFO        Switching to next backend. Remaining: mistral -> groq -> openrouter -> github -> lmstudio
+18:33:50  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+18:33:52  INFO        [cerc-communityengagement__ch000__ck000] 1 scenarios, 1 decisions, 3 tactics, 7 qa_pairs
+18:33:52  INFO        ✓ completed [cerc-communityengagement__ch000__ck000]: 1 scenarios, 1 decisions, 3 tactics, 7 qa_pairs  [total=12]
+18:33:52  INFO        [2/2] Processing  cerc-communityengagement__ch001__ck000 (489 tokens, chapter: References)
+18:33:52  INFO        -> [cerc-communityengagement__ch001__ck000] lang=en tokens=489 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+18:34:18  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+18:34:20  INFO        [cerc-communityengagement__ch001__ck000] 5 scenarios, 5 decisions, 5 tactics, 8 qa_pairs
+18:34:20  INFO        ✓ completed [cerc-communityengagement__ch001__ck000]: 5 scenarios, 5 decisions, 5 tactics, 8 qa_pairs  [total=23]
+18:34:20  INFO      Step 4/4  Merging into processed/ …
+18:34:20  INFO        ✓ merged cerc-communityengagement → processed/: {'scenarios': 6, 'decision_nodes': 6, 'tactics': 8, 'qa_pairs': 15, 'rag_chunks': 2}
+18:34:20  INFO        Done: {'scenarios': 6, 'decision_nodes': 6, 'tactics': 8, 'qa_pairs': 15, 'rag_chunks': 2}
+18:34:20  INFO      
+============================================================
+18:34:20  INFO      Processing: CERC_Crisis_Communication_Plans.pdf
+18:34:20  INFO      ============================================================
+18:34:20  INFO      Step 1/4  Extracting text and splitting into chunks …
+18:34:29  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+18:34:29  INFO        Found 3 chunks across 2 chapters
+18:34:29  INFO      Step 2/4  Saving chunk manifest …
+18:34:29  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-crisis-communication-plans\metadata.json
+18:34:29  INFO      Step 3/4  Running AI extraction …
+18:34:29  INFO        0 chunks already done, 3 remaining
+18:34:29  INFO        [1/3] Processing  cerc-crisis-communication-plans__ch000__ck000 (4499 tokens, chapter: Conclusion)
+18:34:29  INFO        -> [cerc-crisis-communication-plans__ch000__ck000] lang=en tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+18:34:53  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+18:34:55  INFO        [cerc-crisis-communication-plans__ch000__ck000] 2 scenarios, 5 decisions, 5 tactics, 8 qa_pairs
+18:34:55  INFO        ✓ completed [cerc-crisis-communication-plans__ch000__ck000]: 2 scenarios, 5 decisions, 5 tactics, 8 qa_pairs  [total=20]
+18:34:55  INFO        [2/3] Processing  cerc-crisis-communication-plans__ch000__ck001 (2059 tokens, chapter: Conclusion)
+18:34:55  INFO        -> [cerc-crisis-communication-plans__ch000__ck001] lang=en tokens=2059 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+18:35:26  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+18:35:26  WARNING   [mistral] JSON parse error: Expecting ',' delimiter: line 1 column 7011 (char 7010) | raw: {"scenarios": [{"scenario_id": "media-inquiry-surge-during-crisis", "crisis_type": "media", "severity": "high", "context": "A sudden surge in media inquiries during an ongoing crisis overwhelms the co
+18:35:58  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+18:35:58  WARNING   [mistral] JSON parse error: Expecting ',' delimiter: line 1 column 7796 (char 7795) | raw: {"scenarios": [{"scenario_id": "media-inquiry-surge-during-crisis", "crisis_type": "media", "severity": "high", "context": "A sudden surge in media inquiries during an ongoing crisis overwhelms the co
+18:36:29  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+18:36:32  INFO        [cerc-crisis-communication-plans__ch000__ck001] 5 scenarios, 5 decisions, 7 tactics, 8 qa_pairs
+18:36:32  INFO        ✓ completed [cerc-crisis-communication-plans__ch000__ck001]: 5 scenarios, 5 decisions, 7 tactics, 8 qa_pairs  [total=25]
+18:36:32  INFO        [3/3] Processing  cerc-crisis-communication-plans__ch001__ck000 (963 tokens, chapter: References)
+18:36:32  INFO        -> [cerc-crisis-communication-plans__ch001__ck000] lang=en tokens=963 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+18:36:32  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+18:36:34  INFO        [cerc-crisis-communication-plans__ch001__ck000] 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+18:36:34  INFO        ✓ completed [cerc-crisis-communication-plans__ch001__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+18:36:34  INFO      Step 4/4  Merging into processed/ …
+18:36:34  INFO        ✓ merged cerc-crisis-communication-plans → processed/: {'scenarios': 7, 'decision_nodes': 10, 'tactics': 12, 'qa_pairs': 16, 'rag_chunks': 3}
+18:36:34  INFO        Done: {'scenarios': 7, 'decision_nodes': 10, 'tactics': 12, 'qa_pairs': 16, 'rag_chunks': 3}
+18:36:34  INFO      
+============================================================
+18:36:34  INFO      Processing: CERC_Introduction.pdf
+18:36:34  INFO      ============================================================
+18:36:34  INFO      Step 1/4  Extracting text and splitting into chunks …
+18:36:37  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+18:36:37  INFO        Found 1 chunks across 1 chapters
+18:36:37  INFO      Step 2/4  Saving chunk manifest …
+18:36:37  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-introduction\metadata.json
+18:36:37  INFO      Step 3/4  Running AI extraction …
+18:36:37  INFO        0 chunks already done, 1 remaining
+18:36:37  INFO        [1/1] Processing  cerc-introduction__ch000__ck000 (1337 tokens, chapter: References)
+18:36:37  INFO        -> [cerc-introduction__ch000__ck000] lang=en tokens=1337 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+18:37:04  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+18:37:06  INFO        [cerc-introduction__ch000__ck000] 5 scenarios, 4 decisions, 5 tactics, 8 qa_pairs
+18:37:06  INFO        ✓ completed [cerc-introduction__ch000__ck000]: 5 scenarios, 4 decisions, 5 tactics, 8 qa_pairs  [total=22]
+18:37:06  INFO      Step 4/4  Merging into processed/ …
+18:37:06  INFO        ✓ merged cerc-introduction → processed/: {'scenarios': 5, 'decision_nodes': 4, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+18:37:06  INFO        Done: {'scenarios': 5, 'decision_nodes': 4, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+18:37:06  INFO      
+============================================================
+18:37:06  INFO      Processing: CERC_Messages_and_Audiences.pdf
+18:37:06  INFO      ============================================================
+18:37:06  INFO      Step 1/4  Extracting text and splitting into chunks …
+18:37:08  INFO        Sections after merge: 2 (was 3, merged 1 tiny sections)
+18:37:08  INFO        Found 2 chunks across 2 chapters
+18:37:08  INFO      Step 2/4  Saving chunk manifest …
+18:37:08  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-messages-and-audiences\metadata.json
+18:37:08  INFO      Step 3/4  Running AI extraction …
+18:37:08  INFO        0 chunks already done, 2 remaining
+18:37:08  INFO        [1/2] Processing  cerc-messages-and-audiences__ch000__ck000 (3856 tokens, chapter: Conclusion)
+18:37:08  INFO        -> [cerc-messages-and-audiences__ch000__ck000] lang=en tokens=3856 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+18:37:32  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+18:37:34  INFO        [cerc-messages-and-audiences__ch000__ck000] 4 scenarios, 5 decisions, 7 tactics, 8 qa_pairs
+18:37:34  INFO        ✓ completed [cerc-messages-and-audiences__ch000__ck000]: 4 scenarios, 5 decisions, 7 tactics, 8 qa_pairs  [total=24]
+18:37:34  INFO        [2/2] Processing  cerc-messages-and-audiences__ch001__ck000 (711 tokens, chapter: References)
+18:37:34  INFO        -> [cerc-messages-and-audiences__ch001__ck000] lang=en tokens=711 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+18:37:49  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+18:37:51  INFO        [cerc-messages-and-audiences__ch001__ck000] 2 scenarios, 2 decisions, 3 tactics, 8 qa_pairs
+18:37:51  INFO        ✓ completed [cerc-messages-and-audiences__ch001__ck000]: 2 scenarios, 2 decisions, 3 tactics, 8 qa_pairs  [total=15]
+18:37:51  INFO      Step 4/4  Merging into processed/ …
+18:37:51  INFO        ✓ merged cerc-messages-and-audiences → processed/: {'scenarios': 6, 'decision_nodes': 7, 'tactics': 10, 'qa_pairs': 16, 'rag_chunks': 2}
+18:37:51  INFO        Done: {'scenarios': 6, 'decision_nodes': 7, 'tactics': 10, 'qa_pairs': 16, 'rag_chunks': 2}
+18:37:51  INFO      
+============================================================
+18:37:51  INFO      Processing: CERC_Psychology_of_a_Crisis.pdf
+18:37:51  INFO      ============================================================
+18:37:51  INFO      Step 1/4  Extracting text and splitting into chunks …
+18:37:54  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+18:37:54  INFO        Found 1 chunks across 1 chapters
+18:37:54  INFO      Step 2/4  Saving chunk manifest …
+18:37:54  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-psychology-of-a-crisis\metadata.json
+18:37:54  INFO      Step 3/4  Running AI extraction …
+18:37:54  INFO        0 chunks already done, 1 remaining
+18:37:54  INFO        [1/1] Processing  cerc-psychology-of-a-crisis__ch000__ck000 (1341 tokens, chapter: References)
+18:37:54  INFO        -> [cerc-psychology-of-a-crisis__ch000__ck000] lang=en tokens=1341 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+18:38:26  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+18:38:28  INFO        [cerc-psychology-of-a-crisis__ch000__ck000] 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs
+18:38:28  INFO        ✓ completed [cerc-psychology-of-a-crisis__ch000__ck000]: 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs  [total=24]
+18:38:28  INFO      Step 4/4  Merging into processed/ …
+18:38:28  INFO        ✓ merged cerc-psychology-of-a-crisis → processed/: {'scenarios': 5, 'decision_nodes': 5, 'tactics': 6, 'qa_pairs': 8, 'rag_chunks': 1}
+18:38:28  INFO        Done: {'scenarios': 5, 'decision_nodes': 5, 'tactics': 6, 'qa_pairs': 8, 'rag_chunks': 1}
+18:38:28  INFO      
+============================================================
+18:38:28  INFO      Processing: CERC_Spokesperson.pdf
+18:38:28  INFO      ============================================================
+18:38:28  INFO      Step 1/4  Extracting text and splitting into chunks …
+18:38:31  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+18:38:31  INFO        Found 2 chunks across 2 chapters
+18:38:31  INFO      Step 2/4  Saving chunk manifest …
+18:38:31  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-spokesperson\metadata.json
+18:38:31  INFO      Step 3/4  Running AI extraction …
+18:38:31  INFO        0 chunks already done, 2 remaining
+18:38:31  INFO        [1/2] Processing  cerc-spokesperson__ch000__ck000 (613 tokens, chapter: Conclusion)
+18:38:31  INFO        -> [cerc-spokesperson__ch000__ck000] lang=en tokens=613 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+18:38:51  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+18:38:53  INFO        [cerc-spokesperson__ch000__ck000] 1 scenarios, 3 decisions, 4 tactics, 8 qa_pairs
+18:38:54  INFO        ✓ completed [cerc-spokesperson__ch000__ck000]: 1 scenarios, 3 decisions, 4 tactics, 8 qa_pairs  [total=16]
+18:38:54  INFO        [2/2] Processing  cerc-spokesperson__ch001__ck000 (728 tokens, chapter: References)
+18:38:54  INFO        -> [cerc-spokesperson__ch001__ck000] lang=en tokens=728 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+18:38:54  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+18:38:56  INFO        [cerc-spokesperson__ch001__ck000] 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+18:38:56  INFO        ✓ completed [cerc-spokesperson__ch001__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+18:38:56  INFO      Step 4/4  Merging into processed/ …
+18:38:56  INFO        ✓ merged cerc-spokesperson → processed/: {'scenarios': 1, 'decision_nodes': 3, 'tactics': 4, 'qa_pairs': 8, 'rag_chunks': 2}
+18:38:56  INFO        Done: {'scenarios': 1, 'decision_nodes': 3, 'tactics': 4, 'qa_pairs': 8, 'rag_chunks': 2}
+18:38:56  INFO      
+============================================================
+18:38:56  INFO      Processing: CERC_Working_with_the_Media.pdf
+18:38:56  INFO      ============================================================
+18:38:56  INFO      Step 1/4  Extracting text and splitting into chunks …
+18:39:01  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+18:39:01  INFO        Found 2 chunks across 2 chapters
+18:39:01  INFO      Step 2/4  Saving chunk manifest …
+18:39:01  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-working-with-the-media\metadata.json
+18:39:01  INFO      Step 3/4  Running AI extraction …
+18:39:01  INFO        2 chunks already done, 0 remaining
+18:39:01  INFO        [1/2] SKIP (cached)  cerc-working-with-the-media__ch000__ck000
+18:39:01  INFO        [2/2] SKIP (cached)  cerc-working-with-the-media__ch001__ck000
+18:39:01  INFO      Step 4/4  Merging into processed/ …
+18:39:01  INFO        ✓ merged cerc-working-with-the-media → processed/: {'scenarios': 7, 'decision_nodes': 7, 'tactics': 8, 'qa_pairs': 15, 'rag_chunks': 2}
+18:39:01  INFO        Done: {'scenarios': 7, 'decision_nodes': 7, 'tactics': 8, 'qa_pairs': 15, 'rag_chunks': 2}
+18:39:01  INFO      
+============================================================
+18:39:01  INFO      Processing: Crisis_management_Planning_for_the_inevitable.pdf
+18:39:01  INFO      ============================================================
+18:39:01  INFO      Step 1/4  Extracting text and splitting into chunks …
+18:39:02  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+18:39:02  INFO        Found 1 chunks across 1 chapters
+18:39:02  INFO      Step 2/4  Saving chunk manifest …
+18:39:02  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\crisis-management-planning-for-the-inevitable\metadata.json
+18:39:02  INFO      Step 3/4  Running AI extraction …
+18:39:02  INFO        0 chunks already done, 1 remaining
+18:39:02  INFO        [1/1] Processing  crisis-management-planning-for-the-inevitable__ch000__ck000 (599 tokens, chapter: References)
+18:39:02  INFO        -> [crisis-management-planning-for-the-inevitable__ch000__ck000] lang=en tokens=599 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+18:39:03  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+18:39:05  INFO        [crisis-management-planning-for-the-inevitable__ch000__ck000] 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+18:39:05  INFO        ✓ completed [crisis-management-planning-for-the-inevitable__ch000__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+18:39:05  INFO      Step 4/4  Merging into processed/ …
+18:39:05  INFO        ✓ merged crisis-management-planning-for-the-inevitable → processed/: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 0, 'qa_pairs': 0, 'rag_chunks': 1}
+18:39:05  INFO        Done: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 0, 'qa_pairs': 0, 'rag_chunks': 1}
+18:39:05  INFO      
+============================================================
+18:39:05  INFO      Processing: Збірка_семінар_права-людини_2023.pdf
+18:39:05  INFO      ============================================================
+18:39:05  INFO      Step 1/4  Extracting text and splitting into chunks …
+18:39:37  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+18:39:37  INFO        Found 19 chunks across 2 chapters
+18:39:37  INFO      Step 2/4  Saving chunk manifest …
+18:39:37  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\zbirka-seminar-prava-liudyny-2023\metadata.json
+18:39:37  INFO      Step 3/4  Running AI extraction …
+18:39:37  INFO        19 chunks already done, 0 remaining
+18:39:37  INFO        [1/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck000
+18:39:37  INFO        [2/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck001
+18:39:37  INFO        [3/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck002
+18:39:37  INFO        [4/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck003
+18:39:37  INFO        [5/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck004
+18:39:37  INFO        [6/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck005
+18:39:37  INFO        [7/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck006
+18:39:37  INFO        [8/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck007
+18:39:37  INFO        [9/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck008
+18:39:37  INFO        [10/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck009
+18:39:37  INFO        [11/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck010
+18:39:37  INFO        [12/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck011
+18:39:37  INFO        [13/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck012
+18:39:37  INFO        [14/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck013
+18:39:37  INFO        [15/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck014
+18:39:37  INFO        [16/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck015
+18:39:37  INFO        [17/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck016
+18:39:37  INFO        [18/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch001__ck000
+18:39:37  INFO        [19/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch001__ck001
+18:39:37  INFO      Step 4/4  Merging into processed/ …
+18:39:38  INFO        ✓ merged zbirka-seminar-prava-liudyny-2023 → processed/: {'scenarios': 102, 'decision_nodes': 101, 'tactics': 117, 'qa_pairs': 173, 'rag_chunks': 19}
+18:39:38  INFO        Done: {'scenarios': 102, 'decision_nodes': 101, 'tactics': 117, 'qa_pairs': 173, 'rag_chunks': 19}
+18:39:38  INFO      
+Building training_samples.jsonl …
+18:39:38  INFO        ✓ training_samples.jsonl: 842 samples → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\processed\training_samples.jsonl

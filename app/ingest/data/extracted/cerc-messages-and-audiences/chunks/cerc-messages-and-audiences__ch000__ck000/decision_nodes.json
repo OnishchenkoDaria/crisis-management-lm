@@ -1,0 +1,152 @@
+[
+  {
+    "decision_id": "segment-messages-by-audience-needs",
+    "source_scenario_id": "emergency-communication-audience-segmentation",
+    "situation": "You are crafting emergency messages for multiple stakeholder groups with varying priorities and concerns.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Segment messages by audience groups (e.g., directly affected, responders, civic leaders) and tailor content to their specific needs.",
+        "consequence": "Ensures relevance and clarity, increasing the likelihood of message acceptance and action.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Use a generic message for all audiences to simplify communication.",
+        "consequence": "May lead to confusion or inaction, as generic messages often fail to address specific concerns or risks.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Assuming all audiences have the same concerns and using a one-size-fits-all message.",
+    "consequence_if_wrong": "Messages may be ignored or misunderstood, leading to delayed or incorrect actions by stakeholders.",
+    "rationale": "Different audiences have distinct relationships to the emergency (e.g., personal safety vs. professional responsibilities). Tailoring messages to these needs ensures comprehension and relevance.",
+    "_source_chunk_id": "cerc-messages-and-audiences__ch000__ck000",
+    "_source_slug": "cerc-messages-and-audiences",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "decision_id": "adapt-messages-for-cultural-groups",
+    "source_scenario_id": "cultural-message-adaptation-in-emergency",
+    "situation": "You are developing messages for a culturally diverse community during an emergency.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Consult cultural agents or gatekeepers to adapt messages for cultural sensitivity and comprehension.",
+        "consequence": "Increases trust and ensures messages are understood and accepted by the community.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Use standard messaging without cultural adaptation.",
+        "consequence": "May lead to distrust or misinterpretation, especially if cultural practices or beliefs are misunderstood.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Assuming cultural homogeneity or relying on stereotypes to craft messages.",
+    "consequence_if_wrong": "Messages may be rejected or misinterpreted, leading to non-compliance with safety instructions.",
+    "rationale": "Cultural factors (e.g., risk perception, group vs. individual focus, trusted institutions) significantly influence how messages are received. Adapting messages ensures they resonate with the audience.",
+    "_source_chunk_id": "cerc-messages-and-audiences__ch000__ck000",
+    "_source_slug": "cerc-messages-and-audiences",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "decision_id": "prioritize-speed-and-accuracy-in-messaging",
+    "source_scenario_id": "credibility-and-trust-in-crisis-communication",
+    "situation": "You are preparing to release critical information during an emergency, but not all facts are confirmed.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Release lifesaving information immediately, even if incomplete, and update as facts are confirmed.",
+        "consequence": "Demonstrates responsiveness and saves lives, but requires rapid follow-up to correct any inaccuracies.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Wait until all facts are confirmed before releasing any information.",
+        "consequence": "Delays critical information, potentially leading to preventable harm or loss of trust.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Delaying communication until all details are confirmed, fearing inaccuracies.",
+    "consequence_if_wrong": "Public may perceive the organization as unprepared or unresponsive, eroding trust.",
+    "rationale": "Speed is critical in emergencies to prevent harm. Lifesaving information should be shared immediately, with updates provided as facts are verified.",
+    "_source_chunk_id": "cerc-messages-and-audiences__ch000__ck000",
+    "_source_slug": "cerc-messages-and-audiences",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "decision_id": "gather-and-respond-to-audience-feedback",
+    "source_scenario_id": "audience-feedback-and-message-refinement",
+    "situation": "You notice misinformation spreading about the emergency on social media.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Monitor media and social channels, gather feedback, and adapt messages to address gaps or misinformation.",
+        "consequence": "Ensures messages remain relevant and corrects misinformation, maintaining public trust.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Ignore feedback and continue with the original messaging strategy.",
+        "consequence": "Misinformation may spread unchecked, leading to public confusion or unsafe actions.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Assuming the initial message is sufficient and not monitoring for feedback or misinformation.",
+    "consequence_if_wrong": "Misinformation can undermine safety efforts and damage credibility.",
+    "rationale": "Real-time feedback allows communicators to refine messages, address concerns, and correct misinformation, ensuring the public receives accurate and actionable information.",
+    "_source_chunk_id": "cerc-messages-and-audiences__ch000__ck000",
+    "_source_slug": "cerc-messages-and-audiences",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "decision_id": "use-positive-action-steps-in-messages",
+    "source_scenario_id": null,
+    "situation": "You are crafting a message to instruct the public on protective actions during an emergency.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Frame action steps positively (e.g., 'Boil drinking water' instead of 'Do not drink the water').",
+        "consequence": "Increases clarity and reduces confusion, especially under stress.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Use negative phrasing to instruct actions (e.g., 'Do not drink the water').",
+        "consequence": "May lead to confusion or inaction, as negative instructions are harder to process under stress.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Using negative phrasing to instruct actions, assuming it is clearer.",
+    "consequence_if_wrong": "Public may misinterpret instructions, leading to unsafe actions.",
+    "rationale": "Negative instructions are easily confused or forgotten in high-stress situations. Positive framing ensures clarity and actionability.",
+    "_source_chunk_id": "cerc-messages-and-audiences__ch000__ck000",
+    "_source_slug": "cerc-messages-and-audiences",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  }
+]

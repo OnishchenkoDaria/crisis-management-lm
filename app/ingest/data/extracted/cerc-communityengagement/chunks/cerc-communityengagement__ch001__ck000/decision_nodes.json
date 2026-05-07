@@ -1,0 +1,182 @@
+[
+  {
+    "decision_id": "anthrax-initial-response",
+    "source_scenario_id": "anthrax-scares-in-public-health",
+    "situation": "Public health officials receive reports of suspicious powder incidents in multiple locations, with potential anthrax exposure. Media and public are demanding immediate answers.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Issue a joint statement with CDC/WHO confirming investigation and urging calm while providing basic safety instructions.",
+        "consequence": "Reduces panic but may not fully address public concerns if details are unclear.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Wait for definitive lab results before issuing any statement to avoid misinformation.",
+        "consequence": "Delays critical communication, risking public distrust and further panic.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Hold a press conference with local officials to address concerns and outline next steps.",
+        "consequence": "Provides transparency but may lack authoritative details if lab results are pending.",
+        "is_recommended": true
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Overpromising certainty before lab results are confirmed.",
+    "consequence_if_wrong": "Loss of credibility if later contradicted by facts.",
+    "rationale": "Balances urgency with accuracy by acknowledging the investigation while providing actionable safety guidance. Joint statements with authoritative sources (CDC/WHO) enhance trust.",
+    "_source_chunk_id": "cerc-communityengagement__ch001__ck000",
+    "_source_slug": "cerc-communityengagement",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "decision_id": "postal-workers-internal-communication",
+    "source_scenario_id": "postal-workers-anthrax-reactions",
+    "situation": "Postal workers are anxious and morale is low after confirmed anthrax exposure. HR and management need to address fears while maintaining operations.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Hold a town hall meeting with public health officials to answer questions and provide clear safety protocols.",
+        "consequence": "Reduces anxiety and empowers workers with accurate information, but requires coordination.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Send a generic email with safety guidelines without addressing worker concerns directly.",
+        "consequence": "Fails to acknowledge emotional impact, leading to distrust and reduced productivity.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Implement mandatory counseling sessions without clear communication about safety measures.",
+        "consequence": "Addresses emotional needs but may not resolve operational disruptions or public concerns.",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Assuming written communication is sufficient for addressing emotional distress.",
+    "consequence_if_wrong": "Increased absenteeism and reduced operational efficiency.",
+    "rationale": "Direct, empathetic engagement with workers and authoritative sources (public health officials) builds trust and clarifies safety measures.",
+    "_source_chunk_id": "cerc-communityengagement__ch001__ck000",
+    "_source_slug": "cerc-communityengagement",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "decision_id": "rumor-mitigation-strategy",
+    "source_scenario_id": "rumor-control-during-crisis",
+    "situation": "False rumors about a crisis are spreading rapidly on social media and local news, causing public panic and undermining official response efforts.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Issue a rapid-response fact sheet addressing the rumors and providing verified information.",
+        "consequence": "Corrects misinformation quickly but may not reach all audiences if distribution is limited.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Ignore the rumors and focus on official response efforts.",
+        "consequence": "Allows misinformation to spread unchecked, eroding public trust.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Engage influencers and community leaders to debunk rumors in their networks.",
+        "consequence": "Amplifies corrective messaging but requires time to coordinate and may not address all rumors.",
+        "is_recommended": true
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Dismissing rumors as insignificant without addressing them.",
+    "consequence_if_wrong": "Public panic escalates, complicating crisis response efforts.",
+    "rationale": "Rapid, accurate communication is critical to counteract misinformation. Combining fact sheets with influencer engagement maximizes reach and credibility.",
+    "_source_chunk_id": "cerc-communityengagement__ch001__ck000",
+    "_source_slug": "cerc-communityengagement",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "decision_id": "community-preparation-phase",
+    "source_scenario_id": "community-resilience-preparation",
+    "situation": "A community is preparing for an impending natural disaster, but residents are complacent and underestimating the risks.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Launch a multi-channel campaign (social media, local news, flyers) with clear evacuation routes and safety tips.",
+        "consequence": "Increases awareness but may not address specific concerns of vulnerable populations.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Rely solely on emergency alert systems to communicate risks.",
+        "consequence": "Misses audiences without access to alerts, such as elderly or low-income residents.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Host community workshops with emergency services to practice evacuation drills and answer questions.",
+        "consequence": "Builds trust and practical skills but requires significant resources and coordination.",
+        "is_recommended": true
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Assuming a single communication channel is sufficient for all audiences.",
+    "consequence_if_wrong": "Vulnerable populations remain unprepared, increasing risk during the disaster.",
+    "rationale": "Multi-channel communication ensures broad reach, while workshops provide hands-on engagement to address specific concerns.",
+    "_source_chunk_id": "cerc-communityengagement__ch001__ck000",
+    "_source_slug": "cerc-communityengagement",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "decision_id": "post-crisis-lessons-learned",
+    "source_scenario_id": "lessons-learned-post-crisis",
+    "situation": "The crisis has been resolved, but communicators need to review response efforts and update plans for future emergencies.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Conduct a debrief with all stakeholders to gather feedback and identify gaps in communication.",
+        "consequence": "Provides valuable insights but may be time-consuming and emotionally charged.",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Skip the debrief and focus on updating plans based on internal assumptions.",
+        "consequence": "Misses critical feedback, leading to repeated mistakes in future crises.",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Publish a public report summarizing lessons learned and changes made to communication plans.",
+        "consequence": "Enhances transparency and trust but may require legal review to avoid liability issues.",
+        "is_recommended": true
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Assuming internal review is sufficient without stakeholder input.",
+    "consequence_if_wrong": "Repeated failures in future crises due to unaddressed gaps.",
+    "rationale": "Stakeholder feedback is essential for identifying blind spots and improving future responses. Public transparency builds long-term trust.",
+    "_source_chunk_id": "cerc-communityengagement__ch001__ck000",
+    "_source_slug": "cerc-communityengagement",
+    "_chapter_title": "References",
+    "_chapter_index": 1,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  }
+]

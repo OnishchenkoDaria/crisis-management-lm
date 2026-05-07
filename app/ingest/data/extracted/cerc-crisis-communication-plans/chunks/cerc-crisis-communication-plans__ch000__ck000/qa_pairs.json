@@ -1,0 +1,140 @@
+[
+  {
+    "question": "What is the most critical timeframe for crisis communication, and why?",
+    "answer": "The first 48 hours are the most critical for crisis communication. This is when the public and media are most attentive, and misinformation can spread rapidly. Proactive, timely communication during this window helps control the narrative and build trust.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "first-48-hours-crisis-response"
+    ],
+    "source_scenario_id": "first-48-hours-crisis-response",
+    "common_mistake": "Assuming the crisis communication effort can wait until all facts are confirmed.",
+    "_source_chunk_id": "cerc-crisis-communication-plans__ch000__ck000",
+    "_source_slug": "cerc-crisis-communication-plans",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "book"
+  },
+  {
+    "question": "Why is it important to notify leadership immediately during a crisis, even if the situation is still evolving?",
+    "answer": "Notifying leadership immediately ensures they are aware of the emergency and can begin coordinating the response. This alignment with agency priorities enables a swift and unified response, which is critical for maintaining public trust and controlling the narrative.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "first-48-hours-crisis-response"
+    ],
+    "source_scenario_id": "first-48-hours-crisis-response",
+    "common_mistake": "Waiting for media reports to confirm the emergency before notifying leadership.",
+    "_source_chunk_id": "cerc-crisis-communication-plans__ch000__ck000",
+    "_source_slug": "cerc-crisis-communication-plans",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What are the key elements that should be included in a crisis communication plan?",
+    "answer": "A crisis communication plan should include notification lists, coordination procedures, media response strategies, stakeholder engagement protocols, designated spokespersons, and pre-cleared messaging templates. It should also address resource allocation and operational hours during a crisis.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "crisis-communication-planning"
+    ],
+    "source_scenario_id": "crisis-communication-planning",
+    "common_mistake": "Creating a plan that only addresses internal communication, assuming external coordination will happen organically.",
+    "_source_chunk_id": "cerc-crisis-communication-plans__ch000__ck000",
+    "_source_slug": "cerc-crisis-communication-plans",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How should an agency respond to misinformation during a crisis?",
+    "answer": "Agencies should proactively monitor media and social channels for misinformation and issue corrective statements or fact sheets as needed. Ignoring misinformation allows it to spread, eroding public trust and causing confusion.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "first-48-hours-crisis-response"
+    ],
+    "source_scenario_id": "first-48-hours-crisis-response",
+    "common_mistake": "Assuming the agency’s messaging alone will counteract misinformation without proactive monitoring and correction.",
+    "_source_chunk_id": "cerc-crisis-communication-plans__ch000__ck000",
+    "_source_slug": "cerc-crisis-communication-plans",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What is the 'Be First, Be Right, Be Credible' principle, and how should it be applied during a crisis?",
+    "answer": "This principle emphasizes the importance of providing timely, accurate, and credible information to the public and media. Agencies should issue statements acknowledging the situation, expressing empathy, and committing to providing updates as more information becomes available. Avoid speculation and ensure all messaging is pre-cleared.",
+    "difficulty": "intermediate",
+    "scenario_tags": [
+      "first-48-hours-crisis-response",
+      "be-first-be-right-be-credible"
+    ],
+    "source_scenario_id": "first-48-hours-crisis-response",
+    "common_mistake": "Waiting for all facts to be confirmed before issuing any statements, which allows misinformation to spread.",
+    "_source_chunk_id": "cerc-crisis-communication-plans__ch000__ck000",
+    "_source_slug": "cerc-crisis-communication-plans",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "book"
+  },
+  {
+    "question": "Why is it important to designate a spokesperson during a crisis, and what risks are associated with not doing so?",
+    "answer": "A designated spokesperson ensures consistent, accurate, and empathetic messaging, which is critical for building public trust. Without a designated spokesperson, any available staff member may speak to the media without preparation, leading to inconsistent messaging, speculation, and loss of credibility.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "first-48-hours-crisis-response"
+    ],
+    "source_scenario_id": "first-48-hours-crisis-response",
+    "common_mistake": "Assuming any staff member can speak to the media without proper preparation or designation.",
+    "_source_chunk_id": "cerc-crisis-communication-plans__ch000__ck000",
+    "_source_slug": "cerc-crisis-communication-plans",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "book"
+  },
+  {
+    "question": "What role does the Joint Information Center (JIC) play in crisis communication, and when should it be activated?",
+    "answer": "The JIC coordinates communication efforts among multiple agencies and stakeholders to ensure consistent messaging and resource sharing. It should be activated during the acute or containment phases of a crisis, particularly when multiple agencies are involved in the response.",
+    "difficulty": "expert",
+    "scenario_tags": [
+      "first-48-hours-crisis-response",
+      "jic-coordination"
+    ],
+    "source_scenario_id": "first-48-hours-crisis-response",
+    "common_mistake": "Allowing each agency to communicate independently without coordination, leading to inconsistent messaging.",
+    "_source_chunk_id": "cerc-crisis-communication-plans__ch000__ck000",
+    "_source_slug": "cerc-crisis-communication-plans",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "book"
+  },
+  {
+    "question": "How can a crisis communication plan help an agency avoid common rookie mistakes during a crisis?",
+    "answer": "A well-developed crisis communication plan addresses critical elements like notification lists, coordination procedures, media response strategies, and stakeholder engagement protocols. By following the plan, agencies can avoid mistakes like delayed communication, inconsistent messaging, and lack of coordination with partners.",
+    "difficulty": "basic",
+    "scenario_tags": [
+      "crisis-communication-planning"
+    ],
+    "source_scenario_id": "crisis-communication-planning",
+    "common_mistake": "Attempting to create a plan that answers every possible question in advance, leading to delays and incompleteness.",
+    "_source_chunk_id": "cerc-crisis-communication-plans__ch000__ck000",
+    "_source_slug": "cerc-crisis-communication-plans",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "book"
+  }
+]

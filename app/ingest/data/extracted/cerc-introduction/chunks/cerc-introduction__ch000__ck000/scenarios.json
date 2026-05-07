@@ -1,0 +1,112 @@
+[
+  {
+    "scenario_id": "biological-hazard-outbreak",
+    "crisis_type": "natural_disaster",
+    "severity": "high",
+    "context": "A sudden outbreak of a highly contagious disease (e.g., Ebola or pandemic flu) threatens public health, requiring rapid communication to prevent panic and ensure compliance with safety measures.",
+    "key_stakeholders": [
+      "Public health officials",
+      "Local hospitals",
+      "Community leaders",
+      "Media outlets",
+      "General public"
+    ],
+    "initial_trigger": "Confirmation of a disease outbreak with potential for rapid spread",
+    "phase": "acute",
+    "_source_chunk_id": "cerc-introduction__ch000__ck000",
+    "_source_slug": "cerc-introduction",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "scenario_id": "cyber-attack-national-significance",
+    "crisis_type": "operational",
+    "severity": "critical",
+    "context": "A cyber incident disrupts critical infrastructure (e.g., power grid, financial systems), causing widespread confusion and potential safety risks. Clear, timely communication is essential to manage public response.",
+    "key_stakeholders": [
+      "Cybersecurity teams",
+      "Government agencies",
+      "IT departments",
+      "Media",
+      "Affected businesses"
+    ],
+    "initial_trigger": "Detection of a cyberattack targeting national infrastructure",
+    "phase": "acute",
+    "_source_chunk_id": "cerc-introduction__ch000__ck000",
+    "_source_slug": "cerc-introduction",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "scenario_id": "natural-disaster-mass-casualty",
+    "crisis_type": "natural_disaster",
+    "severity": "critical",
+    "context": "A severe natural disaster (e.g., earthquake, hurricane) causes mass casualties and infrastructure damage. Communication must prioritize safety instructions, resource allocation, and emotional support.",
+    "key_stakeholders": [
+      "Emergency responders",
+      "Local government",
+      "Media",
+      "Survivors",
+      "Volunteer organizations"
+    ],
+    "initial_trigger": "Occurrence of a natural disaster with immediate casualties",
+    "phase": "acute",
+    "_source_chunk_id": "cerc-introduction__ch000__ck000",
+    "_source_slug": "cerc-introduction",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "scenario_id": "radiological-emergency-release",
+    "crisis_type": "safety",
+    "severity": "critical",
+    "context": "A release of radioactive material (e.g., nuclear accident) poses immediate health risks. Communication must address evacuation, shelter-in-place orders, and public reassurance.",
+    "key_stakeholders": [
+      "Nuclear regulatory bodies",
+      "Local authorities",
+      "Media",
+      "Affected communities",
+      "Healthcare providers"
+    ],
+    "initial_trigger": "Detection of a radiological hazard or accident",
+    "phase": "acute",
+    "_source_chunk_id": "cerc-introduction__ch000__ck000",
+    "_source_slug": "cerc-introduction",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "scenario_id": "food-agricultural-contamination",
+    "crisis_type": "safety",
+    "severity": "high",
+    "context": "Contamination of food or agricultural products (e.g., E. coli, mad cow disease) threatens public health. Rapid, transparent communication is needed to prevent misinformation and ensure compliance with recalls.",
+    "key_stakeholders": [
+      "Food safety agencies",
+      "Farmers/producers",
+      "Consumers",
+      "Media",
+      "Health departments"
+    ],
+    "initial_trigger": "Confirmation of contamination in food supply chain",
+    "phase": "acute",
+    "_source_chunk_id": "cerc-introduction__ch000__ck000",
+    "_source_slug": "cerc-introduction",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  }
+]

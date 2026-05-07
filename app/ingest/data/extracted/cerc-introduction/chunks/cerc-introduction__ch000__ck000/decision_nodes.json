@@ -1,0 +1,146 @@
+[
+  {
+    "decision_id": "communicate-empathy-first",
+    "source_scenario_id": null,
+    "situation": "A crisis has just occurred, and the public is confused or panicking. Initial communication must address emotional needs while providing critical information.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Express empathy, acknowledge fears, and provide clear, actionable steps",
+        "consequence": "Builds trust and reduces panic, increasing compliance with safety measures",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Focus solely on technical details without addressing emotions",
+        "consequence": "Public may feel dismissed, leading to distrust and non-compliance",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Delay communication until all facts are confirmed",
+        "consequence": "Allows misinformation to spread, worsening the crisis",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Overloading the public with too much technical information too soon",
+    "consequence_if_wrong": "Loss of public trust and increased panic",
+    "rationale": "Empathy and clarity are foundational in crisis communication. Addressing emotions first validates concerns and makes the public more receptive to subsequent instructions.",
+    "_source_chunk_id": "cerc-introduction__ch000__ck000",
+    "_source_slug": "cerc-introduction",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "decision_id": "segment-audiences-for-tailored-messages",
+    "source_scenario_id": null,
+    "situation": "During the maintenance phase of a crisis, different groups (e.g., vulnerable populations, media, general public) require distinct messaging to address their specific needs and concerns.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Develop tailored messages for each key stakeholder group",
+        "consequence": "Ensures relevance and effectiveness, reducing confusion and misinformation",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Use a one-size-fits-all message for all audiences",
+        "consequence": "May miss critical nuances, leading to ineffective communication or backlash",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Focus only on the most vocal or visible groups",
+        "consequence": "Neglects less visible but equally important groups, exacerbating inequities",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Assuming all audiences have the same needs and concerns",
+    "consequence_if_wrong": "Ineffective communication, public frustration, and potential harm to vulnerable groups",
+    "rationale": "Tailored messaging addresses the unique risks and concerns of each group, improving compliance and trust.",
+    "_source_chunk_id": "cerc-introduction__ch000__ck000",
+    "_source_slug": "cerc-introduction",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "decision_id": "evaluate-and-revise-communication-plans",
+    "source_scenario_id": null,
+    "situation": "After a crisis has been contained, it is critical to assess the effectiveness of communication efforts and identify areas for improvement.",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Conduct post-crisis evaluations with community feedback and revise plans accordingly",
+        "consequence": "Strengthens future responses and builds long-term trust with stakeholders",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Skip evaluation and move directly to the next crisis",
+        "consequence": "Missed opportunities to improve and potential repetition of mistakes",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Rely solely on internal feedback without community input",
+        "consequence": "Lacks external perspective, leading to blind spots in future planning",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Assuming the communication plan was effective without verification",
+    "consequence_if_wrong": "Repeated mistakes in future crises, eroding public trust",
+    "rationale": "Post-crisis evaluation ensures continuous improvement and adaptability in communication strategies.",
+    "_source_chunk_id": "cerc-introduction__ch000__ck000",
+    "_source_slug": "cerc-introduction",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "decision_id": "promote-community-empowerment",
+    "source_scenario_id": null,
+    "situation": "During the resolution phase of a crisis, the public needs motivation to stay vigilant and take preventive actions (e.g., vaccination, preparedness).",
+    "options": [
+      {
+        "id": "opt-a",
+        "action": "Encourage community members to make decisions that impact their health and share lessons learned",
+        "consequence": "Fosters resilience and long-term preparedness, reducing future risks",
+        "is_recommended": true
+      },
+      {
+        "id": "opt-b",
+        "action": "Provide generic reassurance without actionable steps",
+        "consequence": "Public may remain complacent, increasing vulnerability to future crises",
+        "is_recommended": false
+      },
+      {
+        "id": "opt-c",
+        "action": "Focus only on top-down directives without community input",
+        "consequence": "Misses opportunities to leverage local knowledge and resources",
+        "is_recommended": false
+      }
+    ],
+    "recommended_action_id": "opt-a",
+    "common_rookie_mistake": "Assuming the public will automatically follow directives without motivation",
+    "consequence_if_wrong": "Low compliance with safety measures, increasing risk of recurrence",
+    "rationale": "Empowering communities to take ownership of their health fosters resilience and sustainable preparedness.",
+    "_source_chunk_id": "cerc-introduction__ch000__ck000",
+    "_source_slug": "cerc-introduction",
+    "_chapter_title": "References",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  }
+]

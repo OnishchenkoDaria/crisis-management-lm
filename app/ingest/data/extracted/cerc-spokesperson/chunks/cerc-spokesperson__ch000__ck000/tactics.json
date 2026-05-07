@@ -1,0 +1,88 @@
+[
+  {
+    "name": "Golden Hour Rule",
+    "slug": "golden-hour-rule",
+    "description": "Respond to a crisis within the first hour to establish control of the narrative and prevent misinformation from spreading. This involves preparing key messages, designating a spokesperson, and coordinating with the communication team.",
+    "when_to_apply": "Immediately after a crisis event is identified. Delays can allow rumors and speculation to fill the information void.",
+    "example": "A chemical spill occurs at a manufacturing plant. The spokesperson releases a preliminary statement within 30 minutes, acknowledging the incident, expressing concern for affected individuals, and committing to regular updates.",
+    "anti_pattern": "Waiting for all facts to be confirmed before issuing any statement, which can take hours or days and allows misinformation to dominate.",
+    "crisis_types": [
+      "media",
+      "safety",
+      "operational",
+      "natural_disaster"
+    ],
+    "_source_chunk_id": "cerc-spokesperson__ch000__ck000",
+    "_source_slug": "cerc-spokesperson",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "name": "Empathy and Caring Framework",
+    "slug": "empathy-caring-framework",
+    "description": "A structured approach to expressing empathy in crisis communications, focusing on acknowledging emotions, validating concerns, and demonstrating commitment to addressing the issue. This builds trust and credibility with stakeholders.",
+    "when_to_apply": "During all phases of a crisis, especially when addressing affected communities or the public. It is particularly critical in high-severity crises.",
+    "example": "After a data breach exposing customer information, the spokesperson states: 'I know how upsetting this must be for our customers. We are treating this with the utmost urgency and will do everything we can to support those affected.'",
+    "anti_pattern": "Using generic or dismissive language that minimizes the emotional impact of the crisis, such as 'This is a minor issue' or 'Everything is under control.'",
+    "crisis_types": [
+      "reputational",
+      "safety",
+      "media",
+      "natural_disaster",
+      "internal"
+    ],
+    "_source_chunk_id": "cerc-spokesperson__ch000__ck000",
+    "_source_slug": "cerc-spokesperson",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "name": "Message Mapping",
+    "slug": "message-mapping",
+    "description": "A technique for preparing clear, concise, and consistent key messages in advance of a crisis. It involves identifying potential questions, crafting responses, and aligning messages with organizational policies and values.",
+    "when_to_apply": "Pre-crisis, as part of crisis preparedness planning. Also useful during the acute phase to ensure consistency in messaging.",
+    "example": "A healthcare organization prepares message maps for potential crises like disease outbreaks. During a crisis, the spokesperson uses these maps to deliver consistent information about symptoms, prevention, and response efforts.",
+    "anti_pattern": "Improvising messages during a crisis without prior preparation, leading to inconsistent or confusing communication.",
+    "crisis_types": [
+      "media",
+      "safety",
+      "operational",
+      "political",
+      "natural_disaster"
+    ],
+    "_source_chunk_id": "cerc-spokesperson__ch000__ck000",
+    "_source_slug": "cerc-spokesperson",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  },
+  {
+    "name": "Staying on Message",
+    "slug": "staying-on-message",
+    "description": "A tactic to maintain control of the narrative by consistently reinforcing key messages, even when faced with difficult or off-topic questions. This involves bridging techniques to redirect conversations back to critical points.",
+    "when_to_apply": "During media interactions, press conferences, or public statements where the spokesperson must deliver specific information.",
+    "example": "A reporter asks, 'Why did your company ignore safety warnings?' The spokesperson responds: 'What’s important is to remember that our top priority right now is ensuring the safety of everyone involved. We are conducting a full investigation and will share our findings as soon as possible.'",
+    "anti_pattern": "Getting drawn into debates or speculative questions, which can derail the intended message and confuse the audience.",
+    "crisis_types": [
+      "media",
+      "reputational",
+      "political",
+      "operational"
+    ],
+    "_source_chunk_id": "cerc-spokesperson__ch000__ck000",
+    "_source_slug": "cerc-spokesperson",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 0,
+    "_language": "en",
+    "_doc_type": "manual"
+  }
+]

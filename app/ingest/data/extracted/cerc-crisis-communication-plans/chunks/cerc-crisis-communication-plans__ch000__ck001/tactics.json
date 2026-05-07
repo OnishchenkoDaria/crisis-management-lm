@@ -1,0 +1,147 @@
+[
+  {
+    "name": "Golden Hour Rule",
+    "slug": "golden-hour-rule",
+    "description": "The principle that critical decisions and communications must be made within the first hour of a crisis to prevent escalation and maintain public trust. Prioritizes rapid, accurate, and transparent information sharing.",
+    "when_to_apply": "During the acute phase of a crisis, particularly when media inquiries surge or misinformation begins to spread. Ensures timely responses to high-impact events.",
+    "example": "During a chemical spill, the communications team issues a safety alert within 30 minutes of the incident, providing clear evacuation instructions and a hotline for updates.",
+    "anti_pattern": "Delaying responses to gather more information or waiting for approvals, which can lead to public panic or misinformation.",
+    "crisis_types": [
+      "media",
+      "safety",
+      "natural_disaster",
+      "operational"
+    ],
+    "_source_chunk_id": "cerc-crisis-communication-plans__ch000__ck001",
+    "_source_slug": "cerc-crisis-communication-plans",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 1,
+    "_language": "en",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Joint Information Center (JIC) Activation",
+    "slug": "jic-activation",
+    "description": "Establishing a centralized hub for coordinating all public information efforts during a crisis. The JIC ensures consistent messaging across all stakeholders, including media, partners, and the public.",
+    "when_to_apply": "During the acute or containment phases of a crisis, particularly when multiple agencies or teams are involved in the response. Critical for large-scale or multi-jurisdictional events.",
+    "example": "After a hurricane, the JIC coordinates daily briefings with representatives from local government, emergency services, and health officials to provide unified updates.",
+    "anti_pattern": "Allowing individual teams or agencies to communicate independently without coordination, leading to conflicting messages.",
+    "crisis_types": [
+      "media",
+      "natural_disaster",
+      "safety",
+      "political"
+    ],
+    "_source_chunk_id": "cerc-crisis-communication-plans__ch000__ck001",
+    "_source_slug": "cerc-crisis-communication-plans",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 1,
+    "_language": "en",
+    "_doc_type": "book"
+  },
+  {
+    "name": "CERC Principles",
+    "slug": "cerc-principles",
+    "description": "The Crisis and Emergency Risk Communication (CERC) principles guide effective communication during crises. These include being first, accurate, and credible; expressing empathy; and promoting action.",
+    "when_to_apply": "Throughout all phases of a crisis, but particularly during the acute and containment phases. Essential for building and maintaining public trust.",
+    "example": "During a disease outbreak, the communications team uses CERC principles to craft messages that acknowledge public fears, provide clear safety guidelines, and offer reassurance.",
+    "anti_pattern": "Using technical jargon, delaying responses, or providing inconsistent information, which erodes trust and credibility.",
+    "crisis_types": [
+      "media",
+      "safety",
+      "reputational",
+      "natural_disaster"
+    ],
+    "_source_chunk_id": "cerc-crisis-communication-plans__ch000__ck001",
+    "_source_slug": "cerc-crisis-communication-plans",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 1,
+    "_language": "en",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Media Triage",
+    "slug": "media-triage",
+    "description": "Prioritizing media inquiries based on urgency, public impact, and stakeholder needs. Ensures that critical information is communicated first while managing the volume of requests.",
+    "when_to_apply": "During the acute phase of a crisis, particularly when media inquiries surge. Critical for preventing misinformation and maintaining public trust.",
+    "example": "A communications team categorizes media requests into high-priority (e.g., safety updates), medium-priority (e.g., general inquiries), and low-priority (e.g., background questions) and responds accordingly.",
+    "anti_pattern": "Treating all media inquiries equally without assessing urgency, leading to delays in critical updates.",
+    "crisis_types": [
+      "media",
+      "safety",
+      "natural_disaster",
+      "operational"
+    ],
+    "_source_chunk_id": "cerc-crisis-communication-plans__ch000__ck001",
+    "_source_slug": "cerc-crisis-communication-plans",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 1,
+    "_language": "en",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Stakeholder Alignment",
+    "slug": "stakeholder-alignment",
+    "description": "Ensuring that all key stakeholders, including partners, internal teams, and external organizations, receive consistent and accurate information. Prevents misalignment and misinformation from undermining recovery efforts.",
+    "when_to_apply": "During the recovery and post-crisis phases, but also critical during the acute and containment phases for large-scale events. Ensures coordinated efforts.",
+    "example": "A communications team holds a briefing for internal stakeholders to clarify recovery timelines and safety protocols, ensuring everyone is aligned before public updates.",
+    "anti_pattern": "Assuming stakeholders will automatically have accurate information or relying on informal channels for updates.",
+    "crisis_types": [
+      "media",
+      "reputational",
+      "political",
+      "internal"
+    ],
+    "_source_chunk_id": "cerc-crisis-communication-plans__ch000__ck001",
+    "_source_slug": "cerc-crisis-communication-plans",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 1,
+    "_language": "en",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Backup System Activation",
+    "slug": "backup-system-activation",
+    "description": "Activating redundant communication systems (e.g., generators, secondary servers) to ensure continuity of operations during a crisis. Critical for maintaining information flow and stakeholder trust.",
+    "when_to_apply": "During the acute phase of a crisis, particularly when primary systems fail or are overwhelmed. Essential for large-scale or prolonged events.",
+    "example": "During a power outage, the communications team activates backup generators and switches to secondary servers to maintain website functionality and media updates.",
+    "anti_pattern": "Relying solely on primary systems without testing or maintaining backups, leading to prolonged disruptions.",
+    "crisis_types": [
+      "operational",
+      "media",
+      "natural_disaster"
+    ],
+    "_source_chunk_id": "cerc-crisis-communication-plans__ch000__ck001",
+    "_source_slug": "cerc-crisis-communication-plans",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 1,
+    "_language": "en",
+    "_doc_type": "book"
+  },
+  {
+    "name": "Rapid Response Messaging",
+    "slug": "rapid-response-messaging",
+    "description": "Developing and disseminating clear, concise, and accurate messages in response to emerging issues or misinformation. Ensures the public receives timely and reliable information.",
+    "when_to_apply": "During the acute or containment phases of a crisis, particularly when misinformation begins to spread or new developments occur. Critical for maintaining public trust.",
+    "example": "After detecting a viral rumor about a product recall, the communications team issues a rapid-response statement correcting the misinformation and providing verified details.",
+    "anti_pattern": "Waiting for perfect information or delaying responses to craft the 'perfect' message, which can allow misinformation to take hold.",
+    "crisis_types": [
+      "media",
+      "reputational",
+      "safety"
+    ],
+    "_source_chunk_id": "cerc-crisis-communication-plans__ch000__ck001",
+    "_source_slug": "cerc-crisis-communication-plans",
+    "_chapter_title": "Conclusion",
+    "_chapter_index": 0,
+    "_chunk_index": 1,
+    "_language": "en",
+    "_doc_type": "book"
+  }
+]
