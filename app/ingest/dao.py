@@ -17,6 +17,12 @@ from app.ingest.models.training_sample_model import TrainingSample
 
 log = logging.getLogger(__name__)
 
+SYSTEM_PROMPT = (
+    "You are a Decision Support System for crisis communications. "
+    "You are advising a rookie Communications Specialist who is under pressure. "
+    "Be direct, tactical, and specific. Warn about the most common rookie mistake."
+)
+
 class SourceDocumentDAO(BaseDAO):
     model = SourceDocument
 
@@ -293,3 +299,34 @@ class RagChunkDAO(BaseDAO):
 
             result = await session.execute(q)
             return result.scalars().all()
+
+
+class TrainingSampleDAO(BaseDAO):
+    model = TrainingSample
+
+    @classmethod
+    async def build_from_new_qa_pairs(cls) -> int:
+        """
+        Convert all QAPairs that don't have a TrainingSample yet.
+        Called once after bulk import is complete.
+        """
+        new_pairs = await QAPairDAO.find_without_training_sample()
+        if not new_pairs:
+            return 0
+
+        async with async_session_maker() as session:
+            samples = [
+                TrainingSample(
+                    source_qa_id=qa.id,
+                    messages=[
+                        {"role": "system", "content": SYSTEM_PROMPT},
+                        {"role": "user", "content": qa.question},
+                        {"role": "assistant", "content": qa.answer},
+                    ],
+                    format="messages",
+                )
+                for qa in new_pairs
+            ]
+            session.add_all(samples)
+            await session.commit()
+            return len(samples)
