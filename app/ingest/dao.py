@@ -8,6 +8,7 @@ from app.database import async_session_maker
 from app.dao.base import BaseDAO
 from app.ingest.models.decision_node_model import DecisionNode
 from app.ingest.models.qa_model import QAPair
+from app.ingest.models.rag_chunk_model import RagChunk
 from app.ingest.models.scenario_model import Scenario
 from sqlalchemy.dialects.postgresql import insert as pg_insert
 from app.ingest.models.source_doc_model import SourceDocument
@@ -210,4 +211,85 @@ class QAPairDAO(BaseDAO):
             result = await session.execute(
                 select(QAPair).where(~QAPair.id.in_(used_ids))
             )
+            return result.scalars().all()
+
+
+class RagChunkDAO(BaseDAO):
+    model = RagChunk
+
+    @classmethod
+    async def bulk_add_many(cls, records: list[dict]) -> int:
+        if not records:
+            return 0
+        async with async_session_maker() as session:
+            stmt = (
+                pg_insert(RagChunk)
+                .values(records)
+                .on_conflict_do_nothing(index_elements=["chunk_id"])
+            )
+            result = await session.execute(stmt)
+            await session.commit()
+            return result.rowcount
+
+    @classmethod
+    async def find_by_source_slug(cls, source_slug: str) -> list[RagChunk]:
+        async with async_session_maker() as session:
+            result = await session.execute(
+                select(RagChunk)
+                .join(SourceDocument)
+                .filter(SourceDocument.source_slug == source_slug)
+            )
+            return result.scalars().all()
+
+    @classmethod
+    async def find_unembedded(cls, limit: int = 100) -> list[RagChunk]:
+        """Return chunks not yet embedded — for the embedding step."""
+        async with async_session_maker() as session:
+            result = await session.execute(
+                select(RagChunk)
+                .where(RagChunk.embedding.is_(None))
+                .limit(limit)
+            )
+            return result.scalars().all()
+
+    @classmethod
+    async def update_embedding(cls, chunk_id: str, vector: list[float]) -> None:
+        """Store the embedding vector for one chunk."""
+        async with async_session_maker() as session:
+            await session.execute(
+                RagChunk.__table__.update()
+                .where(RagChunk.chunk_id == chunk_id)
+                .values(embedding=vector)
+            )
+            await session.commit()
+
+    @classmethod
+    async def find_similar(cls, query_vector: list[float], limit: int = 5,
+                           language: str | None = None) -> list[RagChunk]:
+        """
+        Vector similarity search using pgvector cosine distance.
+        Requires pgvector extension and Vector column type.
+
+        Usage:
+            from openai import AsyncOpenAI
+            client = AsyncOpenAI()
+            resp = await client.embeddings.create(input=query, model="text-embedding-3-small")
+            vector = resp.data[0].embedding
+            chunks = await RagChunkDAO.find_similar(vector, limit=5)
+        """
+        async with async_session_maker() as session:
+            # pgvector cosine distance operator: <=>
+            # Lower = more similar
+            distance_expr = RagChunk.embedding.op("<=>")(query_vector)
+
+            q = (
+                select(RagChunk)
+                .where(RagChunk.embedding.isnot(None))
+                .order_by(distance_expr)
+                .limit(limit)
+            )
+            if language:
+                q = q.where(RagChunk.language == language)
+
+            result = await session.execute(q)
             return result.scalars().all()
