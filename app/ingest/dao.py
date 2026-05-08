@@ -2,15 +2,17 @@ from __future__ import annotations
 
 import logging
 
-from sqlalchemy import select
+from sqlalchemy import select, func
 
 from app.database import async_session_maker
 from app.dao.base import BaseDAO
 from app.ingest.models.decision_node_model import DecisionNode
+from app.ingest.models.qa_model import QAPair
 from app.ingest.models.scenario_model import Scenario
 from sqlalchemy.dialects.postgresql import insert as pg_insert
 from app.ingest.models.source_doc_model import SourceDocument
 from app.ingest.models.tactics import Tactic
+from app.ingest.models.training_sample_model import TrainingSample
 
 log = logging.getLogger(__name__)
 
@@ -148,3 +150,64 @@ class TacticDAO(BaseDAO):
                 select(Tactic).filter_by(slug=slug)
             )
             return result.scalar_one_or_none()
+
+
+class QAPairDAO(BaseDAO):
+    model = QAPair
+
+    @classmethod
+    async def next_external_id(cls) -> str:
+        """Generate next sequential external_id like 'qa-000042'."""
+        async with async_session_maker() as session:
+            result = await session.execute(select(func.count()).select_from(QAPair))
+            count = result.scalar_one() or 0
+            return f"qa-{count + 1:06d}"
+
+    @classmethod
+    async def bulk_add_many(cls, records: list[dict]) -> int:
+        """Insert Q&A pairs, auto-generating external_ids."""
+        if not records:
+            return 0
+        async with async_session_maker() as session:
+            # Get current count once for id generation
+            result = await session.execute(select(func.count()).select_from(QAPair))
+            counter = (result.scalar_one() or 0) + 1
+
+            inserted = 0
+            for rec in records:
+                if not rec.get("external_id"):
+                    rec = {**rec, "external_id": f"qa-{counter:06d}"}
+                    counter += 1
+                session.add(QAPair(**rec))
+                inserted += 1
+
+            await session.commit()
+            return inserted
+
+    @classmethod
+    async def find_by_difficulty(cls, difficulty: str) -> list[QAPair]:
+        async with async_session_maker() as session:
+            result = await session.execute(
+                select(QAPair).filter_by(difficulty=difficulty)
+            )
+            return result.scalars().all()
+
+    @classmethod
+    async def find_by_scenario_id(cls, source_scenario_id: str) -> list[QAPair]:
+        async with async_session_maker() as session:
+            result = await session.execute(
+                select(QAPair).filter_by(source_scenario_id=source_scenario_id)
+            )
+            return result.scalars().all()
+
+    @classmethod
+    async def find_without_training_sample(cls) -> list[QAPair]:
+        """Return QAPairs not yet converted to TrainingSamples."""
+        async with async_session_maker() as session:
+            used_ids = select(TrainingSample.source_qa_id).where(
+                TrainingSample.source_qa_id.isnot(None)
+            )
+            result = await session.execute(
+                select(QAPair).where(~QAPair.id.in_(used_ids))
+            )
+            return result.scalars().all()
