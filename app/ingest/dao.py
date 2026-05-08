@@ -6,6 +6,7 @@ from sqlalchemy import select
 
 from app.database import async_session_maker
 from app.dao.base import BaseDAO
+from app.ingest.models.decision_node_model import DecisionNode
 from app.ingest.models.scenario_model import Scenario
 from sqlalchemy.dialects.postgresql import insert as pg_insert
 from app.ingest.models.source_doc_model import SourceDocument
@@ -79,5 +80,33 @@ class ScenarioDAO(BaseDAO):
         async with async_session_maker() as session:
             result = await session.execute(
                 select(Scenario).filter_by(crisis_type=crisis_type)
+            )
+            return result.scalars().all()
+
+
+class DecisionNodeDAO(BaseDAO):
+    model = DecisionNode
+
+    @classmethod
+    async def bulk_add_many(cls, records: list[dict]) -> int:
+        if not records:
+            return 0
+        async with async_session_maker() as session:
+            stmt = (
+                pg_insert(DecisionNode)
+                .values(records)
+                # decision_id is not globally unique (same rule can appear in multiple chunks)
+                # deduplicate by (decision_id, source_chunk_id)
+                .on_conflict_do_nothing()
+            )
+            result = await session.execute(stmt)
+            await session.commit()
+            return result.rowcount
+
+    @classmethod
+    async def find_by_scenario_id(cls, source_scenario_id: str) -> list[DecisionNode]:
+        async with async_session_maker() as session:
+            result = await session.execute(
+                select(DecisionNode).filter_by(source_scenario_id=source_scenario_id)
             )
             return result.scalars().all()
