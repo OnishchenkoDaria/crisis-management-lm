@@ -23,6 +23,12 @@ SYSTEM_PROMPT = (
     "Be direct, tactical, and specific. Warn about the most common rookie mistake."
 )
 
+
+def _title_from_slug(slug: str) -> str:
+    return slug.replace("-", " ").replace("_", " ").title()
+
+
+
 class SourceDocumentDAO(BaseDAO):
     model = SourceDocument
 
@@ -330,3 +336,142 @@ class TrainingSampleDAO(BaseDAO):
             session.add_all(samples)
             await session.commit()
             return len(samples)
+
+
+class IngestDAO:
+    """
+    Single entry point for the pipeline to persist a completed chunk.
+    Called from storage.save_chunk_result() after writing _completed marker.
+
+    Example (in storage.py):
+        import asyncio
+        from app.ingest.dao.ingest_dao import IngestDAO
+        asyncio.run(IngestDAO.save_chunk_result(result, manifest_entry, source_doc_id))
+    """
+
+    @classmethod
+    async def save_chunk_result(
+            cls,
+            result,  # ChunkExtractionResult from ai_extractor
+            manifest_entry: dict,  # matching row from chunk_manifest.json
+            source_doc_id: int,  # SourceDocument.id already in DB
+    ) -> dict[str, int]:
+        """
+        Persist all 4 extraction types + RAG chunk in a single transaction.
+        Returns count of inserted records per type.
+        """
+        chunk_id = result.chunk_id
+        source_slug = result.source_slug
+        counts: dict[str, int] = {}
+
+        # Scenarios
+        scenario_rows = [
+            dict(
+                external_id=r.get("scenario_id", ""),
+                title=_title_from_slug(r.get("scenario_id", "")),
+                crisis_type=r.get("crisis_type", "operational"),
+                severity=r.get("severity", "medium"),
+                phase=r.get("phase", "acute"),
+                context=r.get("context", ""),
+                stakeholders=r.get("key_stakeholders", []),
+                source_slug=source_slug,
+                source_chunk_id=chunk_id,
+                chapter_title=manifest_entry.get("chapter_title"),
+                raw=r,
+            )
+            for r in result.scenarios
+            if r.get("scenario_id")
+        ]
+        counts["scenarios"] = await ScenarioDAO.bulk_add_many(scenario_rows)
+
+        #Decision nodes
+        dn_rows = [
+            dict(
+                decision_id=r.get("decision_id", ""),
+                source_scenario_id=r.get("source_scenario_id"),
+                situation=r.get("situation"),
+                options=r.get("options", []),
+                recommended_action_id=r.get("recommended_action_id"),
+                common_rookie_mistake=r.get("common_rookie_mistake"),
+                consequence_if_wrong=r.get("consequence_if_wrong"),
+                rationale=r.get("rationale"),
+                source_slug=source_slug,
+                source_chunk_id=chunk_id,
+                raw=r,
+            )
+            for r in result.decision_nodes
+            if r.get("decision_id")
+        ]
+        counts["decision_nodes"] = await DecisionNodeDAO.bulk_add_many(dn_rows)
+
+        #Tactics
+        tactic_rows = [
+            dict(
+                name=r.get("name", r.get("slug", "")),
+                slug=r.get("slug", ""),
+                description=r.get("description", ""),
+                when_to_apply=r.get("when_to_apply"),
+                example=r.get("example"),
+                anti_pattern=r.get("anti_pattern"),
+                crisis_types=r.get("crisis_types", []),
+                source_slug=source_slug,
+                source_chunk_id=chunk_id,
+                raw=r,
+            )
+            for r in result.tactics
+            if r.get("slug")
+        ]
+        counts["tactics"] = await TacticDAO.bulk_add_many(tactic_rows)
+
+        #Q&A pairs
+        qa_rows = [
+            dict(
+                question=r.get("question", ""),
+                answer=r.get("answer", ""),
+                difficulty=r.get("difficulty", "basic"),
+                scenario_tags=r.get("scenario_tags", []),
+                source_scenario_id=r.get("source_scenario_id", ""),
+                common_mistake=r.get("common_mistake", ""),
+                # external_id auto-generated in bulk_add_many
+            )
+            for r in result.qa_pairs
+            if r.get("question")
+        ]
+        counts["qa_pairs"] = await QAPairDAO.bulk_add_many(qa_rows)
+
+        # RAG chunk (from manifest, not AI output)
+        if manifest_entry:
+            rag_rows = [dict(
+                chunk_id=chunk_id,
+                source_document_id=source_doc_id,
+                text=manifest_entry.get("text", ""),
+                source_title=manifest_entry.get("source_slug", source_slug),
+                source_chapter=manifest_entry.get("chapter_title", ""),
+                chapter_index=manifest_entry.get("chapter_index", 0),
+                chunk_index=manifest_entry.get("chunk_index", 0),
+                token_count=manifest_entry.get("token_count", 0),
+                page_start=manifest_entry.get("page_start", 0),
+                page_end=manifest_entry.get("page_end", 0),
+                language=manifest_entry.get("language", "mixed"),
+                topics=[],
+                scenario_relevance=[],
+                embedding=None,
+            )]
+            counts["rag_chunks"] = await RagChunkDAO.bulk_add_many(rag_rows)
+
+        log.info(
+            "DB saved chunk [%s]: %s",
+            chunk_id,
+            " | ".join(f"{k}={v}" for k, v in counts.items() if v > 0),
+        )
+        return counts
+
+    @classmethod
+    async def finalize_book(cls) -> int:
+        """
+        Call once after all chunks of a book are processed.
+        Converts new QAPairs → TrainingSamples.
+        """
+        n = await TrainingSampleDAO.build_from_new_qa_pairs()
+        log.info("Built %d new TrainingSamples", n)
+        return n
