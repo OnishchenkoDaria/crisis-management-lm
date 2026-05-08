@@ -4,6 +4,12 @@ from sqlalchemy import Text, JSON, ForeignKey, Integer, String
 from app.database import Base, int_pk, str_not_null, str_uniq
 
 
+try:
+    from pgvector.sqlalchemy import Vector
+    _PGVECTOR = True
+except ImportError:
+    _PGVECTOR = False
+
 class RagChunk(Base):
     id: Mapped[int_pk]
     chunk_id: Mapped[str_uniq]  # e.g. "cerc-introduction__ch000__ck001"
@@ -32,15 +38,12 @@ class RagChunk(Base):
     topics: Mapped[list[str]] = mapped_column(JSONB, nullable=False, default=list)
     scenario_relevance: Mapped[list[str]] = mapped_column(JSONB, nullable=False, default=list)
 
-    # embedding vector
-    # Stored as JSONB for now; switch to pgvector once extension is enabled:
-    #
-    #   from pgvector.sqlalchemy import Vector
-    #   embedding: Mapped[list[float] | None] = mapped_column(Vector(1536), nullable=True)
-    #
-    # To enable pgvector in Postgres: CREATE EXTENSION IF NOT EXISTS vector;
-    # Then update this column and add Alembic migration.
-    embedding: Mapped[list[float] | None] = mapped_column(JSONB, nullable=True)
+    # pgvector — 1536 dims (OpenAI text-embedding-3-small)
+    # Falls back to JSONB if pgvector not installed yet
+    if _PGVECTOR:
+        embedding: Mapped[list[float] | None] = mapped_column(Vector(1536), nullable=True)
+    else:
+        embedding: Mapped[list[float] | None] = mapped_column(JSONB, nullable=True)
 
     # present objects as string data
     def __str__(self):
