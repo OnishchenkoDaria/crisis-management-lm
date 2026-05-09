@@ -1,8 +1,11 @@
 from __future__ import annotations
 
 import logging
+from typing import Any
 
-from sqlalchemy import select, func
+from sqlalchemy import select, text, func
+from sqlalchemy.dialects.postgresql import insert as pg_insert
+from sqlalchemy.exc import SQLAlchemyError
 
 from app.database import async_session_maker
 from app.dao.base import BaseDAO
@@ -10,7 +13,6 @@ from app.ingest.models.decision_node_model import DecisionNode
 from app.ingest.models.qa_model import QAPair
 from app.ingest.models.rag_chunk_model import RagChunk
 from app.ingest.models.scenario_model import Scenario
-from sqlalchemy.dialects.postgresql import insert as pg_insert
 from app.ingest.models.source_doc_model import SourceDocument
 from app.ingest.models.tactics import Tactic
 from app.ingest.models.training_sample_model import TrainingSample
@@ -468,10 +470,7 @@ class IngestDAO:
 
     @classmethod
     async def finalize_book(cls) -> int:
-        """
-        Call once after all chunks of a book are processed.
-        Converts new QAPairs → TrainingSamples.
-        """
+        """Call once after all chunks processed. Converts QAPairs → TrainingSamples."""
         n = await TrainingSampleDAO.build_from_new_qa_pairs()
         log.info("Built %d new TrainingSamples", n)
         return n

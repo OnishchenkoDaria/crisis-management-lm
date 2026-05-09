@@ -85,9 +85,9 @@ def process_pdf(pdf_path: Path) -> None:
 
     log.info("Step 4/4  Finalising book in DB ...")
     try:
-        import asyncio
         from app.ingest.dao import IngestDAO
-        n = asyncio.run(IngestDAO.finalize_book())
+        from app.ingest.pipeline.storage import _run_async
+        n = _run_async(IngestDAO.finalize_book())
         log.info("  Done: %d TrainingSamples created", n)
     except Exception as e:
         log.warning("  finalize_book skipped: %s", e)
@@ -107,10 +107,10 @@ def main():
     args = parser.parse_args()
 
     if args.promote_only:
-        import asyncio
         from app.ingest.dao import IngestDAO
+        from app.ingest.pipeline.storage import _run_async
         print("\nPromoting all completed chunks to PostgreSQL ...")
-        counts = asyncio.run(IngestDAO.promote_all_books(DATA_DIR / "extracted"))
+        counts = _run_async(IngestDAO.promote_all_books(DATA_DIR / "extracted"))
         print("\n-- Promotion complete --")
         for k, v in counts.items():
             print(f"  {k:<20} {v:>6} records inserted")
@@ -151,13 +151,6 @@ def main():
     print(f"\nFound {len(pdfs)} PDF(s) to process.\n")
     for pdf in pdfs:
         process_pdf(pdf)
-
-    # Build training JSONL automatically after all books processed
-    log.info("\nBuilding training_samples.jsonl …")
-    try:
-        build_training_jsonl()
-    except FileNotFoundError:
-        pass
 
     print("\n── Final dataset statistics ──────────────")
     stats = get_stats()

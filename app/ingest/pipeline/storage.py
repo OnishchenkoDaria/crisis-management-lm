@@ -75,7 +75,18 @@ async def _ensure_source_doc_async(source_slug: str) -> int | None:
 
 def save_book_metadata(source_slug: str, metadata: dict) -> None:
     path = get_book_dir(source_slug) / "metadata.json"
-    metadata["_created_at"] = datetime.now(timezone.utc).isoformat()
+    now = datetime.now(timezone.utc).isoformat()
+
+    if path.exists():
+        try:
+            existing = json.loads(path.read_text(encoding="utf-8"))
+            metadata["created_at"] = existing.get("created_at", now)
+        except Exception:
+            metadata["_created_at"] = now
+        metadata["_updated_at"] = now
+    else:
+        metadata["_created_at"] = now
+        metadata["_updated_at"] = None
     # encoding='utf-8' — critical on Windows where default is cp1251
     path.write_text(json.dumps(metadata, indent=2, ensure_ascii=False), encoding="utf-8")
     log.info(f"  ✓ metadata saved → {path}")
@@ -120,7 +131,7 @@ def save_chunk_result(result) -> None:
 
     # Save to PostgreSQL
     try:
-        from app.ingest.dao.ingest_dao import IngestDAO
+        from app.ingest.dao import IngestDAO
 
         manifest_entry = _load_manifest_entry(result.source_slug, result.chunk_id)
         source_doc_id  = asyncio.run(_ensure_source_doc_async(result.source_slug))
@@ -301,7 +312,7 @@ def build_training_jsonl(output_path: Path | None = None) -> Path:
 def get_stats() -> dict:
     """Return record counts from DB (falls back to JSONL files if DB unavailable)."""
     try:
-        from app.ingest.dao.ingest_dao import (
+        from app.ingest.dao import (
             ScenarioDAO, DecisionNodeDAO, TacticDAO,
             QAPairDAO, RagChunkDAO, TrainingSampleDAO,
         )
@@ -327,3 +338,10 @@ def get_stats() -> dict:
             path = proc_dir / f"{name}.jsonl"
             stats[name] = sum(1 for _ in open(path, encoding="utf-8")) if path.exists() else 0
         return stats
+
+def _run_async(coro):
+    loop = asyncio.get_event_loop()        # get existing loop
+    if loop.is_closed():
+        loop = asyncio.new_event_loop()    # only create new if truly needed
+        asyncio.set_event_loop(loop)
+    return loop.run_until_complete(coro)   # never closes the loop
