@@ -53,7 +53,7 @@ def _load_manifest_entry(source_slug: str, chunk_id: str) -> dict:
 async def _ensure_source_doc_async(source_slug: str) -> int | None:
     """Get or create SourceDocument in DB, return its id."""
     try:
-        from app.ingest.dao.ingest_dao import SourceDocumentDAO
+        from app.ingest.dao import SourceDocumentDAO
     except ImportError:
         log.warning("IngestDAO not importable — DB save skipped")
         return None
@@ -342,8 +342,16 @@ def get_stats() -> dict:
         return stats
 
 def _run_async(coro):
-    loop = asyncio.get_event_loop()        # get existing loop
-    if loop.is_closed():
-        loop = asyncio.new_event_loop()    # only create new if truly needed
+    """
+    Run an async coroutine from synchronous pipeline code.
+    Reuses the existing event loop — critical for asyncpg connection pool.
+    """
+    try:
+        loop = asyncio.get_event_loop()
+        if loop.is_closed():
+            raise RuntimeError("loop is closed")
+    except RuntimeError:
+    # creating loop
+        loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
-    return loop.run_until_complete(coro)   # never closes the loop
+    return loop.run_until_complete(coro)

@@ -347,7 +347,7 @@ class IngestDAO:
 
     Example (in storage.py):
         import asyncio
-        from app.ingest.dao.ingest_dao import IngestDAO
+        from app.ingest.dao import IngestDAO
         asyncio.run(IngestDAO.save_chunk_result(result, manifest_entry, source_doc_id))
     """
 
