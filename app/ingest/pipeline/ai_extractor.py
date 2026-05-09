@@ -369,7 +369,7 @@ def _tag(records: list, chunk) -> list:
             rec["_chunk_index"]     = chunk.chunk_index
             rec["_language"]        = getattr(chunk, "language", "mixed")
             rec["_doc_type"]        = getattr(chunk, "doc_type", "manual")
-    return records
+    return [r for r in records if isinstance(r, dict)]
 
 
 def extract_from_chunk(chunk) -> ChunkExtractionResult:

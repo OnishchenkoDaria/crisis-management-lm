@@ -382,7 +382,7 @@ class IngestDAO:
                 raw=r,
             )
             for r in result.scenarios
-            if r.get("scenario_id")
+            if isinstance(r, dict) and r.get("scenario_id")
         ]
         counts["scenarios"] = await ScenarioDAO.bulk_add_many(scenario_rows)
 
@@ -402,7 +402,7 @@ class IngestDAO:
                 raw=r,
             )
             for r in result.decision_nodes
-            if r.get("decision_id")
+            if isinstance(r, dict) and r.get("decision_id")
         ]
         counts["decision_nodes"] = await DecisionNodeDAO.bulk_add_many(dn_rows)
 
@@ -421,7 +421,7 @@ class IngestDAO:
                 raw=r,
             )
             for r in result.tactics
-            if r.get("slug")
+            if isinstance(r, dict) and r.get("slug")
         ]
         counts["tactics"] = await TacticDAO.bulk_add_many(tactic_rows)
 
@@ -437,7 +437,7 @@ class IngestDAO:
                 # external_id auto-generated in bulk_add_many
             )
             for r in result.qa_pairs
-            if r.get("question")
+            if isinstance(r, dict) and r.get("question")
         ]
         counts["qa_pairs"] = await QAPairDAO.bulk_add_many(qa_rows)
 
@@ -523,8 +523,11 @@ class IngestDAO:
             manifest: dict[str, dict] = {}
             manifest_path = book_dir / "chunk_manifest.json"
             if manifest_path.exists():
-                for entry in json.loads(manifest_path.read_text(encoding="utf-8")):
-                    manifest[entry["chunk_id"]] = entry
+                raw = json.loads(manifest_path.read_text(encoding="utf-8"))
+                chunk_list = raw["chunks"] if isinstance(raw, dict) else raw
+                for entry in chunk_list:
+                    if isinstance(entry, dict):
+                        manifest[entry["chunk_id"]] = entry
 
             # Walk completed chunks
             for chunk_dir in sorted(chunks_dir.iterdir()):

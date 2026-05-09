@@ -40,10 +40,12 @@ def _load_manifest_entry(source_slug: str, chunk_id: str) -> dict:
     if not manifest_path.exists():
         return {}
     try:
-        for entry in json.loads(manifest_path.read_text(encoding="utf-8")):
-            if entry.get("chunk_id") == chunk_id:
+        raw = json.loads(manifest_path.read_text("utf-8"))
+        chunk_list = raw["chunks"] if isinstance(raw, dict) else raw
+        for entry in chunk_list:
+            if isinstance(entry, dict) and entry.get("chunk_id") == chunk_id:
                 return entry
-    except (json.JSONDecodeError, KeyError):
+    except (json.JSONDecodeError, KeyError, TypeError):
         pass
     return {}
 
