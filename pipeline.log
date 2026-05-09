@@ -5153,3 +5153,127 @@ DETAIL:  Failing row contains (201, qa-000109, How can I protect my website's de
 13:16:16  INFO      DB saved chunk [zbirka-seminar-prava-liudyny-2023__ch017__ck000]: scenarios=2 | decision_nodes=2 | tactics=2 | qa_pairs=2
 13:16:17  INFO      DB saved chunk [zbirka-seminar-prava-liudyny-2023__ch018__ck000]: scenarios=1 | decision_nodes=2 | tactics=2 | qa_pairs=2
 13:16:17  INFO      promote_all_books done: {'scenarios': 17, 'decision_nodes': 21, 'tactics': 21, 'qa_pairs': 26, 'training_samples': 115}
+18:14:03  INFO      
+============================================================
+18:14:03  INFO      Processing: 105312772.pdf
+18:14:03  INFO      ============================================================
+18:14:03  INFO      Step 1/4  Extracting text and splitting into chunks …
+18:14:09  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+18:14:09  INFO        Found 1 chunks across 1 chapters
+18:14:09  INFO      Step 2/4  Saving chunk manifest …
+18:14:09  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\105312772\metadata.json
+18:14:09  INFO      Step 3/4  Running AI extraction …
+18:14:09  INFO        0 chunks already done, 1 remaining
+18:14:09  INFO        [1/1] Processing  105312772__ch000__ck000 (2503 tokens, chapter: 105312772)
+18:14:09  INFO        -> [105312772__ch000__ck000] lang=uk tokens=2503 | active backends: gemini -> mistral -> groq -> openrouter -> github -> lmstudio
+18:14:19  INFO      AFC is enabled with max remote calls: 10.
+18:14:20  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+18:14:20  ERROR     [gemini] 404 — wrong model name 'gemini-2.0-flash'
+18:14:27  INFO      AFC is enabled with max remote calls: 10.
+18:14:28  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+18:14:28  WARNING   [gemini] Daily quota exhausted
+18:14:28  INFO        Switching to next backend. Remaining: mistral -> groq -> openrouter -> github -> lmstudio
+18:14:59  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+18:15:01  INFO        [105312772__ch000__ck000] 4 scenarios, 4 decisions, 6 tactics, 8 qa_pairs
+18:15:08  ERROR       completed [105312772__ch000__ck000] but DB save FAILED: 'str' object has no attribute 'get' -- run `python -m app.run --promote-only` to retry.
+18:15:08  INFO      Step 4/4  Finalising book in DB ...
+18:15:10  INFO      Built 0 new TrainingSamples
+18:15:10  INFO        Done: 0 TrainingSamples created
+18:15:10  INFO      
+============================================================
+18:15:10  INFO      Processing: 11-Bohdanov.pdf
+18:15:10  INFO      ============================================================
+18:15:10  INFO      Step 1/4  Extracting text and splitting into chunks …
+18:15:30  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+18:15:30  INFO        Found 2 chunks across 2 chapters
+18:15:30  INFO      Step 2/4  Saving chunk manifest …
+18:15:30  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\11-bohdanov\metadata.json
+18:15:30  INFO      Step 3/4  Running AI extraction …
+18:15:30  INFO        0 chunks already done, 2 remaining
+18:15:30  INFO        [1/2] Processing  11-bohdanov__ch000__ck000 (768 tokens, chapter: Література)
+18:15:30  INFO        -> [11-bohdanov__ch000__ck000] lang=uk tokens=768 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+18:15:49  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+18:15:51  INFO        [11-bohdanov__ch000__ck000] 3 scenarios, 3 decisions, 4 tactics, 8 qa_pairs
+18:15:51  ERROR       completed [11-bohdanov__ch000__ck000] but DB save FAILED: 'str' object has no attribute 'get' -- run `python -m app.run --promote-only` to retry.
+18:15:51  INFO        [2/2] Processing  11-bohdanov__ch001__ck000 (2070 tokens, chapter: References)
+18:15:51  INFO        -> [11-bohdanov__ch001__ck000] lang=uk tokens=2070 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+18:16:11  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+18:16:13  INFO        [11-bohdanov__ch001__ck000] 3 scenarios, 3 decisions, 5 tactics, 8 qa_pairs
+18:16:13  ERROR       completed [11-bohdanov__ch001__ck000] but DB save FAILED: 'str' object has no attribute 'get' -- run `python -m app.run --promote-only` to retry.
+18:16:13  INFO      Step 4/4  Finalising book in DB ...
+18:16:13  INFO      Built 0 new TrainingSamples
+18:16:13  INFO        Done: 0 TrainingSamples created
+18:16:13  INFO      
+============================================================
+18:16:13  INFO      Processing: 123550889.pdf
+18:16:13  INFO      ============================================================
+18:16:13  INFO      Step 1/4  Extracting text and splitting into chunks …
+18:16:43  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+18:16:43  INFO        Found 2 chunks across 2 chapters
+18:16:43  INFO      Step 2/4  Saving chunk manifest …
+18:16:43  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\123550889\metadata.json
+18:16:43  INFO      Step 3/4  Running AI extraction …
+18:16:43  INFO        0 chunks already done, 2 remaining
+18:16:43  INFO        [1/2] Processing  123550889__ch000__ck000 (1997 tokens, chapter: обговорення)
+18:16:43  INFO        -> [123550889__ch000__ck000] lang=uk tokens=1997 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+18:17:11  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+18:17:14  INFO        [123550889__ch000__ck000] 6 scenarios, 6 decisions, 7 tactics, 8 qa_pairs
+18:17:14  ERROR       completed [123550889__ch000__ck000] but DB save FAILED: 'str' object has no attribute 'get' -- run `python -m app.run --promote-only` to retry.
+18:17:14  INFO        [2/2] Processing  123550889__ch001__ck000 (1537 tokens, chapter: Висновки)
+18:17:14  INFO        -> [123550889__ch001__ck000] lang=uk tokens=1537 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+18:35:30  INFO      
+============================================================
+18:35:30  INFO      Processing: 105312772.pdf
+18:35:30  INFO      ============================================================
+18:35:30  INFO      Step 1/4  Extracting text and splitting into chunks …
+18:35:37  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+18:35:37  INFO        Found 1 chunks across 1 chapters
+18:35:37  INFO      Step 2/4  Saving chunk manifest …
+18:35:37  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\105312772\metadata.json
+18:35:37  INFO      Step 3/4  Running AI extraction …
+18:35:37  INFO        0 chunks already done, 1 remaining
+18:35:37  INFO        [1/1] Processing  105312772__ch000__ck000 (2503 tokens, chapter: 105312772)
+18:35:37  INFO        -> [105312772__ch000__ck000] lang=uk tokens=2503 | active backends: gemini -> mistral -> groq -> openrouter -> github -> lmstudio
+18:35:53  INFO      AFC is enabled with max remote calls: 10.
+18:35:54  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+18:35:54  WARNING   [gemini] Daily quota exhausted
+18:35:54  INFO        Switching to next backend. Remaining: mistral -> groq -> openrouter -> github -> lmstudio
+18:36:19  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+18:36:21  INFO        [105312772__ch000__ck000] 3 scenarios, 3 decisions, 5 tactics, 8 qa_pairs
+18:36:23  ERROR       completed [105312772__ch000__ck000] but DB save FAILED: 'str' object has no attribute 'get' -- run `python -m app.run --promote-only` to retry.
+18:36:23  INFO      Step 4/4  Finalising book in DB ...
+18:36:24  INFO      Built 0 new TrainingSamples
+18:36:24  INFO        Done: 0 TrainingSamples created
+18:36:24  INFO      
+============================================================
+18:36:24  INFO      Processing: 11-Bohdanov.pdf
+18:36:24  INFO      ============================================================
+18:36:24  INFO      Step 1/4  Extracting text and splitting into chunks …
+18:48:45  INFO      
+============================================================
+18:48:45  INFO      Processing: 105312772.pdf
+18:48:45  INFO      ============================================================
+18:48:45  INFO      Step 1/4  Extracting text and splitting into chunks …
+18:48:52  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+18:48:52  INFO        Found 1 chunks across 1 chapters
+18:48:52  INFO      Step 2/4  Saving chunk manifest …
+18:48:52  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\105312772\metadata.json
+18:48:52  INFO      Step 3/4  Running AI extraction …
+18:48:52  INFO        0 chunks already done, 1 remaining
+18:48:52  INFO        [1/1] Processing  105312772__ch000__ck000 (2503 tokens, chapter: 105312772)
+18:48:52  INFO        -> [105312772__ch000__ck000] lang=uk tokens=2503 | active backends: gemini -> mistral -> groq -> openrouter -> github -> lmstudio
+18:49:01  INFO      AFC is enabled with max remote calls: 10.
+18:49:02  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+18:49:02  WARNING   [gemini] Daily quota exhausted
+18:49:02  INFO        Switching to next backend. Remaining: mistral -> groq -> openrouter -> github -> lmstudio
+18:49:34  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+18:49:36  INFO        [105312772__ch000__ck000] 3 scenarios, 3 decisions, 5 tactics, 8 qa_pairs
+18:49:38  WARNING   IngestDAO not importable — DB save skipped
+18:49:38  WARNING     completed [105312772__ch000__ck000] but DB save skipped (metadata.json missing or DB unavailable)
+18:49:38  INFO      Step 4/4  Finalising book in DB ...
+18:49:38  WARNING     finalize_book skipped: There is no current event loop in thread 'MainThread'.
+18:49:38  INFO      
+============================================================
+18:49:38  INFO      Processing: 11-Bohdanov.pdf
+18:49:38  INFO      ============================================================
+18:49:38  INFO      Step 1/4  Extracting text and splitting into chunks …
