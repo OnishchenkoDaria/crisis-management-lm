@@ -6,7 +6,7 @@ from app.ingest.pipeline.ai_extractor import extract_from_chunk
 from app.ingest.pipeline.storage import (
     save_book_metadata, save_chunk_result, is_chunk_done,
     merge_book_to_processed, build_training_jsonl, get_stats,
-    promote_all_to_db, DATA_DIR,
+    DATA_DIR,
 )
 from app.ingest.pipeline.storage import get_book_dir
 from pathlib import Path
@@ -107,8 +107,10 @@ def main():
     args = parser.parse_args()
 
     if args.promote_only:
+        import asyncio
+        from app.ingest.dao import IngestDAO
         print("\nPromoting all completed chunks to PostgreSQL ...")
-        counts = promote_all_to_db()
+        counts = asyncio.run(IngestDAO.promote_all_books(DATA_DIR / "extracted"))
         print("\n-- Promotion complete --")
         for k, v in counts.items():
             print(f"  {k:<20} {v:>6} records inserted")
