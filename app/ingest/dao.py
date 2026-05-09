@@ -475,3 +475,105 @@ class IngestDAO:
         n = await TrainingSampleDAO.build_from_new_qa_pairs()
         log.info("Built %d new TrainingSamples", n)
         return n
+
+    @classmethod
+    async def promote_all_books(cls, extracted_dir) -> dict:
+        """
+        Scan extracted_dir for all books with _completed chunks and push to DB.
+        Called by: python -m app.run --promote-only
+        """
+        from pathlib import Path
+        extracted_dir = Path(extracted_dir)
+        total: dict[str, int] = {}
+
+        if not extracted_dir.exists():
+            log.warning("extracted_dir not found: %s", extracted_dir)
+            return total
+
+        for book_dir in sorted(extracted_dir.iterdir()):
+            if not book_dir.is_dir():
+                continue
+
+            source_slug = book_dir.name
+            chunks_dir = book_dir / "chunks"
+            if not chunks_dir.exists():
+                continue
+
+            log.info("Promoting: %s", source_slug)
+
+            # Load metadata for SourceDocument
+            meta_path = book_dir / "metadata.json"
+            if not meta_path.exists():
+                log.warning("  Skipping %s — no metadata.json", source_slug)
+                continue
+
+            import json
+            meta = json.loads(meta_path.read_text(encoding="utf-8"))
+            doc = await SourceDocumentDAO.get_or_create(
+                source_slug=source_slug,
+                title=meta.get("title", source_slug),
+                file_name=meta.get("file_name", ""),
+                language=meta.get("language", "mixed"),
+                doc_type=meta.get("doc_type", "manual"),
+                total_chunks=meta.get("total_chunks", 0),
+                meta=meta,
+            )
+            source_doc_id = doc.id
+
+            # Load chunk manifest once per book
+            manifest: dict[str, dict] = {}
+            manifest_path = book_dir / "chunk_manifest.json"
+            if manifest_path.exists():
+                for entry in json.loads(manifest_path.read_text(encoding="utf-8")):
+                    manifest[entry["chunk_id"]] = entry
+
+            # Walk completed chunks
+            for chunk_dir in sorted(chunks_dir.iterdir()):
+                if not chunk_dir.is_dir():
+                    continue
+                if not (chunk_dir / "_completed").exists():
+                    continue
+
+                chunk_id = chunk_dir.name
+
+                # Build a minimal result from saved JSON files
+                def _load(fname):
+                    f = chunk_dir / fname
+                    if not f.exists():
+                        return []
+                    try:
+                        return json.loads(f.read_text(encoding="utf-8"))
+                    except Exception:
+                        return []
+
+                class _Result:
+                    pass
+
+                r = _Result()
+                r.chunk_id = chunk_id
+                r.source_slug = source_slug
+                r.chapter_title = manifest.get(chunk_id, {}).get("chapter_title", "")
+                r.chapter_index = manifest.get(chunk_id, {}).get("chapter_index", 0)
+                r.chunk_index = manifest.get(chunk_id, {}).get("chunk_index", 0)
+                r.language = manifest.get(chunk_id, {}).get("language", "mixed")
+                r.doc_type = manifest.get(chunk_id, {}).get("doc_type", "manual")
+                r.had_api_errors = False
+                r.scenarios = _load("scenarios.json")
+                r.decision_nodes = _load("decision_nodes.json")
+                r.tactics = _load("tactics.json")
+                r.qa_pairs = _load("qa_pairs.json")
+
+                try:
+                    counts = await cls.save_chunk_result(
+                        r, manifest.get(chunk_id, {}), source_doc_id
+                    )
+                    for k, v in counts.items():
+                        total[k] = total.get(k, 0) + v
+                except Exception as e:
+                    log.error("  DB error on %s: %s", chunk_id, e)
+
+        # Build TrainingSamples from all new QAPairs
+        n = await TrainingSampleDAO.build_from_new_qa_pairs()
+        total["training_samples"] = total.get("training_samples", 0) + n
+        log.info("promote_all_books done: %s", total)
+        return total
