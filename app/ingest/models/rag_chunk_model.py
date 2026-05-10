@@ -2,6 +2,7 @@ from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import Text, JSON, ForeignKey, Integer, String
 from app.database import Base, int_pk, str_not_null, str_uniq
+import pgvector.sqlalchemy
 
 
 try:
