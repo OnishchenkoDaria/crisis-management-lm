@@ -132,16 +132,25 @@ def save_chunk_result(result) -> None:
     )
 
     # Save to PostgreSQL
+    (chunk_dir / "_completed").write_text(
+        datetime.now(timezone.utc).isoformat(), encoding="utf-8"
+    )
+
+    # Save to PostgreSQL — single run_until_complete so asyncpg stays stable
     try:
         from app.ingest.dao import IngestDAO
 
-        manifest_entry = _load_manifest_entry(result.source_slug, result.chunk_id)
-        source_doc_id  = asyncio.run(_ensure_source_doc_async(result.source_slug))
+        async def _save_all():
+            # Both awaits happen inside ONE event loop run — no paused-loop issues
+            source_doc_id = await _ensure_source_doc_async(result.source_slug)
+            if not source_doc_id:
+                return None
+            manifest_entry = _load_manifest_entry(result.source_slug, result.chunk_id)
+            return await IngestDAO.save_chunk_result(result, manifest_entry, source_doc_id)
 
-        if source_doc_id:
-            db_counts = asyncio.run(
-                IngestDAO.save_chunk_result(result, manifest_entry, source_doc_id)
-            )
+        db_counts = _run_async(_save_all())
+
+        if db_counts:
             log.info(
                 "  completed [%s]: %d scenarios, %d decisions, %d tactics, "
                 "%d qa_pairs [total=%d] -> DB: %s",
@@ -152,7 +161,8 @@ def save_chunk_result(result) -> None:
             )
         else:
             log.warning(
-                "  completed [%s] but DB save skipped (metadata.json missing or DB unavailable)",
+                "  completed [%s] but DB save skipped "
+                "(metadata.json missing or DB unavailable)",
                 result.chunk_id,
             )
 
@@ -343,15 +353,14 @@ def get_stats() -> dict:
 
 def _run_async(coro):
     """
-    Run an async coroutine from synchronous pipeline code.
-    Reuses the existing event loop — critical for asyncpg connection pool.
+    Run async coroutine from sync pipeline code.
+    Reuses the existing event loop — never closes it between calls.
     """
     try:
         loop = asyncio.get_event_loop()
         if loop.is_closed():
-            raise RuntimeError("loop is closed")
+            raise RuntimeError("closed")
     except RuntimeError:
-    # creating loop
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
     return loop.run_until_complete(coro)
