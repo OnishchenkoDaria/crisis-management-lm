@@ -21,6 +21,7 @@ Usage:
   python run.py --merge-only            # just re-merge already-extracted books
   python run.py --build-training        # build fine-tuning JSONL from qa_pairs
   python run.py --stats                 # print current dataset stats
+  python run.py --promote-only          # push all completed chunks to PostgreSQL
 '''
 
 logging.basicConfig(
@@ -82,9 +83,14 @@ def process_pdf(pdf_path: Path) -> None:
             log.error(f"  ERROR on {chunk.chunk_id}: {e}")
             continue  # don't abort the whole book on one bad chunk
 
-    log.info("Step 4/4  Merging into processed/ …")
-    counts = merge_book_to_processed(source_slug)
-    log.info(f"  Done: {counts}")
+    log.info("Step 4/4  Finalising book in DB ...")
+    try:
+        from app.ingest.dao import IngestDAO
+        from app.ingest.pipeline.storage import _run_async
+        n = _run_async(IngestDAO.finalize_book())
+        log.info("  Done: %d TrainingSamples created", n)
+    except Exception as e:
+        log.warning("  finalize_book skipped: %s", e)
 
 
 def main():
@@ -96,7 +102,20 @@ def main():
                         help="Build fine-tuning JSONL from qa_pairs.jsonl")
     parser.add_argument("--stats", action="store_true",
                         help="Print current dataset statistics")
+    parser.add_argument("--promote-only", action="store_true",
+                        help="Push all completed chunks to PostgreSQL (no AI calls)")
     args = parser.parse_args()
+
+    if args.promote_only:
+        from app.ingest.dao import IngestDAO
+        from app.ingest.pipeline.storage import _run_async
+        print("\nPromoting all completed chunks to PostgreSQL ...")
+        counts = _run_async(IngestDAO.promote_all_books(DATA_DIR / "extracted"))
+        print("\n-- Promotion complete --")
+        for k, v in counts.items():
+            print(f"  {k:<20} {v:>6} records inserted")
+        print()
+        return
 
     if args.stats:
         stats = get_stats()
@@ -132,13 +151,6 @@ def main():
     print(f"\nFound {len(pdfs)} PDF(s) to process.\n")
     for pdf in pdfs:
         process_pdf(pdf)
-
-    # Build training JSONL automatically after all books processed
-    log.info("\nBuilding training_samples.jsonl …")
-    try:
-        build_training_jsonl()
-    except FileNotFoundError:
-        pass
 
     print("\n── Final dataset statistics ──────────────")
     stats = get_stats()

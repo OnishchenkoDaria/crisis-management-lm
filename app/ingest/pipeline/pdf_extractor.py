@@ -6,6 +6,8 @@ import json
 import logging
 import os
 import re
+from datetime import datetime, timezone
+
 import unicodedata
 from dataclasses import asdict, dataclass
 from email.header import decode_header
@@ -319,10 +321,31 @@ def extract_chunks(pdf_path: str | Path) -> list[TextChunk]:
     return all_chunks
 
 
+
 def save_chunk_manifest(chunks: list[TextChunk], out_dir: Path) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
-    manifest = [asdict(c) for c in chunks]
-    (out_dir / "chunk_manifest.json").write_text(
+    manifest_path = out_dir / "chunk_manifest.json"
+    now = datetime.now(timezone.utc).isoformat()
+
+    created_at = now
+    if manifest_path.exists():
+        try:
+            existing = json.loads(manifest_path.read_text(encoding="utf-8"))
+            # Manifest is a list — metadata stored in first element's _meta key
+            # or we wrap it in a dict
+            if isinstance(existing, dict):
+                created_at = existing.get("_created_at", now)
+        except Exception:
+            pass
+
+    manifest = {
+        "_created_at": created_at,
+        "_updated_at": now,
+        "_chunk_count": len(chunks),
+        "chunks": [asdict(c) for c in chunks],
+    }
+
+    manifest_path.write_text(
         json.dumps(manifest, indent=2, ensure_ascii=False),
         encoding="utf-8",
     )

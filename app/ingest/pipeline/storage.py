@@ -9,32 +9,18 @@ Key fixes vs original:
      — they are re-processed on restart instead of being permanently skipped
   3. save_chunk_result() only writes _completed when extraction had no API errors
 
-Folder layout:
-  data/
-    raw/
-    extracted/
-      {book_slug}/
-        metadata.json
-        chunk_manifest.json
-        chunks/
-          {chunk_id}/
-            scenarios.json
-            decision_nodes.json
-            tactics.json
-            qa_pairs.json
-            _completed            marker: only exists if API calls succeeded
-    processed/
-      scenarios.jsonl
-      decision_nodes.jsonl
-      tactics.jsonl
-      qa_pairs.jsonl
-      rag_chunks.jsonl
+Primary storage: PostgreSQL (via IngestDAO).
+File storage (kept only for idempotency and restart):
+  data/extracted/{slug}/metadata.json        — book info
+  data/extracted/{slug}/chunk_manifest.json  — chunk text + positions
+  data/extracted/{slug}/chunks/{id}/_completed — success marker
+  data/processed/*.jsonl                     — JSONL export (secondary/backup)
 """
 
+import asyncio
 import json
 import logging
 from pathlib import Path
-from dataclasses import asdict
 from datetime import datetime, timezone
 
 log = logging.getLogger(__name__)
@@ -48,9 +34,61 @@ def get_book_dir(source_slug: str) -> Path:
     return p
 
 
+def _load_manifest_entry(source_slug: str, chunk_id: str) -> dict:
+    """Load manifest entry for one chunk (needed for RagChunk text + metadata)."""
+    manifest_path = get_book_dir(source_slug) / "chunk_manifest.json"
+    if not manifest_path.exists():
+        return {}
+    try:
+        raw = json.loads(manifest_path.read_text("utf-8"))
+        chunk_list = raw["chunks"] if isinstance(raw, dict) else raw
+        for entry in chunk_list:
+            if isinstance(entry, dict) and entry.get("chunk_id") == chunk_id:
+                return entry
+    except (json.JSONDecodeError, KeyError, TypeError):
+        pass
+    return {}
+
+
+async def _ensure_source_doc_async(source_slug: str) -> int | None:
+    """Get or create SourceDocument in DB, return its id."""
+    try:
+        from app.ingest.dao import SourceDocumentDAO
+    except ImportError:
+        log.warning("IngestDAO not importable — DB save skipped")
+        return None
+
+    meta_path = get_book_dir(source_slug) / "metadata.json"
+    if not meta_path.exists():
+        return None
+
+    meta = json.loads(meta_path.read_text(encoding="utf-8"))
+    doc = await SourceDocumentDAO.get_or_create(
+        source_slug  = source_slug,
+        title        = meta.get("title", source_slug),
+        file_name    = meta.get("file_name", ""),
+        language     = meta.get("language", "mixed"),
+        doc_type     = meta.get("doc_type", "manual"),
+        total_chunks = meta.get("total_chunks", 0),
+        meta         = meta,
+    )
+    return doc.id if doc else None
+
+
 def save_book_metadata(source_slug: str, metadata: dict) -> None:
     path = get_book_dir(source_slug) / "metadata.json"
-    metadata["_created_at"] = datetime.now(timezone.utc).isoformat()
+    now = datetime.now(timezone.utc).isoformat()
+
+    if path.exists():
+        try:
+            existing = json.loads(path.read_text(encoding="utf-8"))
+            metadata["created_at"] = existing.get("created_at", now)
+        except Exception:
+            metadata["_created_at"] = now
+        metadata["_updated_at"] = now
+    else:
+        metadata["_created_at"] = now
+        metadata["_updated_at"] = None
     # encoding='utf-8' — critical on Windows where default is cp1251
     path.write_text(json.dumps(metadata, indent=2, ensure_ascii=False), encoding="utf-8")
     log.info(f"  ✓ metadata saved → {path}")
@@ -58,72 +96,95 @@ def save_book_metadata(source_slug: str, metadata: dict) -> None:
 
 def save_chunk_result(result) -> None:
     """
-    Save one ChunkExtractionResult to its own subfolder.
+    Persist one completed ChunkExtractionResult.
 
-    Only writes the _completed marker if the extraction had no API errors.
-    Chunks that will not get _completed will be re-processed on the next run.
+    Success  -> writes _completed marker + saves all records to PostgreSQL.
+    Failure  -> removes stale _completed marker, nothing written to DB.
+
+    JSON files (scenarios.json etc.) are NO LONGER written to disk.
+    PostgreSQL is the primary storage for extracted records.
+    The _completed marker and chunk_manifest.json are kept for idempotency.
     """
     chunk_dir = get_book_dir(result.source_slug) / "chunks" / result.chunk_id
     chunk_dir.mkdir(parents=True, exist_ok=True)
 
-    for name, data in [
-        ("scenarios.json",      result.scenarios),
-        ("decision_nodes.json", result.decision_nodes),
-        ("tactics.json",        result.tactics),
-        ("qa_pairs.json",       result.qa_pairs),
-    ]:
-        (chunk_dir / name).write_text(
-            json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8"
-        )
-
-    total = (len(result.scenarios) + len(result.decision_nodes)
-             + len(result.tactics) + len(result.qa_pairs))
-
+    total      = (len(result.scenarios) + len(result.decision_nodes)
+                  + len(result.tactics) + len(result.qa_pairs))
     had_errors = getattr(result, "had_api_errors", False)
 
-    if not had_errors:
-        # write the completion marker
-        (chunk_dir / "_completed").write_text(
-            datetime.now(timezone.utc).isoformat(),
-            encoding="utf-8"
-        )
-        status = "✓ completed"
-    else:
-        # no marker — will be retried on next run
-        # Remove stale _completed by previous run mistake
+    if had_errors:
         completed_path = chunk_dir / "_completed"
         if completed_path.exists():
             completed_path.unlink()
-        status = "WARNING: saved (API errors — will retry)"
+        log.info(
+            "  WARNING: saved (API errors - will retry) [%s]: "
+            "%d scenarios, %d decisions, %d tactics, %d qa_pairs%s",
+            result.chunk_id,
+            len(result.scenarios), len(result.decision_nodes),
+            len(result.tactics), len(result.qa_pairs),
+            "  [all empty]" if total == 0 else "  [total=%d]" % total,
+        )
+        return
 
-    log.info(
-        f"  {status} [{result.chunk_id}]: "
-        f"{len(result.scenarios)} scenarios, "
-        f"{len(result.decision_nodes)} decisions, "
-        f"{len(result.tactics)} tactics, "
-        f"{len(result.qa_pairs)} qa_pairs"
-        + (f"  [total={total}]" if total > 0 else "  [all empty]")
+    # Write _completed marker
+    (chunk_dir / "_completed").write_text(
+        datetime.now(timezone.utc).isoformat(), encoding="utf-8"
     )
+
+    # Save to PostgreSQL
+    (chunk_dir / "_completed").write_text(
+        datetime.now(timezone.utc).isoformat(), encoding="utf-8"
+    )
+
+    # Save to PostgreSQL — single run_until_complete so asyncpg stays stable
+    try:
+        from app.ingest.dao import IngestDAO
+
+        async def _save_all():
+            # Both awaits happen inside ONE event loop run — no paused-loop issues
+            source_doc_id = await _ensure_source_doc_async(result.source_slug)
+            if not source_doc_id:
+                return None
+            manifest_entry = _load_manifest_entry(result.source_slug, result.chunk_id)
+            return await IngestDAO.save_chunk_result(result, manifest_entry, source_doc_id)
+
+        db_counts = _run_async(_save_all())
+
+        if db_counts:
+            log.info(
+                "  completed [%s]: %d scenarios, %d decisions, %d tactics, "
+                "%d qa_pairs [total=%d] -> DB: %s",
+                result.chunk_id,
+                len(result.scenarios), len(result.decision_nodes),
+                len(result.tactics), len(result.qa_pairs),
+                total, db_counts,
+            )
+        else:
+            log.warning(
+                "  completed [%s] but DB save skipped "
+                "(metadata.json missing or DB unavailable)",
+                result.chunk_id,
+            )
+
+    except Exception as e:
+        completed_path = chunk_dir / "_completed"
+        if completed_path.exists():
+            completed_path.unlink()
+        log.error(
+            "  completed [%s] but DB save FAILED: %s"
+            " -- run `python -m app.run --promote-only` to retry.",
+            result.chunk_id, e,
+        )
 
 
 def is_chunk_done(source_slug: str, chunk_id: str) -> bool:
     """
-    A chunk is done only if:
-    * 4 JSON result files exist
-    * the _completed marker file exists
-
-    This ensures chunks that failed with API errors (saved [] but no marker)
-    are re-processed on restart rather than permanently skipped.
+    A chunk is done if _completed marker exists.
+    Fast file-based check — no DB query needed on every chunk at startup.
+    JSON result files are no longer written, so we only check the marker.
     """
     chunk_dir = get_book_dir(source_slug) / "chunks" / chunk_id
-    # must have the completion marker
-    if not (chunk_dir / "_completed").exists():
-        return False
-    # must have all 4 result files (sanity check)
-    return all(
-        (chunk_dir / f).exists()
-        for f in ("scenarios.json", "decision_nodes.json", "tactics.json", "qa_pairs.json")
-    )
+    return (chunk_dir / "_completed").exists()
 
 
 def merge_book_to_processed(source_slug: str) -> dict:
@@ -264,17 +325,50 @@ def build_training_jsonl(output_path: Path | None = None) -> Path:
 
 
 def get_stats() -> dict:
-    """Return record counts across all processed files."""
-    proc_dir = DATA_DIR / "processed"
-    stats = {}
-    for name in ("scenarios", "decision_nodes", "tactics", "qa_pairs",
-                 "rag_chunks", "training_samples"):
-        path = proc_dir / f"{name}.jsonl"
-        if path.exists():
-            try:
-                stats[name] = sum(1 for _ in open(path, encoding="utf-8"))
-            except Exception:
-                stats[name] = 0
-        else:
-            stats[name] = 0
-    return stats
+    """Return record counts from DB (falls back to JSONL files if DB unavailable)."""
+    try:
+        from app.ingest.dao import (
+            ScenarioDAO, DecisionNodeDAO, TacticDAO,
+            QAPairDAO, RagChunkDAO, TrainingSampleDAO,
+        )
+
+        async def _counts():
+            return {
+                "scenarios":        len(await ScenarioDAO.find_all()),
+                "decision_nodes":   len(await DecisionNodeDAO.find_all()),
+                "tactics":          len(await TacticDAO.find_all()),
+                "qa_pairs":         len(await QAPairDAO.find_all()),
+                "rag_chunks":       len(await RagChunkDAO.find_all()),
+                "training_samples": len(await TrainingSampleDAO.find_all()),
+            }
+
+        return _run_async(_counts())
+
+    except Exception as e:
+        log.warning("get_stats DB query failed: %s", e)
+        return {k: 0 for k in ("scenarios", "decision_nodes", "tactics",
+                               "qa_pairs", "rag_chunks", "training_samples")}
+
+    except Exception:
+        # Fallback: count JSONL lines if DB is unavailable
+        proc_dir = DATA_DIR / "processed"
+        stats = {}
+        for name in ("scenarios", "decision_nodes", "tactics", "qa_pairs",
+                     "rag_chunks", "training_samples"):
+            path = proc_dir / f"{name}.jsonl"
+            stats[name] = sum(1 for _ in open(path, encoding="utf-8")) if path.exists() else 0
+        return stats
+
+def _run_async(coro):
+    """
+    Run async coroutine from sync pipeline code.
+    Reuses the existing event loop — never closes it between calls.
+    """
+    try:
+        loop = asyncio.get_event_loop()
+        if loop.is_closed():
+            raise RuntimeError("closed")
+    except RuntimeError:
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+    return loop.run_until_complete(coro)
