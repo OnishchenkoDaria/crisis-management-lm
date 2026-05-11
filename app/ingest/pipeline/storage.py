@@ -339,7 +339,12 @@ def get_stats() -> dict:
                 "training_samples": len(await TrainingSampleDAO.find_all()),
             }
 
-        return asyncio.run(_counts())
+        return _run_async(_counts())
+
+    except Exception as e:
+        log.warning("get_stats DB query failed: %s", e)
+        return {k: 0 for k in ("scenarios", "decision_nodes", "tactics",
+                               "qa_pairs", "rag_chunks", "training_samples")}
 
     except Exception:
         # Fallback: count JSONL lines if DB is unavailable
