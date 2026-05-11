@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import Text, JSON
-from app.database import Base, int_pk, str_not_null, str_uniq
+from app.database import Base, int_pk, str_not_null, str_uniq, str_null_true
 
 
 class QAPair(Base):
@@ -13,7 +13,7 @@ class QAPair(Base):
     )
     difficulty: Mapped[str_not_null]
     common_mistake: Mapped[str] = mapped_column(Text, nullable=False)
-    source_scenario_id: Mapped[str_not_null]
+    source_scenario_id: Mapped[str_null_true]
 
     # present objects as string data
     def __str__(self):
