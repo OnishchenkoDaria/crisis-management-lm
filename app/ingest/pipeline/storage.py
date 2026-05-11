@@ -167,6 +167,9 @@ def save_chunk_result(result) -> None:
             )
 
     except Exception as e:
+        completed_path = chunk_dir / "_completed"
+        if completed_path.exists():
+            completed_path.unlink()
         log.error(
             "  completed [%s] but DB save FAILED: %s"
             " -- run `python -m app.run --promote-only` to retry.",
