@@ -12360,3 +12360,1564 @@ DETAIL:  Failing row contains (489, qa-000241, What are the critical competencie
 19:23:06  INFO      Step 4/4  Finalising book in DB ...
 19:23:06  INFO      Built 0 new TrainingSamples
 19:23:06  INFO        Done: 0 TrainingSamples created
+19:53:11  INFO      
+============================================================
+19:53:11  INFO      Processing: 105312772.pdf
+19:53:11  INFO      ============================================================
+19:53:11  INFO      Step 1/4  Extracting text and splitting into chunks …
+19:53:13  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+19:53:13  INFO        Found 1 chunks across 1 chapters
+19:53:13  INFO      Step 2/4  Saving chunk manifest …
+19:53:13  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\105312772\metadata.json
+19:53:13  INFO      Step 3/4  Running AI extraction …
+19:53:13  INFO        1 chunks already done, 0 remaining
+19:53:13  INFO        [1/1] SKIP (cached)  105312772__ch000__ck000
+19:53:13  INFO      Step 4/4  Finalising book in DB ...
+19:53:16  INFO      Built 0 new TrainingSamples
+19:53:16  INFO        Done: 0 TrainingSamples created
+19:53:16  INFO      
+============================================================
+19:53:16  INFO      Processing: 11-Bohdanov.pdf
+19:53:16  INFO      ============================================================
+19:53:16  INFO      Step 1/4  Extracting text and splitting into chunks …
+19:53:23  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+19:53:23  INFO        Found 2 chunks across 2 chapters
+19:53:23  INFO      Step 2/4  Saving chunk manifest …
+19:53:23  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\11-bohdanov\metadata.json
+19:53:23  INFO      Step 3/4  Running AI extraction …
+19:53:23  INFO        2 chunks already done, 0 remaining
+19:53:23  INFO        [1/2] SKIP (cached)  11-bohdanov__ch000__ck000
+19:53:23  INFO        [2/2] SKIP (cached)  11-bohdanov__ch001__ck000
+19:53:23  INFO      Step 4/4  Finalising book in DB ...
+19:53:23  INFO      Built 0 new TrainingSamples
+19:53:23  INFO        Done: 0 TrainingSamples created
+19:53:23  INFO      
+============================================================
+19:53:23  INFO      Processing: 123550889.pdf
+19:53:23  INFO      ============================================================
+19:53:23  INFO      Step 1/4  Extracting text and splitting into chunks …
+19:53:31  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+19:53:31  INFO        Found 2 chunks across 2 chapters
+19:53:31  INFO      Step 2/4  Saving chunk manifest …
+19:53:31  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\123550889\metadata.json
+19:53:31  INFO      Step 3/4  Running AI extraction …
+19:53:31  INFO        2 chunks already done, 0 remaining
+19:53:31  INFO        [1/2] SKIP (cached)  123550889__ch000__ck000
+19:53:31  INFO        [2/2] SKIP (cached)  123550889__ch001__ck000
+19:53:31  INFO      Step 4/4  Finalising book in DB ...
+19:53:31  INFO      Built 0 new TrainingSamples
+19:53:31  INFO        Done: 0 TrainingSamples created
+19:53:31  INFO      
+============================================================
+19:53:31  INFO      Processing: 1520-Текст статті-1469-3-10-20251124.pdf
+19:53:31  INFO      ============================================================
+19:53:31  INFO      Step 1/4  Extracting text and splitting into chunks …
+19:53:35  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+19:53:35  INFO        Found 2 chunks across 1 chapters
+19:53:35  INFO      Step 2/4  Saving chunk manifest …
+19:53:35  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\1520-tekst-statti-1469-3-10-20251124\metadata.json
+19:53:35  INFO      Step 3/4  Running AI extraction …
+19:53:35  INFO        0 chunks already done, 2 remaining
+19:53:35  INFO        [1/2] Processing  1520-tekst-statti-1469-3-10-20251124__ch000__ck000 (4499 tokens, chapter: 1520-Текст статті-1469-3-10-20251124)
+19:53:35  INFO        -> [1520-tekst-statti-1469-3-10-20251124__ch000__ck000] lang=uk tokens=4499 | active backends: gemini -> mistral -> groq -> openrouter -> github -> lmstudio
+19:53:40  INFO      AFC is enabled with max remote calls: 10.
+19:53:40  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+19:53:40  WARNING   [gemini] Daily quota exhausted
+19:53:40  INFO        Switching to next backend. Remaining: mistral -> groq -> openrouter -> github -> lmstudio
+19:54:13  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+19:54:15  INFO        [1520-tekst-statti-1469-3-10-20251124__ch000__ck000] 5 scenarios, 5 decisions, 7 tactics, 8 qa_pairs
+19:54:15  INFO      Created SourceDocument: 1520-tekst-statti-1469-3-10-20251124 (id=38)
+19:54:15  INFO      DB saved chunk [1520-tekst-statti-1469-3-10-20251124__ch000__ck000]: scenarios=5 | decision_nodes=5 | tactics=7 | qa_pairs=8 | rag_chunks=1
+19:54:15  INFO        completed [1520-tekst-statti-1469-3-10-20251124__ch000__ck000]: 5 scenarios, 5 decisions, 7 tactics, 8 qa_pairs [total=25] -> DB: {'scenarios': 5, 'decision_nodes': 5, 'tactics': 7, 'qa_pairs': 8, 'rag_chunks': 1}
+19:54:15  INFO        [2/2] Processing  1520-tekst-statti-1469-3-10-20251124__ch000__ck001 (919 tokens, chapter: 1520-Текст статті-1469-3-10-20251124)
+19:54:15  INFO        -> [1520-tekst-statti-1469-3-10-20251124__ch000__ck001] lang=uk tokens=919 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+19:54:35  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+19:54:37  INFO        [1520-tekst-statti-1469-3-10-20251124__ch000__ck001] 4 scenarios, 4 decisions, 5 tactics, 8 qa_pairs
+19:54:37  INFO      DB saved chunk [1520-tekst-statti-1469-3-10-20251124__ch000__ck001]: scenarios=4 | decision_nodes=4 | tactics=5 | qa_pairs=8 | rag_chunks=1
+19:54:37  INFO        completed [1520-tekst-statti-1469-3-10-20251124__ch000__ck001]: 4 scenarios, 4 decisions, 5 tactics, 8 qa_pairs [total=21] -> DB: {'scenarios': 4, 'decision_nodes': 4, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+19:54:37  INFO      Step 4/4  Finalising book in DB ...
+19:54:37  INFO      Built 16 new TrainingSamples
+19:54:37  INFO        Done: 16 TrainingSamples created
+19:54:37  INFO      
+============================================================
+19:54:37  INFO      Processing: 18-Hutsaliuk.pdf
+19:54:37  INFO      ============================================================
+19:54:37  INFO      Step 1/4  Extracting text and splitting into chunks …
+19:54:50  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+19:54:50  INFO        Found 2 chunks across 2 chapters
+19:54:50  INFO      Step 2/4  Saving chunk manifest …
+19:54:50  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\18-hutsaliuk\metadata.json
+19:54:50  INFO      Step 3/4  Running AI extraction …
+19:54:50  INFO        2 chunks already done, 0 remaining
+19:54:50  INFO        [1/2] SKIP (cached)  18-hutsaliuk__ch000__ck000
+19:54:50  INFO        [2/2] SKIP (cached)  18-hutsaliuk__ch001__ck000
+19:54:50  INFO      Step 4/4  Finalising book in DB ...
+19:54:50  INFO      Built 0 new TrainingSamples
+19:54:50  INFO        Done: 0 TrainingSamples created
+19:54:50  INFO      
+============================================================
+19:54:50  INFO      Processing: 19.pdf
+19:54:50  INFO      ============================================================
+19:54:50  INFO      Step 1/4  Extracting text and splitting into chunks …
+19:54:52  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+19:54:52  INFO        Found 1 chunks across 1 chapters
+19:54:52  INFO      Step 2/4  Saving chunk manifest …
+19:54:52  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\19\metadata.json
+19:54:52  INFO      Step 3/4  Running AI extraction …
+19:54:52  INFO        1 chunks already done, 0 remaining
+19:54:52  INFO        [1/1] SKIP (cached)  19__ch000__ck000
+19:54:52  INFO      Step 4/4  Finalising book in DB ...
+19:54:52  INFO      Built 0 new TrainingSamples
+19:54:52  INFO        Done: 0 TrainingSamples created
+19:54:52  INFO      
+============================================================
+19:54:52  INFO      Processing: 226149-Текст статті-517907-1-10-20210323.pdf
+19:54:52  INFO      ============================================================
+19:54:52  INFO      Step 1/4  Extracting text and splitting into chunks …
+19:55:01  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+19:55:01  INFO        Found 2 chunks across 1 chapters
+19:55:01  INFO      Step 2/4  Saving chunk manifest …
+19:55:01  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\226149-tekst-statti-517907-1-10-20210323\metadata.json
+19:55:01  INFO      Step 3/4  Running AI extraction …
+19:55:01  INFO        0 chunks already done, 2 remaining
+19:55:01  INFO        [1/2] Processing  226149-tekst-statti-517907-1-10-20210323__ch000__ck000 (4499 tokens, chapter: Вступ.)
+19:55:01  INFO        -> [226149-tekst-statti-517907-1-10-20210323__ch000__ck000] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+19:55:31  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+19:55:33  INFO        [226149-tekst-statti-517907-1-10-20210323__ch000__ck000] 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs
+19:55:33  INFO      Created SourceDocument: 226149-tekst-statti-517907-1-10-20210323 (id=39)
+19:55:33  INFO      DB saved chunk [226149-tekst-statti-517907-1-10-20210323__ch000__ck000]: scenarios=5 | decision_nodes=5 | tactics=6 | qa_pairs=8 | rag_chunks=1
+19:55:33  INFO        completed [226149-tekst-statti-517907-1-10-20210323__ch000__ck000]: 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs [total=24] -> DB: {'scenarios': 5, 'decision_nodes': 5, 'tactics': 6, 'qa_pairs': 8, 'rag_chunks': 1}
+19:55:33  INFO        [2/2] Processing  226149-tekst-statti-517907-1-10-20210323__ch000__ck001 (2762 tokens, chapter: Вступ.)
+19:55:33  INFO        -> [226149-tekst-statti-517907-1-10-20210323__ch000__ck001] lang=uk tokens=2762 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+19:55:53  ERROR     [mistral] Error: Connection error.
+19:55:59  ERROR     [mistral] Error: Connection error.
+19:56:31  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+19:56:33  INFO        [226149-tekst-statti-517907-1-10-20210323__ch000__ck001] 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs
+19:56:33  INFO      DB saved chunk [226149-tekst-statti-517907-1-10-20210323__ch000__ck001]: scenarios=4 | decision_nodes=5 | tactics=6 | qa_pairs=8 | rag_chunks=1
+19:56:33  INFO        completed [226149-tekst-statti-517907-1-10-20210323__ch000__ck001]: 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs [total=24] -> DB: {'scenarios': 4, 'decision_nodes': 5, 'tactics': 6, 'qa_pairs': 8, 'rag_chunks': 1}
+19:56:33  INFO      Step 4/4  Finalising book in DB ...
+19:56:33  INFO      Built 16 new TrainingSamples
+19:56:33  INFO        Done: 16 TrainingSamples created
+19:56:33  INFO      
+============================================================
+19:56:33  INFO      Processing: 240614-Текст статті-574421-1-10-20211230.pdf
+19:56:33  INFO      ============================================================
+19:56:33  INFO      Step 1/4  Extracting text and splitting into chunks …
+19:56:41  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+19:56:41  INFO        Found 1 chunks across 1 chapters
+19:56:41  INFO      Step 2/4  Saving chunk manifest …
+19:56:41  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\240614-tekst-statti-574421-1-10-20211230\metadata.json
+19:56:41  INFO      Step 3/4  Running AI extraction …
+19:56:41  INFO        1 chunks already done, 0 remaining
+19:56:41  INFO        [1/1] SKIP (cached)  240614-tekst-statti-574421-1-10-20211230__ch000__ck000
+19:56:41  INFO      Step 4/4  Finalising book in DB ...
+19:56:41  INFO      Built 0 new TrainingSamples
+19:56:41  INFO        Done: 0 TrainingSamples created
+19:56:41  INFO      
+============================================================
+19:56:41  INFO      Processing: 29.pdf
+19:56:41  INFO      ============================================================
+19:56:41  INFO      Step 1/4  Extracting text and splitting into chunks …
+19:56:51  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+19:56:51  INFO        Found 2 chunks across 1 chapters
+19:56:51  INFO      Step 2/4  Saving chunk manifest …
+19:56:51  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\29\metadata.json
+19:56:51  INFO      Step 3/4  Running AI extraction …
+19:56:51  INFO        0 chunks already done, 2 remaining
+19:56:51  INFO        [1/2] Processing  29__ch000__ck000 (4499 tokens, chapter: Виклад основного матеріалу дослідження.)
+19:56:51  INFO        -> [29__ch000__ck000] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+19:57:16  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+19:57:18  INFO        [29__ch000__ck000] 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs
+19:57:18  INFO      Created SourceDocument: 29 (id=40)
+19:57:18  INFO      DB saved chunk [29__ch000__ck000]: scenarios=5 | decision_nodes=5 | tactics=6 | qa_pairs=8 | rag_chunks=1
+19:57:18  INFO        completed [29__ch000__ck000]: 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs [total=24] -> DB: {'scenarios': 5, 'decision_nodes': 5, 'tactics': 6, 'qa_pairs': 8, 'rag_chunks': 1}
+19:57:18  INFO        [2/2] Processing  29__ch000__ck001 (2633 tokens, chapter: Виклад основного матеріалу дослідження.)
+19:57:18  INFO        -> [29__ch000__ck001] lang=uk tokens=2633 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+19:57:45  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+19:57:47  INFO        [29__ch000__ck001] 3 scenarios, 3 decisions, 4 tactics, 8 qa_pairs
+19:57:47  INFO      DB saved chunk [29__ch000__ck001]: scenarios=3 | decision_nodes=3 | tactics=4 | qa_pairs=8 | rag_chunks=1
+19:57:47  INFO        completed [29__ch000__ck001]: 3 scenarios, 3 decisions, 4 tactics, 8 qa_pairs [total=18] -> DB: {'scenarios': 3, 'decision_nodes': 3, 'tactics': 4, 'qa_pairs': 8, 'rag_chunks': 1}
+19:57:47  INFO      Step 4/4  Finalising book in DB ...
+19:57:47  INFO      Built 16 new TrainingSamples
+19:57:47  INFO        Done: 16 TrainingSamples created
+19:57:47  INFO      
+============================================================
+19:57:47  INFO      Processing: 305969-Текст статті-706807-1-10-20240610.pdf
+19:57:47  INFO      ============================================================
+19:57:47  INFO      Step 1/4  Extracting text and splitting into chunks …
+19:58:11  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+19:58:11  INFO        Found 2 chunks across 2 chapters
+19:58:11  INFO      Step 2/4  Saving chunk manifest …
+19:58:11  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\305969-tekst-statti-706807-1-10-20240610\metadata.json
+19:58:11  INFO      Step 3/4  Running AI extraction …
+19:58:11  INFO        2 chunks already done, 0 remaining
+19:58:11  INFO        [1/2] SKIP (cached)  305969-tekst-statti-706807-1-10-20240610__ch000__ck000
+19:58:11  INFO        [2/2] SKIP (cached)  305969-tekst-statti-706807-1-10-20240610__ch001__ck000
+19:58:11  INFO      Step 4/4  Finalising book in DB ...
+19:58:11  INFO      Built 0 new TrainingSamples
+19:58:11  INFO        Done: 0 TrainingSamples created
+19:58:11  INFO      
+============================================================
+19:58:11  INFO      Processing: 312085-Текст статті-721791-1-10-20240925.pdf
+19:58:11  INFO      ============================================================
+19:58:11  INFO      Step 1/4  Extracting text and splitting into chunks …
+19:58:18  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+19:58:18  INFO        Found 1 chunks across 1 chapters
+19:58:18  INFO      Step 2/4  Saving chunk manifest …
+19:58:18  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\312085-tekst-statti-721791-1-10-20240925\metadata.json
+19:58:18  INFO      Step 3/4  Running AI extraction …
+19:58:18  INFO        1 chunks already done, 0 remaining
+19:58:18  INFO        [1/1] SKIP (cached)  312085-tekst-statti-721791-1-10-20240925__ch000__ck000
+19:58:18  INFO      Step 4/4  Finalising book in DB ...
+19:58:18  INFO      Built 0 new TrainingSamples
+19:58:18  INFO        Done: 0 TrainingSamples created
+19:58:18  INFO      
+============================================================
+19:58:18  INFO      Processing: 3257-Текст статті-3166-1-10-20240111.pdf
+19:58:18  INFO      ============================================================
+19:58:18  INFO      Step 1/4  Extracting text and splitting into chunks …
+19:58:24  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+19:58:24  INFO        Found 2 chunks across 1 chapters
+19:58:24  INFO      Step 2/4  Saving chunk manifest …
+19:58:24  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\3257-tekst-statti-3166-1-10-20240111\metadata.json
+19:58:24  INFO      Step 3/4  Running AI extraction …
+19:58:24  INFO        2 chunks already done, 0 remaining
+19:58:24  INFO        [1/2] SKIP (cached)  3257-tekst-statti-3166-1-10-20240111__ch000__ck000
+19:58:24  INFO        [2/2] SKIP (cached)  3257-tekst-statti-3166-1-10-20240111__ch000__ck001
+19:58:24  INFO      Step 4/4  Finalising book in DB ...
+19:58:24  INFO      Built 0 new TrainingSamples
+19:58:24  INFO        Done: 0 TrainingSamples created
+19:58:24  INFO      
+============================================================
+19:58:24  INFO      Processing: 330626-Ð¢ÐµÐºÑÑ ÑÑÐ°ÑÑÑ-767485-1-10-20250523.pdf
+19:58:24  INFO      ============================================================
+19:58:24  INFO      Step 1/4  Extracting text and splitting into chunks …
+19:58:32  INFO        Sections after merge: 3 (was 3, merged 0 tiny sections)
+19:58:32  INFO        Found 3 chunks across 3 chapters
+19:58:32  INFO      Step 2/4  Saving chunk manifest …
+19:58:32  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\330626-767485-1-10-20250523\metadata.json
+19:58:32  INFO      Step 3/4  Running AI extraction …
+19:58:32  INFO        3 chunks already done, 0 remaining
+19:58:32  INFO        [1/3] SKIP (cached)  330626-767485-1-10-20250523__ch000__ck000
+19:58:32  INFO        [2/3] SKIP (cached)  330626-767485-1-10-20250523__ch001__ck000
+19:58:32  INFO        [3/3] SKIP (cached)  330626-767485-1-10-20250523__ch002__ck000
+19:58:32  INFO      Step 4/4  Finalising book in DB ...
+19:58:32  INFO      Built 0 new TrainingSamples
+19:58:32  INFO        Done: 0 TrainingSamples created
+19:58:32  INFO      
+============================================================
+19:58:32  INFO      Processing: 332292-Ð¢ÐµÐºÑÑ ÑÑÐ°ÑÑÑ-771254-1-10-20250610.pdf
+19:58:32  INFO      ============================================================
+19:58:32  INFO      Step 1/4  Extracting text and splitting into chunks …
+19:58:39  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+19:58:39  INFO        Found 2 chunks across 1 chapters
+19:58:39  INFO      Step 2/4  Saving chunk manifest …
+19:58:39  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\332292-771254-1-10-20250610\metadata.json
+19:58:39  INFO      Step 3/4  Running AI extraction …
+19:58:39  INFO        2 chunks already done, 0 remaining
+19:58:39  INFO        [1/2] SKIP (cached)  332292-771254-1-10-20250610__ch000__ck000
+19:58:39  INFO        [2/2] SKIP (cached)  332292-771254-1-10-20250610__ch000__ck001
+19:58:39  INFO      Step 4/4  Finalising book in DB ...
+19:58:39  INFO      Built 0 new TrainingSamples
+19:58:39  INFO        Done: 0 TrainingSamples created
+19:58:39  INFO      
+============================================================
+19:58:39  INFO      Processing: 4-1_2024.pdf
+19:58:39  INFO      ============================================================
+19:58:39  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:01:28  INFO        Sections after merge: 18 (was 18, merged 0 tiny sections)
+20:01:29  INFO        Found 58 chunks across 18 chapters
+20:01:29  INFO      Step 2/4  Saving chunk manifest …
+20:01:29  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\4-1-2024\metadata.json
+20:01:29  INFO      Step 3/4  Running AI extraction …
+20:01:29  INFO        58 chunks already done, 0 remaining
+20:01:29  INFO        [1/58] SKIP (cached)  4-1-2024__ch000__ck000
+20:01:29  INFO        [2/58] SKIP (cached)  4-1-2024__ch001__ck000
+20:01:29  INFO        [3/58] SKIP (cached)  4-1-2024__ch001__ck001
+20:01:29  INFO        [4/58] SKIP (cached)  4-1-2024__ch001__ck002
+20:01:29  INFO        [5/58] SKIP (cached)  4-1-2024__ch002__ck000
+20:01:29  INFO        [6/58] SKIP (cached)  4-1-2024__ch002__ck001
+20:01:29  INFO        [7/58] SKIP (cached)  4-1-2024__ch003__ck000
+20:01:29  INFO        [8/58] SKIP (cached)  4-1-2024__ch004__ck000
+20:01:29  INFO        [9/58] SKIP (cached)  4-1-2024__ch005__ck000
+20:01:29  INFO        [10/58] SKIP (cached)  4-1-2024__ch005__ck001
+20:01:29  INFO        [11/58] SKIP (cached)  4-1-2024__ch006__ck000
+20:01:29  INFO        [12/58] SKIP (cached)  4-1-2024__ch006__ck001
+20:01:29  INFO        [13/58] SKIP (cached)  4-1-2024__ch006__ck002
+20:01:29  INFO        [14/58] SKIP (cached)  4-1-2024__ch006__ck003
+20:01:29  INFO        [15/58] SKIP (cached)  4-1-2024__ch006__ck004
+20:01:29  INFO        [16/58] SKIP (cached)  4-1-2024__ch006__ck005
+20:01:29  INFO        [17/58] SKIP (cached)  4-1-2024__ch007__ck000
+20:01:29  INFO        [18/58] SKIP (cached)  4-1-2024__ch007__ck001
+20:01:29  INFO        [19/58] SKIP (cached)  4-1-2024__ch008__ck000
+20:01:29  INFO        [20/58] SKIP (cached)  4-1-2024__ch008__ck001
+20:01:29  INFO        [21/58] SKIP (cached)  4-1-2024__ch008__ck002
+20:01:29  INFO        [22/58] SKIP (cached)  4-1-2024__ch008__ck003
+20:01:29  INFO        [23/58] SKIP (cached)  4-1-2024__ch009__ck000
+20:01:29  INFO        [24/58] SKIP (cached)  4-1-2024__ch009__ck001
+20:01:29  INFO        [25/58] SKIP (cached)  4-1-2024__ch009__ck002
+20:01:29  INFO        [26/58] SKIP (cached)  4-1-2024__ch010__ck000
+20:01:29  INFO        [27/58] SKIP (cached)  4-1-2024__ch010__ck001
+20:01:29  INFO        [28/58] SKIP (cached)  4-1-2024__ch010__ck002
+20:01:29  INFO        [29/58] SKIP (cached)  4-1-2024__ch011__ck000
+20:01:29  INFO        [30/58] SKIP (cached)  4-1-2024__ch011__ck001
+20:01:29  INFO        [31/58] SKIP (cached)  4-1-2024__ch012__ck000
+20:01:29  INFO        [32/58] SKIP (cached)  4-1-2024__ch012__ck001
+20:01:29  INFO        [33/58] SKIP (cached)  4-1-2024__ch013__ck000
+20:01:29  INFO        [34/58] SKIP (cached)  4-1-2024__ch013__ck001
+20:01:29  INFO        [35/58] SKIP (cached)  4-1-2024__ch013__ck002
+20:01:30  INFO        [36/58] SKIP (cached)  4-1-2024__ch013__ck003
+20:01:30  INFO        [37/58] SKIP (cached)  4-1-2024__ch013__ck004
+20:01:30  INFO        [38/58] SKIP (cached)  4-1-2024__ch014__ck000
+20:01:30  INFO        [39/58] SKIP (cached)  4-1-2024__ch014__ck001
+20:01:30  INFO        [40/58] SKIP (cached)  4-1-2024__ch014__ck002
+20:01:30  INFO        [41/58] SKIP (cached)  4-1-2024__ch014__ck003
+20:01:30  INFO        [42/58] SKIP (cached)  4-1-2024__ch014__ck004
+20:01:30  INFO        [43/58] SKIP (cached)  4-1-2024__ch014__ck005
+20:01:30  INFO        [44/58] SKIP (cached)  4-1-2024__ch014__ck006
+20:01:30  INFO        [45/58] SKIP (cached)  4-1-2024__ch015__ck000
+20:01:30  INFO        [46/58] SKIP (cached)  4-1-2024__ch015__ck001
+20:01:30  INFO        [47/58] SKIP (cached)  4-1-2024__ch016__ck000
+20:01:30  INFO        [48/58] SKIP (cached)  4-1-2024__ch016__ck001
+20:01:30  INFO        [49/58] SKIP (cached)  4-1-2024__ch016__ck002
+20:01:30  INFO        [50/58] SKIP (cached)  4-1-2024__ch016__ck003
+20:01:30  INFO        [51/58] SKIP (cached)  4-1-2024__ch016__ck004
+20:01:30  INFO        [52/58] SKIP (cached)  4-1-2024__ch017__ck000
+20:01:30  INFO        [53/58] SKIP (cached)  4-1-2024__ch017__ck001
+20:01:30  INFO        [54/58] SKIP (cached)  4-1-2024__ch017__ck002
+20:01:30  INFO        [55/58] SKIP (cached)  4-1-2024__ch017__ck003
+20:01:30  INFO        [56/58] SKIP (cached)  4-1-2024__ch017__ck004
+20:01:30  INFO        [57/58] SKIP (cached)  4-1-2024__ch017__ck005
+20:01:30  INFO        [58/58] SKIP (cached)  4-1-2024__ch017__ck006
+20:01:30  INFO      Step 4/4  Finalising book in DB ...
+20:01:30  INFO      Built 0 new TrainingSamples
+20:01:30  INFO        Done: 0 TrainingSamples created
+20:01:30  INFO      
+============================================================
+20:01:30  INFO      Processing: 440159.pdf
+20:01:30  INFO      ============================================================
+20:01:30  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:01:55  INFO        Sections after merge: 5 (was 9, merged 4 tiny sections)
+20:01:55  INFO        Found 7 chunks across 5 chapters
+20:01:55  INFO      Step 2/4  Saving chunk manifest …
+20:01:55  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\440159\metadata.json
+20:01:55  INFO      Step 3/4  Running AI extraction …
+20:01:55  INFO        0 chunks already done, 7 remaining
+20:01:55  INFO        [1/7] Processing  440159__ch000__ck000 (823 tokens, chapter: Introduction)
+20:01:55  INFO        -> [440159__ch000__ck000] lang=en tokens=823 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:02:14  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:02:16  INFO        [440159__ch000__ck000] 2 scenarios, 3 decisions, 5 tactics, 7 qa_pairs
+20:02:16  INFO      Created SourceDocument: 440159 (id=41)
+20:02:18  INFO      DB saved chunk [440159__ch000__ck000]: scenarios=2 | decision_nodes=3 | tactics=5 | qa_pairs=7 | rag_chunks=1
+20:02:18  INFO        completed [440159__ch000__ck000]: 2 scenarios, 3 decisions, 5 tactics, 7 qa_pairs [total=17] -> DB: {'scenarios': 2, 'decision_nodes': 3, 'tactics': 5, 'qa_pairs': 7, 'rag_chunks': 1}
+20:02:18  INFO        [2/7] Processing  440159__ch001__ck000 (4499 tokens, chapter: Introduction)
+20:02:18  INFO        -> [440159__ch001__ck000] lang=en tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:02:49  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:02:51  INFO        [440159__ch001__ck000] 4 scenarios, 5 decisions, 7 tactics, 8 qa_pairs
+20:02:51  INFO      DB saved chunk [440159__ch001__ck000]: scenarios=3 | decision_nodes=5 | tactics=7 | qa_pairs=8 | rag_chunks=1
+20:02:51  INFO        completed [440159__ch001__ck000]: 4 scenarios, 5 decisions, 7 tactics, 8 qa_pairs [total=24] -> DB: {'scenarios': 3, 'decision_nodes': 5, 'tactics': 7, 'qa_pairs': 8, 'rag_chunks': 1}
+20:02:51  INFO        [3/7] Processing  440159__ch001__ck001 (4499 tokens, chapter: Introduction)
+20:02:51  INFO        -> [440159__ch001__ck001] lang=en tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:03:19  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:03:21  INFO        [440159__ch001__ck001] 5 scenarios, 5 decisions, 7 tactics, 8 qa_pairs
+20:03:21  INFO      DB saved chunk [440159__ch001__ck001]: scenarios=5 | decision_nodes=5 | tactics=7 | qa_pairs=8 | rag_chunks=1
+20:03:21  INFO        completed [440159__ch001__ck001]: 5 scenarios, 5 decisions, 7 tactics, 8 qa_pairs [total=25] -> DB: {'scenarios': 5, 'decision_nodes': 5, 'tactics': 7, 'qa_pairs': 8, 'rag_chunks': 1}
+20:03:21  INFO        [4/7] Processing  440159__ch001__ck002 (3017 tokens, chapter: Introduction)
+20:03:21  INFO        -> [440159__ch001__ck002] lang=en tokens=3017 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:03:47  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:03:49  INFO        [440159__ch001__ck002] 4 scenarios, 4 decisions, 6 tactics, 8 qa_pairs
+20:03:49  INFO      DB saved chunk [440159__ch001__ck002]: scenarios=4 | decision_nodes=4 | tactics=6 | qa_pairs=8 | rag_chunks=1
+20:03:49  INFO        completed [440159__ch001__ck002]: 4 scenarios, 4 decisions, 6 tactics, 8 qa_pairs [total=22] -> DB: {'scenarios': 4, 'decision_nodes': 4, 'tactics': 6, 'qa_pairs': 8, 'rag_chunks': 1}
+20:03:49  INFO        [5/7] Processing  440159__ch002__ck000 (347 tokens, chapter: introduction:)
+20:03:49  INFO        -> [440159__ch002__ck000] lang=en tokens=347 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:04:04  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:04:06  INFO        [440159__ch002__ck000] 1 scenarios, 2 decisions, 3 tactics, 7 qa_pairs
+20:04:06  INFO      DB saved chunk [440159__ch002__ck000]: scenarios=1 | decision_nodes=2 | tactics=3 | qa_pairs=7 | rag_chunks=1
+20:04:06  INFO        completed [440159__ch002__ck000]: 1 scenarios, 2 decisions, 3 tactics, 7 qa_pairs [total=13] -> DB: {'scenarios': 1, 'decision_nodes': 2, 'tactics': 3, 'qa_pairs': 7, 'rag_chunks': 1}
+20:04:06  INFO        [6/7] Processing  440159__ch003__ck000 (3826 tokens, chapter: CONCLUSION)
+20:04:06  INFO        -> [440159__ch003__ck000] lang=en tokens=3826 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:04:17  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:04:19  INFO        [440159__ch003__ck000] 0 scenarios, 0 decisions, 5 tactics, 7 qa_pairs
+20:04:19  INFO      DB saved chunk [440159__ch003__ck000]: tactics=5 | qa_pairs=7 | rag_chunks=1
+20:04:19  INFO        completed [440159__ch003__ck000]: 0 scenarios, 0 decisions, 5 tactics, 7 qa_pairs [total=12] -> DB: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 5, 'qa_pairs': 7, 'rag_chunks': 1}
+20:04:19  INFO        [7/7] Processing  440159__ch004__ck000 (540 tokens, chapter: References)
+20:04:19  INFO        -> [440159__ch004__ck000] lang=en tokens=540 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:04:20  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:04:22  INFO        [440159__ch004__ck000] 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+20:04:22  INFO      DB saved chunk [440159__ch004__ck000]: rag_chunks=1
+20:04:22  INFO        completed [440159__ch004__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs [total=0] -> DB: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 0, 'qa_pairs': 0, 'rag_chunks': 1}
+20:04:22  INFO      Step 4/4  Finalising book in DB ...
+20:04:23  INFO      Built 45 new TrainingSamples
+20:04:23  INFO        Done: 45 TrainingSamples created
+20:04:23  INFO      
+============================================================
+20:04:23  INFO      Processing: 46.pdf
+20:04:23  INFO      ============================================================
+20:04:23  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:04:32  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+20:04:32  INFO        Found 3 chunks across 1 chapters
+20:04:32  INFO      Step 2/4  Saving chunk manifest …
+20:04:32  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\46\metadata.json
+20:04:32  INFO      Step 3/4  Running AI extraction …
+20:04:32  INFO        0 chunks already done, 3 remaining
+20:04:32  INFO        [1/3] Processing  46__ch000__ck000 (4499 tokens, chapter: Аналіз останніх досліджень і публікацій.)
+20:04:32  INFO        -> [46__ch000__ck000] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:05:01  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:05:03  INFO        [46__ch000__ck000] 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs
+20:05:03  INFO      Created SourceDocument: 46 (id=42)
+20:05:03  INFO      DB saved chunk [46__ch000__ck000]: scenarios=4 | decision_nodes=5 | tactics=6 | qa_pairs=8 | rag_chunks=1
+20:05:03  INFO        completed [46__ch000__ck000]: 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs [total=24] -> DB: {'scenarios': 4, 'decision_nodes': 5, 'tactics': 6, 'qa_pairs': 8, 'rag_chunks': 1}
+20:05:03  INFO        [2/3] Processing  46__ch000__ck001 (4499 tokens, chapter: Аналіз останніх досліджень і публікацій.)
+20:05:03  INFO        -> [46__ch000__ck001] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:05:32  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:05:34  INFO        [46__ch000__ck001] 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs
+20:05:34  INFO      DB saved chunk [46__ch000__ck001]: scenarios=4 | decision_nodes=5 | tactics=6 | qa_pairs=8 | rag_chunks=1
+20:05:34  INFO        completed [46__ch000__ck001]: 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs [total=24] -> DB: {'scenarios': 4, 'decision_nodes': 5, 'tactics': 6, 'qa_pairs': 8, 'rag_chunks': 1}
+20:05:34  INFO        [3/3] Processing  46__ch000__ck002 (1307 tokens, chapter: Аналіз останніх досліджень і публікацій.)
+20:05:34  INFO        -> [46__ch000__ck002] lang=uk tokens=1307 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:05:58  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:06:00  INFO        [46__ch000__ck002] 4 scenarios, 4 decisions, 5 tactics, 8 qa_pairs
+20:06:00  INFO      DB saved chunk [46__ch000__ck002]: scenarios=3 | decision_nodes=4 | tactics=5 | qa_pairs=8 | rag_chunks=1
+20:06:00  INFO        completed [46__ch000__ck002]: 4 scenarios, 4 decisions, 5 tactics, 8 qa_pairs [total=21] -> DB: {'scenarios': 3, 'decision_nodes': 4, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+20:06:00  INFO      Step 4/4  Finalising book in DB ...
+20:06:00  INFO      Built 24 new TrainingSamples
+20:06:00  INFO        Done: 24 TrainingSamples created
+20:06:00  INFO      
+============================================================
+20:06:00  INFO      Processing: 5129-Текст статті-5053-1-10-20250108.pdf
+20:06:00  INFO      ============================================================
+20:06:00  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:06:09  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+20:06:09  INFO        Found 2 chunks across 1 chapters
+20:06:09  INFO      Step 2/4  Saving chunk manifest …
+20:06:09  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\5129-tekst-statti-5053-1-10-20250108\metadata.json
+20:06:09  INFO      Step 3/4  Running AI extraction …
+20:06:09  INFO        2 chunks already done, 0 remaining
+20:06:09  INFO        [1/2] SKIP (cached)  5129-tekst-statti-5053-1-10-20250108__ch000__ck000
+20:06:09  INFO        [2/2] SKIP (cached)  5129-tekst-statti-5053-1-10-20250108__ch000__ck001
+20:06:09  INFO      Step 4/4  Finalising book in DB ...
+20:06:09  INFO      Built 0 new TrainingSamples
+20:06:09  INFO        Done: 0 TrainingSamples created
+20:06:09  INFO      
+============================================================
+20:06:09  INFO      Processing: 6-2_2025.pdf
+20:06:09  INFO      ============================================================
+20:06:09  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:12:55  INFO        Sections after merge: 63 (was 63, merged 0 tiny sections)
+20:12:56  INFO        Found 116 chunks across 63 chapters
+20:12:56  INFO      Step 2/4  Saving chunk manifest …
+20:12:56  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\6-2-2025\metadata.json
+20:12:56  INFO      Step 3/4  Running AI extraction …
+20:12:56  INFO        116 chunks already done, 0 remaining
+20:12:56  INFO        [1/116] SKIP (cached)  6-2-2025__ch000__ck000
+20:12:56  INFO        [2/116] SKIP (cached)  6-2-2025__ch001__ck000
+20:12:56  INFO        [3/116] SKIP (cached)  6-2-2025__ch002__ck000
+20:12:56  INFO        [4/116] SKIP (cached)  6-2-2025__ch002__ck001
+20:12:56  INFO        [5/116] SKIP (cached)  6-2-2025__ch003__ck000
+20:12:56  INFO        [6/116] SKIP (cached)  6-2-2025__ch004__ck000
+20:12:56  INFO        [7/116] SKIP (cached)  6-2-2025__ch004__ck001
+20:12:56  INFO        [8/116] SKIP (cached)  6-2-2025__ch005__ck000
+20:12:56  INFO        [9/116] SKIP (cached)  6-2-2025__ch005__ck001
+20:12:56  INFO        [10/116] SKIP (cached)  6-2-2025__ch006__ck000
+20:12:56  INFO        [11/116] SKIP (cached)  6-2-2025__ch006__ck001
+20:12:56  INFO        [12/116] SKIP (cached)  6-2-2025__ch007__ck000
+20:12:56  INFO        [13/116] SKIP (cached)  6-2-2025__ch007__ck001
+20:12:56  INFO        [14/116] SKIP (cached)  6-2-2025__ch008__ck000
+20:12:56  INFO        [15/116] SKIP (cached)  6-2-2025__ch008__ck001
+20:12:56  INFO        [16/116] SKIP (cached)  6-2-2025__ch009__ck000
+20:12:56  INFO        [17/116] SKIP (cached)  6-2-2025__ch009__ck001
+20:12:56  INFO        [18/116] SKIP (cached)  6-2-2025__ch010__ck000
+20:12:56  INFO        [19/116] SKIP (cached)  6-2-2025__ch010__ck001
+20:12:56  INFO        [20/116] SKIP (cached)  6-2-2025__ch011__ck000
+20:12:56  INFO        [21/116] SKIP (cached)  6-2-2025__ch011__ck001
+20:12:56  INFO        [22/116] SKIP (cached)  6-2-2025__ch012__ck000
+20:12:56  INFO        [23/116] SKIP (cached)  6-2-2025__ch012__ck001
+20:12:56  INFO        [24/116] SKIP (cached)  6-2-2025__ch013__ck000
+20:12:56  INFO        [25/116] SKIP (cached)  6-2-2025__ch013__ck001
+20:12:56  INFO        [26/116] SKIP (cached)  6-2-2025__ch014__ck000
+20:12:56  INFO        [27/116] SKIP (cached)  6-2-2025__ch014__ck001
+20:12:56  INFO        [28/116] SKIP (cached)  6-2-2025__ch015__ck000
+20:12:56  INFO        [29/116] SKIP (cached)  6-2-2025__ch015__ck001
+20:12:56  INFO        [30/116] SKIP (cached)  6-2-2025__ch015__ck002
+20:12:56  INFO        [31/116] SKIP (cached)  6-2-2025__ch016__ck000
+20:12:56  INFO        [32/116] SKIP (cached)  6-2-2025__ch016__ck001
+20:12:56  INFO        [33/116] SKIP (cached)  6-2-2025__ch017__ck000
+20:12:56  INFO        [34/116] SKIP (cached)  6-2-2025__ch017__ck001
+20:12:56  INFO        [35/116] SKIP (cached)  6-2-2025__ch017__ck002
+20:12:56  INFO        [36/116] SKIP (cached)  6-2-2025__ch018__ck000
+20:12:56  INFO        [37/116] SKIP (cached)  6-2-2025__ch018__ck001
+20:12:56  INFO        [38/116] SKIP (cached)  6-2-2025__ch019__ck000
+20:12:56  INFO        [39/116] SKIP (cached)  6-2-2025__ch019__ck001
+20:12:56  INFO        [40/116] SKIP (cached)  6-2-2025__ch020__ck000
+20:12:56  INFO        [41/116] SKIP (cached)  6-2-2025__ch020__ck001
+20:12:56  INFO        [42/116] SKIP (cached)  6-2-2025__ch021__ck000
+20:12:56  INFO        [43/116] SKIP (cached)  6-2-2025__ch021__ck001
+20:12:56  INFO        [44/116] SKIP (cached)  6-2-2025__ch022__ck000
+20:12:56  INFO        [45/116] SKIP (cached)  6-2-2025__ch022__ck001
+20:12:56  INFO        [46/116] SKIP (cached)  6-2-2025__ch023__ck000
+20:12:56  INFO        [47/116] SKIP (cached)  6-2-2025__ch023__ck001
+20:12:56  INFO        [48/116] SKIP (cached)  6-2-2025__ch024__ck000
+20:12:56  INFO        [49/116] SKIP (cached)  6-2-2025__ch024__ck001
+20:12:56  INFO        [50/116] SKIP (cached)  6-2-2025__ch025__ck000
+20:12:56  INFO        [51/116] SKIP (cached)  6-2-2025__ch025__ck001
+20:12:56  INFO        [52/116] SKIP (cached)  6-2-2025__ch026__ck000
+20:12:56  INFO        [53/116] SKIP (cached)  6-2-2025__ch026__ck001
+20:12:56  INFO        [54/116] SKIP (cached)  6-2-2025__ch027__ck000
+20:12:56  INFO        [55/116] SKIP (cached)  6-2-2025__ch028__ck000
+20:12:56  INFO        [56/116] SKIP (cached)  6-2-2025__ch028__ck001
+20:12:56  INFO        [57/116] SKIP (cached)  6-2-2025__ch029__ck000
+20:12:56  INFO        [58/116] SKIP (cached)  6-2-2025__ch030__ck000
+20:12:56  INFO        [59/116] SKIP (cached)  6-2-2025__ch030__ck001
+20:12:56  INFO        [60/116] SKIP (cached)  6-2-2025__ch031__ck000
+20:12:56  INFO        [61/116] SKIP (cached)  6-2-2025__ch031__ck001
+20:12:56  INFO        [62/116] SKIP (cached)  6-2-2025__ch032__ck000
+20:12:56  INFO        [63/116] SKIP (cached)  6-2-2025__ch032__ck001
+20:12:56  INFO        [64/116] SKIP (cached)  6-2-2025__ch033__ck000
+20:12:56  INFO        [65/116] SKIP (cached)  6-2-2025__ch033__ck001
+20:12:56  INFO        [66/116] SKIP (cached)  6-2-2025__ch034__ck000
+20:12:56  INFO        [67/116] SKIP (cached)  6-2-2025__ch034__ck001
+20:12:56  INFO        [68/116] SKIP (cached)  6-2-2025__ch035__ck000
+20:12:56  INFO        [69/116] SKIP (cached)  6-2-2025__ch035__ck001
+20:12:56  INFO        [70/116] SKIP (cached)  6-2-2025__ch036__ck000
+20:12:56  INFO        [71/116] SKIP (cached)  6-2-2025__ch037__ck000
+20:12:56  INFO        [72/116] SKIP (cached)  6-2-2025__ch037__ck001
+20:12:56  INFO        [73/116] SKIP (cached)  6-2-2025__ch038__ck000
+20:12:56  INFO        [74/116] SKIP (cached)  6-2-2025__ch039__ck000
+20:12:56  INFO        [75/116] SKIP (cached)  6-2-2025__ch039__ck001
+20:12:56  INFO        [76/116] SKIP (cached)  6-2-2025__ch040__ck000
+20:12:56  INFO        [77/116] SKIP (cached)  6-2-2025__ch040__ck001
+20:12:56  INFO        [78/116] SKIP (cached)  6-2-2025__ch041__ck000
+20:12:56  INFO        [79/116] SKIP (cached)  6-2-2025__ch041__ck001
+20:12:56  INFO        [80/116] SKIP (cached)  6-2-2025__ch042__ck000
+20:12:56  INFO        [81/116] SKIP (cached)  6-2-2025__ch042__ck001
+20:12:56  INFO        [82/116] SKIP (cached)  6-2-2025__ch043__ck000
+20:12:56  INFO        [83/116] SKIP (cached)  6-2-2025__ch043__ck001
+20:12:56  INFO        [84/116] SKIP (cached)  6-2-2025__ch043__ck002
+20:12:56  INFO        [85/116] SKIP (cached)  6-2-2025__ch044__ck000
+20:12:56  INFO        [86/116] SKIP (cached)  6-2-2025__ch044__ck001
+20:12:56  INFO        [87/116] SKIP (cached)  6-2-2025__ch045__ck000
+20:12:56  INFO        [88/116] SKIP (cached)  6-2-2025__ch045__ck001
+20:12:56  INFO        [89/116] SKIP (cached)  6-2-2025__ch046__ck000
+20:12:56  INFO        [90/116] SKIP (cached)  6-2-2025__ch046__ck001
+20:12:56  INFO        [91/116] SKIP (cached)  6-2-2025__ch047__ck000
+20:12:56  INFO        [92/116] SKIP (cached)  6-2-2025__ch047__ck001
+20:12:56  INFO        [93/116] SKIP (cached)  6-2-2025__ch048__ck000
+20:12:56  INFO        [94/116] SKIP (cached)  6-2-2025__ch048__ck001
+20:12:56  INFO        [95/116] SKIP (cached)  6-2-2025__ch049__ck000
+20:12:56  INFO        [96/116] SKIP (cached)  6-2-2025__ch049__ck001
+20:12:56  INFO        [97/116] SKIP (cached)  6-2-2025__ch050__ck000
+20:12:56  INFO        [98/116] SKIP (cached)  6-2-2025__ch051__ck000
+20:12:56  INFO        [99/116] SKIP (cached)  6-2-2025__ch052__ck000
+20:12:56  INFO        [100/116] SKIP (cached)  6-2-2025__ch052__ck001
+20:12:56  INFO        [101/116] SKIP (cached)  6-2-2025__ch053__ck000
+20:12:56  INFO        [102/116] SKIP (cached)  6-2-2025__ch053__ck001
+20:12:56  INFO        [103/116] SKIP (cached)  6-2-2025__ch054__ck000
+20:12:56  INFO        [104/116] SKIP (cached)  6-2-2025__ch055__ck000
+20:12:56  INFO        [105/116] SKIP (cached)  6-2-2025__ch055__ck001
+20:12:56  INFO        [106/116] SKIP (cached)  6-2-2025__ch056__ck000
+20:12:56  INFO        [107/116] SKIP (cached)  6-2-2025__ch056__ck001
+20:12:56  INFO        [108/116] SKIP (cached)  6-2-2025__ch057__ck000
+20:12:57  INFO        [109/116] SKIP (cached)  6-2-2025__ch058__ck000
+20:12:57  INFO        [110/116] SKIP (cached)  6-2-2025__ch058__ck001
+20:12:57  INFO        [111/116] SKIP (cached)  6-2-2025__ch059__ck000
+20:12:57  INFO        [112/116] SKIP (cached)  6-2-2025__ch059__ck001
+20:12:57  INFO        [113/116] SKIP (cached)  6-2-2025__ch060__ck000
+20:12:57  INFO        [114/116] SKIP (cached)  6-2-2025__ch061__ck000
+20:12:57  INFO        [115/116] SKIP (cached)  6-2-2025__ch061__ck001
+20:12:57  INFO        [116/116] SKIP (cached)  6-2-2025__ch062__ck000
+20:12:57  INFO      Step 4/4  Finalising book in DB ...
+20:13:00  INFO      Built 0 new TrainingSamples
+20:13:00  INFO        Done: 0 TrainingSamples created
+20:13:00  INFO      
+============================================================
+20:13:00  INFO      Processing: 69.pdf
+20:13:00  INFO      ============================================================
+20:13:00  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:13:05  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+20:13:05  INFO        Found 2 chunks across 1 chapters
+20:13:05  INFO      Step 2/4  Saving chunk manifest …
+20:13:05  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\69\metadata.json
+20:13:05  INFO      Step 3/4  Running AI extraction …
+20:13:05  INFO        2 chunks already done, 0 remaining
+20:13:05  INFO        [1/2] SKIP (cached)  69__ch000__ck000
+20:13:05  INFO        [2/2] SKIP (cached)  69__ch000__ck001
+20:13:05  INFO      Step 4/4  Finalising book in DB ...
+20:13:05  INFO      Built 0 new TrainingSamples
+20:13:05  INFO        Done: 0 TrainingSamples created
+20:13:05  INFO      
+============================================================
+20:13:05  INFO      Processing: 7143-Текст статті-7056-2-10-20260126.pdf
+20:13:05  INFO      ============================================================
+20:13:05  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:13:13  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+20:13:13  INFO        Found 1 chunks across 1 chapters
+20:13:13  INFO      Step 2/4  Saving chunk manifest …
+20:13:13  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\7143-tekst-statti-7056-2-10-20260126\metadata.json
+20:13:13  INFO      Step 3/4  Running AI extraction …
+20:13:13  INFO        1 chunks already done, 0 remaining
+20:13:13  INFO        [1/1] SKIP (cached)  7143-tekst-statti-7056-2-10-20260126__ch000__ck000
+20:13:13  INFO      Step 4/4  Finalising book in DB ...
+20:13:13  INFO      Built 0 new TrainingSamples
+20:13:13  INFO        Done: 0 TrainingSamples created
+20:13:13  INFO      
+============================================================
+20:13:13  INFO      Processing: 804-Текст статті-1719-1-10-20230712.pdf
+20:13:13  INFO      ============================================================
+20:13:13  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:13:20  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+20:13:20  INFO        Found 1 chunks across 1 chapters
+20:13:20  INFO      Step 2/4  Saving chunk manifest …
+20:13:20  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\804-tekst-statti-1719-1-10-20230712\metadata.json
+20:13:20  INFO      Step 3/4  Running AI extraction …
+20:13:20  INFO        1 chunks already done, 0 remaining
+20:13:20  INFO        [1/1] SKIP (cached)  804-tekst-statti-1719-1-10-20230712__ch000__ck000
+20:13:20  INFO      Step 4/4  Finalising book in DB ...
+20:13:20  INFO      Built 0 new TrainingSamples
+20:13:20  INFO        Done: 0 TrainingSamples created
+20:13:20  INFO      
+============================================================
+20:13:20  INFO      Processing: 9_Bystrov.pdf
+20:13:20  INFO      ============================================================
+20:13:20  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:13:28  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+20:13:28  INFO        Found 3 chunks across 1 chapters
+20:13:28  INFO      Step 2/4  Saving chunk manifest …
+20:13:28  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\9-bystrov\metadata.json
+20:13:28  INFO      Step 3/4  Running AI extraction …
+20:13:29  INFO        0 chunks already done, 3 remaining
+20:13:29  INFO        [1/3] Processing  9-bystrov__ch000__ck000 (4499 tokens, chapter: 9_Bystrov)
+20:13:29  INFO        -> [9-bystrov__ch000__ck000] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:13:51  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:13:53  INFO        [9-bystrov__ch000__ck000] 0 scenarios, 3 decisions, 5 tactics, 8 qa_pairs
+20:13:54  INFO      Created SourceDocument: 9-bystrov (id=43)
+20:13:54  INFO      DB saved chunk [9-bystrov__ch000__ck000]: decision_nodes=3 | tactics=5 | qa_pairs=8 | rag_chunks=1
+20:13:54  INFO        completed [9-bystrov__ch000__ck000]: 0 scenarios, 3 decisions, 5 tactics, 8 qa_pairs [total=16] -> DB: {'scenarios': 0, 'decision_nodes': 3, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+20:13:54  INFO        [2/3] Processing  9-bystrov__ch000__ck001 (4499 tokens, chapter: 9_Bystrov)
+20:13:54  INFO        -> [9-bystrov__ch000__ck001] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:15:31  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:15:53  INFO        [9-bystrov__ch000__ck001] 7 scenarios, 5 decisions, 7 tactics, 8 qa_pairs
+20:15:54  INFO      DB saved chunk [9-bystrov__ch000__ck001]: scenarios=5 | decision_nodes=5 | tactics=7 | qa_pairs=8 | rag_chunks=1
+20:15:54  INFO        completed [9-bystrov__ch000__ck001]: 7 scenarios, 5 decisions, 7 tactics, 8 qa_pairs [total=27] -> DB: {'scenarios': 5, 'decision_nodes': 5, 'tactics': 7, 'qa_pairs': 8, 'rag_chunks': 1}
+20:15:54  INFO        [3/3] Processing  9-bystrov__ch000__ck002 (1197 tokens, chapter: 9_Bystrov)
+20:15:54  INFO        -> [9-bystrov__ch000__ck002] lang=uk tokens=1197 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:16:10  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:16:12  INFO        [9-bystrov__ch000__ck002] 0 scenarios, 0 decisions, 5 tactics, 8 qa_pairs
+20:16:13  INFO      DB saved chunk [9-bystrov__ch000__ck002]: tactics=5 | qa_pairs=8 | rag_chunks=1
+20:16:13  INFO        completed [9-bystrov__ch000__ck002]: 0 scenarios, 0 decisions, 5 tactics, 8 qa_pairs [total=13] -> DB: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+20:16:13  INFO      Step 4/4  Finalising book in DB ...
+20:16:13  INFO      Built 24 new TrainingSamples
+20:16:13  INFO        Done: 24 TrainingSamples created
+20:16:13  INFO      
+============================================================
+20:16:13  INFO      Processing: =_UTF-8_B_0KDQvtC80LDQvdGW0LIg0JzQldCd0LctNDEucGRm_=.pdf
+20:16:13  INFO      ============================================================
+20:16:13  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:16:22  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+20:16:22  INFO        Found 3 chunks across 1 chapters
+20:16:22  INFO      Step 2/4  Saving chunk manifest …
+20:16:22  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm\metadata.json
+20:16:22  INFO      Step 3/4  Running AI extraction …
+20:16:22  INFO        3 chunks already done, 0 remaining
+20:16:22  INFO        [1/3] SKIP (cached)  utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm__ch000__ck000
+20:16:22  INFO        [2/3] SKIP (cached)  utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm__ch000__ck001
+20:16:22  INFO        [3/3] SKIP (cached)  utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm__ch000__ck002
+20:16:22  INFO      Step 4/4  Finalising book in DB ...
+20:16:22  INFO      Built 0 new TrainingSamples
+20:16:22  INFO        Done: 0 TrainingSamples created
+20:16:22  INFO      
+============================================================
+20:16:22  INFO      Processing: =_UTF-8_B_0KTQsNC70L7QstC40YcucGRm_=.pdf
+20:16:22  INFO      ============================================================
+20:16:22  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:16:48  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+20:16:48  INFO        Found 2 chunks across 2 chapters
+20:16:48  INFO      Step 2/4  Saving chunk manifest …
+20:16:48  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\utf-8-b-0ktqsnc70l7qstc40ycucgrm\metadata.json
+20:16:48  INFO      Step 3/4  Running AI extraction …
+20:16:48  INFO        2 chunks already done, 0 remaining
+20:16:48  INFO        [1/2] SKIP (cached)  utf-8-b-0ktqsnc70l7qstc40ycucgrm__ch000__ck000
+20:16:48  INFO        [2/2] SKIP (cached)  utf-8-b-0ktqsnc70l7qstc40ycucgrm__ch001__ck000
+20:16:48  INFO      Step 4/4  Finalising book in DB ...
+20:16:48  INFO      Built 0 new TrainingSamples
+20:16:48  INFO        Done: 0 TrainingSamples created
+20:16:48  INFO      
+============================================================
+20:16:48  INFO      Processing: =_UTF-8_Q_132=5F=D0=A1=D1=82=D0=B0=D1=82=D1=82=D1=8F.pdf_=.pdf
+20:16:48  INFO      ============================================================
+20:16:48  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:16:55  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+20:16:55  INFO        Found 2 chunks across 2 chapters
+20:16:55  INFO      Step 2/4  Saving chunk manifest …
+20:16:56  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\utf-8-q-132-5f-d0-a1-d1-82-d0-b0-d1-82-d1-82-d1-8f-pdf\metadata.json
+20:16:56  INFO      Step 3/4  Running AI extraction …
+20:16:56  INFO        2 chunks already done, 0 remaining
+20:16:56  INFO        [1/2] SKIP (cached)  utf-8-q-132-5f-d0-a1-d1-82-d0-b0-d1-82-d1-82-d1-8f-pdf__ch000__ck000
+20:16:56  INFO        [2/2] SKIP (cached)  utf-8-q-132-5f-d0-a1-d1-82-d0-b0-d1-82-d1-82-d1-8f-pdf__ch001__ck000
+20:16:56  INFO      Step 4/4  Finalising book in DB ...
+20:16:56  INFO      Built 0 new TrainingSamples
+20:16:56  INFO        Done: 0 TrainingSamples created
+20:16:56  INFO      
+============================================================
+20:16:56  INFO      Processing: aprer_2019_15(2)__7.pdf
+20:16:56  INFO      ============================================================
+20:16:56  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:17:00  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+20:17:00  INFO        Found 1 chunks across 1 chapters
+20:17:00  INFO      Step 2/4  Saving chunk manifest …
+20:17:00  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\aprer-2019-15-2-7\metadata.json
+20:17:00  INFO      Step 3/4  Running AI extraction …
+20:17:00  INFO        1 chunks already done, 0 remaining
+20:17:00  INFO        [1/1] SKIP (cached)  aprer-2019-15-2-7__ch000__ck000
+20:17:00  INFO      Step 4/4  Finalising book in DB ...
+20:17:00  INFO      Built 0 new TrainingSamples
+20:17:00  INFO        Done: 0 TrainingSamples created
+20:17:00  INFO      
+============================================================
+20:17:00  INFO      Processing: CERC_CommunityEngagement.pdf
+20:17:00  INFO      ============================================================
+20:17:00  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:17:06  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+20:17:06  INFO        Found 2 chunks across 2 chapters
+20:17:06  INFO      Step 2/4  Saving chunk manifest …
+20:17:06  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-communityengagement\metadata.json
+20:17:06  INFO      Step 3/4  Running AI extraction …
+20:17:06  INFO        2 chunks already done, 0 remaining
+20:17:06  INFO        [1/2] SKIP (cached)  cerc-communityengagement__ch000__ck000
+20:17:06  INFO        [2/2] SKIP (cached)  cerc-communityengagement__ch001__ck000
+20:17:06  INFO      Step 4/4  Finalising book in DB ...
+20:17:06  INFO      Built 0 new TrainingSamples
+20:17:06  INFO        Done: 0 TrainingSamples created
+20:17:06  INFO      
+============================================================
+20:17:06  INFO      Processing: CERC_Crisis_Communication_Plans.pdf
+20:17:06  INFO      ============================================================
+20:17:06  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:17:31  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+20:17:31  INFO        Found 3 chunks across 2 chapters
+20:17:31  INFO      Step 2/4  Saving chunk manifest …
+20:17:31  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-crisis-communication-plans\metadata.json
+20:17:31  INFO      Step 3/4  Running AI extraction …
+20:17:31  INFO        3 chunks already done, 0 remaining
+20:17:31  INFO        [1/3] SKIP (cached)  cerc-crisis-communication-plans__ch000__ck000
+20:17:31  INFO        [2/3] SKIP (cached)  cerc-crisis-communication-plans__ch000__ck001
+20:17:31  INFO        [3/3] SKIP (cached)  cerc-crisis-communication-plans__ch001__ck000
+20:17:31  INFO      Step 4/4  Finalising book in DB ...
+20:17:31  INFO      Built 0 new TrainingSamples
+20:17:31  INFO        Done: 0 TrainingSamples created
+20:17:31  INFO      
+============================================================
+20:17:31  INFO      Processing: CERC_Introduction.pdf
+20:17:31  INFO      ============================================================
+20:17:31  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:17:45  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+20:17:45  INFO        Found 1 chunks across 1 chapters
+20:17:45  INFO      Step 2/4  Saving chunk manifest …
+20:17:45  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-introduction\metadata.json
+20:17:45  INFO      Step 3/4  Running AI extraction …
+20:17:45  INFO        1 chunks already done, 0 remaining
+20:17:45  INFO        [1/1] SKIP (cached)  cerc-introduction__ch000__ck000
+20:17:45  INFO      Step 4/4  Finalising book in DB ...
+20:17:45  INFO      Built 0 new TrainingSamples
+20:17:45  INFO        Done: 0 TrainingSamples created
+20:17:45  INFO      
+============================================================
+20:17:45  INFO      Processing: CERC_Messages_and_Audiences.pdf
+20:17:45  INFO      ============================================================
+20:17:45  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:17:51  INFO        Sections after merge: 2 (was 3, merged 1 tiny sections)
+20:17:51  INFO        Found 2 chunks across 2 chapters
+20:17:51  INFO      Step 2/4  Saving chunk manifest …
+20:17:51  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-messages-and-audiences\metadata.json
+20:17:51  INFO      Step 3/4  Running AI extraction …
+20:17:51  INFO        2 chunks already done, 0 remaining
+20:17:51  INFO        [1/2] SKIP (cached)  cerc-messages-and-audiences__ch000__ck000
+20:17:51  INFO        [2/2] SKIP (cached)  cerc-messages-and-audiences__ch001__ck000
+20:17:51  INFO      Step 4/4  Finalising book in DB ...
+20:17:51  INFO      Built 0 new TrainingSamples
+20:17:51  INFO        Done: 0 TrainingSamples created
+20:17:51  INFO      
+============================================================
+20:17:51  INFO      Processing: CERC_Psychology_of_a_Crisis.pdf
+20:17:51  INFO      ============================================================
+20:17:51  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:18:00  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+20:18:00  INFO        Found 1 chunks across 1 chapters
+20:18:00  INFO      Step 2/4  Saving chunk manifest …
+20:18:00  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-psychology-of-a-crisis\metadata.json
+20:18:00  INFO      Step 3/4  Running AI extraction …
+20:18:00  INFO        1 chunks already done, 0 remaining
+20:18:00  INFO        [1/1] SKIP (cached)  cerc-psychology-of-a-crisis__ch000__ck000
+20:18:00  INFO      Step 4/4  Finalising book in DB ...
+20:18:00  INFO      Built 0 new TrainingSamples
+20:18:00  INFO        Done: 0 TrainingSamples created
+20:18:00  INFO      
+============================================================
+20:18:00  INFO      Processing: CERC_Spokesperson.pdf
+20:18:00  INFO      ============================================================
+20:18:00  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:18:14  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+20:18:14  INFO        Found 2 chunks across 2 chapters
+20:18:14  INFO      Step 2/4  Saving chunk manifest …
+20:18:14  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-spokesperson\metadata.json
+20:18:14  INFO      Step 3/4  Running AI extraction …
+20:18:14  INFO        2 chunks already done, 0 remaining
+20:18:14  INFO        [1/2] SKIP (cached)  cerc-spokesperson__ch000__ck000
+20:18:14  INFO        [2/2] SKIP (cached)  cerc-spokesperson__ch001__ck000
+20:18:14  INFO      Step 4/4  Finalising book in DB ...
+20:18:14  INFO      Built 0 new TrainingSamples
+20:18:14  INFO        Done: 0 TrainingSamples created
+20:18:14  INFO      
+============================================================
+20:18:14  INFO      Processing: CERC_Working_with_the_Media.pdf
+20:18:14  INFO      ============================================================
+20:18:14  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:18:35  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+20:18:35  INFO        Found 2 chunks across 2 chapters
+20:18:35  INFO      Step 2/4  Saving chunk manifest …
+20:18:35  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-working-with-the-media\metadata.json
+20:18:35  INFO      Step 3/4  Running AI extraction …
+20:18:35  INFO        2 chunks already done, 0 remaining
+20:18:35  INFO        [1/2] SKIP (cached)  cerc-working-with-the-media__ch000__ck000
+20:18:35  INFO        [2/2] SKIP (cached)  cerc-working-with-the-media__ch001__ck000
+20:18:35  INFO      Step 4/4  Finalising book in DB ...
+20:18:35  INFO      Built 0 new TrainingSamples
+20:18:35  INFO        Done: 0 TrainingSamples created
+20:18:35  INFO      
+============================================================
+20:18:35  INFO      Processing: conf-06-07-03-25-mater3.pdf
+20:18:35  INFO      ============================================================
+20:18:35  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:23:47  INFO        Sections after merge: 195 (was 195, merged 0 tiny sections)
+20:23:47  INFO        Found 195 chunks across 195 chapters
+20:23:47  INFO      Step 2/4  Saving chunk manifest …
+20:23:48  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\conf-06-07-03-25-mater3\metadata.json
+20:23:48  INFO      Step 3/4  Running AI extraction …
+20:23:48  INFO        195 chunks already done, 0 remaining
+20:23:48  INFO        [1/195] SKIP (cached)  conf-06-07-03-25-mater3__ch000__ck000
+20:23:48  INFO        [2/195] SKIP (cached)  conf-06-07-03-25-mater3__ch001__ck000
+20:23:48  INFO        [3/195] SKIP (cached)  conf-06-07-03-25-mater3__ch002__ck000
+20:23:48  INFO        [4/195] SKIP (cached)  conf-06-07-03-25-mater3__ch003__ck000
+20:23:48  INFO        [5/195] SKIP (cached)  conf-06-07-03-25-mater3__ch004__ck000
+20:23:48  INFO        [6/195] SKIP (cached)  conf-06-07-03-25-mater3__ch005__ck000
+20:23:48  INFO        [7/195] SKIP (cached)  conf-06-07-03-25-mater3__ch006__ck000
+20:23:48  INFO        [8/195] SKIP (cached)  conf-06-07-03-25-mater3__ch007__ck000
+20:23:48  INFO        [9/195] SKIP (cached)  conf-06-07-03-25-mater3__ch008__ck000
+20:23:48  INFO        [10/195] SKIP (cached)  conf-06-07-03-25-mater3__ch009__ck000
+20:23:48  INFO        [11/195] SKIP (cached)  conf-06-07-03-25-mater3__ch010__ck000
+20:23:48  INFO        [12/195] SKIP (cached)  conf-06-07-03-25-mater3__ch011__ck000
+20:23:48  INFO        [13/195] SKIP (cached)  conf-06-07-03-25-mater3__ch012__ck000
+20:23:48  INFO        [14/195] SKIP (cached)  conf-06-07-03-25-mater3__ch013__ck000
+20:23:48  INFO        [15/195] SKIP (cached)  conf-06-07-03-25-mater3__ch014__ck000
+20:23:48  INFO        [16/195] SKIP (cached)  conf-06-07-03-25-mater3__ch015__ck000
+20:23:48  INFO        [17/195] SKIP (cached)  conf-06-07-03-25-mater3__ch016__ck000
+20:23:48  INFO        [18/195] SKIP (cached)  conf-06-07-03-25-mater3__ch017__ck000
+20:23:48  INFO        [19/195] SKIP (cached)  conf-06-07-03-25-mater3__ch018__ck000
+20:23:48  INFO        [20/195] SKIP (cached)  conf-06-07-03-25-mater3__ch019__ck000
+20:23:48  INFO        [21/195] SKIP (cached)  conf-06-07-03-25-mater3__ch020__ck000
+20:23:48  INFO        [22/195] SKIP (cached)  conf-06-07-03-25-mater3__ch021__ck000
+20:23:48  INFO        [23/195] SKIP (cached)  conf-06-07-03-25-mater3__ch022__ck000
+20:23:48  INFO        [24/195] SKIP (cached)  conf-06-07-03-25-mater3__ch023__ck000
+20:23:48  INFO        [25/195] SKIP (cached)  conf-06-07-03-25-mater3__ch024__ck000
+20:23:48  INFO        [26/195] SKIP (cached)  conf-06-07-03-25-mater3__ch025__ck000
+20:23:48  INFO        [27/195] SKIP (cached)  conf-06-07-03-25-mater3__ch026__ck000
+20:23:48  INFO        [28/195] SKIP (cached)  conf-06-07-03-25-mater3__ch027__ck000
+20:23:48  INFO        [29/195] SKIP (cached)  conf-06-07-03-25-mater3__ch028__ck000
+20:23:48  INFO        [30/195] SKIP (cached)  conf-06-07-03-25-mater3__ch029__ck000
+20:23:48  INFO        [31/195] SKIP (cached)  conf-06-07-03-25-mater3__ch030__ck000
+20:23:48  INFO        [32/195] SKIP (cached)  conf-06-07-03-25-mater3__ch031__ck000
+20:23:48  INFO        [33/195] SKIP (cached)  conf-06-07-03-25-mater3__ch032__ck000
+20:23:48  INFO        [34/195] SKIP (cached)  conf-06-07-03-25-mater3__ch033__ck000
+20:23:48  INFO        [35/195] SKIP (cached)  conf-06-07-03-25-mater3__ch034__ck000
+20:23:48  INFO        [36/195] SKIP (cached)  conf-06-07-03-25-mater3__ch035__ck000
+20:23:48  INFO        [37/195] SKIP (cached)  conf-06-07-03-25-mater3__ch036__ck000
+20:23:48  INFO        [38/195] SKIP (cached)  conf-06-07-03-25-mater3__ch037__ck000
+20:23:48  INFO        [39/195] SKIP (cached)  conf-06-07-03-25-mater3__ch038__ck000
+20:23:48  INFO        [40/195] SKIP (cached)  conf-06-07-03-25-mater3__ch039__ck000
+20:23:48  INFO        [41/195] SKIP (cached)  conf-06-07-03-25-mater3__ch040__ck000
+20:23:48  INFO        [42/195] SKIP (cached)  conf-06-07-03-25-mater3__ch041__ck000
+20:23:48  INFO        [43/195] SKIP (cached)  conf-06-07-03-25-mater3__ch042__ck000
+20:23:48  INFO        [44/195] SKIP (cached)  conf-06-07-03-25-mater3__ch043__ck000
+20:23:48  INFO        [45/195] SKIP (cached)  conf-06-07-03-25-mater3__ch044__ck000
+20:23:48  INFO        [46/195] SKIP (cached)  conf-06-07-03-25-mater3__ch045__ck000
+20:23:48  INFO        [47/195] SKIP (cached)  conf-06-07-03-25-mater3__ch046__ck000
+20:23:48  INFO        [48/195] SKIP (cached)  conf-06-07-03-25-mater3__ch047__ck000
+20:23:48  INFO        [49/195] SKIP (cached)  conf-06-07-03-25-mater3__ch048__ck000
+20:23:48  INFO        [50/195] SKIP (cached)  conf-06-07-03-25-mater3__ch049__ck000
+20:23:48  INFO        [51/195] SKIP (cached)  conf-06-07-03-25-mater3__ch050__ck000
+20:23:48  INFO        [52/195] SKIP (cached)  conf-06-07-03-25-mater3__ch051__ck000
+20:23:48  INFO        [53/195] SKIP (cached)  conf-06-07-03-25-mater3__ch052__ck000
+20:23:48  INFO        [54/195] SKIP (cached)  conf-06-07-03-25-mater3__ch053__ck000
+20:23:48  INFO        [55/195] SKIP (cached)  conf-06-07-03-25-mater3__ch054__ck000
+20:23:48  INFO        [56/195] SKIP (cached)  conf-06-07-03-25-mater3__ch055__ck000
+20:23:48  INFO        [57/195] SKIP (cached)  conf-06-07-03-25-mater3__ch056__ck000
+20:23:48  INFO        [58/195] SKIP (cached)  conf-06-07-03-25-mater3__ch057__ck000
+20:23:48  INFO        [59/195] SKIP (cached)  conf-06-07-03-25-mater3__ch058__ck000
+20:23:48  INFO        [60/195] SKIP (cached)  conf-06-07-03-25-mater3__ch059__ck000
+20:23:48  INFO        [61/195] SKIP (cached)  conf-06-07-03-25-mater3__ch060__ck000
+20:23:48  INFO        [62/195] SKIP (cached)  conf-06-07-03-25-mater3__ch061__ck000
+20:23:48  INFO        [63/195] SKIP (cached)  conf-06-07-03-25-mater3__ch062__ck000
+20:23:48  INFO        [64/195] SKIP (cached)  conf-06-07-03-25-mater3__ch063__ck000
+20:23:48  INFO        [65/195] SKIP (cached)  conf-06-07-03-25-mater3__ch064__ck000
+20:23:48  INFO        [66/195] SKIP (cached)  conf-06-07-03-25-mater3__ch065__ck000
+20:23:48  INFO        [67/195] SKIP (cached)  conf-06-07-03-25-mater3__ch066__ck000
+20:23:48  INFO        [68/195] SKIP (cached)  conf-06-07-03-25-mater3__ch067__ck000
+20:23:48  INFO        [69/195] SKIP (cached)  conf-06-07-03-25-mater3__ch068__ck000
+20:23:48  INFO        [70/195] SKIP (cached)  conf-06-07-03-25-mater3__ch069__ck000
+20:23:48  INFO        [71/195] SKIP (cached)  conf-06-07-03-25-mater3__ch070__ck000
+20:23:48  INFO        [72/195] SKIP (cached)  conf-06-07-03-25-mater3__ch071__ck000
+20:23:48  INFO        [73/195] SKIP (cached)  conf-06-07-03-25-mater3__ch072__ck000
+20:23:48  INFO        [74/195] SKIP (cached)  conf-06-07-03-25-mater3__ch073__ck000
+20:23:48  INFO        [75/195] SKIP (cached)  conf-06-07-03-25-mater3__ch074__ck000
+20:23:48  INFO        [76/195] SKIP (cached)  conf-06-07-03-25-mater3__ch075__ck000
+20:23:48  INFO        [77/195] SKIP (cached)  conf-06-07-03-25-mater3__ch076__ck000
+20:23:48  INFO        [78/195] SKIP (cached)  conf-06-07-03-25-mater3__ch077__ck000
+20:23:48  INFO        [79/195] SKIP (cached)  conf-06-07-03-25-mater3__ch078__ck000
+20:23:48  INFO        [80/195] SKIP (cached)  conf-06-07-03-25-mater3__ch079__ck000
+20:23:48  INFO        [81/195] SKIP (cached)  conf-06-07-03-25-mater3__ch080__ck000
+20:23:48  INFO        [82/195] SKIP (cached)  conf-06-07-03-25-mater3__ch081__ck000
+20:23:48  INFO        [83/195] SKIP (cached)  conf-06-07-03-25-mater3__ch082__ck000
+20:23:48  INFO        [84/195] SKIP (cached)  conf-06-07-03-25-mater3__ch083__ck000
+20:23:48  INFO        [85/195] SKIP (cached)  conf-06-07-03-25-mater3__ch084__ck000
+20:23:48  INFO        [86/195] SKIP (cached)  conf-06-07-03-25-mater3__ch085__ck000
+20:23:48  INFO        [87/195] SKIP (cached)  conf-06-07-03-25-mater3__ch086__ck000
+20:23:48  INFO        [88/195] SKIP (cached)  conf-06-07-03-25-mater3__ch087__ck000
+20:23:48  INFO        [89/195] SKIP (cached)  conf-06-07-03-25-mater3__ch088__ck000
+20:23:48  INFO        [90/195] SKIP (cached)  conf-06-07-03-25-mater3__ch089__ck000
+20:23:48  INFO        [91/195] SKIP (cached)  conf-06-07-03-25-mater3__ch090__ck000
+20:23:48  INFO        [92/195] SKIP (cached)  conf-06-07-03-25-mater3__ch091__ck000
+20:23:48  INFO        [93/195] SKIP (cached)  conf-06-07-03-25-mater3__ch092__ck000
+20:23:48  INFO        [94/195] SKIP (cached)  conf-06-07-03-25-mater3__ch093__ck000
+20:23:48  INFO        [95/195] SKIP (cached)  conf-06-07-03-25-mater3__ch094__ck000
+20:23:48  INFO        [96/195] SKIP (cached)  conf-06-07-03-25-mater3__ch095__ck000
+20:23:48  INFO        [97/195] SKIP (cached)  conf-06-07-03-25-mater3__ch096__ck000
+20:23:48  INFO        [98/195] SKIP (cached)  conf-06-07-03-25-mater3__ch097__ck000
+20:23:48  INFO        [99/195] SKIP (cached)  conf-06-07-03-25-mater3__ch098__ck000
+20:23:48  INFO        [100/195] SKIP (cached)  conf-06-07-03-25-mater3__ch099__ck000
+20:23:48  INFO        [101/195] SKIP (cached)  conf-06-07-03-25-mater3__ch100__ck000
+20:23:48  INFO        [102/195] SKIP (cached)  conf-06-07-03-25-mater3__ch101__ck000
+20:23:48  INFO        [103/195] SKIP (cached)  conf-06-07-03-25-mater3__ch102__ck000
+20:23:48  INFO        [104/195] SKIP (cached)  conf-06-07-03-25-mater3__ch103__ck000
+20:23:48  INFO        [105/195] SKIP (cached)  conf-06-07-03-25-mater3__ch104__ck000
+20:23:48  INFO        [106/195] SKIP (cached)  conf-06-07-03-25-mater3__ch105__ck000
+20:23:48  INFO        [107/195] SKIP (cached)  conf-06-07-03-25-mater3__ch106__ck000
+20:23:48  INFO        [108/195] SKIP (cached)  conf-06-07-03-25-mater3__ch107__ck000
+20:23:48  INFO        [109/195] SKIP (cached)  conf-06-07-03-25-mater3__ch108__ck000
+20:23:48  INFO        [110/195] SKIP (cached)  conf-06-07-03-25-mater3__ch109__ck000
+20:23:48  INFO        [111/195] SKIP (cached)  conf-06-07-03-25-mater3__ch110__ck000
+20:23:48  INFO        [112/195] SKIP (cached)  conf-06-07-03-25-mater3__ch111__ck000
+20:23:48  INFO        [113/195] SKIP (cached)  conf-06-07-03-25-mater3__ch112__ck000
+20:23:48  INFO        [114/195] SKIP (cached)  conf-06-07-03-25-mater3__ch113__ck000
+20:23:48  INFO        [115/195] SKIP (cached)  conf-06-07-03-25-mater3__ch114__ck000
+20:23:48  INFO        [116/195] SKIP (cached)  conf-06-07-03-25-mater3__ch115__ck000
+20:23:48  INFO        [117/195] SKIP (cached)  conf-06-07-03-25-mater3__ch116__ck000
+20:23:48  INFO        [118/195] SKIP (cached)  conf-06-07-03-25-mater3__ch117__ck000
+20:23:48  INFO        [119/195] SKIP (cached)  conf-06-07-03-25-mater3__ch118__ck000
+20:23:48  INFO        [120/195] SKIP (cached)  conf-06-07-03-25-mater3__ch119__ck000
+20:23:48  INFO        [121/195] SKIP (cached)  conf-06-07-03-25-mater3__ch120__ck000
+20:23:48  INFO        [122/195] SKIP (cached)  conf-06-07-03-25-mater3__ch121__ck000
+20:23:48  INFO        [123/195] SKIP (cached)  conf-06-07-03-25-mater3__ch122__ck000
+20:23:48  INFO        [124/195] SKIP (cached)  conf-06-07-03-25-mater3__ch123__ck000
+20:23:48  INFO        [125/195] SKIP (cached)  conf-06-07-03-25-mater3__ch124__ck000
+20:23:48  INFO        [126/195] SKIP (cached)  conf-06-07-03-25-mater3__ch125__ck000
+20:23:48  INFO        [127/195] SKIP (cached)  conf-06-07-03-25-mater3__ch126__ck000
+20:23:48  INFO        [128/195] SKIP (cached)  conf-06-07-03-25-mater3__ch127__ck000
+20:23:48  INFO        [129/195] SKIP (cached)  conf-06-07-03-25-mater3__ch128__ck000
+20:23:48  INFO        [130/195] SKIP (cached)  conf-06-07-03-25-mater3__ch129__ck000
+20:23:48  INFO        [131/195] SKIP (cached)  conf-06-07-03-25-mater3__ch130__ck000
+20:23:48  INFO        [132/195] SKIP (cached)  conf-06-07-03-25-mater3__ch131__ck000
+20:23:48  INFO        [133/195] SKIP (cached)  conf-06-07-03-25-mater3__ch132__ck000
+20:23:48  INFO        [134/195] SKIP (cached)  conf-06-07-03-25-mater3__ch133__ck000
+20:23:48  INFO        [135/195] SKIP (cached)  conf-06-07-03-25-mater3__ch134__ck000
+20:23:48  INFO        [136/195] SKIP (cached)  conf-06-07-03-25-mater3__ch135__ck000
+20:23:48  INFO        [137/195] SKIP (cached)  conf-06-07-03-25-mater3__ch136__ck000
+20:23:48  INFO        [138/195] SKIP (cached)  conf-06-07-03-25-mater3__ch137__ck000
+20:23:48  INFO        [139/195] SKIP (cached)  conf-06-07-03-25-mater3__ch138__ck000
+20:23:48  INFO        [140/195] SKIP (cached)  conf-06-07-03-25-mater3__ch139__ck000
+20:23:48  INFO        [141/195] SKIP (cached)  conf-06-07-03-25-mater3__ch140__ck000
+20:23:48  INFO        [142/195] SKIP (cached)  conf-06-07-03-25-mater3__ch141__ck000
+20:23:48  INFO        [143/195] SKIP (cached)  conf-06-07-03-25-mater3__ch142__ck000
+20:23:48  INFO        [144/195] SKIP (cached)  conf-06-07-03-25-mater3__ch143__ck000
+20:23:48  INFO        [145/195] SKIP (cached)  conf-06-07-03-25-mater3__ch144__ck000
+20:23:48  INFO        [146/195] SKIP (cached)  conf-06-07-03-25-mater3__ch145__ck000
+20:23:48  INFO        [147/195] SKIP (cached)  conf-06-07-03-25-mater3__ch146__ck000
+20:23:48  INFO        [148/195] SKIP (cached)  conf-06-07-03-25-mater3__ch147__ck000
+20:23:48  INFO        [149/195] SKIP (cached)  conf-06-07-03-25-mater3__ch148__ck000
+20:23:48  INFO        [150/195] SKIP (cached)  conf-06-07-03-25-mater3__ch149__ck000
+20:23:48  INFO        [151/195] SKIP (cached)  conf-06-07-03-25-mater3__ch150__ck000
+20:23:48  INFO        [152/195] SKIP (cached)  conf-06-07-03-25-mater3__ch151__ck000
+20:23:48  INFO        [153/195] SKIP (cached)  conf-06-07-03-25-mater3__ch152__ck000
+20:23:48  INFO        [154/195] SKIP (cached)  conf-06-07-03-25-mater3__ch153__ck000
+20:23:48  INFO        [155/195] SKIP (cached)  conf-06-07-03-25-mater3__ch154__ck000
+20:23:48  INFO        [156/195] SKIP (cached)  conf-06-07-03-25-mater3__ch155__ck000
+20:23:48  INFO        [157/195] SKIP (cached)  conf-06-07-03-25-mater3__ch156__ck000
+20:23:48  INFO        [158/195] SKIP (cached)  conf-06-07-03-25-mater3__ch157__ck000
+20:23:48  INFO        [159/195] SKIP (cached)  conf-06-07-03-25-mater3__ch158__ck000
+20:23:48  INFO        [160/195] SKIP (cached)  conf-06-07-03-25-mater3__ch159__ck000
+20:23:48  INFO        [161/195] SKIP (cached)  conf-06-07-03-25-mater3__ch160__ck000
+20:23:48  INFO        [162/195] SKIP (cached)  conf-06-07-03-25-mater3__ch161__ck000
+20:23:48  INFO        [163/195] SKIP (cached)  conf-06-07-03-25-mater3__ch162__ck000
+20:23:48  INFO        [164/195] SKIP (cached)  conf-06-07-03-25-mater3__ch163__ck000
+20:23:48  INFO        [165/195] SKIP (cached)  conf-06-07-03-25-mater3__ch164__ck000
+20:23:49  INFO        [166/195] SKIP (cached)  conf-06-07-03-25-mater3__ch165__ck000
+20:23:49  INFO        [167/195] SKIP (cached)  conf-06-07-03-25-mater3__ch166__ck000
+20:23:49  INFO        [168/195] SKIP (cached)  conf-06-07-03-25-mater3__ch167__ck000
+20:23:49  INFO        [169/195] SKIP (cached)  conf-06-07-03-25-mater3__ch168__ck000
+20:23:49  INFO        [170/195] SKIP (cached)  conf-06-07-03-25-mater3__ch169__ck000
+20:23:49  INFO        [171/195] SKIP (cached)  conf-06-07-03-25-mater3__ch170__ck000
+20:23:49  INFO        [172/195] SKIP (cached)  conf-06-07-03-25-mater3__ch171__ck000
+20:23:49  INFO        [173/195] SKIP (cached)  conf-06-07-03-25-mater3__ch172__ck000
+20:23:49  INFO        [174/195] SKIP (cached)  conf-06-07-03-25-mater3__ch173__ck000
+20:23:49  INFO        [175/195] SKIP (cached)  conf-06-07-03-25-mater3__ch174__ck000
+20:23:49  INFO        [176/195] SKIP (cached)  conf-06-07-03-25-mater3__ch175__ck000
+20:23:49  INFO        [177/195] SKIP (cached)  conf-06-07-03-25-mater3__ch176__ck000
+20:23:49  INFO        [178/195] SKIP (cached)  conf-06-07-03-25-mater3__ch177__ck000
+20:23:49  INFO        [179/195] SKIP (cached)  conf-06-07-03-25-mater3__ch178__ck000
+20:23:49  INFO        [180/195] SKIP (cached)  conf-06-07-03-25-mater3__ch179__ck000
+20:23:49  INFO        [181/195] SKIP (cached)  conf-06-07-03-25-mater3__ch180__ck000
+20:23:49  INFO        [182/195] SKIP (cached)  conf-06-07-03-25-mater3__ch181__ck000
+20:23:49  INFO        [183/195] SKIP (cached)  conf-06-07-03-25-mater3__ch182__ck000
+20:23:49  INFO        [184/195] SKIP (cached)  conf-06-07-03-25-mater3__ch183__ck000
+20:23:49  INFO        [185/195] SKIP (cached)  conf-06-07-03-25-mater3__ch184__ck000
+20:23:49  INFO        [186/195] SKIP (cached)  conf-06-07-03-25-mater3__ch185__ck000
+20:23:49  INFO        [187/195] SKIP (cached)  conf-06-07-03-25-mater3__ch186__ck000
+20:23:49  INFO        [188/195] SKIP (cached)  conf-06-07-03-25-mater3__ch187__ck000
+20:23:49  INFO        [189/195] SKIP (cached)  conf-06-07-03-25-mater3__ch188__ck000
+20:23:49  INFO        [190/195] SKIP (cached)  conf-06-07-03-25-mater3__ch189__ck000
+20:23:49  INFO        [191/195] SKIP (cached)  conf-06-07-03-25-mater3__ch190__ck000
+20:23:49  INFO        [192/195] SKIP (cached)  conf-06-07-03-25-mater3__ch191__ck000
+20:23:49  INFO        [193/195] SKIP (cached)  conf-06-07-03-25-mater3__ch192__ck000
+20:23:49  INFO        [194/195] SKIP (cached)  conf-06-07-03-25-mater3__ch193__ck000
+20:23:49  INFO        [195/195] SKIP (cached)  conf-06-07-03-25-mater3__ch194__ck000
+20:23:49  INFO      Step 4/4  Finalising book in DB ...
+20:23:49  INFO      Built 0 new TrainingSamples
+20:23:49  INFO        Done: 0 TrainingSamples created
+20:23:49  INFO      
+============================================================
+20:23:49  INFO      Processing: Crisis_management_Planning_for_the_inevitable.pdf
+20:23:49  INFO      ============================================================
+20:23:49  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:23:52  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+20:23:52  INFO        Found 1 chunks across 1 chapters
+20:23:52  INFO      Step 2/4  Saving chunk manifest …
+20:23:52  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\crisis-management-planning-for-the-inevitable\metadata.json
+20:23:52  INFO      Step 3/4  Running AI extraction …
+20:23:52  INFO        1 chunks already done, 0 remaining
+20:23:52  INFO        [1/1] SKIP (cached)  crisis-management-planning-for-the-inevitable__ch000__ck000
+20:23:52  INFO      Step 4/4  Finalising book in DB ...
+20:23:52  INFO      Built 0 new TrainingSamples
+20:23:52  INFO        Done: 0 TrainingSamples created
+20:23:52  INFO      
+============================================================
+20:23:52  INFO      Processing: dis_zakashans__ka_n.pdf
+20:23:52  INFO      ============================================================
+20:23:52  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:26:05  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+20:26:05  INFO        Found 20 chunks across 1 chapters
+20:26:05  INFO      Step 2/4  Saving chunk manifest …
+20:26:05  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\dis-zakashans-ka-n\metadata.json
+20:26:05  INFO      Step 3/4  Running AI extraction …
+20:26:05  INFO        0 chunks already done, 20 remaining
+20:26:05  INFO        [1/20] Processing  dis-zakashans-ka-n__ch000__ck000 (4499 tokens, chapter: dis_zakashans__ka_n)
+20:26:05  INFO        -> [dis-zakashans-ka-n__ch000__ck000] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:26:33  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:26:35  INFO        [dis-zakashans-ka-n__ch000__ck000] 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs
+20:26:35  INFO      Created SourceDocument: dis-zakashans-ka-n (id=44)
+20:26:36  INFO      DB saved chunk [dis-zakashans-ka-n__ch000__ck000]: scenarios=4 | decision_nodes=5 | tactics=6 | qa_pairs=8 | rag_chunks=1
+20:26:36  INFO        completed [dis-zakashans-ka-n__ch000__ck000]: 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs [total=24] -> DB: {'scenarios': 4, 'decision_nodes': 5, 'tactics': 6, 'qa_pairs': 8, 'rag_chunks': 1}
+20:26:36  INFO        [2/20] Processing  dis-zakashans-ka-n__ch000__ck001 (4499 tokens, chapter: dis_zakashans__ka_n)
+20:26:36  INFO        -> [dis-zakashans-ka-n__ch000__ck001] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:27:01  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:27:03  INFO        [dis-zakashans-ka-n__ch000__ck001] 4 scenarios, 4 decisions, 5 tactics, 8 qa_pairs
+20:27:03  INFO      DB saved chunk [dis-zakashans-ka-n__ch000__ck001]: scenarios=3 | decision_nodes=4 | tactics=5 | qa_pairs=8 | rag_chunks=1
+20:27:03  INFO        completed [dis-zakashans-ka-n__ch000__ck001]: 4 scenarios, 4 decisions, 5 tactics, 8 qa_pairs [total=21] -> DB: {'scenarios': 3, 'decision_nodes': 4, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+20:27:03  INFO        [3/20] Processing  dis-zakashans-ka-n__ch000__ck002 (4499 tokens, chapter: dis_zakashans__ka_n)
+20:27:03  INFO        -> [dis-zakashans-ka-n__ch000__ck002] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:27:05  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:27:07  INFO        [dis-zakashans-ka-n__ch000__ck002] 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+20:27:07  INFO      DB saved chunk [dis-zakashans-ka-n__ch000__ck002]: rag_chunks=1
+20:27:07  INFO        completed [dis-zakashans-ka-n__ch000__ck002]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs [total=0] -> DB: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 0, 'qa_pairs': 0, 'rag_chunks': 1}
+20:27:07  INFO        [4/20] Processing  dis-zakashans-ka-n__ch000__ck003 (4499 tokens, chapter: dis_zakashans__ka_n)
+20:27:07  INFO        -> [dis-zakashans-ka-n__ch000__ck003] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:27:08  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:27:10  INFO        [dis-zakashans-ka-n__ch000__ck003] 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+20:27:10  INFO      DB saved chunk [dis-zakashans-ka-n__ch000__ck003]: rag_chunks=1
+20:27:10  INFO        completed [dis-zakashans-ka-n__ch000__ck003]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs [total=0] -> DB: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 0, 'qa_pairs': 0, 'rag_chunks': 1}
+20:27:10  INFO        [5/20] Processing  dis-zakashans-ka-n__ch000__ck004 (4499 tokens, chapter: dis_zakashans__ka_n)
+20:27:10  INFO        -> [dis-zakashans-ka-n__ch000__ck004] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:27:11  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+20:27:11  WARNING   [mistral] Rate limit — waiting 30s
+20:27:42  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:27:44  INFO        [dis-zakashans-ka-n__ch000__ck004] 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+20:27:45  INFO      DB saved chunk [dis-zakashans-ka-n__ch000__ck004]: rag_chunks=1
+20:27:45  INFO        completed [dis-zakashans-ka-n__ch000__ck004]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs [total=0] -> DB: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 0, 'qa_pairs': 0, 'rag_chunks': 1}
+20:27:45  INFO        [6/20] Processing  dis-zakashans-ka-n__ch000__ck005 (4499 tokens, chapter: dis_zakashans__ka_n)
+20:27:45  INFO        -> [dis-zakashans-ka-n__ch000__ck005] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:27:45  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+20:27:45  WARNING   [mistral] Rate limit — waiting 30s
+20:28:17  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:28:19  INFO        [dis-zakashans-ka-n__ch000__ck005] 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+20:28:19  INFO      DB saved chunk [dis-zakashans-ka-n__ch000__ck005]: rag_chunks=1
+20:28:19  INFO        completed [dis-zakashans-ka-n__ch000__ck005]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs [total=0] -> DB: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 0, 'qa_pairs': 0, 'rag_chunks': 1}
+20:28:19  INFO        [7/20] Processing  dis-zakashans-ka-n__ch000__ck006 (4499 tokens, chapter: dis_zakashans__ka_n)
+20:28:19  INFO        -> [dis-zakashans-ka-n__ch000__ck006] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:28:20  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:28:22  INFO        [dis-zakashans-ka-n__ch000__ck006] 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+20:28:22  INFO      DB saved chunk [dis-zakashans-ka-n__ch000__ck006]: rag_chunks=1
+20:28:22  INFO        completed [dis-zakashans-ka-n__ch000__ck006]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs [total=0] -> DB: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 0, 'qa_pairs': 0, 'rag_chunks': 1}
+20:28:22  INFO        [8/20] Processing  dis-zakashans-ka-n__ch000__ck007 (4499 tokens, chapter: dis_zakashans__ka_n)
+20:28:22  INFO        -> [dis-zakashans-ka-n__ch000__ck007] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:28:23  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:28:25  INFO        [dis-zakashans-ka-n__ch000__ck007] 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+20:28:26  INFO      DB saved chunk [dis-zakashans-ka-n__ch000__ck007]: rag_chunks=1
+20:28:26  INFO        completed [dis-zakashans-ka-n__ch000__ck007]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs [total=0] -> DB: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 0, 'qa_pairs': 0, 'rag_chunks': 1}
+20:28:26  INFO        [9/20] Processing  dis-zakashans-ka-n__ch000__ck008 (4499 tokens, chapter: dis_zakashans__ka_n)
+20:28:26  INFO        -> [dis-zakashans-ka-n__ch000__ck008] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:28:26  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+20:28:26  WARNING   [mistral] Rate limit — waiting 30s
+20:29:17  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:29:19  INFO        [dis-zakashans-ka-n__ch000__ck008] 4 scenarios, 4 decisions, 5 tactics, 8 qa_pairs
+20:29:19  INFO      DB saved chunk [dis-zakashans-ka-n__ch000__ck008]: scenarios=4 | decision_nodes=4 | tactics=5 | qa_pairs=8 | rag_chunks=1
+20:29:19  INFO        completed [dis-zakashans-ka-n__ch000__ck008]: 4 scenarios, 4 decisions, 5 tactics, 8 qa_pairs [total=21] -> DB: {'scenarios': 4, 'decision_nodes': 4, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+20:29:19  INFO        [10/20] Processing  dis-zakashans-ka-n__ch000__ck009 (4499 tokens, chapter: dis_zakashans__ka_n)
+20:29:19  INFO        -> [dis-zakashans-ka-n__ch000__ck009] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:29:20  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:29:22  INFO        [dis-zakashans-ka-n__ch000__ck009] 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+20:29:22  INFO      DB saved chunk [dis-zakashans-ka-n__ch000__ck009]: rag_chunks=1
+20:29:22  INFO        completed [dis-zakashans-ka-n__ch000__ck009]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs [total=0] -> DB: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 0, 'qa_pairs': 0, 'rag_chunks': 1}
+20:29:22  INFO        [11/20] Processing  dis-zakashans-ka-n__ch000__ck010 (4499 tokens, chapter: dis_zakashans__ka_n)
+20:29:22  INFO        -> [dis-zakashans-ka-n__ch000__ck010] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:29:50  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:29:52  INFO        [dis-zakashans-ka-n__ch000__ck010] 5 scenarios, 5 decisions, 5 tactics, 8 qa_pairs
+20:29:52  INFO      DB saved chunk [dis-zakashans-ka-n__ch000__ck010]: scenarios=5 | decision_nodes=5 | tactics=5 | qa_pairs=8 | rag_chunks=1
+20:29:52  INFO        completed [dis-zakashans-ka-n__ch000__ck010]: 5 scenarios, 5 decisions, 5 tactics, 8 qa_pairs [total=23] -> DB: {'scenarios': 5, 'decision_nodes': 5, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+20:29:52  INFO        [12/20] Processing  dis-zakashans-ka-n__ch000__ck011 (4499 tokens, chapter: dis_zakashans__ka_n)
+20:29:52  INFO        -> [dis-zakashans-ka-n__ch000__ck011] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:30:11  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:30:13  INFO        [dis-zakashans-ka-n__ch000__ck011] 3 scenarios, 3 decisions, 5 tactics, 8 qa_pairs
+20:30:13  INFO      DB saved chunk [dis-zakashans-ka-n__ch000__ck011]: scenarios=3 | decision_nodes=3 | tactics=5 | qa_pairs=8 | rag_chunks=1
+20:30:13  INFO        completed [dis-zakashans-ka-n__ch000__ck011]: 3 scenarios, 3 decisions, 5 tactics, 8 qa_pairs [total=19] -> DB: {'scenarios': 3, 'decision_nodes': 3, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+20:30:13  INFO        [13/20] Processing  dis-zakashans-ka-n__ch000__ck012 (4499 tokens, chapter: dis_zakashans__ka_n)
+20:30:13  INFO        -> [dis-zakashans-ka-n__ch000__ck012] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:30:15  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:30:17  INFO        [dis-zakashans-ka-n__ch000__ck012] 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+20:30:17  INFO      DB saved chunk [dis-zakashans-ka-n__ch000__ck012]: rag_chunks=1
+20:30:17  INFO        completed [dis-zakashans-ka-n__ch000__ck012]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs [total=0] -> DB: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 0, 'qa_pairs': 0, 'rag_chunks': 1}
+20:30:17  INFO        [14/20] Processing  dis-zakashans-ka-n__ch000__ck013 (4499 tokens, chapter: dis_zakashans__ka_n)
+20:30:17  INFO        -> [dis-zakashans-ka-n__ch000__ck013] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:30:18  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+20:30:18  WARNING   [mistral] Rate limit — waiting 30s
+20:31:17  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:31:19  INFO        [dis-zakashans-ka-n__ch000__ck013] 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs
+20:31:19  INFO      DB saved chunk [dis-zakashans-ka-n__ch000__ck013]: scenarios=4 | decision_nodes=5 | tactics=6 | qa_pairs=8 | rag_chunks=1
+20:31:19  INFO        completed [dis-zakashans-ka-n__ch000__ck013]: 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs [total=24] -> DB: {'scenarios': 4, 'decision_nodes': 5, 'tactics': 6, 'qa_pairs': 8, 'rag_chunks': 1}
+20:31:19  INFO        [15/20] Processing  dis-zakashans-ka-n__ch000__ck014 (4499 tokens, chapter: dis_zakashans__ka_n)
+20:31:19  INFO        -> [dis-zakashans-ka-n__ch000__ck014] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:31:44  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:31:46  INFO        [dis-zakashans-ka-n__ch000__ck014] 5 scenarios, 5 decisions, 5 tactics, 8 qa_pairs
+20:31:47  INFO      DB saved chunk [dis-zakashans-ka-n__ch000__ck014]: scenarios=5 | decision_nodes=5 | tactics=5 | qa_pairs=8 | rag_chunks=1
+20:31:47  INFO        completed [dis-zakashans-ka-n__ch000__ck014]: 5 scenarios, 5 decisions, 5 tactics, 8 qa_pairs [total=23] -> DB: {'scenarios': 5, 'decision_nodes': 5, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+20:31:47  INFO        [16/20] Processing  dis-zakashans-ka-n__ch000__ck015 (4499 tokens, chapter: dis_zakashans__ka_n)
+20:31:47  INFO        -> [dis-zakashans-ka-n__ch000__ck015] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:32:07  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:32:09  INFO        [dis-zakashans-ka-n__ch000__ck015] 3 scenarios, 3 decisions, 4 tactics, 8 qa_pairs
+20:32:10  INFO      DB saved chunk [dis-zakashans-ka-n__ch000__ck015]: scenarios=3 | decision_nodes=3 | tactics=4 | qa_pairs=8 | rag_chunks=1
+20:32:10  INFO        completed [dis-zakashans-ka-n__ch000__ck015]: 3 scenarios, 3 decisions, 4 tactics, 8 qa_pairs [total=18] -> DB: {'scenarios': 3, 'decision_nodes': 3, 'tactics': 4, 'qa_pairs': 8, 'rag_chunks': 1}
+20:32:10  INFO        [17/20] Processing  dis-zakashans-ka-n__ch000__ck016 (4499 tokens, chapter: dis_zakashans__ka_n)
+20:32:10  INFO        -> [dis-zakashans-ka-n__ch000__ck016] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:32:12  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:32:14  INFO        [dis-zakashans-ka-n__ch000__ck016] 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+20:32:14  INFO      DB saved chunk [dis-zakashans-ka-n__ch000__ck016]: rag_chunks=1
+20:32:14  INFO        completed [dis-zakashans-ka-n__ch000__ck016]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs [total=0] -> DB: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 0, 'qa_pairs': 0, 'rag_chunks': 1}
+20:32:14  INFO        [18/20] Processing  dis-zakashans-ka-n__ch000__ck017 (4499 tokens, chapter: dis_zakashans__ka_n)
+20:32:14  INFO        -> [dis-zakashans-ka-n__ch000__ck017] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:32:16  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:32:18  INFO        [dis-zakashans-ka-n__ch000__ck017] 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+20:32:18  INFO      DB saved chunk [dis-zakashans-ka-n__ch000__ck017]: rag_chunks=1
+20:32:18  INFO        completed [dis-zakashans-ka-n__ch000__ck017]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs [total=0] -> DB: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 0, 'qa_pairs': 0, 'rag_chunks': 1}
+20:32:18  INFO        [19/20] Processing  dis-zakashans-ka-n__ch000__ck018 (4499 tokens, chapter: dis_zakashans__ka_n)
+20:32:18  INFO        -> [dis-zakashans-ka-n__ch000__ck018] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:32:19  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+20:32:19  WARNING   [mistral] Rate limit — waiting 30s
+20:32:50  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:32:52  INFO        [dis-zakashans-ka-n__ch000__ck018] 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+20:32:52  INFO      DB saved chunk [dis-zakashans-ka-n__ch000__ck018]: rag_chunks=1
+20:32:52  INFO        completed [dis-zakashans-ka-n__ch000__ck018]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs [total=0] -> DB: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 0, 'qa_pairs': 0, 'rag_chunks': 1}
+20:32:52  INFO        [20/20] Processing  dis-zakashans-ka-n__ch000__ck019 (1366 tokens, chapter: dis_zakashans__ka_n)
+20:32:52  INFO        -> [dis-zakashans-ka-n__ch000__ck019] lang=uk tokens=1366 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:33:15  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:33:17  INFO        [dis-zakashans-ka-n__ch000__ck019] 4 scenarios, 4 decisions, 5 tactics, 8 qa_pairs
+20:33:17  INFO      DB saved chunk [dis-zakashans-ka-n__ch000__ck019]: scenarios=4 | decision_nodes=4 | tactics=5 | qa_pairs=8 | rag_chunks=1
+20:33:17  INFO        completed [dis-zakashans-ka-n__ch000__ck019]: 4 scenarios, 4 decisions, 5 tactics, 8 qa_pairs [total=21] -> DB: {'scenarios': 4, 'decision_nodes': 4, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+20:33:17  INFO      Step 4/4  Finalising book in DB ...
+20:33:18  INFO      Built 72 new TrainingSamples
+20:33:18  INFO        Done: 72 TrainingSamples created
+20:33:18  INFO      
+============================================================
+20:33:18  INFO      Processing: j.isjmef.20250402.08.pdf
+20:33:18  INFO      ============================================================
+20:33:18  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:33:27  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+20:33:27  INFO        Found 2 chunks across 1 chapters
+20:33:27  INFO      Step 2/4  Saving chunk manifest …
+20:33:27  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\j-isjmef-20250402-08\metadata.json
+20:33:27  INFO      Step 3/4  Running AI extraction …
+20:33:27  INFO        2 chunks already done, 0 remaining
+20:33:27  INFO        [1/2] SKIP (cached)  j-isjmef-20250402-08__ch000__ck000
+20:33:27  INFO        [2/2] SKIP (cached)  j-isjmef-20250402-08__ch000__ck001
+20:33:27  INFO      Step 4/4  Finalising book in DB ...
+20:33:27  INFO      Built 0 new TrainingSamples
+20:33:27  INFO        Done: 0 TrainingSamples created
+20:33:27  INFO      
+============================================================
+20:33:27  INFO      Processing: Materialy_konf_Transformatsiya_obliku_2025_442-444-2.pdf
+20:33:27  INFO      ============================================================
+20:33:27  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:33:29  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+20:33:29  INFO        Found 1 chunks across 1 chapters
+20:33:29  INFO      Step 2/4  Saving chunk manifest …
+20:33:29  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\materialy-konf-transformatsiya-obliku-2025-442-444-2\metadata.json
+20:33:29  INFO      Step 3/4  Running AI extraction …
+20:33:29  INFO        0 chunks already done, 1 remaining
+20:33:29  INFO        [1/1] Processing  materialy-konf-transformatsiya-obliku-2025-442-444-2__ch000__ck000 (1502 tokens, chapter: Materialy_konf_Transformatsiya_obliku_2025_442-444)
+20:33:29  INFO        -> [materialy-konf-transformatsiya-obliku-2025-442-444-2__ch000__ck000] lang=uk tokens=1502 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:33:52  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:33:54  INFO        [materialy-konf-transformatsiya-obliku-2025-442-444-2__ch000__ck000] 4 scenarios, 4 decisions, 5 tactics, 8 qa_pairs
+20:33:54  INFO      Created SourceDocument: materialy-konf-transformatsiya-obliku-2025-442-444-2 (id=45)
+20:33:54  INFO      DB saved chunk [materialy-konf-transformatsiya-obliku-2025-442-444-2__ch000__ck000]: scenarios=3 | decision_nodes=4 | tactics=5 | qa_pairs=8 | rag_chunks=1
+20:33:54  INFO        completed [materialy-konf-transformatsiya-obliku-2025-442-444-2__ch000__ck000]: 4 scenarios, 4 decisions, 5 tactics, 8 qa_pairs [total=21] -> DB: {'scenarios': 3, 'decision_nodes': 4, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+20:33:54  INFO      Step 4/4  Finalising book in DB ...
+20:33:54  INFO      Built 8 new TrainingSamples
+20:33:54  INFO        Done: 8 TrainingSamples created
+20:33:54  INFO      
+============================================================
+20:33:54  INFO      Processing: Materialy_konf_Transformatsiya_obliku_2025_442-444.pdf
+20:33:54  INFO      ============================================================
+20:33:54  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:33:56  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+20:33:56  INFO        Found 1 chunks across 1 chapters
+20:33:56  INFO      Step 2/4  Saving chunk manifest …
+20:33:56  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\materialy-konf-transformatsiya-obliku-2025-442-444\metadata.json
+20:33:56  INFO      Step 3/4  Running AI extraction …
+20:33:56  INFO        0 chunks already done, 1 remaining
+20:33:56  INFO        [1/1] Processing  materialy-konf-transformatsiya-obliku-2025-442-444__ch000__ck000 (1502 tokens, chapter: Materialy_konf_Transformatsiya_obliku_2025_442-444)
+20:33:56  INFO        -> [materialy-konf-transformatsiya-obliku-2025-442-444__ch000__ck000] lang=uk tokens=1502 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:34:20  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:34:22  INFO        [materialy-konf-transformatsiya-obliku-2025-442-444__ch000__ck000] 4 scenarios, 5 decisions, 5 tactics, 8 qa_pairs
+20:34:22  INFO      Created SourceDocument: materialy-konf-transformatsiya-obliku-2025-442-444 (id=46)
+20:34:22  INFO      DB saved chunk [materialy-konf-transformatsiya-obliku-2025-442-444__ch000__ck000]: scenarios=4 | decision_nodes=5 | tactics=5 | qa_pairs=8 | rag_chunks=1
+20:34:22  INFO        completed [materialy-konf-transformatsiya-obliku-2025-442-444__ch000__ck000]: 4 scenarios, 5 decisions, 5 tactics, 8 qa_pairs [total=22] -> DB: {'scenarios': 4, 'decision_nodes': 5, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+20:34:22  INFO      Step 4/4  Finalising book in DB ...
+20:34:22  INFO      Built 8 new TrainingSamples
+20:34:22  INFO        Done: 8 TrainingSamples created
+20:34:22  INFO      
+============================================================
+20:34:22  INFO      Processing: Piir_2023_30_6.pdf
+20:34:22  INFO      ============================================================
+20:34:22  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:34:27  INFO        Sections after merge: 3 (was 3, merged 0 tiny sections)
+20:34:27  INFO        Found 3 chunks across 3 chapters
+20:34:27  INFO      Step 2/4  Saving chunk manifest …
+20:34:27  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\piir-2023-30-6\metadata.json
+20:34:27  INFO      Step 3/4  Running AI extraction …
+20:34:27  INFO        3 chunks already done, 0 remaining
+20:34:27  INFO        [1/3] SKIP (cached)  piir-2023-30-6__ch000__ck000
+20:34:27  INFO        [2/3] SKIP (cached)  piir-2023-30-6__ch001__ck000
+20:34:27  INFO        [3/3] SKIP (cached)  piir-2023-30-6__ch002__ck000
+20:34:27  INFO      Step 4/4  Finalising book in DB ...
+20:34:27  INFO      Built 0 new TrainingSamples
+20:34:27  INFO        Done: 0 TrainingSamples created
+20:34:27  INFO      
+============================================================
+20:34:27  INFO      Processing: stapttp_2017_76_20.pdf
+20:34:27  INFO      ============================================================
+20:34:27  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:34:34  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+20:34:34  INFO        Found 2 chunks across 1 chapters
+20:34:34  INFO      Step 2/4  Saving chunk manifest …
+20:34:34  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\stapttp-2017-76-20\metadata.json
+20:34:34  INFO      Step 3/4  Running AI extraction …
+20:34:34  INFO        0 chunks already done, 2 remaining
+20:34:34  INFO        [1/2] Processing  stapttp-2017-76-20__ch000__ck000 (4499 tokens, chapter: stapttp_2017_76_20)
+20:34:34  INFO        -> [stapttp-2017-76-20__ch000__ck000] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:35:00  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:35:02  INFO        [stapttp-2017-76-20__ch000__ck000] 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs
+20:35:02  INFO      Created SourceDocument: stapttp-2017-76-20 (id=47)
+20:35:02  INFO      DB saved chunk [stapttp-2017-76-20__ch000__ck000]: scenarios=5 | decision_nodes=5 | tactics=6 | qa_pairs=8 | rag_chunks=1
+20:35:02  INFO        completed [stapttp-2017-76-20__ch000__ck000]: 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs [total=24] -> DB: {'scenarios': 5, 'decision_nodes': 5, 'tactics': 6, 'qa_pairs': 8, 'rag_chunks': 1}
+20:35:02  INFO        [2/2] Processing  stapttp-2017-76-20__ch000__ck001 (660 tokens, chapter: stapttp_2017_76_20)
+20:35:02  INFO        -> [stapttp-2017-76-20__ch000__ck001] lang=uk tokens=660 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+20:35:03  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+20:35:05  INFO        [stapttp-2017-76-20__ch000__ck001] 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+20:35:05  INFO      DB saved chunk [stapttp-2017-76-20__ch000__ck001]: rag_chunks=1
+20:35:05  INFO        completed [stapttp-2017-76-20__ch000__ck001]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs [total=0] -> DB: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 0, 'qa_pairs': 0, 'rag_chunks': 1}
+20:35:05  INFO      Step 4/4  Finalising book in DB ...
+20:35:05  INFO      Built 8 new TrainingSamples
+20:35:05  INFO        Done: 8 TrainingSamples created
+20:35:05  INFO      
+============================================================
+20:35:05  INFO      Processing: uazt_2014_3_14.pdf
+20:35:05  INFO      ============================================================
+20:35:05  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:35:06  ERROR     Bounding box (0, 0, 309.504, 841.9) is not fully within parent page bounding box (0, -0.01999999999998181, 595.2, 841.88)
+20:35:06  INFO      
+============================================================
+20:35:06  INFO      Processing: VKNU-ES-2024-N3(330)+116-122.pdf
+20:35:06  INFO      ============================================================
+20:35:06  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:35:14  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+20:35:14  INFO        Found 2 chunks across 1 chapters
+20:35:14  INFO      Step 2/4  Saving chunk manifest …
+20:35:14  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\vknu-es-2024-n3-330-116-122\metadata.json
+20:35:14  INFO      Step 3/4  Running AI extraction …
+20:35:14  INFO        2 chunks already done, 0 remaining
+20:35:14  INFO        [1/2] SKIP (cached)  vknu-es-2024-n3-330-116-122__ch000__ck000
+20:35:14  INFO        [2/2] SKIP (cached)  vknu-es-2024-n3-330-116-122__ch000__ck001
+20:35:14  INFO      Step 4/4  Finalising book in DB ...
+20:35:14  INFO      Built 0 new TrainingSamples
+20:35:14  INFO        Done: 0 TrainingSamples created
+20:35:14  INFO      
+============================================================
+20:35:14  INFO      Processing: ZBIRNIK_Konferencia_Ekonomicni_perspektivi_pidpriemnictva_31.05.2024__.pdf
+20:35:14  INFO      ============================================================
+20:35:14  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:39:13  INFO        Sections after merge: 150 (was 151, merged 1 tiny sections)
+20:39:13  INFO        Found 150 chunks across 150 chapters
+20:39:13  INFO      Step 2/4  Saving chunk manifest …
+20:39:14  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024\metadata.json
+20:39:14  INFO      Step 3/4  Running AI extraction …
+20:39:14  INFO        150 chunks already done, 0 remaining
+20:39:14  INFO        [1/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch000__ck000
+20:39:14  INFO        [2/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch001__ck000
+20:39:14  INFO        [3/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch002__ck000
+20:39:14  INFO        [4/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch003__ck000
+20:39:14  INFO        [5/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch004__ck000
+20:39:14  INFO        [6/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch005__ck000
+20:39:14  INFO        [7/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch006__ck000
+20:39:14  INFO        [8/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch007__ck000
+20:39:14  INFO        [9/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch008__ck000
+20:39:14  INFO        [10/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch009__ck000
+20:39:14  INFO        [11/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch010__ck000
+20:39:14  INFO        [12/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch011__ck000
+20:39:14  INFO        [13/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch012__ck000
+20:39:14  INFO        [14/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch013__ck000
+20:39:14  INFO        [15/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch014__ck000
+20:39:14  INFO        [16/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch015__ck000
+20:39:14  INFO        [17/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch016__ck000
+20:39:14  INFO        [18/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch017__ck000
+20:39:14  INFO        [19/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch018__ck000
+20:39:14  INFO        [20/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch019__ck000
+20:39:14  INFO        [21/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch020__ck000
+20:39:14  INFO        [22/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch021__ck000
+20:39:14  INFO        [23/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch022__ck000
+20:39:14  INFO        [24/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch023__ck000
+20:39:14  INFO        [25/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch024__ck000
+20:39:14  INFO        [26/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch025__ck000
+20:39:14  INFO        [27/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch026__ck000
+20:39:14  INFO        [28/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch027__ck000
+20:39:14  INFO        [29/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch028__ck000
+20:39:14  INFO        [30/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch029__ck000
+20:39:14  INFO        [31/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch030__ck000
+20:39:14  INFO        [32/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch031__ck000
+20:39:14  INFO        [33/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch032__ck000
+20:39:14  INFO        [34/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch033__ck000
+20:39:14  INFO        [35/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch034__ck000
+20:39:14  INFO        [36/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch035__ck000
+20:39:14  INFO        [37/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch036__ck000
+20:39:14  INFO        [38/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch037__ck000
+20:39:14  INFO        [39/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch038__ck000
+20:39:14  INFO        [40/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch039__ck000
+20:39:14  INFO        [41/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch040__ck000
+20:39:14  INFO        [42/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch041__ck000
+20:39:14  INFO        [43/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch042__ck000
+20:39:14  INFO        [44/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch043__ck000
+20:39:14  INFO        [45/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch044__ck000
+20:39:14  INFO        [46/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch045__ck000
+20:39:14  INFO        [47/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch046__ck000
+20:39:14  INFO        [48/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch047__ck000
+20:39:14  INFO        [49/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch048__ck000
+20:39:14  INFO        [50/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch049__ck000
+20:39:14  INFO        [51/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch050__ck000
+20:39:14  INFO        [52/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch051__ck000
+20:39:14  INFO        [53/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch052__ck000
+20:39:14  INFO        [54/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch053__ck000
+20:39:14  INFO        [55/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch054__ck000
+20:39:14  INFO        [56/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch055__ck000
+20:39:14  INFO        [57/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch056__ck000
+20:39:14  INFO        [58/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch057__ck000
+20:39:14  INFO        [59/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch058__ck000
+20:39:14  INFO        [60/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch059__ck000
+20:39:14  INFO        [61/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch060__ck000
+20:39:14  INFO        [62/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch061__ck000
+20:39:14  INFO        [63/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch062__ck000
+20:39:14  INFO        [64/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch063__ck000
+20:39:14  INFO        [65/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch064__ck000
+20:39:14  INFO        [66/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch065__ck000
+20:39:14  INFO        [67/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch066__ck000
+20:39:14  INFO        [68/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch067__ck000
+20:39:14  INFO        [69/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch068__ck000
+20:39:14  INFO        [70/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch069__ck000
+20:39:14  INFO        [71/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch070__ck000
+20:39:14  INFO        [72/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch071__ck000
+20:39:14  INFO        [73/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch072__ck000
+20:39:14  INFO        [74/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch073__ck000
+20:39:14  INFO        [75/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch074__ck000
+20:39:14  INFO        [76/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch075__ck000
+20:39:14  INFO        [77/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch076__ck000
+20:39:14  INFO        [78/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch077__ck000
+20:39:14  INFO        [79/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch078__ck000
+20:39:14  INFO        [80/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch079__ck000
+20:39:14  INFO        [81/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch080__ck000
+20:39:14  INFO        [82/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch081__ck000
+20:39:14  INFO        [83/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch082__ck000
+20:39:14  INFO        [84/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch083__ck000
+20:39:14  INFO        [85/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch084__ck000
+20:39:14  INFO        [86/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch085__ck000
+20:39:14  INFO        [87/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch086__ck000
+20:39:14  INFO        [88/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch087__ck000
+20:39:14  INFO        [89/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch088__ck000
+20:39:14  INFO        [90/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch089__ck000
+20:39:14  INFO        [91/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch090__ck000
+20:39:14  INFO        [92/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch091__ck000
+20:39:14  INFO        [93/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch092__ck000
+20:39:14  INFO        [94/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch093__ck000
+20:39:14  INFO        [95/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch094__ck000
+20:39:14  INFO        [96/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch095__ck000
+20:39:14  INFO        [97/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch096__ck000
+20:39:14  INFO        [98/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch097__ck000
+20:39:14  INFO        [99/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch098__ck000
+20:39:14  INFO        [100/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch099__ck000
+20:39:14  INFO        [101/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch100__ck000
+20:39:14  INFO        [102/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch101__ck000
+20:39:14  INFO        [103/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch102__ck000
+20:39:14  INFO        [104/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch103__ck000
+20:39:14  INFO        [105/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch104__ck000
+20:39:14  INFO        [106/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch105__ck000
+20:39:14  INFO        [107/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch106__ck000
+20:39:14  INFO        [108/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch107__ck000
+20:39:14  INFO        [109/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch108__ck000
+20:39:14  INFO        [110/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch109__ck000
+20:39:14  INFO        [111/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch110__ck000
+20:39:14  INFO        [112/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch111__ck000
+20:39:14  INFO        [113/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch112__ck000
+20:39:14  INFO        [114/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch113__ck000
+20:39:14  INFO        [115/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch114__ck000
+20:39:14  INFO        [116/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch115__ck000
+20:39:14  INFO        [117/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch116__ck000
+20:39:14  INFO        [118/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch117__ck000
+20:39:14  INFO        [119/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch118__ck000
+20:39:14  INFO        [120/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch119__ck000
+20:39:14  INFO        [121/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch120__ck000
+20:39:14  INFO        [122/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch121__ck000
+20:39:14  INFO        [123/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch122__ck000
+20:39:14  INFO        [124/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch123__ck000
+20:39:14  INFO        [125/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch124__ck000
+20:39:14  INFO        [126/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch125__ck000
+20:39:14  INFO        [127/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch126__ck000
+20:39:14  INFO        [128/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch127__ck000
+20:39:14  INFO        [129/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch128__ck000
+20:39:14  INFO        [130/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch129__ck000
+20:39:14  INFO        [131/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch130__ck000
+20:39:14  INFO        [132/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch131__ck000
+20:39:14  INFO        [133/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch132__ck000
+20:39:14  INFO        [134/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch133__ck000
+20:39:14  INFO        [135/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch134__ck000
+20:39:14  INFO        [136/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch135__ck000
+20:39:14  INFO        [137/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch136__ck000
+20:39:14  INFO        [138/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch137__ck000
+20:39:14  INFO        [139/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch138__ck000
+20:39:14  INFO        [140/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch139__ck000
+20:39:14  INFO        [141/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch140__ck000
+20:39:14  INFO        [142/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch141__ck000
+20:39:14  INFO        [143/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch142__ck000
+20:39:14  INFO        [144/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch143__ck000
+20:39:14  INFO        [145/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch144__ck000
+20:39:14  INFO        [146/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch145__ck000
+20:39:14  INFO        [147/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch146__ck000
+20:39:14  INFO        [148/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch147__ck000
+20:39:14  INFO        [149/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch148__ck000
+20:39:14  INFO        [150/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch149__ck000
+20:39:14  INFO      Step 4/4  Finalising book in DB ...
+20:39:14  INFO      Built 0 new TrainingSamples
+20:39:14  INFO        Done: 0 TrainingSamples created
+20:39:14  INFO      
+============================================================
+20:39:14  INFO      Processing: Дисертація Раупов Р.Б-2.pdf
+20:39:14  INFO      ============================================================
+20:39:14  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:41:09  INFO        Sections after merge: 3 (was 4, merged 1 tiny sections)
+20:41:09  INFO        Found 15 chunks across 3 chapters
+20:41:09  INFO      Step 2/4  Saving chunk manifest …
+20:41:09  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\dysertatsiia-raupov-r-b-2\metadata.json
+20:41:09  INFO      Step 3/4  Running AI extraction …
+20:41:09  INFO        15 chunks already done, 0 remaining
+20:41:09  INFO        [1/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch000__ck000
+20:41:09  INFO        [2/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck000
+20:41:09  INFO        [3/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck001
+20:41:09  INFO        [4/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck002
+20:41:09  INFO        [5/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck003
+20:41:09  INFO        [6/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck004
+20:41:09  INFO        [7/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck005
+20:41:09  INFO        [8/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck006
+20:41:09  INFO        [9/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck007
+20:41:09  INFO        [10/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck008
+20:41:09  INFO        [11/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck009
+20:41:09  INFO        [12/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck010
+20:41:09  INFO        [13/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch002__ck000
+20:41:09  INFO        [14/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch002__ck001
+20:41:09  INFO        [15/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch002__ck002
+20:41:09  INFO      Step 4/4  Finalising book in DB ...
+20:41:09  INFO      Built 0 new TrainingSamples
+20:41:09  INFO        Done: 0 TrainingSamples created
+20:41:09  INFO      
+============================================================
+20:41:09  INFO      Processing: Збірка_семінар_права-людини_2023.pdf
+20:41:09  INFO      ============================================================
+20:41:09  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:42:49  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+20:42:49  INFO        Found 19 chunks across 2 chapters
+20:42:49  INFO      Step 2/4  Saving chunk manifest …
+20:42:49  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\zbirka-seminar-prava-liudyny-2023\metadata.json
+20:42:49  INFO      Step 3/4  Running AI extraction …
+20:42:49  INFO        19 chunks already done, 0 remaining
+20:42:49  INFO        [1/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck000
+20:42:49  INFO        [2/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck001
+20:42:49  INFO        [3/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck002
+20:42:49  INFO        [4/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck003
+20:42:49  INFO        [5/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck004
+20:42:49  INFO        [6/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck005
+20:42:49  INFO        [7/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck006
+20:42:49  INFO        [8/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck007
+20:42:49  INFO        [9/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck008
+20:42:49  INFO        [10/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck009
+20:42:49  INFO        [11/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck010
+20:42:49  INFO        [12/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck011
+20:42:49  INFO        [13/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck012
+20:42:49  INFO        [14/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck013
+20:42:49  INFO        [15/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck014
+20:42:49  INFO        [16/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck015
+20:42:49  INFO        [17/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck016
+20:42:49  INFO        [18/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch001__ck000
+20:42:49  INFO        [19/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch001__ck001
+20:42:49  INFO      Step 4/4  Finalising book in DB ...
+20:42:49  INFO      Built 0 new TrainingSamples
+20:42:49  INFO        Done: 0 TrainingSamples created
+20:42:49  INFO      
+============================================================
+20:42:49  INFO      Processing: Костирко_Кризові комунікації.pdf
+20:42:49  INFO      ============================================================
+20:42:49  INFO      Step 1/4  Extracting text and splitting into chunks …
+20:43:23  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+20:43:23  INFO        Found 6 chunks across 1 chapters
+20:43:23  INFO      Step 2/4  Saving chunk manifest …
+20:43:23  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\kostyrko-kryzovi-komunikatsii\metadata.json
+20:43:23  INFO      Step 3/4  Running AI extraction …
+20:43:23  INFO        6 chunks already done, 0 remaining
+20:43:23  INFO        [1/6] SKIP (cached)  kostyrko-kryzovi-komunikatsii__ch000__ck000
+20:43:23  INFO        [2/6] SKIP (cached)  kostyrko-kryzovi-komunikatsii__ch000__ck001
+20:43:23  INFO        [3/6] SKIP (cached)  kostyrko-kryzovi-komunikatsii__ch000__ck002
+20:43:23  INFO        [4/6] SKIP (cached)  kostyrko-kryzovi-komunikatsii__ch000__ck003
+20:43:23  INFO        [5/6] SKIP (cached)  kostyrko-kryzovi-komunikatsii__ch000__ck004
+20:43:23  INFO        [6/6] SKIP (cached)  kostyrko-kryzovi-komunikatsii__ch000__ck005
+20:43:23  INFO      Step 4/4  Finalising book in DB ...
+20:43:23  INFO      Built 0 new TrainingSamples
+20:43:23  INFO        Done: 0 TrainingSamples created
