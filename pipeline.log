@@ -6603,3 +6603,454 @@ DETAIL:  Failing row contains (489, qa-000241, What are the critical competencie
 (Background on this error at: https://sqlalche.me/e/20/gkpj) -- run `python -m app.run --promote-only` to retry.
 13:15:07  INFO        [2/2] Processing  69__ch000__ck001 (890 tokens, chapter: Аналіз останніх досліджень і публікацій.)
 13:15:07  INFO        -> [69__ch000__ck001] lang=uk tokens=890 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+13:50:48  INFO      
+============================================================
+13:50:48  INFO      Processing: 105312772.pdf
+13:50:48  INFO      ============================================================
+13:50:48  INFO      Step 1/4  Extracting text and splitting into chunks …
+13:50:49  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+13:50:49  INFO        Found 1 chunks across 1 chapters
+13:50:49  INFO      Step 2/4  Saving chunk manifest …
+13:50:49  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\105312772\metadata.json
+13:50:49  INFO      Step 3/4  Running AI extraction …
+13:50:49  INFO        0 chunks already done, 1 remaining
+13:50:49  INFO        [1/1] Processing  105312772__ch000__ck000 (2503 tokens, chapter: 105312772)
+13:50:49  INFO        -> [105312772__ch000__ck000] lang=uk tokens=2503 | active backends: gemini -> mistral -> groq -> openrouter -> github -> lmstudio
+13:50:51  INFO      AFC is enabled with max remote calls: 10.
+13:50:51  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+13:50:51  WARNING   [gemini] Daily quota exhausted
+13:50:51  INFO        Switching to next backend. Remaining: mistral -> groq -> openrouter -> github -> lmstudio
+13:51:12  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+13:51:14  INFO        [105312772__ch000__ck000] 3 scenarios, 3 decisions, 5 tactics, 8 qa_pairs
+13:51:14  INFO      DB saved chunk [105312772__ch000__ck000]: decision_nodes=3 | tactics=5 | qa_pairs=8 | rag_chunks=1
+13:51:14  INFO        completed [105312772__ch000__ck000]: 3 scenarios, 3 decisions, 5 tactics, 8 qa_pairs [total=19] -> DB: {'scenarios': 0, 'decision_nodes': 3, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+13:51:14  INFO      Step 4/4  Finalising book in DB ...
+13:51:14  INFO      Built 8 new TrainingSamples
+13:51:14  INFO        Done: 8 TrainingSamples created
+13:51:14  INFO      
+============================================================
+13:51:14  INFO      Processing: 11-Bohdanov.pdf
+13:51:14  INFO      ============================================================
+13:51:14  INFO      Step 1/4  Extracting text and splitting into chunks …
+13:51:17  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+13:51:17  INFO        Found 2 chunks across 2 chapters
+13:51:17  INFO      Step 2/4  Saving chunk manifest …
+13:51:17  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\11-bohdanov\metadata.json
+13:51:17  INFO      Step 3/4  Running AI extraction …
+13:51:17  INFO        0 chunks already done, 2 remaining
+13:51:17  INFO        [1/2] Processing  11-bohdanov__ch000__ck000 (768 tokens, chapter: Література)
+13:51:17  INFO        -> [11-bohdanov__ch000__ck000] lang=uk tokens=768 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+13:51:40  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+13:51:42  INFO        [11-bohdanov__ch000__ck000] 5 scenarios, 5 decisions, 5 tactics, 8 qa_pairs
+13:51:42  INFO      DB saved chunk [11-bohdanov__ch000__ck000]: scenarios=3 | decision_nodes=5 | tactics=5 | qa_pairs=8 | rag_chunks=1
+13:51:42  INFO        completed [11-bohdanov__ch000__ck000]: 5 scenarios, 5 decisions, 5 tactics, 8 qa_pairs [total=23] -> DB: {'scenarios': 3, 'decision_nodes': 5, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+13:51:42  INFO        [2/2] Processing  11-bohdanov__ch001__ck000 (2070 tokens, chapter: References)
+13:51:42  INFO        -> [11-bohdanov__ch001__ck000] lang=uk tokens=2070 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+13:52:04  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+13:52:06  INFO        [11-bohdanov__ch001__ck000] 3 scenarios, 3 decisions, 5 tactics, 8 qa_pairs
+13:52:06  INFO      DB saved chunk [11-bohdanov__ch001__ck000]: decision_nodes=3 | tactics=5 | qa_pairs=8 | rag_chunks=1
+13:52:06  INFO        completed [11-bohdanov__ch001__ck000]: 3 scenarios, 3 decisions, 5 tactics, 8 qa_pairs [total=19] -> DB: {'scenarios': 0, 'decision_nodes': 3, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+13:52:06  INFO      Step 4/4  Finalising book in DB ...
+13:52:06  INFO      Built 16 new TrainingSamples
+13:52:06  INFO        Done: 16 TrainingSamples created
+13:52:06  INFO      
+============================================================
+13:52:06  INFO      Processing: 123550889.pdf
+13:52:06  INFO      ============================================================
+13:52:06  INFO      Step 1/4  Extracting text and splitting into chunks …
+13:52:13  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+13:52:13  INFO        Found 2 chunks across 2 chapters
+13:52:13  INFO      Step 2/4  Saving chunk manifest …
+13:52:13  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\123550889\metadata.json
+13:52:13  INFO      Step 3/4  Running AI extraction …
+13:52:13  INFO        0 chunks already done, 2 remaining
+13:52:13  INFO        [1/2] Processing  123550889__ch000__ck000 (1997 tokens, chapter: обговорення)
+13:52:13  INFO        -> [123550889__ch000__ck000] lang=uk tokens=1997 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+13:52:40  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+13:52:42  INFO        [123550889__ch000__ck000] 5 scenarios, 5 decisions, 7 tactics, 8 qa_pairs
+13:52:42  INFO      DB saved chunk [123550889__ch000__ck000]: scenarios=3 | decision_nodes=5 | tactics=7 | qa_pairs=8 | rag_chunks=1
+13:52:42  INFO        completed [123550889__ch000__ck000]: 5 scenarios, 5 decisions, 7 tactics, 8 qa_pairs [total=25] -> DB: {'scenarios': 3, 'decision_nodes': 5, 'tactics': 7, 'qa_pairs': 8, 'rag_chunks': 1}
+13:52:42  INFO        [2/2] Processing  123550889__ch001__ck000 (1537 tokens, chapter: Висновки)
+13:52:42  INFO        -> [123550889__ch001__ck000] lang=uk tokens=1537 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+13:53:06  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+13:53:08  INFO        [123550889__ch001__ck000] 5 scenarios, 4 decisions, 5 tactics, 8 qa_pairs
+13:53:08  INFO      DB saved chunk [123550889__ch001__ck000]: scenarios=1 | decision_nodes=4 | tactics=5 | qa_pairs=8 | rag_chunks=1
+13:53:08  INFO        completed [123550889__ch001__ck000]: 5 scenarios, 4 decisions, 5 tactics, 8 qa_pairs [total=22] -> DB: {'scenarios': 1, 'decision_nodes': 4, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+13:53:08  INFO      Step 4/4  Finalising book in DB ...
+13:53:08  INFO      Built 16 new TrainingSamples
+13:53:08  INFO        Done: 16 TrainingSamples created
+13:53:08  INFO      
+============================================================
+13:53:08  INFO      Processing: 18-Hutsaliuk.pdf
+13:53:08  INFO      ============================================================
+13:53:08  INFO      Step 1/4  Extracting text and splitting into chunks …
+13:53:11  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+13:53:11  INFO        Found 2 chunks across 2 chapters
+13:53:11  INFO      Step 2/4  Saving chunk manifest …
+13:53:11  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\18-hutsaliuk\metadata.json
+13:53:11  INFO      Step 3/4  Running AI extraction …
+13:53:11  INFO        0 chunks already done, 2 remaining
+13:53:11  INFO        [1/2] Processing  18-hutsaliuk__ch000__ck000 (691 tokens, chapter: Список використаних джерел)
+13:53:11  INFO        -> [18-hutsaliuk__ch000__ck000] lang=uk tokens=691 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+13:53:36  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+13:53:38  INFO        [18-hutsaliuk__ch000__ck000] 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs
+13:53:38  INFO      DB saved chunk [18-hutsaliuk__ch000__ck000]: scenarios=3 | decision_nodes=5 | tactics=6 | qa_pairs=8 | rag_chunks=1
+13:53:38  INFO        completed [18-hutsaliuk__ch000__ck000]: 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs [total=24] -> DB: {'scenarios': 3, 'decision_nodes': 5, 'tactics': 6, 'qa_pairs': 8, 'rag_chunks': 1}
+13:53:38  INFO        [2/2] Processing  18-hutsaliuk__ch001__ck000 (1211 tokens, chapter: References)
+13:53:38  INFO        -> [18-hutsaliuk__ch001__ck000] lang=uk tokens=1211 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+13:54:05  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+13:54:07  INFO        [18-hutsaliuk__ch001__ck000] 5 scenarios, 5 decisions, 5 tactics, 8 qa_pairs
+13:54:08  INFO      DB saved chunk [18-hutsaliuk__ch001__ck000]: scenarios=4 | decision_nodes=5 | tactics=5 | qa_pairs=8 | rag_chunks=1
+13:54:08  INFO        completed [18-hutsaliuk__ch001__ck000]: 5 scenarios, 5 decisions, 5 tactics, 8 qa_pairs [total=23] -> DB: {'scenarios': 4, 'decision_nodes': 5, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+13:54:08  INFO      Step 4/4  Finalising book in DB ...
+13:54:08  INFO      Built 16 new TrainingSamples
+13:54:08  INFO        Done: 16 TrainingSamples created
+13:54:08  INFO      
+============================================================
+13:54:08  INFO      Processing: 332292-Ð¢ÐµÐºÑÑ ÑÑÐ°ÑÑÑ-771254-1-10-20250610.pdf
+13:54:08  INFO      ============================================================
+13:54:08  INFO      Step 1/4  Extracting text and splitting into chunks …
+13:54:13  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+13:54:13  INFO        Found 2 chunks across 1 chapters
+13:54:13  INFO      Step 2/4  Saving chunk manifest …
+13:54:13  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\332292-771254-1-10-20250610\metadata.json
+13:54:13  INFO      Step 3/4  Running AI extraction …
+13:54:13  INFO        0 chunks already done, 2 remaining
+13:54:13  INFO        [1/2] Processing  332292-771254-1-10-20250610__ch000__ck000 (4499 tokens, chapter: 332292-Ð¢ÐµÐºÑÑ ÑÑÐ°ÑÑÑ-771254-1-10-2025061)
+13:54:13  INFO        -> [332292-771254-1-10-20250610__ch000__ck000] lang=mixed tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+13:54:34  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+13:54:36  INFO        [332292-771254-1-10-20250610__ch000__ck000] 4 scenarios, 4 decisions, 5 tactics, 8 qa_pairs
+13:54:36  INFO      DB saved chunk [332292-771254-1-10-20250610__ch000__ck000]: scenarios=3 | decision_nodes=4 | tactics=5 | qa_pairs=8 | rag_chunks=1
+13:54:36  INFO        completed [332292-771254-1-10-20250610__ch000__ck000]: 4 scenarios, 4 decisions, 5 tactics, 8 qa_pairs [total=21] -> DB: {'scenarios': 3, 'decision_nodes': 4, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+13:54:36  INFO        [2/2] Processing  332292-771254-1-10-20250610__ch000__ck001 (1240 tokens, chapter: 332292-Ð¢ÐµÐºÑÑ ÑÑÐ°ÑÑÑ-771254-1-10-2025061)
+13:54:36  INFO        -> [332292-771254-1-10-20250610__ch000__ck001] lang=mixed tokens=1240 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+13:54:59  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+13:55:01  INFO        [332292-771254-1-10-20250610__ch000__ck001] 4 scenarios, 4 decisions, 5 tactics, 8 qa_pairs
+13:55:01  INFO      DB saved chunk [332292-771254-1-10-20250610__ch000__ck001]: decision_nodes=4 | tactics=5 | qa_pairs=8 | rag_chunks=1
+13:55:01  INFO        completed [332292-771254-1-10-20250610__ch000__ck001]: 4 scenarios, 4 decisions, 5 tactics, 8 qa_pairs [total=21] -> DB: {'scenarios': 0, 'decision_nodes': 4, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+13:55:01  INFO      Step 4/4  Finalising book in DB ...
+13:55:01  INFO      Built 16 new TrainingSamples
+13:55:01  INFO        Done: 16 TrainingSamples created
+13:55:01  INFO      
+============================================================
+13:55:01  INFO      Processing: 69.pdf
+13:55:01  INFO      ============================================================
+13:55:01  INFO      Step 1/4  Extracting text and splitting into chunks …
+13:55:05  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+13:55:05  INFO        Found 2 chunks across 1 chapters
+13:55:05  INFO      Step 2/4  Saving chunk manifest …
+13:55:05  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\69\metadata.json
+13:55:05  INFO      Step 3/4  Running AI extraction …
+13:55:05  INFO        0 chunks already done, 2 remaining
+13:55:05  INFO        [1/2] Processing  69__ch000__ck000 (4499 tokens, chapter: Аналіз останніх досліджень і публікацій.)
+13:55:05  INFO        -> [69__ch000__ck000] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+13:55:23  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+13:55:25  INFO        [69__ch000__ck000] 3 scenarios, 3 decisions, 4 tactics, 8 qa_pairs
+13:55:25  INFO      DB saved chunk [69__ch000__ck000]: scenarios=3 | decision_nodes=3 | tactics=4 | qa_pairs=8 | rag_chunks=1
+13:55:25  INFO        completed [69__ch000__ck000]: 3 scenarios, 3 decisions, 4 tactics, 8 qa_pairs [total=18] -> DB: {'scenarios': 3, 'decision_nodes': 3, 'tactics': 4, 'qa_pairs': 8, 'rag_chunks': 1}
+13:55:25  INFO        [2/2] Processing  69__ch000__ck001 (890 tokens, chapter: Аналіз останніх досліджень і публікацій.)
+13:55:25  INFO        -> [69__ch000__ck001] lang=uk tokens=890 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+13:55:43  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+13:55:45  INFO        [69__ch000__ck001] 3 scenarios, 3 decisions, 4 tactics, 7 qa_pairs
+13:55:45  INFO      DB saved chunk [69__ch000__ck001]: scenarios=2 | decision_nodes=3 | tactics=4 | qa_pairs=7 | rag_chunks=1
+13:55:45  INFO        completed [69__ch000__ck001]: 3 scenarios, 3 decisions, 4 tactics, 7 qa_pairs [total=17] -> DB: {'scenarios': 2, 'decision_nodes': 3, 'tactics': 4, 'qa_pairs': 7, 'rag_chunks': 1}
+13:55:45  INFO      Step 4/4  Finalising book in DB ...
+13:55:45  INFO      Built 15 new TrainingSamples
+13:55:45  INFO        Done: 15 TrainingSamples created
+13:55:45  INFO      
+============================================================
+13:55:45  INFO      Processing: =_UTF-8_B_0KDQvtC80LDQvdGW0LIg0JzQldCd0LctNDEucGRm_=.pdf
+13:55:45  INFO      ============================================================
+13:55:45  INFO      Step 1/4  Extracting text and splitting into chunks …
+13:55:53  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+13:55:53  INFO        Found 3 chunks across 1 chapters
+13:55:53  INFO      Step 2/4  Saving chunk manifest …
+13:55:53  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm\metadata.json
+13:55:53  INFO      Step 3/4  Running AI extraction …
+13:55:53  INFO        0 chunks already done, 3 remaining
+13:55:53  INFO        [1/3] Processing  utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm__ch000__ck000 (4499 tokens, chapter: Аналіз останніх досліджень)
+13:55:53  INFO        -> [utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm__ch000__ck000] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+13:56:21  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+13:56:23  INFO        [utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm__ch000__ck000] 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs
+13:56:23  INFO      DB saved chunk [utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm__ch000__ck000]: scenarios=3 | decision_nodes=5 | tactics=6 | qa_pairs=8 | rag_chunks=1
+13:56:23  INFO        completed [utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm__ch000__ck000]: 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs [total=24] -> DB: {'scenarios': 3, 'decision_nodes': 5, 'tactics': 6, 'qa_pairs': 8, 'rag_chunks': 1}
+13:56:23  INFO        [2/3] Processing  utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm__ch000__ck001 (4499 tokens, chapter: Аналіз останніх досліджень)
+13:56:23  INFO        -> [utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm__ch000__ck001] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+13:56:50  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+13:56:52  INFO        [utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm__ch000__ck001] 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs
+13:56:52  INFO      DB saved chunk [utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm__ch000__ck001]: scenarios=4 | decision_nodes=5 | tactics=6 | qa_pairs=8 | rag_chunks=1
+13:56:52  INFO        completed [utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm__ch000__ck001]: 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs [total=24] -> DB: {'scenarios': 4, 'decision_nodes': 5, 'tactics': 6, 'qa_pairs': 8, 'rag_chunks': 1}
+13:56:52  INFO        [3/3] Processing  utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm__ch000__ck002 (294 tokens, chapter: Аналіз останніх досліджень)
+13:56:52  INFO        -> [utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm__ch000__ck002] lang=uk tokens=294 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+13:56:53  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+13:56:53  WARNING   [mistral] Rate limit — waiting 30s
+13:57:24  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+13:57:26  INFO        [utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm__ch000__ck002] 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs
+13:57:26  INFO      DB saved chunk [utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm__ch000__ck002]: rag_chunks=1
+13:57:26  INFO        completed [utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm__ch000__ck002]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs [total=0] -> DB: {'scenarios': 0, 'decision_nodes': 0, 'tactics': 0, 'qa_pairs': 0, 'rag_chunks': 1}
+13:57:26  INFO      Step 4/4  Finalising book in DB ...
+13:57:26  INFO      Built 16 new TrainingSamples
+13:57:26  INFO        Done: 16 TrainingSamples created
+13:57:26  INFO      
+============================================================
+13:57:26  INFO      Processing: =_UTF-8_Q_132=5F=D0=A1=D1=82=D0=B0=D1=82=D1=82=D1=8F.pdf_=.pdf
+13:57:26  INFO      ============================================================
+13:57:26  INFO      Step 1/4  Extracting text and splitting into chunks …
+13:57:28  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+13:57:28  INFO        Found 2 chunks across 2 chapters
+13:57:28  INFO      Step 2/4  Saving chunk manifest …
+13:57:28  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\utf-8-q-132-5f-d0-a1-d1-82-d0-b0-d1-82-d1-82-d1-8f-pdf\metadata.json
+13:57:28  INFO      Step 3/4  Running AI extraction …
+13:57:28  INFO        0 chunks already done, 2 remaining
+13:57:28  INFO        [1/2] Processing  utf-8-q-132-5f-d0-a1-d1-82-d0-b0-d1-82-d1-82-d1-8f-pdf__ch000__ck000 (3210 tokens, chapter: РЕЗУЛЬТАТИ ДОСЛІДЖЕННЯ)
+13:57:28  INFO        -> [utf-8-q-132-5f-d0-a1-d1-82-d0-b0-d1-82-d1-82-d1-8f-pdf__ch000__ck000] lang=uk tokens=3210 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+13:57:59  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+13:58:01  INFO        [utf-8-q-132-5f-d0-a1-d1-82-d0-b0-d1-82-d1-82-d1-8f-pdf__ch000__ck000] 7 scenarios, 5 decisions, 6 tactics, 8 qa_pairs
+13:58:01  INFO      DB saved chunk [utf-8-q-132-5f-d0-a1-d1-82-d0-b0-d1-82-d1-82-d1-8f-pdf__ch000__ck000]: scenarios=2 | decision_nodes=5 | tactics=6 | qa_pairs=8 | rag_chunks=1
+13:58:01  INFO        completed [utf-8-q-132-5f-d0-a1-d1-82-d0-b0-d1-82-d1-82-d1-8f-pdf__ch000__ck000]: 7 scenarios, 5 decisions, 6 tactics, 8 qa_pairs [total=26] -> DB: {'scenarios': 2, 'decision_nodes': 5, 'tactics': 6, 'qa_pairs': 8, 'rag_chunks': 1}
+13:58:01  INFO        [2/2] Processing  utf-8-q-132-5f-d0-a1-d1-82-d0-b0-d1-82-d1-82-d1-8f-pdf__ch001__ck000 (749 tokens, chapter: ВИСНОВКИ)
+13:58:01  INFO        -> [utf-8-q-132-5f-d0-a1-d1-82-d0-b0-d1-82-d1-82-d1-8f-pdf__ch001__ck000] lang=uk tokens=749 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+13:58:26  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+13:58:28  INFO        [utf-8-q-132-5f-d0-a1-d1-82-d0-b0-d1-82-d1-82-d1-8f-pdf__ch001__ck000] 5 scenarios, 5 decisions, 5 tactics, 8 qa_pairs
+13:58:28  INFO      DB saved chunk [utf-8-q-132-5f-d0-a1-d1-82-d0-b0-d1-82-d1-82-d1-8f-pdf__ch001__ck000]: scenarios=1 | decision_nodes=5 | tactics=5 | qa_pairs=8 | rag_chunks=1
+13:58:28  INFO        completed [utf-8-q-132-5f-d0-a1-d1-82-d0-b0-d1-82-d1-82-d1-8f-pdf__ch001__ck000]: 5 scenarios, 5 decisions, 5 tactics, 8 qa_pairs [total=23] -> DB: {'scenarios': 1, 'decision_nodes': 5, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+13:58:28  INFO      Step 4/4  Finalising book in DB ...
+13:58:28  INFO      Built 16 new TrainingSamples
+13:58:28  INFO        Done: 16 TrainingSamples created
+13:58:28  INFO      
+============================================================
+13:58:28  INFO      Processing: CERC_CommunityEngagement.pdf
+13:58:28  INFO      ============================================================
+13:58:28  INFO      Step 1/4  Extracting text and splitting into chunks …
+13:58:30  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+13:58:30  INFO        Found 2 chunks across 2 chapters
+13:58:30  INFO      Step 2/4  Saving chunk manifest …
+13:58:30  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-communityengagement\metadata.json
+13:58:30  INFO      Step 3/4  Running AI extraction …
+13:58:30  INFO        2 chunks already done, 0 remaining
+13:58:30  INFO        [1/2] SKIP (cached)  cerc-communityengagement__ch000__ck000
+13:58:30  INFO        [2/2] SKIP (cached)  cerc-communityengagement__ch001__ck000
+13:58:30  INFO      Step 4/4  Finalising book in DB ...
+13:58:30  INFO      Built 0 new TrainingSamples
+13:58:30  INFO        Done: 0 TrainingSamples created
+13:58:30  INFO      
+============================================================
+13:58:30  INFO      Processing: CERC_Crisis_Communication_Plans.pdf
+13:58:30  INFO      ============================================================
+13:58:30  INFO      Step 1/4  Extracting text and splitting into chunks …
+13:58:41  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+13:58:41  INFO        Found 3 chunks across 2 chapters
+13:58:41  INFO      Step 2/4  Saving chunk manifest …
+13:58:41  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-crisis-communication-plans\metadata.json
+13:58:41  INFO      Step 3/4  Running AI extraction …
+13:58:41  INFO        3 chunks already done, 0 remaining
+13:58:41  INFO        [1/3] SKIP (cached)  cerc-crisis-communication-plans__ch000__ck000
+13:58:41  INFO        [2/3] SKIP (cached)  cerc-crisis-communication-plans__ch000__ck001
+13:58:41  INFO        [3/3] SKIP (cached)  cerc-crisis-communication-plans__ch001__ck000
+13:58:41  INFO      Step 4/4  Finalising book in DB ...
+13:58:41  INFO      Built 0 new TrainingSamples
+13:58:41  INFO        Done: 0 TrainingSamples created
+13:58:41  INFO      
+============================================================
+13:58:41  INFO      Processing: CERC_Introduction.pdf
+13:58:41  INFO      ============================================================
+13:58:41  INFO      Step 1/4  Extracting text and splitting into chunks …
+13:58:44  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+13:58:44  INFO        Found 1 chunks across 1 chapters
+13:58:44  INFO      Step 2/4  Saving chunk manifest …
+13:58:44  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-introduction\metadata.json
+13:58:44  INFO      Step 3/4  Running AI extraction …
+13:58:44  INFO        1 chunks already done, 0 remaining
+13:58:44  INFO        [1/1] SKIP (cached)  cerc-introduction__ch000__ck000
+13:58:44  INFO      Step 4/4  Finalising book in DB ...
+13:58:44  INFO      Built 0 new TrainingSamples
+13:58:44  INFO        Done: 0 TrainingSamples created
+13:58:44  INFO      
+============================================================
+13:58:44  INFO      Processing: CERC_Messages_and_Audiences.pdf
+13:58:44  INFO      ============================================================
+13:58:44  INFO      Step 1/4  Extracting text and splitting into chunks …
+13:58:46  INFO        Sections after merge: 2 (was 3, merged 1 tiny sections)
+13:58:46  INFO        Found 2 chunks across 2 chapters
+13:58:46  INFO      Step 2/4  Saving chunk manifest …
+13:58:46  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-messages-and-audiences\metadata.json
+13:58:46  INFO      Step 3/4  Running AI extraction …
+13:58:46  INFO        2 chunks already done, 0 remaining
+13:58:46  INFO        [1/2] SKIP (cached)  cerc-messages-and-audiences__ch000__ck000
+13:58:46  INFO        [2/2] SKIP (cached)  cerc-messages-and-audiences__ch001__ck000
+13:58:46  INFO      Step 4/4  Finalising book in DB ...
+13:58:46  INFO      Built 0 new TrainingSamples
+13:58:46  INFO        Done: 0 TrainingSamples created
+13:58:46  INFO      
+============================================================
+13:58:46  INFO      Processing: CERC_Psychology_of_a_Crisis.pdf
+13:58:46  INFO      ============================================================
+13:58:46  INFO      Step 1/4  Extracting text and splitting into chunks …
+13:58:48  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+13:58:48  INFO        Found 1 chunks across 1 chapters
+13:58:48  INFO      Step 2/4  Saving chunk manifest …
+13:58:49  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-psychology-of-a-crisis\metadata.json
+13:58:49  INFO      Step 3/4  Running AI extraction …
+13:58:49  INFO        1 chunks already done, 0 remaining
+13:58:49  INFO        [1/1] SKIP (cached)  cerc-psychology-of-a-crisis__ch000__ck000
+13:58:49  INFO      Step 4/4  Finalising book in DB ...
+13:58:49  INFO      Built 0 new TrainingSamples
+13:58:49  INFO        Done: 0 TrainingSamples created
+13:58:49  INFO      
+============================================================
+13:58:49  INFO      Processing: CERC_Spokesperson.pdf
+13:58:49  INFO      ============================================================
+13:58:49  INFO      Step 1/4  Extracting text and splitting into chunks …
+13:58:52  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+13:58:52  INFO        Found 2 chunks across 2 chapters
+13:58:52  INFO      Step 2/4  Saving chunk manifest …
+13:58:52  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-spokesperson\metadata.json
+13:58:52  INFO      Step 3/4  Running AI extraction …
+13:58:52  INFO        2 chunks already done, 0 remaining
+13:58:52  INFO        [1/2] SKIP (cached)  cerc-spokesperson__ch000__ck000
+13:58:52  INFO        [2/2] SKIP (cached)  cerc-spokesperson__ch001__ck000
+13:58:52  INFO      Step 4/4  Finalising book in DB ...
+13:58:52  INFO      Built 0 new TrainingSamples
+13:58:52  INFO        Done: 0 TrainingSamples created
+13:58:52  INFO      
+============================================================
+13:58:52  INFO      Processing: CERC_Working_with_the_Media.pdf
+13:58:52  INFO      ============================================================
+13:58:52  INFO      Step 1/4  Extracting text and splitting into chunks …
+13:58:59  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+13:58:59  INFO        Found 2 chunks across 2 chapters
+13:58:59  INFO      Step 2/4  Saving chunk manifest …
+13:58:59  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-working-with-the-media\metadata.json
+13:58:59  INFO      Step 3/4  Running AI extraction …
+13:58:59  INFO        2 chunks already done, 0 remaining
+13:58:59  INFO        [1/2] SKIP (cached)  cerc-working-with-the-media__ch000__ck000
+13:58:59  INFO        [2/2] SKIP (cached)  cerc-working-with-the-media__ch001__ck000
+13:58:59  INFO      Step 4/4  Finalising book in DB ...
+13:58:59  INFO      Built 0 new TrainingSamples
+13:58:59  INFO        Done: 0 TrainingSamples created
+13:58:59  INFO      
+============================================================
+13:58:59  INFO      Processing: Crisis_management_Planning_for_the_inevitable.pdf
+13:58:59  INFO      ============================================================
+13:58:59  INFO      Step 1/4  Extracting text and splitting into chunks …
+13:59:00  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+13:59:00  INFO        Found 1 chunks across 1 chapters
+13:59:00  INFO      Step 2/4  Saving chunk manifest …
+13:59:00  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\crisis-management-planning-for-the-inevitable\metadata.json
+13:59:00  INFO      Step 3/4  Running AI extraction …
+13:59:00  INFO        1 chunks already done, 0 remaining
+13:59:00  INFO        [1/1] SKIP (cached)  crisis-management-planning-for-the-inevitable__ch000__ck000
+13:59:00  INFO      Step 4/4  Finalising book in DB ...
+13:59:00  INFO      Built 0 new TrainingSamples
+13:59:00  INFO        Done: 0 TrainingSamples created
+13:59:00  INFO      
+============================================================
+13:59:00  INFO      Processing: j.isjmef.20250402.08.pdf
+13:59:00  INFO      ============================================================
+13:59:00  INFO      Step 1/4  Extracting text and splitting into chunks …
+13:59:03  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+13:59:03  INFO        Found 2 chunks across 1 chapters
+13:59:03  INFO      Step 2/4  Saving chunk manifest …
+13:59:03  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\j-isjmef-20250402-08\metadata.json
+13:59:03  INFO      Step 3/4  Running AI extraction …
+13:59:03  INFO        0 chunks already done, 2 remaining
+13:59:03  INFO        [1/2] Processing  j-isjmef-20250402-08__ch000__ck000 (4499 tokens, chapter: j.isjmef.20250402.08)
+13:59:03  INFO        -> [j-isjmef-20250402-08__ch000__ck000] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+13:59:33  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+13:59:35  INFO        [j-isjmef-20250402-08__ch000__ck000] 6 scenarios, 6 decisions, 7 tactics, 8 qa_pairs
+13:59:35  INFO      DB saved chunk [j-isjmef-20250402-08__ch000__ck000]: scenarios=4 | decision_nodes=6 | tactics=7 | qa_pairs=8 | rag_chunks=1
+13:59:35  INFO        completed [j-isjmef-20250402-08__ch000__ck000]: 6 scenarios, 6 decisions, 7 tactics, 8 qa_pairs [total=27] -> DB: {'scenarios': 4, 'decision_nodes': 6, 'tactics': 7, 'qa_pairs': 8, 'rag_chunks': 1}
+13:59:35  INFO        [2/2] Processing  j-isjmef-20250402-08__ch000__ck001 (1360 tokens, chapter: j.isjmef.20250402.08)
+13:59:35  INFO        -> [j-isjmef-20250402-08__ch000__ck001] lang=uk tokens=1360 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+13:59:53  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+13:59:55  INFO        [j-isjmef-20250402-08__ch000__ck001] 3 scenarios, 3 decisions, 5 tactics, 8 qa_pairs
+13:59:55  INFO      DB saved chunk [j-isjmef-20250402-08__ch000__ck001]: scenarios=1 | decision_nodes=3 | tactics=5 | qa_pairs=8 | rag_chunks=1
+13:59:55  INFO        completed [j-isjmef-20250402-08__ch000__ck001]: 3 scenarios, 3 decisions, 5 tactics, 8 qa_pairs [total=19] -> DB: {'scenarios': 1, 'decision_nodes': 3, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+13:59:55  INFO      Step 4/4  Finalising book in DB ...
+13:59:55  INFO      Built 16 new TrainingSamples
+13:59:55  INFO        Done: 16 TrainingSamples created
+13:59:55  INFO      
+============================================================
+13:59:55  INFO      Processing: Збірка_семінар_права-людини_2023.pdf
+13:59:55  INFO      ============================================================
+13:59:55  INFO      Step 1/4  Extracting text and splitting into chunks …
+14:00:31  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+14:00:31  INFO        Found 19 chunks across 2 chapters
+14:00:31  INFO      Step 2/4  Saving chunk manifest …
+14:00:31  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\zbirka-seminar-prava-liudyny-2023\metadata.json
+14:00:31  INFO      Step 3/4  Running AI extraction …
+14:00:31  INFO        19 chunks already done, 0 remaining
+14:00:31  INFO        [1/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck000
+14:00:31  INFO        [2/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck001
+14:00:31  INFO        [3/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck002
+14:00:31  INFO        [4/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck003
+14:00:31  INFO        [5/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck004
+14:00:31  INFO        [6/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck005
+14:00:31  INFO        [7/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck006
+14:00:31  INFO        [8/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck007
+14:00:31  INFO        [9/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck008
+14:00:31  INFO        [10/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck009
+14:00:31  INFO        [11/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck010
+14:00:31  INFO        [12/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck011
+14:00:31  INFO        [13/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck012
+14:00:31  INFO        [14/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck013
+14:00:31  INFO        [15/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck014
+14:00:31  INFO        [16/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck015
+14:00:31  INFO        [17/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck016
+14:00:31  INFO        [18/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch001__ck000
+14:00:31  INFO        [19/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch001__ck001
+14:00:31  INFO      Step 4/4  Finalising book in DB ...
+14:00:31  INFO      Built 0 new TrainingSamples
+14:00:31  INFO        Done: 0 TrainingSamples created
+14:00:31  INFO      
+============================================================
+14:00:31  INFO      Processing: Костирко_Кризові комунікації.pdf
+14:00:31  INFO      ============================================================
+14:00:31  INFO      Step 1/4  Extracting text and splitting into chunks …
+14:00:44  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+14:00:44  INFO        Found 6 chunks across 1 chapters
+14:00:44  INFO      Step 2/4  Saving chunk manifest …
+14:00:44  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\kostyrko-kryzovi-komunikatsii\metadata.json
+14:00:44  INFO      Step 3/4  Running AI extraction …
+14:00:44  INFO        0 chunks already done, 6 remaining
+14:00:44  INFO        [1/6] Processing  kostyrko-kryzovi-komunikatsii__ch000__ck000 (4499 tokens, chapter: Вступ)
+14:00:44  INFO        -> [kostyrko-kryzovi-komunikatsii__ch000__ck000] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+14:01:14  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+14:01:16  INFO        [kostyrko-kryzovi-komunikatsii__ch000__ck000] 7 scenarios, 7 decisions, 7 tactics, 8 qa_pairs
+14:01:16  INFO      DB saved chunk [kostyrko-kryzovi-komunikatsii__ch000__ck000]: scenarios=6 | decision_nodes=7 | tactics=7 | qa_pairs=8 | rag_chunks=1
+14:01:16  INFO        completed [kostyrko-kryzovi-komunikatsii__ch000__ck000]: 7 scenarios, 7 decisions, 7 tactics, 8 qa_pairs [total=29] -> DB: {'scenarios': 6, 'decision_nodes': 7, 'tactics': 7, 'qa_pairs': 8, 'rag_chunks': 1}
+14:01:16  INFO        [2/6] Processing  kostyrko-kryzovi-komunikatsii__ch000__ck001 (4499 tokens, chapter: Вступ)
+14:01:16  INFO        -> [kostyrko-kryzovi-komunikatsii__ch000__ck001] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+14:01:36  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+14:01:38  INFO        [kostyrko-kryzovi-komunikatsii__ch000__ck001] 4 scenarios, 4 decisions, 5 tactics, 8 qa_pairs
+14:01:38  INFO      DB saved chunk [kostyrko-kryzovi-komunikatsii__ch000__ck001]: scenarios=1 | decision_nodes=4 | tactics=5 | qa_pairs=8 | rag_chunks=1
+14:01:38  INFO        completed [kostyrko-kryzovi-komunikatsii__ch000__ck001]: 4 scenarios, 4 decisions, 5 tactics, 8 qa_pairs [total=21] -> DB: {'scenarios': 1, 'decision_nodes': 4, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+14:01:38  INFO        [3/6] Processing  kostyrko-kryzovi-komunikatsii__ch000__ck002 (4499 tokens, chapter: Вступ)
+14:01:38  INFO        -> [kostyrko-kryzovi-komunikatsii__ch000__ck002] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+14:02:08  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+14:02:10  INFO        [kostyrko-kryzovi-komunikatsii__ch000__ck002] 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs
+14:02:10  INFO      DB saved chunk [kostyrko-kryzovi-komunikatsii__ch000__ck002]: scenarios=1 | decision_nodes=5 | tactics=6 | qa_pairs=8 | rag_chunks=1
+14:02:10  INFO        completed [kostyrko-kryzovi-komunikatsii__ch000__ck002]: 5 scenarios, 5 decisions, 6 tactics, 8 qa_pairs [total=24] -> DB: {'scenarios': 1, 'decision_nodes': 5, 'tactics': 6, 'qa_pairs': 8, 'rag_chunks': 1}
+14:02:10  INFO        [4/6] Processing  kostyrko-kryzovi-komunikatsii__ch000__ck003 (4499 tokens, chapter: Вступ)
+14:02:10  INFO        -> [kostyrko-kryzovi-komunikatsii__ch000__ck003] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+14:02:10  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+14:02:10  WARNING   [mistral] Rate limit — waiting 30s
+14:03:08  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+14:03:10  INFO        [kostyrko-kryzovi-komunikatsii__ch000__ck003] 8 scenarios, 7 decisions, 7 tactics, 8 qa_pairs
+14:03:10  INFO      DB saved chunk [kostyrko-kryzovi-komunikatsii__ch000__ck003]: scenarios=8 | decision_nodes=7 | tactics=7 | qa_pairs=8 | rag_chunks=1
+14:03:10  INFO        completed [kostyrko-kryzovi-komunikatsii__ch000__ck003]: 8 scenarios, 7 decisions, 7 tactics, 8 qa_pairs [total=30] -> DB: {'scenarios': 8, 'decision_nodes': 7, 'tactics': 7, 'qa_pairs': 8, 'rag_chunks': 1}
+14:03:10  INFO        [5/6] Processing  kostyrko-kryzovi-komunikatsii__ch000__ck004 (4499 tokens, chapter: Вступ)
+14:03:10  INFO        -> [kostyrko-kryzovi-komunikatsii__ch000__ck004] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+14:03:36  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+14:03:38  INFO        [kostyrko-kryzovi-komunikatsii__ch000__ck004] 5 scenarios, 5 decisions, 7 tactics, 8 qa_pairs
+14:03:39  INFO      DB saved chunk [kostyrko-kryzovi-komunikatsii__ch000__ck004]: scenarios=3 | decision_nodes=5 | tactics=7 | qa_pairs=8 | rag_chunks=1
+14:03:39  INFO        completed [kostyrko-kryzovi-komunikatsii__ch000__ck004]: 5 scenarios, 5 decisions, 7 tactics, 8 qa_pairs [total=25] -> DB: {'scenarios': 3, 'decision_nodes': 5, 'tactics': 7, 'qa_pairs': 8, 'rag_chunks': 1}
+14:03:39  INFO        [6/6] Processing  kostyrko-kryzovi-komunikatsii__ch000__ck005 (3052 tokens, chapter: Вступ)
+14:03:39  INFO        -> [kostyrko-kryzovi-komunikatsii__ch000__ck005] lang=uk tokens=3052 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+14:04:00  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+14:04:02  INFO        [kostyrko-kryzovi-komunikatsii__ch000__ck005] 3 scenarios, 3 decisions, 5 tactics, 8 qa_pairs
+14:04:02  INFO      DB saved chunk [kostyrko-kryzovi-komunikatsii__ch000__ck005]: scenarios=2 | decision_nodes=3 | tactics=5 | qa_pairs=8 | rag_chunks=1
+14:04:02  INFO        completed [kostyrko-kryzovi-komunikatsii__ch000__ck005]: 3 scenarios, 3 decisions, 5 tactics, 8 qa_pairs [total=19] -> DB: {'scenarios': 2, 'decision_nodes': 3, 'tactics': 5, 'qa_pairs': 8, 'rag_chunks': 1}
+14:04:02  INFO      Step 4/4  Finalising book in DB ...
+14:04:02  INFO      Built 48 new TrainingSamples
+14:04:02  INFO        Done: 48 TrainingSamples created
