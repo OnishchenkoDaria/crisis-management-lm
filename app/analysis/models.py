@@ -69,7 +69,7 @@ class CaseAnalysis(Base):
             create_type=False
         )
     )
-    risk_score = Mapped[float]
+    risk_score: Mapped[float] = mapped_column(nullable=False, default=0.0)
     factors_json: Mapped[Dict[str, Any]] = mapped_column(
         JSONB, nullable=False, default=dict, server_default="{}"
     )
