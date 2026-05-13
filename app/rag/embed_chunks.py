@@ -24,6 +24,8 @@ from sqlalchemy import select, update
 from app.database import async_session_maker
 from app.ingest.models.rag_chunk_model import RagChunk
 from app.rag.embedding_provider import embed_texts, BATCH_SIZE, DIM
+import app.ingest.models.source_doc_model
+import app.ingest.models.rag_chunk_model
 
 logging.basicConfig(
     level=logging.INFO,
