@@ -11,7 +11,10 @@ from app.rag.rag_service import handle_query
 from app.rag.rag_chunk_dao import RagChunkDAO
 from app.rag.embed_chunks import embed_pending_chunks
 
-router = APIRouter()
+router = APIRouter(
+    prefix="/api/rag",
+    tags=["Rag agents cooperation calls"],
+)
 
 
 @router.post("/query", response_model=RagQueryResponse)
