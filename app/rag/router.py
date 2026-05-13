@@ -14,35 +14,53 @@ from app.rag.embed_chunks import embed_pending_chunks
 router = APIRouter()
 
 
-@router.post(
-    "/query",
-    response_model=RagQueryResponse,
-    summary="Crisis communications DSS query",
-    description=(
-        "Send a crisis situation description and receive structured "
-        "tactical guidance grounded in uploaded source documents."
-    ),
-)
-async def dss_query(req: RagQueryRequest) -> RagQueryResponse:
-    """
-    Main RAG endpoint.
+@router.post("/query", response_model=RagQueryResponse)
+async def dss_query(req: RagQueryRequest, case_id: int, workspace_id: int) -> RagQueryResponse:
+    response = await handle_query(req)
 
-    "query": "Journalists arrived at the facility. We have no confirmed data yet.",
-    "crisis_type": "media",
-    "phase": "acute"
+    # Persist the analysis
+    await _save_analysis(case_id, workspace_id, req, response)
+    return response
 
-    """
-    try:
-        return await handle_query(req)
-    except ValueError as e:
-        # Embedding dimension mismatch or missing model
-        raise HTTPException(status_code=500, detail=str(e))
-    except Exception as e:
-        raise HTTPException(
-            status_code=500,
-            detail=f"RAG pipeline error: {str(e)}"
-        )
+async def _save_analysis(case_id: int, workspace_id: int,
+                         req: RagQueryRequest, resp: RagQueryResponse):
+    from app.database import async_session_maker
+    from app.analysis.models import CaseAnalysis
 
+    async with async_session_maker() as session:
+        session.add(CaseAnalysis(
+            case_id             = case_id,
+            workspace_id        = workspace_id,
+            crisis_type         = resp.crisis_type or "reputational_crisis",
+            stage               = _map_phase(req.phase),
+            attribution         = "unknown",        # can be set by user later
+            evidence_confidence = _map_confidence(resp.confidence),
+            risk_score          = _calc_risk(resp),
+            factors_json        = {"recommended_actions": resp.recommended_actions,
+                                   "risks": resp.risks},
+            retrieved_refs_json = {"sources": [s.model_dump() for s in resp.sources]},
+        ))
+        await session.commit()
+
+def _map_phase(phase: str | None) -> str:
+    return {
+        "pre_crisis":   "signal_detection",
+        "acute":        "acute_crisis",
+        "containment":  "stabilization",
+        "recovery":     "recovery",
+        "post_crisis":  "post_crisis_learning",
+    }.get(phase or "", "acute_crisis")
+
+
+def _map_confidence(confidence: str) -> str:
+    return {"high": "high", "medium": "medium", "low": "low"}.get(confidence, "low")
+
+
+def _calc_risk(resp: RagQueryResponse) -> float:
+    """Simple risk score: 0.0–1.0 based on severity signals in response."""
+    base = {"high": 0.8, "medium": 0.5, "low": 0.3}.get(resp.confidence, 0.5)
+    risk_count = len(resp.risks)
+    return min(1.0, base + risk_count * 0.05)
 
 @router.get(
     "/embedding-status",
