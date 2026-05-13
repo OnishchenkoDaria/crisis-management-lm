@@ -27,9 +27,25 @@ MODEL      = os.getenv("EMBEDDING_MODEL", "nomic-ai/nomic-embed-text-v1.5:free")
 BATCH_SIZE = int(os.getenv("EMBEDDING_BATCH_SIZE", "32"))
 
 
-# ── OpenAI (text-embedding-3-small, 1536 dims) ───────────────────────────────
 async def _embed_openai(texts: list[str]) -> list[list[float]]:
-    api_key = os.getenv("OPENAI_API_KEY", "")
+    api_key = os.getenv("OPENROUTER_API_KEY", "")
+    model = os.getenv("OPENROUTER_EMBED_MODEL", "nomic-ai/nomic-embed-text-v1.5:free")
+
+    async with httpx.AsyncClient(timeout=60) as client:
+        resp = await client.post(
+            "https://openrouter.ai/api/v1/embeddings",
+            headers={"Authorization": f"Bearer {api_key}",
+                     "Content-Type": "application/json",
+                     "HTTP-Referer": "https://dss-crisis",
+                     "X-Title": "Crisis DSS"},
+            json={"model": model, "input": texts},
+            # removed "dimensions": 1536 for now
+        )
+        # Log the actual error body before raise_for_status
+        if resp.status_code != 200:
+            log.error("OpenRouter error %s: %s", resp.status_code, resp.text)
+        resp.raise_for_status()
+
     if not api_key or api_key == "lm-studio":
         raise EnvironmentError(
             "OPENAI_API_KEY not set or still set to lm-studio.\n"
