@@ -21,9 +21,9 @@ load_dotenv()
 
 log = logging.getLogger(__name__)
 
-BACKEND    = os.getenv("EMBEDDING_BACKEND", "openrouter").lower()
-DIM        = int(os.getenv("EMBEDDING_DIM", "1536"))
-MODEL      = os.getenv("EMBEDDING_MODEL", "nomic-ai/nomic-embed-text-v1.5:free")
+BACKEND = os.getenv("EMBEDDING_BACKEND", "gemini").lower()
+DIM = int(os.getenv("EMBEDDING_DIM", "768"))
+MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-005")
 BATCH_SIZE = int(os.getenv("EMBEDDING_BATCH_SIZE", "32"))
 
 
@@ -135,6 +135,29 @@ async def _embed_lmstudio(texts: list[str]) -> list[list[float]]:
     return vectors
 
 
+async def _embed_gemini(texts: list[str]) -> list[list[float]]:
+    """
+    Google Gemini text-embedding-004 — free, 768 dims.
+    Uses the same GEMINI_API_KEY already configured for PDF extraction.
+    """
+    from google import genai as _genai
+    from google.genai import types as _gt
+
+    api_key = os.getenv("GEMINI_API_KEY", "")
+    if not api_key:
+        raise EnvironmentError("GEMINI_API_KEY not set.")
+
+    gc = _genai.Client(api_key=api_key)
+    result = await gc.aio.models.embed_content(
+        model=MODEL,
+        contents=texts,
+        config=_gt.EmbedContentConfig(output_dimensionality=768),
+    )
+
+    vectors = [e.values for e in result.embeddings]
+    _validate_dim(vectors[0])
+    return vectors
+
 
 def _validate_dim(vector: list[float]) -> None:
     actual = len(vector)
@@ -159,7 +182,9 @@ async def embed_texts(texts: list[str]) -> list[list[float]]:
     for i in range(0, len(texts), BATCH_SIZE):
         batch = texts[i : i + BATCH_SIZE]
 
-        if BACKEND == "openai":
+        if BACKEND == "gemini":
+            vectors = await _embed_gemini(batch)
+        elif BACKEND == "openai":
             vectors = await _embed_openai(batch)
         elif BACKEND == "openrouter":
             vectors = await _embed_openrouter(batch)
