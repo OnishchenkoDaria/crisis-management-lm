@@ -152,11 +152,10 @@ async def _fetch_scenarios(
 
 async def _fetch_tactics(crisis_type: str | None, limit: int = 4) -> list[dict]:
     async with async_session_maker() as session:
-        q = select(Tactic)
+        q = select(Tactic).limit(limit)
         if crisis_type:
-            # JSONB array contains
+            # crisis_types is JSONB in tactics model — no cast needed there
             q = q.where(Tactic.crisis_types.contains([crisis_type]))
-        q = q.limit(limit)
         rows = (await session.execute(q)).scalars().all()
 
     return [
@@ -197,16 +196,15 @@ async def _fetch_decision_nodes(
         for r in rows
     ]
 
+from sqlalchemy import cast
+from sqlalchemy.dialects.postgresql import JSONB
 
 async def _fetch_qa_pairs(crisis_type: str | None, limit: int = 3) -> list[dict]:
     async with async_session_maker() as session:
-        q = select(QAPair)
+        q = select(QAPair).where(QAPair.difficulty == "basic").limit(limit)
         if crisis_type:
-            q = q.where(QAPair.scenario_tags.contains([crisis_type]))
-        q = q.where(QAPair.difficulty == "basic").limit(limit)
+            # Cast JSON -> JSONB for the @> contains operator
+            q = q.where(cast(QAPair.scenario_tags, JSONB).contains([crisis_type]))
         rows = (await session.execute(q)).scalars().all()
 
-    return [
-        {"question": r.question, "answer": r.answer}
-        for r in rows
-    ]
+    return [{"question": r.question, "answer": r.answer} for r in rows]

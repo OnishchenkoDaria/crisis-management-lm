@@ -17,12 +17,19 @@ router = APIRouter(
 )
 
 
-@router.post("/query", response_model=RagQueryResponse)
-async def dss_query(req: RagQueryRequest, case_id: int, workspace_id: int) -> RagQueryResponse:
-    response = await handle_query(req)
+@router.post("/query", response_model=RagQueryResponse, summary="Dss Query")
+async def dss_query(
+    req: RagQueryRequest,
+    background_tasks: BackgroundTasks,
+) -> RagQueryResponse:
+    try:
+        response = await handle_query(req)
+    except ValueError as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"RAG pipeline error: {e}")
 
-    # Persist the analysis
-    await _save_analysis(case_id, workspace_id, req, response)
+    background_tasks.add_task(_save_analysis, response, req, None, None)
     return response
 
 async def _save_analysis(case_id: int, workspace_id: int,
