@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-from sqlalchemy import ForeignKey, Enum
+from sqlalchemy import ForeignKey, Enum, Text
 from sqlalchemy.dialects.postgresql import JSONB
-from app.database import Base, int_pk, str_not_null
+from app.database import Base, int_pk, str_not_null, str_null_true
 from typing import Any, Dict, Optional
 
 # cases
@@ -17,9 +17,9 @@ class Case(Base):
     id: Mapped[int_pk]
     workspace_id: Mapped[int] = mapped_column(ForeignKey('workspaces.id'))
 
-    title: Mapped[str]
+    title: Mapped[str_null_true]
     description: Mapped[str_not_null]
-    source_text: Mapped[str] # user pastes source sample text
+    source_text: Mapped[str] = mapped_column(Text, nullable=False) # user pastes source sample text
 
     constraints: Mapped[Dict[str, Any]] = mapped_column(
         JSONB, nullable=False, default=dict, server_default="{}"
