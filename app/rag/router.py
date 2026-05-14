@@ -32,25 +32,38 @@ async def dss_query(
     background_tasks.add_task(_save_analysis, response, req, None, None)
     return response
 
+
+import logging
+log = logging.getLogger(__name__)
+
 async def _save_analysis(case_id: int, workspace_id: int,
                          req: RagQueryRequest, resp: RagQueryResponse):
+    if resp is None:
+        log.warning("_save_analysis called with None response — skipping")
+        return  # before opening a session
+
     from app.database import async_session_maker
     from app.analysis.models import CaseAnalysis
 
     async with async_session_maker() as session:
-        session.add(CaseAnalysis(
-            case_id             = case_id,
-            workspace_id        = workspace_id,
-            crisis_type         = resp.crisis_type or "reputational_crisis",
-            stage               = _map_phase(req.phase),
-            attribution         = "unknown",        # can be set by user later
-            evidence_confidence = _map_confidence(resp.confidence),
-            risk_score          = _calc_risk(resp),
-            factors_json        = {"recommended_actions": resp.recommended_actions,
-                                   "risks": resp.risks},
-            retrieved_refs_json = {"sources": [s.model_dump() for s in resp.sources]},
-        ))
-        await session.commit()
+        async with async_session_maker() as session:
+            try:
+                session.add(CaseAnalysis(
+                    case_id=case_id,
+                    workspace_id=workspace_id,
+                    crisis_type=resp.crisis_type or "reputational_crisis",
+                    stage=_map_phase(req.phase),
+                    attribution="unknown",
+                    evidence_confidence=_map_confidence(resp.confidence),
+                    risk_score=_calc_risk(resp),
+                    factors_json={"recommended_actions": resp.recommended_actions,
+                                  "risks": resp.risks},
+                    retrieved_refs_json={"sources": [s.model_dump() for s in resp.sources]},
+                ))
+                await session.commit()
+                log.info("CaseAnalysis saved (risk=%.2f)", _calc_risk(resp))
+            except Exception as e:
+                log.warning("CaseAnalysis save failed (non-fatal): %s", e)
 
 def _map_phase(phase: str | None) -> str:
     return {
