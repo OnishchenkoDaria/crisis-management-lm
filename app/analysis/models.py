@@ -17,8 +17,8 @@ class CaseAnalysis(Base):
     __tablename__ = 'case_analysis'
 
     id: Mapped[int_pk]
-    case_id: Mapped[int] = mapped_column(ForeignKey("cases.id"))
-    workspace_id: Mapped[int] = mapped_column(ForeignKey('workspaces.id'))
+    case_id: Mapped[int | None] = mapped_column(ForeignKey("cases.id"), nullable=True)
+    workspace_id: Mapped[int | None] = mapped_column(ForeignKey("workspaces.id"), nullable=True)
     crisis_type: Mapped[str] = mapped_column(
         Enum(
             'reputational_crisis',
