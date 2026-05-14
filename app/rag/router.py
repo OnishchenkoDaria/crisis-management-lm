@@ -32,6 +32,26 @@ async def dss_query(
     background_tasks.add_task(_save_analysis, response, req, None, None)
     return response
 
+_CRISIS_TYPE_MAP = {
+    "media":                      "information_disinformation_crisis",
+    "reputational":               "reputational_crisis",
+    "reputational_crisis":        "reputational_crisis",
+    "operational":                "operational_failure_crisis",
+    "operational_failure_crisis": "operational_failure_crisis",
+    "safety":                     "physical_or_cyber_security_crisis",
+    "political":                  "values_ethics_crisis",
+    "internal":                   "operational_failure_crisis",
+    "natural_disaster":           "physical_or_cyber_security_crisis",
+    "information_disinformation_crisis": "information_disinformation_crisis",
+    "values_ethics_crisis":       "values_ethics_crisis",
+    "leadership_personal_crisis": "leadership_personal_crisis",
+    "physical_or_cyber_security_crisis": "physical_or_cyber_security_crisis",
+}
+
+def _map_crisis_type(crisis_type: str | None) -> str:
+    if not crisis_type:
+        return "reputational_crisis"   # safe default
+    return _CRISIS_TYPE_MAP.get(crisis_type.lower(), "reputational_crisis")
 
 import logging
 log = logging.getLogger(__name__)
@@ -55,7 +75,7 @@ async def _save_analysis(resp: RagQueryResponse,
                 session.add(CaseAnalysis(
                     case_id=case_id,
                     workspace_id=workspace_id,
-                    crisis_type=resp.crisis_type or "reputational_crisis",
+                    crisis_type=_map_crisis_type(resp.crisis_type),
                     stage=_map_phase(req.phase),
                     attribution="unknown",
                     evidence_confidence=_map_confidence(resp.confidence),
