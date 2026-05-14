@@ -108,22 +108,16 @@ async def _embed_openrouter(texts: list[str]) -> list[list[float]]:
 
 
 async def _embed_lmstudio(texts: list[str]) -> list[list[float]]:
-    """
-    LM Studio with a 1536-dim embedding model.
-    Models available in LM Studio that output 1536 dims:
-      - nomic-ai/nomic-embed-text-v1.5-GGUF  (download from LM Studio catalog)
-      - intfloat/e5-large-v2-GGUF
-    Do NOT use all-MiniLM-L6-v2 (384 dims) — it won't match the schema.
-    """
     base_url = os.getenv("OPENAI_BASE_URL", "http://localhost:1234/v1").rstrip("/")
-    api_key  = os.getenv("OPENAI_API_KEY", "lm-studio")
+    api_key = os.getenv("OPENAI_API_KEY", "lm-studio")
+    model = os.getenv("LM_STUDIO_EMBED_MODEL", "all-mpnet-base-v2")
 
     async with httpx.AsyncClient(timeout=60) as client:
         resp = await client.post(
             f"{base_url}/embeddings",
             headers={"Authorization": f"Bearer {api_key}",
                      "Content-Type": "application/json"},
-            json={"model": MODEL, "input": texts},
+            json={"model": model, "input": texts},  # ← lowercase model, not MODEL
         )
         resp.raise_for_status()
         data = resp.json()
@@ -174,34 +168,57 @@ def _validate_dim(vector: list[float]) -> None:
         )
 
 
+_EXHAUSTED: set[str] = set()
+
+# Priority order — first available non-exhausted backend is used
+_BACKEND_CHAIN = [b.strip() for b in
+    os.getenv("EMBEDDING_BACKEND_CHAIN", "gemini,lmstudio").split(",")]
 
 async def embed_texts(texts: list[str]) -> list[list[float]]:
     """Embed a list of texts, batched to avoid request size limits."""
     if not texts:
         return []
 
+    available = [b for b in _BACKEND_CHAIN if b not in _EXHAUSTED]
+    if not available:
+        raise RuntimeError(
+            f"All embedding backends exhausted: {_EXHAUSTED}. "
+            "Restart the process to reset or add more backends."
+        )
+
     results: list[list[float]] = []
     for i in range(0, len(texts), BATCH_SIZE):
         batch = texts[i : i + BATCH_SIZE]
-
-        if BACKEND == "gemini":
-            vectors = await _embed_gemini(batch)
-        elif BACKEND == "openai":
-            vectors = await _embed_openai(batch)
-        elif BACKEND == "openrouter":
-            vectors = await _embed_openrouter(batch)
-        elif BACKEND == "lmstudio":
-            vectors = await _embed_lmstudio(batch)
-        else:
-            raise ValueError(
-                f"Unknown EMBEDDING_BACKEND='{BACKEND}'. "
-                "Choose: openai | openrouter | lmstudio"
-            )
-
+        vectors = await _call_with_fallback(batch)
         results.extend(vectors)
         log.debug("Embedded batch %d–%d", i, i + len(batch))
 
     return results
+
+async def _call_with_fallback(texts: list[str]) -> list[list[float]]:
+    for backend in [b for b in _BACKEND_CHAIN if b not in _EXHAUSTED]:
+        try:
+            if backend == "gemini":
+                return await _embed_gemini(texts)
+            elif backend == "lmstudio":
+                return await _embed_lmstudio(texts)
+            elif backend == "openrouter":
+                return await _embed_openrouter(texts)
+            elif backend == "openai":
+                return await _embed_openai(texts)
+        except Exception as e:
+            err = str(e).lower()
+            is_quota = any(x in err for x in
+                ("resource_exhausted", "quota", "429", "rate", "too many", "daily"))
+            if is_quota:
+                log.warning("[embed:%s] quota exhausted — switching to next backend", backend)
+                _EXHAUSTED.add(backend)
+                continue
+            # Non-quota error — log and re-raise
+            log.error("[embed:%s] error: %s", backend, e)
+            raise
+
+    raise RuntimeError("All embedding backends failed or exhausted.")
 
 
 async def embed_one(text: str) -> list[float]:
