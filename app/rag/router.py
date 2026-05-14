@@ -36,13 +36,17 @@ async def dss_query(
 import logging
 log = logging.getLogger(__name__)
 
-async def _save_analysis(case_id: int, workspace_id: int,
-                         req: RagQueryRequest, resp: RagQueryResponse):
+async def _save_analysis(resp: RagQueryResponse,
+                         req:  RagQueryRequest,
+                         case_id:      int | None,
+                         workspace_id: int | None):
     if resp is None:
         log.warning("_save_analysis called with None response — skipping")
         return  # before opening a session
 
     from app.database import async_session_maker
+    import app.workspaces.models
+    import app.cases.models
     from app.analysis.models import CaseAnalysis
 
     async with async_session_maker() as session:
