@@ -18,7 +18,7 @@ from app.database import DATABASE_URL, Base
 from app.users.models import User
 from app.workspaces.models import Workspace
 from app.cases.models import Case
-from app.analysis.models import CaseAnalysis
+from app.analysis.models import CaseAnalysis, Analysis
 from app.roadmaps.models import Roadmap
 from app.refresh.models import RefreshSession
 from app.ingest.models.scenario_model import Scenario
