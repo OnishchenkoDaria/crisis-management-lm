@@ -1,12 +1,11 @@
 """
-Unified embedding client — all backends output 1536-dim vectors
-to match the existing Vector(1536) schema. No migration needed.
+Unified embedding client — outputs 768-dim vectors (Vector(768) schema).
 
 Supported backends (EMBEDDING_BACKEND in .env):
-  openrouter  – nomic-embed-text-v1.5 with dimensions=1536 (free)
-  lmstudio    – requires a 1536-dim model loaded in LM Studio
-                (most sentence transformers are 384/768 — download
-                 "nomic-embed-text" or "e5-large-v2" for 1536 dims)
+  gemini     – gemini-embedding-001 or text-embedding-004 (FREE, recommended)
+               Uses same GEMINI_API_KEY already set for PDF extraction.
+  lmstudio   – all-mpnet-base-v2 loaded in LM Studio (768 dims, offline)
+  openrouter – fallback, nomic-embed-text-v1.5 (may have issues)
 """
 from __future__ import annotations
 
@@ -23,7 +22,7 @@ log = logging.getLogger(__name__)
 
 BACKEND = os.getenv("EMBEDDING_BACKEND", "gemini").lower()
 DIM = int(os.getenv("EMBEDDING_DIM", "768"))
-MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-005")
+MODEL = os.getenv("EMBEDDING_MODEL", "gemini-embedding-001")
 BATCH_SIZE = int(os.getenv("EMBEDDING_BATCH_SIZE", "32"))
 
 
@@ -147,14 +146,17 @@ async def _embed_gemini(texts: list[str]) -> list[list[float]]:
     if not api_key:
         raise EnvironmentError("GEMINI_API_KEY not set.")
 
-    gc = _genai.Client(api_key=api_key)
-    result = await gc.aio.models.embed_content(
-        model=MODEL,
+    # Strip "models/" prefix if present — SDK adds it automatically
+    model = MODEL.removeprefix("models/")
+
+    gc     = _genai.Client(api_key=api_key)
+    result = gc.models.embed_content(    # sync call — async method unreliable in v1
+        model=model,
         contents=texts,
-        config=_gt.EmbedContentConfig(output_dimensionality=768),
+        config=_gt.EmbedContentConfig(output_dimensionality=DIM),
     )
 
-    vectors = [e.values for e in result.embeddings]
+    vectors = [list(e.values) for e in result.embeddings]
     _validate_dim(vectors[0])
     return vectors
 
