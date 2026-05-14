@@ -1,3 +1,4 @@
+from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import Text, JSON
 from app.database import Base, int_pk, str_not_null, str_uniq, str_null_true
@@ -9,7 +10,7 @@ class QAPair(Base):
     question: Mapped[str] = mapped_column(Text, nullable=False)
     answer: Mapped[str] = mapped_column(Text, nullable=False)
     scenario_tags: Mapped[list[str]] = mapped_column(
-        JSON, nullable=False, default=list
+        JSONB, nullable=False, default=list
     )
     difficulty: Mapped[str_not_null]
     common_mistake: Mapped[str] = mapped_column(Text, nullable=False)

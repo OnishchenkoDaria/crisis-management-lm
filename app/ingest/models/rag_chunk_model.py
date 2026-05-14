@@ -42,7 +42,7 @@ class RagChunk(Base):
     # pgvector — 1536 dims (OpenAI text-embedding-3-small)
     # Falls back to JSONB if pgvector not installed yet
     if _PGVECTOR:
-        embedding: Mapped[list[float] | None] = mapped_column(Vector(1536), nullable=True)
+        embedding: Mapped[list[float] | None] = mapped_column(Vector(768), nullable=True)
     else:
         embedding: Mapped[list[float] | None] = mapped_column(JSONB, nullable=True)
 
