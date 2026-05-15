@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-from sqlalchemy import ForeignKey, Enum
+from sqlalchemy import ForeignKey, Enum, Boolean
 from sqlalchemy.dialects.postgresql import JSONB
 from app.database import Base, int_pk, str_not_null
 from typing import Any, Dict, Optional
@@ -85,3 +85,22 @@ class CaseAnalysis(Base):
 
     def __repr__(self):
         return str(self)
+
+
+class Analysis(Base):
+    id: Mapped[int_pk]
+    workspace_id: Mapped[int] = mapped_column(ForeignKey("workspaces.id"), nullable=False, index=True)
+    situation_input: Mapped[Dict[str, Any]] = mapped_column(JSONB, nullable=False)
+    detected_type: Mapped[str_not_null]
+    urgency: Mapped[str_not_null]
+    confidence: Mapped[str_not_null]
+    response_json: Mapped[Dict[str, Any]] = mapped_column(JSONB, nullable=False)
+    refinement_json: Mapped[Dict[str, Any] | None] = mapped_column(JSONB, nullable=True)
+    can_generate_roadmap: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
+    retrieved_chunk_ids: Mapped[list[str]] = mapped_column(JSONB, nullable=False, default=list)
+
+    def __str__(self):
+        return (f"Analysis(id={self.id}, "
+                f"type={self.detected_type}, "
+                f"confidence={self.confidence})"
+                )

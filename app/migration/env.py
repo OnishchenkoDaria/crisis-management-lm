@@ -18,7 +18,7 @@ from app.database import DATABASE_URL, Base
 from app.users.models import User
 from app.workspaces.models import Workspace
 from app.cases.models import Case
-from app.analysis.models import CaseAnalysis
+from app.analysis.models import CaseAnalysis, Analysis
 from app.roadmaps.models import Roadmap
 from app.refresh.models import RefreshSession
 from app.ingest.models.scenario_model import Scenario
@@ -28,6 +28,7 @@ from app.ingest.models.source_doc_model import SourceDocument
 from app.ingest.models.tactics import Tactic
 from app.ingest.models.decision_node_model import DecisionNode
 from app.ingest.models.training_sample_model import TrainingSample
+from app.chats.model import Chat
 # -----
 
 # this is the Alembic Config object, which provides
@@ -45,7 +46,8 @@ IGNORED_ENUMS = {
     "communications_crisis_evidence_confidence_enum",
     "communications_crisis_stage_enum",
     "communications_crisis_type_enum",
-    "status_enum"
+    "status_enum",
+    "chat_status_enum"
 }
 
 def ignore_enums(context, inspected_column, metadata_column, inspected_type, metadata_type):
