@@ -31,7 +31,7 @@ class RefreshSession(Base):
     def hash_token(raw_token: str) -> str:
         raw_token = str(raw_token.strip())
         if not raw_token:
-            return ValueError("Refresh token empty")
+            raise ValueError("Refresh token empty")
 
         pepper = os.getenv("REFRESH_TOKEN_PEPPER")
         if pepper:
@@ -65,7 +65,7 @@ class RefreshSession(Base):
 
         # if it already looks like a 64-char hex sha256 digest, assume it is hashed
         is_sha256_hex = len(v) == 64 and all(c in "0123456789abcdef" for c in v.lower())
-        return v if is_sha256_hex else self._hash_token(v)
+        return v if is_sha256_hex else self.hash_token(v)
 
     # present objects as string data
     def __str__(self):
