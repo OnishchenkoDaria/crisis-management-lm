@@ -13,7 +13,10 @@ from app.chats.schemas import ChatCreate, ChatRename, ChatResponse, WorkspaceLoc
 from app.users.models import User
 
 log = logging.getLogger(__name__)
-router = APIRouter(tags=["Chats"])
+router = APIRouter(
+    prefix="/api/chats",
+    tags=["Chats"]
+)
 
 
 async def verify_workspace_access(
