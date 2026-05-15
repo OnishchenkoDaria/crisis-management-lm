@@ -1,33 +1,34 @@
-from sqlalchemy.orm import Mapped, mapped_column, relationship
-from sqlalchemy import ForeignKey, Text
-from sqlalchemy.dialects.postgresql import JSONB
-from app.database import Base, int_pk, str_not_null
-from typing import Any, Dict, Optional
+from __future__ import annotations
+
+from sqlalchemy import ForeignKey, Integer, String
+from sqlalchemy.orm import Mapped, mapped_column
+
+from app.database import Base, int_pk, str_not_null, str_null_true
 
 
 class Workspace(Base):
     id: Mapped[int_pk]
-    owner_id: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable=False)
-
-    name: Mapped[str_not_null]
-    voice_profile: Mapped[Dict[str, Any]] = mapped_column(
-        JSONB,
-        nullable=False,
-        default=dict,  # python-side default
-        server_default="{}"  # db-side default
+    user_id: Mapped[int]  = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True
     )
+    name:    Mapped[str]  = mapped_column(String(200), nullable=False)
+    description: Mapped[str_null_true]
 
-    constraints: Mapped[Dict[str, Any]] = mapped_column(
-        JSONB, nullable=False, default=dict, server_default="{}"
-    )
-
-    channels: Mapped[Dict[str, Any]] = mapped_column(
-        JSONB, nullable=False, default=dict, server_default="{}"
+    # Workspace-level generation lock (managed by ChatDAO / lock.py)
+    generating_chat_id: Mapped[int | None] = mapped_column(
+        Integer, nullable=True, default=None
     )
 
     def __str__(self):
-        return (f"{self.__class__.__name__}(id={self.id}, "
-                f"voice_profile={self.voice_profile!r},")
+        return f"Workspace(id={self.id}, user={self.user_id}, name={self.name!r})"
 
     def __repr__(self):
         return str(self)
+
+    def to_dict(self):
+        return {
+            "id":          self.id,
+            "user_id":     self.user_id,
+            "name":        self.name,
+            "description": self.description,
+        }
