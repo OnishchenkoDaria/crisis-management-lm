@@ -17,7 +17,10 @@ from app.database import async_session_maker
 # TODO: from app.users.dependencies import get_current_user
 
 log = logging.getLogger(__name__)
-router = APIRouter(tags=["Crisis Analysis & Roadmap"])
+router = APIRouter(
+    prefix="/api/analysis",
+    tags=["Crisis Analysis & Roadmap"]
+)
 
 
 async def verify_workspace(workspace_id: int) -> int:
