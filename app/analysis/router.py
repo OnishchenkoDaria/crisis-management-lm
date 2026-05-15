@@ -14,7 +14,9 @@ from app.analysis.models import Analysis
 from app.roadmaps.models import Roadmap
 from app.database import async_session_maker
 
-# TODO: from app.users.dependencies import get_current_user
+from app.auth.utils import get_current_user
+from app.users.models import User
+from app.workspaces.dao import WorkspaceDAO
 
 log = logging.getLogger(__name__)
 router = APIRouter(
@@ -23,12 +25,16 @@ router = APIRouter(
 )
 
 
-async def verify_workspace(workspace_id: int) -> int:
-    # TODO: replace with proper auth
-    # user = get_current_user(...)
-    # workspace = await WorkspaceDAO.find_one_or_none(id=workspace_id, user_id=user.id)
-    # if not workspace:
-    #     raise HTTPException(403, "Access denied")
+async def verify_workspace_access(
+    workspace_id: int,
+    current_user: User = Depends(get_current_user),
+) -> int:
+    workspace = await WorkspaceDAO.find_one_or_none_by_filter(
+        id=workspace_id,
+        user_id=current_user.id,
+    )
+    if not workspace:
+        raise HTTPException(status_code=403, detail="Access denied to this workspace")
     return workspace_id
 
 
