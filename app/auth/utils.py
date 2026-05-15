@@ -10,9 +10,6 @@ from app.users.models import User
 
 _bearer = HTTPBearer(auto_error=False)
 
-REFRESH_TOKEN_DAYS = 30
-
-
 
 async def get_current_user(
         credentials: HTTPAuthorizationCredentials | None = Depends(_bearer),
