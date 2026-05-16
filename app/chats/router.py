@@ -11,6 +11,8 @@ from app.workspaces.dao import WorkspaceDAO
 from app.chats.model import Chat
 from app.chats.schemas import ChatCreate, ChatRename, ChatResponse, WorkspaceLockStatus
 from app.users.models import User
+from app.analysis.analysis_service import create_analysis
+from app.analysis.schemas import SituationInput
 
 log = logging.getLogger(__name__)
 router = APIRouter(
@@ -166,9 +168,6 @@ async def workspace_lock_status(
 ) -> WorkspaceLockStatus:
     lock = await WorkspaceDAO.get_lock_status(workspace_id)
     return WorkspaceLockStatus(**lock)
-
-from app.analysis.analysis_service import create_analysis
-from app.analysis.schemas import SituationInput
 
 @router.post("/workspaces/{workspace_id}/chats/{chat_id}/send", summary="Send message")
 async def send_message(
