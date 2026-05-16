@@ -18,6 +18,7 @@ def check_connection():
 
 app.include_router(auth_router)
 app.include_router(user_router)
+# each chat is associated with a workspace
 app.include_router(chat_router)
 app.include_router(ingest_router)
 app.include_router(rag_router)

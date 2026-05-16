@@ -14,7 +14,7 @@ from app.users.models import User
 
 log = logging.getLogger(__name__)
 router = APIRouter(
-    prefix="/api/chats",
+    prefix="/api",
     tags=["Chats"]
 )
 
