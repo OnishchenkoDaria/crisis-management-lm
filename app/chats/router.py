@@ -7,7 +7,7 @@ from fastapi import APIRouter, Depends, HTTPException, status
 
 from app.analysis.analysis_service import create_analysis
 from app.analysis.schemas import SituationInput, AnalysisResponse
-from app.auth.utils import get_current_user
+from app.auth.utils import get_current_user, require_chat_owner
 from app.chats.dao import ChatDAO
 from app.chats.model import Chat
 from app.chats.schemas import ChatCreate, ChatRename, ChatResponse, WorkspaceLockStatus
@@ -165,6 +165,7 @@ async def send_message(
     chat_id: int,
     body: SituationInput,
     _: int = Depends(verify_workspace_access),
+    __: User = Depends(require_chat_owner),
 ) -> AnalysisResponse:
     chat = await _get_chat_or_404(chat_id, workspace_id)
     if chat.status == "finished":
