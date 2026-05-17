@@ -7,10 +7,12 @@ from fastapi import APIRouter, HTTPException, UploadFile, BackgroundTasks
 import logging
 from concurrent.futures import ThreadPoolExecutor
 
-from fastapi.params import File
+from fastapi.params import File, Depends
 from starlette.responses import FileResponse
 
+from app.auth.utils import require_admin
 from app.ingest.ingest_router_schemas import JobStatus, StatsResponse
+from app.users.models import User
 
 log = logging.getLogger(__name__)
 
@@ -92,6 +94,7 @@ def _run_pipeline(job_id: str, pdf_path: Path) -> None:
 async def upload_pdf(
         background_tasks: BackgroundTasks,
         file: UploadFile = File(...),
+        _: User = Depends(require_admin)
 ):
     """Upload a PDF book and queue it for AI extraction."""
     if not file.filename.endswith(".pdf"):
@@ -190,7 +193,7 @@ async def dataset_stats():
 
 
 @router.post("/build-training")
-async def build_training(background_tasks: BackgroundTasks):
+async def build_training(background_tasks: BackgroundTasks, _: User = Depends(require_admin)):
     """Rebuild the fine-tuning JSONL from all processed qa_pairs."""
     from pipeline.storage import build_training_jsonl, DATA_DIR
     try:
