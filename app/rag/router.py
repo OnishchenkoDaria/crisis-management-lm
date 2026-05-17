@@ -4,7 +4,7 @@ import logging
 
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException
 
-from app.auth.utils import get_current_user
+from app.auth.utils import get_current_user, require_admin
 from app.rag.embed_chunks import embed_pending_chunks
 from app.rag.rag_chunk_dao import RagChunkDAO
 from app.rag.rag_service import handle_query
@@ -138,7 +138,7 @@ async def embedding_status(
 @router.post("/embed", summary="Trigger embedding for pending chunks")
 async def trigger_embedding(
     background_tasks: BackgroundTasks,
-    _: User = Depends(get_current_user),
+    _: User = Depends(require_admin),
     limit: int | None = None,
 ) -> dict:
     background_tasks.add_task(embed_pending_chunks, limit)
