@@ -47,7 +47,8 @@ IGNORED_ENUMS = {
     "communications_crisis_stage_enum",
     "communications_crisis_type_enum",
     "status_enum",
-    "chat_status_enum"
+    "chat_status_enum",
+    "user_role_enum"
 }
 
 def ignore_enums(context, inspected_column, metadata_column, inspected_type, metadata_type):

@@ -23,6 +23,7 @@ async def register(data: SchemaUserAdd) -> SchemaUser:
         name = data.name,
         email = data.email,
         hashed_password = hash_password(data.password),
+        role = data.role
     )
     return SchemaUser.model_validate(user)
 

@@ -1,12 +1,16 @@
 from sqlalchemy.orm import Mapped, mapped_column
-from sqlalchemy import Text
+from sqlalchemy import Text, Enum
 from app.database import Base, str_uniq, int_pk, str_not_null
 
 class User(Base):
     id: Mapped[int_pk]
     name: Mapped[str_not_null]
     email: Mapped[str_uniq]
-    hashed_password: Mapped[str] = mapped_column(Text, nullable=False)
+    role: Mapped[str] = mapped_column(
+        Enum('admin', 'chat-owner', 'reader', name='user_role_enum', create_type=False),
+        nullable=False
+    )
+    hashed_password: Mapped[str_not_null]
 
     # present objects as string data
     def __str__(self):
