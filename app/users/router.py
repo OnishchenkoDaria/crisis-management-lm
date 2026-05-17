@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from fastapi import APIRouter, Depends, HTTPException
 
-from app.auth.utils import get_current_user
+from app.auth.utils import get_current_user, require_admin
 from app.utils.auth import hash_password
 from app.users.dao import UserDAO
 from app.users.models import User
@@ -15,7 +15,7 @@ router = APIRouter(prefix="/api/users", tags=["Users"])
 @router.get("/", summary="List users — admin only")
 async def get_users(
         request_body: RBUser = Depends(),
-        _: User = Depends(get_current_user),  # must be logged in
+        _: User = Depends(require_admin),  # must be logged in
 ) -> list[SchemaUser]:
     rows = await UserDAO.find_all(**request_body.to_dict())
     return [SchemaUser.model_validate(r) for r in rows]
@@ -72,7 +72,7 @@ async def update_password(
 @router.delete("/delete/{user_id}", summary="Delete user")
 async def delete_user(
         user_id: int,
-        current_user: User = Depends(get_current_user),
+        current_user: User = Depends(require_admin),
 ) -> dict:
     # Users can only delete their own account
     if current_user.id != user_id:
