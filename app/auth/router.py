@@ -28,19 +28,34 @@ async def register(data: SchemaUserAdd) -> SchemaUser:
     return SchemaUser.model_validate(user)
 
 
-@router.post("/login", response_model=SchemaTokenPair)
-async def login(data: SchemaLogin, request: Request) -> SchemaTokenPair:
+async def login(data: SchemaLogin, request: Request, response: Response):
     user = await UserDAO.find_one_or_none_by_filter(email=data.email)
     if not user or not verify_password(data.password, user.hashed_password):
         raise HTTPException(401, "Invalid email or password")
 
-    access_token           = create_access_token({"sub": str(user.id)})
-    raw_refresh, _session  = await RefreshSessionDAO.create(user.id, request)
+    access_token          = create_access_token({"sub": str(user.id)})
+    raw_refresh, _session = await RefreshSessionDAO.create(user.id, request)
 
-    return SchemaTokenPair(
-        access_token  = access_token,
-        refresh_token = raw_refresh,
+    # Set both tokens as httpOnly cookies — JS cannot read these
+    response.set_cookie(
+        key="access_token",
+        value=access_token,
+        httponly=True,
+        secure=False,
+        samesite="lax",
+        max_age=60 * 15,   # 15 minutes
+        path="/",
     )
+    response.set_cookie(
+        key="refresh_token",
+        value=raw_refresh,
+        httponly=True,
+        secure=True,
+        samesite="lax",
+        max_age=60 * 60 * 24 * 30,  # 30 days
+        path="/api/auth/refresh",   # scope to refresh endpoint only
+    )
+    return {"ok": True}
 
 
 @router.post("/refresh", response_model=SchemaTokenPair)
