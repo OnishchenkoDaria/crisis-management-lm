@@ -5,45 +5,37 @@ from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from sqlalchemy import select
 
 from app.database import async_session_maker
+from app.users.dao import UserDAO
 from app.utils.auth import decode_access_token
 from app.users.models import User
 
+from fastapi import Request, HTTPException
+from jose import jwt, JWTError
+
 _bearer = HTTPBearer(auto_error=False)
 
+import os
+from dotenv import load_dotenv
 
-async def get_current_user(
-        credentials: HTTPAuthorizationCredentials | None = Depends(_bearer),
-) -> User:
-    # Decodes the Bearer JWT and returns the authenticated User.
-    #Raises HTTP 401 if token is missing, invalid, or expired.
-    if credentials is None:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Not authenticated",
-            headers={"WWW-Authenticate": "Bearer"},
-        )
+load_dotenv()
+
+
+async def get_current_user(request: Request) -> User:
+    token = request.cookies.get("access_token")
+    if not token:
+        raise HTTPException(401, "Not authenticated")
 
     try:
-        payload = decode_access_token(credentials.credentials)
-    except Exception:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid or expired token",
-            headers={"WWW-Authenticate": "Bearer"},
-        )
+        payload = jwt.decode(token, os.getenv("SECRET_KEY"), algorithms=[os.getenv("ALGORITHM")])
+        user_id = payload.get("sub")
+        if not user_id:
+            raise HTTPException(401, "Invalid token")
+    except JWTError:
+        raise HTTPException(401, "Invalid token")
 
-    user_id = payload.get("sub")
-    if not user_id:
-        raise HTTPException(status_code=401, detail="Token missing subject")
-
-    async with async_session_maker() as session:
-        user = (await session.execute(
-            select(User).where(User.id == int(user_id))
-        )).scalar_one_or_none()
-
+    user = await UserDAO.find_one_or_none_by_filter(id=int(user_id))
     if not user:
-        raise HTTPException(status_code=401, detail="User not found")
-
+        raise HTTPException(401, "User not found")
     return user
 
 async def require_admin(current_user: User = Depends(get_current_user)) -> User:
