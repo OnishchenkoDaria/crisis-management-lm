@@ -16,17 +16,27 @@ router = APIRouter(prefix="/api/auth", tags=["Auth"])
 
 
 @router.post("/register", response_model=SchemaUser, status_code=status.HTTP_201_CREATED)
-async def register(data: SchemaUserAdd) -> SchemaUser:
+async def register(data: SchemaUserAdd, request: Request, response: Response) -> SchemaUser:
     existing = await UserDAO.find_one_or_none_by_filter(email=data.email)
     if existing:
         raise HTTPException(400, "Email already registered")
 
     user = await UserDAO.add(
-        name = data.name,
-        email = data.email,
-        hashed_password = hash_password(data.password),
-        role = data.role
+        name=data.name,
+        email=data.email,
+        hashed_password=hash_password(data.password),
+        role="chat_owner",
     )
+
+    access_token          = create_access_token({"sub": str(user.id)})
+    raw_refresh, _session = await RefreshSessionDAO.create(user.id, request)
+
+    response.set_cookie("access_token",  access_token, httponly=True,
+                        secure=True, samesite="lax", max_age=60*15)
+    response.set_cookie("refresh_token", raw_refresh,  httponly=True,
+                        secure=True, samesite="lax", max_age=60*60*24*30,
+                        path="/api/auth/refresh")
+
     return SchemaUser.model_validate(user)
 
 
