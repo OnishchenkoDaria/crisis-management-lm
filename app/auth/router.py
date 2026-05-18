@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 from fastapi import APIRouter, Depends, HTTPException, Request, status
+from fastapi import APIRouter, Request, Response, Depends, HTTPException, status
+from fastapi.responses import JSONResponse
 
 from app.auth.utils import get_current_user
 from app.refresh.dao import RefreshSessionDAO
@@ -58,24 +60,51 @@ async def login(data: SchemaLogin, request: Request, response: Response):
     return {"ok": True}
 
 
-@router.post("/refresh", response_model=SchemaTokenPair)
-async def refresh(data: SchemaRefreshRequest, request: Request) -> SchemaTokenPair:
-    result = await RefreshSessionDAO.rotate(data.refresh_token, request)
+@router.post("/refresh")
+async def refresh(request: Request, response: Response):
+    refresh_token = request.cookies.get("refresh_token")
+    if not refresh_token:
+        raise HTTPException(401, "No refresh token")
+
+    result = await RefreshSessionDAO.rotate(refresh_token, request)
     if not result:
         raise HTTPException(401, "Refresh token invalid or expired")
 
     raw_refresh, session = result
     access_token = create_access_token({"sub": str(session.user_id)})
 
-    return SchemaTokenPair(
-        access_token  = access_token,
-        refresh_token = raw_refresh,
+    # Rotate both cookies
+    response.set_cookie(
+        key="access_token",
+        value=access_token,
+        httponly=True,
+        secure=True,
+        samesite="lax",
+        max_age=60 * 15,
+        path="/",
     )
+    response.set_cookie(
+        key="refresh_token",
+        value=raw_refresh,
+        httponly=True,
+        secure=True,
+        samesite="lax",
+        max_age=60 * 60 * 24 * 30,
+        path="/api/auth/refresh",
+    )
+
+    return {"ok": True}
 
 
 @router.post("/logout", status_code=status.HTTP_204_NO_CONTENT)
-async def logout(data: SchemaRefreshRequest) -> None:
-    await RefreshSessionDAO.revoke(data.refresh_token)
+async def logout(request: Request, response: Response):
+    refresh_token = request.cookies.get("refresh_token")
+    if refresh_token:
+        await RefreshSessionDAO.revoke(refresh_token)
+
+    # Delete cookies by setting max_age=0
+    response.delete_cookie("access_token", path="/")
+    response.delete_cookie("refresh_token", path="/api/auth/refresh")
 
 
 @router.get("/me", response_model=SchemaUser)
