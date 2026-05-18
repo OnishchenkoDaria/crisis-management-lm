@@ -28,7 +28,7 @@ async def register(data: SchemaUserAdd, request: Request, response: Response) ->
         role="chat_owner",
     )
 
-    access_token          = create_access_token({"sub": str(user.id)})
+    access_token = create_access_token({"sub": str(user.id)})
     raw_refresh, _session = await RefreshSessionDAO.create(user.id, request)
 
     response.set_cookie("access_token",  access_token, httponly=True,
@@ -40,80 +40,51 @@ async def register(data: SchemaUserAdd, request: Request, response: Response) ->
     return SchemaUser.model_validate(user)
 
 
+@router.post("/login")
 async def login(data: SchemaLogin, request: Request, response: Response):
     user = await UserDAO.find_one_or_none_by_filter(email=data.email)
     if not user or not verify_password(data.password, user.hashed_password):
         raise HTTPException(401, "Invalid email or password")
 
-    access_token          = create_access_token({"sub": str(user.id)})
+    access_token = create_access_token({"sub": str(user.id)})
     raw_refresh, _session = await RefreshSessionDAO.create(user.id, request)
 
-    # Set both tokens as httpOnly cookies — JS cannot read these
-    response.set_cookie(
-        key="access_token",
-        value=access_token,
-        httponly=True,
-        secure=False,
-        samesite="lax",
-        max_age=60 * 15,   # 15 minutes
-        path="/",
-    )
-    response.set_cookie(
-        key="refresh_token",
-        value=raw_refresh,
-        httponly=True,
-        secure=True,
-        samesite="lax",
-        max_age=60 * 60 * 24 * 30,  # 30 days
-        path="/api/auth/refresh",   # scope to refresh endpoint only
-    )
+    response.set_cookie("access_token", access_token, httponly=True,
+                        secure=True, samesite="lax", max_age=60*15)
+    response.set_cookie("refresh_token", raw_refresh,  httponly=True,
+                        secure=True, samesite="lax", max_age=60*60*24*30,
+                        path="/api/auth/refresh")
     return {"ok": True}
 
 
 @router.post("/refresh")
 async def refresh(request: Request, response: Response):
-    refresh_token = request.cookies.get("refresh_token")
-    if not refresh_token:
+    raw_refresh = request.cookies.get("refresh_token")
+    if not raw_refresh:
         raise HTTPException(401, "No refresh token")
 
-    result = await RefreshSessionDAO.rotate(refresh_token, request)
+    result = await RefreshSessionDAO.rotate(raw_refresh, request)
     if not result:
         raise HTTPException(401, "Refresh token invalid or expired")
 
-    raw_refresh, session = result
+    new_raw_refresh, session = result
     access_token = create_access_token({"sub": str(session.user_id)})
 
-    # Rotate both cookies
-    response.set_cookie(
-        key="access_token",
-        value=access_token,
-        httponly=True,
-        secure=True,
-        samesite="lax",
-        max_age=60 * 15,
-        path="/",
-    )
-    response.set_cookie(
-        key="refresh_token",
-        value=raw_refresh,
-        httponly=True,
-        secure=True,
-        samesite="lax",
-        max_age=60 * 60 * 24 * 30,
-        path="/api/auth/refresh",
-    )
-
+    response.set_cookie("access_token", access_token, httponly=True,
+                        secure=True, samesite="lax", max_age=60*15)
+    response.set_cookie("refresh_token", new_raw_refresh,  httponly=True,
+                        secure=True, samesite="lax", max_age=60*60*24*30,
+                        path="/api/auth/refresh")
     return {"ok": True}
 
 
 @router.post("/logout", status_code=status.HTTP_204_NO_CONTENT)
 async def logout(request: Request, response: Response):
-    refresh_token = request.cookies.get("refresh_token")
-    if refresh_token:
-        await RefreshSessionDAO.revoke(refresh_token)
+    raw_refresh = request.cookies.get("refresh_token")
+    if raw_refresh:
+        await RefreshSessionDAO.revoke(raw_refresh)
 
-    # Delete cookies by setting max_age=0
-    response.delete_cookie("access_token", path="/")
+    response.delete_cookie("access_token",  path="/")
     response.delete_cookie("refresh_token", path="/api/auth/refresh")
 
 
