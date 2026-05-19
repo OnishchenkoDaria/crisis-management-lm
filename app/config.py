@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv
+from pydantic import Field
 
 load_dotenv()
 
@@ -14,11 +15,12 @@ class Settings(BaseSettings):
     DB_HOST: str
     DB_PORT: int
     DB_NAME: str
-    DB_USER: str
-    DB_PASSWORD: str
+    DB_USER: str = Field(alias="POSTGRESQL_USER")
+    DB_PASSWORD: str = Field(alias="POSTGRESQL_PASSWORD")
     model_config = SettingsConfigDict(
         env_file=os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".env"),
         extra="ignore",
+        populate_by_name=True,
     )
 
 

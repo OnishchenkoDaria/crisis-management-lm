@@ -23,7 +23,7 @@ async def get_current_user(request: Request) -> User:
         raise HTTPException(401, "Not authenticated")
 
     try:
-        payload = decode_access_token(token)    # ← PyJWT, handles iss/aud/exp
+        payload = decode_access_token(token)
         user_id = payload.get("sub")
         if not user_id:
             raise HTTPException(401, "Invalid token")
