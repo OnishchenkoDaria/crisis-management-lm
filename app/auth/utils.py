@@ -9,15 +9,12 @@ from app.users.dao import UserDAO
 from app.utils.auth import decode_access_token
 from app.users.models import User
 
-from fastapi import Request, HTTPException
+from fastapi import Request, HTTPException, Depends
 from jose import jwt, JWTError
 
 _bearer = HTTPBearer(auto_error=False)
 
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
+from app.config import SECRET_KEY, ALGORITHM
 
 
 async def get_current_user(request: Request) -> User:
@@ -26,11 +23,11 @@ async def get_current_user(request: Request) -> User:
         raise HTTPException(401, "Not authenticated")
 
     try:
-        payload = jwt.decode(token, os.getenv("SECRET_KEY"), algorithms=[os.getenv("ALGORITHM")])
+        payload = decode_access_token(token)    # ← PyJWT, handles iss/aud/exp
         user_id = payload.get("sub")
         if not user_id:
             raise HTTPException(401, "Invalid token")
-    except JWTError:
+    except (jwt.InvalidTokenError, ValueError):
         raise HTTPException(401, "Invalid token")
 
     user = await UserDAO.find_one_or_none_by_filter(id=int(user_id))
@@ -43,8 +40,7 @@ async def require_admin(current_user: User = Depends(get_current_user)) -> User:
         raise HTTPException(403, "Admin access required")
     return current_user
 
-
 async def require_chat_owner(current_user: User = Depends(get_current_user)) -> User:
-    if current_user.role not in ("admin", "chat-owner"):
+    if current_user.role not in ("admin", "chat_owner"):
         raise HTTPException(403, "Chat owner access required")
     return current_user
