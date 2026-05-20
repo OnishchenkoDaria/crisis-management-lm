@@ -15,6 +15,10 @@ class Chat(Base):
         nullable=False,
         index=True
     )
+    user_id: Mapped[int] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"),
+        nullable=False, index=True
+    )
     title: Mapped[str] = mapped_column(String(200), nullable=False, default="New Chat")
     status: Mapped[str] = mapped_column(
         Enum('empty', 'in_progress', 'generating', 'finished', name='chat_status_enum', create_type=False),
