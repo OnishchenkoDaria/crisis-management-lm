@@ -8,6 +8,7 @@ class User(Base):
     email: Mapped[str_uniq]
     role: Mapped[str] = mapped_column(
         Enum('admin', 'user', name='user_role_enum', create_type=False),
+        default="user",
         nullable=False
     )
     hashed_password: Mapped[str_not_null]

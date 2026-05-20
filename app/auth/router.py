@@ -25,7 +25,7 @@ async def register(data: SchemaUserAdd, request: Request, response: Response) ->
         name=data.name,
         email=data.email,
         hashed_password=hash_password(data.password),
-        role="chat_owner",
+        role="user",
     )
 
     access_token = create_access_token({"sub": str(user.id)})
