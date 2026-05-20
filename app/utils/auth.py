@@ -1,5 +1,6 @@
 from datetime import timedelta, datetime, timezone
 from sys import exec_prefix
+from app.config import SECRET_KEY, ALGORITHM, ACCESS_TOKEN_EXPIRE_MINUTES
 
 import jwt
 from passlib.context import CryptContext
@@ -9,16 +10,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-ALGORITHM = os.getenv("ALGORITHM", "HS256")
 ALLOWED_ALGS = {"HS256", "RS256", "EdDSA"}
 if ALGORITHM not in ALLOWED_ALGS:
     raise ValueError(f"Unsupported JWT alg: {ALGORITHM}")
 
-ACCESS_TOKEN_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRES_MINUTES", "15"))
 ISSUER = os.getenv("JWT_ISSUER", "crisis-management-api")
 AUDIENCE = os.getenv("JWT_AUDIENCE", "crisis-management-client")
 
-SECRET_KEY = os.getenv("SECRET_KEY")  # for HS256
 PUBLIC_KEY = os.getenv("JWT_PUBLIC_KEY")   # for RS256/EdDSA verify
 PRIVATE_KEY = os.getenv("JWT_PRIVATE_KEY") # for RS256/EdDSA sign
 
@@ -31,7 +29,7 @@ def verify_password(plain_password, hashed_password):
 
 def create_access_token(data: dict, expires_delta: timedelta | None = None) -> str:
     now = datetime.now(timezone.utc)
-    expire = now + (expires_delta or timedelta(minutes=ACCESS_TOKEN_MINUTES))
+    expire = now + (expires_delta or timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES))
 
     to_encode = data.copy()
     to_encode.update({

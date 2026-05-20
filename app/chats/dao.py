@@ -1,13 +1,63 @@
+import secrets
+from datetime import datetime, timezone
+
 from app.dao.base import BaseDAO
 from app.database import async_session_maker
 import logging
 
 from sqlalchemy import select, text
 
-from app.chats.model import Chat
+from app.chats.models import Chat, ChatShareLink
 
 log = logging.getLogger(__name__)
 
+
+class ShareLinkDAO(BaseDAO):
+    model = ChatShareLink
+
+    @staticmethod
+    async def create(chat_id: int, created_by: int, expires_at: datetime | None = None) -> ChatShareLink:
+        async with async_session_maker() as db:
+            link = ChatShareLink(
+                chat_id=chat_id,
+                created_by=created_by,
+                token=secrets.token_urlsafe(32),
+                expires_at=expires_at,
+                is_active=True,
+            )
+            db.add(link)
+            await db.commit()
+            await db.refresh(link)
+        return link
+
+    @staticmethod
+    async def find_valid(chat_id: int, token: str) -> ChatShareLink | None:
+        async with async_session_maker() as db:
+            now = datetime.now(timezone.utc)
+            result = await db.execute(
+                select(ChatShareLink).where(
+                    ChatShareLink.chat_id == chat_id,
+                    ChatShareLink.token == token,
+                    ChatShareLink.is_active == True,
+                    # expires_at is NULL (never expires) OR still in the future
+                    (ChatShareLink.expires_at == None) |
+                    (ChatShareLink.expires_at > now),
+                )
+            )
+            return result.scalar_one_or_none()
+
+    @staticmethod
+    async def revoke(token: str) -> bool:
+        async with async_session_maker() as db:
+            result = await db.execute(
+                select(ChatShareLink).where(ChatShareLink.token == token)
+            )
+            link = result.scalar_one_or_none()
+            if not link:
+                return False
+            link.is_active = False
+            await db.commit()
+        return True
 
 class ChatDAO(BaseDAO):
     model = Chat

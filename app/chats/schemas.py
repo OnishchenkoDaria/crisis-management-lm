@@ -31,3 +31,17 @@ class WorkspaceLockStatus(BaseModel):
     is_locked: bool
     generating_chat_id: int | None   # which chat holds the lock
     generating_since: datetime | None
+
+
+from pydantic import BaseModel
+from datetime import datetime
+
+class ShareLinkResponse(BaseModel):
+    id:         int
+    chat_id:    int
+    token:      str
+    expires_at: datetime | None
+    is_active:  bool
+    created_at: datetime
+
+    model_config = {"from_attributes": True}

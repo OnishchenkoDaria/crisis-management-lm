@@ -52,21 +52,16 @@ async def update_name(
     return {"message": "No changes made"}
 
 
-@router.put("/update_password/", summary="Update own password")
-async def update_password(
-        data: SchemaUserPasswordUpd,
-        current_user: User = Depends(get_current_user),
+@router.patch("/update_name/", summary="Update own display name")
+async def update_name(
+    data: SchemaUserNameUpd,
+    current_user: User = Depends(get_current_user),
 ) -> dict:
-    if current_user.email != data.email:
-        raise HTTPException(403, "Can only update your own password")
-
-    changed = await UserDAO.update(
-        {"email": data.email},
-        hashed_password=hash_password(data.password),
+    await UserDAO.update(
+        {"id": current_user.id},
+        name=data.name,
     )
-    if changed:
-        return {"message": "Password updated"}
-    return {"message": "No changes made"}
+    return {"message": "Name updated"}
 
 
 @router.delete("/delete/{user_id}", summary="Delete user")
