@@ -40,3 +40,41 @@ class Chat(Base):
             "status": self.status,
             "message_count": self.message_count,
         }
+
+import secrets
+from sqlalchemy import Boolean, ForeignKey, String, DateTime
+from sqlalchemy.orm import Mapped, mapped_column
+from app.database import Base, int_pk
+from datetime import datetime
+
+class ChatShareLink(Base):
+    __tablename__ = "chat_share_links"
+
+    id:         Mapped[int_pk]
+    chat_id:    Mapped[int] = mapped_column(
+        ForeignKey("chats.id", ondelete="CASCADE"),
+        nullable=False, index=True
+    )
+    created_by: Mapped[int] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"),
+        nullable=False
+    )
+    token:      Mapped[str] = mapped_column(
+        String(64), nullable=False, unique=True, index=True,
+        default=lambda: secrets.token_urlsafe(32)
+    )
+    expires_at: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True), nullable=True
+    )
+    is_active:  Mapped[bool] = mapped_column(Boolean, nullable=False, default=True)
+
+    @property
+    def is_expired(self) -> bool:
+        if self.expires_at is None:
+            return False
+        from datetime import timezone
+        return self.expires_at <= datetime.now(timezone.utc)
+
+    @property
+    def is_valid(self) -> bool:
+        return self.is_active and not self.is_expired

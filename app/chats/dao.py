@@ -4,7 +4,7 @@ import logging
 
 from sqlalchemy import select, text
 
-from app.chats.model import Chat
+from app.chats.models import Chat
 
 log = logging.getLogger(__name__)
 

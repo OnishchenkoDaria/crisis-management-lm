@@ -9,7 +9,7 @@ from app.analysis.analysis_service import create_analysis
 from app.analysis.schemas import SituationInput, AnalysisResponse
 from app.auth.utils import get_current_user, require_chat_owner
 from app.chats.dao import ChatDAO
-from app.chats.model import Chat
+from app.chats.models import Chat
 from app.chats.schemas import ChatCreate, ChatRename, ChatResponse, WorkspaceLockStatus
 from app.users.models import User
 from app.workspaces.dao import WorkspaceDAO
