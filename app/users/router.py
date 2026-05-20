@@ -52,17 +52,16 @@ async def update_name(
     return {"message": "No changes made"}
 
 
-@router.put("/update_password/", summary="Reset password by email")
-async def update_password(data: SchemaUserPasswordUpd) -> dict:
-    user = await UserDAO.find_one_or_none_by_filter(email=data.email)
-    if not user:
-        return {"message": "The password change is available only for registered users"}
-
+@router.patch("/update_name/", summary="Update own display name")
+async def update_name(
+    data: SchemaUserNameUpd,
+    current_user: User = Depends(get_current_user),
+) -> dict:
     await UserDAO.update(
-        {"email": data.email},
-        hashed_password=hash_password(data.password),
+        {"id": current_user.id},
+        name=data.name,
     )
-    return {"message": "The password has been updated for registered user. Log into the system"}
+    return {"message": "Name updated"}
 
 
 @router.delete("/delete/{user_id}", summary="Delete user")

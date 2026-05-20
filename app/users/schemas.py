@@ -17,8 +17,7 @@ class SchemaUserAdd(BaseModel):
     password: str   = Field(..., min_length=8, max_length=128, description="User's password")
 
 class SchemaUserNameUpd(BaseModel):
-    name: str = Field(..., min_length=1, max_length=50, description="User name 1-50 symbols")
-    email: EmailStr = Field(..., description="User's email")
+    name: str = Field(..., min_length=2, max_length=50)
 
 class SchemaUserPasswordUpd(BaseModel):
     email: EmailStr = Field(..., description="User's email")
