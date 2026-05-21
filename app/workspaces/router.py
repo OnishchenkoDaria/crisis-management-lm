@@ -5,7 +5,7 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from app.auth.utils import get_current_user
 from app.users.models import User
 from app.workspaces.dao import WorkspaceDAO
-from app.workspaces.schemas import WorkspaceCreate, WorkspaceRename, WorkspaceResponse
+from app.workspaces.schemas import WorkspaceCreate, WorkspaceUpdate, WorkspaceResponse
 
 router = APIRouter(
     prefix="/api/workspaces",
@@ -26,12 +26,7 @@ async def get_owned_workspace(
     return workspace
 
 
-@router.post(
-    "/",
-    response_model=WorkspaceResponse,
-    status_code=status.HTTP_201_CREATED,
-    summary="Create a new workspace",
-)
+@router.post("/", response_model=WorkspaceResponse, status_code=status.HTTP_201_CREATED)
 async def create_workspace(
     body: WorkspaceCreate,
     current_user: User = Depends(get_current_user),
@@ -40,6 +35,16 @@ async def create_workspace(
         user_id = current_user.id,
         name = body.name,
         description = body.description,
+        language = body.language,
+        do_rules = body.do_rules,
+        dont_rules = body.dont_rules,
+        preferred_terms = body.preferred_terms,
+        forbidden_phrases = body.forbidden_phrases,
+        example_messages = body.example_messages,
+        tov_formality = body.tone_of_voice.formality,
+        tov_empathy = body.tone_of_voice.empathy,
+        tov_assertiveness = body.tone_of_voice.assertiveness,
+        tov_transparency = body.tone_of_voice.transparency,
     )
     return WorkspaceResponse.model_validate(workspace)
 
@@ -67,21 +72,25 @@ async def get_workspace(
     return WorkspaceResponse.model_validate(workspace)
 
 
-@router.patch(
-    "/{workspace_id}",
-    response_model=WorkspaceResponse,
-    summary="Rename / update workspace",
-)
+@router.patch("/{workspace_id}", response_model=WorkspaceResponse, summary="Update workspace")
 async def update_workspace(
     workspace_id: int,
-    body: WorkspaceRename,
+    body: WorkspaceUpdate,
     workspace=Depends(get_owned_workspace),
 ) -> WorkspaceResponse:
-    await WorkspaceDAO.update(
-        {"id": workspace_id},
-        name = body.name,
-        description = body.description,
-    )
+    updates = body.model_dump(exclude_unset=True)
+    if not updates:
+        raise HTTPException(400, "No fields provided to update")
+
+    # Flatten tone_of_voice into individual columns
+    if "tone_of_voice" in updates:
+        tov = updates.pop("tone_of_voice")
+        if tov.get("formality")     is not None: updates["tov_formality"]     = tov["formality"]
+        if tov.get("empathy")       is not None: updates["tov_empathy"]       = tov["empathy"]
+        if tov.get("assertiveness") is not None: updates["tov_assertiveness"] = tov["assertiveness"]
+        if tov.get("transparency")  is not None: updates["tov_transparency"]  = tov["transparency"]
+
+    await WorkspaceDAO.update({"id": workspace_id}, **updates)
     updated = await WorkspaceDAO.find_one_or_none_by_filter(id=workspace_id)
     return WorkspaceResponse.model_validate(updated)
 

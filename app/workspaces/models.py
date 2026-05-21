@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from sqlalchemy import ForeignKey, Integer, String
+from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.database import Base, int_pk, str_not_null, str_null_true
@@ -14,10 +15,23 @@ class Workspace(Base):
     name:    Mapped[str]  = mapped_column(String(200), nullable=False)
     description: Mapped[str_null_true]
 
-    # Workspace-level generation lock (managed by ChatDAO / lock.py)
-    generating_chat_id: Mapped[int | None] = mapped_column(
-        Integer, nullable=True, default=None
-    )
+    # TOV fields — stored as JSONB arrays
+    language: Mapped[str] = mapped_column(String(2), nullable=False, default="ua")
+    do_rules: Mapped[list] = mapped_column(JSONB, nullable=False, default=list)
+    dont_rules: Mapped[list] = mapped_column(JSONB, nullable=False, default=list)
+    preferred_terms: Mapped[list] = mapped_column(JSONB, nullable=False, default=list)
+    forbidden_phrases: Mapped[list] = mapped_column(JSONB, nullable=False, default=list)
+    example_messages: Mapped[list] = mapped_column(JSONB, nullable=False, default=list)
+
+    # TOV sliders
+    tov_formality: Mapped[int] = mapped_column(Integer, nullable=False, default=50)
+    tov_empathy: Mapped[int] = mapped_column(Integer, nullable=False, default=50)
+    tov_assertiveness: Mapped[int] = mapped_column(Integer, nullable=False, default=50)
+    tov_transparency: Mapped[int] = mapped_column(Integer, nullable=False, default=50)
+
+    # Generation lock
+    generating_chat_id: Mapped[int | None] = mapped_column(Integer, nullable=True, default=None)
+
 
     def __str__(self):
         return f"Workspace(id={self.id}, user={self.user_id}, name={self.name!r})"
