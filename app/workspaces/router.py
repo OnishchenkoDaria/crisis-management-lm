@@ -26,12 +26,7 @@ async def get_owned_workspace(
     return workspace
 
 
-@router.post(
-    "/",
-    response_model=WorkspaceResponse,
-    status_code=status.HTTP_201_CREATED,
-    summary="Create a new workspace",
-)
+@router.post("/", response_model=WorkspaceResponse, status_code=status.HTTP_201_CREATED)
 async def create_workspace(
     body: WorkspaceCreate,
     current_user: User = Depends(get_current_user),
@@ -40,6 +35,16 @@ async def create_workspace(
         user_id = current_user.id,
         name = body.name,
         description = body.description,
+        language = body.language,
+        do_rules = body.do_rules,
+        dont_rules = body.dont_rules,
+        preferred_terms = body.preferred_terms,
+        forbidden_phrases = body.forbidden_phrases,
+        example_messages = body.example_messages,
+        tov_formality = body.tone_of_voice.formality,
+        tov_empathy = body.tone_of_voice.empathy,
+        tov_assertiveness = body.tone_of_voice.assertiveness,
+        tov_transparency = body.tone_of_voice.transparency,
     )
     return WorkspaceResponse.model_validate(workspace)
 
