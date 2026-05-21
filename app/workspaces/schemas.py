@@ -65,6 +65,13 @@ class WorkspaceResponse(BaseModel):
         return super().model_validate(obj, **kwargs)
 
 
-class WorkspaceRename(BaseModel):
+class WorkspaceUpdate(BaseModel):
     name: str | None = Field(default=None, min_length=1, max_length=200)
     description: str | None = None
+    language: str | None = Field(default=None, pattern="^(ua|en)$")
+    do_rules: list[str] | None = None
+    dont_rules: list[str] | None = None
+    preferred_terms: list[str] | None = None
+    forbidden_phrases: list[str] | None = None
+    example_messages: list[str] | None = None
+    tone_of_voice: ToneOfVoice | None = None
