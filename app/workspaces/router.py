@@ -72,21 +72,17 @@ async def get_workspace(
     return WorkspaceResponse.model_validate(workspace)
 
 
-@router.patch(
-    "/{workspace_id}",
-    response_model=WorkspaceResponse,
-    summary="Rename / update workspace",
-)
+@router.patch("/{workspace_id}", response_model=WorkspaceResponse)
 async def update_workspace(
     workspace_id: int,
     body: WorkspaceRename,
     workspace=Depends(get_owned_workspace),
 ) -> WorkspaceResponse:
-    await WorkspaceDAO.update(
-        {"id": workspace_id},
-        name = body.name,
-        description = body.description,
-    )
+    updates = body.model_dump(exclude_unset=True)
+    if not updates:
+        raise HTTPException(400, "No fields provided to update")
+
+    await WorkspaceDAO.update({"id": workspace_id}, **updates)
     updated = await WorkspaceDAO.find_one_or_none_by_filter(id=workspace_id)
     return WorkspaceResponse.model_validate(updated)
 

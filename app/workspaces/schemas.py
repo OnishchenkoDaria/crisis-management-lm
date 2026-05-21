@@ -63,3 +63,8 @@ class WorkspaceResponse(BaseModel):
             }
             return cls(**data)
         return super().model_validate(obj, **kwargs)
+
+
+class WorkspaceRename(BaseModel):
+    name: str | None = Field(default=None, min_length=1, max_length=200)
+    description: str | None = None
