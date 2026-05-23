@@ -1,6 +1,8 @@
 from __future__ import annotations
 
-from sqlalchemy import ForeignKey, Integer, String
+from datetime import datetime
+
+from sqlalchemy import ForeignKey, Integer, String, DateTime
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import Mapped, mapped_column
 
@@ -30,7 +32,12 @@ class Workspace(Base):
     tov_transparency: Mapped[int] = mapped_column(Integer, nullable=False, default=50)
 
     # Generation lock
-    generating_chat_id: Mapped[int | None] = mapped_column(Integer, nullable=True, default=None)
+    generating_chat_id: Mapped[int | None] = mapped_column(
+        Integer, nullable=True, default=None
+    )
+    generating_since: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True), nullable=True, default=None
+    )
 
 
     def __str__(self):
