@@ -13,6 +13,7 @@ from app.chats.models import Chat
 from app.chats.schemas import ChatCreate, ChatRename, ChatResponse, WorkspaceLockStatus
 from app.chats.dao import ShareLinkDAO
 from app.chats.schemas import ShareLinkResponse
+from app.messages.dao import MessageDAO
 from app.users.models import User
 from app.workspaces.dao import WorkspaceDAO
 
@@ -204,7 +205,6 @@ async def send_message(
     current_user: User | None = Depends(get_optional_user),
     token: str | None = Query(None),
 ) -> AnalysisResponse:
-    # Share link visitors get 403 here — read-only
     permission = await get_chat_permission(chat_id, current_user, token)
     if permission != "owner":
         raise HTTPException(403, "Only the chat owner can send messages")
@@ -213,11 +213,35 @@ async def send_message(
     if chat.status == "finished":
         raise HTTPException(400, "This chat is finished")
 
+    await MessageDAO.save_user_message(
+        chat_id=chat_id,
+        content=body.situation_description,
+        payload=body.model_dump(),
+    )
+
     async with generation_lock(workspace_id, chat_id):
         response = await create_analysis(workspace_id, body)
+
+        await MessageDAO.save_assistant_message(
+            chat_id=chat_id,
+            content=_build_assistant_summary(response),
+            payload=response.model_dump(),
+            analysis_id=response.analysis_id,
+        )
         await ChatDAO.increment_message_count(chat_id)
+
     return response
 
+def _build_assistant_summary(response: AnalysisResponse) -> str:
+    lines = [
+        f"**{response.detected_crisis_type.upper()} · {response.urgency_level} urgency**",
+        "",
+        response.crisis_summary,
+    ]
+    if response.missing_information:
+        lines += ["", "⚠ Missing information:"]
+        lines += [f"  – {item}" for item in response.missing_information[:3]]
+    return "\n".join(lines)
 
 @router.post(
     "/workspaces/{workspace_id}/chats/{chat_id}/share",

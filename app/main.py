@@ -8,6 +8,7 @@ from app.auth.router import router as auth_router
 from app.analysis.router import router as analysis_router
 from app.chats.router import router as chat_router
 from app.workspaces.router import router as workspace_router
+from app.messages.router import router as message_router
 
 app = FastAPI()
 
@@ -25,3 +26,4 @@ app.include_router(workspace_router)
 app.include_router(ingest_router)
 app.include_router(rag_router)
 app.include_router(analysis_router)
+app.include_router(message_router)
