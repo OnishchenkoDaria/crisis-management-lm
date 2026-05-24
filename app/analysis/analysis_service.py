@@ -21,6 +21,7 @@ from app.analysis.input_guard import classify_input
 log = logging.getLogger(__name__)
 
 MINIMUM_SIMILARITY = 0.60
+MAX_AUTO_CLARIFICATIONS = 2
 
 async def create_analysis(
     workspace_id: int,
@@ -61,6 +62,9 @@ async def refine_analysis(
 ) -> AnalysisResponse:
     # Load existing analysis state
     stored = await _load_analysis(analysis_id)
+    current_count = stored.get("clarification_count", 0)
+    new_count = current_count + 1
+
     if not stored or stored["workspace_id"] != workspace_id:
         raise ValueError(f"Analysis {analysis_id} not found")
 
@@ -84,10 +88,14 @@ async def refine_analysis(
         original, ctx, workspace_ctx, refinement=refinement
     )
     raw = await _call_llm(system_prompt, user_message)
-    response = _parse_analysis_response(raw, analysis_id, workspace_id, ctx)
+    new_count = stored.get("clarification_count", 0) + 1
+    response = _parse_analysis_response(
+        raw, analysis_id, workspace_id, ctx,
+        clarification_count=new_count
+    )
     response.status = "refined"
 
-    await _update_analysis(analysis_id, refinement, response)
+    await _update_analysis(analysis_id, refinement, response, clarification_count=new_count)
     return response
 
 
@@ -114,7 +122,7 @@ async def generate_roadmap(analysis_id: str, workspace_id: int) -> RoadmapRespon
 
 
 def _parse_analysis_response(
-    raw: str, analysis_id: str, workspace_id: int, ctx
+    raw: str, analysis_id: str, workspace_id: int, ctx, clarification_count: int = 0,
 ) -> AnalysisResponse:
     #Parse LLM JSON into AnalysisResponse with graceful fallback
     import re
@@ -135,35 +143,44 @@ def _parse_analysis_response(
         and len(missing) <= 2
     )
 
-    return AnalysisResponse(
-        analysis_id = analysis_id,
-        workspace_id = workspace_id,
-        status = "draft",
-        crisis_summary = data.get("crisis_summary", ""),
-        detected_crisis_type = _safe_enum(CrisisType, data.get("detected_crisis_type"), CrisisType.reputational),
-        urgency_level = _safe_enum(UrgencyLevel, data.get("urgency_level"), UrgencyLevel.high),
-        phase = _safe_enum(CrisisPhase, data.get("phase"), CrisisPhase.acute),
-        confidence = confidence,
-        key_risks = data.get("key_risks", []),
-        stakeholders = data.get("stakeholders", []),
-        recommended_strategy  = data.get("recommended_strategy", ""),
-        relevant_tactics = [
+    response = AnalysisResponse(
+        analysis_id=analysis_id,
+        workspace_id=workspace_id,
+        status="draft",
+        crisis_summary=data.get("crisis_summary", ""),
+        detected_crisis_type=_safe_enum(CrisisType, data.get("detected_crisis_type"), CrisisType.reputational),
+        urgency_level=_safe_enum(UrgencyLevel, data.get("urgency_level"), UrgencyLevel.high),
+        phase=_safe_enum(CrisisPhase, data.get("phase"), CrisisPhase.acute),
+        confidence=confidence,
+        key_risks=data.get("key_risks", []),
+        stakeholders=data.get("stakeholders", []),
+        recommended_strategy=data.get("recommended_strategy", ""),
+        relevant_tactics=[
             TacticRef(**t) for t in data.get("relevant_tactics", [])
             if isinstance(t, dict)
         ],
-        suggested_initial_message = data.get("suggested_initial_message", ""),
-        missing_information = missing,
-        next_questions = data.get("next_questions", []),
-        retrieved_sources = [
+        suggested_initial_message=data.get("suggested_initial_message", ""),
+        missing_information=missing,
+        next_questions=data.get("next_questions", []),
+        retrieved_sources=[
             SourceRef(
-                title = c.source_title,
-                chapter = c.source_chapter,
-                similarity = c.similarity,
+                title=c.source_title,
+                chapter=c.source_chapter,
+                similarity=c.similarity,
             )
             for c in ctx.chunks
         ],
-        can_generate_roadmap = can_generate,
+        can_generate_roadmap=can_generate,
     )
+
+    # Override after max clarifications — never block the user past this point
+    if clarification_count >= MAX_AUTO_CLARIFICATIONS:
+        response.can_generate_roadmap = True
+        response.missing_information = []
+    elif confidence in ("medium", "high"):
+        response.can_generate_roadmap = True
+
+    return response
 
 
 def _parse_roadmap_response(

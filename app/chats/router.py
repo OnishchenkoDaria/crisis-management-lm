@@ -239,10 +239,8 @@ async def send_message(
     return response
 
 def _build_assistant_summary(response: AnalysisResponse) -> str:
-    # Extract plain string value whether it's an enum or already a string
     crisis_type = response.detected_crisis_type
     urgency     = response.urgency_level
-
     if hasattr(crisis_type, "value"): crisis_type = crisis_type.value
     if hasattr(urgency, "value"):     urgency     = urgency.value
 
@@ -251,15 +249,41 @@ def _build_assistant_summary(response: AnalysisResponse) -> str:
         "",
         response.crisis_summary,
     ]
+
+    # Recommended strategy — the core advice
+    if response.recommended_strategy:
+        lines += ["", "**Recommended strategy**", response.recommended_strategy]
+
+    # Tactics — specific actions to take
+    if response.relevant_tactics:
+        lines += ["", "**Tactics**"]
+        for t in response.relevant_tactics:
+            lines.append(f"**{t.name}** — {t.description}")
+            if t.anti_pattern:
+                lines.append(f"⚠ Avoid: {t.anti_pattern}")
+
+    # Suggested message — ready to use
+    if response.suggested_initial_message:
+        lines += ["", "**Suggested statement**", f"> {response.suggested_initial_message}"]
+
+    # Key risks
+    if response.key_risks:
+        lines += ["", "**Key risks**"]
+        lines += [f"– {r}" for r in response.key_risks[:3]]
+
+    # Missing info — informational only, not a blocker
     if response.missing_information:
-        lines += ["", "Missing information:"]
-        lines += [f"  – {item}" for item in response.missing_information[:3]]
+        lines += ["", "⚠ **Would improve analysis**"]
+        lines += [f"– {item}" for item in response.missing_information[:3]]
+
+    # Sources
     if response.retrieved_sources:
-        lines += ["", "Sources:"]
+        lines += ["", "**Sources**"]
         lines += [
-            f"  – *{s.title}* — {s.chapter} (relevance: {s.similarity:.0%})"
+            f"– *{s.title}* — {s.chapter} (relevance: {s.similarity:.0%})"
             for s in response.retrieved_sources[:3]
         ]
+
     return "\n".join(lines)
 
 @router.post(
