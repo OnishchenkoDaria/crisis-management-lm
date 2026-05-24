@@ -233,14 +233,27 @@ async def send_message(
     return response
 
 def _build_assistant_summary(response: AnalysisResponse) -> str:
+    # Extract plain string value whether it's an enum or already a string
+    crisis_type = response.detected_crisis_type
+    urgency     = response.urgency_level
+
+    if hasattr(crisis_type, "value"): crisis_type = crisis_type.value
+    if hasattr(urgency, "value"):     urgency     = urgency.value
+
     lines = [
-        f"**{response.detected_crisis_type.upper()} · {response.urgency_level} urgency**",
+        f"**{crisis_type.upper()} · {urgency} urgency**",
         "",
         response.crisis_summary,
     ]
     if response.missing_information:
-        lines += ["", "⚠ Missing information:"]
+        lines += ["", "Missing information:"]
         lines += [f"  – {item}" for item in response.missing_information[:3]]
+    if response.retrieved_sources:
+        lines += ["", "Sources:"]
+        lines += [
+            f"  – *{s.title}* — {s.chapter} (relevance: {s.similarity:.0%})"
+            for s in response.retrieved_sources[:3]
+        ]
     return "\n".join(lines)
 
 @router.post(
