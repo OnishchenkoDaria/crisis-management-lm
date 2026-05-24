@@ -221,7 +221,12 @@ async def send_message(
     )
 
     async with generation_lock(workspace_id, chat_id):
-        response = await create_analysis(workspace_id, body)
+        try:
+            response = await create_analysis(workspace_id, body)
+        except ValueError as e:
+            # Delete the optimistically saved user message since the input was rejected
+            await MessageDAO.delete_last_user_message(chat_id)
+            raise HTTPException(422, str(e))
 
         await MessageDAO.save_assistant_message(
             chat_id=chat_id,

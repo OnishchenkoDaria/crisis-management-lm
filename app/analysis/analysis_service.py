@@ -16,24 +16,34 @@ from app.analysis.prompt_templates import build_analysis_prompt, build_roadmap_p
 from app.rag.retrieval_service import retrieve_context
 from app.rag.rag_service import _call_llm
 from app.database import async_session_maker
+from app.analysis.input_guard import classify_input
 
 log = logging.getLogger(__name__)
+
+MINIMUM_SIMILARITY = 0.60
 
 async def create_analysis(
     workspace_id: int,
     situation: SituationInput,
 ) -> AnalysisResponse:
+    guard = await classify_input(situation.situation_description)
+
+    if guard.get("injection_detected"):
+        log.warning("Prompt injection attempt: workspace=%d", workspace_id)
+        raise ValueError("Input rejected: contains disallowed patterns.")
+
+    if not guard.get("valid"):
+        raise ValueError(
+            f"Input does not describe a recognisable crisis situation. "
+            f"{guard.get('reason', 'Please describe a real organisational crisis.')}"
+        )
+
     analysis_id = str(uuid.uuid4())
 
     # Workspace context
     workspace_ctx = await _load_workspace_context(workspace_id)
     # RAG retrieval
-    ctx = await retrieve_context(
-        situation.situation_description,
-        crisis_type  = situation.crisis_type.value if situation.crisis_type else None,
-        phase        = situation.phase.value if situation.phase else None,
-        chunk_limit  = 6,
-    )
+    ctx = await retrieve_context(situation.situation_description, chunk_limit=6)
 
     system_prompt, user_message = build_analysis_prompt(situation, ctx, workspace_ctx)
     raw = await _call_llm(system_prompt, user_message)

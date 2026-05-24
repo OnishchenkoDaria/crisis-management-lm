@@ -55,3 +55,17 @@ class MessageDAO(BaseDAO):
             await db.commit()
             await db.refresh(msg)
         return msg
+
+    @staticmethod
+    async def delete_last_user_message(chat_id: int) -> None:
+        async with async_session_maker() as db:
+            result = await db.execute(
+                select(Message)
+                .where(Message.chat_id == chat_id, Message.role == "user")
+                .order_by(Message.created_at.desc())
+                .limit(1)
+            )
+            msg = result.scalar_one_or_none()
+            if msg:
+                await db.delete(msg)
+                await db.commit()
