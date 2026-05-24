@@ -34,73 +34,52 @@ TACTIC_MAX_CHARS = 300
 
 
 def build_prompt(ctx: RetrievedContext) -> tuple[str, str]:
-    """
-    Returns (system_prompt, user_message) ready for LLM call.
-    """
-    parts: list[str] = []
+    system_prompt = """You are a senior crisis communications strategist with 20+ years of experience.
+    You advise organizations using evidence-based methodology grounded in academic crisis communication research.
+    
+    CRITICAL RULES:
+    1. Every recommendation must cite the specific source it comes from using [Source: title, chapter]
+    2. Reference Situational Crisis Communication Theory (SCCT), Image Repair Theory, or other frameworks by name when applying them
+    3. Never give generic advice — ground every tactical suggestion in the retrieved knowledge
+    4. If retrieved sources are insufficient for a recommendation, say so explicitly
+    5. Urgency and crisis type must be justified with observable evidence from the situation described
+    6. Respond ONLY in valid JSON matching the required schema
+    
+    REASONING APPROACH:
+    - First identify what crisis communication theory applies and WHY
+    - Then derive tactics from that theory, citing the specific book/chapter
+    - Then assess risks based on documented case precedents from the knowledge base
+    - Flag missing information that would change the strategy"""
 
-    # Crisis context header
-    if ctx.detected_crisis_type:
-        parts.append(
-            f"DETECTED CRISIS TYPE: {ctx.detected_crisis_type}"
-            + (f" | PHASE: {ctx.detected_phase}" if ctx.detected_phase else "")
+    # Build context block with explicit source labels
+    context_parts = []
+
+    for i, chunk in enumerate(ctx.chunks, 1):
+        context_parts.append(
+            f"[SOURCE {i}: {chunk.source_title} — {chunk.source_chapter}]\n{chunk.text}"
         )
 
-    # Retrieved document chunks — primary grounding
-    if ctx.chunks:
-        parts.append("\n── RELEVANT SOURCE PASSAGES ──")
-        for i, chunk in enumerate(ctx.chunks, 1):
-            text = chunk.text[:CHUNK_MAX_CHARS]
-            if len(chunk.text) > CHUNK_MAX_CHARS:
-                text += "…"
-            parts.append(
-                f"[{i}] {chunk.source_title} / {chunk.source_chapter} "
-                f"(similarity={chunk.similarity:.2f})\n{text}"
-            )
-    else:
-        parts.append("\n── NOTE: No relevant document passages found. ──")
-        parts.append("Confidence should be LOW in your response.")
+    for scenario in ctx.scenarios:
+        context_parts.append(
+            f"[PRECEDENT CASE: {scenario.title}]\n{scenario.description}"
+        )
 
-    # Matching scenarios
-    if ctx.scenarios:
-        parts.append("\n── MATCHING CRISIS SCENARIOS ──")
-        for s in ctx.scenarios:
-            parts.append(
-                f"Scenario: {s['title']}\n"
-                f"  Type: {s['crisis_type']} | Severity: {s['severity']} | Phase: {s['phase']}\n"
-                f"  Context: {s['context']}\n"
-                f"  Stakeholders: {', '.join(s.get('stakeholders', []))}"
-            )
+    for tactic in ctx.tactics:
+        context_parts.append(
+            f"[TACTIC: {tactic.name}]\n{tactic.description}\n"
+            f"Anti-pattern to avoid: {tactic.anti_pattern}"
+        )
 
-    # Applicable tactics
-    if ctx.tactics:
-        parts.append("\n── APPLICABLE TACTICS ──")
-        for t in ctx.tactics:
-            text = (t.get("description") or "")[:TACTIC_MAX_CHARS]
-            parts.append(
-                f"• {t['name']}: {text}\n"
-                f"  When to apply: {t.get('when_to_apply', '')}\n"
-                f"  Anti-pattern: {t.get('anti_pattern', '')}"
-            )
+    context_block = "\n\n---\n\n".join(context_parts)
 
-    # Decision nodes
-    if ctx.decision_nodes:
-        parts.append("\n── DECISION POINTS ──")
-        for d in ctx.decision_nodes:
-            parts.append(
-                f"Situation: {d.get('situation', '')}\n"
-                f"  Recommended: {d.get('recommended_action', '')}\n"
-                f"  Common mistake: {d.get('common_mistake', '')}\n"
-                f"  Consequence if wrong: {d.get('consequence_if_wrong', '')}"
-            )
+    user_message = f"""KNOWLEDGE BASE:
+    {context_block}
+    
+    SITUATION TO ANALYSE:
+    {ctx.query}
+    
+    Provide a structured crisis communication analysis in JSON.
+    For every recommended_action and tactic, include which source it comes from.
+    Justify your confidence level with specific reasoning."""
 
-    # QA few-shot examples
-    if ctx.qa_pairs:
-        parts.append("\n── REFERENCE Q&A ──")
-        for qa in ctx.qa_pairs:
-            parts.append(f"Q: {qa['question']}\nA: {qa['answer']}")
-
-    # User query
-    user_message = "\n".join(parts) + f"\n\n── USER QUERY ──\n{ctx.query}"
-
-    return SYSTEM_PROMPT, user_message
+    return system_prompt, user_message

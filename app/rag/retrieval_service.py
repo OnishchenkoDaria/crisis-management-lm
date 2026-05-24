@@ -48,7 +48,7 @@ async def retrieve_context(
     crisis_type: str | None = None,
     phase:       str | None = None,
     language:    str | None = None,
-    chunk_limit: int = 5,
+    chunk_limit: int = 10,
     tactic_limit: int = 4,
     qa_limit:    int = 3,
 ) -> RetrievedContext:
