@@ -5,17 +5,18 @@ from contextlib import asynccontextmanager
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 
-from app.analysis.analysis_service import create_analysis
+from app.analysis.analysis_service import create_analysis, refine_analysis
 from app.analysis.schemas import SituationInput, AnalysisResponse
 from app.auth.utils import get_current_user, get_optional_user, get_chat_permission
 from app.chats.dao import ChatDAO
 from app.chats.models import Chat
-from app.chats.schemas import ChatCreate, ChatRename, ChatResponse, WorkspaceLockStatus
+from app.chats.schemas import ChatCreate, ChatRename, ChatResponse, WorkspaceLockStatus, ClarifyRequest
 from app.chats.dao import ShareLinkDAO
 from app.chats.schemas import ShareLinkResponse
 from app.messages.dao import MessageDAO
 from app.users.models import User
 from app.workspaces.dao import WorkspaceDAO
+from app.analysis.schemas import RefinementRequest
 
 log = logging.getLogger(__name__)
 
@@ -294,3 +295,49 @@ async def revoke_share_link(
     revoked = await ShareLinkDAO.revoke(link_token)
     if not revoked:
         raise HTTPException(404, "Share link not found")
+
+
+@router.post(
+    "/workspaces/{workspace_id}/chats/{chat_id}/clarify",
+    response_model=AnalysisResponse,
+)
+async def clarify_analysis(
+    workspace_id: int,
+    chat_id:      int,
+    body:         ClarifyRequest,
+    current_user: User | None = Depends(get_optional_user),
+    token:        str | None  = Query(None),
+) -> AnalysisResponse:
+    permission = await get_chat_permission(chat_id, current_user, token)
+    if permission != "owner":
+        raise HTTPException(403, "Only the chat owner can clarify")
+
+    answers_text = "\n".join(f"**{q}**\n{a}" for q, a in body.answers.items())
+    await MessageDAO.save_user_message(
+        chat_id=chat_id,
+        content=answers_text,
+        payload={"type": "clarification", "answers": body.answers},
+    )
+
+    # Build RefinementRequest object — not keyword args
+    refinement = RefinementRequest(
+        user_comment="\n".join(f"{q}: {a}" for q, a in body.answers.items()),
+        fields_to_update=body.answers,
+        additional_context=None,
+        changed_constraints=[],
+    )
+
+    response = await refine_analysis(
+        analysis_id=body.analysis_id,
+        workspace_id=workspace_id,
+        refinement=refinement,
+    )
+
+    await MessageDAO.save_assistant_message(
+        chat_id=chat_id,
+        content=_build_assistant_summary(response),
+        payload=response.model_dump(),
+        analysis_id=response.analysis_id,
+    )
+
+    return response
