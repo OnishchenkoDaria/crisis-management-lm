@@ -79,8 +79,10 @@ def build_prompt(ctx: RetrievedContext) -> tuple[str, str]:
         )
 
     for scenario in ctx.scenarios:
+        title = scenario.get("title", "")
+        context = scenario.get("context", "")
         context_parts.append(
-            f"[PRECEDENT CASE: {scenario.title}]\n{scenario.description}"
+            f"[PRECEDENT CASE: {title}]\n{context}"
         )
 
     for tactic in ctx.tactics:
@@ -89,16 +91,23 @@ def build_prompt(ctx: RetrievedContext) -> tuple[str, str]:
             f"Anti-pattern to avoid: {tactic.anti_pattern}"
         )
 
+    for decision in ctx.decision_nodes:
+        situation = decision.get("situation", "")
+        recommended = decision.get("recommended_action", "")
+        mistake = decision.get("common_mistake", "")
+        context_parts.append(
+            f"[DECISION POINT]\nSituation: {situation}\n"
+            f"Recommended: {recommended}\nCommon mistake: {mistake}"
+        )
+
     context_block = "\n\n---\n\n".join(context_parts)
 
-    user_message = f"""KNOWLEDGE BASE:
-    {context_block}
-    
-    SITUATION TO ANALYSE:
-    {ctx.query}
-    
-    Provide a structured crisis communication analysis in JSON.
-    For every recommended_action and tactic, include which source it comes from.
-    Justify your confidence level with specific reasoning."""
+    user_message = (
+        f"KNOWLEDGE BASE:\n{context_block}\n\n"
+        f"SITUATION TO ANALYSE:\n{ctx.query}\n\n"
+        "Provide a structured crisis communication analysis in JSON. "
+        "For every recommended_action and tactic, include which source it comes from. "
+        "Justify your confidence level with specific reasoning."
+    )
 
     return system_prompt, user_message
