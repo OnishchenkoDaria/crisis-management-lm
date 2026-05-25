@@ -1,36 +1,59 @@
 from __future__ import annotations
 
 from app.analysis.schemas import SituationInput, RefinementRequest
+from app.rag.book_registry import resolve_citation
 
-ANALYSIS_SYSTEM = """You are an expert Crisis Communications Decision Support System.
+ANALYSIS_SYSTEM = """You are an expert Crisis Communications Decision Support System (DSS).
 You advise Communications Specialists in real-time during active crises.
 
-RULES:
-1. Base ALL recommendations strictly on the provided context documents and structured knowledge.
-2. If context is weak or absent for a specific point — say so in missing_information.
-3. Do NOT invent facts, case precedents, or statistics.
-4. Tone: direct, tactical, professional. No academic padding.
-5. Return ONLY valid JSON matching the schema below. No markdown, no preamble.
+BEHAVIORAL RULES:
+1. Always provide concrete tactical recommendations — never withhold strategy due to missing data.
+2. When information is incomplete, state your assumptions explicitly and advise based on the most likely scenario.
+3. Base ALL recommendations strictly on the provided context documents and structured knowledge.
+4. If context is weak or absent for a specific point — say so in missing_information.
+5. Treat missing_information as "would improve the analysis" — not as a blocker to giving advice.
+6. Do NOT invent facts, case precedents, or statistics not present in the retrieved context.
+7. List at most 3 items in missing_information — only the gaps that would meaningfully change the strategy.
+8. Tone: direct, tactical, professional. No academic padding.
+9. Return ONLY valid JSON matching the schema below. No markdown, no preamble.
+
+CLARIFICATION LOGIC:
+- Set can_generate_roadmap: true if confidence is "medium" or "high".
+- Set can_generate_roadmap: false ONLY when confidence is "low" AND missing_information has more than 2 critical items.
+- If user has already provided clarifications, set can_generate_roadmap: true regardless.
 
 REQUIRED JSON SCHEMA:
 {
-  "crisis_summary": "string — 2-3 sentences describing the situation",
+  "crisis_summary": "string — 2-3 sentences describing the situation and any stated assumptions",
   "detected_crisis_type": "media|reputational|operational|safety|political|internal|natural_disaster",
   "urgency_level": "critical|high|medium|low",
   "phase": "pre_crisis|acute|containment|recovery|post_crisis",
   "confidence": "high|medium|low",
-  "key_risks": ["string", ...],
-  "stakeholders": ["string", ...],
-  "recommended_strategy": "string — core strategic direction in 3-4 sentences",
-  "relevant_tactics": [{"name":"string","description":"string","anti_pattern":"string|null"}],
-  "suggested_initial_message": "string — holding statement template",
-  "missing_information": ["string — what is unclear or absent from input"],
-  "next_questions": ["string — clarifying question for the user"]
+  "key_risks": ["string — specific risk with stated consequence"],
+  "stakeholders": ["string"],
+  "recommended_strategy": "string — core strategic direction in 3-4 sentences, with rationale",
+  "relevant_tactics": [
+    {
+      "name": "string",
+      "description": "string — how to apply this tactic to THIS specific situation",
+      "anti_pattern": "string — the specific mistake to avoid here, or null"
+    }
+  ],
+  "suggested_initial_message": "string — ready-to-use holding statement in the OUTPUT LANGUAGE specified below",
+  "missing_information": ["string — specific gap that would meaningfully change the strategy"],
+  "next_questions": ["string — focused clarifying question"],
+  "can_generate_roadmap": true
 }"""
 
 
 ROADMAP_SYSTEM = """You are generating a detailed Crisis Communications Action Roadmap.
 Base it strictly on the confirmed analysis and retrieved source documents.
+
+RULES:
+1. Every action item must reference a source from the retrieved knowledge where applicable.
+2. Timing must be realistic — do not cluster everything in T0.
+3. Owner roles must be specific (e.g. "Head of Communications", not "team member").
+4. Return ONLY valid JSON. No markdown, no preamble.
 
 Return ONLY valid JSON matching this schema:
 {
@@ -53,7 +76,7 @@ Return ONLY valid JSON matching this schema:
           "due_hint": "string",
           "rationale": "string",
           "risk_if_skipped": "string",
-          "source_refs": ["string"]
+          "source_refs": ["string — book title or tactic name"]
         }
       ]
     }
@@ -71,7 +94,7 @@ Return ONLY valid JSON matching this schema:
   "next_steps": ["string"]
 }
 
-Roadmap phases MUST be:
+Roadmap phases MUST be exactly:
   1. t0_30min    → T0 – 30 minutes     (immediate containment)
   2. t30_2h      → 30 min – 2 hours    (situation management)
   3. t2_24h      → 2 – 24 hours        (stabilisation)
@@ -85,6 +108,21 @@ def build_analysis_prompt(
     workspace_ctx: dict,
     refinement: RefinementRequest | None = None,
 ) -> tuple[str, str]:
+
+    # Determine output language from workspace
+    lang_code  = workspace_ctx.get("language", "ua") if workspace_ctx else "ua"
+    lang_label = "Ukrainian" if lang_code == "ua" else "English"
+
+    system = ANALYSIS_SYSTEM + f"""
+
+    OUTPUT LANGUAGE RULE:
+    - Analyse the situation in whatever language the user provided it.
+    - Write crisis_summary, recommended_strategy, relevant_tactics, key_risks,
+      and next_questions in {lang_label}.
+    - Write suggested_initial_message ONLY in {lang_label} — this is the text
+      the organisation will publish and must match their audience's language.
+    - Never mix languages within a single field."""
+
     parts = []
 
     # Workspace context
@@ -95,7 +133,7 @@ def build_analysis_prompt(
                 parts.append(f"{k}: {v}")
 
     # Situation form
-    parts.append("\n── CRISIS SITUATION (structured input) ──")
+    parts.append("\n── CRISIS SITUATION ──")
     parts.append(f"Description: {situation.situation_description}")
     if situation.crisis_type:
         parts.append(f"Declared crisis type: {situation.crisis_type.value}")
@@ -118,9 +156,9 @@ def build_analysis_prompt(
 
     # Refinement
     if refinement:
-        parts.append("\n── USER REFINEMENT ──")
+        parts.append("\n── USER CLARIFICATION ──")
         if refinement.user_comment:
-            parts.append(f"User comment: {refinement.user_comment}")
+            parts.append(f"User provided: {refinement.user_comment}")
         if refinement.additional_context:
             parts.append(f"Additional context: {refinement.additional_context}")
         if refinement.changed_constraints:
@@ -130,7 +168,8 @@ def build_analysis_prompt(
     if ctx.chunks:
         parts.append("\n── RELEVANT SOURCE PASSAGES ──")
         for i, c in enumerate(ctx.chunks, 1):
-            parts.append(f"[{i}] {c.source_title}/{c.source_chapter} (sim={c.similarity:.2f})")
+            citation = resolve_citation(c.source_title, c.source_chapter)
+            parts.append(f"[{i}] {citation} (relevance: {c.similarity:.0%})")
             parts.append(c.text[:500] + ("…" if len(c.text) > 500 else ""))
 
     if ctx.scenarios:
@@ -143,7 +182,8 @@ def build_analysis_prompt(
         parts.append("\n── APPLICABLE TACTICS ──")
         for t in ctx.tactics:
             parts.append(f"• {t['name']}: {t.get('description','')[:200]}")
-            parts.append(f"  Anti-pattern: {t.get('anti_pattern','')}")
+            if t.get("anti_pattern"):
+                parts.append(f"  Anti-pattern: {t['anti_pattern']}")
 
     if ctx.decision_nodes:
         parts.append("\n── DECISION POINTS ──")
@@ -152,10 +192,19 @@ def build_analysis_prompt(
             parts.append(f"  Recommended: {d.get('recommended_action','')}")
             parts.append(f"  Common mistake: {d.get('common_mistake','')}")
 
-    return ANALYSIS_SYSTEM, "\n".join(parts)
+    return system, "\n".join(parts)
 
 
-def build_roadmap_prompt(stored_analysis: dict, ctx) -> tuple[str, str]:
+def build_roadmap_prompt(
+    stored_analysis: dict,
+    ctx,
+    workspace_ctx: dict | None = None,
+) -> tuple[str, str]:
+    lang_code  = (workspace_ctx or {}).get("language", "ua")
+    lang_label = "Ukrainian" if lang_code == "ua" else "English"
+
+    system = ROADMAP_SYSTEM + f"\n\nOUTPUT LANGUAGE: Generate all text fields in {lang_label}."
+
     parts = ["── CONFIRMED ANALYSIS ──"]
     resp = stored_analysis.get("response_json", stored_analysis)
 
@@ -179,7 +228,8 @@ def build_roadmap_prompt(stored_analysis: dict, ctx) -> tuple[str, str]:
     if ctx.chunks:
         parts.append("\n── RETRIEVED KNOWLEDGE ──")
         for i, c in enumerate(ctx.chunks, 1):
-            parts.append(f"[{i}] {c.source_title}/{c.source_chapter}")
+            citation = resolve_citation(c.source_title, c.source_chapter)
+            parts.append(f"[{i}] {citation}")
             parts.append(c.text[:400] + ("…" if len(c.text) > 400 else ""))
 
     if ctx.tactics:
@@ -187,4 +237,4 @@ def build_roadmap_prompt(stored_analysis: dict, ctx) -> tuple[str, str]:
         for t in ctx.tactics:
             parts.append(f"• {t['name']}: {t.get('description','')[:150]}")
 
-    return ROADMAP_SYSTEM, "\n".join(parts)
+    return system, "\n".join(parts)
