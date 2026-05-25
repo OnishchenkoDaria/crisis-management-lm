@@ -17,6 +17,7 @@ from app.rag.retrieval_service import retrieve_context
 from app.rag.rag_service import _call_llm
 from app.database import async_session_maker
 from app.analysis.input_guard import classify_input
+from app.rag.book_registry import resolve_citation
 
 log = logging.getLogger(__name__)
 
@@ -163,7 +164,7 @@ def _parse_analysis_response(
         next_questions=data.get("next_questions", []),
         retrieved_sources=[
             SourceRef(
-                title=c.source_title,
+                title=resolve_citation(c.source_title, c.source_chapter),
                 chapter=c.source_chapter,
                 similarity=c.similarity,
             )
