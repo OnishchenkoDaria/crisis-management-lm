@@ -138,10 +138,9 @@ def _parse_analysis_response(
 
     missing = data.get("missing_information", [])
     confidence = data.get("confidence", "low")
-    can_generate = (
-        confidence in ("high", "medium")
-        and len(missing) <= 2
-    )
+
+    readiness = _compute_readiness(confidence, len(missing), clarification_count)
+    can_generate = readiness >= 55
 
     response = AnalysisResponse(
         analysis_id=analysis_id,
@@ -171,14 +170,14 @@ def _parse_analysis_response(
             for c in ctx.chunks
         ],
         can_generate_roadmap=can_generate,
+        readiness_score=readiness,
     )
 
     # Override after max clarifications — never block the user past this point
     if clarification_count >= MAX_AUTO_CLARIFICATIONS:
         response.can_generate_roadmap = True
         response.missing_information = []
-    elif confidence in ("medium", "high"):
-        response.can_generate_roadmap = True
+        response.readiness_score = max(response.readiness_score, 75)
 
     return response
 
@@ -289,7 +288,7 @@ async def _load_analysis(analysis_id: str) -> dict | None:
 async def _update_analysis(analysis_id: str,
     refinement: RefinementRequest,
     response: AnalysisResponse,
-    clarification_count: int = 0,       # ← add this
+    clarification_count: int = 0,
 ) -> None:
     from app.analysis.models import Analysis
     from sqlalchemy import update
@@ -304,6 +303,18 @@ async def _update_analysis(analysis_id: str,
             )
         )
         await session.commit()
+
+def _compute_readiness(
+    confidence: str,
+    missing_count: int,
+    clarification_count: int
+) -> int:
+    base = {"high": 85, "medium": 65, "low": 35}.get(confidence, 35)
+    # Each clarification adds points, diminishing returns
+    clarification_bonus = min(clarification_count * 12, 30)
+    # Missing info reduces score
+    missing_penalty = min(missing_count * 5, 25)
+    return min(100, max(0, base + clarification_bonus - missing_penalty))
 
 
 async def _store_roadmap(roadmap_id, analysis_id, workspace_id, roadmap):

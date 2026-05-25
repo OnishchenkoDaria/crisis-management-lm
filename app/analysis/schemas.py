@@ -120,6 +120,7 @@ class AnalysisResponse(BaseModel):
     analysis_id: str
     workspace_id: int
     status: Literal["draft", "refined", "ready"]
+    readiness_score: int = 0  # 0-100, computed from confidence + clarifications
 
     # Classification
     crisis_summary: str
