@@ -286,7 +286,11 @@ async def _load_analysis(analysis_id: str) -> dict | None:
         }
 
 
-async def _update_analysis(analysis_id, refinement, response):
+async def _update_analysis(analysis_id: str,
+    refinement: RefinementRequest,
+    response: AnalysisResponse,
+    clarification_count: int = 0,       # ← add this
+) -> None:
     from app.analysis.models import Analysis
     from sqlalchemy import update
     async with async_session_maker() as session:
@@ -296,6 +300,7 @@ async def _update_analysis(analysis_id, refinement, response):
                 confidence = response.confidence,
                 refinement_json = refinement.model_dump(),
                 can_generate_roadmap = response.can_generate_roadmap,
+                clarification_count = clarification_count,
             )
         )
         await session.commit()
