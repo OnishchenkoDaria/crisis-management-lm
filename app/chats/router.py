@@ -224,9 +224,12 @@ async def send_message(
         try:
             response = await create_analysis(workspace_id, body)
         except ValueError as e:
-            # Delete the optimistically saved user message since the input was rejected
             await MessageDAO.delete_last_user_message(chat_id)
             raise HTTPException(422, str(e))
+        except (RuntimeError, ConnectionError, OSError) as e:
+            await MessageDAO.delete_last_user_message(chat_id)
+            log.error("Connectivity error during analysis: %s", e)
+            raise HTTPException(503, "Analysis service temporarily unavailable — please try again")
 
         await MessageDAO.save_assistant_message(
             chat_id=chat_id,
