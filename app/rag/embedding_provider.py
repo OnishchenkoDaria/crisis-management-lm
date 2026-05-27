@@ -18,12 +18,15 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+import asyncio
 log = logging.getLogger(__name__)
 
 BACKEND = os.getenv("EMBEDDING_BACKEND", "gemini").lower()
 DIM = int(os.getenv("EMBEDDING_DIM", "768"))
 MODEL = os.getenv("EMBEDDING_MODEL", "gemini-embedding-001")
 BATCH_SIZE = int(os.getenv("EMBEDDING_BATCH_SIZE", "32"))
+
+MAX_EMBED_RETRIES = 3
 
 
 async def _embed_openai(texts: list[str]) -> list[list[float]]:
@@ -222,6 +225,20 @@ async def _call_with_fallback(texts: list[str]) -> list[list[float]]:
 
 
 async def embed_one(text: str) -> list[float]:
-    """Embed a single string - convenience wrapper for query embedding."""
-    results = await embed_texts([text])
-    return results[0]
+    """Embed a single text, returns a flat vector."""
+    for attempt in range(MAX_EMBED_RETRIES):
+        try:
+            vectors = await _embed_gemini([text])   # ← pass as list
+            return vectors[0]                        # ← unwrap first element
+        except Exception as e:
+            log.warning("[embed:gemini] error (attempt %d/%d): %s", attempt + 1, MAX_EMBED_RETRIES, e)
+            if attempt < MAX_EMBED_RETRIES - 1:
+                await asyncio.sleep(2 ** attempt)
+
+    # Fallback to local model
+    try:
+        vectors = await _embed_lmstudio([text])
+        return vectors[0]
+    except Exception as e:
+        log.error("[embed:fallback] also failed: %s", e)
+        raise RuntimeError("All embedding providers unavailable") from e

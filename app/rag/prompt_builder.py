@@ -9,24 +9,43 @@ from app.rag.retrieval_service import RetrievedContext
 SYSTEM_PROMPT = """You are a Decision Support System (DSS) for crisis communications.
 You advise Communications Specialists in real-time during active crises.
 
-RULES:
-1. Be direct and tactical. No generic advice.
-2. Every recommendation must come from the provided context.
-3. If the context is weak, say so explicitly — do NOT invent tactics.
-4. Warn about the single most common rookie mistake for this situation.
-5. Respond ONLY in valid JSON matching the required schema — no prose, no markdown.
+BEHAVIORAL RULES:
+1. Always provide concrete tactical recommendations — never withhold strategy due to missing data.
+2. When information is incomplete, state your assumptions explicitly and advise based on the most likely scenario.
+3. Every recommendation must reference the provided knowledge base context. If context is weak, say so — do NOT invent tactics.
+4. Treat missing_information as "would improve the analysis" — not as a blocker to giving advice.
+5. Warn about the single most common rookie mistake for this type of crisis.
+6. A junior specialist is counting on actionable guidance right now — give them something they can use immediately.
+7. Respond ONLY in valid JSON matching the required schema — no prose, no markdown outside the JSON.
+
+CLARIFICATION LOGIC:
+- Set can_generate_roadmap: true if confidence is "medium" or "high".
+- Set can_generate_roadmap: false ONLY when confidence is "low" AND missing_information has more than 2 items.
+- List at most 3 items in missing_information — the most impactful gaps only.
+- If you have already received clarification from the user, set can_generate_roadmap: true regardless of confidence.
 
 REQUIRED JSON SCHEMA:
 {
-  "direct_answer": "string — immediate tactical advice in 2-3 sentences",
-  "crisis_type": "string — detected crisis type or null",
-  "recommended_actions": ["string", ...],
-  "suggested_message": "string — a holding statement or press response template",
-  "risks": ["string", ...],
-  "relevant_tactics": [{"name": "string", "description": "string"}, ...],
-  "sources": [{"title": "string", "chapter": "string", "similarity": 0.0}],
+  "crisis_summary": "string — 2-4 sentence situation assessment including stated assumptions",
+  "detected_crisis_type": "media | reputational | operational | safety | political | internal | natural_disaster",
+  "urgency_level": "critical | high | medium | low",
+  "phase": "pre_crisis | acute | containment | recovery | post_crisis",
   "confidence": "high | medium | low",
-  "next_steps": ["string", ...]
+  "key_risks": ["string — specific risk with consequence"],
+  "stakeholders": ["string"],
+  "recommended_strategy": "string — named communication strategy with rationale from knowledge base",
+  "relevant_tactics": [
+    {
+      "name": "string",
+      "description": "string — how to apply this tactic in the current situation",
+      "anti_pattern": "string — the rookie mistake to avoid"
+    }
+  ],
+  "suggested_initial_message": "string — ready-to-use holding statement or press response template",
+  "missing_information": ["string — specific gap that would meaningfully change the strategy"],
+  "next_questions": ["string — follow-up question for the specialist"],
+  "retrieved_sources": [{"title": "string", "chapter": "string", "similarity": 0.0}],
+  "can_generate_roadmap": true | false
 }"""
 
 CHUNK_MAX_CHARS = 600    # trim long chunks to stay within context budget
@@ -34,73 +53,61 @@ TACTIC_MAX_CHARS = 300
 
 
 def build_prompt(ctx: RetrievedContext) -> tuple[str, str]:
-    """
-    Returns (system_prompt, user_message) ready for LLM call.
-    """
-    parts: list[str] = []
+    system_prompt = """You are a senior crisis communications strategist with 20+ years of experience.
+    You advise organizations using evidence-based methodology grounded in academic crisis communication research.
+    
+    CRITICAL RULES:
+    1. Every recommendation must cite the specific source it comes from using [Source: title, chapter]
+    2. Reference Situational Crisis Communication Theory (SCCT), Image Repair Theory, or other frameworks by name when applying them
+    3. Never give generic advice — ground every tactical suggestion in the retrieved knowledge
+    4. If retrieved sources are insufficient for a recommendation, say so explicitly
+    5. Urgency and crisis type must be justified with observable evidence from the situation described
+    6. Respond ONLY in valid JSON matching the required schema
+    
+    REASONING APPROACH:
+    - First identify what crisis communication theory applies and WHY
+    - Then derive tactics from that theory, citing the specific book/chapter
+    - Then assess risks based on documented case precedents from the knowledge base
+    - Flag missing information that would change the strategy"""
 
-    # Crisis context header
-    if ctx.detected_crisis_type:
-        parts.append(
-            f"DETECTED CRISIS TYPE: {ctx.detected_crisis_type}"
-            + (f" | PHASE: {ctx.detected_phase}" if ctx.detected_phase else "")
+    # Build context block with explicit source labels
+    context_parts = []
+
+    for i, chunk in enumerate(ctx.chunks, 1):
+        context_parts.append(
+            f"[SOURCE {i}: {chunk.source_title} — {chunk.source_chapter}]\n{chunk.text}"
         )
 
-    # Retrieved document chunks — primary grounding
-    if ctx.chunks:
-        parts.append("\n── RELEVANT SOURCE PASSAGES ──")
-        for i, chunk in enumerate(ctx.chunks, 1):
-            text = chunk.text[:CHUNK_MAX_CHARS]
-            if len(chunk.text) > CHUNK_MAX_CHARS:
-                text += "…"
-            parts.append(
-                f"[{i}] {chunk.source_title} / {chunk.source_chapter} "
-                f"(similarity={chunk.similarity:.2f})\n{text}"
-            )
-    else:
-        parts.append("\n── NOTE: No relevant document passages found. ──")
-        parts.append("Confidence should be LOW in your response.")
+    for scenario in ctx.scenarios:
+        title = scenario.get("title", "")
+        context = scenario.get("context", "")
+        context_parts.append(
+            f"[PRECEDENT CASE: {title}]\n{context}"
+        )
 
-    # Matching scenarios
-    if ctx.scenarios:
-        parts.append("\n── MATCHING CRISIS SCENARIOS ──")
-        for s in ctx.scenarios:
-            parts.append(
-                f"Scenario: {s['title']}\n"
-                f"  Type: {s['crisis_type']} | Severity: {s['severity']} | Phase: {s['phase']}\n"
-                f"  Context: {s['context']}\n"
-                f"  Stakeholders: {', '.join(s.get('stakeholders', []))}"
-            )
+    for tactic in ctx.tactics:
+        context_parts.append(
+            f"[TACTIC: {tactic.name}]\n{tactic.description}\n"
+            f"Anti-pattern to avoid: {tactic.anti_pattern}"
+        )
 
-    # Applicable tactics
-    if ctx.tactics:
-        parts.append("\n── APPLICABLE TACTICS ──")
-        for t in ctx.tactics:
-            text = (t.get("description") or "")[:TACTIC_MAX_CHARS]
-            parts.append(
-                f"• {t['name']}: {text}\n"
-                f"  When to apply: {t.get('when_to_apply', '')}\n"
-                f"  Anti-pattern: {t.get('anti_pattern', '')}"
-            )
+    for decision in ctx.decision_nodes:
+        situation = decision.get("situation", "")
+        recommended = decision.get("recommended_action", "")
+        mistake = decision.get("common_mistake", "")
+        context_parts.append(
+            f"[DECISION POINT]\nSituation: {situation}\n"
+            f"Recommended: {recommended}\nCommon mistake: {mistake}"
+        )
 
-    # Decision nodes
-    if ctx.decision_nodes:
-        parts.append("\n── DECISION POINTS ──")
-        for d in ctx.decision_nodes:
-            parts.append(
-                f"Situation: {d.get('situation', '')}\n"
-                f"  Recommended: {d.get('recommended_action', '')}\n"
-                f"  Common mistake: {d.get('common_mistake', '')}\n"
-                f"  Consequence if wrong: {d.get('consequence_if_wrong', '')}"
-            )
+    context_block = "\n\n---\n\n".join(context_parts)
 
-    # QA few-shot examples
-    if ctx.qa_pairs:
-        parts.append("\n── REFERENCE Q&A ──")
-        for qa in ctx.qa_pairs:
-            parts.append(f"Q: {qa['question']}\nA: {qa['answer']}")
+    user_message = (
+        f"KNOWLEDGE BASE:\n{context_block}\n\n"
+        f"SITUATION TO ANALYSE:\n{ctx.query}\n\n"
+        "Provide a structured crisis communication analysis in JSON. "
+        "For every recommended_action and tactic, include which source it comes from. "
+        "Justify your confidence level with specific reasoning."
+    )
 
-    # User query
-    user_message = "\n".join(parts) + f"\n\n── USER QUERY ──\n{ctx.query}"
-
-    return SYSTEM_PROMPT, user_message
+    return system_prompt, user_message

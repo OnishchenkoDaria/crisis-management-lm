@@ -22,6 +22,7 @@ from app.ingest.models.decision_node_model import DecisionNode
 from app.ingest.models.qa_model import QAPair
 from app.rag.rag_chunk_dao import RagChunkDAO, SimilarChunk
 from app.rag.embedding_provider import embed_one
+from app.rag.book_registry import resolve_citation
 
 log = logging.getLogger(__name__)
 
@@ -48,7 +49,7 @@ async def retrieve_context(
     crisis_type: str | None = None,
     phase:       str | None = None,
     language:    str | None = None,
-    chunk_limit: int = 5,
+    chunk_limit: int = 10,
     tactic_limit: int = 4,
     qa_limit:    int = 3,
 ) -> RetrievedContext:
@@ -71,6 +72,9 @@ async def retrieve_context(
         limit=chunk_limit,
         language=language,
     )
+    for chunk in ctx.chunks:
+        chunk.source_title = resolve_citation(chunk.source_title, chunk.source_chapter)
+
     log.info("  Retrieved %d chunks", len(ctx.chunks))
 
     if not crisis_type and ctx.chunks:

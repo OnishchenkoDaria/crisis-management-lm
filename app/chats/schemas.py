@@ -45,3 +45,8 @@ class ShareLinkResponse(BaseModel):
     created_at: datetime
 
     model_config = {"from_attributes": True}
+
+
+class ClarifyRequest(BaseModel):
+    analysis_id: str
+    answers:     dict[str, str]

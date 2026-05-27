@@ -16,24 +16,36 @@ from app.analysis.prompt_templates import build_analysis_prompt, build_roadmap_p
 from app.rag.retrieval_service import retrieve_context
 from app.rag.rag_service import _call_llm
 from app.database import async_session_maker
+from app.analysis.input_guard import classify_input
+from app.rag.book_registry import resolve_citation
 
 log = logging.getLogger(__name__)
+
+MINIMUM_SIMILARITY = 0.60
+MAX_AUTO_CLARIFICATIONS = 2
 
 async def create_analysis(
     workspace_id: int,
     situation: SituationInput,
 ) -> AnalysisResponse:
+    guard = await classify_input(situation.situation_description)
+
+    if guard.get("injection_detected"):
+        log.warning("Prompt injection attempt: workspace=%d", workspace_id)
+        raise ValueError("Input rejected: contains disallowed patterns.")
+
+    if not guard.get("valid"):
+        raise ValueError(
+            f"Input does not describe a recognisable crisis situation. "
+            f"{guard.get('reason', 'Please describe a real organisational crisis.')}"
+        )
+
     analysis_id = str(uuid.uuid4())
 
     # Workspace context
     workspace_ctx = await _load_workspace_context(workspace_id)
     # RAG retrieval
-    ctx = await retrieve_context(
-        situation.situation_description,
-        crisis_type  = situation.crisis_type.value if situation.crisis_type else None,
-        phase        = situation.phase.value if situation.phase else None,
-        chunk_limit  = 6,
-    )
+    ctx = await retrieve_context(situation.situation_description, chunk_limit=6)
 
     system_prompt, user_message = build_analysis_prompt(situation, ctx, workspace_ctx)
     raw = await _call_llm(system_prompt, user_message)
@@ -51,6 +63,9 @@ async def refine_analysis(
 ) -> AnalysisResponse:
     # Load existing analysis state
     stored = await _load_analysis(analysis_id)
+    current_count = stored.get("clarification_count", 0)
+    new_count = current_count + 1
+
     if not stored or stored["workspace_id"] != workspace_id:
         raise ValueError(f"Analysis {analysis_id} not found")
 
@@ -74,10 +89,14 @@ async def refine_analysis(
         original, ctx, workspace_ctx, refinement=refinement
     )
     raw = await _call_llm(system_prompt, user_message)
-    response = _parse_analysis_response(raw, analysis_id, workspace_id, ctx)
+    new_count = stored.get("clarification_count", 0) + 1
+    response = _parse_analysis_response(
+        raw, analysis_id, workspace_id, ctx,
+        clarification_count=new_count
+    )
     response.status = "refined"
 
-    await _update_analysis(analysis_id, refinement, response)
+    await _update_analysis(analysis_id, refinement, response, clarification_count=new_count)
     return response
 
 
@@ -104,7 +123,7 @@ async def generate_roadmap(analysis_id: str, workspace_id: int) -> RoadmapRespon
 
 
 def _parse_analysis_response(
-    raw: str, analysis_id: str, workspace_id: int, ctx
+    raw: str, analysis_id: str, workspace_id: int, ctx, clarification_count: int = 0,
 ) -> AnalysisResponse:
     #Parse LLM JSON into AnalysisResponse with graceful fallback
     import re
@@ -120,40 +139,48 @@ def _parse_analysis_response(
 
     missing = data.get("missing_information", [])
     confidence = data.get("confidence", "low")
-    can_generate = (
-        confidence in ("high", "medium")
-        and len(missing) <= 2
-    )
 
-    return AnalysisResponse(
-        analysis_id = analysis_id,
-        workspace_id = workspace_id,
-        status = "draft",
-        crisis_summary = data.get("crisis_summary", ""),
-        detected_crisis_type = _safe_enum(CrisisType, data.get("detected_crisis_type"), CrisisType.reputational),
-        urgency_level = _safe_enum(UrgencyLevel, data.get("urgency_level"), UrgencyLevel.high),
-        phase = _safe_enum(CrisisPhase, data.get("phase"), CrisisPhase.acute),
-        confidence = confidence,
-        key_risks = data.get("key_risks", []),
-        stakeholders = data.get("stakeholders", []),
-        recommended_strategy  = data.get("recommended_strategy", ""),
-        relevant_tactics = [
+    readiness = _compute_readiness(confidence, len(missing), clarification_count)
+    can_generate = readiness >= 55
+
+    response = AnalysisResponse(
+        analysis_id=analysis_id,
+        workspace_id=workspace_id,
+        status="draft",
+        crisis_summary=data.get("crisis_summary", ""),
+        detected_crisis_type=_safe_enum(CrisisType, data.get("detected_crisis_type"), CrisisType.reputational),
+        urgency_level=_safe_enum(UrgencyLevel, data.get("urgency_level"), UrgencyLevel.high),
+        phase=_safe_enum(CrisisPhase, data.get("phase"), CrisisPhase.acute),
+        confidence=confidence,
+        key_risks=data.get("key_risks", []),
+        stakeholders=data.get("stakeholders", []),
+        recommended_strategy=data.get("recommended_strategy", ""),
+        relevant_tactics=[
             TacticRef(**t) for t in data.get("relevant_tactics", [])
             if isinstance(t, dict)
         ],
-        suggested_initial_message = data.get("suggested_initial_message", ""),
-        missing_information = missing,
-        next_questions = data.get("next_questions", []),
-        retrieved_sources = [
+        suggested_initial_message=data.get("suggested_initial_message", ""),
+        missing_information=missing,
+        next_questions=data.get("next_questions", []),
+        retrieved_sources=[
             SourceRef(
-                title = c.source_title,
-                chapter = c.source_chapter,
-                similarity = c.similarity,
+                title=resolve_citation(c.source_title, c.source_chapter),
+                chapter=c.source_chapter,
+                similarity=c.similarity,
             )
             for c in ctx.chunks
         ],
-        can_generate_roadmap = can_generate,
+        can_generate_roadmap=can_generate,
+        readiness_score=readiness,
     )
+
+    # Override after max clarifications — never block the user past this point
+    if clarification_count >= MAX_AUTO_CLARIFICATIONS:
+        response.can_generate_roadmap = True
+        response.missing_information = []
+        response.readiness_score = max(response.readiness_score, 75)
+
+    return response
 
 
 def _parse_roadmap_response(
@@ -259,7 +286,11 @@ async def _load_analysis(analysis_id: str) -> dict | None:
         }
 
 
-async def _update_analysis(analysis_id, refinement, response):
+async def _update_analysis(analysis_id: str,
+    refinement: RefinementRequest,
+    response: AnalysisResponse,
+    clarification_count: int = 0,
+) -> None:
     from app.analysis.models import Analysis
     from sqlalchemy import update
     async with async_session_maker() as session:
@@ -269,9 +300,22 @@ async def _update_analysis(analysis_id, refinement, response):
                 confidence = response.confidence,
                 refinement_json = refinement.model_dump(),
                 can_generate_roadmap = response.can_generate_roadmap,
+                clarification_count = clarification_count,
             )
         )
         await session.commit()
+
+def _compute_readiness(
+    confidence: str,
+    missing_count: int,
+    clarification_count: int
+) -> int:
+    base = {"high": 85, "medium": 65, "low": 35}.get(confidence, 35)
+    # Each clarification adds points, diminishing returns
+    clarification_bonus = min(clarification_count * 12, 30)
+    # Missing info reduces score
+    missing_penalty = min(missing_count * 5, 25)
+    return min(100, max(0, base + clarification_bonus - missing_penalty))
 
 
 async def _store_roadmap(roadmap_id, analysis_id, workspace_id, roadmap):

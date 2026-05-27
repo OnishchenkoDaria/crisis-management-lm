@@ -29,6 +29,7 @@ from app.ingest.models.tactics import Tactic
 from app.ingest.models.decision_node_model import DecisionNode
 from app.ingest.models.training_sample_model import TrainingSample
 from app.chats.models import Chat, ChatShareLink
+from app.messages.models import Message
 # -----
 
 # this is the Alembic Config object, which provides

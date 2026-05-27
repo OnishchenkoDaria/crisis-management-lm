@@ -5,16 +5,18 @@ from contextlib import asynccontextmanager
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 
-from app.analysis.analysis_service import create_analysis
+from app.analysis.analysis_service import create_analysis, refine_analysis
 from app.analysis.schemas import SituationInput, AnalysisResponse
 from app.auth.utils import get_current_user, get_optional_user, get_chat_permission
 from app.chats.dao import ChatDAO
 from app.chats.models import Chat
-from app.chats.schemas import ChatCreate, ChatRename, ChatResponse, WorkspaceLockStatus
+from app.chats.schemas import ChatCreate, ChatRename, ChatResponse, WorkspaceLockStatus, ClarifyRequest
 from app.chats.dao import ShareLinkDAO
 from app.chats.schemas import ShareLinkResponse
+from app.messages.dao import MessageDAO
 from app.users.models import User
 from app.workspaces.dao import WorkspaceDAO
+from app.analysis.schemas import RefinementRequest
 
 log = logging.getLogger(__name__)
 
@@ -204,7 +206,6 @@ async def send_message(
     current_user: User | None = Depends(get_optional_user),
     token: str | None = Query(None),
 ) -> AnalysisResponse:
-    # Share link visitors get 403 here — read-only
     permission = await get_chat_permission(chat_id, current_user, token)
     if permission != "owner":
         raise HTTPException(403, "Only the chat owner can send messages")
@@ -213,11 +214,80 @@ async def send_message(
     if chat.status == "finished":
         raise HTTPException(400, "This chat is finished")
 
+    await MessageDAO.save_user_message(
+        chat_id=chat_id,
+        content=body.situation_description,
+        payload=body.model_dump(),
+    )
+
     async with generation_lock(workspace_id, chat_id):
-        response = await create_analysis(workspace_id, body)
+        try:
+            response = await create_analysis(workspace_id, body)
+        except ValueError as e:
+            await MessageDAO.delete_last_user_message(chat_id)
+            raise HTTPException(422, str(e))
+        except (RuntimeError, ConnectionError, OSError) as e:
+            await MessageDAO.delete_last_user_message(chat_id)
+            log.error("Connectivity error during analysis: %s", e)
+            raise HTTPException(503, "Analysis service temporarily unavailable — please try again")
+
+        await MessageDAO.save_assistant_message(
+            chat_id=chat_id,
+            content=_build_assistant_summary(response),
+            payload=response.model_dump(),
+            analysis_id=response.analysis_id,
+        )
         await ChatDAO.increment_message_count(chat_id)
+
     return response
 
+def _build_assistant_summary(response: AnalysisResponse) -> str:
+    crisis_type = response.detected_crisis_type
+    urgency     = response.urgency_level
+    if hasattr(crisis_type, "value"): crisis_type = crisis_type.value
+    if hasattr(urgency, "value"):     urgency     = urgency.value
+
+    lines = [
+        f"**{crisis_type.upper()} · {urgency} urgency**",
+        "",
+        response.crisis_summary,
+    ]
+
+    # Recommended strategy — the core advice
+    if response.recommended_strategy:
+        lines += ["", "**Recommended strategy**", response.recommended_strategy]
+
+    # Tactics — specific actions to take
+    if response.relevant_tactics:
+        lines += ["", "**Tactics**"]
+        for t in response.relevant_tactics:
+            lines.append(f"**{t.name}** — {t.description}")
+            if t.anti_pattern:
+                lines.append(f"⚠ Avoid: {t.anti_pattern}")
+
+    # Suggested message — ready to use
+    if response.suggested_initial_message:
+        lines += ["", "**Suggested statement**", f"> {response.suggested_initial_message}"]
+
+    # Key risks
+    if response.key_risks:
+        lines += ["", "**Key risks**"]
+        lines += [f"– {r}" for r in response.key_risks[:3]]
+
+    # Missing info — informational only, not a blocker
+    if response.missing_information:
+        lines += ["", "⚠ **Would improve analysis**"]
+        lines += [f"– {item}" for item in response.missing_information[:3]]
+
+    # Sources
+    if response.retrieved_sources:
+        lines += ["", "**Sources**"]
+        lines += [
+            f"– *{s.title}* — {s.chapter} (relevance: {s.similarity:.0%})"
+            for s in response.retrieved_sources[:3]
+        ]
+
+    return "\n".join(lines)
 
 @router.post(
     "/workspaces/{workspace_id}/chats/{chat_id}/share",
@@ -257,3 +327,49 @@ async def revoke_share_link(
     revoked = await ShareLinkDAO.revoke(link_token)
     if not revoked:
         raise HTTPException(404, "Share link not found")
+
+
+@router.post(
+    "/workspaces/{workspace_id}/chats/{chat_id}/clarify",
+    response_model=AnalysisResponse,
+)
+async def clarify_analysis(
+    workspace_id: int,
+    chat_id:      int,
+    body:         ClarifyRequest,
+    current_user: User | None = Depends(get_optional_user),
+    token:        str | None  = Query(None),
+) -> AnalysisResponse:
+    permission = await get_chat_permission(chat_id, current_user, token)
+    if permission != "owner":
+        raise HTTPException(403, "Only the chat owner can clarify")
+
+    answers_text = "\n".join(f"**{q}**\n{a}" for q, a in body.answers.items())
+    await MessageDAO.save_user_message(
+        chat_id=chat_id,
+        content=answers_text,
+        payload={"type": "clarification", "answers": body.answers},
+    )
+
+    # Build RefinementRequest object — not keyword args
+    refinement = RefinementRequest(
+        user_comment="\n".join(f"{q}: {a}" for q, a in body.answers.items()),
+        fields_to_update=body.answers,
+        additional_context=None,
+        changed_constraints=[],
+    )
+
+    response = await refine_analysis(
+        analysis_id=body.analysis_id,
+        workspace_id=workspace_id,
+        refinement=refinement,
+    )
+
+    await MessageDAO.save_assistant_message(
+        chat_id=chat_id,
+        content=_build_assistant_summary(response),
+        payload=response.model_dump(),
+        analysis_id=response.analysis_id,
+    )
+
+    return response

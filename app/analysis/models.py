@@ -1,5 +1,7 @@
+import uuid
+
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-from sqlalchemy import ForeignKey, Enum, Boolean
+from sqlalchemy import ForeignKey, Enum, Boolean, String, Integer
 from sqlalchemy.dialects.postgresql import JSONB
 from app.database import Base, int_pk, str_not_null
 from typing import Any, Dict, Optional
@@ -88,7 +90,9 @@ class CaseAnalysis(Base):
 
 
 class Analysis(Base):
-    id: Mapped[int_pk]
+    __tablename__ = "analyses"
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
     workspace_id: Mapped[int] = mapped_column(ForeignKey("workspaces.id"), nullable=False, index=True)
     situation_input: Mapped[Dict[str, Any]] = mapped_column(JSONB, nullable=False)
     detected_type: Mapped[str_not_null]
@@ -98,6 +102,7 @@ class Analysis(Base):
     refinement_json: Mapped[Dict[str, Any] | None] = mapped_column(JSONB, nullable=True)
     can_generate_roadmap: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
     retrieved_chunk_ids: Mapped[list[str]] = mapped_column(JSONB, nullable=False, default=list)
+    clarification_count: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
 
     def __str__(self):
         return (f"Analysis(id={self.id}, "
