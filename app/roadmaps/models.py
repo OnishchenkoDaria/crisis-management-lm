@@ -12,7 +12,7 @@ class Roadmap(Base):
     id: Mapped[int_pk]
     analysis_id: Mapped[str] = mapped_column(
         String(36),
-        ForeignKey("case_analysis.id"),
+        ForeignKey("analyses.id"),
         nullable=False,
         index=True
     )
