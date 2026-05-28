@@ -14,9 +14,13 @@ from app.chats.schemas import ChatCreate, ChatRename, ChatResponse, WorkspaceLoc
 from app.chats.dao import ShareLinkDAO
 from app.chats.schemas import ShareLinkResponse
 from app.messages.dao import MessageDAO
+from app.roadmaps.dao import RoadmapDAO
 from app.users.models import User
 from app.workspaces.dao import WorkspaceDAO
 from app.analysis.schemas import RefinementRequest
+from app.analysis.analysis_service import generate_roadmap
+from app.analysis.schemas import RoadmapResponse
+from app.chats.schemas import RoadmapGenerateRequest
 
 log = logging.getLogger(__name__)
 
@@ -373,3 +377,58 @@ async def clarify_analysis(
     )
 
     return response
+
+@router.post(
+    "/workspaces/{workspace_id}/chats/{chat_id}/roadmap",
+    response_model=RoadmapResponse,
+    status_code=status.HTTP_201_CREATED,
+)
+async def generate_chat_roadmap(
+    workspace_id: int,
+    chat_id: int,
+    body: RoadmapGenerateRequest,
+    current_user: User | None = Depends(get_optional_user),
+    token: str | None = Query(None),
+) -> RoadmapResponse:
+    permission = await get_chat_permission(chat_id, current_user, token)
+    if permission != "owner":
+        raise HTTPException(403, "Only the chat owner can generate a roadmap")
+
+    await _get_chat_or_404(chat_id, workspace_id)
+
+    try:
+        roadmap = await generate_roadmap(body.analysis_id, workspace_id)
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+    except (RuntimeError, ConnectionError, OSError) as e:
+        log.error("Roadmap generation failed: %s", e)
+        raise HTTPException(503, "Roadmap generation temporarily unavailable — please retry")
+
+    await ChatDAO.set_finished(chat_id)
+    return roadmap
+
+
+@router.get(
+    "/workspaces/{workspace_id}/chats/{chat_id}/roadmap",
+    response_model=RoadmapResponse,
+)
+async def get_chat_roadmap(
+    workspace_id: int,
+    chat_id: int,
+    current_user: User | None = Depends(get_optional_user),
+    token: str | None = Query(None),
+) -> RoadmapResponse:
+    permission = await get_chat_permission(chat_id, current_user, token)
+    if permission == "none":
+        raise HTTPException(403, "Access denied")
+
+    # Find last analysis_id from this chat's messages
+    last_msg = await MessageDAO.find_last_analysis_message(chat_id)
+    if not last_msg or not last_msg.analysis_id:
+        raise HTTPException(404, "No analysis found for this chat")
+
+    roadmap = await RoadmapDAO.find_one_or_none_by_filter(analysis_id=last_msg.analysis_id)
+    if not roadmap:
+        raise HTTPException(404, "No roadmap generated for this chat yet")
+
+    return RoadmapResponse(**roadmap.roadmap_json)

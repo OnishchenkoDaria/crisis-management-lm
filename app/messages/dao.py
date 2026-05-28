@@ -69,3 +69,17 @@ class MessageDAO(BaseDAO):
             if msg:
                 await db.delete(msg)
                 await db.commit()
+
+    @classmethod
+    async def find_last_analysis_message(cls, chat_id: int):
+        """Return the last assistant message with a non-null analysis_id."""
+        async with async_session_maker() as session:
+            result = await session.execute(
+                select(Message)
+                .where(Message.chat_id == chat_id)
+                .where(Message.role == "assistant")
+                .where(Message.analysis_id.isnot(None))
+                .order_by(Message.created_at.desc())
+                .limit(1)
+            )
+            return result.scalar_one_or_none()
