@@ -18,7 +18,7 @@ from typing import Any, Dict, Optional
 class CaseAnalysis(Base):
     __tablename__ = 'case_analysis'
 
-    id: Mapped[int_pk]
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
     case_id: Mapped[int | None] = mapped_column(ForeignKey("cases.id"), nullable=True)
     workspace_id: Mapped[int | None] = mapped_column(ForeignKey("workspaces.id"), nullable=True)
     crisis_type: Mapped[str] = mapped_column(
