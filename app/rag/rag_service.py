@@ -9,6 +9,7 @@ Flow:
 """
 from __future__ import annotations
 
+import asyncio
 import json
 import logging
 import os
@@ -26,6 +27,10 @@ log = logging.getLogger(__name__)
 # Use the same LLM backend already configured for PDF extraction
 LLM_BACKEND  = os.getenv("LLM_BACKEND", "mistral").lower()
 LLM_MAX_TOKENS = int(os.getenv("RAG_MAX_TOKENS", "2048"))
+ROADMAP_MAX_TOKENS = int(os.getenv("ROADMAP_MAX_TOKENS", "8192"))
+
+MAX_LLM_RETRIES = 3
+RETRY_STATUSES  = {429, 500, 502, 503, 504}
 
 
 async def handle_query(req: RagQueryRequest) -> RagQueryResponse:
@@ -51,11 +56,27 @@ async def handle_query(req: RagQueryRequest) -> RagQueryResponse:
 
 
 
-async def _call_llm(system_prompt: str, user_message: str) -> str:
-    """Routes to the configured LLM backend."""
+async def _call_llm(system_prompt: str, user_message: str, max_tokens: int = LLM_MAX_TOKENS) -> str:
+    for attempt in range(MAX_LLM_RETRIES):
+        try:
+            return await _call_llm_once(system_prompt, user_message, max_tokens)
+        except httpx.HTTPStatusError as e:
+            if e.response.status_code in RETRY_STATUSES:
+                wait = 2 ** attempt   # 1s, 2s, 4s
+                log.warning(
+                    "LLM returned %d (attempt %d/%d) — retrying in %ds",
+                    e.response.status_code, attempt + 1, MAX_LLM_RETRIES, wait,
+                )
+                if attempt < MAX_LLM_RETRIES - 1:
+                    await asyncio.sleep(wait)
+                    continue
+            raise
+    raise RuntimeError("LLM call failed after all retries")
 
+
+async def _call_llm_once(system_prompt: str, user_message: str, max_tokens: int = LLM_MAX_TOKENS) -> str:
     if LLM_BACKEND == "mistral":
-        return await _call_mistral(system_prompt, user_message)
+        return await _call_mistral(system_prompt, user_message, max_tokens)
     elif LLM_BACKEND == "gemini":
         return await _call_gemini(system_prompt, user_message)
     elif LLM_BACKEND in ("openrouter", "groq", "openai", "lmstudio"):
@@ -64,18 +85,19 @@ async def _call_llm(system_prompt: str, user_message: str) -> str:
         raise ValueError(f"Unknown LLM_BACKEND='{LLM_BACKEND}'")
 
 
-async def _call_mistral(system_prompt: str, user_message: str) -> str:
+async def _call_mistral(system_prompt: str, user_message: str, max_tokens: int = LLM_MAX_TOKENS) -> str:
     api_key = os.getenv("MISTRAL_API_KEY", "")
     model   = os.getenv("MISTRAL_MODEL", "mistral-small-latest")
+    timeout = 120 if max_tokens > 4096 else 60
 
-    async with httpx.AsyncClient(timeout=60) as client:
+    async with httpx.AsyncClient(timeout=timeout) as client:
         resp = await client.post(
             "https://api.mistral.ai/v1/chat/completions",
             headers={"Authorization": f"Bearer {api_key}",
                      "Content-Type": "application/json"},
             json={
                 "model": model,
-                "max_tokens": LLM_MAX_TOKENS,
+                "max_tokens": max_tokens,
                 "temperature": 0.1,
                 "response_format": {"type": "json_object"},
                 "messages": [

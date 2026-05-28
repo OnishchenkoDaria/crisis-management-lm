@@ -76,20 +76,14 @@ Return ONLY valid JSON matching this schema:
           "due_hint": "string",
           "rationale": "string",
           "risk_if_skipped": "string",
-          "source_refs": ["string — book title or tactic name"]
+          "source_refs": ["string"]
         }
       ]
     }
   ],
-  "communication_messages": [
-    {"channel":"string","message":"string","timing":"string","tone":"string"}
-  ],
-  "monitoring_plan": [
-    {"metric":"string","frequency":"string","owner":"string","threshold":"string"}
-  ],
-  "escalation_rules": [
-    {"trigger":"string","action":"string","owner_role":"string"}
-  ],
+  "communication_messages": [{"channel":"string","message":"string","timing":"string","tone":"string"}],
+  "monitoring_plan": [{"metric":"string","frequency":"string","owner":"string","threshold":"string"}],
+  "escalation_rules": [{"trigger":"string","action":"string","owner_role":"string"}],
   "risks": ["string"],
   "next_steps": ["string"]
 }

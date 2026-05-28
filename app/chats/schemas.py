@@ -50,3 +50,6 @@ class ShareLinkResponse(BaseModel):
 class ClarifyRequest(BaseModel):
     analysis_id: str
     answers:     dict[str, str]
+
+class RoadmapGenerateRequest(BaseModel):
+    analysis_id: str

@@ -5,6 +5,8 @@ import logging
 import uuid
 from datetime import datetime, timezone
 
+from sqlalchemy import delete
+
 from app.analysis.schemas import (
     SituationInput, RefinementRequest,
     AnalysisResponse, RoadmapResponse,
@@ -14,10 +16,11 @@ from app.analysis.schemas import (
 )
 from app.analysis.prompt_templates import build_analysis_prompt, build_roadmap_prompt
 from app.rag.retrieval_service import retrieve_context
-from app.rag.rag_service import _call_llm
+from app.rag.rag_service import _call_llm, ROADMAP_MAX_TOKENS
 from app.database import async_session_maker
 from app.analysis.input_guard import classify_input
 from app.rag.book_registry import resolve_citation
+from app.roadmaps.models import Roadmap
 
 log = logging.getLogger(__name__)
 
@@ -107,7 +110,6 @@ async def generate_roadmap(analysis_id: str, workspace_id: int) -> RoadmapRespon
     if not stored.get("can_generate_roadmap"):
         raise ValueError("Analysis not ready for roadmap generation. Add missing information first.")
 
-    roadmap_id = str(uuid.uuid4())
     ctx = await retrieve_context(
         stored["situation_input"]["situation_description"],
         crisis_type=stored["detected_crisis_type"],
@@ -115,10 +117,24 @@ async def generate_roadmap(analysis_id: str, workspace_id: int) -> RoadmapRespon
     )
 
     system_prompt, user_message = build_roadmap_prompt(stored, ctx)
-    raw = await _call_llm(system_prompt, user_message)
-    roadmap = _parse_roadmap_response(raw, roadmap_id, analysis_id, workspace_id, ctx)
+    raw = await _call_llm(system_prompt, user_message, max_tokens=ROADMAP_MAX_TOKENS)
+    log.info("Roadmap raw LLM response (first 2000): %.2000s", raw)
 
-    await _store_roadmap(roadmap_id, analysis_id, workspace_id, roadmap)
+    # real ID comes from the DB after insert
+    roadmap = _parse_roadmap_response(raw, "", analysis_id, workspace_id, ctx)
+
+    row = await _store_roadmap(analysis_id, workspace_id, roadmap)
+    roadmap.roadmap_id = str(row.id)
+
+    # Patch the stored JSON to include the real id
+    async with async_session_maker() as session:
+        from sqlalchemy import update
+        dumped = roadmap.model_dump()
+        await session.execute(
+            update(Roadmap).where(Roadmap.id == row.id).values(roadmap_json=dumped)
+        )
+        await session.commit()
+
     return roadmap
 
 
@@ -134,8 +150,12 @@ def _parse_analysis_response(
     try:
         data = json.loads(raw)
     except json.JSONDecodeError:
-        log.warning("LLM returned non-JSON for analysis — using fallback")
+        log.error("Roadmap JSON truncated at pos %d — increase ROADMAP_MAX_TOKENS. Tail: %.200s", e.pos, raw[-200:])
         data = {}
+
+    log.info("Roadmap parsed: %d phases, summary=%r",
+             len(data.get("phases", [])),
+             data.get("executive_summary", "")[:80])
 
     missing = data.get("missing_information", [])
     confidence = data.get("confidence", "low")
@@ -318,18 +338,23 @@ def _compute_readiness(
     return min(100, max(0, base + clarification_bonus - missing_penalty))
 
 
-async def _store_roadmap(roadmap_id, analysis_id, workspace_id, roadmap):
-    from app.roadmaps.models import Roadmap
+async def _store_roadmap(analysis_id, workspace_id, roadmap) -> Roadmap:
     async with async_session_maker() as session:
-        session.add(Roadmap(
-            id = roadmap_id,
-            analysis_id = analysis_id,
-            workspace_id = workspace_id,
-            crisis_type = roadmap.crisis_type.value,
-            roadmap_json = roadmap.model_dump(),
-            confidence = roadmap.confidence,
-        ))
+        await session.execute(
+            delete(Roadmap).where(Roadmap.analysis_id == analysis_id)
+        )
+        row = Roadmap(
+            analysis_id=analysis_id,
+            workspace_id=workspace_id,
+            crisis_type=roadmap.crisis_type.value
+                if hasattr(roadmap.crisis_type, "value") else roadmap.crisis_type,
+            confidence=roadmap.confidence,
+            roadmap_json=roadmap.model_dump(),
+        )
+        session.add(row)
         await session.commit()
+        await session.refresh(row)
+        return row
 
 
 def _safe_enum(enum_cls, value, default):
