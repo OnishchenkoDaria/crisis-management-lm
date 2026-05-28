@@ -74,7 +74,9 @@ async def generation_lock(workspace_id: int, chat_id: int):
         yield
     finally:
         await WorkspaceDAO.release_generation_lock(workspace_id, chat_id)
-        await ChatDAO.set_in_progress(chat_id)
+        chat = await ChatDAO.find_by_workspace_and_id(workspace_id, chat_id)
+        if chat and chat.status != "finished":
+            await ChatDAO.set_in_progress(chat_id)
         log.info("Generation complete: workspace=%d chat=%d", workspace_id, chat_id)
 
 
@@ -390,21 +392,17 @@ async def generate_chat_roadmap(
     current_user: User | None = Depends(get_optional_user),
     token: str | None = Query(None),
 ) -> RoadmapResponse:
-    permission = await get_chat_permission(chat_id, current_user, token)
-    if permission != "owner":
-        raise HTTPException(403, "Only the chat owner can generate a roadmap")
+    async with generation_lock(workspace_id, chat_id):
+        try:
+            roadmap = await generate_roadmap(body.analysis_id, workspace_id)
+        except ValueError as e:
+            raise HTTPException(400, str(e))
+        except (RuntimeError, ConnectionError, OSError) as e:
+            raise HTTPException(503, "Roadmap generation temporarily unavailable")
 
-    await _get_chat_or_404(chat_id, workspace_id)
+        # Set finished INSIDE the lock, before finally releases it
+        await ChatDAO.set_finished(chat_id)
 
-    try:
-        roadmap = await generate_roadmap(body.analysis_id, workspace_id)
-    except ValueError as e:
-        raise HTTPException(400, str(e))
-    except (RuntimeError, ConnectionError, OSError) as e:
-        log.error("Roadmap generation failed: %s", e)
-        raise HTTPException(503, "Roadmap generation temporarily unavailable — please retry")
-
-    await ChatDAO.set_finished(chat_id)
     return roadmap
 
 
@@ -427,8 +425,11 @@ async def get_chat_roadmap(
     if not last_msg or not last_msg.analysis_id:
         raise HTTPException(404, "No analysis found for this chat")
 
-    roadmap = await RoadmapDAO.find_one_or_none_by_filter(analysis_id=last_msg.analysis_id)
+    roadmap = await RoadmapDAO.find_latest_by_analysis_id(last_msg.analysis_id)
     if not roadmap:
         raise HTTPException(404, "No roadmap generated for this chat yet")
+
+    log.info("roadmap_json keys: %s", list(roadmap.roadmap_json.keys()))
+    log.info("phases count: %s", len(roadmap.roadmap_json.get("phases", [])))
 
     return RoadmapResponse(**roadmap.roadmap_json)

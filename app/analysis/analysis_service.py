@@ -5,6 +5,8 @@ import logging
 import uuid
 from datetime import datetime, timezone
 
+from sqlalchemy import delete
+
 from app.analysis.schemas import (
     SituationInput, RefinementRequest,
     AnalysisResponse, RoadmapResponse,
@@ -14,7 +16,7 @@ from app.analysis.schemas import (
 )
 from app.analysis.prompt_templates import build_analysis_prompt, build_roadmap_prompt
 from app.rag.retrieval_service import retrieve_context
-from app.rag.rag_service import _call_llm
+from app.rag.rag_service import _call_llm, ROADMAP_MAX_TOKENS
 from app.database import async_session_maker
 from app.analysis.input_guard import classify_input
 from app.rag.book_registry import resolve_citation
@@ -115,13 +117,24 @@ async def generate_roadmap(analysis_id: str, workspace_id: int) -> RoadmapRespon
     )
 
     system_prompt, user_message = build_roadmap_prompt(stored, ctx)
-    raw = await _call_llm(system_prompt, user_message)
+    raw = await _call_llm(system_prompt, user_message, max_tokens=ROADMAP_MAX_TOKENS)
+    log.info("Roadmap raw LLM response (first 2000): %.2000s", raw)
 
     # real ID comes from the DB after insert
     roadmap = _parse_roadmap_response(raw, "", analysis_id, workspace_id, ctx)
 
     row = await _store_roadmap(analysis_id, workspace_id, roadmap)
     roadmap.roadmap_id = str(row.id)
+
+    # Patch the stored JSON to include the real id
+    async with async_session_maker() as session:
+        from sqlalchemy import update
+        dumped = roadmap.model_dump()
+        await session.execute(
+            update(Roadmap).where(Roadmap.id == row.id).values(roadmap_json=dumped)
+        )
+        await session.commit()
+
     return roadmap
 
 
@@ -137,8 +150,12 @@ def _parse_analysis_response(
     try:
         data = json.loads(raw)
     except json.JSONDecodeError:
-        log.warning("LLM returned non-JSON for analysis — using fallback")
+        log.error("Roadmap JSON truncated at pos %d — increase ROADMAP_MAX_TOKENS. Tail: %.200s", e.pos, raw[-200:])
         data = {}
+
+    log.info("Roadmap parsed: %d phases, summary=%r",
+             len(data.get("phases", [])),
+             data.get("executive_summary", "")[:80])
 
     missing = data.get("missing_information", [])
     confidence = data.get("confidence", "low")
@@ -323,6 +340,9 @@ def _compute_readiness(
 
 async def _store_roadmap(analysis_id, workspace_id, roadmap) -> Roadmap:
     async with async_session_maker() as session:
+        await session.execute(
+            delete(Roadmap).where(Roadmap.analysis_id == analysis_id)
+        )
         row = Roadmap(
             analysis_id=analysis_id,
             workspace_id=workspace_id,
