@@ -1,0 +1,2011 @@
+23:48:17  INFO      
+============================================================
+23:48:17  INFO      Processing: -16__..pdf
+23:48:17  INFO      ============================================================
+23:48:17  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:48:20  INFO        Sections after merge: 3 (was 3, merged 0 tiny sections)
+23:48:20  INFO        Found 3 chunks across 3 chapters
+23:48:20  INFO      Step 2/4  Saving chunk manifest …
+23:48:20  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\16\metadata.json
+23:48:20  INFO      Step 3/4  Running AI extraction …
+23:48:20  INFO        3 chunks already done, 0 remaining
+23:48:20  INFO        [1/3] SKIP (cached)  16__ch000__ck000
+23:48:20  INFO        [2/3] SKIP (cached)  16__ch001__ck000
+23:48:20  INFO        [3/3] SKIP (cached)  16__ch002__ck000
+23:48:20  INFO      Step 4/4  Finalising book in DB ...
+23:48:22  INFO      Built 0 new TrainingSamples
+23:48:22  INFO        Done: 0 TrainingSamples created
+23:48:22  INFO      
+============================================================
+23:48:22  INFO      Processing: 105312772.pdf
+23:48:22  INFO      ============================================================
+23:48:22  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:48:23  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:48:23  INFO        Found 1 chunks across 1 chapters
+23:48:23  INFO      Step 2/4  Saving chunk manifest …
+23:48:23  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\105312772\metadata.json
+23:48:23  INFO      Step 3/4  Running AI extraction …
+23:48:23  INFO        1 chunks already done, 0 remaining
+23:48:23  INFO        [1/1] SKIP (cached)  105312772__ch000__ck000
+23:48:23  INFO      Step 4/4  Finalising book in DB ...
+23:48:23  INFO      Built 0 new TrainingSamples
+23:48:23  INFO        Done: 0 TrainingSamples created
+23:48:23  INFO      
+============================================================
+23:48:23  INFO      Processing: 11-Bohdanov.pdf
+23:48:23  INFO      ============================================================
+23:48:23  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:48:28  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+23:48:28  INFO        Found 2 chunks across 2 chapters
+23:48:28  INFO      Step 2/4  Saving chunk manifest …
+23:48:28  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\11-bohdanov\metadata.json
+23:48:28  INFO      Step 3/4  Running AI extraction …
+23:48:28  INFO        2 chunks already done, 0 remaining
+23:48:28  INFO        [1/2] SKIP (cached)  11-bohdanov__ch000__ck000
+23:48:28  INFO        [2/2] SKIP (cached)  11-bohdanov__ch001__ck000
+23:48:28  INFO      Step 4/4  Finalising book in DB ...
+23:48:28  INFO      Built 0 new TrainingSamples
+23:48:28  INFO        Done: 0 TrainingSamples created
+23:48:28  INFO      
+============================================================
+23:48:28  INFO      Processing: 111Rudenko_Analitichna-zapiska_listopad_-2018_red2-02322.pdf
+23:48:28  INFO      ============================================================
+23:48:28  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:48:31  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:48:31  INFO        Found 2 chunks across 1 chapters
+23:48:31  INFO      Step 2/4  Saving chunk manifest …
+23:48:31  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\111rudenko-analitichna-zapiska-listopad-2018-red2-02322\metadata.json
+23:48:31  INFO      Step 3/4  Running AI extraction …
+23:48:31  INFO        2 chunks already done, 0 remaining
+23:48:31  INFO        [1/2] SKIP (cached)  111rudenko-analitichna-zapiska-listopad-2018-red2-02322__ch000__ck000
+23:48:31  INFO        [2/2] SKIP (cached)  111rudenko-analitichna-zapiska-listopad-2018-red2-02322__ch000__ck001
+23:48:31  INFO      Step 4/4  Finalising book in DB ...
+23:48:31  INFO      Built 0 new TrainingSamples
+23:48:31  INFO        Done: 0 TrainingSamples created
+23:48:31  INFO      
+============================================================
+23:48:31  INFO      Processing: 1203-Ð¢ÐµÐºÑÑ ÑÑÐ°ÑÑÑ-2283-1-10-20180817.pdf
+23:48:31  INFO      ============================================================
+23:48:31  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:49:01  INFO      
+============================================================
+23:49:01  INFO      Processing: -16__..pdf
+23:49:01  INFO      ============================================================
+23:49:01  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:49:05  INFO        Sections after merge: 3 (was 3, merged 0 tiny sections)
+23:49:05  INFO        Found 3 chunks across 3 chapters
+23:49:05  INFO      Step 2/4  Saving chunk manifest …
+23:49:05  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\16\metadata.json
+23:49:05  INFO      Step 3/4  Running AI extraction …
+23:49:05  INFO        3 chunks already done, 0 remaining
+23:49:05  INFO        [1/3] SKIP (cached)  16__ch000__ck000
+23:49:05  INFO        [2/3] SKIP (cached)  16__ch001__ck000
+23:49:05  INFO        [3/3] SKIP (cached)  16__ch002__ck000
+23:49:05  INFO      Step 4/4  Finalising book in DB ...
+23:49:06  INFO      Built 0 new TrainingSamples
+23:49:06  INFO        Done: 0 TrainingSamples created
+23:49:06  INFO      
+============================================================
+23:49:06  INFO      Processing: 105312772.pdf
+23:49:06  INFO      ============================================================
+23:49:06  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:49:07  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:49:07  INFO        Found 1 chunks across 1 chapters
+23:49:07  INFO      Step 2/4  Saving chunk manifest …
+23:49:07  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\105312772\metadata.json
+23:49:07  INFO      Step 3/4  Running AI extraction …
+23:49:07  INFO        1 chunks already done, 0 remaining
+23:49:07  INFO        [1/1] SKIP (cached)  105312772__ch000__ck000
+23:49:07  INFO      Step 4/4  Finalising book in DB ...
+23:49:07  INFO      Built 0 new TrainingSamples
+23:49:07  INFO        Done: 0 TrainingSamples created
+23:49:07  INFO      
+============================================================
+23:49:07  INFO      Processing: 11-Bohdanov.pdf
+23:49:07  INFO      ============================================================
+23:49:07  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:49:12  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+23:49:12  INFO        Found 2 chunks across 2 chapters
+23:49:12  INFO      Step 2/4  Saving chunk manifest …
+23:49:12  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\11-bohdanov\metadata.json
+23:49:12  INFO      Step 3/4  Running AI extraction …
+23:49:12  INFO        2 chunks already done, 0 remaining
+23:49:12  INFO        [1/2] SKIP (cached)  11-bohdanov__ch000__ck000
+23:49:12  INFO        [2/2] SKIP (cached)  11-bohdanov__ch001__ck000
+23:49:12  INFO      Step 4/4  Finalising book in DB ...
+23:49:12  INFO      Built 0 new TrainingSamples
+23:49:12  INFO        Done: 0 TrainingSamples created
+23:49:12  INFO      
+============================================================
+23:49:12  INFO      Processing: 111Rudenko_Analitichna-zapiska_listopad_-2018_red2-02322.pdf
+23:49:12  INFO      ============================================================
+23:49:12  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:49:16  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:49:16  INFO        Found 2 chunks across 1 chapters
+23:49:16  INFO      Step 2/4  Saving chunk manifest …
+23:49:16  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\111rudenko-analitichna-zapiska-listopad-2018-red2-02322\metadata.json
+23:49:16  INFO      Step 3/4  Running AI extraction …
+23:49:16  INFO        2 chunks already done, 0 remaining
+23:49:16  INFO        [1/2] SKIP (cached)  111rudenko-analitichna-zapiska-listopad-2018-red2-02322__ch000__ck000
+23:49:16  INFO        [2/2] SKIP (cached)  111rudenko-analitichna-zapiska-listopad-2018-red2-02322__ch000__ck001
+23:49:16  INFO      Step 4/4  Finalising book in DB ...
+23:49:16  INFO      Built 0 new TrainingSamples
+23:49:16  INFO        Done: 0 TrainingSamples created
+23:49:16  INFO      
+============================================================
+23:49:16  INFO      Processing: 1203-Ð¢ÐµÐºÑÑ ÑÑÐ°ÑÑÑ-2283-1-10-20180817.pdf
+23:49:16  INFO      ============================================================
+23:49:16  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:49:19  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:49:19  INFO        Found 1 chunks across 1 chapters
+23:49:19  INFO      Step 2/4  Saving chunk manifest …
+23:49:19  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\1203-2283-1-10-20180817\metadata.json
+23:49:19  INFO      Step 3/4  Running AI extraction …
+23:49:19  INFO        1 chunks already done, 0 remaining
+23:49:19  INFO        [1/1] SKIP (cached)  1203-2283-1-10-20180817__ch000__ck000
+23:49:19  INFO      Step 4/4  Finalising book in DB ...
+23:49:19  INFO      Built 0 new TrainingSamples
+23:49:19  INFO        Done: 0 TrainingSamples created
+23:49:19  INFO      
+============================================================
+23:49:19  INFO      Processing: 123550889.pdf
+23:49:19  INFO      ============================================================
+23:49:19  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:49:24  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+23:49:24  INFO        Found 2 chunks across 2 chapters
+23:49:24  INFO      Step 2/4  Saving chunk manifest …
+23:49:24  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\123550889\metadata.json
+23:49:24  INFO      Step 3/4  Running AI extraction …
+23:49:24  INFO        2 chunks already done, 0 remaining
+23:49:24  INFO        [1/2] SKIP (cached)  123550889__ch000__ck000
+23:49:24  INFO        [2/2] SKIP (cached)  123550889__ch001__ck000
+23:49:24  INFO      Step 4/4  Finalising book in DB ...
+23:49:24  INFO      Built 0 new TrainingSamples
+23:49:24  INFO        Done: 0 TrainingSamples created
+23:49:24  INFO      
+============================================================
+23:49:24  INFO      Processing: 12791-Ð¢ÐµÐºÑÑ ÑÑÐ°ÑÑÑ-25426-1-10-20221116.pdf
+23:49:24  INFO      ============================================================
+23:49:24  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:49:27  INFO        Sections after merge: 1 (was 2, merged 1 tiny sections)
+23:49:27  INFO        Found 1 chunks across 1 chapters
+23:49:27  INFO      Step 2/4  Saving chunk manifest …
+23:49:27  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\12791-25426-1-10-20221116\metadata.json
+23:49:27  INFO      Step 3/4  Running AI extraction …
+23:49:27  INFO        1 chunks already done, 0 remaining
+23:49:27  INFO        [1/1] SKIP (cached)  12791-25426-1-10-20221116__ch000__ck000
+23:49:27  INFO      Step 4/4  Finalising book in DB ...
+23:49:27  INFO      Built 0 new TrainingSamples
+23:49:27  INFO        Done: 0 TrainingSamples created
+23:49:27  INFO      
+============================================================
+23:49:27  INFO      Processing: 1520-Текст статті-1469-3-10-20251124.pdf
+23:49:27  INFO      ============================================================
+23:49:27  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:49:29  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:49:29  INFO        Found 2 chunks across 1 chapters
+23:49:29  INFO      Step 2/4  Saving chunk manifest …
+23:49:29  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\1520-tekst-statti-1469-3-10-20251124\metadata.json
+23:49:29  INFO      Step 3/4  Running AI extraction …
+23:49:29  INFO        2 chunks already done, 0 remaining
+23:49:29  INFO        [1/2] SKIP (cached)  1520-tekst-statti-1469-3-10-20251124__ch000__ck000
+23:49:29  INFO        [2/2] SKIP (cached)  1520-tekst-statti-1469-3-10-20251124__ch000__ck001
+23:49:29  INFO      Step 4/4  Finalising book in DB ...
+23:49:29  INFO      Built 0 new TrainingSamples
+23:49:29  INFO        Done: 0 TrainingSamples created
+23:49:29  INFO      
+============================================================
+23:49:29  INFO      Processing: 18-Hutsaliuk.pdf
+23:49:29  INFO      ============================================================
+23:49:29  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:49:35  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+23:49:35  INFO        Found 2 chunks across 2 chapters
+23:49:35  INFO      Step 2/4  Saving chunk manifest …
+23:49:35  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\18-hutsaliuk\metadata.json
+23:49:35  INFO      Step 3/4  Running AI extraction …
+23:49:35  INFO        2 chunks already done, 0 remaining
+23:49:35  INFO        [1/2] SKIP (cached)  18-hutsaliuk__ch000__ck000
+23:49:35  INFO        [2/2] SKIP (cached)  18-hutsaliuk__ch001__ck000
+23:49:35  INFO      Step 4/4  Finalising book in DB ...
+23:49:35  INFO      Built 0 new TrainingSamples
+23:49:35  INFO        Done: 0 TrainingSamples created
+23:49:35  INFO      
+============================================================
+23:49:35  INFO      Processing: 19.pdf
+23:49:35  INFO      ============================================================
+23:49:35  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:49:36  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:49:36  INFO        Found 1 chunks across 1 chapters
+23:49:36  INFO      Step 2/4  Saving chunk manifest …
+23:49:36  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\19\metadata.json
+23:49:36  INFO      Step 3/4  Running AI extraction …
+23:49:36  INFO        1 chunks already done, 0 remaining
+23:49:36  INFO        [1/1] SKIP (cached)  19__ch000__ck000
+23:49:36  INFO      Step 4/4  Finalising book in DB ...
+23:49:36  INFO      Built 0 new TrainingSamples
+23:49:36  INFO        Done: 0 TrainingSamples created
+23:49:36  INFO      
+============================================================
+23:49:36  INFO      Processing: 226149-Текст статті-517907-1-10-20210323.pdf
+23:49:36  INFO      ============================================================
+23:49:36  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:49:40  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:49:40  INFO        Found 2 chunks across 1 chapters
+23:49:40  INFO      Step 2/4  Saving chunk manifest …
+23:49:40  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\226149-tekst-statti-517907-1-10-20210323\metadata.json
+23:49:40  INFO      Step 3/4  Running AI extraction …
+23:49:40  INFO        2 chunks already done, 0 remaining
+23:49:40  INFO        [1/2] SKIP (cached)  226149-tekst-statti-517907-1-10-20210323__ch000__ck000
+23:49:40  INFO        [2/2] SKIP (cached)  226149-tekst-statti-517907-1-10-20210323__ch000__ck001
+23:49:40  INFO      Step 4/4  Finalising book in DB ...
+23:49:40  INFO      Built 0 new TrainingSamples
+23:49:40  INFO        Done: 0 TrainingSamples created
+23:49:40  INFO      
+============================================================
+23:49:40  INFO      Processing: 22dbab561e7b68fd89dd42d97840460d.pdf
+23:49:40  INFO      ============================================================
+23:49:40  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:49:53  INFO        Sections after merge: 11 (was 12, merged 1 tiny sections)
+23:49:53  INFO        Found 11 chunks across 11 chapters
+23:49:53  INFO      Step 2/4  Saving chunk manifest …
+23:49:53  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\22dbab561e7b68fd89dd42d97840460d\metadata.json
+23:49:53  INFO      Step 3/4  Running AI extraction …
+23:49:53  INFO        11 chunks already done, 0 remaining
+23:49:53  INFO        [1/11] SKIP (cached)  22dbab561e7b68fd89dd42d97840460d__ch000__ck000
+23:49:53  INFO        [2/11] SKIP (cached)  22dbab561e7b68fd89dd42d97840460d__ch001__ck000
+23:49:53  INFO        [3/11] SKIP (cached)  22dbab561e7b68fd89dd42d97840460d__ch002__ck000
+23:49:53  INFO        [4/11] SKIP (cached)  22dbab561e7b68fd89dd42d97840460d__ch003__ck000
+23:49:53  INFO        [5/11] SKIP (cached)  22dbab561e7b68fd89dd42d97840460d__ch004__ck000
+23:49:53  INFO        [6/11] SKIP (cached)  22dbab561e7b68fd89dd42d97840460d__ch005__ck000
+23:49:53  INFO        [7/11] SKIP (cached)  22dbab561e7b68fd89dd42d97840460d__ch006__ck000
+23:49:53  INFO        [8/11] SKIP (cached)  22dbab561e7b68fd89dd42d97840460d__ch007__ck000
+23:49:53  INFO        [9/11] SKIP (cached)  22dbab561e7b68fd89dd42d97840460d__ch008__ck000
+23:49:53  INFO        [10/11] SKIP (cached)  22dbab561e7b68fd89dd42d97840460d__ch009__ck000
+23:49:53  INFO        [11/11] SKIP (cached)  22dbab561e7b68fd89dd42d97840460d__ch010__ck000
+23:49:53  INFO      Step 4/4  Finalising book in DB ...
+23:49:53  INFO      Built 0 new TrainingSamples
+23:49:53  INFO        Done: 0 TrainingSamples created
+23:49:53  INFO      
+============================================================
+23:49:53  INFO      Processing: 240614-Текст статті-574421-1-10-20211230.pdf
+23:49:53  INFO      ============================================================
+23:49:53  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:49:56  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:49:56  INFO        Found 1 chunks across 1 chapters
+23:49:56  INFO      Step 2/4  Saving chunk manifest …
+23:49:56  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\240614-tekst-statti-574421-1-10-20211230\metadata.json
+23:49:56  INFO      Step 3/4  Running AI extraction …
+23:49:56  INFO        1 chunks already done, 0 remaining
+23:49:56  INFO        [1/1] SKIP (cached)  240614-tekst-statti-574421-1-10-20211230__ch000__ck000
+23:49:56  INFO      Step 4/4  Finalising book in DB ...
+23:49:56  INFO      Built 0 new TrainingSamples
+23:49:56  INFO        Done: 0 TrainingSamples created
+23:49:56  INFO      
+============================================================
+23:49:56  INFO      Processing: 29.pdf
+23:49:56  INFO      ============================================================
+23:49:56  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:50:00  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:50:00  INFO        Found 2 chunks across 1 chapters
+23:50:00  INFO      Step 2/4  Saving chunk manifest …
+23:50:00  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\29\metadata.json
+23:50:00  INFO      Step 3/4  Running AI extraction …
+23:50:00  INFO        2 chunks already done, 0 remaining
+23:50:00  INFO        [1/2] SKIP (cached)  29__ch000__ck000
+23:50:00  INFO        [2/2] SKIP (cached)  29__ch000__ck001
+23:50:00  INFO      Step 4/4  Finalising book in DB ...
+23:50:00  INFO      Built 0 new TrainingSamples
+23:50:00  INFO        Done: 0 TrainingSamples created
+23:50:00  INFO      
+============================================================
+23:50:00  INFO      Processing: 305969-Текст статті-706807-1-10-20240610.pdf
+23:50:00  INFO      ============================================================
+23:50:00  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:50:11  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+23:50:11  INFO        Found 2 chunks across 2 chapters
+23:50:11  INFO      Step 2/4  Saving chunk manifest …
+23:50:11  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\305969-tekst-statti-706807-1-10-20240610\metadata.json
+23:50:11  INFO      Step 3/4  Running AI extraction …
+23:50:11  INFO        2 chunks already done, 0 remaining
+23:50:11  INFO        [1/2] SKIP (cached)  305969-tekst-statti-706807-1-10-20240610__ch000__ck000
+23:50:11  INFO        [2/2] SKIP (cached)  305969-tekst-statti-706807-1-10-20240610__ch001__ck000
+23:50:11  INFO      Step 4/4  Finalising book in DB ...
+23:50:11  INFO      Built 0 new TrainingSamples
+23:50:11  INFO        Done: 0 TrainingSamples created
+23:50:11  INFO      
+============================================================
+23:50:11  INFO      Processing: 312085-Текст статті-721791-1-10-20240925.pdf
+23:50:11  INFO      ============================================================
+23:50:11  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:50:15  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:50:15  INFO        Found 1 chunks across 1 chapters
+23:50:15  INFO      Step 2/4  Saving chunk manifest …
+23:50:15  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\312085-tekst-statti-721791-1-10-20240925\metadata.json
+23:50:15  INFO      Step 3/4  Running AI extraction …
+23:50:15  INFO        1 chunks already done, 0 remaining
+23:50:15  INFO        [1/1] SKIP (cached)  312085-tekst-statti-721791-1-10-20240925__ch000__ck000
+23:50:15  INFO      Step 4/4  Finalising book in DB ...
+23:50:15  INFO      Built 0 new TrainingSamples
+23:50:15  INFO        Done: 0 TrainingSamples created
+23:50:15  INFO      
+============================================================
+23:50:15  INFO      Processing: 3257-Текст статті-3166-1-10-20240111.pdf
+23:50:15  INFO      ============================================================
+23:50:15  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:50:17  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:50:17  INFO        Found 2 chunks across 1 chapters
+23:50:17  INFO      Step 2/4  Saving chunk manifest …
+23:50:17  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\3257-tekst-statti-3166-1-10-20240111\metadata.json
+23:50:17  INFO      Step 3/4  Running AI extraction …
+23:50:17  INFO        2 chunks already done, 0 remaining
+23:50:17  INFO        [1/2] SKIP (cached)  3257-tekst-statti-3166-1-10-20240111__ch000__ck000
+23:50:17  INFO        [2/2] SKIP (cached)  3257-tekst-statti-3166-1-10-20240111__ch000__ck001
+23:50:17  INFO      Step 4/4  Finalising book in DB ...
+23:50:17  INFO      Built 0 new TrainingSamples
+23:50:17  INFO        Done: 0 TrainingSamples created
+23:50:17  INFO      
+============================================================
+23:50:17  INFO      Processing: 330626-Ð¢ÐµÐºÑÑ ÑÑÐ°ÑÑÑ-767485-1-10-20250523.pdf
+23:50:17  INFO      ============================================================
+23:50:17  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:50:21  INFO        Sections after merge: 3 (was 3, merged 0 tiny sections)
+23:50:21  INFO        Found 3 chunks across 3 chapters
+23:50:21  INFO      Step 2/4  Saving chunk manifest …
+23:50:21  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\330626-767485-1-10-20250523\metadata.json
+23:50:21  INFO      Step 3/4  Running AI extraction …
+23:50:21  INFO        3 chunks already done, 0 remaining
+23:50:21  INFO        [1/3] SKIP (cached)  330626-767485-1-10-20250523__ch000__ck000
+23:50:21  INFO        [2/3] SKIP (cached)  330626-767485-1-10-20250523__ch001__ck000
+23:50:21  INFO        [3/3] SKIP (cached)  330626-767485-1-10-20250523__ch002__ck000
+23:50:21  INFO      Step 4/4  Finalising book in DB ...
+23:50:21  INFO      Built 0 new TrainingSamples
+23:50:21  INFO        Done: 0 TrainingSamples created
+23:50:21  INFO      
+============================================================
+23:50:21  INFO      Processing: 332292-Ð¢ÐµÐºÑÑ ÑÑÐ°ÑÑÑ-771254-1-10-20250610.pdf
+23:50:21  INFO      ============================================================
+23:50:21  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:50:24  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:50:24  INFO        Found 2 chunks across 1 chapters
+23:50:24  INFO      Step 2/4  Saving chunk manifest …
+23:50:24  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\332292-771254-1-10-20250610\metadata.json
+23:50:24  INFO      Step 3/4  Running AI extraction …
+23:50:24  INFO        2 chunks already done, 0 remaining
+23:50:24  INFO        [1/2] SKIP (cached)  332292-771254-1-10-20250610__ch000__ck000
+23:50:24  INFO        [2/2] SKIP (cached)  332292-771254-1-10-20250610__ch000__ck001
+23:50:24  INFO      Step 4/4  Finalising book in DB ...
+23:50:24  INFO      Built 0 new TrainingSamples
+23:50:24  INFO        Done: 0 TrainingSamples created
+23:50:24  INFO      
+============================================================
+23:50:24  INFO      Processing: 339-##default.genres.article##-697-1-10-20150210.pdf
+23:50:24  INFO      ============================================================
+23:50:24  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:50:27  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:50:27  INFO        Found 2 chunks across 1 chapters
+23:50:27  INFO      Step 2/4  Saving chunk manifest …
+23:50:27  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\339-default-genres-article-697-1-10-20150210\metadata.json
+23:50:27  INFO      Step 3/4  Running AI extraction …
+23:50:27  INFO        2 chunks already done, 0 remaining
+23:50:27  INFO        [1/2] SKIP (cached)  339-default-genres-article-697-1-10-20150210__ch000__ck000
+23:50:27  INFO        [2/2] SKIP (cached)  339-default-genres-article-697-1-10-20150210__ch000__ck001
+23:50:27  INFO      Step 4/4  Finalising book in DB ...
+23:50:27  INFO      Built 0 new TrainingSamples
+23:50:27  INFO        Done: 0 TrainingSamples created
+23:50:27  INFO      
+============================================================
+23:50:27  INFO      Processing: 378-Ð¢ÐµÐºÑÑ ÑÑÐ°ÑÑÑ-1522-1-10-20250711.pdf
+23:50:27  INFO      ============================================================
+23:50:27  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:50:29  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:50:29  INFO        Found 1 chunks across 1 chapters
+23:50:29  INFO      Step 2/4  Saving chunk manifest …
+23:50:29  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\378-1522-1-10-20250711\metadata.json
+23:50:29  INFO      Step 3/4  Running AI extraction …
+23:50:29  INFO        1 chunks already done, 0 remaining
+23:50:29  INFO        [1/1] SKIP (cached)  378-1522-1-10-20250711__ch000__ck000
+23:50:29  INFO      Step 4/4  Finalising book in DB ...
+23:50:29  INFO      Built 0 new TrainingSamples
+23:50:29  INFO        Done: 0 TrainingSamples created
+23:50:29  INFO      
+============================================================
+23:50:29  INFO      Processing: 4-1_2024.pdf
+23:50:29  INFO      ============================================================
+23:50:29  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:51:47  INFO        Sections after merge: 18 (was 18, merged 0 tiny sections)
+23:51:48  INFO        Found 58 chunks across 18 chapters
+23:51:48  INFO      Step 2/4  Saving chunk manifest …
+23:51:48  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\4-1-2024\metadata.json
+23:51:48  INFO      Step 3/4  Running AI extraction …
+23:51:48  INFO        58 chunks already done, 0 remaining
+23:51:48  INFO        [1/58] SKIP (cached)  4-1-2024__ch000__ck000
+23:51:48  INFO        [2/58] SKIP (cached)  4-1-2024__ch001__ck000
+23:51:48  INFO        [3/58] SKIP (cached)  4-1-2024__ch001__ck001
+23:51:48  INFO        [4/58] SKIP (cached)  4-1-2024__ch001__ck002
+23:51:48  INFO        [5/58] SKIP (cached)  4-1-2024__ch002__ck000
+23:51:48  INFO        [6/58] SKIP (cached)  4-1-2024__ch002__ck001
+23:51:48  INFO        [7/58] SKIP (cached)  4-1-2024__ch003__ck000
+23:51:48  INFO        [8/58] SKIP (cached)  4-1-2024__ch004__ck000
+23:51:48  INFO        [9/58] SKIP (cached)  4-1-2024__ch005__ck000
+23:51:48  INFO        [10/58] SKIP (cached)  4-1-2024__ch005__ck001
+23:51:48  INFO        [11/58] SKIP (cached)  4-1-2024__ch006__ck000
+23:51:48  INFO        [12/58] SKIP (cached)  4-1-2024__ch006__ck001
+23:51:48  INFO        [13/58] SKIP (cached)  4-1-2024__ch006__ck002
+23:51:48  INFO        [14/58] SKIP (cached)  4-1-2024__ch006__ck003
+23:51:48  INFO        [15/58] SKIP (cached)  4-1-2024__ch006__ck004
+23:51:48  INFO        [16/58] SKIP (cached)  4-1-2024__ch006__ck005
+23:51:48  INFO        [17/58] SKIP (cached)  4-1-2024__ch007__ck000
+23:51:48  INFO        [18/58] SKIP (cached)  4-1-2024__ch007__ck001
+23:51:48  INFO        [19/58] SKIP (cached)  4-1-2024__ch008__ck000
+23:51:48  INFO        [20/58] SKIP (cached)  4-1-2024__ch008__ck001
+23:51:48  INFO        [21/58] SKIP (cached)  4-1-2024__ch008__ck002
+23:51:48  INFO        [22/58] SKIP (cached)  4-1-2024__ch008__ck003
+23:51:48  INFO        [23/58] SKIP (cached)  4-1-2024__ch009__ck000
+23:51:48  INFO        [24/58] SKIP (cached)  4-1-2024__ch009__ck001
+23:51:48  INFO        [25/58] SKIP (cached)  4-1-2024__ch009__ck002
+23:51:48  INFO        [26/58] SKIP (cached)  4-1-2024__ch010__ck000
+23:51:48  INFO        [27/58] SKIP (cached)  4-1-2024__ch010__ck001
+23:51:48  INFO        [28/58] SKIP (cached)  4-1-2024__ch010__ck002
+23:51:48  INFO        [29/58] SKIP (cached)  4-1-2024__ch011__ck000
+23:51:48  INFO        [30/58] SKIP (cached)  4-1-2024__ch011__ck001
+23:51:48  INFO        [31/58] SKIP (cached)  4-1-2024__ch012__ck000
+23:51:48  INFO        [32/58] SKIP (cached)  4-1-2024__ch012__ck001
+23:51:48  INFO        [33/58] SKIP (cached)  4-1-2024__ch013__ck000
+23:51:48  INFO        [34/58] SKIP (cached)  4-1-2024__ch013__ck001
+23:51:48  INFO        [35/58] SKIP (cached)  4-1-2024__ch013__ck002
+23:51:48  INFO        [36/58] SKIP (cached)  4-1-2024__ch013__ck003
+23:51:48  INFO        [37/58] SKIP (cached)  4-1-2024__ch013__ck004
+23:51:48  INFO        [38/58] SKIP (cached)  4-1-2024__ch014__ck000
+23:51:48  INFO        [39/58] SKIP (cached)  4-1-2024__ch014__ck001
+23:51:48  INFO        [40/58] SKIP (cached)  4-1-2024__ch014__ck002
+23:51:48  INFO        [41/58] SKIP (cached)  4-1-2024__ch014__ck003
+23:51:48  INFO        [42/58] SKIP (cached)  4-1-2024__ch014__ck004
+23:51:48  INFO        [43/58] SKIP (cached)  4-1-2024__ch014__ck005
+23:51:48  INFO        [44/58] SKIP (cached)  4-1-2024__ch014__ck006
+23:51:48  INFO        [45/58] SKIP (cached)  4-1-2024__ch015__ck000
+23:51:48  INFO        [46/58] SKIP (cached)  4-1-2024__ch015__ck001
+23:51:48  INFO        [47/58] SKIP (cached)  4-1-2024__ch016__ck000
+23:51:48  INFO        [48/58] SKIP (cached)  4-1-2024__ch016__ck001
+23:51:48  INFO        [49/58] SKIP (cached)  4-1-2024__ch016__ck002
+23:51:48  INFO        [50/58] SKIP (cached)  4-1-2024__ch016__ck003
+23:51:48  INFO        [51/58] SKIP (cached)  4-1-2024__ch016__ck004
+23:51:48  INFO        [52/58] SKIP (cached)  4-1-2024__ch017__ck000
+23:51:48  INFO        [53/58] SKIP (cached)  4-1-2024__ch017__ck001
+23:51:48  INFO        [54/58] SKIP (cached)  4-1-2024__ch017__ck002
+23:51:48  INFO        [55/58] SKIP (cached)  4-1-2024__ch017__ck003
+23:51:48  INFO        [56/58] SKIP (cached)  4-1-2024__ch017__ck004
+23:51:48  INFO        [57/58] SKIP (cached)  4-1-2024__ch017__ck005
+23:51:48  INFO        [58/58] SKIP (cached)  4-1-2024__ch017__ck006
+23:51:48  INFO      Step 4/4  Finalising book in DB ...
+23:51:48  INFO      Built 0 new TrainingSamples
+23:51:48  INFO        Done: 0 TrainingSamples created
+23:51:48  INFO      
+============================================================
+23:51:48  INFO      Processing: 440159.pdf
+23:51:48  INFO      ============================================================
+23:51:48  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:51:54  INFO        Sections after merge: 5 (was 9, merged 4 tiny sections)
+23:51:54  INFO        Found 7 chunks across 5 chapters
+23:51:54  INFO      Step 2/4  Saving chunk manifest …
+23:51:54  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\440159\metadata.json
+23:51:54  INFO      Step 3/4  Running AI extraction …
+23:51:54  INFO        7 chunks already done, 0 remaining
+23:51:54  INFO        [1/7] SKIP (cached)  440159__ch000__ck000
+23:51:54  INFO        [2/7] SKIP (cached)  440159__ch001__ck000
+23:51:54  INFO        [3/7] SKIP (cached)  440159__ch001__ck001
+23:51:54  INFO        [4/7] SKIP (cached)  440159__ch001__ck002
+23:51:54  INFO        [5/7] SKIP (cached)  440159__ch002__ck000
+23:51:54  INFO        [6/7] SKIP (cached)  440159__ch003__ck000
+23:51:54  INFO        [7/7] SKIP (cached)  440159__ch004__ck000
+23:51:54  INFO      Step 4/4  Finalising book in DB ...
+23:51:54  INFO      Built 0 new TrainingSamples
+23:51:54  INFO        Done: 0 TrainingSamples created
+23:51:54  INFO      
+============================================================
+23:51:54  INFO      Processing: 46.pdf
+23:51:54  INFO      ============================================================
+23:51:54  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:52:01  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:52:01  INFO        Found 3 chunks across 1 chapters
+23:52:01  INFO      Step 2/4  Saving chunk manifest …
+23:52:01  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\46\metadata.json
+23:52:01  INFO      Step 3/4  Running AI extraction …
+23:52:01  INFO        3 chunks already done, 0 remaining
+23:52:01  INFO        [1/3] SKIP (cached)  46__ch000__ck000
+23:52:01  INFO        [2/3] SKIP (cached)  46__ch000__ck001
+23:52:01  INFO        [3/3] SKIP (cached)  46__ch000__ck002
+23:52:01  INFO      Step 4/4  Finalising book in DB ...
+23:52:01  INFO      Built 0 new TrainingSamples
+23:52:01  INFO        Done: 0 TrainingSamples created
+23:52:01  INFO      
+============================================================
+23:52:01  INFO      Processing: 5.G_009_ChangeCom_3b_Com_crisis_manual.pdf
+23:52:01  INFO      ============================================================
+23:52:01  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:52:05  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+23:52:05  INFO        Found 2 chunks across 2 chapters
+23:52:05  INFO      Step 2/4  Saving chunk manifest …
+23:52:05  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\5-g-009-changecom-3b-com-crisis-manual\metadata.json
+23:52:05  INFO      Step 3/4  Running AI extraction …
+23:52:05  INFO        2 chunks already done, 0 remaining
+23:52:05  INFO        [1/2] SKIP (cached)  5-g-009-changecom-3b-com-crisis-manual__ch000__ck000
+23:52:05  INFO        [2/2] SKIP (cached)  5-g-009-changecom-3b-com-crisis-manual__ch001__ck000
+23:52:05  INFO      Step 4/4  Finalising book in DB ...
+23:52:05  INFO      Built 0 new TrainingSamples
+23:52:05  INFO        Done: 0 TrainingSamples created
+23:52:05  INFO      
+============================================================
+23:52:05  INFO      Processing: 5129-Текст статті-5053-1-10-20250108.pdf
+23:52:05  INFO      ============================================================
+23:52:05  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:52:08  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:52:08  INFO        Found 2 chunks across 1 chapters
+23:52:08  INFO      Step 2/4  Saving chunk manifest …
+23:52:08  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\5129-tekst-statti-5053-1-10-20250108\metadata.json
+23:52:08  INFO      Step 3/4  Running AI extraction …
+23:52:08  INFO        2 chunks already done, 0 remaining
+23:52:08  INFO        [1/2] SKIP (cached)  5129-tekst-statti-5053-1-10-20250108__ch000__ck000
+23:52:08  INFO        [2/2] SKIP (cached)  5129-tekst-statti-5053-1-10-20250108__ch000__ck001
+23:52:08  INFO      Step 4/4  Finalising book in DB ...
+23:52:08  INFO      Built 0 new TrainingSamples
+23:52:08  INFO        Done: 0 TrainingSamples created
+23:52:08  INFO      
+============================================================
+23:52:08  INFO      Processing: 57.pdf
+23:52:08  INFO      ============================================================
+23:52:08  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:52:09  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:52:09  INFO        Found 1 chunks across 1 chapters
+23:52:09  INFO      Step 2/4  Saving chunk manifest …
+23:52:09  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\57\metadata.json
+23:52:09  INFO      Step 3/4  Running AI extraction …
+23:52:09  INFO        1 chunks already done, 0 remaining
+23:52:09  INFO        [1/1] SKIP (cached)  57__ch000__ck000
+23:52:09  INFO      Step 4/4  Finalising book in DB ...
+23:52:09  INFO      Built 0 new TrainingSamples
+23:52:09  INFO        Done: 0 TrainingSamples created
+23:52:09  INFO      
+============================================================
+23:52:09  INFO      Processing: 6-2_2025.pdf
+23:52:09  INFO      ============================================================
+23:52:09  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:54:35  INFO        Sections after merge: 63 (was 63, merged 0 tiny sections)
+23:54:35  INFO        Found 116 chunks across 63 chapters
+23:54:35  INFO      Step 2/4  Saving chunk manifest …
+23:54:35  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\6-2-2025\metadata.json
+23:54:35  INFO      Step 3/4  Running AI extraction …
+23:54:35  INFO        116 chunks already done, 0 remaining
+23:54:35  INFO        [1/116] SKIP (cached)  6-2-2025__ch000__ck000
+23:54:35  INFO        [2/116] SKIP (cached)  6-2-2025__ch001__ck000
+23:54:35  INFO        [3/116] SKIP (cached)  6-2-2025__ch002__ck000
+23:54:35  INFO        [4/116] SKIP (cached)  6-2-2025__ch002__ck001
+23:54:35  INFO        [5/116] SKIP (cached)  6-2-2025__ch003__ck000
+23:54:35  INFO        [6/116] SKIP (cached)  6-2-2025__ch004__ck000
+23:54:35  INFO        [7/116] SKIP (cached)  6-2-2025__ch004__ck001
+23:54:35  INFO        [8/116] SKIP (cached)  6-2-2025__ch005__ck000
+23:54:35  INFO        [9/116] SKIP (cached)  6-2-2025__ch005__ck001
+23:54:35  INFO        [10/116] SKIP (cached)  6-2-2025__ch006__ck000
+23:54:35  INFO        [11/116] SKIP (cached)  6-2-2025__ch006__ck001
+23:54:35  INFO        [12/116] SKIP (cached)  6-2-2025__ch007__ck000
+23:54:35  INFO        [13/116] SKIP (cached)  6-2-2025__ch007__ck001
+23:54:35  INFO        [14/116] SKIP (cached)  6-2-2025__ch008__ck000
+23:54:35  INFO        [15/116] SKIP (cached)  6-2-2025__ch008__ck001
+23:54:35  INFO        [16/116] SKIP (cached)  6-2-2025__ch009__ck000
+23:54:35  INFO        [17/116] SKIP (cached)  6-2-2025__ch009__ck001
+23:54:35  INFO        [18/116] SKIP (cached)  6-2-2025__ch010__ck000
+23:54:35  INFO        [19/116] SKIP (cached)  6-2-2025__ch010__ck001
+23:54:35  INFO        [20/116] SKIP (cached)  6-2-2025__ch011__ck000
+23:54:35  INFO        [21/116] SKIP (cached)  6-2-2025__ch011__ck001
+23:54:35  INFO        [22/116] SKIP (cached)  6-2-2025__ch012__ck000
+23:54:35  INFO        [23/116] SKIP (cached)  6-2-2025__ch012__ck001
+23:54:35  INFO        [24/116] SKIP (cached)  6-2-2025__ch013__ck000
+23:54:35  INFO        [25/116] SKIP (cached)  6-2-2025__ch013__ck001
+23:54:35  INFO        [26/116] SKIP (cached)  6-2-2025__ch014__ck000
+23:54:35  INFO        [27/116] SKIP (cached)  6-2-2025__ch014__ck001
+23:54:35  INFO        [28/116] SKIP (cached)  6-2-2025__ch015__ck000
+23:54:35  INFO        [29/116] SKIP (cached)  6-2-2025__ch015__ck001
+23:54:35  INFO        [30/116] SKIP (cached)  6-2-2025__ch015__ck002
+23:54:35  INFO        [31/116] SKIP (cached)  6-2-2025__ch016__ck000
+23:54:35  INFO        [32/116] SKIP (cached)  6-2-2025__ch016__ck001
+23:54:35  INFO        [33/116] SKIP (cached)  6-2-2025__ch017__ck000
+23:54:35  INFO        [34/116] SKIP (cached)  6-2-2025__ch017__ck001
+23:54:35  INFO        [35/116] SKIP (cached)  6-2-2025__ch017__ck002
+23:54:35  INFO        [36/116] SKIP (cached)  6-2-2025__ch018__ck000
+23:54:35  INFO        [37/116] SKIP (cached)  6-2-2025__ch018__ck001
+23:54:35  INFO        [38/116] SKIP (cached)  6-2-2025__ch019__ck000
+23:54:35  INFO        [39/116] SKIP (cached)  6-2-2025__ch019__ck001
+23:54:35  INFO        [40/116] SKIP (cached)  6-2-2025__ch020__ck000
+23:54:35  INFO        [41/116] SKIP (cached)  6-2-2025__ch020__ck001
+23:54:35  INFO        [42/116] SKIP (cached)  6-2-2025__ch021__ck000
+23:54:35  INFO        [43/116] SKIP (cached)  6-2-2025__ch021__ck001
+23:54:35  INFO        [44/116] SKIP (cached)  6-2-2025__ch022__ck000
+23:54:35  INFO        [45/116] SKIP (cached)  6-2-2025__ch022__ck001
+23:54:35  INFO        [46/116] SKIP (cached)  6-2-2025__ch023__ck000
+23:54:35  INFO        [47/116] SKIP (cached)  6-2-2025__ch023__ck001
+23:54:35  INFO        [48/116] SKIP (cached)  6-2-2025__ch024__ck000
+23:54:35  INFO        [49/116] SKIP (cached)  6-2-2025__ch024__ck001
+23:54:35  INFO        [50/116] SKIP (cached)  6-2-2025__ch025__ck000
+23:54:35  INFO        [51/116] SKIP (cached)  6-2-2025__ch025__ck001
+23:54:35  INFO        [52/116] SKIP (cached)  6-2-2025__ch026__ck000
+23:54:35  INFO        [53/116] SKIP (cached)  6-2-2025__ch026__ck001
+23:54:35  INFO        [54/116] SKIP (cached)  6-2-2025__ch027__ck000
+23:54:35  INFO        [55/116] SKIP (cached)  6-2-2025__ch028__ck000
+23:54:35  INFO        [56/116] SKIP (cached)  6-2-2025__ch028__ck001
+23:54:35  INFO        [57/116] SKIP (cached)  6-2-2025__ch029__ck000
+23:54:35  INFO        [58/116] SKIP (cached)  6-2-2025__ch030__ck000
+23:54:35  INFO        [59/116] SKIP (cached)  6-2-2025__ch030__ck001
+23:54:35  INFO        [60/116] SKIP (cached)  6-2-2025__ch031__ck000
+23:54:35  INFO        [61/116] SKIP (cached)  6-2-2025__ch031__ck001
+23:54:35  INFO        [62/116] SKIP (cached)  6-2-2025__ch032__ck000
+23:54:35  INFO        [63/116] SKIP (cached)  6-2-2025__ch032__ck001
+23:54:35  INFO        [64/116] SKIP (cached)  6-2-2025__ch033__ck000
+23:54:35  INFO        [65/116] SKIP (cached)  6-2-2025__ch033__ck001
+23:54:35  INFO        [66/116] SKIP (cached)  6-2-2025__ch034__ck000
+23:54:35  INFO        [67/116] SKIP (cached)  6-2-2025__ch034__ck001
+23:54:35  INFO        [68/116] SKIP (cached)  6-2-2025__ch035__ck000
+23:54:35  INFO        [69/116] SKIP (cached)  6-2-2025__ch035__ck001
+23:54:35  INFO        [70/116] SKIP (cached)  6-2-2025__ch036__ck000
+23:54:35  INFO        [71/116] SKIP (cached)  6-2-2025__ch037__ck000
+23:54:35  INFO        [72/116] SKIP (cached)  6-2-2025__ch037__ck001
+23:54:35  INFO        [73/116] SKIP (cached)  6-2-2025__ch038__ck000
+23:54:35  INFO        [74/116] SKIP (cached)  6-2-2025__ch039__ck000
+23:54:35  INFO        [75/116] SKIP (cached)  6-2-2025__ch039__ck001
+23:54:35  INFO        [76/116] SKIP (cached)  6-2-2025__ch040__ck000
+23:54:35  INFO        [77/116] SKIP (cached)  6-2-2025__ch040__ck001
+23:54:35  INFO        [78/116] SKIP (cached)  6-2-2025__ch041__ck000
+23:54:35  INFO        [79/116] SKIP (cached)  6-2-2025__ch041__ck001
+23:54:35  INFO        [80/116] SKIP (cached)  6-2-2025__ch042__ck000
+23:54:35  INFO        [81/116] SKIP (cached)  6-2-2025__ch042__ck001
+23:54:35  INFO        [82/116] SKIP (cached)  6-2-2025__ch043__ck000
+23:54:35  INFO        [83/116] SKIP (cached)  6-2-2025__ch043__ck001
+23:54:35  INFO        [84/116] SKIP (cached)  6-2-2025__ch043__ck002
+23:54:35  INFO        [85/116] SKIP (cached)  6-2-2025__ch044__ck000
+23:54:35  INFO        [86/116] SKIP (cached)  6-2-2025__ch044__ck001
+23:54:35  INFO        [87/116] SKIP (cached)  6-2-2025__ch045__ck000
+23:54:35  INFO        [88/116] SKIP (cached)  6-2-2025__ch045__ck001
+23:54:35  INFO        [89/116] SKIP (cached)  6-2-2025__ch046__ck000
+23:54:35  INFO        [90/116] SKIP (cached)  6-2-2025__ch046__ck001
+23:54:35  INFO        [91/116] SKIP (cached)  6-2-2025__ch047__ck000
+23:54:35  INFO        [92/116] SKIP (cached)  6-2-2025__ch047__ck001
+23:54:35  INFO        [93/116] SKIP (cached)  6-2-2025__ch048__ck000
+23:54:35  INFO        [94/116] SKIP (cached)  6-2-2025__ch048__ck001
+23:54:35  INFO        [95/116] SKIP (cached)  6-2-2025__ch049__ck000
+23:54:35  INFO        [96/116] SKIP (cached)  6-2-2025__ch049__ck001
+23:54:35  INFO        [97/116] SKIP (cached)  6-2-2025__ch050__ck000
+23:54:35  INFO        [98/116] SKIP (cached)  6-2-2025__ch051__ck000
+23:54:35  INFO        [99/116] SKIP (cached)  6-2-2025__ch052__ck000
+23:54:35  INFO        [100/116] SKIP (cached)  6-2-2025__ch052__ck001
+23:54:35  INFO        [101/116] SKIP (cached)  6-2-2025__ch053__ck000
+23:54:35  INFO        [102/116] SKIP (cached)  6-2-2025__ch053__ck001
+23:54:35  INFO        [103/116] SKIP (cached)  6-2-2025__ch054__ck000
+23:54:35  INFO        [104/116] SKIP (cached)  6-2-2025__ch055__ck000
+23:54:35  INFO        [105/116] SKIP (cached)  6-2-2025__ch055__ck001
+23:54:35  INFO        [106/116] SKIP (cached)  6-2-2025__ch056__ck000
+23:54:35  INFO        [107/116] SKIP (cached)  6-2-2025__ch056__ck001
+23:54:35  INFO        [108/116] SKIP (cached)  6-2-2025__ch057__ck000
+23:54:35  INFO        [109/116] SKIP (cached)  6-2-2025__ch058__ck000
+23:54:35  INFO        [110/116] SKIP (cached)  6-2-2025__ch058__ck001
+23:54:35  INFO        [111/116] SKIP (cached)  6-2-2025__ch059__ck000
+23:54:35  INFO        [112/116] SKIP (cached)  6-2-2025__ch059__ck001
+23:54:35  INFO        [113/116] SKIP (cached)  6-2-2025__ch060__ck000
+23:54:35  INFO        [114/116] SKIP (cached)  6-2-2025__ch061__ck000
+23:54:35  INFO        [115/116] SKIP (cached)  6-2-2025__ch061__ck001
+23:54:35  INFO        [116/116] SKIP (cached)  6-2-2025__ch062__ck000
+23:54:35  INFO      Step 4/4  Finalising book in DB ...
+23:54:35  INFO      Built 0 new TrainingSamples
+23:54:35  INFO        Done: 0 TrainingSamples created
+23:54:35  INFO      
+============================================================
+23:54:35  INFO      Processing: 69.pdf
+23:54:35  INFO      ============================================================
+23:54:35  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:54:37  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:54:37  INFO        Found 2 chunks across 1 chapters
+23:54:37  INFO      Step 2/4  Saving chunk manifest …
+23:54:37  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\69\metadata.json
+23:54:37  INFO      Step 3/4  Running AI extraction …
+23:54:37  INFO        2 chunks already done, 0 remaining
+23:54:37  INFO        [1/2] SKIP (cached)  69__ch000__ck000
+23:54:37  INFO        [2/2] SKIP (cached)  69__ch000__ck001
+23:54:37  INFO      Step 4/4  Finalising book in DB ...
+23:54:37  INFO      Built 0 new TrainingSamples
+23:54:37  INFO        Done: 0 TrainingSamples created
+23:54:37  INFO      
+============================================================
+23:54:37  INFO      Processing: 7.pdf
+23:54:37  INFO      ============================================================
+23:54:37  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:54:40  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:54:40  INFO        Found 2 chunks across 1 chapters
+23:54:40  INFO      Step 2/4  Saving chunk manifest …
+23:54:40  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\7\metadata.json
+23:54:40  INFO      Step 3/4  Running AI extraction …
+23:54:40  INFO        2 chunks already done, 0 remaining
+23:54:40  INFO        [1/2] SKIP (cached)  7__ch000__ck000
+23:54:40  INFO        [2/2] SKIP (cached)  7__ch000__ck001
+23:54:40  INFO      Step 4/4  Finalising book in DB ...
+23:54:40  INFO      Built 0 new TrainingSamples
+23:54:40  INFO        Done: 0 TrainingSamples created
+23:54:40  INFO      
+============================================================
+23:54:40  INFO      Processing: 7143-Текст статті-7056-2-10-20260126.pdf
+23:54:40  INFO      ============================================================
+23:54:40  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:54:43  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:54:43  INFO        Found 1 chunks across 1 chapters
+23:54:43  INFO      Step 2/4  Saving chunk manifest …
+23:54:43  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\7143-tekst-statti-7056-2-10-20260126\metadata.json
+23:54:43  INFO      Step 3/4  Running AI extraction …
+23:54:43  INFO        1 chunks already done, 0 remaining
+23:54:43  INFO        [1/1] SKIP (cached)  7143-tekst-statti-7056-2-10-20260126__ch000__ck000
+23:54:43  INFO      Step 4/4  Finalising book in DB ...
+23:54:43  INFO      Built 0 new TrainingSamples
+23:54:43  INFO        Done: 0 TrainingSamples created
+23:54:43  INFO      
+============================================================
+23:54:43  INFO      Processing: 804-Текст статті-1719-1-10-20230712.pdf
+23:54:43  INFO      ============================================================
+23:54:43  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:54:45  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:54:45  INFO        Found 1 chunks across 1 chapters
+23:54:45  INFO      Step 2/4  Saving chunk manifest …
+23:54:45  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\804-tekst-statti-1719-1-10-20230712\metadata.json
+23:54:45  INFO      Step 3/4  Running AI extraction …
+23:54:45  INFO        1 chunks already done, 0 remaining
+23:54:45  INFO        [1/1] SKIP (cached)  804-tekst-statti-1719-1-10-20230712__ch000__ck000
+23:54:45  INFO      Step 4/4  Finalising book in DB ...
+23:54:45  INFO      Built 0 new TrainingSamples
+23:54:45  INFO        Done: 0 TrainingSamples created
+23:54:45  INFO      
+============================================================
+23:54:45  INFO      Processing: 9-2.pdf
+23:54:45  INFO      ============================================================
+23:54:45  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:54:47  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+23:54:47  INFO        Found 2 chunks across 2 chapters
+23:54:47  INFO      Step 2/4  Saving chunk manifest …
+23:54:47  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\9-2\metadata.json
+23:54:47  INFO      Step 3/4  Running AI extraction …
+23:54:47  INFO        2 chunks already done, 0 remaining
+23:54:47  INFO        [1/2] SKIP (cached)  9-2__ch000__ck000
+23:54:47  INFO        [2/2] SKIP (cached)  9-2__ch001__ck000
+23:54:47  INFO      Step 4/4  Finalising book in DB ...
+23:54:47  INFO      Built 0 new TrainingSamples
+23:54:47  INFO        Done: 0 TrainingSamples created
+23:54:47  INFO      
+============================================================
+23:54:47  INFO      Processing: 9.pdf
+23:54:47  INFO      ============================================================
+23:54:47  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:54:51  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+23:54:51  INFO        Found 4 chunks across 2 chapters
+23:54:51  INFO      Step 2/4  Saving chunk manifest …
+23:54:51  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\9\metadata.json
+23:54:51  INFO      Step 3/4  Running AI extraction …
+23:54:51  INFO        4 chunks already done, 0 remaining
+23:54:51  INFO        [1/4] SKIP (cached)  9__ch000__ck000
+23:54:51  INFO        [2/4] SKIP (cached)  9__ch000__ck001
+23:54:51  INFO        [3/4] SKIP (cached)  9__ch000__ck002
+23:54:51  INFO        [4/4] SKIP (cached)  9__ch001__ck000
+23:54:51  INFO      Step 4/4  Finalising book in DB ...
+23:54:51  INFO      Built 0 new TrainingSamples
+23:54:51  INFO        Done: 0 TrainingSamples created
+23:54:51  INFO      
+============================================================
+23:54:51  INFO      Processing: 9_Bystrov.pdf
+23:54:51  INFO      ============================================================
+23:54:51  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:54:55  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:54:55  INFO        Found 3 chunks across 1 chapters
+23:54:55  INFO      Step 2/4  Saving chunk manifest …
+23:54:55  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\9-bystrov\metadata.json
+23:54:55  INFO      Step 3/4  Running AI extraction …
+23:54:55  INFO        3 chunks already done, 0 remaining
+23:54:55  INFO        [1/3] SKIP (cached)  9-bystrov__ch000__ck000
+23:54:55  INFO        [2/3] SKIP (cached)  9-bystrov__ch000__ck001
+23:54:55  INFO        [3/3] SKIP (cached)  9-bystrov__ch000__ck002
+23:54:55  INFO      Step 4/4  Finalising book in DB ...
+23:54:55  INFO      Built 0 new TrainingSamples
+23:54:55  INFO        Done: 0 TrainingSamples created
+23:54:55  INFO      
+============================================================
+23:54:55  INFO      Processing: =_UTF-8_B_0J_QvtC70ZbRgtC40YfQvdCwINC60YDQuA==_= =_UTF-8_B_0LfQsCDRgdGC0YDRg9C60YLRg9GA0L3Qvg==_= =_UTF-8_B_4oCT0YTRg9C90LrRhtGW0L7QvdCw0LvRjNC9_= =_UTF-8_B_0LjQuSDQsNGB0L_QtdC60YIucGRm_=.pdf
+23:54:55  INFO      ============================================================
+23:54:55  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:55:03  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+23:55:03  INFO        Found 2 chunks across 2 chapters
+23:55:03  INFO      Step 2/4  Saving chunk manifest …
+23:55:03  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\utf-8-b-0j-qvtc70zbrgtc40yfqvdcwinc60ydqua-utf-8-b-0lfqscdrgdgc0ydrg9c60ylrg9ga0\metadata.json
+23:55:03  INFO      Step 3/4  Running AI extraction …
+23:55:03  INFO        0 chunks already done, 2 remaining
+23:55:03  INFO        [1/2] Processing  utf-8-b-0j-qvtc70zbrgtc40yfqvdcwinc60ydqua-utf-8-b-0lfqscdrgdgc0ydrg9c60ylrg9ga0__ch000__ck000 (312 tokens, chapter: Список використаних джерел)
+23:55:03  INFO        -> [utf-8-b-0j-qvtc70zbrgtc40yfqvdcwinc60ydqua-utf-8-b-0lfqscdrgdgc0ydrg9c60ylrg9ga0__ch000__ck000] lang=uk tokens=312 | active backends: gemini -> mistral -> groq -> openrouter -> github -> lmstudio
+23:55:07  INFO      AFC is enabled with max remote calls: 10.
+23:55:07  INFO      HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+23:55:07  WARNING   [gemini] Daily quota exhausted
+23:55:07  INFO        Switching to next backend. Remaining: mistral -> groq -> openrouter -> github -> lmstudio
+23:55:26  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+23:55:28  INFO        [utf-8-b-0j-qvtc70zbrgtc40yfqvdcwinc60ydqua-utf-8-b-0lfqscdrgdgc0ydrg9c60ylrg9ga0__ch000__ck000] 3 scenarios, 3 decisions, 4 tactics, 8 qa_pairs
+23:55:28  ERROR       ERROR on utf-8-b-0j-qvtc70zbrgtc40yfqvdcwinc60ydqua-utf-8-b-0lfqscdrgdgc0ydrg9c60ylrg9ga0__ch000__ck000: [WinError 206] The filename or extension is too long: 'C:\\Users\\User\\PycharmProjects\\crisis-management\\app\\ingest\\data\\extracted\\utf-8-b-0j-qvtc70zbrgtc40yfqvdcwinc60ydqua-utf-8-b-0lfqscdrgdgc0ydrg9c60ylrg9ga0\\chunks\\utf-8-b-0j-qvtc70zbrgtc40yfqvdcwinc60ydqua-utf-8-b-0lfqscdrgdgc0ydrg9c60ylrg9ga0__ch000__ck000'
+23:55:28  INFO        [2/2] Processing  utf-8-b-0j-qvtc70zbrgtc40yfqvdcwinc60ydqua-utf-8-b-0lfqscdrgdgc0ydrg9c60ylrg9ga0__ch001__ck000 (494 tokens, chapter: References)
+23:55:28  INFO        -> [utf-8-b-0j-qvtc70zbrgtc40yfqvdcwinc60ydqua-utf-8-b-0lfqscdrgdgc0ydrg9c60ylrg9ga0__ch001__ck000] lang=uk tokens=494 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+23:55:46  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+23:55:48  INFO        [utf-8-b-0j-qvtc70zbrgtc40yfqvdcwinc60ydqua-utf-8-b-0lfqscdrgdgc0ydrg9c60ylrg9ga0__ch001__ck000] 4 scenarios, 4 decisions, 5 tactics, 8 qa_pairs
+23:55:48  ERROR       ERROR on utf-8-b-0j-qvtc70zbrgtc40yfqvdcwinc60ydqua-utf-8-b-0lfqscdrgdgc0ydrg9c60ylrg9ga0__ch001__ck000: [WinError 206] The filename or extension is too long: 'C:\\Users\\User\\PycharmProjects\\crisis-management\\app\\ingest\\data\\extracted\\utf-8-b-0j-qvtc70zbrgtc40yfqvdcwinc60ydqua-utf-8-b-0lfqscdrgdgc0ydrg9c60ylrg9ga0\\chunks\\utf-8-b-0j-qvtc70zbrgtc40yfqvdcwinc60ydqua-utf-8-b-0lfqscdrgdgc0ydrg9c60ylrg9ga0__ch001__ck000'
+23:55:48  INFO      Step 4/4  Finalising book in DB ...
+23:55:48  INFO      Built 0 new TrainingSamples
+23:55:48  INFO        Done: 0 TrainingSamples created
+23:55:48  INFO      
+============================================================
+23:55:48  INFO      Processing: =_UTF-8_B_0KDQvtC80LDQvdGW0LIg0JzQldCd0LctNDEucGRm_=.pdf
+23:55:48  INFO      ============================================================
+23:55:48  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:55:53  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:55:53  INFO        Found 3 chunks across 1 chapters
+23:55:53  INFO      Step 2/4  Saving chunk manifest …
+23:55:53  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm\metadata.json
+23:55:53  INFO      Step 3/4  Running AI extraction …
+23:55:53  INFO        3 chunks already done, 0 remaining
+23:55:53  INFO        [1/3] SKIP (cached)  utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm__ch000__ck000
+23:55:53  INFO        [2/3] SKIP (cached)  utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm__ch000__ck001
+23:55:53  INFO        [3/3] SKIP (cached)  utf-8-b-0kdqvtc80ldqvdgw0lig0jzqldcd0lctndeucgrm__ch000__ck002
+23:55:53  INFO      Step 4/4  Finalising book in DB ...
+23:55:53  INFO      Built 0 new TrainingSamples
+23:55:53  INFO        Done: 0 TrainingSamples created
+23:55:53  INFO      
+============================================================
+23:55:53  INFO      Processing: =_UTF-8_B_0KTQsNC70L7QstC40YcucGRm_=.pdf
+23:55:53  INFO      ============================================================
+23:55:53  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:55:55  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+23:55:55  INFO        Found 2 chunks across 2 chapters
+23:55:55  INFO      Step 2/4  Saving chunk manifest …
+23:55:55  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\utf-8-b-0ktqsnc70l7qstc40ycucgrm\metadata.json
+23:55:55  INFO      Step 3/4  Running AI extraction …
+23:55:55  INFO        2 chunks already done, 0 remaining
+23:55:55  INFO        [1/2] SKIP (cached)  utf-8-b-0ktqsnc70l7qstc40ycucgrm__ch000__ck000
+23:55:55  INFO        [2/2] SKIP (cached)  utf-8-b-0ktqsnc70l7qstc40ycucgrm__ch001__ck000
+23:55:55  INFO      Step 4/4  Finalising book in DB ...
+23:55:55  INFO      Built 0 new TrainingSamples
+23:55:55  INFO        Done: 0 TrainingSamples created
+23:55:55  INFO      
+============================================================
+23:55:55  INFO      Processing: =_UTF-8_Q_132=5F=D0=A1=D1=82=D0=B0=D1=82=D1=82=D1=8F.pdf_=.pdf
+23:55:55  INFO      ============================================================
+23:55:55  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:55:59  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+23:55:59  INFO        Found 2 chunks across 2 chapters
+23:55:59  INFO      Step 2/4  Saving chunk manifest …
+23:55:59  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\utf-8-q-132-5f-d0-a1-d1-82-d0-b0-d1-82-d1-82-d1-8f-pdf\metadata.json
+23:55:59  INFO      Step 3/4  Running AI extraction …
+23:55:59  INFO        2 chunks already done, 0 remaining
+23:55:59  INFO        [1/2] SKIP (cached)  utf-8-q-132-5f-d0-a1-d1-82-d0-b0-d1-82-d1-82-d1-8f-pdf__ch000__ck000
+23:55:59  INFO        [2/2] SKIP (cached)  utf-8-q-132-5f-d0-a1-d1-82-d0-b0-d1-82-d1-82-d1-8f-pdf__ch001__ck000
+23:55:59  INFO      Step 4/4  Finalising book in DB ...
+23:55:59  INFO      Built 0 new TrainingSamples
+23:55:59  INFO        Done: 0 TrainingSamples created
+23:55:59  INFO      
+============================================================
+23:55:59  INFO      Processing: admin,+10.pdf
+23:55:59  INFO      ============================================================
+23:55:59  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:56:01  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+23:56:01  INFO        Found 2 chunks across 2 chapters
+23:56:01  INFO      Step 2/4  Saving chunk manifest …
+23:56:01  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\admin-10\metadata.json
+23:56:01  INFO      Step 3/4  Running AI extraction …
+23:56:01  INFO        2 chunks already done, 0 remaining
+23:56:01  INFO        [1/2] SKIP (cached)  admin-10__ch000__ck000
+23:56:01  INFO        [2/2] SKIP (cached)  admin-10__ch001__ck000
+23:56:01  INFO      Step 4/4  Finalising book in DB ...
+23:56:01  INFO      Built 0 new TrainingSamples
+23:56:01  INFO        Done: 0 TrainingSamples created
+23:56:01  INFO      
+============================================================
+23:56:01  INFO      Processing: aprer_2019_15(2)__7.pdf
+23:56:01  INFO      ============================================================
+23:56:01  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:56:03  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:56:03  INFO        Found 1 chunks across 1 chapters
+23:56:03  INFO      Step 2/4  Saving chunk manifest …
+23:56:03  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\aprer-2019-15-2-7\metadata.json
+23:56:03  INFO      Step 3/4  Running AI extraction …
+23:56:03  INFO        1 chunks already done, 0 remaining
+23:56:03  INFO        [1/1] SKIP (cached)  aprer-2019-15-2-7__ch000__ck000
+23:56:03  INFO      Step 4/4  Finalising book in DB ...
+23:56:03  INFO      Built 0 new TrainingSamples
+23:56:03  INFO        Done: 0 TrainingSamples created
+23:56:03  INFO      
+============================================================
+23:56:03  INFO      Processing: CERC_CommunityEngagement.pdf
+23:56:03  INFO      ============================================================
+23:56:03  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:56:06  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+23:56:06  INFO        Found 2 chunks across 2 chapters
+23:56:06  INFO      Step 2/4  Saving chunk manifest …
+23:56:06  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-communityengagement\metadata.json
+23:56:06  INFO      Step 3/4  Running AI extraction …
+23:56:06  INFO        2 chunks already done, 0 remaining
+23:56:06  INFO        [1/2] SKIP (cached)  cerc-communityengagement__ch000__ck000
+23:56:06  INFO        [2/2] SKIP (cached)  cerc-communityengagement__ch001__ck000
+23:56:06  INFO      Step 4/4  Finalising book in DB ...
+23:56:06  INFO      Built 0 new TrainingSamples
+23:56:06  INFO        Done: 0 TrainingSamples created
+23:56:06  INFO      
+============================================================
+23:56:06  INFO      Processing: CERC_Crisis_Communication_Plans.pdf
+23:56:06  INFO      ============================================================
+23:56:06  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:56:19  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+23:56:19  INFO        Found 3 chunks across 2 chapters
+23:56:19  INFO      Step 2/4  Saving chunk manifest …
+23:56:19  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-crisis-communication-plans\metadata.json
+23:56:19  INFO      Step 3/4  Running AI extraction …
+23:56:19  INFO        3 chunks already done, 0 remaining
+23:56:19  INFO        [1/3] SKIP (cached)  cerc-crisis-communication-plans__ch000__ck000
+23:56:19  INFO        [2/3] SKIP (cached)  cerc-crisis-communication-plans__ch000__ck001
+23:56:19  INFO        [3/3] SKIP (cached)  cerc-crisis-communication-plans__ch001__ck000
+23:56:19  INFO      Step 4/4  Finalising book in DB ...
+23:56:19  INFO      Built 0 new TrainingSamples
+23:56:19  INFO        Done: 0 TrainingSamples created
+23:56:19  INFO      
+============================================================
+23:56:19  INFO      Processing: CERC_Introduction.pdf
+23:56:19  INFO      ============================================================
+23:56:19  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:56:22  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:56:22  INFO        Found 1 chunks across 1 chapters
+23:56:22  INFO      Step 2/4  Saving chunk manifest …
+23:56:22  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-introduction\metadata.json
+23:56:22  INFO      Step 3/4  Running AI extraction …
+23:56:22  INFO        1 chunks already done, 0 remaining
+23:56:22  INFO        [1/1] SKIP (cached)  cerc-introduction__ch000__ck000
+23:56:22  INFO      Step 4/4  Finalising book in DB ...
+23:56:22  INFO      Built 0 new TrainingSamples
+23:56:22  INFO        Done: 0 TrainingSamples created
+23:56:22  INFO      
+============================================================
+23:56:22  INFO      Processing: CERC_Messages_and_Audiences.pdf
+23:56:22  INFO      ============================================================
+23:56:22  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:56:25  INFO        Sections after merge: 2 (was 3, merged 1 tiny sections)
+23:56:25  INFO        Found 2 chunks across 2 chapters
+23:56:25  INFO      Step 2/4  Saving chunk manifest …
+23:56:25  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-messages-and-audiences\metadata.json
+23:56:25  INFO      Step 3/4  Running AI extraction …
+23:56:25  INFO        2 chunks already done, 0 remaining
+23:56:25  INFO        [1/2] SKIP (cached)  cerc-messages-and-audiences__ch000__ck000
+23:56:25  INFO        [2/2] SKIP (cached)  cerc-messages-and-audiences__ch001__ck000
+23:56:25  INFO      Step 4/4  Finalising book in DB ...
+23:56:25  INFO      Built 0 new TrainingSamples
+23:56:25  INFO        Done: 0 TrainingSamples created
+23:56:25  INFO      
+============================================================
+23:56:25  INFO      Processing: CERC_Psychology_of_a_Crisis.pdf
+23:56:25  INFO      ============================================================
+23:56:25  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:56:29  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:56:29  INFO        Found 1 chunks across 1 chapters
+23:56:29  INFO      Step 2/4  Saving chunk manifest …
+23:56:29  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-psychology-of-a-crisis\metadata.json
+23:56:29  INFO      Step 3/4  Running AI extraction …
+23:56:29  INFO        1 chunks already done, 0 remaining
+23:56:29  INFO        [1/1] SKIP (cached)  cerc-psychology-of-a-crisis__ch000__ck000
+23:56:29  INFO      Step 4/4  Finalising book in DB ...
+23:56:29  INFO      Built 0 new TrainingSamples
+23:56:29  INFO        Done: 0 TrainingSamples created
+23:56:29  INFO      
+============================================================
+23:56:29  INFO      Processing: CERC_Spokesperson.pdf
+23:56:29  INFO      ============================================================
+23:56:29  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:56:35  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+23:56:35  INFO        Found 2 chunks across 2 chapters
+23:56:35  INFO      Step 2/4  Saving chunk manifest …
+23:56:35  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-spokesperson\metadata.json
+23:56:35  INFO      Step 3/4  Running AI extraction …
+23:56:35  INFO        2 chunks already done, 0 remaining
+23:56:35  INFO        [1/2] SKIP (cached)  cerc-spokesperson__ch000__ck000
+23:56:35  INFO        [2/2] SKIP (cached)  cerc-spokesperson__ch001__ck000
+23:56:35  INFO      Step 4/4  Finalising book in DB ...
+23:56:35  INFO      Built 0 new TrainingSamples
+23:56:35  INFO        Done: 0 TrainingSamples created
+23:56:35  INFO      
+============================================================
+23:56:35  INFO      Processing: CERC_Working_with_the_Media.pdf
+23:56:35  INFO      ============================================================
+23:56:35  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:56:42  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+23:56:42  INFO        Found 2 chunks across 2 chapters
+23:56:42  INFO      Step 2/4  Saving chunk manifest …
+23:56:42  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\cerc-working-with-the-media\metadata.json
+23:56:42  INFO      Step 3/4  Running AI extraction …
+23:56:42  INFO        2 chunks already done, 0 remaining
+23:56:42  INFO        [1/2] SKIP (cached)  cerc-working-with-the-media__ch000__ck000
+23:56:42  INFO        [2/2] SKIP (cached)  cerc-working-with-the-media__ch001__ck000
+23:56:42  INFO      Step 4/4  Finalising book in DB ...
+23:56:42  INFO      Built 0 new TrainingSamples
+23:56:42  INFO        Done: 0 TrainingSamples created
+23:56:42  INFO      
+============================================================
+23:56:42  INFO      Processing: chen_zifei_201308_ma.pdf
+23:56:42  INFO      ============================================================
+23:56:42  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:56:53  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:56:53  INFO        Found 3 chunks across 1 chapters
+23:56:53  INFO      Step 2/4  Saving chunk manifest …
+23:56:53  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\chen-zifei-201308-ma\metadata.json
+23:56:53  INFO      Step 3/4  Running AI extraction …
+23:56:53  INFO        3 chunks already done, 0 remaining
+23:56:53  INFO        [1/3] SKIP (cached)  chen-zifei-201308-ma__ch000__ck000
+23:56:53  INFO        [2/3] SKIP (cached)  chen-zifei-201308-ma__ch000__ck001
+23:56:53  INFO        [3/3] SKIP (cached)  chen-zifei-201308-ma__ch000__ck002
+23:56:53  INFO      Step 4/4  Finalising book in DB ...
+23:56:53  INFO      Built 0 new TrainingSamples
+23:56:53  INFO        Done: 0 TrainingSamples created
+23:56:53  INFO      
+============================================================
+23:56:53  INFO      Processing: conf-06-07-03-25-mater3.pdf
+23:56:53  INFO      ============================================================
+23:56:53  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:58:59  INFO        Sections after merge: 195 (was 195, merged 0 tiny sections)
+23:58:59  INFO        Found 195 chunks across 195 chapters
+23:58:59  INFO      Step 2/4  Saving chunk manifest …
+23:58:59  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\conf-06-07-03-25-mater3\metadata.json
+23:58:59  INFO      Step 3/4  Running AI extraction …
+23:58:59  INFO        195 chunks already done, 0 remaining
+23:58:59  INFO        [1/195] SKIP (cached)  conf-06-07-03-25-mater3__ch000__ck000
+23:58:59  INFO        [2/195] SKIP (cached)  conf-06-07-03-25-mater3__ch001__ck000
+23:58:59  INFO        [3/195] SKIP (cached)  conf-06-07-03-25-mater3__ch002__ck000
+23:58:59  INFO        [4/195] SKIP (cached)  conf-06-07-03-25-mater3__ch003__ck000
+23:58:59  INFO        [5/195] SKIP (cached)  conf-06-07-03-25-mater3__ch004__ck000
+23:58:59  INFO        [6/195] SKIP (cached)  conf-06-07-03-25-mater3__ch005__ck000
+23:58:59  INFO        [7/195] SKIP (cached)  conf-06-07-03-25-mater3__ch006__ck000
+23:58:59  INFO        [8/195] SKIP (cached)  conf-06-07-03-25-mater3__ch007__ck000
+23:58:59  INFO        [9/195] SKIP (cached)  conf-06-07-03-25-mater3__ch008__ck000
+23:58:59  INFO        [10/195] SKIP (cached)  conf-06-07-03-25-mater3__ch009__ck000
+23:58:59  INFO        [11/195] SKIP (cached)  conf-06-07-03-25-mater3__ch010__ck000
+23:58:59  INFO        [12/195] SKIP (cached)  conf-06-07-03-25-mater3__ch011__ck000
+23:58:59  INFO        [13/195] SKIP (cached)  conf-06-07-03-25-mater3__ch012__ck000
+23:58:59  INFO        [14/195] SKIP (cached)  conf-06-07-03-25-mater3__ch013__ck000
+23:58:59  INFO        [15/195] SKIP (cached)  conf-06-07-03-25-mater3__ch014__ck000
+23:58:59  INFO        [16/195] SKIP (cached)  conf-06-07-03-25-mater3__ch015__ck000
+23:58:59  INFO        [17/195] SKIP (cached)  conf-06-07-03-25-mater3__ch016__ck000
+23:58:59  INFO        [18/195] SKIP (cached)  conf-06-07-03-25-mater3__ch017__ck000
+23:58:59  INFO        [19/195] SKIP (cached)  conf-06-07-03-25-mater3__ch018__ck000
+23:58:59  INFO        [20/195] SKIP (cached)  conf-06-07-03-25-mater3__ch019__ck000
+23:58:59  INFO        [21/195] SKIP (cached)  conf-06-07-03-25-mater3__ch020__ck000
+23:58:59  INFO        [22/195] SKIP (cached)  conf-06-07-03-25-mater3__ch021__ck000
+23:58:59  INFO        [23/195] SKIP (cached)  conf-06-07-03-25-mater3__ch022__ck000
+23:58:59  INFO        [24/195] SKIP (cached)  conf-06-07-03-25-mater3__ch023__ck000
+23:58:59  INFO        [25/195] SKIP (cached)  conf-06-07-03-25-mater3__ch024__ck000
+23:58:59  INFO        [26/195] SKIP (cached)  conf-06-07-03-25-mater3__ch025__ck000
+23:58:59  INFO        [27/195] SKIP (cached)  conf-06-07-03-25-mater3__ch026__ck000
+23:58:59  INFO        [28/195] SKIP (cached)  conf-06-07-03-25-mater3__ch027__ck000
+23:58:59  INFO        [29/195] SKIP (cached)  conf-06-07-03-25-mater3__ch028__ck000
+23:58:59  INFO        [30/195] SKIP (cached)  conf-06-07-03-25-mater3__ch029__ck000
+23:58:59  INFO        [31/195] SKIP (cached)  conf-06-07-03-25-mater3__ch030__ck000
+23:58:59  INFO        [32/195] SKIP (cached)  conf-06-07-03-25-mater3__ch031__ck000
+23:58:59  INFO        [33/195] SKIP (cached)  conf-06-07-03-25-mater3__ch032__ck000
+23:58:59  INFO        [34/195] SKIP (cached)  conf-06-07-03-25-mater3__ch033__ck000
+23:58:59  INFO        [35/195] SKIP (cached)  conf-06-07-03-25-mater3__ch034__ck000
+23:58:59  INFO        [36/195] SKIP (cached)  conf-06-07-03-25-mater3__ch035__ck000
+23:58:59  INFO        [37/195] SKIP (cached)  conf-06-07-03-25-mater3__ch036__ck000
+23:58:59  INFO        [38/195] SKIP (cached)  conf-06-07-03-25-mater3__ch037__ck000
+23:58:59  INFO        [39/195] SKIP (cached)  conf-06-07-03-25-mater3__ch038__ck000
+23:58:59  INFO        [40/195] SKIP (cached)  conf-06-07-03-25-mater3__ch039__ck000
+23:58:59  INFO        [41/195] SKIP (cached)  conf-06-07-03-25-mater3__ch040__ck000
+23:58:59  INFO        [42/195] SKIP (cached)  conf-06-07-03-25-mater3__ch041__ck000
+23:58:59  INFO        [43/195] SKIP (cached)  conf-06-07-03-25-mater3__ch042__ck000
+23:58:59  INFO        [44/195] SKIP (cached)  conf-06-07-03-25-mater3__ch043__ck000
+23:58:59  INFO        [45/195] SKIP (cached)  conf-06-07-03-25-mater3__ch044__ck000
+23:58:59  INFO        [46/195] SKIP (cached)  conf-06-07-03-25-mater3__ch045__ck000
+23:58:59  INFO        [47/195] SKIP (cached)  conf-06-07-03-25-mater3__ch046__ck000
+23:58:59  INFO        [48/195] SKIP (cached)  conf-06-07-03-25-mater3__ch047__ck000
+23:58:59  INFO        [49/195] SKIP (cached)  conf-06-07-03-25-mater3__ch048__ck000
+23:58:59  INFO        [50/195] SKIP (cached)  conf-06-07-03-25-mater3__ch049__ck000
+23:58:59  INFO        [51/195] SKIP (cached)  conf-06-07-03-25-mater3__ch050__ck000
+23:58:59  INFO        [52/195] SKIP (cached)  conf-06-07-03-25-mater3__ch051__ck000
+23:58:59  INFO        [53/195] SKIP (cached)  conf-06-07-03-25-mater3__ch052__ck000
+23:58:59  INFO        [54/195] SKIP (cached)  conf-06-07-03-25-mater3__ch053__ck000
+23:58:59  INFO        [55/195] SKIP (cached)  conf-06-07-03-25-mater3__ch054__ck000
+23:58:59  INFO        [56/195] SKIP (cached)  conf-06-07-03-25-mater3__ch055__ck000
+23:58:59  INFO        [57/195] SKIP (cached)  conf-06-07-03-25-mater3__ch056__ck000
+23:58:59  INFO        [58/195] SKIP (cached)  conf-06-07-03-25-mater3__ch057__ck000
+23:58:59  INFO        [59/195] SKIP (cached)  conf-06-07-03-25-mater3__ch058__ck000
+23:58:59  INFO        [60/195] SKIP (cached)  conf-06-07-03-25-mater3__ch059__ck000
+23:58:59  INFO        [61/195] SKIP (cached)  conf-06-07-03-25-mater3__ch060__ck000
+23:58:59  INFO        [62/195] SKIP (cached)  conf-06-07-03-25-mater3__ch061__ck000
+23:58:59  INFO        [63/195] SKIP (cached)  conf-06-07-03-25-mater3__ch062__ck000
+23:58:59  INFO        [64/195] SKIP (cached)  conf-06-07-03-25-mater3__ch063__ck000
+23:58:59  INFO        [65/195] SKIP (cached)  conf-06-07-03-25-mater3__ch064__ck000
+23:58:59  INFO        [66/195] SKIP (cached)  conf-06-07-03-25-mater3__ch065__ck000
+23:58:59  INFO        [67/195] SKIP (cached)  conf-06-07-03-25-mater3__ch066__ck000
+23:58:59  INFO        [68/195] SKIP (cached)  conf-06-07-03-25-mater3__ch067__ck000
+23:58:59  INFO        [69/195] SKIP (cached)  conf-06-07-03-25-mater3__ch068__ck000
+23:58:59  INFO        [70/195] SKIP (cached)  conf-06-07-03-25-mater3__ch069__ck000
+23:58:59  INFO        [71/195] SKIP (cached)  conf-06-07-03-25-mater3__ch070__ck000
+23:58:59  INFO        [72/195] SKIP (cached)  conf-06-07-03-25-mater3__ch071__ck000
+23:58:59  INFO        [73/195] SKIP (cached)  conf-06-07-03-25-mater3__ch072__ck000
+23:58:59  INFO        [74/195] SKIP (cached)  conf-06-07-03-25-mater3__ch073__ck000
+23:58:59  INFO        [75/195] SKIP (cached)  conf-06-07-03-25-mater3__ch074__ck000
+23:58:59  INFO        [76/195] SKIP (cached)  conf-06-07-03-25-mater3__ch075__ck000
+23:58:59  INFO        [77/195] SKIP (cached)  conf-06-07-03-25-mater3__ch076__ck000
+23:58:59  INFO        [78/195] SKIP (cached)  conf-06-07-03-25-mater3__ch077__ck000
+23:58:59  INFO        [79/195] SKIP (cached)  conf-06-07-03-25-mater3__ch078__ck000
+23:58:59  INFO        [80/195] SKIP (cached)  conf-06-07-03-25-mater3__ch079__ck000
+23:58:59  INFO        [81/195] SKIP (cached)  conf-06-07-03-25-mater3__ch080__ck000
+23:58:59  INFO        [82/195] SKIP (cached)  conf-06-07-03-25-mater3__ch081__ck000
+23:58:59  INFO        [83/195] SKIP (cached)  conf-06-07-03-25-mater3__ch082__ck000
+23:58:59  INFO        [84/195] SKIP (cached)  conf-06-07-03-25-mater3__ch083__ck000
+23:58:59  INFO        [85/195] SKIP (cached)  conf-06-07-03-25-mater3__ch084__ck000
+23:58:59  INFO        [86/195] SKIP (cached)  conf-06-07-03-25-mater3__ch085__ck000
+23:58:59  INFO        [87/195] SKIP (cached)  conf-06-07-03-25-mater3__ch086__ck000
+23:58:59  INFO        [88/195] SKIP (cached)  conf-06-07-03-25-mater3__ch087__ck000
+23:58:59  INFO        [89/195] SKIP (cached)  conf-06-07-03-25-mater3__ch088__ck000
+23:58:59  INFO        [90/195] SKIP (cached)  conf-06-07-03-25-mater3__ch089__ck000
+23:58:59  INFO        [91/195] SKIP (cached)  conf-06-07-03-25-mater3__ch090__ck000
+23:58:59  INFO        [92/195] SKIP (cached)  conf-06-07-03-25-mater3__ch091__ck000
+23:58:59  INFO        [93/195] SKIP (cached)  conf-06-07-03-25-mater3__ch092__ck000
+23:58:59  INFO        [94/195] SKIP (cached)  conf-06-07-03-25-mater3__ch093__ck000
+23:58:59  INFO        [95/195] SKIP (cached)  conf-06-07-03-25-mater3__ch094__ck000
+23:58:59  INFO        [96/195] SKIP (cached)  conf-06-07-03-25-mater3__ch095__ck000
+23:58:59  INFO        [97/195] SKIP (cached)  conf-06-07-03-25-mater3__ch096__ck000
+23:58:59  INFO        [98/195] SKIP (cached)  conf-06-07-03-25-mater3__ch097__ck000
+23:58:59  INFO        [99/195] SKIP (cached)  conf-06-07-03-25-mater3__ch098__ck000
+23:58:59  INFO        [100/195] SKIP (cached)  conf-06-07-03-25-mater3__ch099__ck000
+23:58:59  INFO        [101/195] SKIP (cached)  conf-06-07-03-25-mater3__ch100__ck000
+23:58:59  INFO        [102/195] SKIP (cached)  conf-06-07-03-25-mater3__ch101__ck000
+23:58:59  INFO        [103/195] SKIP (cached)  conf-06-07-03-25-mater3__ch102__ck000
+23:58:59  INFO        [104/195] SKIP (cached)  conf-06-07-03-25-mater3__ch103__ck000
+23:58:59  INFO        [105/195] SKIP (cached)  conf-06-07-03-25-mater3__ch104__ck000
+23:58:59  INFO        [106/195] SKIP (cached)  conf-06-07-03-25-mater3__ch105__ck000
+23:58:59  INFO        [107/195] SKIP (cached)  conf-06-07-03-25-mater3__ch106__ck000
+23:58:59  INFO        [108/195] SKIP (cached)  conf-06-07-03-25-mater3__ch107__ck000
+23:58:59  INFO        [109/195] SKIP (cached)  conf-06-07-03-25-mater3__ch108__ck000
+23:58:59  INFO        [110/195] SKIP (cached)  conf-06-07-03-25-mater3__ch109__ck000
+23:58:59  INFO        [111/195] SKIP (cached)  conf-06-07-03-25-mater3__ch110__ck000
+23:58:59  INFO        [112/195] SKIP (cached)  conf-06-07-03-25-mater3__ch111__ck000
+23:58:59  INFO        [113/195] SKIP (cached)  conf-06-07-03-25-mater3__ch112__ck000
+23:58:59  INFO        [114/195] SKIP (cached)  conf-06-07-03-25-mater3__ch113__ck000
+23:58:59  INFO        [115/195] SKIP (cached)  conf-06-07-03-25-mater3__ch114__ck000
+23:58:59  INFO        [116/195] SKIP (cached)  conf-06-07-03-25-mater3__ch115__ck000
+23:58:59  INFO        [117/195] SKIP (cached)  conf-06-07-03-25-mater3__ch116__ck000
+23:58:59  INFO        [118/195] SKIP (cached)  conf-06-07-03-25-mater3__ch117__ck000
+23:58:59  INFO        [119/195] SKIP (cached)  conf-06-07-03-25-mater3__ch118__ck000
+23:58:59  INFO        [120/195] SKIP (cached)  conf-06-07-03-25-mater3__ch119__ck000
+23:58:59  INFO        [121/195] SKIP (cached)  conf-06-07-03-25-mater3__ch120__ck000
+23:58:59  INFO        [122/195] SKIP (cached)  conf-06-07-03-25-mater3__ch121__ck000
+23:58:59  INFO        [123/195] SKIP (cached)  conf-06-07-03-25-mater3__ch122__ck000
+23:58:59  INFO        [124/195] SKIP (cached)  conf-06-07-03-25-mater3__ch123__ck000
+23:58:59  INFO        [125/195] SKIP (cached)  conf-06-07-03-25-mater3__ch124__ck000
+23:58:59  INFO        [126/195] SKIP (cached)  conf-06-07-03-25-mater3__ch125__ck000
+23:58:59  INFO        [127/195] SKIP (cached)  conf-06-07-03-25-mater3__ch126__ck000
+23:58:59  INFO        [128/195] SKIP (cached)  conf-06-07-03-25-mater3__ch127__ck000
+23:58:59  INFO        [129/195] SKIP (cached)  conf-06-07-03-25-mater3__ch128__ck000
+23:58:59  INFO        [130/195] SKIP (cached)  conf-06-07-03-25-mater3__ch129__ck000
+23:58:59  INFO        [131/195] SKIP (cached)  conf-06-07-03-25-mater3__ch130__ck000
+23:58:59  INFO        [132/195] SKIP (cached)  conf-06-07-03-25-mater3__ch131__ck000
+23:58:59  INFO        [133/195] SKIP (cached)  conf-06-07-03-25-mater3__ch132__ck000
+23:58:59  INFO        [134/195] SKIP (cached)  conf-06-07-03-25-mater3__ch133__ck000
+23:58:59  INFO        [135/195] SKIP (cached)  conf-06-07-03-25-mater3__ch134__ck000
+23:58:59  INFO        [136/195] SKIP (cached)  conf-06-07-03-25-mater3__ch135__ck000
+23:58:59  INFO        [137/195] SKIP (cached)  conf-06-07-03-25-mater3__ch136__ck000
+23:58:59  INFO        [138/195] SKIP (cached)  conf-06-07-03-25-mater3__ch137__ck000
+23:58:59  INFO        [139/195] SKIP (cached)  conf-06-07-03-25-mater3__ch138__ck000
+23:58:59  INFO        [140/195] SKIP (cached)  conf-06-07-03-25-mater3__ch139__ck000
+23:58:59  INFO        [141/195] SKIP (cached)  conf-06-07-03-25-mater3__ch140__ck000
+23:58:59  INFO        [142/195] SKIP (cached)  conf-06-07-03-25-mater3__ch141__ck000
+23:58:59  INFO        [143/195] SKIP (cached)  conf-06-07-03-25-mater3__ch142__ck000
+23:58:59  INFO        [144/195] SKIP (cached)  conf-06-07-03-25-mater3__ch143__ck000
+23:58:59  INFO        [145/195] SKIP (cached)  conf-06-07-03-25-mater3__ch144__ck000
+23:58:59  INFO        [146/195] SKIP (cached)  conf-06-07-03-25-mater3__ch145__ck000
+23:58:59  INFO        [147/195] SKIP (cached)  conf-06-07-03-25-mater3__ch146__ck000
+23:58:59  INFO        [148/195] SKIP (cached)  conf-06-07-03-25-mater3__ch147__ck000
+23:58:59  INFO        [149/195] SKIP (cached)  conf-06-07-03-25-mater3__ch148__ck000
+23:58:59  INFO        [150/195] SKIP (cached)  conf-06-07-03-25-mater3__ch149__ck000
+23:58:59  INFO        [151/195] SKIP (cached)  conf-06-07-03-25-mater3__ch150__ck000
+23:58:59  INFO        [152/195] SKIP (cached)  conf-06-07-03-25-mater3__ch151__ck000
+23:58:59  INFO        [153/195] SKIP (cached)  conf-06-07-03-25-mater3__ch152__ck000
+23:58:59  INFO        [154/195] SKIP (cached)  conf-06-07-03-25-mater3__ch153__ck000
+23:58:59  INFO        [155/195] SKIP (cached)  conf-06-07-03-25-mater3__ch154__ck000
+23:58:59  INFO        [156/195] SKIP (cached)  conf-06-07-03-25-mater3__ch155__ck000
+23:58:59  INFO        [157/195] SKIP (cached)  conf-06-07-03-25-mater3__ch156__ck000
+23:58:59  INFO        [158/195] SKIP (cached)  conf-06-07-03-25-mater3__ch157__ck000
+23:58:59  INFO        [159/195] SKIP (cached)  conf-06-07-03-25-mater3__ch158__ck000
+23:58:59  INFO        [160/195] SKIP (cached)  conf-06-07-03-25-mater3__ch159__ck000
+23:58:59  INFO        [161/195] SKIP (cached)  conf-06-07-03-25-mater3__ch160__ck000
+23:58:59  INFO        [162/195] SKIP (cached)  conf-06-07-03-25-mater3__ch161__ck000
+23:58:59  INFO        [163/195] SKIP (cached)  conf-06-07-03-25-mater3__ch162__ck000
+23:58:59  INFO        [164/195] SKIP (cached)  conf-06-07-03-25-mater3__ch163__ck000
+23:58:59  INFO        [165/195] SKIP (cached)  conf-06-07-03-25-mater3__ch164__ck000
+23:58:59  INFO        [166/195] SKIP (cached)  conf-06-07-03-25-mater3__ch165__ck000
+23:58:59  INFO        [167/195] SKIP (cached)  conf-06-07-03-25-mater3__ch166__ck000
+23:58:59  INFO        [168/195] SKIP (cached)  conf-06-07-03-25-mater3__ch167__ck000
+23:58:59  INFO        [169/195] SKIP (cached)  conf-06-07-03-25-mater3__ch168__ck000
+23:58:59  INFO        [170/195] SKIP (cached)  conf-06-07-03-25-mater3__ch169__ck000
+23:58:59  INFO        [171/195] SKIP (cached)  conf-06-07-03-25-mater3__ch170__ck000
+23:58:59  INFO        [172/195] SKIP (cached)  conf-06-07-03-25-mater3__ch171__ck000
+23:58:59  INFO        [173/195] SKIP (cached)  conf-06-07-03-25-mater3__ch172__ck000
+23:58:59  INFO        [174/195] SKIP (cached)  conf-06-07-03-25-mater3__ch173__ck000
+23:58:59  INFO        [175/195] SKIP (cached)  conf-06-07-03-25-mater3__ch174__ck000
+23:58:59  INFO        [176/195] SKIP (cached)  conf-06-07-03-25-mater3__ch175__ck000
+23:58:59  INFO        [177/195] SKIP (cached)  conf-06-07-03-25-mater3__ch176__ck000
+23:58:59  INFO        [178/195] SKIP (cached)  conf-06-07-03-25-mater3__ch177__ck000
+23:58:59  INFO        [179/195] SKIP (cached)  conf-06-07-03-25-mater3__ch178__ck000
+23:58:59  INFO        [180/195] SKIP (cached)  conf-06-07-03-25-mater3__ch179__ck000
+23:58:59  INFO        [181/195] SKIP (cached)  conf-06-07-03-25-mater3__ch180__ck000
+23:58:59  INFO        [182/195] SKIP (cached)  conf-06-07-03-25-mater3__ch181__ck000
+23:58:59  INFO        [183/195] SKIP (cached)  conf-06-07-03-25-mater3__ch182__ck000
+23:58:59  INFO        [184/195] SKIP (cached)  conf-06-07-03-25-mater3__ch183__ck000
+23:58:59  INFO        [185/195] SKIP (cached)  conf-06-07-03-25-mater3__ch184__ck000
+23:58:59  INFO        [186/195] SKIP (cached)  conf-06-07-03-25-mater3__ch185__ck000
+23:58:59  INFO        [187/195] SKIP (cached)  conf-06-07-03-25-mater3__ch186__ck000
+23:58:59  INFO        [188/195] SKIP (cached)  conf-06-07-03-25-mater3__ch187__ck000
+23:58:59  INFO        [189/195] SKIP (cached)  conf-06-07-03-25-mater3__ch188__ck000
+23:58:59  INFO        [190/195] SKIP (cached)  conf-06-07-03-25-mater3__ch189__ck000
+23:58:59  INFO        [191/195] SKIP (cached)  conf-06-07-03-25-mater3__ch190__ck000
+23:58:59  INFO        [192/195] SKIP (cached)  conf-06-07-03-25-mater3__ch191__ck000
+23:58:59  INFO        [193/195] SKIP (cached)  conf-06-07-03-25-mater3__ch192__ck000
+23:58:59  INFO        [194/195] SKIP (cached)  conf-06-07-03-25-mater3__ch193__ck000
+23:58:59  INFO        [195/195] SKIP (cached)  conf-06-07-03-25-mater3__ch194__ck000
+23:58:59  INFO      Step 4/4  Finalising book in DB ...
+23:58:59  INFO      Built 0 new TrainingSamples
+23:58:59  INFO        Done: 0 TrainingSamples created
+23:58:59  INFO      
+============================================================
+23:58:59  INFO      Processing: CrisCom_zmist_0.pdf
+23:58:59  INFO      ============================================================
+23:58:59  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:59:00  INFO        Sections after merge: 1 (was 2, merged 1 tiny sections)
+23:59:00  INFO        Found 1 chunks across 1 chapters
+23:59:00  INFO      Step 2/4  Saving chunk manifest …
+23:59:00  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\criscom-zmist-0\metadata.json
+23:59:00  INFO      Step 3/4  Running AI extraction …
+23:59:00  INFO        1 chunks already done, 0 remaining
+23:59:00  INFO        [1/1] SKIP (cached)  criscom-zmist-0__ch000__ck000
+23:59:00  INFO      Step 4/4  Finalising book in DB ...
+23:59:00  INFO      Built 0 new TrainingSamples
+23:59:00  INFO        Done: 0 TrainingSamples created
+23:59:00  INFO      
+============================================================
+23:59:00  INFO      Processing: Crisis_management_Planning_for_the_inevitable.pdf
+23:59:00  INFO      ============================================================
+23:59:00  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:59:01  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+23:59:01  INFO        Found 1 chunks across 1 chapters
+23:59:01  INFO      Step 2/4  Saving chunk manifest …
+23:59:01  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\crisis-management-planning-for-the-inevitable\metadata.json
+23:59:01  INFO      Step 3/4  Running AI extraction …
+23:59:01  INFO        1 chunks already done, 0 remaining
+23:59:01  INFO        [1/1] SKIP (cached)  crisis-management-planning-for-the-inevitable__ch000__ck000
+23:59:01  INFO      Step 4/4  Finalising book in DB ...
+23:59:01  INFO      Built 0 new TrainingSamples
+23:59:01  INFO        Done: 0 TrainingSamples created
+23:59:01  INFO      
+============================================================
+23:59:01  INFO      Processing: Digital.pdf
+23:59:01  INFO      ============================================================
+23:59:01  INFO      Step 1/4  Extracting text and splitting into chunks …
+23:59:20  INFO        Sections after merge: 4 (was 4, merged 0 tiny sections)
+23:59:20  INFO        Found 10 chunks across 4 chapters
+23:59:20  INFO      Step 2/4  Saving chunk manifest …
+23:59:20  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\digital\metadata.json
+23:59:20  INFO      Step 3/4  Running AI extraction …
+23:59:20  INFO        10 chunks already done, 0 remaining
+23:59:20  INFO        [1/10] SKIP (cached)  digital__ch000__ck000
+23:59:20  INFO        [2/10] SKIP (cached)  digital__ch001__ck000
+23:59:20  INFO        [3/10] SKIP (cached)  digital__ch002__ck000
+23:59:20  INFO        [4/10] SKIP (cached)  digital__ch002__ck001
+23:59:20  INFO        [5/10] SKIP (cached)  digital__ch002__ck002
+23:59:20  INFO        [6/10] SKIP (cached)  digital__ch002__ck003
+23:59:20  INFO        [7/10] SKIP (cached)  digital__ch002__ck004
+23:59:20  INFO        [8/10] SKIP (cached)  digital__ch003__ck000
+23:59:20  INFO        [9/10] SKIP (cached)  digital__ch003__ck001
+23:59:20  INFO        [10/10] SKIP (cached)  digital__ch003__ck002
+23:59:20  INFO      Step 4/4  Finalising book in DB ...
+23:59:20  INFO      Built 0 new TrainingSamples
+23:59:20  INFO        Done: 0 TrainingSamples created
+23:59:20  INFO      
+============================================================
+23:59:20  INFO      Processing: dis_zakashans__ka_n.pdf
+23:59:20  INFO      ============================================================
+23:59:20  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:00:18  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+00:00:18  INFO        Found 20 chunks across 1 chapters
+00:00:18  INFO      Step 2/4  Saving chunk manifest …
+00:00:18  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\dis-zakashans-ka-n\metadata.json
+00:00:18  INFO      Step 3/4  Running AI extraction …
+00:00:18  INFO        20 chunks already done, 0 remaining
+00:00:18  INFO        [1/20] SKIP (cached)  dis-zakashans-ka-n__ch000__ck000
+00:00:18  INFO        [2/20] SKIP (cached)  dis-zakashans-ka-n__ch000__ck001
+00:00:18  INFO        [3/20] SKIP (cached)  dis-zakashans-ka-n__ch000__ck002
+00:00:18  INFO        [4/20] SKIP (cached)  dis-zakashans-ka-n__ch000__ck003
+00:00:18  INFO        [5/20] SKIP (cached)  dis-zakashans-ka-n__ch000__ck004
+00:00:18  INFO        [6/20] SKIP (cached)  dis-zakashans-ka-n__ch000__ck005
+00:00:18  INFO        [7/20] SKIP (cached)  dis-zakashans-ka-n__ch000__ck006
+00:00:18  INFO        [8/20] SKIP (cached)  dis-zakashans-ka-n__ch000__ck007
+00:00:18  INFO        [9/20] SKIP (cached)  dis-zakashans-ka-n__ch000__ck008
+00:00:18  INFO        [10/20] SKIP (cached)  dis-zakashans-ka-n__ch000__ck009
+00:00:18  INFO        [11/20] SKIP (cached)  dis-zakashans-ka-n__ch000__ck010
+00:00:18  INFO        [12/20] SKIP (cached)  dis-zakashans-ka-n__ch000__ck011
+00:00:18  INFO        [13/20] SKIP (cached)  dis-zakashans-ka-n__ch000__ck012
+00:00:18  INFO        [14/20] SKIP (cached)  dis-zakashans-ka-n__ch000__ck013
+00:00:18  INFO        [15/20] SKIP (cached)  dis-zakashans-ka-n__ch000__ck014
+00:00:18  INFO        [16/20] SKIP (cached)  dis-zakashans-ka-n__ch000__ck015
+00:00:18  INFO        [17/20] SKIP (cached)  dis-zakashans-ka-n__ch000__ck016
+00:00:18  INFO        [18/20] SKIP (cached)  dis-zakashans-ka-n__ch000__ck017
+00:00:18  INFO        [19/20] SKIP (cached)  dis-zakashans-ka-n__ch000__ck018
+00:00:18  INFO        [20/20] SKIP (cached)  dis-zakashans-ka-n__ch000__ck019
+00:00:18  INFO      Step 4/4  Finalising book in DB ...
+00:00:18  INFO      Built 0 new TrainingSamples
+00:00:18  INFO        Done: 0 TrainingSamples created
+00:00:18  INFO      
+============================================================
+00:00:18  INFO      Processing: e-nailing ex Hui.pdf
+00:00:18  INFO      ============================================================
+00:00:18  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:01:00  INFO        Sections after merge: 3 (was 4, merged 1 tiny sections)
+00:01:00  INFO        Found 14 chunks across 3 chapters
+00:01:00  INFO      Step 2/4  Saving chunk manifest …
+00:01:00  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\e-nailing-ex-hui\metadata.json
+00:01:00  INFO      Step 3/4  Running AI extraction …
+00:01:00  INFO        14 chunks already done, 0 remaining
+00:01:00  INFO        [1/14] SKIP (cached)  e-nailing-ex-hui__ch000__ck000
+00:01:00  INFO        [2/14] SKIP (cached)  e-nailing-ex-hui__ch000__ck001
+00:01:00  INFO        [3/14] SKIP (cached)  e-nailing-ex-hui__ch000__ck002
+00:01:00  INFO        [4/14] SKIP (cached)  e-nailing-ex-hui__ch001__ck000
+00:01:00  INFO        [5/14] SKIP (cached)  e-nailing-ex-hui__ch001__ck001
+00:01:00  INFO        [6/14] SKIP (cached)  e-nailing-ex-hui__ch001__ck002
+00:01:00  INFO        [7/14] SKIP (cached)  e-nailing-ex-hui__ch001__ck003
+00:01:00  INFO        [8/14] SKIP (cached)  e-nailing-ex-hui__ch001__ck004
+00:01:00  INFO        [9/14] SKIP (cached)  e-nailing-ex-hui__ch001__ck005
+00:01:00  INFO        [10/14] SKIP (cached)  e-nailing-ex-hui__ch001__ck006
+00:01:00  INFO        [11/14] SKIP (cached)  e-nailing-ex-hui__ch002__ck000
+00:01:00  INFO        [12/14] SKIP (cached)  e-nailing-ex-hui__ch002__ck001
+00:01:00  INFO        [13/14] SKIP (cached)  e-nailing-ex-hui__ch002__ck002
+00:01:00  INFO        [14/14] SKIP (cached)  e-nailing-ex-hui__ch002__ck003
+00:01:00  INFO      Step 4/4  Finalising book in DB ...
+00:01:00  INFO      Built 0 new TrainingSamples
+00:01:00  INFO        Done: 0 TrainingSamples created
+00:01:00  INFO      
+============================================================
+00:01:00  INFO      Processing: fb1332062u_strategii_kryzovyh_comunikaciy.pdf
+00:01:00  INFO      ============================================================
+00:01:00  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:02:24  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+00:02:24  INFO        Found 1 chunks across 1 chapters
+00:02:24  INFO      Step 2/4  Saving chunk manifest …
+00:02:24  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\fb1332062u-strategii-kryzovyh-comunikaciy\metadata.json
+00:02:24  INFO      Step 3/4  Running AI extraction …
+00:02:24  INFO        0 chunks already done, 1 remaining
+00:02:24  INFO        [1/1] Processing  fb1332062u-strategii-kryzovyh-comunikaciy__ch000__ck000 (2795 tokens, chapter: Мета)
+00:02:24  INFO        -> [fb1332062u-strategii-kryzovyh-comunikaciy__ch000__ck000] lang=uk tokens=2795 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+00:02:53  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+00:02:53  WARNING   [mistral] JSON parse error: Expecting ',' delimiter: line 1 column 17337 (char 17336) | raw: {"scenarios": [{"scenario_id": "crisis-communication-planning-gap", "crisis_type": "operational", "severity": "medium", "context": "A company lacks a dedicated crisis communication plan or has outdate
+00:03:25  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+00:03:27  INFO        [fb1332062u-strategii-kryzovyh-comunikaciy__ch000__ck000] 5 scenarios, 5 decisions, 7 tactics, 8 qa_pairs
+00:03:27  INFO      Created SourceDocument: fb1332062u-strategii-kryzovyh-comunikaciy (id=76)
+00:03:28  INFO      DB saved chunk [fb1332062u-strategii-kryzovyh-comunikaciy__ch000__ck000]: scenarios=4 | decision_nodes=5 | tactics=7 | qa_pairs=8 | rag_chunks=1
+00:03:28  INFO        completed [fb1332062u-strategii-kryzovyh-comunikaciy__ch000__ck000]: 5 scenarios, 5 decisions, 7 tactics, 8 qa_pairs [total=25] -> DB: {'scenarios': 4, 'decision_nodes': 5, 'tactics': 7, 'qa_pairs': 8, 'rag_chunks': 1}
+00:03:28  INFO      Step 4/4  Finalising book in DB ...
+00:03:28  INFO      Built 8 new TrainingSamples
+00:03:28  INFO        Done: 8 TrainingSamples created
+00:03:28  INFO      
+============================================================
+00:03:28  INFO      Processing: FULLTEXT01.pdf
+00:03:28  INFO      ============================================================
+00:03:28  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:03:46  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+00:03:46  INFO        Found 10 chunks across 2 chapters
+00:03:46  INFO      Step 2/4  Saving chunk manifest …
+00:03:46  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\fulltext01\metadata.json
+00:03:46  INFO      Step 3/4  Running AI extraction …
+00:03:46  INFO        10 chunks already done, 0 remaining
+00:03:46  INFO        [1/10] SKIP (cached)  fulltext01__ch000__ck000
+00:03:46  INFO        [2/10] SKIP (cached)  fulltext01__ch000__ck001
+00:03:46  INFO        [3/10] SKIP (cached)  fulltext01__ch000__ck002
+00:03:46  INFO        [4/10] SKIP (cached)  fulltext01__ch000__ck003
+00:03:46  INFO        [5/10] SKIP (cached)  fulltext01__ch000__ck004
+00:03:46  INFO        [6/10] SKIP (cached)  fulltext01__ch000__ck005
+00:03:46  INFO        [7/10] SKIP (cached)  fulltext01__ch001__ck000
+00:03:46  INFO        [8/10] SKIP (cached)  fulltext01__ch001__ck001
+00:03:46  INFO        [9/10] SKIP (cached)  fulltext01__ch001__ck002
+00:03:46  INFO        [10/10] SKIP (cached)  fulltext01__ch001__ck003
+00:03:46  INFO      Step 4/4  Finalising book in DB ...
+00:03:46  INFO      Built 0 new TrainingSamples
+00:03:46  INFO        Done: 0 TrainingSamples created
+00:03:46  INFO      
+============================================================
+00:03:46  INFO      Processing: gileya_2019_146(3)__8.pdf
+00:03:46  INFO      ============================================================
+00:03:46  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:03:49  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+00:03:49  INFO        Found 1 chunks across 1 chapters
+00:03:49  INFO      Step 2/4  Saving chunk manifest …
+00:03:49  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\gileya-2019-146-3-8\metadata.json
+00:03:49  INFO      Step 3/4  Running AI extraction …
+00:03:49  INFO        0 chunks already done, 1 remaining
+00:03:49  INFO        [1/1] Processing  gileya-2019-146-3-8__ch000__ck000 (3010 tokens, chapter: gileya_2019_146(3)__8)
+00:03:49  INFO        -> [gileya-2019-146-3-8__ch000__ck000] lang=en tokens=3010 | active backends: mistral -> groq -> openrouter -> github -> lmstudio
+00:03:50  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+00:03:50  WARNING   [mistral] Rate limit — waiting 30s
+00:04:20  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+00:04:20  WARNING   [mistral] Rate limit — waiting 60s
+00:05:21  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+00:05:21  WARNING   [mistral] Rate limit persists — skipping this backend for chunk
+00:05:22  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:05:22  ERROR     [groq] Error: Error code: 400 - {'error': {'message': 'Please reduce the length of the messages or completion.', 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+00:05:27  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:05:27  ERROR     [groq] Error: Error code: 400 - {'error': {'message': 'Please reduce the length of the messages or completion.', 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+00:05:33  INFO      HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:05:33  ERROR     [groq] Error: Error code: 400 - {'error': {'message': 'Please reduce the length of the messages or completion.', 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+00:05:34  INFO      HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:05:34  ERROR     [openrouter] Error: Error code: 400 - {'error': {'message': "This endpoint's maximum context length is 65536 tokens. However, you requested about 79688 tokens (71496 of text input, 8192 in the output). Please reduce the length of either one, or use the context-compression plugin to compress your prompt automatically.", 'code': 400, 'metadata': {'provider_name': None}}, 'user_id': 'user_3DJdm7WrWyIsUXIsHzCah621AUp'}
+00:05:42  INFO      HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:05:42  ERROR     [openrouter] Error: Error code: 400 - {'error': {'message': "This endpoint's maximum context length is 65536 tokens. However, you requested about 79688 tokens (71496 of text input, 8192 in the output). Please reduce the length of either one, or use the context-compression plugin to compress your prompt automatically.", 'code': 400, 'metadata': {'provider_name': None}}, 'user_id': 'user_3DJdm7WrWyIsUXIsHzCah621AUp'}
+00:05:48  INFO      HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 400 Bad Request"
+00:05:48  ERROR     [openrouter] Error: Error code: 400 - {'error': {'message': "This endpoint's maximum context length is 65536 tokens. However, you requested about 79688 tokens (71496 of text input, 8192 in the output). Please reduce the length of either one, or use the context-compression plugin to compress your prompt automatically.", 'code': 400, 'metadata': {'provider_name': None}}, 'user_id': 'user_3DJdm7WrWyIsUXIsHzCah621AUp'}
+00:05:49  INFO      HTTP Request: POST https://models.inference.ai.azure.com/chat/completions "HTTP/1.1 401 Unauthorized"
+00:05:49  ERROR     [github] Auth failed — check key in .env
+00:05:49  INFO        Switching to next backend. Remaining: mistral -> groq -> openrouter -> lmstudio
+00:05:54  ERROR     [lmstudio] Error: Connection error.
+00:06:03  ERROR     [lmstudio] Error: Connection error.
+00:06:13  ERROR     [lmstudio] Error: Connection error.
+00:06:13  WARNING     [gileya-2019-146-3-8__ch000__ck000] failed — will retry on next run
+00:06:13  INFO        WARNING: saved (API errors - will retry) [gileya-2019-146-3-8__ch000__ck000]: 0 scenarios, 0 decisions, 0 tactics, 0 qa_pairs  [all empty]
+00:06:13  INFO      Step 4/4  Finalising book in DB ...
+00:06:13  INFO      Built 0 new TrainingSamples
+00:06:13  INFO        Done: 0 TrainingSamples created
+00:06:13  INFO      
+============================================================
+00:06:13  INFO      Processing: Grani_2013_12_12.pdf
+00:06:13  INFO      ============================================================
+00:06:13  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:06:17  INFO        Sections after merge: 3 (was 3, merged 0 tiny sections)
+00:06:17  INFO        Found 3 chunks across 3 chapters
+00:06:17  INFO      Step 2/4  Saving chunk manifest …
+00:06:17  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\grani-2013-12-12\metadata.json
+00:06:17  INFO      Step 3/4  Running AI extraction …
+00:06:17  INFO        3 chunks already done, 0 remaining
+00:06:17  INFO        [1/3] SKIP (cached)  grani-2013-12-12__ch000__ck000
+00:06:17  INFO        [2/3] SKIP (cached)  grani-2013-12-12__ch001__ck000
+00:06:17  INFO        [3/3] SKIP (cached)  grani-2013-12-12__ch002__ck000
+00:06:17  INFO      Step 4/4  Finalising book in DB ...
+00:06:17  INFO      Built 0 new TrainingSamples
+00:06:17  INFO        Done: 0 TrainingSamples created
+00:06:17  INFO      
+============================================================
+00:06:17  INFO      Processing: j.isjmef.20250402.08.pdf
+00:06:17  INFO      ============================================================
+00:06:17  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:06:28  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+00:06:28  INFO        Found 2 chunks across 1 chapters
+00:06:28  INFO      Step 2/4  Saving chunk manifest …
+00:06:28  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\j-isjmef-20250402-08\metadata.json
+00:06:28  INFO      Step 3/4  Running AI extraction …
+00:06:28  INFO        2 chunks already done, 0 remaining
+00:06:28  INFO        [1/2] SKIP (cached)  j-isjmef-20250402-08__ch000__ck000
+00:06:28  INFO        [2/2] SKIP (cached)  j-isjmef-20250402-08__ch000__ck001
+00:06:28  INFO      Step 4/4  Finalising book in DB ...
+00:06:28  INFO      Built 0 new TrainingSamples
+00:06:28  INFO        Done: 0 TrainingSamples created
+00:06:28  INFO      
+============================================================
+00:06:28  INFO      Processing: komunikacziyi-u-roboti-derzhavnyh-organiv-vlady-ta-organiv-misczevogo-samovryaduvannya.-suchasni-praktyky_veb.pdf
+00:06:28  INFO      ============================================================
+00:06:28  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:06:56  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+00:06:56  INFO        Found 2 chunks across 1 chapters
+00:06:56  INFO      Step 2/4  Saving chunk manifest …
+00:06:56  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\komunikacziyi-u-roboti-derzhavnyh-organiv-vlady-ta-organiv-misczevogo-samovryadu\metadata.json
+00:06:56  INFO      Step 3/4  Running AI extraction …
+00:06:56  INFO        0 chunks already done, 2 remaining
+00:06:56  INFO        [1/2] Processing  komunikacziyi-u-roboti-derzhavnyh-organiv-vlady-ta-organiv-misczevogo-samovryadu__ch000__ck000 (4499 tokens, chapter: мета;)
+00:06:56  INFO        -> [komunikacziyi-u-roboti-derzhavnyh-organiv-vlady-ta-organiv-misczevogo-samovryadu__ch000__ck000] lang=uk tokens=4499 | active backends: mistral -> groq -> openrouter -> lmstudio
+00:07:18  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+00:07:20  INFO        [komunikacziyi-u-roboti-derzhavnyh-organiv-vlady-ta-organiv-misczevogo-samovryadu__ch000__ck000] 4 scenarios, 4 decisions, 5 tactics, 8 qa_pairs
+00:07:20  ERROR       ERROR on komunikacziyi-u-roboti-derzhavnyh-organiv-vlady-ta-organiv-misczevogo-samovryadu__ch000__ck000: [WinError 206] The filename or extension is too long: 'C:\\Users\\User\\PycharmProjects\\crisis-management\\app\\ingest\\data\\extracted\\komunikacziyi-u-roboti-derzhavnyh-organiv-vlady-ta-organiv-misczevogo-samovryadu\\chunks\\komunikacziyi-u-roboti-derzhavnyh-organiv-vlady-ta-organiv-misczevogo-samovryadu__ch000__ck000'
+00:07:20  INFO        [2/2] Processing  komunikacziyi-u-roboti-derzhavnyh-organiv-vlady-ta-organiv-misczevogo-samovryadu__ch000__ck001 (1917 tokens, chapter: мета;)
+00:07:20  INFO        -> [komunikacziyi-u-roboti-derzhavnyh-organiv-vlady-ta-organiv-misczevogo-samovryadu__ch000__ck001] lang=uk tokens=1917 | active backends: mistral -> groq -> openrouter -> lmstudio
+00:07:38  INFO      HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+00:07:40  INFO        [komunikacziyi-u-roboti-derzhavnyh-organiv-vlady-ta-organiv-misczevogo-samovryadu__ch000__ck001] 3 scenarios, 4 decisions, 6 tactics, 8 qa_pairs
+00:07:40  ERROR       ERROR on komunikacziyi-u-roboti-derzhavnyh-organiv-vlady-ta-organiv-misczevogo-samovryadu__ch000__ck001: [WinError 206] The filename or extension is too long: 'C:\\Users\\User\\PycharmProjects\\crisis-management\\app\\ingest\\data\\extracted\\komunikacziyi-u-roboti-derzhavnyh-organiv-vlady-ta-organiv-misczevogo-samovryadu\\chunks\\komunikacziyi-u-roboti-derzhavnyh-organiv-vlady-ta-organiv-misczevogo-samovryadu__ch000__ck001'
+00:07:40  INFO      Step 4/4  Finalising book in DB ...
+00:07:40  INFO      Built 0 new TrainingSamples
+00:07:40  INFO        Done: 0 TrainingSamples created
+00:07:40  INFO      
+============================================================
+00:07:40  INFO      Processing: Materialy_konf_Transformatsiya_obliku_2025_442-444-2.pdf
+00:07:40  INFO      ============================================================
+00:07:40  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:07:41  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+00:07:41  INFO        Found 1 chunks across 1 chapters
+00:07:41  INFO      Step 2/4  Saving chunk manifest …
+00:07:41  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\materialy-konf-transformatsiya-obliku-2025-442-444-2\metadata.json
+00:07:41  INFO      Step 3/4  Running AI extraction …
+00:07:41  INFO        1 chunks already done, 0 remaining
+00:07:41  INFO        [1/1] SKIP (cached)  materialy-konf-transformatsiya-obliku-2025-442-444-2__ch000__ck000
+00:07:41  INFO      Step 4/4  Finalising book in DB ...
+00:07:41  INFO      Built 0 new TrainingSamples
+00:07:41  INFO        Done: 0 TrainingSamples created
+00:07:41  INFO      
+============================================================
+00:07:41  INFO      Processing: Materialy_konf_Transformatsiya_obliku_2025_442-444.pdf
+00:07:41  INFO      ============================================================
+00:07:41  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:07:42  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+00:07:42  INFO        Found 1 chunks across 1 chapters
+00:07:42  INFO      Step 2/4  Saving chunk manifest …
+00:07:42  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\materialy-konf-transformatsiya-obliku-2025-442-444\metadata.json
+00:07:42  INFO      Step 3/4  Running AI extraction …
+00:07:42  INFO        1 chunks already done, 0 remaining
+00:07:42  INFO        [1/1] SKIP (cached)  materialy-konf-transformatsiya-obliku-2025-442-444__ch000__ck000
+00:07:42  INFO      Step 4/4  Finalising book in DB ...
+00:07:42  INFO      Built 0 new TrainingSamples
+00:07:42  INFO        Done: 0 TrainingSamples created
+00:07:42  INFO      
+============================================================
+00:07:42  INFO      Processing: maxim,+26.pdf
+00:07:42  INFO      ============================================================
+00:07:42  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:07:46  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+00:07:46  INFO        Found 2 chunks across 2 chapters
+00:07:46  INFO      Step 2/4  Saving chunk manifest …
+00:07:46  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\maxim-26\metadata.json
+00:07:46  INFO      Step 3/4  Running AI extraction …
+00:07:46  INFO        2 chunks already done, 0 remaining
+00:07:46  INFO        [1/2] SKIP (cached)  maxim-26__ch000__ck000
+00:07:46  INFO        [2/2] SKIP (cached)  maxim-26__ch001__ck000
+00:07:46  INFO      Step 4/4  Finalising book in DB ...
+00:07:46  INFO      Built 0 new TrainingSamples
+00:07:46  INFO        Done: 0 TrainingSamples created
+00:07:46  INFO      
+============================================================
+00:07:46  INFO      Processing: npnbuimviv_2018_49_7.pdf
+00:07:46  INFO      ============================================================
+00:07:46  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:07:49  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+00:07:49  INFO        Found 1 chunks across 1 chapters
+00:07:49  INFO      Step 2/4  Saving chunk manifest …
+00:07:49  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\npnbuimviv-2018-49-7\metadata.json
+00:07:49  INFO      Step 3/4  Running AI extraction …
+00:07:49  INFO        1 chunks already done, 0 remaining
+00:07:49  INFO        [1/1] SKIP (cached)  npnbuimviv-2018-49-7__ch000__ck000
+00:07:49  INFO      Step 4/4  Finalising book in DB ...
+00:07:49  INFO      Built 0 new TrainingSamples
+00:07:49  INFO        Done: 0 TrainingSamples created
+00:07:49  INFO      
+============================================================
+00:07:49  INFO      Processing: ostapenko_politychna.pdf
+00:07:49  INFO      ============================================================
+00:07:49  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:07:54  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+00:07:54  INFO        Found 2 chunks across 1 chapters
+00:07:54  INFO      Step 2/4  Saving chunk manifest …
+00:07:54  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\ostapenko-politychna\metadata.json
+00:07:54  INFO      Step 3/4  Running AI extraction …
+00:07:54  INFO        2 chunks already done, 0 remaining
+00:07:54  INFO        [1/2] SKIP (cached)  ostapenko-politychna__ch000__ck000
+00:07:54  INFO        [2/2] SKIP (cached)  ostapenko-politychna__ch000__ck001
+00:07:54  INFO      Step 4/4  Finalising book in DB ...
+00:07:54  INFO      Built 0 new TrainingSamples
+00:07:54  INFO        Done: 0 TrainingSamples created
+00:07:54  INFO      
+============================================================
+00:07:54  INFO      Processing: Piir_2023_30_6.pdf
+00:07:54  INFO      ============================================================
+00:07:54  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:07:56  INFO        Sections after merge: 3 (was 3, merged 0 tiny sections)
+00:07:56  INFO        Found 3 chunks across 3 chapters
+00:07:56  INFO      Step 2/4  Saving chunk manifest …
+00:07:56  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\piir-2023-30-6\metadata.json
+00:07:56  INFO      Step 3/4  Running AI extraction …
+00:07:56  INFO        3 chunks already done, 0 remaining
+00:07:56  INFO        [1/3] SKIP (cached)  piir-2023-30-6__ch000__ck000
+00:07:56  INFO        [2/3] SKIP (cached)  piir-2023-30-6__ch001__ck000
+00:07:56  INFO        [3/3] SKIP (cached)  piir-2023-30-6__ch002__ck000
+00:07:56  INFO      Step 4/4  Finalising book in DB ...
+00:07:56  INFO      Built 0 new TrainingSamples
+00:07:56  INFO        Done: 0 TrainingSamples created
+00:07:56  INFO      
+============================================================
+00:07:56  INFO      Processing: stapttp_2017_76_20.pdf
+00:07:56  INFO      ============================================================
+00:07:56  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:07:59  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+00:07:59  INFO        Found 2 chunks across 1 chapters
+00:07:59  INFO      Step 2/4  Saving chunk manifest …
+00:07:59  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\stapttp-2017-76-20\metadata.json
+00:07:59  INFO      Step 3/4  Running AI extraction …
+00:07:59  INFO        2 chunks already done, 0 remaining
+00:07:59  INFO        [1/2] SKIP (cached)  stapttp-2017-76-20__ch000__ck000
+00:07:59  INFO        [2/2] SKIP (cached)  stapttp-2017-76-20__ch000__ck001
+00:07:59  INFO      Step 4/4  Finalising book in DB ...
+00:07:59  INFO      Built 0 new TrainingSamples
+00:07:59  INFO        Done: 0 TrainingSamples created
+00:07:59  INFO      
+============================================================
+00:07:59  INFO      Processing: Strategia_krizovoi_komunikacii_u_sistemi_vlada-gro.pdf
+00:07:59  INFO      ============================================================
+00:07:59  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:08:02  INFO        Sections after merge: 4 (was 4, merged 0 tiny sections)
+00:08:02  INFO        Found 4 chunks across 4 chapters
+00:08:02  INFO      Step 2/4  Saving chunk manifest …
+00:08:02  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\strategia-krizovoi-komunikacii-u-sistemi-vlada-gro\metadata.json
+00:08:02  INFO      Step 3/4  Running AI extraction …
+00:08:02  INFO        4 chunks already done, 0 remaining
+00:08:02  INFO        [1/4] SKIP (cached)  strategia-krizovoi-komunikacii-u-sistemi-vlada-gro__ch000__ck000
+00:08:02  INFO        [2/4] SKIP (cached)  strategia-krizovoi-komunikacii-u-sistemi-vlada-gro__ch001__ck000
+00:08:02  INFO        [3/4] SKIP (cached)  strategia-krizovoi-komunikacii-u-sistemi-vlada-gro__ch002__ck000
+00:08:02  INFO        [4/4] SKIP (cached)  strategia-krizovoi-komunikacii-u-sistemi-vlada-gro__ch003__ck000
+00:08:02  INFO      Step 4/4  Finalising book in DB ...
+00:08:02  INFO      Built 0 new TrainingSamples
+00:08:02  INFO        Done: 0 TrainingSamples created
+00:08:02  INFO      
+============================================================
+00:08:02  INFO      Processing: uazt_2014_3_14.pdf
+00:08:02  INFO      ============================================================
+00:08:02  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:08:02  ERROR     Bounding box (0, 0, 309.504, 841.9) is not fully within parent page bounding box (0, -0.01999999999998181, 595.2, 841.88)
+00:08:02  INFO      
+============================================================
+00:08:02  INFO      Processing: VKNU-ES-2024-N3(330)+116-122.pdf
+00:08:02  INFO      ============================================================
+00:08:02  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:08:05  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+00:08:05  INFO        Found 2 chunks across 1 chapters
+00:08:05  INFO      Step 2/4  Saving chunk manifest …
+00:08:05  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\vknu-es-2024-n3-330-116-122\metadata.json
+00:08:05  INFO      Step 3/4  Running AI extraction …
+00:08:05  INFO        2 chunks already done, 0 remaining
+00:08:05  INFO        [1/2] SKIP (cached)  vknu-es-2024-n3-330-116-122__ch000__ck000
+00:08:05  INFO        [2/2] SKIP (cached)  vknu-es-2024-n3-330-116-122__ch000__ck001
+00:08:05  INFO      Step 4/4  Finalising book in DB ...
+00:08:05  INFO      Built 0 new TrainingSamples
+00:08:05  INFO        Done: 0 TrainingSamples created
+00:08:05  INFO      
+============================================================
+00:08:05  INFO      Processing: Vpliv_komunikacij_na_efektivnist_publicnogo_upravl.pdf
+00:08:05  INFO      ============================================================
+00:08:05  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:08:10  INFO        Sections after merge: 3 (was 4, merged 1 tiny sections)
+00:08:10  INFO        Found 3 chunks across 3 chapters
+00:08:10  INFO      Step 2/4  Saving chunk manifest …
+00:08:10  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\vpliv-komunikacij-na-efektivnist-publicnogo-upravl\metadata.json
+00:08:10  INFO      Step 3/4  Running AI extraction …
+00:08:10  INFO        3 chunks already done, 0 remaining
+00:08:10  INFO        [1/3] SKIP (cached)  vpliv-komunikacij-na-efektivnist-publicnogo-upravl__ch000__ck000
+00:08:10  INFO        [2/3] SKIP (cached)  vpliv-komunikacij-na-efektivnist-publicnogo-upravl__ch001__ck000
+00:08:10  INFO        [3/3] SKIP (cached)  vpliv-komunikacij-na-efektivnist-publicnogo-upravl__ch002__ck000
+00:08:10  INFO      Step 4/4  Finalising book in DB ...
+00:08:10  INFO      Built 0 new TrainingSamples
+00:08:10  INFO        Done: 0 TrainingSamples created
+00:08:10  INFO      
+============================================================
+00:08:10  INFO      Processing: ZBIRNIK_Konferencia_Ekonomicni_perspektivi_pidpriemnictva_31.05.2024__.pdf
+00:08:10  INFO      ============================================================
+00:08:10  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:10:09  INFO        Sections after merge: 150 (was 151, merged 1 tiny sections)
+00:10:09  INFO        Found 150 chunks across 150 chapters
+00:10:09  INFO      Step 2/4  Saving chunk manifest …
+00:10:09  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024\metadata.json
+00:10:09  INFO      Step 3/4  Running AI extraction …
+00:10:09  INFO        150 chunks already done, 0 remaining
+00:10:09  INFO        [1/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch000__ck000
+00:10:09  INFO        [2/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch001__ck000
+00:10:09  INFO        [3/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch002__ck000
+00:10:09  INFO        [4/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch003__ck000
+00:10:09  INFO        [5/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch004__ck000
+00:10:09  INFO        [6/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch005__ck000
+00:10:09  INFO        [7/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch006__ck000
+00:10:09  INFO        [8/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch007__ck000
+00:10:09  INFO        [9/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch008__ck000
+00:10:09  INFO        [10/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch009__ck000
+00:10:09  INFO        [11/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch010__ck000
+00:10:09  INFO        [12/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch011__ck000
+00:10:09  INFO        [13/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch012__ck000
+00:10:09  INFO        [14/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch013__ck000
+00:10:09  INFO        [15/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch014__ck000
+00:10:09  INFO        [16/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch015__ck000
+00:10:09  INFO        [17/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch016__ck000
+00:10:09  INFO        [18/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch017__ck000
+00:10:09  INFO        [19/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch018__ck000
+00:10:09  INFO        [20/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch019__ck000
+00:10:09  INFO        [21/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch020__ck000
+00:10:09  INFO        [22/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch021__ck000
+00:10:09  INFO        [23/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch022__ck000
+00:10:09  INFO        [24/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch023__ck000
+00:10:09  INFO        [25/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch024__ck000
+00:10:09  INFO        [26/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch025__ck000
+00:10:09  INFO        [27/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch026__ck000
+00:10:09  INFO        [28/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch027__ck000
+00:10:09  INFO        [29/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch028__ck000
+00:10:09  INFO        [30/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch029__ck000
+00:10:09  INFO        [31/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch030__ck000
+00:10:09  INFO        [32/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch031__ck000
+00:10:09  INFO        [33/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch032__ck000
+00:10:09  INFO        [34/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch033__ck000
+00:10:09  INFO        [35/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch034__ck000
+00:10:09  INFO        [36/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch035__ck000
+00:10:09  INFO        [37/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch036__ck000
+00:10:09  INFO        [38/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch037__ck000
+00:10:09  INFO        [39/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch038__ck000
+00:10:09  INFO        [40/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch039__ck000
+00:10:09  INFO        [41/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch040__ck000
+00:10:09  INFO        [42/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch041__ck000
+00:10:09  INFO        [43/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch042__ck000
+00:10:09  INFO        [44/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch043__ck000
+00:10:09  INFO        [45/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch044__ck000
+00:10:09  INFO        [46/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch045__ck000
+00:10:09  INFO        [47/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch046__ck000
+00:10:09  INFO        [48/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch047__ck000
+00:10:09  INFO        [49/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch048__ck000
+00:10:09  INFO        [50/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch049__ck000
+00:10:09  INFO        [51/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch050__ck000
+00:10:09  INFO        [52/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch051__ck000
+00:10:09  INFO        [53/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch052__ck000
+00:10:09  INFO        [54/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch053__ck000
+00:10:09  INFO        [55/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch054__ck000
+00:10:09  INFO        [56/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch055__ck000
+00:10:09  INFO        [57/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch056__ck000
+00:10:09  INFO        [58/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch057__ck000
+00:10:09  INFO        [59/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch058__ck000
+00:10:09  INFO        [60/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch059__ck000
+00:10:09  INFO        [61/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch060__ck000
+00:10:09  INFO        [62/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch061__ck000
+00:10:09  INFO        [63/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch062__ck000
+00:10:09  INFO        [64/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch063__ck000
+00:10:09  INFO        [65/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch064__ck000
+00:10:09  INFO        [66/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch065__ck000
+00:10:09  INFO        [67/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch066__ck000
+00:10:09  INFO        [68/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch067__ck000
+00:10:09  INFO        [69/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch068__ck000
+00:10:09  INFO        [70/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch069__ck000
+00:10:09  INFO        [71/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch070__ck000
+00:10:09  INFO        [72/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch071__ck000
+00:10:09  INFO        [73/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch072__ck000
+00:10:09  INFO        [74/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch073__ck000
+00:10:09  INFO        [75/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch074__ck000
+00:10:09  INFO        [76/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch075__ck000
+00:10:09  INFO        [77/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch076__ck000
+00:10:09  INFO        [78/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch077__ck000
+00:10:09  INFO        [79/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch078__ck000
+00:10:09  INFO        [80/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch079__ck000
+00:10:09  INFO        [81/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch080__ck000
+00:10:09  INFO        [82/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch081__ck000
+00:10:09  INFO        [83/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch082__ck000
+00:10:09  INFO        [84/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch083__ck000
+00:10:09  INFO        [85/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch084__ck000
+00:10:09  INFO        [86/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch085__ck000
+00:10:09  INFO        [87/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch086__ck000
+00:10:09  INFO        [88/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch087__ck000
+00:10:09  INFO        [89/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch088__ck000
+00:10:09  INFO        [90/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch089__ck000
+00:10:09  INFO        [91/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch090__ck000
+00:10:09  INFO        [92/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch091__ck000
+00:10:09  INFO        [93/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch092__ck000
+00:10:09  INFO        [94/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch093__ck000
+00:10:09  INFO        [95/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch094__ck000
+00:10:09  INFO        [96/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch095__ck000
+00:10:09  INFO        [97/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch096__ck000
+00:10:09  INFO        [98/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch097__ck000
+00:10:09  INFO        [99/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch098__ck000
+00:10:09  INFO        [100/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch099__ck000
+00:10:09  INFO        [101/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch100__ck000
+00:10:09  INFO        [102/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch101__ck000
+00:10:09  INFO        [103/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch102__ck000
+00:10:09  INFO        [104/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch103__ck000
+00:10:09  INFO        [105/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch104__ck000
+00:10:09  INFO        [106/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch105__ck000
+00:10:09  INFO        [107/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch106__ck000
+00:10:09  INFO        [108/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch107__ck000
+00:10:09  INFO        [109/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch108__ck000
+00:10:09  INFO        [110/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch109__ck000
+00:10:09  INFO        [111/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch110__ck000
+00:10:09  INFO        [112/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch111__ck000
+00:10:09  INFO        [113/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch112__ck000
+00:10:09  INFO        [114/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch113__ck000
+00:10:09  INFO        [115/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch114__ck000
+00:10:09  INFO        [116/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch115__ck000
+00:10:09  INFO        [117/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch116__ck000
+00:10:09  INFO        [118/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch117__ck000
+00:10:09  INFO        [119/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch118__ck000
+00:10:09  INFO        [120/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch119__ck000
+00:10:09  INFO        [121/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch120__ck000
+00:10:09  INFO        [122/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch121__ck000
+00:10:09  INFO        [123/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch122__ck000
+00:10:09  INFO        [124/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch123__ck000
+00:10:09  INFO        [125/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch124__ck000
+00:10:09  INFO        [126/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch125__ck000
+00:10:09  INFO        [127/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch126__ck000
+00:10:09  INFO        [128/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch127__ck000
+00:10:09  INFO        [129/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch128__ck000
+00:10:09  INFO        [130/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch129__ck000
+00:10:09  INFO        [131/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch130__ck000
+00:10:09  INFO        [132/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch131__ck000
+00:10:09  INFO        [133/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch132__ck000
+00:10:09  INFO        [134/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch133__ck000
+00:10:09  INFO        [135/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch134__ck000
+00:10:09  INFO        [136/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch135__ck000
+00:10:09  INFO        [137/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch136__ck000
+00:10:09  INFO        [138/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch137__ck000
+00:10:09  INFO        [139/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch138__ck000
+00:10:09  INFO        [140/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch139__ck000
+00:10:09  INFO        [141/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch140__ck000
+00:10:09  INFO        [142/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch141__ck000
+00:10:09  INFO        [143/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch142__ck000
+00:10:09  INFO        [144/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch143__ck000
+00:10:09  INFO        [145/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch144__ck000
+00:10:09  INFO        [146/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch145__ck000
+00:10:09  INFO        [147/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch146__ck000
+00:10:09  INFO        [148/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch147__ck000
+00:10:09  INFO        [149/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch148__ck000
+00:10:09  INFO        [150/150] SKIP (cached)  zbirnik-konferencia-ekonomicni-perspektivi-pidpriemnictva-31-05-2024__ch149__ck000
+00:10:09  INFO      Step 4/4  Finalising book in DB ...
+00:10:09  INFO      Built 0 new TrainingSamples
+00:10:09  INFO        Done: 0 TrainingSamples created
+00:10:09  INFO      
+============================================================
+00:10:09  INFO      Processing: Zubareva_150123_20.pdf
+00:10:09  INFO      ============================================================
+00:10:09  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:10:33  INFO        Sections after merge: 3 (was 4, merged 1 tiny sections)
+00:10:33  INFO        Found 5 chunks across 3 chapters
+00:10:33  INFO      Step 2/4  Saving chunk manifest …
+00:10:33  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\zubareva-150123-20\metadata.json
+00:10:33  INFO      Step 3/4  Running AI extraction …
+00:10:33  INFO        5 chunks already done, 0 remaining
+00:10:33  INFO        [1/5] SKIP (cached)  zubareva-150123-20__ch000__ck000
+00:10:33  INFO        [2/5] SKIP (cached)  zubareva-150123-20__ch000__ck001
+00:10:33  INFO        [3/5] SKIP (cached)  zubareva-150123-20__ch000__ck002
+00:10:33  INFO        [4/5] SKIP (cached)  zubareva-150123-20__ch001__ck000
+00:10:33  INFO        [5/5] SKIP (cached)  zubareva-150123-20__ch002__ck000
+00:10:33  INFO      Step 4/4  Finalising book in DB ...
+00:10:33  INFO      Built 0 new TrainingSamples
+00:10:33  INFO        Done: 0 TrainingSamples created
+00:10:33  INFO      
+============================================================
+00:10:33  INFO      Processing: Дисертація Раупов Р.Б-2.pdf
+00:10:33  INFO      ============================================================
+00:10:33  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:11:13  INFO        Sections after merge: 3 (was 4, merged 1 tiny sections)
+00:11:13  INFO        Found 15 chunks across 3 chapters
+00:11:13  INFO      Step 2/4  Saving chunk manifest …
+00:11:13  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\dysertatsiia-raupov-r-b-2\metadata.json
+00:11:13  INFO      Step 3/4  Running AI extraction …
+00:11:13  INFO        15 chunks already done, 0 remaining
+00:11:13  INFO        [1/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch000__ck000
+00:11:13  INFO        [2/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck000
+00:11:13  INFO        [3/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck001
+00:11:13  INFO        [4/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck002
+00:11:13  INFO        [5/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck003
+00:11:13  INFO        [6/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck004
+00:11:13  INFO        [7/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck005
+00:11:13  INFO        [8/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck006
+00:11:13  INFO        [9/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck007
+00:11:13  INFO        [10/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck008
+00:11:13  INFO        [11/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck009
+00:11:13  INFO        [12/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch001__ck010
+00:11:13  INFO        [13/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch002__ck000
+00:11:13  INFO        [14/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch002__ck001
+00:11:13  INFO        [15/15] SKIP (cached)  dysertatsiia-raupov-r-b-2__ch002__ck002
+00:11:13  INFO      Step 4/4  Finalising book in DB ...
+00:11:13  INFO      Built 0 new TrainingSamples
+00:11:13  INFO        Done: 0 TrainingSamples created
+00:11:13  INFO      
+============================================================
+00:11:13  INFO      Processing: Збірка_семінар_права-людини_2023.pdf
+00:11:13  INFO      ============================================================
+00:11:13  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:11:50  INFO        Sections after merge: 2 (was 2, merged 0 tiny sections)
+00:11:50  INFO        Found 19 chunks across 2 chapters
+00:11:50  INFO      Step 2/4  Saving chunk manifest …
+00:11:50  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\zbirka-seminar-prava-liudyny-2023\metadata.json
+00:11:50  INFO      Step 3/4  Running AI extraction …
+00:11:50  INFO        19 chunks already done, 0 remaining
+00:11:50  INFO        [1/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck000
+00:11:50  INFO        [2/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck001
+00:11:50  INFO        [3/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck002
+00:11:50  INFO        [4/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck003
+00:11:50  INFO        [5/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck004
+00:11:50  INFO        [6/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck005
+00:11:50  INFO        [7/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck006
+00:11:50  INFO        [8/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck007
+00:11:50  INFO        [9/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck008
+00:11:50  INFO        [10/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck009
+00:11:50  INFO        [11/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck010
+00:11:50  INFO        [12/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck011
+00:11:50  INFO        [13/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck012
+00:11:50  INFO        [14/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck013
+00:11:50  INFO        [15/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck014
+00:11:50  INFO        [16/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck015
+00:11:50  INFO        [17/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch000__ck016
+00:11:50  INFO        [18/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch001__ck000
+00:11:50  INFO        [19/19] SKIP (cached)  zbirka-seminar-prava-liudyny-2023__ch001__ck001
+00:11:50  INFO      Step 4/4  Finalising book in DB ...
+00:11:50  INFO      Built 0 new TrainingSamples
+00:11:50  INFO        Done: 0 TrainingSamples created
+00:11:50  INFO      
+============================================================
+00:11:50  INFO      Processing: Костирко_Кризові комунікації.pdf
+00:11:50  INFO      ============================================================
+00:11:50  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:12:03  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+00:12:03  INFO        Found 6 chunks across 1 chapters
+00:12:03  INFO      Step 2/4  Saving chunk manifest …
+00:12:03  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\kostyrko-kryzovi-komunikatsii\metadata.json
+00:12:03  INFO      Step 3/4  Running AI extraction …
+00:12:03  INFO        6 chunks already done, 0 remaining
+00:12:03  INFO        [1/6] SKIP (cached)  kostyrko-kryzovi-komunikatsii__ch000__ck000
+00:12:03  INFO        [2/6] SKIP (cached)  kostyrko-kryzovi-komunikatsii__ch000__ck001
+00:12:03  INFO        [3/6] SKIP (cached)  kostyrko-kryzovi-komunikatsii__ch000__ck002
+00:12:03  INFO        [4/6] SKIP (cached)  kostyrko-kryzovi-komunikatsii__ch000__ck003
+00:12:03  INFO        [5/6] SKIP (cached)  kostyrko-kryzovi-komunikatsii__ch000__ck004
+00:12:03  INFO        [6/6] SKIP (cached)  kostyrko-kryzovi-komunikatsii__ch000__ck005
+00:12:03  INFO      Step 4/4  Finalising book in DB ...
+00:12:03  INFO      Built 0 new TrainingSamples
+00:12:03  INFO        Done: 0 TrainingSamples created
+00:12:03  INFO      
+============================================================
+00:12:03  INFO      Processing: макет_Навчальний посібник СЕМИСТУПЕНЕВА МОДЕЛЬ КРИЗОВИХ КОМУНІКАЦІЙ_edit-2.pdf
+00:12:03  INFO      ============================================================
+00:12:03  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:12:21  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+00:12:21  INFO        Found 10 chunks across 1 chapters
+00:12:21  INFO      Step 2/4  Saving chunk manifest …
+00:12:21  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit-2\metadata.json
+00:12:21  INFO      Step 3/4  Running AI extraction …
+00:12:21  INFO        10 chunks already done, 0 remaining
+00:12:21  INFO        [1/10] SKIP (cached)  maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit-2__ch000__ck000
+00:12:21  INFO        [2/10] SKIP (cached)  maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit-2__ch000__ck001
+00:12:21  INFO        [3/10] SKIP (cached)  maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit-2__ch000__ck002
+00:12:21  INFO        [4/10] SKIP (cached)  maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit-2__ch000__ck003
+00:12:21  INFO        [5/10] SKIP (cached)  maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit-2__ch000__ck004
+00:12:21  INFO        [6/10] SKIP (cached)  maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit-2__ch000__ck005
+00:12:21  INFO        [7/10] SKIP (cached)  maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit-2__ch000__ck006
+00:12:21  INFO        [8/10] SKIP (cached)  maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit-2__ch000__ck007
+00:12:21  INFO        [9/10] SKIP (cached)  maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit-2__ch000__ck008
+00:12:21  INFO        [10/10] SKIP (cached)  maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit-2__ch000__ck009
+00:12:21  INFO      Step 4/4  Finalising book in DB ...
+00:12:21  INFO      Built 0 new TrainingSamples
+00:12:21  INFO        Done: 0 TrainingSamples created
+00:12:21  INFO      
+============================================================
+00:12:21  INFO      Processing: макет_Навчальний посібник СЕМИСТУПЕНЕВА МОДЕЛЬ КРИЗОВИХ КОМУНІКАЦІЙ_edit.pdf
+00:12:21  INFO      ============================================================
+00:12:21  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:12:38  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+00:12:38  INFO        Found 10 chunks across 1 chapters
+00:12:38  INFO      Step 2/4  Saving chunk manifest …
+00:12:38  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit\metadata.json
+00:12:38  INFO      Step 3/4  Running AI extraction …
+00:12:38  INFO        10 chunks already done, 0 remaining
+00:12:38  INFO        [1/10] SKIP (cached)  maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit__ch000__ck000
+00:12:38  INFO        [2/10] SKIP (cached)  maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit__ch000__ck001
+00:12:38  INFO        [3/10] SKIP (cached)  maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit__ch000__ck002
+00:12:38  INFO        [4/10] SKIP (cached)  maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit__ch000__ck003
+00:12:38  INFO        [5/10] SKIP (cached)  maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit__ch000__ck004
+00:12:38  INFO        [6/10] SKIP (cached)  maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit__ch000__ck005
+00:12:38  INFO        [7/10] SKIP (cached)  maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit__ch000__ck006
+00:12:38  INFO        [8/10] SKIP (cached)  maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit__ch000__ck007
+00:12:38  INFO        [9/10] SKIP (cached)  maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit__ch000__ck008
+00:12:38  INFO        [10/10] SKIP (cached)  maket-navchalnyi-posibnyk-semystupeneva-model-kryzovykh-komunikatsii-edit__ch000__ck009
+00:12:38  INFO      Step 4/4  Finalising book in DB ...
+00:12:38  INFO      Built 0 new TrainingSamples
+00:12:38  INFO        Done: 0 TrainingSamples created
+00:12:38  INFO      
+============================================================
+00:12:38  INFO      Processing: Маранчак М. М. Антикризові комунікації.pdf
+00:12:38  INFO      ============================================================
+00:12:38  INFO      Step 1/4  Extracting text and splitting into chunks …
+00:12:42  INFO        Sections after merge: 1 (was 1, merged 0 tiny sections)
+00:12:42  INFO        Found 1 chunks across 1 chapters
+00:12:42  INFO      Step 2/4  Saving chunk manifest …
+00:12:42  INFO        ✓ metadata saved → C:\Users\User\PycharmProjects\crisis-management\app\ingest\data\extracted\maranchak-m-m-antykryzovi-komunikatsii\metadata.json
+00:12:42  INFO      Step 3/4  Running AI extraction …
+00:12:42  INFO        1 chunks already done, 0 remaining
+00:12:42  INFO        [1/1] SKIP (cached)  maranchak-m-m-antykryzovi-komunikatsii__ch000__ck000
+00:12:42  INFO      Step 4/4  Finalising book in DB ...
+00:12:42  INFO      Built 0 new TrainingSamples
+00:12:42  INFO        Done: 0 TrainingSamples created
