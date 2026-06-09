@@ -1,0 +1,33 @@
+============================================================
+chunk_id  : piir-2023-30-6__ch000__ck000
+chapter   : Список використаних джерел
+pages     : 9–10
+tokens    : 270
+text:
+Список використаних джерел
+socialni_komunikacii (дата звернення: 13.07.2023).
+2. Drucker P. F. Management Challenges for the 21st Century. New York :
+Harper Business, 2001.
+3. Drucker P. F. Towards the Next Economics and Other Essays. London :
+Heinemann, 1981.
+4. Kotler P. Marketing Management: Analysis, Planning, Implementation,
+and Control. Englewood Cliffs. NJ : Prentice-Hall, 1988.
+5. Levitt T
+... [+1100 chars]
+
+============================================================
+chunk_id  : piir-2023-30-6__ch001__ck000
+chapter   : References
+pages     : 10–10
+tokens    : 327
+text:
+References
+1. Rizun V. On the development of the science of social communications.
+nauki_pro_socialni_komunikacii (accessed 13 July 2023) (in English).
+2. Drucker P. F. (2001). Management Challenges for the 21st Century, New
+York, N.Y: Harper Business (in English).
+3. Drucker P. F. (1981). Towards the Next Economics and Other Essays,
+London: Heinemann (in English).
+4. Kotler P. (1988). Marketing M
+... [+1284 chars]
+

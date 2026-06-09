@@ -1,0 +1,32 @@
+============================================================
+chunk_id  : maxim-26__ch000__ck000
+chapter   : Література:
+pages     : 10–11
+tokens    : 380
+text:
+Література:
+1. Benoit, W.L. (1997). Image repair discourse and crisis communication. Public Relations
+Review, 23, 177-186.
+2. Coombs, W.T. & Holladay, S.J. (Eds.). (2010). The handbook of crisis communication.
+Hoboken, NJ: Wiley.
+3. Fink S. (2013) Crisis communications. The definitive guide to managing the message.
+Chicago: McGraw-Hill Education.
+4. Herman, C.F. (1963). Some consequences of crisis
+... [+1625 chars]
+
+============================================================
+chunk_id  : maxim-26__ch001__ck000
+chapter   : References
+pages     : 11–12
+tokens    : 475
+text:
+References
+1. Benoit, W.L. (1997). Image repair discourse and crisis communication. Public Relations
+Review, 23, 177-186.
+2. Coombs, W.T. & Holladay, S.J. (Eds.). (2010). The handbook of crisis communication.
+Hoboken, NJ: Wiley.
+3. Fink S. (2013) Crisis communications. The definitive guide to managing the message.
+Chicago: McGraw-Hill Education.
+4. Herman, C.F. (1963). Some consequences of crisis 
+... [+2196 chars]
+
