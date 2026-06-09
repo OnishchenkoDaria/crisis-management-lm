@@ -268,7 +268,38 @@ def extract_chunks(pdf_path: str | Path) -> list[TextChunk]:
     pages: list[tuple[int, str]] = []
     with pdfplumber.open(pdf_path) as pdf:
         page_count = len(pdf.pages)
-        force_single_col = page_count > MAX_PAGES_FOR_COLUMN_DETECTION
+
+        # For large documents run column detection on a sample of pages (skipping the cover)
+        # classify each, and treat the document as two-column if the majority of sampled pages are
+
+        # of a 500-page book AND the inaccuracy of blanket single-col fallback.
+        if page_count > MAX_PAGES_FOR_COLUMN_DETECTION:
+            SAMPLE_SIZE = 20
+            step = max(1, page_count // SAMPLE_SIZE)
+            sample_indices = range(1, page_count, step)  # 0-based later
+            votes = []
+            for idx in sample_indices:
+                s = _extract_page_text(pdf.pages[idx], force_single_col=False)
+                # re-derive decision from the page directly
+                w = pdf.pages[idx].extract_words() or []
+                if not w:
+                    continue
+                c = float(pdf.pages[idx].width) / 2
+                total = len(w)
+                cr = sum(1 for x in w if float(x["x0"]) < c < float(x["x1"])) / total
+                lr = sum(1 for x in w if (float(x["x0"]) + float(x["x1"])) / 2 < c) / total
+                votes.append(cr <= COLUMN_MAX_CROSS_RATIO
+                              and lr >= COLUMN_MIN_SIDE_RATIO
+                              and (1 - lr) >= COLUMN_MIN_SIDE_RATIO)
+            # majority vote: if most sampled pages look two-column, use
+            # per-page detection for the whole document; otherwise skip it.
+            force_single_col = not (votes and votes.count(True) > len(votes) / 2)
+            log.info("  Large doc (%d pp): sampled %d pages → %s",
+                     page_count, len(votes),
+                     "two-column" if not force_single_col else "single-column")
+        else:
+            force_single_col = False
+
         for i, page in enumerate(pdf.pages, start=1):
             raw = _extract_page_text(page, force_single_col=force_single_col)
             if raw.strip():
