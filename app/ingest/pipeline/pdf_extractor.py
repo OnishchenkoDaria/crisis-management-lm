@@ -28,6 +28,12 @@ MAX_CHUNK_TOKENS  = int(os.getenv("MAX_CHUNK_TOKENS",  "4500"))
 MIN_SECTION_TOKENS = int(os.getenv("MIN_SECTION_TOKENS", "300"))
 OVERLAP_TOKENS = int(os.getenv("OVERLAP_TOKENS", "250"))
 MAX_PAGES_FOR_COLUMN_DETECTION = int(os.getenv("MAX_PAGES_FOR_COLUMN_DETECTION", "300"))
+# Column detection thresholds (calibrated on a labelled sample, see thesis §3):
+# a page is treated as two-column only when few words cross the page centre
+# (<= COLUMN_MAX_CROSS_RATIO) and both halves carry enough words
+# (>= COLUMN_MIN_SIDE_RATIO each).
+COLUMN_MAX_CROSS_RATIO = float(os.getenv("COLUMN_MAX_CROSS_RATIO", "0.09"))
+COLUMN_MIN_SIDE_RATIO = float(os.getenv("COLUMN_MIN_SIDE_RATIO", "0.15"))
 
 _CYRILLIC_TRANSLIT = {
     "а": "a", "б": "b", "в": "v", "г": "h", "ґ": "g", "д": "d", "е": "e",
@@ -147,25 +153,55 @@ def _is_section_heading(line: str) -> bool:
 
 
 def _extract_page_text(page, *, force_single_col: bool = False) -> str:
-    """Extract page text, using left+right column order only when page is likely two-column."""
+    """detection is based on how many words cross the vertical centre of
+    the page:
+    for 2 column -> no word spans the gutter, so the crossing ratio is low;
+    single-column -> ratio is high.
+    """
     full_text = page.extract_text() or ""
     if force_single_col or not full_text.strip():
         return _clean_text(full_text)
 
+    words = page.extract_words() or []
+    if not words:
+        return _clean_text(full_text)
+
     width = float(page.width)
     height = float(page.height)
-    split_x = width * 0.52
+    center = width * 0.5
 
+    total = len(words)
+    crossing = left_count = right_count = 0
+    for w in words:
+        x0, x1 = float(w["x0"]), float(w["x1"])
+        if x0 < center < x1:
+            crossing += 1
+        mid = (x0 + x1) / 2.0
+        if mid < center:
+            left_count += 1
+        else:
+            right_count += 1
+
+    cross_ratio = crossing / total
+    left_ratio = left_count / total
+    right_ratio = right_count / total
+
+    # Two-column iff few words straddle the centre AND both halves are
+    # non-trivially populated. Thresholds calibrated on a labelled sample of
+    # single- and two-column Ukrainian/English sources (see thesis §3).
+    is_two_column = (
+        cross_ratio <= COLUMN_MAX_CROSS_RATIO
+        and left_ratio >= COLUMN_MIN_SIDE_RATIO
+        and right_ratio >= COLUMN_MIN_SIDE_RATIO
+    )
+
+    if not is_two_column:
+        return _clean_text(full_text)
+
+    split_x = width * 0.52
     left = page.crop((0, 0, split_x, height)).extract_text() or ""
     right = page.crop((split_x, 0, width, height)).extract_text() or ""
-
-    full_words = max(1, len(full_text.split()))
-    left_words = len(left.split())
-    right_words = len(right.split())
-
-    if left_words >= full_words * 0.25 and right_words >= full_words * 0.25:
-        return _clean_text(left + "\n" + right)
-    return _clean_text(full_text)
+    return _clean_text(left + "\n" + right)
 
 
 def _detect_language(text: str) -> str:
@@ -232,7 +268,38 @@ def extract_chunks(pdf_path: str | Path) -> list[TextChunk]:
     pages: list[tuple[int, str]] = []
     with pdfplumber.open(pdf_path) as pdf:
         page_count = len(pdf.pages)
-        force_single_col = page_count > MAX_PAGES_FOR_COLUMN_DETECTION
+
+        # For large documents run column detection on a sample of pages (skipping the cover)
+        # classify each, and treat the document as two-column if the majority of sampled pages are
+
+        # of a 500-page book AND the inaccuracy of blanket single-col fallback.
+        if page_count > MAX_PAGES_FOR_COLUMN_DETECTION:
+            SAMPLE_SIZE = 20
+            step = max(1, page_count // SAMPLE_SIZE)
+            sample_indices = range(1, page_count, step)  # 0-based later
+            votes = []
+            for idx in sample_indices:
+                s = _extract_page_text(pdf.pages[idx], force_single_col=False)
+                # re-derive decision from the page directly
+                w = pdf.pages[idx].extract_words() or []
+                if not w:
+                    continue
+                c = float(pdf.pages[idx].width) / 2
+                total = len(w)
+                cr = sum(1 for x in w if float(x["x0"]) < c < float(x["x1"])) / total
+                lr = sum(1 for x in w if (float(x["x0"]) + float(x["x1"])) / 2 < c) / total
+                votes.append(cr <= COLUMN_MAX_CROSS_RATIO
+                              and lr >= COLUMN_MIN_SIDE_RATIO
+                              and (1 - lr) >= COLUMN_MIN_SIDE_RATIO)
+            # majority vote: if most sampled pages look two-column, use
+            # per-page detection for the whole document; otherwise skip it.
+            force_single_col = not (votes and votes.count(True) > len(votes) / 2)
+            log.info("  Large doc (%d pp): sampled %d pages → %s",
+                     page_count, len(votes),
+                     "two-column" if not force_single_col else "single-column")
+        else:
+            force_single_col = False
+
         for i, page in enumerate(pdf.pages, start=1):
             raw = _extract_page_text(page, force_single_col=force_single_col)
             if raw.strip():

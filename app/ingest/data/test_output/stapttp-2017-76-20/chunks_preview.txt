@@ -1,0 +1,18 @@
+============================================================
+chunk_id  : stapttp-2017-76-20__ch000__ck000
+chapter   : stapttp_2017_76_20
+pages     : 1–8
+tokens    : 4499
+text:
+Соціальні технології: актуальні проблем КРИЗОВІ СИТУАЦІЇ, КРИЗОВІ НОВОГО ФОРМАТУ УПРАВ Стаття присвячена зміні підходу до кр кацій в управлінні в умовах кризи. Автори дов практик передбачає створення безпекової зон німізувати ризики й підвищити готовність ор ських практик має включати комплекс комунік зробити кризовий процес керованим, а й зміцни ціал для усіх зацікавлених у її розвитку сторін жат
+... [+22828 chars]
+
+============================================================
+chunk_id  : stapttp-2017-76-20__ch000__ck001
+chapter   : stapttp_2017_76_20
+pages     : 1–8
+tokens    : 394
+text:
+a ru individuals, groups, communities. They are the on certain technologies (social, psychological, etc.), of management. The new format of management practice organization. Such a zone allows minimising risk for them. The new format of management practi measures that allow the crisis process not only image of the organisation, to reveal its potential f this case, crisis communication systems can 
+... [+1362 chars]
+

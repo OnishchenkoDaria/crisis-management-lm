@@ -1,0 +1,67 @@
+============================================================
+chunk_id  : strategia-krizovoi-komunikacii-u-sistemi-vlada-gro__ch000__ck000
+chapter   : Abstract
+pages     : 1–1
+tokens    : 264
+text:
+Abstract
+Relevance. In a crisis, it becomes critical to revise the estab
+to revise the established approaches to communication in the pub
+informing about the activities of the authorities. Today, the choice
+the available resources to ensure protection, response and restoratio
+channel for information transmission.
+The purpose of the study is to make an attempt to detail the str
+strategy for the suc
+... [+955 chars]
+
+============================================================
+chunk_id  : strategia-krizovoi-komunikacii-u-sistemi-vlada-gro__ch001__ck000
+chapter   : Анотація
+pages     : 1–2
+tokens    : 1496
+text:
+Анотація
+Актуальність. У кризових умовах стає критично важливи
+секторі, які протягом значного часу обмежувалися переважн
+оптимальної стратегії кризової комунікації визначається наяв
+відновлення нормального функціонування, а також перевагами
+Метою дослідження є реалізація спроби деталізації стр
+стратегії задля успішної реалізації кризової комунікації у систе
+стану в Україні.
+Результати. У період ві
+... [+7699 chars]
+
+============================================================
+chunk_id  : strategia-krizovoi-komunikacii-u-sistemi-vlada-gro__ch002__ck000
+chapter   : Результати дослідження.
+pages     : 2–7
+tokens    : 3903
+text:
+Результати дослідження.
+Успіх кризового управління обумовлюється тим,
+ий образ реальності створюється у громадськості
+изовою командою, сформованою з числа
+едставників органів влади, шляхом налагодження
+мунікативної взаємодії. Позитивна риторика,
+монстрація оптимістичних парадигм, етична
+моральна складова або ж обрані політичними
+ерами, громадськими діячами чи представниками
+ших референтних груп сц
+... [+22134 chars]
+
+============================================================
+chunk_id  : strategia-krizovoi-komunikacii-u-sistemi-vlada-gro__ch003__ck000
+chapter   : REFERENCES
+pages     : 7–7
+tokens    : 743
+text:
+REFERENCES
+Coombs, T., & Holladay, S. (2012). The Handbook of crisis commu
+Lushagina, T. (2023). Communication policy of public authorities d
+Mykhailovska, O. V., Mykhailovsky, I. M., & Pylypenko, O. O
+of public administration in times of crisis. Problems of mo
+Plakhova, O. M. (2022). Crisis communication in social work in tim
+of scientific papers in sociology and social work, 12, 33-39. h
+Pochept
+... [+3608 chars]
+
